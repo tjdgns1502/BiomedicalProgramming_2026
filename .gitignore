@@ -1,0 +1,24 @@
+# This folder doubles as the local R runtime install - not part of the project
+/bin/
+/library/
+/Tcl/
+/share/
+/src/
+/include/
+/etc/
+/modules/
+/doc/
+/tests/
+/CHANGES
+/COPYING
+/MD5
+/README
+/README.R-4.6.1
+/unins000.*
+
+# Raw NHANES downloads (regenerate via scripts/01_download_data.R) and derived binary
+/data/*.XPT
+/data/analytic_sample.rds
+
+# Claude Code local tooling config (not project content)
+/.claude/
