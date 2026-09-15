@@ -16,9 +16,10 @@
 /README.R-4.6.1
 /unins000.*
 
-# Raw NHANES downloads (regenerate via scripts/01_download_data.R) and derived binary
-/data/*.XPT
-/data/analytic_sample.rds
+# Raw downloaded datasets and derived binaries (regenerate via each week's download script)
+# applies to every week's data/ folder, e.g. 2nd_weeks/data/
+**/data/*.XPT
+**/data/*.rds
 
 # Claude Code local tooling config (not project content)
 /.claude/
