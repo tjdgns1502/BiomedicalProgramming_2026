@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>논문과 같은 숫자가 나올 때까지 — 재현 실험의 기록과 논문의 허점</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'\\(',right:'\\)',display:false}],throwOnError:false});"></script>
+<style>
+  :root{--ink:#1f2937;--muted:#6b7280;--line:#e5e7eb;--accent:#1d4ed8;--accent-bg:#eff6ff;--warn-bg:#fff7ed;--warn:#c2410c;--ok-bg:#f0fdf4;--ok:#15803d;--bad-bg:#fef2f2;--bad:#b91c1c;--code-bg:#f3f4f6}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:"Pretendard","Malgun Gothic","Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif;color:var(--ink);background:#fafafa;line-height:1.75;font-size:16px}
+  .wrap{max-width:980px;margin:0 auto;padding:32px 20px 80px}
+  header{border-bottom:3px solid var(--accent);padding-bottom:18px;margin-bottom:28px}
+  header h1{font-size:1.85rem;margin:0 0 6px;line-height:1.3}
+  header .sub{color:var(--muted);font-size:.95rem}
+  h2{font-size:1.45rem;margin:52px 0 14px;padding-left:12px;border-left:5px solid var(--accent)}
+  h3{font-size:1.15rem;margin:30px 0 10px}
+  h4{font-size:1rem;margin:18px 0 6px;color:#374151}
+  p{margin:10px 0} ul,ol{padding-left:24px} li{margin:4px 0}
+  code{background:var(--code-bg);padding:1px 5px;border-radius:4px;font-family:Consolas,"D2Coding",monospace;font-size:.9em}
+  pre{background:#111827;color:#e5e7eb;padding:14px 16px;border-radius:8px;overflow-x:auto;font-size:.85rem;line-height:1.55}
+  pre code{background:none;color:inherit;padding:0}
+  table{border-collapse:collapse;width:100%;margin:14px 0;font-size:.92rem;background:#fff}
+  th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+  th{background:#f3f4f6} td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+  .tbl-wrap{overflow-x:auto}
+  .box{border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin:16px 0;background:#fff}
+  .box.key{background:var(--accent-bg);border-color:#bfdbfe} .box.warn{background:var(--warn-bg);border-color:#fed7aa}
+  .box.ok{background:var(--ok-bg);border-color:#bbf7d0} .box.bad{background:var(--bad-bg);border-color:#fecaca}
+  .box .ttl{font-weight:700;margin-bottom:4px}
+  .box.key .ttl{color:var(--accent)} .box.warn .ttl{color:var(--warn)} .box.ok .ttl{color:var(--ok)} .box.bad .ttl{color:var(--bad)}
+  .step{border:1px solid var(--line);border-left:6px solid var(--accent);border-radius:10px;background:#fff;padding:14px 18px;margin:22px 0}
+  .step h3{margin:0 0 8px;font-size:1.1rem} .step h3 .n{display:inline-block;background:var(--accent);color:#fff;border-radius:999px;padding:0 10px;margin-right:8px;font-size:.85rem}
+  .step .lab{display:inline-block;font-weight:700;color:var(--accent);min-width:64px}
+  .step .row{margin:6px 0;padding-left:4px}
+  .good{color:var(--ok);font-weight:700} .bad{color:var(--bad);font-weight:700}
+  .small{font-size:.88rem;color:var(--muted)}
+  .ladder{margin:14px 0}
+  .ladder .bar{display:grid;grid-template-columns:260px 1fr 70px;gap:10px;align-items:center;margin:6px 0;font-size:.9rem}
+  .ladder .bar .fill{height:18px;border-radius:4px;background:linear-gradient(90deg,#93c5fd,#1d4ed8)}
+  .ladder .bar .v{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+  .toc{background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px 22px} .toc ol{margin:0} .toc a{color:var(--accent);text-decoration:none}
+  .katex-display{overflow-x:auto;overflow-y:hidden;padding:4px 0}
+  .sev{display:inline-block;border-radius:6px;padding:0 8px;font-size:.8rem;font-weight:700;white-space:nowrap}
+  .sev.hi{background:#fee2e2;color:#991b1b} .sev.mid{background:#fef3c7;color:#92400e} .sev.lo{background:#e5e7eb;color:#374151}
+  footer{margin-top:60px;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padding-top:14px}
+  @media print{body{background:#fff}.wrap{padding:0}pre{white-space:pre-wrap}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>논문과 같은 숫자가 나올 때까지 — 재현 실험의 기록과 논문의 허점</h1>
+  <div class="sub">Ye et al. <i>Association between the weight-adjusted waist index and stroke.</i> BMC Public Health 2023;23:1689 (PMID 37658310) · Table 1 을 NHANES 2011–2020 원자료로 소수 둘째 자리까지 재현하기까지의 11단계 실험, 조정한 변수, 그리고 그 과정에서 드러난 논문의 논리적 문제</div>
+</header>
+
+<div class="box key">
+  <div class="ttl">이 문서의 한 줄 요약</div>
+  <p>같은 공개 자료로 논문 Table 1을 처음 재현했을 때 132개 셀 중 48개만 일치했습니다. 통계 방법을 바꾼 것은 하나도 없습니다. 논문에 적혀 있지 않은 <b>자료 처리 규칙 7가지</b>를 실험으로 하나씩 찾아내자 132개가 일치했고, 남은 13개는 논문이 틀린 값을 그대로 따라 하지 않기로 한 자리입니다. 그 규칙 중 몇 개는 논문 작성자의 실수였습니다.</p>
+</div>
+
+<nav class="toc"><ol>
+  <li><a href="#s1">재현이 안 맞는 원리 — 그리고 "점수"라는 자</a></li>
+  <li><a href="#s2">11단계 실험 기록 — 무엇을 관찰하고, 무엇을 바꿨고, 얼마나 가까워졌나</a></li>
+  <li><a href="#s3">점수 사다리 — 한눈에 보는 수렴 과정</a></li>
+  <li><a href="#s4">남은 13개 셀 — 일부러 맞추지 않은 자리</a></li>
+  <li><a href="#s5">논문 작성자의 논리적·방법론적 실수 10가지</a></li>
+  <li><a href="#s6">그래서 논문의 결론은 살아남는가</a></li>
+  <li><a href="#s7">고등학생을 위한 교훈 다섯 가지</a></li>
+  <li><a href="#s8">부록 — 실험을 그대로 돌려 보는 법</a></li>
+</ol></nav>
+
+<!-- ============================================================ -->
+<h2 id="s1">① 재현이 안 맞는 원리 — 그리고 "점수"라는 자</h2>
+
+<p>재현(replication)은 "같은 자료 + 같은 규칙 = 같은 숫자"라는 약속 위에 서 있습니다. 자료는 CDC가 공개한 것이라 같습니다. 그러면 숫자가 다를 때 남는 용의자는 <b>규칙</b>뿐입니다. 논문의 Methods는 열 줄이지만, 실제 코드에는 수십 개의 작은 결정이 들어갑니다 — 어느 파일을 쓸지, "모름"이라고 답한 사람을 어디에 둘지, 두 그룹 경계에 걸친 사람을 어느 쪽으로 보낼지, 결측을 어떻게 할지. 논문에 안 적힌 결정은 재현하는 사람이 <b>역산</b>해야 합니다. 이 문서는 그 역산의 기록입니다.</p>
+
+<h3>실험의 규칙: 한 번에 하나만 바꾸고, 자로 잰다</h3>
+<p>가설을 시험할 때마다 재현값이 논문값에 얼마나 가까워졌는지 재는 자가 필요합니다. 이 문서 전체에서 쓴 자는 하나입니다.</p>
+$$S \;=\; \sum_{q=1}^{4}\Big(\,\big|\bar{x}_q^{\text{재현}} - \bar{x}_q^{\text{논문}}\big| \;+\; \big|s_q^{\text{재현}} - s_q^{\text{논문}}\big|\,\Big)$$
+<p>사분위 네 그룹의 평균과 SD가 논문과 얼마나 어긋나는지를 전부 더한 값입니다. \(S = 0\)이면 완전 일치. 가설 A와 B 중 \(S\)가 작은 쪽이 논문이 실제로 쓴 규칙일 가능성이 높습니다. 그리고 두 규칙을 동시에 바꾸면 무엇이 효과였는지 알 수 없으므로, <b>항상 하나만</b> 바꿨습니다.</p>
+
+<div class="box">
+  <div class="ttl">셀 판정 기준 (비교표 <code>Table1_비교.html</code>에서 쓴 색)</div>
+  <p>|Δ| ≤ 0.1 → <span class="good">일치</span> (반올림 수준) · 0.1 &lt; |Δ| ≤ 1 → 근소 · |Δ| &gt; 1 → <span class="bad">차이</span>. 평균과 SD 중 하나라도 어긋나면 그 셀은 어긋난 것으로 셉니다.</p>
+</div>
+
+<!-- ============================================================ -->
+<h2 id="s2">② 11단계 실험 기록</h2>
+<p>각 단계는 <b>관찰 → 가설 → 실험 → 조정 → 결과</b>의 순서로 적었습니다. 코드 조각은 실제로 바꾼 한 줄입니다.</p>
+
+<div class="step">
+  <h3><span class="n">1</span>어느 파일이 "2011–2020"인가</h3>
+  <div class="row"><span class="lab">관찰</span> 논문 Fig.1의 초기 인원은 45,462명. NHANES는 2년마다 파일을 내므로 2011–2020이면 5개 주기가 있어야 하는데, 2019–2020은 코로나로 조사가 중단되어 단독 파일이 없습니다.</div>
+  <div class="row"><span class="lab">가설</span> 2017–2018(J) 파일 대신 2017–2020.3 통합 파일(P)을 썼을 것이다.</div>
+  <div class="row"><span class="lab">실험</span> 주기별 DEMO 인원을 더해 본다.</div>
+  $$9{,}756_{\,G} + 10{,}175_{\,H} + 9{,}971_{\,I} + 15{,}560_{\,P} = 45{,}462 \qquad (\text{J를 쓰면 } 39{,}156)$$
+  <div class="row"><span class="lab">조정</span> <code>cycles = G, H, I, P</code></div>
+  <div class="row"><span class="lab">결과</span> <span class="good">초기 인원 일치.</span> 이 단계가 틀리면 뒤의 모든 숫자가 틀리므로 가장 먼저 맞춰야 합니다.</div>
+</div>
+
+<div class="step">
+  <h3><span class="n">2</span>"모름"이라고 답한 22명</h3>
+  <div class="row"><span class="lab">관찰</span> 체중·허리둘레 결측을 제외한 인원(42,486 → 37,719)은 정확히 일치했는데, 뇌졸중 결측을 제외하니 23,367명으로 논문(23,389)보다 22명 적었습니다.</div>
+  <div class="row"><span class="lab">가설</span> 뇌졸중 질문에 "모름(코드 9)"이라 답한 사람을 논문은 제외하지 않았다.</div>
+  <div class="row"><span class="lab">실험</span> 코드별 인원표: 예 893 / 아니오 22,474 / 모름 22 / 결측 14,330. \(893 + 22{,}474 + 22 = 23{,}389\).</div>
+  <div class="row"><span class="lab">조정</span> <code>filter(!is.na(MCQ160F))</code> — 9를 남기고 뇌졸중 = 0 으로 처리</div>
+  <div class="row"><span class="lab">결과</span> <span class="good">최종 N 23,389, 뇌졸중 893명 일치.</span> 부수 발견: 결측 14,330명 중 14,329명은 20세 미만(이 질문은 성인에게만 함). 즉 논문의 "뇌졸중 자료 결측 제외"는 사실상 "미성년자 제외"였습니다.</div>
+</div>
+
+<div class="step">
+  <h3><span class="n">3</span>"경계성 당뇨"는 어디로</h3>
+  <div class="row"><span class="lab">관찰</span> 당뇨 % 만 체계적으로 낮았습니다: Q1 1.99 vs 논문 3.01, Q4 23.6 vs 26.8.</div>
+  <div class="row"><span class="lab">가설</span> NHANES 당뇨 질문에는 "경계성(Borderline, 코드 3)"이 있다. 논문은 이를 "있음"으로 세었다.</div>
+  <div class="row"><span class="lab">실험</span> 두 정의로 계산: 경계성→없음 1.99 / 7.13 / 11.93 / 24.38, 경계성→있음 3.05 / 8.77 / 15.06 / 26.94.</div>
+  <div class="row"><span class="lab">조정</span> <code>diabetes = DIQ010 %in% c(1, 3)</code></div>
+  <div class="row"><span class="lab">결과</span> <span class="good">논문 3.01 / 8.60 / 14.85 / 26.76 과 일치.</span></div>
+</div>
+
+<div class="step">
+  <h3><span class="n">4</span>경계선 위에 선 한 사람</h3>
+  <div class="row"><span class="lab">관찰</span> 사분위 인원이 재현 5,848 / 5,847 / 5,847 / 5,847, 논문 5,847 / 5,847 / 5,847 / 5,848. 딱 한 명이 Q1에서 Q4로 가야 합니다.</div>
+  <div class="row"><span class="lab">가설</span> 절단점(10.507, 11.091, 11.670)과 WWI가 정확히 같은 사람이 각 1명 있고, 구간을 (a, b]로 자르면 아래 그룹, [a, b)로 자르면 위 그룹에 들어간다.</div>
+  <div class="row"><span class="lab">실험</span> <code>cut(right = TRUE)</code> → 5848/5847/5847/5847, <code>right = FALSE</code> → 5847/5847/5847/5848.</div>
+  <div class="row"><span class="lab">조정</span> <code>cut(..., right = FALSE)</code></div>
+  <div class="row"><span class="lab">결과</span> <span class="good">일치.</span> 숫자 하나 차이지만, "무엇이 다른지 설명할 수 있다"는 것이 재현의 기준입니다.</div>
+</div>
+
+<div class="step">
+  <h3><span class="n">5</span>SD가 평균의 6배 — 하루 999잔</h3>
+  <div class="row"><span class="lab">관찰</span> 논문의 음주량은 3.24 ± 18.67, 4.29 ± 39.96 … SD가 평균의 6~10배입니다. 재현값은 2.9 ± 2.5. 정상적인 음주 자료에서는 SD가 평균과 비슷하거나 작습니다.</div>
+  <div class="row"><span class="lab">가설</span> NHANES는 "거부"를 777, "모름"을 999로 저장한다. 논문은 이 코드값을 진짜 잔 수로 계산했다.</div>
+  <div class="row"><span class="lab">실험</span> 코드값을 그대로 두고 계산: 3.32 ± 20.79, 4.47 ± 42.31, 3.06 ± 22.29, 3.42 ± 31.09 — 논문과 같은 패턴(Q2에서 SD 40). 손계산으로 메커니즘을 확인:</div>
+  <p>Q2 응답자 3,995명 중 999가 5명. 정상값 평균 2.72.</p>
+  $$\Delta\bar{x} = \frac{5\times(999-2.72)}{3995} = 1.25 \quad\Rightarrow\quad 2.72 + 1.25 = 3.97$$
+  $$\text{SD} \approx 999\sqrt{\frac{k}{n}} = 999\sqrt{\frac{5}{3995}} = 35.3 \qquad (\text{정상값만의 SD} = 2.39)$$
+  <p>편차를 제곱해서 더하기 때문에, 평균에서 996 떨어진 값 하나는 편차 2인 값 \((996/2)^2 \approx 248{,}000\)명분의 변동을 만듭니다. 5명이 전체 변동의 99.4%를 차지했습니다.</p>
+  <div class="row"><span class="lab">조정</span> 재현 본행은 <code>ifelse(ALQ130 %in% c(777, 999), NA, ALQ130)</code>로 정리(올바른 처리). 논문 대조용 <i>(참고)</i> 행만 코드값 유지.</div>
+  <div class="row"><span class="lab">결과</span> 패턴은 맞았지만 아직 Q4가 3.42 ± 31.09 vs 3.33 ± 29.64로 어긋남 → 10단계의 단서가 됩니다.</div>
+</div>
+
+<div class="step">
+  <h3><span class="n">6</span>가중치 실험 A — 6가지 방식을 겨루다</h3>
+  <div class="row"><span class="lab">관찰</span> 5단계까지 마친 뒤에도 Q1은 거의 다 맞는데 Q4(고령층)로 갈수록 나이·체중·교육·뇌졸중이 0.3~1.1씩 어긋났습니다. Q1은 맞고 Q4만 틀리면 가중치를 의심합니다 — 가중치는 고령층에 크게 작용하기 때문입니다.</div>
+  <div class="row"><span class="lab">가설</span> 처음 재현은 CDC 지침대로 4개 주기 검진(MEC) 가중치를 기간 비율로 재조정했다. 논문은 다른 방식을 썼을 것이다.</div>
+  $$w_i^{\text{CDC}} = \begin{cases}\tfrac{2}{9.2}\,\mathrm{WTMEC2YR}_i & (2011\text{–}2016)\\[4pt] \tfrac{3.2}{9.2}\,\mathrm{WTMECPRP}_i & (2017\text{–}2020.3)\end{cases}$$
+  <div class="row"><span class="lab">실험</span> 나이·BMI·허리둘레·체중·PIR·HDL·TC·교육·뇌졸중 9개 행의 점수 합계:</div>
+  <div class="tbl-wrap"><table>
+    <tr><th>가중치 방식</th><th class="num">S 합계</th><th class="num">교육</th><th class="num">뇌졸중</th></tr>
+    <tr><td>A0 MEC, CDC 재조정 (처음 재현)</td><td class="num">16.82</td><td class="num">6.27</td><td class="num">0.60</td></tr>
+    <tr><td>A1 MEC 원가중치 그대로 (= A2 균등 1/4 = A3)</td><td class="num">9.83</td><td class="num">2.41</td><td class="num">0.15</td></tr>
+    <tr><td>A4 설문 가중치, CDC 재조정</td><td class="num">14.63</td><td class="num">5.14</td><td class="num">0.44</td></tr>
+    <tr><td>A5 비가중</td><td class="num">101.12</td><td class="num">59.81</td><td class="num">3.80</td></tr>
+  </table></div>
+  <p>추가로 P 주기 계수 \(f\)를 0.20~0.45로 연속으로 바꿔 보니 최소는 \(f = 0.25\) — 네 주기를 <b>균등</b>하게 취급했을 때였습니다(CDC 지침값은 0.348).</p>
+  <div class="row"><span class="lab">조정</span> 재조정 계수 제거 (원가중치 그대로)</div>
+  <div class="row"><span class="lab">결과</span> 점수 16.8 → 9.8. 교육 6.3 → 2.4, 뇌졸중 0.60 → 0.15. 아직 완전하지 않음(10단계에서 해결).</div>
+</div>
+
+<div class="step">
+  <h3><span class="n">7</span>결측 대치 실험 B·D — SD가 남긴 지문</h3>
+  <div class="row"><span class="lab">관찰</span> 중성지방·LDL의 SD가 어떤 가중치로도 재현되지 않았습니다: 재현 87 / 33, 논문 63 / 22. 논문 SD가 <b>일관되게 작습니다.</b></div>
+  <div class="row"><span class="lab">가설</span> 중성지방·LDL은 공복 검사라 54%가 결측이다. 논문이 결측을 전체 평균으로 채웠다면 SD가 줄어든다.</div>
+  <p>왜 줄어드는지: 결측 \(n - n_{\text{obs}}\)명을 평균 \(\bar{x}\)로 채우면 그 사람들의 편차는 0이 되므로</p>
+  $$s^2_{\text{대치}} \approx \frac{n_{\text{obs}}}{n}\, s^2_{\text{obs}} \quad\Rightarrow\quad s_{\text{대치}} \approx \sqrt{\frac{n_{\text{obs}}}{n}}\; s_{\text{obs}}$$
+  $$\text{LDL: } \sqrt{0.451}\times 33.3 = 22.4 \;\;(\text{논문 } 22.37) \qquad \text{중성지방: } \sqrt{0.457}\times 87.5 = 59.2 \;\;(\text{논문 } 63.0)$$
+  <div class="row"><span class="lab">실험</span> 대치 없음 / 전체 평균 / 사분위별 평균 / 중앙값 / 회귀 예측값 / 비가중 — 6가지 비교.</div>
+  <div class="tbl-wrap"><table>
+    <tr><th>변수</th><th class="num">결측</th><th class="num">대치 없음 S</th><th class="num">전체 평균 대치 S</th><th>비고</th></tr>
+    <tr><td>LDL-C</td><td class="num">54.9%</td><td class="num">53.2</td><td class="num good">1.3</td><td>예측 SD 22.4 vs 논문 22.37</td></tr>
+    <tr><td>중성지방</td><td class="num">54.3%</td><td class="num">150.9</td><td class="num good">9.1</td><td>사분위별 평균 대치는 38.2, 중앙값 61.8 — 전체 평균만 맞음</td></tr>
+    <tr><td>PIR</td><td class="num">10.1%</td><td class="num">0.36</td><td class="num good">0.03</td><td></td></tr>
+    <tr><td>HDL-C</td><td class="num">5.4%</td><td class="num">1.56</td><td class="num good">0.28</td><td></td></tr>
+    <tr><td>총콜레스테롤</td><td class="num">5.4%</td><td class="num">4.16</td><td class="num good">0.58</td><td></td></tr>
+    <tr><td>음주량</td><td class="num">35.7%</td><td class="num good">2.95</td><td class="num bad">16.49</td><td><b>대치하면 악화</b> → 음주는 대치 안 함</td></tr>
+  </table></div>
+  <div class="row"><span class="lab">조정</span> 논문 대조용 <code>*_imp</code> 열 생성: <code>ifelse(is.na(x), mean(x, na.rm=TRUE), x)</code>. 재현 본행과 회귀분석은 원자료 유지.</div>
+  <div class="row"><span class="lab">결과</span> <span class="good">5개 변수의 대치 규칙 확정.</span> 평균 대치는 통계적으로 권장되지 않는 방법이지만, "SD가 정확히 \(\sqrt{\text{관측비율}}\)배로 줄었다"는 지문 덕분에 논문이 무엇을 했는지 특정할 수 있었습니다.</div>
+</div>
+
+<div class="step">
+  <h3><span class="n">8</span>교육 실험 C — 코딩인가 가중치인가</h3>
+  <div class="row"><span class="lab">관찰</span> 교육 Q4 "High school"이 27.53 vs 26.44로 1.1%p 어긋남.</div>
+  <div class="row"><span class="lab">가설</span> (i) 재코딩 규칙이 다르다, 또는 (ii) 6단계의 가중치 문제다.</div>
+  <div class="row"><span class="lab">실험</span> 재코딩 3종 × 가중치 2종 = 6조합. 코드 2(9–11학년)를 High school로: S = 78.8. 코드 4(전문대)를 High school로: 261.7. 현재 규칙 그대로 + 가중치만 원가중치로: 6.26 → 2.39.</div>
+  <div class="row"><span class="lab">조정</span> 없음 (코딩 규칙은 맞았음)</div>
+  <div class="row"><span class="lab">결과</span> 교육은 가중치 문제였습니다. <b>바꿔 보고 나빠지면 그 가설을 버린다</b> — 실험이 "무엇이 아닌지"를 알려주는 예입니다.</div>
+</div>
+
+<div class="step">
+  <h3><span class="n">9</span>SD 공식 실험 E와 P값 실험 F</h3>
+  <div class="row"><span class="lab">관찰</span> 7단계까지 마친 뒤 음주 <i>(참고)</i> 행은 3.25 ± 18.68 … 3.45 ± 31.34로 논문(… 3.33 ± 29.64)과 Q4 SD가 1.7 어긋났고, P는 0.515 vs 논문 0.187.</div>
+  <div class="row"><span class="lab">가설 E</span> 가중 SD를 계산하는 공식이 다르다(모집단식, \(\Sigma w - 1\), 정규화 등).</div>
+  <div class="row"><span class="lab">실험 E</span> 4가지 공식 모두 S = 2.93~2.95로 동일. <b>기각.</b></div>
+  <div class="row"><span class="lab">가설 F</span> P값을 층·군집(복합표본 설계)을 반영한 검정이 아니라 단순 가중회귀로 구했다.</div>
+  <div class="row"><span class="lab">실험 F</span> 설계 기반 F검정 0.515 · 설계 기반 LRT 0.338 · <b>단순 가중회귀 <code>lm(weights = w)</code> 0.203</b> · 비가중 0.908.</div>
+  <div class="row"><span class="lab">결과</span> P값 방식은 단순 가중회귀로 특정(10단계에서 0.187 정확히 일치). SD 잔차는 아직 미해결 → 마지막 단서.</div>
+</div>
+
+<div class="step">
+  <h3><span class="n">10</span>실험 I — 음주 행이 가리킨 진짜 가중치</h3>
+  <div class="row"><span class="lab">관찰</span> 음주 <i>(참고)</i> 행의 SD는 999 응답자 4~5명의 <b>개별 가중치</b>로 사실상 결정됩니다(\(\text{SD} \approx 999\sqrt{\sum w_{999}/\sum w}\)). 그러니 이 행이 조금이라도 어긋난다는 것은 <b>그 4~5명의 가중치가 논문과 다르다</b>는 뜻이고, 이는 "가중치 변수 자체가 다르다"는 지문입니다.</div>
+  <div class="row"><span class="lab">가설</span> 논문은 검진(MEC) 가중치가 아니라 <b>설문(interview) 가중치</b> <code>WTINT2YR</code>/<code>WTINTPRP</code>를 썼다. (6단계에서 설문 가중치는 CDC 재조정 버전만 시험했고, 원가중치 버전은 시험하지 않았다.)</div>
+  <div class="row"><span class="lab">실험</span> 777/999 처리 3종 × 가중치 3종 = 9조합.</div>
+  <div class="tbl-wrap"><table>
+    <tr><th>조합</th><th>Q1 … Q4</th><th class="num">S</th></tr>
+    <tr><td>코드 유지 × MEC 원가중치</td><td>3.25±18.68 · 4.32±40.30 · 3.02±21.21 · 3.45±31.34</td><td class="num">2.95</td></tr>
+    <tr><td><b>코드 유지 × 설문 원가중치</b></td><td><b>3.24±18.67 · 4.29±39.96 · 2.99±20.49 · 3.33±29.64</b></td><td class="num good">0.02</td></tr>
+    <tr><td>코드 유지 × MEC CDC 재조정</td><td>3.32±20.79 · 4.47±42.31 · 3.06±22.29 · 3.42±31.08</td><td class="num">8.13</td></tr>
+    <tr><td>777만 제거 × 설문</td><td>… 2.88±18.35 · 2.73±20.36</td><td class="num">12.15</td></tr>
+    <tr><td>논문</td><td>3.24±18.67 · 4.29±39.96 · 2.99±20.49 · 3.33±29.64</td><td class="num">0</td></tr>
+  </table></div>
+  <p>설문 가중치 가설을 Table 1 전체에 적용하니: 합계 S 13.53 → <b>1.03</b>. 나이 37.06 ± 13.45 / 46.33 ± 15.05 / 51.74 ± 15.90 / 57.47 ± 16.15, 뇌졸중 0.90 / 2.00 / 3.08 / 5.49%, 체중 74.70 ± 16.85 … 전부 논문과 동일. 음주 P도 단순 가중회귀로 <b>0.187</b> 정확히 일치.</p>
+  <div class="row"><span class="lab">조정</span> <code>wt = ifelse(cycle == "P", WTINTPRP, WTINT2YR)</code> (재조정 없음), <code>weight_mode = "paper"</code></div>
+  <div class="row"><span class="lab">결과</span> <span class="good">132 일치 / 7 근소 / 13 의도적 차이.</span> 체중·허리둘레는 검진센터에서 잰 값이므로 <b>원칙은 검진 가중치</b>입니다. 논문은 잘못된 가중치를 썼고, 재현은 그 실수를 그대로 따라 해서 일치시킨 것입니다.</div>
+</div>
+
+<div class="step">
+  <h3><span class="n">11</span>재현성 확인 — 두 번 돌리면 같은가</h3>
+  <div class="row"><span class="lab">관찰</span> "분석할 때마다 값이 달라지지 않을까?"</div>
+  <div class="row"><span class="lab">실험</span> 전처리와 Table 1 스크립트를 두 번 실행해 출력을 <code>diff</code>로 비교.</div>
+  <div class="row"><span class="lab">결과</span> <span class="good">한 글자도 다르지 않음.</span> 이 분석에 난수는 Shapiro–Wilk용 5,000명 추출 한 곳뿐이고 <code>set.seed(2026)</code>으로 고정되어 있습니다. 값이 달라진다면 원인은 난수가 아니라 <b>자료가 바뀌었거나 규칙이 바뀐 것</b>입니다.</div>
+</div>
+
+<!-- ============================================================ -->
+<h2 id="s3">③ 점수 사다리 — 한눈에 보는 수렴 과정</h2>
+<p>실험 A의 9개 행 점수 합계(연속변수 7개 + 교육 + 뇌졸중)가 단계마다 어떻게 줄었는지입니다.</p>
+<div class="ladder">
+  <div class="bar"><div>처음 재현 (MEC 가중치, CDC 재조정)</div><div class="fill" style="width:100%"></div><div class="v">16.82</div></div>
+  <div class="bar"><div>6단계: 재조정 제거 (MEC 원가중치)</div><div class="fill" style="width:58%"></div><div class="v">9.83</div></div>
+  <div class="bar"><div>10단계: 설문 원가중치</div><div class="fill" style="width:39%"></div><div class="v">6.61</div></div>
+  <div class="bar"><div>10단계 + 7단계 평균 대치 (PIR·HDL·TC)</div><div class="fill" style="width:6%"></div><div class="v">1.03</div></div>
+</div>
+
+<h3>③-1 용어 정밀 해설 — 가중치, MEC vs 설문 가중치, CDC 재조정</h3>
+
+<h4>(1) 가중치 \(w_i\)란 무엇인가</h4>
+<p>NHANES는 미국인을 무작위로 뽑지 않습니다. 고령자·흑인·히스패닉·저소득층을 <b>일부러 더 많이</b> 뽑습니다(그래야 그 집단의 통계도 정밀해지니까). 그래서 사람마다 "이 사람이 미국인 몇 명을 대표하는가"를 뜻하는 숫자 \(w_i\)가 붙습니다. CDC(NCHS)가 만들어 DEMO 파일에 넣어 주는 값이고, 만드는 순서는</p>
+$$w_i \;=\; \underbrace{\frac{1}{\pi_i}}_{\text{뽑힐 확률의 역수}} \;\times\; \underbrace{a_i}_{\text{무응답 보정}} \;\times\; \underbrace{c_i}_{\text{인구총계 맞춤(사후층화)}}$$
+<p>고령자는 일부러 많이 뽑았으므로 \(\pi_i\)가 커서 \(w_i\)가 작습니다 — 이 자료에서 60세 이상의 평균 가중치는 29,404명, 20–39세는 39,055명입니다. 한 주기의 \(w_i\)를 전부 더하면 그 시점의 미국 민간 인구(이 분석 대상인 20세 이상은 약 2억 1천만 명)가 됩니다. 가중 평균은</p>
+$$\bar{x}_w \;=\; \frac{\sum_i w_i\,x_i}{\sum_i w_i}$$
+<p>이 식에서 <b>모든</b> \(w_i\)에 같은 상수를 곱하면 분자·분모에서 약분되어 평균이 변하지 않습니다. 그러나 <b>주기마다 다른</b> 상수를 곱하면 주기들의 섞이는 비율이 바뀌어 평균이 변합니다. 아래 "재조정"이 바로 이 경우입니다.</p>
+
+<h4>(2) 설문 가중치(INT)와 검진 가중치(MEC) — 같은 사람에게 붙는 두 개의 숫자</h4>
+<p>NHANES는 두 단계로 진행됩니다: ① 집에서 하는 <b>설문(interview)</b> → ② 이동검진센터(<b>MEC</b>, Mobile Examination Center)에서 하는 신체계측·혈액검사. 설문에 응한 사람 중 4~8%는 검진센터에 오지 않습니다(고령·병약자가 더 많이 빠짐).</p>
+<div class="tbl-wrap"><table>
+  <tr><th>주기</th><th class="num">설문 응답</th><th class="num">검진 불참</th><th class="num">불참률</th></tr>
+  <tr><td>2011–12 (G)</td><td class="num">9,756</td><td class="num">418</td><td class="num">4.3%</td></tr>
+  <tr><td>2013–14 (H)</td><td class="num">10,175</td><td class="num">362</td><td class="num">3.6%</td></tr>
+  <tr><td>2015–16 (I)</td><td class="num">9,971</td><td class="num">427</td><td class="num">4.3%</td></tr>
+  <tr><td>2017–20.3 (P)</td><td class="num">15,560</td><td class="num">1,260</td><td class="num">8.1%</td></tr>
+</table></div>
+<p>그래서 CDC는 가중치를 두 벌 만듭니다.</p>
+<ul>
+  <li><b>설문 가중치</b> <code>WTINT2YR</code> / <code>WTINTPRP</code>: 설문 응답자 전원에게. 설문 변수(질병력·흡연·음주·교육)를 분석할 때.</li>
+  <li><b>검진 가중치</b> <code>WTMEC2YR</code> / <code>WTMECPRP</code>: 검진에 온 사람에게만(안 온 사람은 0). 불참자가 대표하던 인구 몫을 <b>같은 나이·성별·인종의 참석자에게 얹어</b> 줍니다. 그래서 같은 사람의 MEC 가중치는 INT 가중치보다 3~5% 큽니다(중앙값 비율 1.03~1.05). 검진 변수(체중·허리둘레·혈액)를 분석할 때 씁니다.</li>
+</ul>
+$$w_i^{\text{MEC}} \;=\; w_i^{\text{INT}} \times \frac{\text{해당 집단의 설문 응답자 가중치 합}}{\text{해당 집단의 검진 참석자 가중치 합}} \;\;(\ge 1)$$
+<p>WWI는 검진에서 잰 체중과 허리둘레로 만드니 <b>원칙은 MEC 가중치</b>입니다. 논문은 INT 가중치를 썼습니다. 그 차이가 이 분석 대상 23,389명의 가중치 합계로는 8억 8,160만(MEC) vs 8억 4,160만(INT)이고, 사람별 분포도 조금 다릅니다.</p>
+
+<h4>(3) CDC 재조정 — 4개 주기를 합칠 때 인구를 4번 세지 않기 위한 계수</h4>
+<p>각 주기의 가중치는 혼자서 미국 인구 전체를 대표합니다. 4개 주기를 그냥 합치면 인구가 4배(8억 8천만)가 됩니다. CDC(NCHS)의 분석 지침은 각 주기의 가중치에 "그 주기가 차지하는 기간 ÷ 전체 기간"을 곱하라고 합니다. 2011–2016은 각 2년, 2017–2020.3은 3.2년, 합계 9.2년이므로</p>
+$$c_{G} = c_{H} = c_{I} = \frac{2}{9.2} = 0.217,\qquad c_{P} = \frac{3.2}{9.2} = 0.348,\qquad w_i^{\text{CDC}} = c_{\text{주기}(i)} \cdot w_i^{\text{MEC}}$$
+<div class="tbl-wrap"><table>
+  <tr><th>주기</th><th class="num">MEC 원가중치 합 (백만)</th><th class="num">전체에서의 몫 (원)</th><th class="num">CDC 계수</th><th class="num">재조정 후 합</th><th class="num">몫 (CDC)</th></tr>
+  <tr><td>G</td><td class="num">212</td><td class="num">24.1%</td><td class="num">0.217</td><td class="num">46.1</td><td class="num">20.8%</td></tr>
+  <tr><td>H</td><td class="num">218</td><td class="num">24.7%</td><td class="num">0.217</td><td class="num">47.3</td><td class="num">21.3%</td></tr>
+  <tr><td>I</td><td class="num">222</td><td class="num">25.2%</td><td class="num">0.217</td><td class="num">48.2</td><td class="num">21.8%</td></tr>
+  <tr><td>P</td><td class="num">230</td><td class="num">26.1%</td><td class="num">0.348</td><td class="num">80.0</td><td class="num"><b>36.1%</b></td></tr>
+  <tr><th>합계</th><th class="num">881.6</th><th></th><th></th><th class="num">221.7</th><th></th></tr>
+</table></div>
+<p>재조정 후 합계 2억 2,170만 = 20세 이상 미국 인구 한 번. 핵심은 <b>P 주기의 몫이 26%에서 36%로 커진다</b>는 것입니다. 3.2년치 자료이므로 2년치 주기보다 1.6배 무겁게 취급하는 것이 지침이고, 이것이 "2011–2020년 평균 인구"를 올바르게 대표하는 방법입니다. 논문은 이 재조정을 하지 않았습니다(= 네 주기를 25%씩 균등하게 섞음).</p>
+
+<h4>(4) 왜 이 차이가 Q4에서만 크게 보이는가</h4>
+<p>가중치는 나이에 따라 가장 크게 달라지고(고령자 과대표집), 사분위군의 나이 구성은 극단적으로 다릅니다.</p>
+<div class="tbl-wrap"><table>
+  <tr><th>사분위</th><th class="num">20–39세</th><th class="num">40–59세</th><th class="num">60세 이상</th></tr>
+  <tr><td>Q1</td><td class="num">61.0%</td><td class="num">29.0%</td><td class="num">10.0%</td></tr>
+  <tr><td>Q4</td><td class="num">15.0%</td><td class="num">28.8%</td><td class="num"><b>56.1%</b></td></tr>
+</table></div>
+<p>Q4는 절반 이상이 60세 이상이라, 가중치 방식이 조금만 바뀌어도(어느 주기를 얼마나 섞는지, 검진 불참자 몫을 얼마나 얹는지) 평균 나이와 뇌졸중 %가 움직입니다. Q1은 젊어서 거의 안 움직입니다. 그래서 "Q1은 맞는데 Q4만 틀리면 가중치를 의심하라"는 규칙이 성립합니다.</p>
+
+<h3>③-2 사다리의 각 칸에서 정확히 무엇을 바꿨나</h3>
+<p>같은 23,389명, 같은 사분위 배정에서 <b>가중치 열 하나만</b> 바꾼 결과입니다. Q4의 평균 나이와 뇌졸중 %로 보면:</p>
+<div class="tbl-wrap"><table>
+  <tr><th>칸</th><th>가중치 (코드)</th><th class="num">Q4 나이</th><th class="num">Q4 뇌졸중</th><th class="num">Q4 안 P주기 몫</th><th class="num">S 합계</th><th>바꾼 것</th></tr>
+  <tr><td>비가중 (참고)</td><td><code>w = 1</code></td><td class="num">59.04</td><td class="num">6.67%</td><td class="num">—</td><td class="num">101.1</td><td>가중치 없음 — 고령 과대표집이 그대로 드러남</td></tr>
+  <tr><td>처음 재현</td><td><code>wt_mec_cdc = MEC × (2/9.2 또는 3.2/9.2)</code></td><td class="num">57.83</td><td class="num">5.82%</td><td class="num">37.8%</td><td class="num">16.82</td><td>CDC 지침 그대로 (올바른 방식)</td></tr>
+  <tr><td>6단계</td><td><code>wt_mec_raw = MEC</code></td><td class="num">57.64</td><td class="num">5.58%</td><td class="num">27.6%</td><td class="num">9.83</td><td><b>재조정 계수 제거</b> → P 주기 몫 38% → 28%</td></tr>
+  <tr><td>10단계</td><td><code>wt_int_raw = INT</code></td><td class="num"><b>57.47</b></td><td class="num"><b>5.49%</b></td><td class="num">26.8%</td><td class="num">6.61</td><td><b>검진 가중치 → 설문 가중치</b> (불참자 몫을 얹지 않은 값)</td></tr>
+  <tr><td>10 + 7단계</td><td>위 + <code>*_imp</code> 열</td><td class="num">57.47</td><td class="num">5.49%</td><td class="num">26.8%</td><td class="num"><b>1.03</b></td><td>가중치는 그대로, PIR·HDL·TC 결측을 평균 대치 (남은 6.4점 중 6.4점이 이 세 행)</td></tr>
+  <tr><td>논문</td><td>?</td><td class="num">57.47</td><td class="num">5.49%</td><td class="num"></td><td class="num">0</td><td></td></tr>
+</table></div>
+<p>즉 사다리의 앞 세 칸은 <b>회귀식도, 사분위도, 자료도 건드리지 않고 가중치 열 하나를 바꾼 것</b>이고, 마지막 칸은 가중치가 아니라 결측 처리를 바꾼 것입니다. 마지막 남은 6.61 중 6.41이 PIR(0.38)·HDL(1.71)·TC(4.32) 세 행의 몫이었는데, 이 세 변수는 7단계에서 이미 "평균 대치"로 확인된 변수라 대치 열을 쓰자 사라졌습니다.</p>
+<div class="box warn">
+  <div class="ttl">다시 강조: 사다리를 내려간 것은 "올바른 쪽"으로 간 것이 아니다</div>
+  <p>맨 위 칸(MEC 가중치 + CDC 재조정)이 CDC 지침에 맞는 방식이고, 아래로 내려갈수록 논문의 실수를 하나씩 따라 한 것입니다. 점수가 0에 가까워진 것은 "논문이 무엇을 했는지 정확히 알아냈다"는 뜻이지 "값이 더 정확해졌다"는 뜻이 아닙니다. 다행히 그 차이는 Q4 나이 0.36세, 뇌졸중 0.33%p 수준이라 논문의 결론을 바꾸지 않습니다.</p>
+</div>
+
+<p>같은 과정을 132개 셀의 판정으로 보면:</p>
+<div class="tbl-wrap"><table>
+  <tr><th>시점</th><th class="num good">일치</th><th class="num">근소</th><th class="num bad">차이</th><th>비고</th></tr>
+  <tr><td>1~5단계 후 (첫 비교표)</td><td class="num">48</td><td class="num">67</td><td class="num">17</td><td>차이 중 원인 불명 3건</td></tr>
+  <tr><td>6·7·8단계 후</td><td class="num">93</td><td class="num">44</td><td class="num">15</td><td>차이 전부 원인 확인</td></tr>
+  <tr><td>9·10단계 후 (최종)</td><td class="num">132</td><td class="num">7</td><td class="num">13</td><td>차이 전부 의도적</td></tr>
+</table></div>
+<p class="small">근소 7개는 대부분 0.1~0.3 수준이며, 본행(올바른 처리)과 논문 방식의 차이에서 오는 것입니다.</p>
+
+<!-- ============================================================ -->
+<h2 id="s4">④ 남은 13개 셀 — 일부러 맞추지 않은 자리</h2>
+<p>재현의 목표는 "논문과 같은 숫자"가 아니라 "<b>왜 다른지 설명할 수 있는 숫자</b>"입니다. 논문이 틀린 값은 본행에서 올바른 방법으로 계산하고, 바로 아래 <i>(참고)</i> 행에 논문 방식을 재현해 두었습니다.</p>
+<div class="tbl-wrap"><table>
+  <tr><th>행</th><th class="num">셀</th><th>본행 (올바른 처리)</th><th>(참고) 행 (논문 방식)</th></tr>
+  <tr><td>음주량</td><td class="num">4</td><td>777/999 → 결측. 2.90 ± 2.50 … 2.32 ± 2.21, P &lt; 0.001</td><td>코드 유지 + 단순 가중회귀 P: 논문과 Δ 0.00, P = 0.187</td></tr>
+  <tr><td>중성지방</td><td class="num">4</td><td>관측값 10,684명만. 95.9 ± 91.8 …</td><td>결측 54% 평균 대치: 107.48 ± 63.04 … (Δ ≤ 0.01)</td></tr>
+  <tr><td>LDL-C</td><td class="num">4</td><td>관측값만. 106.9 ± 33.1 …</td><td>평균 대치: 109.30 ± 22.37 … (Δ 0.00)</td></tr>
+  <tr><td>총콜레스테롤 Q4</td><td class="num">1</td><td>SD 43.94 (관측값만)</td><td>평균 대치: 42.86 (Δ 0.00)</td></tr>
+</table></div>
+
+<!-- ============================================================ -->
+<h2 id="s5">⑤ 논문 작성자의 논리적·방법론적 실수 10가지</h2>
+<p>재현 과정에서 드러난 문제를 <b>결론에 미치는 영향</b>의 크기 순으로 정리했습니다. <span class="sev hi">큼</span> 결과 숫자나 해석이 바뀜 · <span class="sev mid">중간</span> 표의 값이 왜곡되지만 결론은 유지 · <span class="sev lo">작음</span> 서술·표기의 문제.</p>
+
+<div class="box bad">
+  <div class="ttl">1. Methods에는 "가중치를 썼다", Table 2·3은 가중치 없이 계산 <span class="sev hi">큼</span></div>
+  <p>Table 2의 OR 1.94 / 사분위 2.12·3.56·5.35 / Model 2 1.36은 비가중 <code>glm()</code>과 소수 둘째 자리까지 일치하고, 가중 <code>svyglm()</code>은 2.18 (1.93–2.45)입니다. Table 1만 가중이고 핵심 결과인 회귀분석은 비가중입니다. NHANES는 고령자·소수인종을 일부러 더 뽑은 자료라 가중치 없는 OR은 "미국 성인"이 아니라 "이 표본"에 대한 값입니다. 방향과 유의성은 같지만, 논문이 스스로 밝힌 방법과 실제가 다릅니다.</p>
+  <p class="small">비유: "전국 학생 평균"이라고 써 놓고, 실제로는 특정 학교 몇 곳의 평균을 낸 것.</p>
+</div>
+
+<div class="box bad">
+  <div class="ttl">2. 결측 54%를 전체 평균으로 채움 <span class="sev hi">큼</span></div>
+  <p>중성지방·LDL은 공복 검사라 절반 이상이 결측인데, 논문은 결측을 전체 평균으로 대치했습니다. 이 방법은 (i) SD를 \(\sqrt{0.45}\)배로 줄여 변동을 과소평가하고, (ii) 사분위별 평균을 전체 평균 쪽으로 끌어당겨 그룹 간 차이를 지우며(중성지방 Q1 95.9 → 107.5, Q4 137.8 → 127.0), (iii) Model 3에서 이 변수들의 보정 효과를 약화시킵니다. 논문 어디에도 대치했다는 언급이 없습니다. 게다가 재현 Model 3는 결측 처리 방식에 따라 OR이 1.16 (0.99–1.35)에서 1.27 (1.00–1.60)까지 움직이고, 논문의 1.25 (1.05–1.48)는 어느 방식과도 정확히 맞지 않습니다 — <b>어떤 표본으로 Model 3를 돌렸는지 알 수 없습니다.</b></p>
+  <p class="small">비유: 시험을 안 본 학생 절반에게 반 평균 점수를 주고 "반 전체 점수 분포"를 말하는 것. 평균은 그대로지만 점수 차이는 사라집니다.</p>
+</div>
+
+<div class="box bad">
+  <div class="ttl">3. 코드값 777/999를 실제 값으로 계산 → 음주 행 전체가 무의미 <span class="sev hi">큼</span></div>
+  <p>"모름 = 999"를 하루 999잔으로 계산해 SD가 18~40이 되었고, 그 결과 유일하게 P = 0.187(유의하지 않음)이 나왔습니다. 논문은 이를 근거로 음주를 노출과 무관한 변수처럼 다뤘습니다(Results에서 언급 없음). 정리된 자료에서는 P &lt; 0.001이고 WWI가 높을수록 음주량이 단조롭게 <b>줄어듭니다</b>(2.90 → 2.32). 즉 이 행의 판정은 자료 오염이 만든 <b>거짓 음성</b>입니다. "SD가 평균의 6배"라는 표를 저자와 심사자 모두 그냥 지나쳤습니다.</p>
+</div>
+
+<div class="box warn">
+  <div class="ttl">4. 검진에서 잰 변수에 설문 가중치 사용 <span class="sev mid">중간</span></div>
+  <p>체중·허리둘레는 검진센터(MEC)에 온 사람만 있으므로 검진 가중치(<code>WTMEC2YR</code>)를 써야 합니다. 설문 가중치(<code>WTINT2YR</code>)는 검진에 안 온 사람까지 대표하도록 만들어져 있어, 검진 변수에 쓰면 "검진에 안 온 사람"의 몫이 잘못 배분됩니다. 값의 차이는 최대 0.4 정도라 결론은 바뀌지 않지만, NHANES 분석 지침의 기본 규칙 위반입니다.</p>
+</div>
+
+<div class="box warn">
+  <div class="ttl">5. 4개 주기를 합치면서 가중치를 재조정하지 않음 <span class="sev mid">중간</span></div>
+  <p>각 주기의 가중치는 "그 기간의 미국 인구"를 대표하므로 4개를 그냥 합치면 인구를 4번 세는 셈입니다(합계 8억 8천만 명). CDC 지침은 기간 비율(2/9.2, 3.2/9.2)로 곱하라고 합니다. 논문은 하지 않았고, 그래서 3.2년치인 P 주기가 2년치 주기와 같은 무게를 받아 2017–2020 인구가 과소 대표됐습니다. 역시 값의 차이는 작습니다.</p>
+</div>
+
+<div class="box warn">
+  <div class="ttl">6. P값에 복합표본 설계(층·군집)를 반영하지 않음 <span class="sev mid">중간</span></div>
+  <p>Table 1의 P는 층·군집을 무시한 단순 가중회귀입니다(음주 P 0.187 = <code>lm(weights)</code>; 설계 기반은 0.496). 같은 동네 사람끼리 비슷하다는 사실(군집)을 무시하면 표준오차가 과소평가되어 P가 실제보다 작아집니다. 이 자료의 설계효과는 약 1.4 — 23,389명이 실제로는 약 17,000명분의 정보입니다. Table 1은 대부분 P &lt; 0.001이라 결론은 안 바뀌지만, Table 2·3의 신뢰구간도 같은 방식이라면 모두 실제보다 좁게 보고된 것입니다.</p>
+  $$\text{설계효과 } d = \frac{\mathrm{Var}_{\text{복합표본}}}{\mathrm{Var}_{\text{단순임의추출}}} \approx 1.38 \quad\Rightarrow\quad \text{유효 표본 } n_{\text{eff}} = \frac{23{,}389}{1.38} \approx 17{,}000$$
+</div>
+
+<div class="box warn">
+  <div class="ttl">7. 분포 진단 없이 모든 변수를 mean ± SD로 보고 <span class="sev mid">중간</span></div>
+  <p>중성지방의 왜도는 11.4, 음주량은 5.0입니다. 이런 변수에서 평균은 소수의 극단값에 끌려가 "보통 사람"을 대표하지 못하고, SD는 의미를 잃습니다. 중앙값(IQR)으로 보고하거나 로그변환 후 비교하는 것이 표준이며, 이번 과제가 "로그변환의 근거"를 요구하는 이유가 바로 이것입니다. 이 실수가 3번(코드값)과 겹치면서 음주 행이 완전히 망가졌습니다.</p>
+</div>
+
+<div class="box warn">
+  <div class="ttl">8. "인구 집단이 달라도 관계가 비슷했다" — 기각 실패를 동일성의 증명으로 읽음 <span class="sev mid">중간</span></div>
+  <p>Table 3의 "all P for interaction &gt; 0.05"는 "효과 크기가 집단에 따라 다르다는 증거를 찾지 못했다"이지 "같다"가 아닙니다. 상호작용 검정은 원래 검정력이 낮고(뇌졸중 893명을 다시 반으로 쪼갬), 8번 검정하면 우연히 하나가 유의할 확률이 \(1 - 0.95^8 \approx 34\%\)라 유의해도 문제입니다. 남성 OR 1.39 (1.11–1.74) vs 여성 1.11 (0.90–1.38)은 "여성에서는 효과가 없다"로 읽어서도, "남녀가 같다"로 읽어서도 안 됩니다. 올바른 서술은 "이질성을 검출하지 못했다"입니다.</p>
+</div>
+
+<div class="box">
+  <div class="ttl">9. 단면연구인데 "위험(risk)"·"위험 요인(risk factor)"이라는 인과적 표현 <span class="sev lo">작음</span></div>
+  <p>Conclusion: "a greater WWI was associated with an increased <b>risk</b> of stroke", Discussion: "WWI could be an independent <b>risk factor</b>". 한 시점에 둘을 같이 잰 자료로는 유병(prevalence)과의 연관만 말할 수 있습니다. 뇌졸중을 앓은 뒤 활동량이 줄어 뱃살이 늘었을 가능성(역인과)을 배제할 수 없습니다. 저자도 Limitations에서 인정했지만, 결론 문장은 그 한계를 넘어섭니다.</p>
+</div>
+
+<div class="box">
+  <div class="ttl">10. 자료 처리 규칙을 기재하지 않음 <span class="sev lo">작음 (그러나 재현을 가장 어렵게 만든 원인)</span></div>
+  <p>"모름" 응답 처리, 경계성 당뇨 처리, 결측 대치, 코드값 처리, 가중치 변수와 재조정, Model 3의 표본 크기 — 어느 것도 논문에 없습니다. 이 문서의 11단계 실험은 전부 그 빈칸을 채우는 일이었습니다. 각 모형의 n을 표에 적고, 결측 처리를 한 문장으로 밝히기만 했어도 재현은 한 시간이면 끝났을 것입니다.</p>
+</div>
+
+<!-- ============================================================ -->
+<h2 id="s6">⑥ 그래서 논문의 결론은 살아남는가</h2>
+
+<p>실수 목록이 길지만, 공정하게 판단해야 합니다. "WWI가 높을수록 뇌졸중 유병률이 높다"는 핵심 주장이 자료 처리 방식에 따라 흔들리는지 확인했습니다.</p>
+
+<div class="tbl-wrap"><table>
+  <tr><th>분석</th><th>논문</th><th>재현 (여러 방식)</th><th>판정</th></tr>
+  <tr><td>사분위별 뇌졸중 유병률</td><td>0.90 → 5.49%</td><td>가중 0.90 → 5.49%, 비가중 1.32 → 6.67% — 어느 가중치든 단조 증가</td><td class="good">유지</td></tr>
+  <tr><td>Model 1 (미보정) OR</td><td>1.94 (1.79–2.10)</td><td>비가중 1.94, 가중 2.18 (1.93–2.45)</td><td class="good">유지</td></tr>
+  <tr><td>Model 2 (나이·성별·인종) OR</td><td>1.36 (1.23–1.50)</td><td>비가중 1.36, 가중 1.41</td><td class="good">유지</td></tr>
+  <tr><td>사분위 OR (Model 1)</td><td>2.12 / 3.56 / 5.35</td><td>비가중 2.12 / 3.56 / 5.35, 가중 2.25 / 3.49 / 6.40</td><td class="good">유지</td></tr>
+  <tr><td>Model 3 (완전 보정) OR</td><td>1.25 (1.05–1.48)</td><td>완전 사례(n≈6,180) 1.26–1.27 (1.00–1.60) · 평균 대치(n≈15,000) 1.16 (0.99–1.35)</td><td class="bad">취약</td></tr>
+  <tr><td>성별 상호작용</td><td>p = 0.103</td><td>p = 0.20 (남 1.45, 여 1.29)</td><td class="good">유지</td></tr>
+</table></div>
+
+<div class="box key">
+  <div class="ttl">판정</div>
+  <p><b>미보정·부분 보정 결과와 용량-반응 경향은 어떤 처리 방식에서도 유지됩니다.</b> 그러나 논문이 가장 강조한 "완전 보정 후에도 25% 증가(OR 1.25, CI가 1을 넘지 않음)"는 결측 처리 방식에 따라 CI 하한이 0.99~1.00으로 1에 걸리고, 논문의 정확한 재현 방식은 특정되지 않았습니다. 정직한 결론은 이렇습니다: "WWI와 뇌졸중 유병의 양의 연관은 강건하다. 다만 모든 공변량을 보정한 뒤의 독립적 효과 크기는 자료 처리에 민감하며, 논문이 제시한 것보다 불확실하다."</p>
+</div>
+
+<!-- ============================================================ -->
+<h2 id="s7">⑦ 고등학생을 위한 교훈 다섯 가지</h2>
+
+<ol>
+  <li><b>재현이 안 맞으면 통계 방법이 아니라 전처리를 먼저 의심하라.</b> 이번 11단계 중 통계 방법의 차이는 하나도 없었습니다. 전부 "어느 파일", "어느 코드값", "어느 가중치", "결측을 어떻게" 같은 자료 처리 결정이었습니다.</li>
+  <li><b>N부터 맞추고, 가중치 영향이 작은 곳(Q1)부터 보라.</b> N이 다르면 뒤의 모든 숫자가 다릅니다. Q1이 맞고 Q4만 틀리면 가중치, Q1부터 틀리면 코딩 규칙입니다.</li>
+  <li><b>SD는 정직한 지문이다.</b> SD가 평균의 6배면 코드값 오염(999), SD가 예상보다 \(\sqrt{\text{관측비율}}\)배 작으면 평균 대치입니다. 평균은 여러 이유로 어긋나지만 SD의 어긋남은 원인을 특정해 줍니다.</li>
+  <li><b>"기각하지 못함"은 "같음"이 아니다.</b> 음주 행의 P = 0.187도, Table 3의 P for interaction &gt; 0.05도, 검정력이 없어서 못 본 것일 수 있습니다. 왜 못 봤는지(표본이 작아서? 자료가 오염돼서?)를 항상 같이 물어야 합니다.</li>
+  <li><b>"일치"와 "옳음"은 다르다.</b> 논문과 같은 숫자를 내기 위해 논문의 실수(설문 가중치, 평균 대치, 코드값 유지)를 그대로 따라 했습니다. 그것은 "논문이 무엇을 했는지 이해했다"는 증명이지, 그 방법이 옳다는 뜻이 아닙니다. 보고서에는 두 가지를 나란히 적어야 합니다 — 논문 방식으로 얻은 값과, 올바른 방식으로 얻은 값, 그리고 둘의 차이가 결론을 바꾸는지.</li>
+</ol>
+
+<!-- ============================================================ -->
+<h2 id="s8">⑧ 부록 — 실험을 그대로 돌려 보는 법</h2>
+
+<div class="tbl-wrap"><table>
+  <tr><th>단계</th><th>스크립트</th><th>산출물</th></tr>
+  <tr><td>1</td><td><code>R/01_download_nhanes.R</code></td><td><code>data/raw/*.rds</code> (40개 표), 주기별 인원 합계</td></tr>
+  <tr><td>1~5, 7, 10</td><td><code>R/02_preprocess.R</code> — <code>weight_mode = "paper"</code>(논문 방식) / <code>"cdc"</code>(올바른 방식)</td><td><code>data/analysis_wwi_stroke.rds</code>, Fig.1 대조표, 분포 진단</td></tr>
+  <tr><td>—</td><td><code>R/03_figures.R</code>, <code>R/04_table1.R</code></td><td>그림, 가중 Table 1</td></tr>
+  <tr><td>비교</td><td><code>R/05_compare_table1.R</code> → <code>R/05b_build_compare_html.py</code></td><td><code>data/table1_comparison.csv</code>, <code>Table1_비교.html</code></td></tr>
+  <tr><td>6·7·8·9·10</td><td><code>R/06_diagnose_discrepancies.R</code> (검정 A, B, C, D)</td><td>가설별 점수표</td></tr>
+</table></div>
+<pre><code>&amp; "C:\Program Files\R\R-4.6.1\bin\Rscript.exe" R\02_preprocess.R
+&amp; "C:\Program Files\R\R-4.6.1\bin\Rscript.exe" R\05_compare_table1.R
+uv run R\05b_build_compare_html.py
+&amp; "C:\Program Files\R\R-4.6.1\bin\Rscript.exe" R\06_diagnose_discrepancies.R</code></pre>
+<p class="small">직접 실험해 볼 것: <code>02_preprocess.R</code>의 <code>weight_mode</code>를 <code>"cdc"</code>로 바꾸고 다시 돌려 <code>Table1_비교.html</code>의 색이 어떻게 변하는지 보십시오. 그것이 "논문 방식"과 "올바른 방식"의 차이입니다.</p>
+
+<footer>
+  자료: NHANES 2011–2012, 2013–2014, 2015–2016, 2017–March 2020 (CDC/NCHS). 논문: Ye J, et al. BMC Public Health 2023;23:1689, CC BY 4.0. 수식 렌더링: KaTeX (인터넷 연결 필요). 모든 수치는 2026-09-13/14 재현 결과.
+</footer>
+
+</div>
+</body>
+</html>

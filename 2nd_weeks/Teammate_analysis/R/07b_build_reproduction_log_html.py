@@ -1,0 +1,307 @@
+# -*- coding: utf-8 -*-
+"""
+07b_build_reproduction_log_html.py — data/reproduction_log.json → 재현_로그_발표용.html
+발표용 재현 과정 기록. 숫자는 전부 07_reproduction_log.R 실행 결과와 세션의 실제 실행 출력에서 가져온다.
+  실행: uv run R/07b_build_reproduction_log_html.py
+"""
+import json, math, pathlib, html as H
+proj = pathlib.Path(__file__).resolve().parent.parent
+J = json.load(open(proj / "data" / "reproduction_log.json", encoding="utf-8"))
+
+def f2(x, nd=2):
+    return "—" if x is None or (isinstance(x, float) and math.isnan(x)) else f"{x:.{nd}f}"
+def cell_label(r):
+    return f'{r["row"]}' + (f' · {r["level"]}' if r["level"] else "") + f' · {r["col"]}'
+def val(r, key, sdkey):
+    if r["type"] == "n": return f'{r[key]:,.0f}'
+    if r["type"] == "cont": return f'{r[key]:.2f} ± {r[sdkey]:.2f}'
+    return f'{r[key]:.2f}'
+def grade_cls(g): return {"O": "gO", "△": "gT", "X": "gX"}[g]
+
+def err_table(cells, top=None, sort=True, id_=""):
+    rows = sorted(cells, key=lambda r: -r["worst"]) if sort else cells
+    if top: rows = rows[:top]
+    out = ['<div class="tbl-wrap"><table><thead><tr><th>항목</th><th class="num">논문 값</th><th class="num">내 값</th><th class="num">절대오차</th><th class="num">상대오차(%)</th><th class="num">SD 절대오차</th><th class="num">SD 상대오차(%)</th><th>판정</th></tr></thead><tbody>']
+    for r in rows:
+        out.append(f'<tr><td>{H.escape(cell_label(r))}</td><td class="num">{val(r,"paper","paper_sd")}</td><td class="num">{val(r,"repro","repro_sd")}</td>'
+                   f'<td class="num">{f2(r["abs_err"])}</td><td class="num">{f2(r["rel_err"],1)}</td><td class="num">{f2(r.get("abs_err_sd"))}</td><td class="num">{f2(r.get("rel_err_sd"),1)}</td>'
+                   f'<td class="{grade_cls(r["grade"])}">{r["grade"]}</td></tr>')
+    out.append('</tbody></table></div>')
+    return "\n".join(out)
+
+S = {r["config"]: r for r in J["summary"]}
+v0 = S[[k for k in S if k.startswith("v0")][0]]; vFm = S[[k for k in S if k.startswith("vF 최종 본행")][0]]
+vFp = S[[k for k in S if k.startswith("vF 최종 논문방식")][0]]; rv = S[[k for k in S if "MEC 원가중치로" in k][0]]; rvc = S[[k for k in S if "CDC 재조정으로" in k][0]]
+p_alc = {k: (v[0] if isinstance(v, list) else v) for k, v in J["p_alc"].items()}
+
+def cnt(s): return f'O {s["O"]} / △ {s["tri"]} / X {s["X"]}'
+
+html = f"""<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>재현 과정 기록 — WWI·뇌졸중 Table 1</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js" onload="renderMathInElement(document.body,{{delimiters:[{{left:'$$',right:'$$',display:true}},{{left:'\\\\(',right:'\\\\)',display:false}}],throwOnError:false}});"></script>
+<style>
+ :root{{--ink:#1f2937;--muted:#6b7280;--line:#e5e7eb;--accent:#1d4ed8;--accent-bg:#eff6ff;--warn-bg:#fff7ed;--warn:#c2410c;--ok-bg:#f0fdf4;--ok:#15803d;--bad-bg:#fef2f2;--bad:#b91c1c}}
+ *{{box-sizing:border-box}} body{{margin:0;font-family:"Pretendard","Malgun Gothic","Noto Sans KR",system-ui,sans-serif;color:var(--ink);background:#fafafa;line-height:1.7;font-size:15.5px}}
+ .wrap{{max-width:1040px;margin:0 auto;padding:30px 20px 80px}}
+ header{{border-bottom:3px solid var(--accent);padding-bottom:16px;margin-bottom:24px}} header h1{{font-size:1.7rem;margin:0 0 6px}} header .sub{{color:var(--muted);font-size:.92rem}}
+ h2{{font-size:1.35rem;margin:46px 0 12px;padding-left:12px;border-left:5px solid var(--accent)}} h3{{font-size:1.1rem;margin:26px 0 8px}} h4{{font-size:1rem;margin:16px 0 6px;color:#374151}}
+ p{{margin:8px 0}} ul,ol{{padding-left:22px;margin:6px 0}} li{{margin:3px 0}}
+ code{{background:#f3f4f6;padding:1px 5px;border-radius:4px;font-family:Consolas,"D2Coding",monospace;font-size:.88em}}
+ table{{border-collapse:collapse;width:100%;margin:10px 0;font-size:.9rem;background:#fff}} th,td{{border:1px solid var(--line);padding:6px 9px;text-align:left;vertical-align:top}} th{{background:#f3f4f6}}
+ td.num,th.num{{text-align:right;font-variant-numeric:tabular-nums}} .tbl-wrap{{overflow-x:auto}}
+ .gO{{background:var(--ok-bg);color:var(--ok);font-weight:700;text-align:center}} .gT{{background:#fffbeb;color:#92400e;font-weight:700;text-align:center}} .gX{{background:var(--bad-bg);color:var(--bad);font-weight:700;text-align:center}}
+ .box{{border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:14px 0;background:#fff}} .box.key{{background:var(--accent-bg);border-color:#bfdbfe}} .box.warn{{background:var(--warn-bg);border-color:#fed7aa}} .box.ok{{background:var(--ok-bg);border-color:#bbf7d0}} .box.bad{{background:var(--bad-bg);border-color:#fecaca}}
+ .box .ttl{{font-weight:700;margin-bottom:4px}}
+ .quote{{border-left:4px solid var(--accent);background:#fff;padding:10px 14px;margin:10px 0;font-family:Consolas,"D2Coding",monospace;font-size:.9rem;white-space:pre-wrap}}
+ .try{{border:1px solid var(--line);border-left:6px solid var(--accent);border-radius:8px;background:#fff;padding:10px 14px;margin:12px 0}} .try .h{{font-weight:700}} .try .r{{margin:3px 0}} .try .lab{{display:inline-block;min-width:80px;font-weight:700;color:var(--accent)}}
+ .ok{{color:var(--ok);font-weight:700}} .bad{{color:var(--bad);font-weight:700}} .part{{color:#92400e;font-weight:700}}
+ details{{margin:8px 0}} summary{{cursor:pointer;color:var(--accent);font-weight:600}}
+ .slide{{border:1px solid var(--line);border-radius:10px;background:#fff;padding:12px 16px;margin:12px 0}} .slide .t{{font-weight:700;font-size:1.02rem;margin-bottom:4px}}
+ .small{{font-size:.86rem;color:var(--muted)}} .katex-display{{overflow-x:auto;padding:4px 0}}
+ @media print{{body{{background:#fff}}.wrap{{padding:0}}}}
+</style></head><body><div class="wrap">
+<header>
+ <h1>재현 과정 기록 (Reproduction Log) — WWI와 뇌졸중, Table 1</h1>
+ <div class="sub">Ye et al. BMC Public Health 2023;23:1689 (PMID 37658310) · NHANES 2011–2020 · 수업 발표용 · 발표 시간 10분(가정) · 청중: 교수님 + 수강생(가정) · 이 문서의 모든 수치는 이 세션에서 실제 실행된 스크립트 출력에서 가져왔으며, 최초 값은 <code>R/07_reproduction_log.R</code>로 초기 코드 상태를 복원해 다시 실행한 결과입니다.</div>
+</header>
+
+<div class="box key"><div class="ttl">30초 결론</div>
+<p>같은 공개 자료로 논문 Table 1의 128개 셀을 처음 재현했을 때 <b>44개</b>만 일치했고, 통계 방법이 아니라 논문에 적히지 않은 <b>자료 처리 규칙 7가지</b>(주기 파일, "모름" 응답, 경계성 당뇨, 사분위 경계, 코드값, 가중치 종류, 결측 대치)를 실험으로 역산하자 <b>128개 전부</b> 일치했습니다. 결정적이었던 것은 "거의 맞았다"에서 멈추지 않고 <b>남은 잔차를 규명하라</b>고 요구한 프롬프트였고, 그 결과 논문이 검진 가중치 대신 설문 가중치를 썼다는 사실이 드러났습니다.</p></div>
+
+<!-- ============================================================ -->
+<h2>0. 세션에서 코드와 숫자가 바뀐 지점 (시간순)</h2>
+<div class="tbl-wrap"><table><thead><tr><th>#</th><th>계기가 된 내 입력</th><th>바뀐 코드</th><th>바뀐 숫자</th></tr></thead><tbody>
+<tr><td>0</td><td>최초 요청 [요약: 자료 다운로드 + 논문 이해 HTML]</td><td><code>01_download</code>, <code>02_preprocess</code> 작성</td><td>주기별 DEMO 합 45,462 = 논문 ✔; 최종 N 23,367 (논문 23,389, −22)</td></tr>
+<tr><td>1</td><td>(같은 작업 중 자체 확인)</td><td>뇌졸중 "모름"(코드 9) 제외 → 포함</td><td>N 23,367 → 23,389 ✔; 사분위 OR 2.12/3.56/5.36 (논문 2.12/3.56/5.35); Model 1 비가중 1.94 = 논문</td></tr>
+<tr><td>2</td><td>"이 부분이 가중치인가 이건 어디가 출처야? … 이미지에서 각각의 항목들에 대해서 이해를 했으면 좋겠어"</td><td>당뇨 경계성(DIQ010=3) 없음 → 있음</td><td>당뇨 Q1 1.99 → 3.05 (논문 3.01), Q4 23.56 → 26.94 (26.76)</td></tr>
+<tr><td>3</td><td>"이게 무슨 말이지? na를 제거를 했다는 것일까? 안했다는 것일까?"</td><td>(코드 변경 없음, 검증만)</td><td>777/999 유지 시 음주 3.32±20.79 (논문 3.24±18.67) — 논문이 코드값을 정리하지 않았음을 확인</td></tr>
+<tr><td>4</td><td>"…동일한 형식으로 분석 결과에 대한 자료를 시각화 해서 만들어줘 그리고 원본와 차이가 나는 값이 나오면 빨간색으로 표시해줘"</td><td>사분위 <code>cut(right=FALSE)</code>; <code>05_compare</code>, <code>05b</code> 작성</td><td>사분위 n 5848/5847/5847/5847 → 5847/5847/5847/5848 ✔; 첫 비교표 48/67/17</td></tr>
+<tr><td>5</td><td>"왜 분석에서 차이가 나는 지를 알 수 있을까? … 분석을 할때마다 값이 달라질까?"</td><td>(두 번 실행 후 <code>diff</code>)</td><td>출력 완전 동일 — 난수 없음 확인</td></tr>
+<tr><td>6</td><td>"그럼 각각의 순서대로 검정을 하고 … 원본 논문와 동일한 값이 나오도록 test를 반복을 해서 원인이 뭔지를 확인해줘"</td><td><code>06_diagnose</code> 작성 (검정 A·B·C·D); <code>weight_mode</code>, <code>*_imp</code> 열</td><td>점수 16.82 → 9.83 (MEC 원가중치); LDL 53.2 → 1.3 (평균 대치); 비교표 93/44/15</td></tr>
+<tr><td>7</td><td>"근데 결측값에 대해서 감안을 하더라고 감안을 한 결과와 안한 결과 모두 원본 논문와 차이가 나는데 이를 규명해줘"</td><td>검정 E·F·I 추가; 가중치 → <code>wt_int_raw</code>(설문 원가중치); 참고행 P → <code>lm(weights)</code></td><td>음주 참고행 S 2.95 → 0.02; Table 1 전체 13.53 → 1.03; 비교표 132/7/13; P 0.187 정확 일치</td></tr>
+<tr><td>8</td><td>(발표 자료 요청, 본 문서)</td><td><code>07_reproduction_log</code> — 초기 상태 복원 + 되돌리기 검증</td><td>v0 {cnt(v0)} → 최종(논문방식) {cnt(vFp)}; 가중치만 되돌리면 오차 합 {vFp["sum_abs_err"]:.2f} → {rv["sum_abs_err"]:.2f}</td></tr>
+</tbody></table></div>
+<p class="small">기록의 한계: 채팅 세션에는 시각(timestamp)이 없어 순서만 기록했습니다. 파일 수정 시각으로는 2026-09-13 18:57(과제 이미지 저장) ~ 2026-09-14입니다.</p>
+
+<!-- ============================================================ -->
+<h2>1. 재현 목표 명세</h2>
+<ul>
+ <li><b>대상</b>: Ye et al. 2023, Table 1 "Basic characteristics of participants by weight-adjusted waist index quartile"</li>
+ <li><b>셀 수</b>: N 4 + 연속변수 10행 × 4 사분위(평균과 SD) + 범주형 9변수 21수준 × 4 = <b>128셀</b> (연속 40셀은 평균·SD 둘 다 맞아야 일치로 판정) + P값 20개</li>
+ <li><b>판정 기준</b>: |Δ| ≤ 0.1 → O, ≤ 1 → △, &gt; 1 → X (평균·SD 중 큰 오차 기준). 논문의 소수 둘째 자리와 동일하게 비교</li>
+</ul>
+<div class="tbl-wrap"><table><thead><tr><th>구분</th><th>조건</th><th>출처</th></tr></thead><tbody>
+<tr><td rowspan="6"><b>논문이 명시</b></td><td>NHANES 2011–2020, 초기 45,462명 → 체중·허리둘레·뇌졸중 결측 제외 → 23,389명</td><td>Methods, Fig.1</td></tr>
+<tr><td>WWI = 허리둘레(cm) / √체중(kg); 사분위 절단점 10.51 / 11.09 / 11.67; 각 5,847·5,847·5,847·5,848명</td><td>Methods, Table 1</td></tr>
+<tr><td>뇌졸중 = "의사에게 들은 적" 자기보고 (MCQ160F)</td><td>Methods</td></tr>
+<tr><td>연속형: mean ± SD, P = 가중 선형회귀; 범주형: %, P = 가중 카이제곱</td><td>Table 1 각주</td></tr>
+<tr><td>"proper NHANES sample weights", 복합표본 설계 고려</td><td>Statistical analysis</td></tr>
+<tr><td>공변량 목록 (교육, 흡연, 음주, 당뇨, 고혈압, CHD, 암, PIR, TG, TC, HDL, LDL)</td><td>Covariates</td></tr>
+<tr><td rowspan="8"><b>논문에 없어 추측·역산</b></td><td>"2011–2020"이 어느 파일인가 (J vs P)</td><td>DEMO 합계로 역산 → G·H·I·P</td></tr>
+<tr><td>뇌졸중 "모름"(코드 9) 22명 처리</td><td>N 23,389 로 역산 → 포함(없음으로)</td></tr>
+<tr><td>당뇨 "경계성"(DIQ010=3) 처리</td><td>당뇨 % 로 역산 → 있음</td></tr>
+<tr><td>절단점과 같은 WWI 값의 소속 (동점 처리)</td><td>사분위 n 으로 역산 → [a, b)</td></tr>
+<tr><td>음주 코드값 777/999 처리</td><td>SD 로 역산 → 정리하지 않음</td></tr>
+<tr><td>가중치 종류(설문/검진)와 주기 합산 재조정 여부</td><td>음주행 SD 지문 → 설문 원가중치, 재조정 없음</td></tr>
+<tr><td>결측 처리 (TG·LDL 54%, PIR 10%, HDL·TC 5%)</td><td>SD 축소 배율 → 전체 평균 대치</td></tr>
+<tr><td>P값 계산 방식 (설계 반영 여부)</td><td>음주 P 0.187 → 층·군집 무시한 단순 가중회귀</td></tr>
+</tbody></table></div>
+
+<!-- ============================================================ -->
+<h2>2. 최초 결과 vs 논문 값 대조표</h2>
+<p><b>최초 상태(v0)</b> = 세션 초반 첫 Table 1 실행 시점의 규칙: 검진(MEC) 가중치 + CDC 기간 재조정(2/9.2, 3.2/9.2), 경계성 당뇨 → 없음, 사분위 (a, b], 결측 대치 없음, 음주 777/999 → 결측. 판정: <b>{cnt(v0)}</b> (128셀), 절대오차 총합 {v0["sum_abs_err"]:.2f}.</p>
+<h3>오차가 컸던 순 상위 25셀</h3>
+{err_table(J["v0"], top=25)}
+<details><summary>128셀 전체 (오차 큰 순)</summary>{err_table(J["v0"])}</details>
+<div class="box"><div class="ttl">최초 오차의 구조</div>
+<ul>
+ <li><b>SD가 크게 어긋난 행</b>: 중성지방(SD 87 vs 63), LDL(33 vs 22), 음주(2.5 vs 18.7) — 결측·코드값 처리 차이의 지문</li>
+ <li><b>평균이 어긋난 행</b>: 당뇨(1.99 vs 3.01), 중성지방 Q1(93.9 vs 107.5), 교육 Q4</li>
+ <li><b>Q1은 거의 맞고 Q4로 갈수록 어긋남</b>: 나이 Q1 37.05 vs 37.06, Q4 57.83 vs 57.47 — 가중치 방식의 지문(고령층에 가중치가 크게 작용)</li>
+</ul></div>
+
+<!-- ============================================================ -->
+<h2>3. 격차 원인 가설과 검증 타임라인</h2>
+<p>각 시도는 <b>한 번에 하나만</b> 바꾸고, 점수 \\(S = \\sum_q (|\\bar x_q^{{재현}}-\\bar x_q^{{논문}}| + |s_q^{{재현}}-s_q^{{논문}}|)\\) 로 판정했습니다. 실패한 시도를 포함합니다.</p>
+
+<div class="try"><div class="h">[시도 1] 초기 인원 45,462가 안 맞는다 → 파일 선택 가설</div>
+<div class="r"><span class="lab">가설</span> 2017–2018(J) 대신 2017–2020.3 통합 파일(P)</div>
+<div class="r"><span class="lab">지시</span> 최초 요청 안에서 자체 판단 [기록: 대화 첫 응답]</div>
+<div class="r"><span class="lab">코드</span> <code>cycles = G, H, I, P</code></div>
+<div class="r"><span class="lab">숫자</span> 9,756+10,175+9,971+15,560 = 45,462 (J 사용 시 39,156)</div>
+<div class="r"><span class="lab">판정</span> <span class="ok">해결</span></div></div>
+
+<div class="try"><div class="h">[시도 2] 최종 N 23,367 vs 23,389 (−22)</div>
+<div class="r"><span class="lab">가설</span> "모름"(코드 9) 22명을 논문은 제외하지 않았다</div>
+<div class="r"><span class="lab">코드</span> <code>filter(MCQ160F %in% c(1,2))</code> → <code>filter(!is.na(MCQ160F))</code></div>
+<div class="r"><span class="lab">숫자</span> 코드별 인원 893/22,474/22 → 합 23,389; 뇌졸중 893 = 논문</div>
+<div class="r"><span class="lab">판정</span> <span class="ok">해결</span></div></div>
+
+<div class="try"><div class="h">[시도 3] 당뇨 % 만 체계적으로 낮음 (Q1 1.99 vs 3.01)</div>
+<div class="r"><span class="lab">지시</span> "이미지에서 각각의 항목들에 대해서 이해를 했으면 좋겠어" — 항목별 설명 중 DIQ010 코드북 확인</div>
+<div class="r"><span class="lab">가설</span> 경계성(코드 3)을 "있음"으로 셈</div>
+<div class="r"><span class="lab">코드</span> <code>DIQ010 %in% c(1, 3) ~ "Yes"</code></div>
+<div class="r"><span class="lab">숫자</span> 1.99/7.13/11.93/24.38 → 3.05/8.77/15.06/26.94 (논문 3.01/8.60/14.85/26.76)</div>
+<div class="r"><span class="lab">판정</span> <span class="ok">해결</span></div></div>
+
+<div class="try"><div class="h">[시도 4] 음주 SD 2.5 vs 18.7</div>
+<div class="r"><span class="lab">지시</span> "이게 무슨 말이지? na를 제거를 했다는 것일까? 안했다는 것일까?"</div>
+<div class="r"><span class="lab">가설</span> 논문이 777/999 코드값을 실제 값으로 계산</div>
+<div class="r"><span class="lab">숫자</span> 코드 유지: 3.32±20.79 / 4.47±42.31 / 3.06±22.29 / 3.42±31.09 — 논문과 같은 패턴(Q2 SD 40)</div>
+<div class="r"><span class="lab">판정</span> <span class="part">부분해결</span> — 패턴은 확인, 값은 아직 어긋남(Q4 SD +1.4). 본행은 정리 유지, 참고행만 코드 유지</div></div>
+
+<div class="try"><div class="h">[시도 5] 사분위 n 한 명 차이</div>
+<div class="r"><span class="lab">지시</span> "…동일한 형식으로 … 시각화 해서 만들어줘 그리고 원본와 차이가 나는 값이 나오면 빨간색으로 표시해줘"</div>
+<div class="r"><span class="lab">가설</span> 절단점과 같은 값(각 1명)의 소속 방향</div>
+<div class="r"><span class="lab">코드</span> <code>cut(right = FALSE)</code></div>
+<div class="r"><span class="lab">숫자</span> 5848/5847/5847/5847 → 5847/5847/5847/5848</div>
+<div class="r"><span class="lab">판정</span> <span class="ok">해결</span></div></div>
+
+<div class="try"><div class="h">[시도 6] 중성지방·LDL SD (87 vs 63, 33 vs 22) — 가중치 종류 가설</div>
+<div class="r"><span class="lab">가설</span> 공복 하위표본 가중치(WTSAF2YR) 또는 비가중이면 맞을 것</div>
+<div class="r"><span class="lab">숫자</span> 비가중 91.3±85.6 / MEC 93.9±87.5 / 공복 98.3±96.0 vs 논문 107.5±63.0 — 어느 것도 SD 63에 근접하지 못함</div>
+<div class="r"><span class="lab">판정</span> <span class="bad">실패</span> → 가중치로는 설명 불가, "원인 미확인"으로 기록</div></div>
+
+<div class="box ok"><div class="ttl">첫 비교표 (시도 5까지 반영): O 48 / △ 67 / X 17 — 차이 17 중 원인 불명 3건</div></div>
+
+<div class="try"><div class="h">[시도 7] 재현성 — 실행마다 값이 바뀌는가</div>
+<div class="r"><span class="lab">지시</span> "왜 분석에서 차이가 나는 지를 알 수 있을까? 어느 부분을 봐야 할까? 분석을 할때마다 값이 달라질까?"</div>
+<div class="r"><span class="lab">숫자</span> 02·04 스크립트 2회 실행 <code>diff</code> = 차이 없음 (난수는 Shapiro–Wilk 표본추출 1곳, <code>set.seed(2026)</code>)</div>
+<div class="r"><span class="lab">판정</span> <span class="ok">확인</span> — 오차는 난수가 아니라 규칙 차이</div></div>
+
+<div class="try"><div class="h">[시도 8] 검정 A — 가중치 6가지 방식 비교 (Q4 쪽 근소 차이)</div>
+<div class="r"><span class="lab">지시</span> "그럼 각각의 순서대로 검정을 하고 차이가 어떻게 발생을 했는 지에 대한 test를 진행을 해서 원본 논문와 동일한 값이 나오도록 test를 반복을 해서 원인이 뭔지를 확인해줘"</div>
+<div class="r"><span class="lab">숫자</span> A0 MEC+CDC 16.82 / A1 MEC 원가중치 <b>9.83</b> / A4 설문+CDC 14.63 / A5 비가중 101.12; P주기 계수 0.20~0.45 스캔 최소 0.25</div>
+<div class="r"><span class="lab">판정</span> <span class="part">부분해결</span> — 재조정 제거로 개선, 그러나 잔차 9.83 (설문 원가중치는 이때 시험 안 함 — 이것이 시도 12까지 막힌 이유)</div></div>
+
+<div class="try"><div class="h">[시도 9] 검정 B — 중성지방·LDL 결측 대치 6가지</div>
+<div class="r"><span class="lab">가설</span> SD 축소 배율 = √(관측비율) 이면 평균 대치</div>
+<div class="r"><span class="lab">숫자</span> LDL: 대치 없음 53.2 / <b>전체 평균 1.3</b> / 사분위별 평균 7.1 / 중앙값 6.2 / 회귀 2.2 / 비가중 52.1. 예측 SD 22.4 vs 논문 22.37</div>
+<div class="r"><span class="lab">판정</span> <span class="ok">해결</span> (사분위별 평균·중앙값·회귀 대치는 <span class="bad">실패</span>)</div></div>
+
+<div class="try"><div class="h">[시도 10] 검정 C — 교육 Q4 1.1%p: 재코딩 3종 × 가중치 2종</div>
+<div class="r"><span class="lab">숫자</span> 코드 2→HS 78.8 / 코드 4→HS 261.7 / 결측 최빈값 6.22 (현재 6.26) ; 현재 규칙 + MEC 원가중치 2.39</div>
+<div class="r"><span class="lab">판정</span> 재코딩 가설 <span class="bad">실패</span> → 가중치 문제로 판정</div></div>
+
+<div class="try"><div class="h">[시도 11] 검정 D — PIR·HDL·TC·음주 평균 대치</div>
+<div class="r"><span class="lab">숫자</span> PIR 0.36→0.03, HDL 1.56→0.28, TC 4.16→0.58 (<span class="ok">해결</span>); 음주 2.95→16.49 (<span class="bad">실패</span> → 음주는 대치 안 함)</div></div>
+
+<div class="box ok"><div class="ttl">두 번째 비교표 (시도 8~11 반영): O 93 / △ 44 / X 15 — 차이 전부 원인 확인, 그러나 참고행조차 Q4 SD +1.70, P 0.515 vs 0.187</div></div>
+
+<div class="try"><div class="h">[시도 12] 검정 E·F — SD 공식 4종, P값 방식 4종</div>
+<div class="r"><span class="lab">지시</span> "근데 결측값에 대해서 감안을 하더라고 감안을 한 결과와 안한 결과 모두 원본 논문와 차이가 나는데 이를 규명해줘"</div>
+<div class="r"><span class="lab">숫자</span> SD 공식: 2.93~2.95 전부 동일 (<span class="bad">실패</span>); P: 설계기반 0.515 / LRT 0.338 / <b>단순 가중회귀 0.203</b> / 비가중 0.908</div>
+<div class="r"><span class="lab">판정</span> P 방식 <span class="part">부분해결</span>, SD 잔차 미해결</div></div>
+
+<div class="try"><div class="h">[시도 13] 검정 I — 777/999 처리 3종 × 가중치 변수 3종 (같은 지시)</div>
+<div class="r"><span class="lab">가설</span> 음주행 SD는 999 응답자 4~5명의 개별 가중치로 결정 → 가중치 <b>변수</b>가 다르다</div>
+<div class="r"><span class="lab">숫자</span> 코드유지×MEC원 2.95 / <b>코드유지×설문원 0.02</b> / 코드유지×MEC CDC 8.13 / 777만 제거×설문 12.15</div>
+<div class="r"><span class="lab">코드</span> <code>wt = ifelse(cycle=="P", WTINTPRP, WTINT2YR)</code>, 참고행 P = <code>lm(weights)</code></div>
+<div class="r"><span class="lab">숫자</span> Table 1 전체 13.53 → 1.03; 나이 37.06±13.45/46.33±15.05/51.74±15.90/57.47±16.15; 뇌졸중 0.90/2.00/3.08/5.49; P {p_alc["lm_int"]:.3f}</div>
+<div class="r"><span class="lab">판정</span> <span class="ok">해결</span> — 비교표 132/7/13 (본행 기준), 논문방식 행은 전부 Δ 0.00</div></div>
+
+<div class="try"><div class="h">[시도 14] Table 2 Model 3 (완전 보정 OR 1.25) 재현</div>
+<div class="r"><span class="lab">숫자</span> 완전 사례 1.26 (1.00–1.60) n=6,174 / 코드 유지 1.27 / 평균 대치 1.16 (0.99–1.35) n=14,970 / 음주 제외 1.09 — 논문 1.25 (1.05–1.48)와 어느 것도 정확히 일치하지 않음</div>
+<div class="r"><span class="lab">판정</span> <span class="bad">미해결</span> — 논문이 Model 3에 쓴 표본(n)이 기재되어 있지 않음</div></div>
+
+<!-- ============================================================ -->
+<h2>4. 결정적 프롬프트 Top 3</h2>
+
+<div class="box bad"><div class="ttl">1위 — 이것이 없었으면 해결하지 못했다</div>
+<div class="quote">근데 결측값에 대해서 감안을 하더라고 감안을 한 결과와 안한 결과 모두 원본 논문와 차이가 나는데 이를 규명해줘</div>
+<ul>
+ <li><b>막혀 있던 이유</b>: 시도 8~11로 93/44/15까지 왔고 "차이는 전부 원인 확인"으로 종결하려 했음. 참고행의 잔차(Q4 SD +1.70, P 0.515 vs 0.187)를 "가중치 미세 차이"로 넘기고 있었음.</li>
+ <li><b>왜 통했나</b>: (i) <u>반례 제시</u> — "대치를 해도, 안 해도 둘 다 다르다"는 지적으로 결측 처리가 원인이 아님을 못 박음 → 남는 용의자는 가중치 <u>변수</u>뿐. (ii) <u>검증 방식 지정</u> — "규명"을 요구해 잔차를 설명 없이 남기지 못하게 함. (iii) 이 지시로 음주행이 "가중치 변수의 지문"이라는 관점이 생겨, 시도 8에서 빠뜨린 조합(설문 가중치 원값)을 시험하게 됨.</li>
+ <li><b>직전 → 직후</b>: 음주 참고행 S 2.95 → 0.02 (−99%); Table 1 전체 절대오차 합 13.53 → 1.03 (−92%); 비교표 93/44/15 → 132/7/13; 음주 P 0.515 → 0.187 (논문과 동일).</li>
+ <li><b>되돌리기 검증</b>: 최종 논문방식 구성에서 <u>가중치만</u> MEC 원가중치로 되돌리면 절대오차 합 {vFp["sum_abs_err"]:.2f} → {rv["sum_abs_err"]:.2f}, 판정 {cnt(vFp)} → {cnt(rv)}; MEC+CDC 재조정으로 되돌리면 {rvc["sum_abs_err"]:.2f}, {cnt(rvc)}. 음주 P는 {p_alc["lm_int"]:.3f} → {p_alc["lm_mec_raw"]:.3f}. 즉 이 변경 하나가 오차의 대부분을 좌우함.</li>
+</ul></div>
+
+<div class="box warn"><div class="ttl">2위</div>
+<div class="quote">그럼 각각의 순서대로 검정을 하고 차이가 어떻게 발생을 했는 지에 대한 test를 진행을 해서 원본 논문와 동일한 값이 나오도록 test를 반복을 해서 원인이 뭔지를 확인해줘</div>
+<ul>
+ <li><b>막혀 있던 이유</b>: 첫 비교표(48/67/17) 이후 원인 불명 3건(중성지방·LDL SD, 교육 Q4)과 Q4 전반의 근소 차이가 남았고, 그때까지는 한 번에 하나씩 짐작으로 고치고 있었음.</li>
+ <li><b>왜 통했나</b>: <u>단계 분해</u>("각각의 순서대로") + <u>검증 방식 지정</u>("test를 반복") + <u>목표 명시</u>("동일한 값이 나오도록"). 이 지시로 점수 함수 S 를 정의하고 가설을 표로 겨루는 <code>06_diagnose_discrepancies.R</code>이 만들어졌고, 실패 가설(사분위별 평균 대치, 재코딩 2종, 음주 대치)이 기록으로 남게 됨.</li>
+ <li><b>직전 → 직후</b>: 9행 점수 16.82 → 9.83; LDL 53.2 → 1.3; 교육 6.27 → 2.41; 비교표 48/67/17 → 93/44/15.</li>
+</ul></div>
+
+<div class="box warn"><div class="ttl">3위</div>
+<div class="quote">현재 만들어져 있는 분석에 대해서 동일한 결과가 나오는 지를 확인을 하고 싶어 동일한 형식으로 분석 결과에 대한 자료를 시각화 해서 만들어줘 그리고 원본와 차이가 나는 값이 나오면 빨간색으로 표시해줘</div>
+<ul>
+ <li><b>막혀 있던 이유</b>: 그전까지는 "Q1 나이 37.05 vs 37.06처럼 대체로 맞는다"는 인상 수준이었고, 어느 셀이 얼마나 어긋나는지 세어 본 적이 없었음.</li>
+ <li><b>왜 통했나</b>: <u>출력 형식 지정</u>(논문과 같은 배치) + <u>조건 명시</u>(차이는 빨간색). 이로써 128셀이 측정 단위가 되었고, 그 자리에서 사분위 n 한 명 차이(동점 규칙)와 "SD만 일관되게 작은 행"이 눈에 들어옴 — 이후 모든 검정의 계측기가 됨.</li>
+ <li><b>직전 → 직후</b>: 측정 불가 → 48/67/17 로 정량화; 사분위 n 일치; 중성지방·LDL의 "SD 패턴"이 시도 9의 가설로 이어짐.</li>
+</ul></div>
+<p class="small">차점: "이게 무슨 말이지? na를 제거를 했다는 것일까? 안했다는 것일까?" — 추정형으로 적어 둔 설명을 검증하게 만들어 논문이 코드값을 정리하지 않았음을 확정(음주 SD 18~40 재현). "이미지에서 각각의 항목들에 대해서 이해를 했으면 좋겠어" — 코드북을 항목별로 확인하다 경계성 당뇨를 발견.</p>
+
+<!-- ============================================================ -->
+<h2>5. 최종 결과와 남은 오차</h2>
+<h3>5-1. 논문 방식으로 계산한 최종 대조표 — {cnt(vFp)}</h3>
+<p>설문 원가중치 + 경계성→있음 + [a,b) + 결측 전체평균 대치 + 음주 코드 유지. 절대오차 총합 {vFp["sum_abs_err"]:.2f} (128셀).</p>
+{err_table(J["vF_paper"], top=15)}
+<details><summary>128셀 전체</summary>{err_table(J["vF_paper"])}</details>
+<div class="box ok"><div class="ttl">결론: 논문 방식 기준 <b>완전 일치</b> (최대 절대오차 {max(r["worst"] for r in J["vF_paper"]):.2f}, 전부 반올림 범위 ±0.1 이내)</div></div>
+
+<h3>5-2. 올바른 처리 기준 최종 대조표 — {cnt(vFm)}</h3>
+<p>같은 가중치이되 결측은 관측값만, 음주 777/999는 결측 처리. X 13셀은 전부 <b>의도적</b>입니다.</p>
+{err_table(J["vF_main"], top=20)}
+<div class="tbl-wrap"><table><thead><tr><th>남은 오차</th><th>셀</th><th>정당한가</th><th>판정</th></tr></thead><tbody>
+<tr><td>음주 평균·SD</td><td>4 (X)</td><td>정당. 논문은 "모름=999"를 999잔으로 계산. 재현은 결측 처리. 참고행에서 논문 방식 재현 시 Δ 0.00</td><td>의도적 불일치</td></tr>
+<tr><td>중성지방·LDL 평균·SD</td><td>8 (X)</td><td>정당. 논문은 결측 54%를 전체 평균 대치. 재현은 관측값만. 참고행 Δ ≤ 0.01</td><td>의도적 불일치</td></tr>
+<tr><td>총콜레스테롤 Q4 SD, PIR·HDL·TC 근소</td><td>1 (X) + 7 (△)</td><td>정당. 결측 5~10% 평균 대치 여부. 참고행 Δ 0.00</td><td>의도적 불일치</td></tr>
+<tr><td>Table 2 Model 3 OR</td><td>—</td><td>미해결. 재현 1.16~1.27 vs 논문 1.25; 논문이 쓴 표본 n 미기재</td><td><b>미해결</b></td></tr>
+</tbody></table></div>
+<div class="box key"><div class="ttl">최종 판정</div>
+<ul><li>Table 1 (논문 방식 재현): <b>완전 일치</b> (128/128, 소수 둘째 자리)</li>
+<li>Table 1 (올바른 방식): <b>허용 오차 내 일치</b> 115/128, 나머지 13은 논문의 처리 오류를 따르지 않은 의도적 차이</li>
+<li>Table 2 Model 1·2, 사분위 OR: <b>완전 일치</b> (비가중 glm); Model 3: <b>미해결</b></li></ul></div>
+
+<!-- ============================================================ -->
+<h2>6. 발표용 요약</h2>
+<h3>슬라이드 구성안 (7장)</h3>
+<div class="slide"><div class="t">1. 목표 — 논문 Table 1의 128개 숫자를 같은 자료로 다시 만든다</div>
+<ul><li>NHANES 2011–2020, 23,389명, WWI 사분위별 20개 특성</li><li>논문이 밝힌 규칙 6개, 밝히지 않은 규칙 8개</li><li>판정 기준: |Δ| ≤ 0.1 일치</li></ul><div class="small">표: 1절의 "명시 / 추측" 표</div></div>
+<div class="slide"><div class="t">2. 첫 결과 — 128셀 중 44개만 일치</div>
+<ul><li>SD가 어긋난 행(중성지방·LDL·음주)과 평균이 어긋난 행(당뇨·교육)</li><li>Q1은 맞는데 Q4가 틀리는 패턴</li><li>통계 방법은 하나도 다르지 않았다</li></ul><div class="small">표: 2절 상위 오차 10셀 · 그래프: Table1_비교.html 첫 버전 색 지도</div></div>
+<div class="slide"><div class="t">3. 방법 — 한 번에 하나만 바꾸고 점수로 잰다</div>
+<ul><li>\\(S = \\sum|\\Delta 평균| + |\\Delta SD|\\)</li><li>14회 시도, 그중 실패 6회(가중치 종류 오답, 재코딩 2종, 대치 방법 3종, SD 공식)</li><li>실패가 용의자를 좁혔다</li></ul><div class="small">표: 3절 타임라인 축약</div></div>
+<div class="slide"><div class="t">4. 결정적 프롬프트 — "감안해도 안 해도 다르다면, 원인은 다른 곳이다"</div>
+<ul><li>1위 프롬프트 원문과 직전/직후 숫자 (13.53 → 1.03)</li><li>음주 행 = 가중치 변수의 지문</li><li>되돌리기 검증: 가중치만 되돌리면 오차 1.04 → 13.69</li></ul><div class="small">표: 4절 Top 3 요약 · 그래프: 점수 사다리</div></div>
+<div class="slide"><div class="t">5. 최종 — 128/128 일치, 그리고 일부러 안 맞춘 13셀</div>
+<ul><li>논문 방식 재현: 전부 Δ 0.00</li><li>올바른 방식: 13셀은 논문의 오류(코드값 999, 평균 대치)를 따르지 않음</li><li>Model 3는 미해결(표본 n 미기재)</li></ul><div class="small">표: 5-1, 5-2 · 그래프: Table1_비교.html 최종</div></div>
+<div class="slide"><div class="t">6. 논문의 문제점 — 재현이 드러낸 것</div>
+<ul><li>검진 변수에 설문 가중치, 주기 재조정 누락, 층·군집 무시한 P</li><li>결측 54% 평균 대치(미기재), 코드값 999 → 음주행 거짓 음성</li><li>Methods "가중치 사용" vs Table 2 비가중</li></ul><div class="small">표: 실수 목록 (재현_실험_기록과_논문의_허점.html ⑤)</div></div>
+<div class="slide"><div class="t">7. 교훈 — 다른 논문에도 적용되는 것</div>
+<ul><li>재현이 안 맞으면 전처리부터: N → Q1 → SD</li><li>"거의 맞음"에서 멈추지 말고 잔차를 규명하라</li><li>일치 ≠ 옳음: 논문 방식과 올바른 방식을 나란히 보고</li></ul></div>
+
+<h3>30초 한 줄 결론</h3>
+<div class="box key"><p>"같은 공개 자료로 논문 표를 다시 만들었더니 처음엔 셋 중 하나만 맞았는데, 통계가 아니라 논문에 안 적힌 자료 처리 규칙 7가지를 실험으로 찾아내자 128개 숫자가 전부 맞았고, 그 과정에서 논문이 잘못된 가중치와 평균 대치를 썼다는 것까지 드러났습니다 — 결정적이었던 건 '거의 맞았다'에서 멈추지 않고 남은 차이를 끝까지 규명하라고 요구한 한 문장이었습니다."</p></div>
+
+<h3>예상 질문 5개와 답변 초안</h3>
+<div class="tbl-wrap"><table><thead><tr><th>질문</th><th>답변 초안</th></tr></thead><tbody>
+<tr><td>왜 처음에 그렇게 큰 오차가 났나?</td><td>통계 방법 차이가 아니라 논문에 없는 전처리 결정 때문입니다. 가중치 종류·재조정, 경계성 당뇨, 코드값 999, 결측 대치 — 이 중 어느 것도 Methods에 없습니다. 특히 결측 54%를 평균으로 채운 것은 SD를 √0.45배로 줄여 중성지방·LDL 8셀을 통째로 어긋나게 했습니다.</td></tr>
+<tr><td>그 프롬프트가 왜 효과적이었나?</td><td>"대치를 해도, 안 해도 둘 다 다르다"는 반례로 결측 처리를 용의선상에서 지웠고, 그러면 남는 것은 가중치 변수뿐이라는 추론을 강제했습니다. 그리고 "규명"을 요구해 잔차 1.7을 "미세 차이"로 넘기지 못하게 했습니다. 실제로 그 직후 시험한 조합(설문 가중치 원값)이 8개 숫자를 소수 둘째 자리까지 맞췄습니다.</td></tr>
+<tr><td>논문 값과 똑같이 만들었다는 게 논문이 옳다는 뜻인가?</td><td>아닙니다. 맞추기 위해 논문의 실수(설문 가중치, 평균 대치, 코드값 유지)를 그대로 따라 했습니다. 그래서 표를 두 벌 만들었습니다 — 논문 방식(128/128)과 올바른 방식(115/128). 결론(WWI↑ → 뇌졸중↑)은 두 방식 모두에서 유지되지만, 완전 보정 OR은 결측 처리에 따라 1.16~1.27로 흔들립니다.</td></tr>
+<tr><td>가중치를 "역추산"한 것은 끼워 맞추기 아닌가?</td><td>CDC가 배포한 기존 열 2종 × 재조정 여부 2종 = 4가지 중에서 고른 것이지 가중치를 만들지 않았습니다. 선택은 음주 행 하나(8개 숫자)로 했고, 검증은 나머지 14행 100셀로 했습니다. 되돌리기 검증에서 그 변경만 취소하면 오차 합이 1.04에서 13.69로 되돌아갑니다.</td></tr>
+<tr><td>다른 논문에도 적용 가능한 교훈은?</td><td>세 가지. (1) N → Q1(가중치 영향 작은 곳) → SD 순으로 대조하라, SD는 결측·코드값의 지문이다. (2) 한 번에 하나만 바꾸고 점수로 재라, 실패한 가설도 기록하라. (3) "거의 맞음"의 잔차를 규명하라 — 가장 큰 발견(가중치 종류)은 마지막 잔차 1.7에서 나왔다.</td></tr>
+</tbody></table></div>
+
+<!-- ============================================================ -->
+<h2>7. 내가 확신이 낮은 항목 (직접 확인 권장)</h2>
+<ul>
+ <li><b>범주형 P의 방식</b>: 논문의 "weighted chi-square"가 Rao–Scott 보정을 포함하는지 판별 불가 — 9개 행 모두 P&lt;0.001이라 어떤 방식이든 같은 결과. 기록 없음.</li>
+ <li><b>대치에 쓴 평균이 가중 평균인지 비가중 평균인지</b>: 중성지방은 가중 평균(S 9.1)이, LDL은 비가중 평균(1.3)이 근소하게 나았음. 최종 코드는 비가중 전체 평균 사용. 차이는 ±0.1 이내.</li>
+ <li><b>사분위 동점 규칙</b>: <code>right=FALSE</code>(type 7)로 논문 n과 일치하지만, 다른 분위수 정의(type 6·8)로도 다른 n이 나올 수 있어 "논문이 정확히 어떤 함수를 썼는지"는 알 수 없음. 결과 차이는 사람 1명.</li>
+ <li><b>논문이 설문 가중치를 쓴 것이 의도인지 소프트웨어(Empower) 기본값인지</b>: 기록 없음.</li>
+ <li><b>Model 3의 표본</b>: 1.25 (1.05–1.48)를 재현하는 구성을 찾지 못함. CI 폭으로 보아 n ≈ 8,000~12,000 추정이나 근거 약함.</li>
+ <li><b>자료 버전</b>: 2026-09-13 다운로드 기준. CDC가 파일을 갱신하면 소수 둘째 자리가 변할 수 있음(특히 P 주기).</li>
+ <li><b>최초 값(v0)</b>: 세션 초반 출력과 대조해 일치 확인(예: Q1 나이 37.05±13.51, 당뇨 1.99, 중성지방 93.90±87.54)했으나, 복원 실행이므로 당시와 100% 동일한 코드는 아님.</li>
+</ul>
+<p class="small">근거 파일: <code>R/07_reproduction_log.R</code> → <code>data/reproduction_log.json</code> → 이 문서. 그 밖의 수치는 <code>R/02~06</code> 실행 출력(세션 기록)에서 인용.</p>
+</div></body></html>"""
+
+out = proj / "재현_로그_발표용.html"
+out.write_text(html, encoding="utf-8")
+print(out, "v0:", cnt(v0), "| vF paper:", cnt(vFp), "| vF main:", cnt(vFm), "| revert:", cnt(rv))

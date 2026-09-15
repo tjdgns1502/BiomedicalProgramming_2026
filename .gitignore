@@ -20,6 +20,13 @@
 # applies to every week's data/ folder, e.g. 2nd_weeks/data/
 **/data/*.XPT
 **/data/*.rds
+**/data/*.csv
+!**/data/table1_comparison.csv
+!**/data/table1_reproduced.csv
+!**/data/flowchart_check.csv
+!**/data/download_summary.csv
+!**/data/distribution_diagnostics.csv
+**/data/raw/
 
 # Claude Code local tooling config (not project content)
 /.claude/
