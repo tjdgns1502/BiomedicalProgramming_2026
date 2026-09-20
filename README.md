@@ -7,6 +7,7 @@
 주차별로 폴더를 나누어 관리합니다. 각 폴더 안에 해당 주차 과제의 스크립트, 결과물, 별도 README가 있습니다.
 
 - [`2nd_weeks/`](2nd_weeks/) — NHANES 자료로 논문 Table 1 재현 (WWI-뇌졸중 연관성 연구)
+- [`3rd_weeks/`](3rd_weeks/) — Fagerland (2012) Welch t·WMW 모의실험 재현, 논문 수치 검증 및 유사도 분석
 
 ## 진행 방식
 

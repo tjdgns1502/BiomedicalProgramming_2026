@@ -1,0 +1,8 @@
+source("R/08_calibration_loop.R")
+run_paper_curve(config$reps)
+source("R/04_paper_figures.R")
+source("R/05_counterexample.R")
+source("R/07_validation.R")
+validate_focal()
+validate_curve()
+summarize_similarity()
