@@ -1510,6 +1510,9 @@ v2의 차이는 <a href="../CHANGES_v2.md">CHANGES_v2.md</a>에 정리했다. �
 그림 결함 3건을, 문서화 과정에서 보고서 서술의 과장 2건을 추가로 찾아
 v2에서 고쳤다.</li>
 </ol>
+<p>팀원(브랜치 <code>doyun</code>)의 독립 재현과의 비교는 10장에 있다.
+두 작업은 같은 분포 구성(평균 정렬)에 도달했고, 차이는 대부분 WMW의
+연속성 보정 설정과 작업 범위에서 온다.</p>
 <p><strong>아직 열려 있는 문제</strong> (7장에 상세)</p>
 <ul>
 <li>n=10에서 연속성 보정 근사와 정확검정이 칸별로 완전히 같아서, 논문이
@@ -1534,6 +1537,7 @@ v2에서 고쳤다.</li>
 그랬는가</li>
 <li>어느 규칙을 지켰고 어느 규칙과 긴장 관계가 있는가</li>
 <li>지금 결과를 인용할 때 무엇을 조심해야 하는가</li>
+<li>팀원의 독립 재현과 어디가 같고 어디가 다른가(10장)</li>
 </ul>
 <hr />
 </div>
@@ -2487,7 +2491,9 @@ Additional file 1에 있다. 이 보충자료를 받아 보려 했으나 Springe
 <li>(서술은 v2에서 고침) 남은 결정: 규칙 4를 유지할지,
 <code>correct=TRUE</code> 변형을 별도 행으로 표시할지.</li>
 <li>Additional file 1을 확보해 448칸 전체를 논문과 대조한다(칸별 값이
-있으면 민감도 B 격자와 주 구성 격자에 그대로 대응한다).</li>
+있으면 민감도 B 격자와 주 구성 격자에 그대로 대응한다). 팀원에게 참조값
+28개의 출처(보충자료 파일과 표 위치)를 물어 저장소에 넣게
+한다(10.5절).</li>
 <li>비어 있는 <code>results/</code>에서 스크립트 12개를 순서대로
 재실행해 모든 캐시를 재생성하고 기존 결과와 대조한다.</li>
 <li>2주차 NHANES 자료를 재생성하는 절차를 <code>07_nhanes.R</code>
@@ -2519,8 +2525,402 @@ Welch의 기각률은 각 군 100명 이상에서 4.3–5.9%였고 WMW는 표본
 </blockquote>
 <hr />
 </div>
+<div id="팀원-작업과의-비교" class="section level1">
+<h1>10. 팀원 작업과의 비교</h1>
+<div id="비교-범위와-방법" class="section level2">
+<h2>10.1 비교 범위와 방법</h2>
+<ul>
+<li><strong>대상:</strong> 팀원의 브랜치 <code>doyun</code>(커밋
+d653aad)의 <code>3rd_weeks/</code> 폴더와, 팀원이 작성한 작업 기록
+문서(<code>analysis_process_and_issues.md</code>).</li>
+<li><strong>읽은 것:</strong> 설정(<code>config.R</code>), 모든 R
+스크립트, 결과 CSV와 로그, <code>STATUS.md</code>,
+<code>AGENTS.md</code>, 팀원 저장소의 논문 PDF.</li>
+<li><strong>읽지 않은 것:</strong> <code>final_report.md</code>,
+<code>report.Rmd</code>, PNG 그림 7장. 그림에 대한 설명은 그림
+코드(<code>04_paper_figures.R</code>)에서 읽은 것이다.</li>
+<li><strong>직접 실행한 것:</strong> (a) 팀원의 빠른 검정 함수를 base
+R과 대조(무작위 설계 300개), (b) 저장된 반례 p값 재현, (c) 논문 곡선 한
+칸(gamma, n=1000) 재실행, (d) 반례의 반복 기각률 시뮬레이션(B=10,000),
+(e) 팀원의 28칸 결과·참조값과 내 격자 결과의 칸별 z 비교. 팀원의 전체
+파이프라인(<code>run_all.R</code>)은 돌리지 않았다.</li>
+<li><strong>전제:</strong> 팀원의 프롬프트(팀원 문서 2.1절에 인용된
+범위)는 내 프롬프트보다 요구가 적었고 하드 룰이 없었다. 아래 “미달”은
+<strong>내 프롬프트 기준</strong>이며 팀원 작업의 잘못이 아니다.</li>
+</ul>
+</div>
+<div id="한눈에-보는-차이" class="section level2">
+<h2>10.2 한눈에 보는 차이</h2>
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>내 작업</th>
+<th>팀원 작업</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>분포 구성</td>
+<td>주 구성: 평균·중앙값 동일 3모수 편이족(프롬프트 지시). 민감도 B:
+평균 정렬</td>
+<td>평균 정렬(<code>x = r·기저 + 평균·(1−r)</code>)과 중앙값 정렬 두
+후보, 평균 정렬 채택</td>
+</tr>
+<tr class="even">
+<td>논문 재현 범위</td>
+<td>448칸 × 10,000회(주 구성, 민감도 B 각각)</td>
+<td>28칸 × 10,000회(왜도 3, SD비 1.10) + 64칸 × 500회(n=1000)</td>
+</tr>
+<tr class="odd">
+<td>비교 검정</td>
+<td>Welch, Student, WMW</td>
+<td>Welch, WMW</td>
+</tr>
+<tr class="even">
+<td>WMW 설정</td>
+<td><code>exact=FALSE, correct=FALSE</code>(프롬프트 규칙 4)</td>
+<td>정규근사 + 연속성 보정(<code>correct=TRUE</code>)</td>
+</tr>
+<tr class="odd">
+<td>논문 대조 대상</td>
+<td>논문 표 2·3·4·5의 요약값과 본문 수치</td>
+<td>논문 곡선의 칸별 28개 값(출처 미확인, 10.5절)</td>
+</tr>
+<tr class="even">
+<td>난수</td>
+<td>L’Ecuyer-CMRG, 칸별 독립 스트림, 병렬 8개</td>
+<td>Mersenne-Twister, 칸별 <code>set.seed(기준+k)</code>, 순차 실행</td>
+</tr>
+<tr class="odd">
+<td>공통난수</td>
+<td>준수</td>
+<td>준수(표본 하나를 두 검정에 공유)</td>
+</tr>
+<tr class="even">
+<td>Satterthwaite 검증</td>
+<td>500설계, 자유도와 p값, 네 성질, 분포</td>
+<td>1설계, 자유도만</td>
+</tr>
+<tr class="odd">
+<td>빠른 구현 검증</td>
+<td>500설계, 모든 함수</td>
+<td>저장소 안에서는 Welch 자유도 1설계(내가 대신 확인한 결과는
+10.5절)</td>
+</tr>
+<tr class="even">
+<td>이분산 정규 기준선</td>
+<td>있음(25칸)</td>
+<td>없음</td>
+</tr>
+<tr class="odd">
+<td>반례</td>
+<td>A(최소 구성)와 B(논문형), 반복 기각률</td>
+<td>중앙값 정렬 gamma 1개, 단일 표본 p값</td>
+</tr>
+<tr class="even">
+<td>순열·대응·효과크기</td>
+<td>실행하고 결과표 작성</td>
+<td>함수만 정의, 실행 안 함. 순열은 원자료 평균차 버전만</td>
+</tr>
+<tr class="odd">
+<td>NHANES</td>
+<td>실행(2변수, <code>survey</code> 참조)</td>
+<td>미실행(입력 파일이 없어 중단)</td>
+</tr>
+<tr class="even">
+<td>그림</td>
+<td>ggplot2 11장, 캡션 포함. 논문 Fig 1·2는 미재현</td>
+<td>base R 7장. 논문 Fig 1·2·3 재현 포함</td>
+</tr>
+<tr class="odd">
+<td>보고서</td>
+<td>Rmd를 HTML로 렌더링</td>
+<td>md와 Rmd 작성, Rmd는 렌더링 안 함</td>
+</tr>
+<tr class="even">
+<td>재현성 기록</td>
+<td><code>sessionInfo</code>, 5칸 비트 단위 감사</td>
+<td><code>sessionInfo</code>, <code>manifest.csv</code>(시드·입력 PDF
+체크섬)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="진행-방식의-차이" class="section level2">
+<h2>10.3 진행 방식의 차이</h2>
+<p><strong>프롬프트를 다루는 방식.</strong> 나는 하드 룰 10개와 작업
+10개를 검사 가능한 규칙으로 바꾸고(2.2절), 발견 즉시 코드를 고쳤다.
+팀원은 요구를 “실험·조절 역할”과 “독립 검증 역할” 두 문서로 나누고 최대
+3라운드의 보정 루프로 진행했다. 팀원 문서가 스스로 밝히듯 두 역할은 서로
+다른 AI 인스턴스가 아니라 한 에이전트가 역할 문서를 따라 순차 수행한
+것이다. 내 작업도 단일 에이전트였으므로 이 한계는 같다.</p>
+<p><strong>논문 수치에 맞추는 위험을 다루는 방식.</strong> 팀원의 보정
+루프는 n=1000의 4개 값으로만 후보(평균 정렬 / 중앙값 정렬)를
+고르고(B=1,000), 새 시드에서 B=10,000으로 확인한 뒤, 선택에 쓰지 않은
+나머지 24개 값으로 검증한다. 선택에 쓴 값과 검증에 쓴 값을 분리한 좋은
+설계다. 나는 논문 표 2와의 대조에서 민감도 B를 찾았고, 표 4·5는 그 뒤에
+검증으로 썼다. 결과적으로 표 4·5가 holdout 역할을 했지만 사전에 그렇게
+설계한 것은 아니었다.</p>
+<p><strong>시드 전략.</strong> 팀원은 조건마다
+<code>set.seed(기준 + k)</code>를 쓰는 순차 실행이고 병렬화하지 않았다.
+병렬화하지 않았으므로 프롬프트의 재현성 규칙(규칙 7)에는 문제가 없다.
+나는 병렬 실행을 위해 칸별 L’Ecuyer 스트림을 썼고, 그 덕분에 칸 하나만
+다시 돌려 검증할 수 있었다(3장 재현성 감사). 팀원의 기본 시드 22697476은
+논문의 PMID와 같다.</p>
+</div>
+<div id="결과-비교" class="section level2">
+<h2>10.4 결과 비교</h2>
+<div id="두-작업이-같은-분포-구성에-도달했다" class="section level3">
+<h3>두 작업이 같은 분포 구성에 도달했다</h3>
+<p>팀원의 평균 정렬 생성식은 내 민감도 B와 같은 변환이다. 정확한
+<code>P(X&lt;Y)</code>가 소수 다섯째 자리까지 일치한다.</p>
+<table>
+<colgroup>
+<col width="20%" />
+<col width="26%" />
+<col width="26%" />
+<col width="26%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>조건(왜도 3, SD비 1.10)</th>
+<th align="right">팀원 <code>08_population_diagnostics.csv</code></th>
+<th align="right">내 민감도 B (수치적분)</th>
+<th align="right">논문 표 2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>gamma</td>
+<td align="right">0.55528</td>
+<td align="right">0.55528</td>
+<td align="right">0.56</td>
+</tr>
+<tr class="even">
+<td>lognormal</td>
+<td align="right">0.51742</td>
+<td align="right">0.51742</td>
+<td align="right">0.52</td>
+</tr>
+</tbody>
+</table>
+<p>네 제약(평균·중앙값·SD·왜도) 중 하나씩 버린 세 조합이 두 작업을
+합치면 모두 시험되었다.</p>
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>버린 제약</th>
+<th>누가 시험했나</th>
+<th>결과</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>왜도</td>
+<td>내 주 구성(평균·중앙값 동일)</td>
+<td>부분 재현(표 2 최대 차이 감마 0.259, 로그정규 0.040)</td>
+</tr>
+<tr class="even">
+<td>평균</td>
+<td>팀원의 중앙값 정렬(중앙값·왜도 동일)</td>
+<td>실패(팀원의 예비실험 MAE: gamma 34.3%p, lognormal 12.6%p)</td>
+</tr>
+<tr class="odd">
+<td>중앙값</td>
+<td>팀원의 평균 정렬 = 내 민감도 B</td>
+<td>재현</td>
+</tr>
+</tbody>
+</table>
+<p>서로 독립인 두 구현이 같은 구성에 도달했으므로, 민감도 B가 논문이
+실제로 쓴 구성일 가능성에 대한 확신이 커진다. 다만 다른 구성(혼합분포
+등)을 배제한 것은 아니다(7.5절).</p>
+</div>
+<div id="논문-곡선-28칸왜도-3-sd비-1.10에서의-수치" class="section level3">
+<h3>논문 곡선 28칸(왜도 3, SD비 1.10)에서의 수치</h3>
+<p>아래 비교는 <strong>팀원의 참조값 28개가 맞다는 전제</strong> 위의
+것이다(10.5절 1번).</p>
+<table>
+<colgroup>
+<col width="20%" />
+<col width="26%" />
+<col width="26%" />
+<col width="26%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>대조 대상</th>
+<th align="right">MAE(%p)</th>
+<th align="right">최대 절대차(%p)</th>
+<th align="right">절대 z가 3을 넘는 칸</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>팀원 로컬(평균 정렬, <code>correct=TRUE</code>)</td>
+<td align="right">0.233</td>
+<td align="right">0.92</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td>내 민감도 B(평균 정렬, <code>correct=FALSE</code>)</td>
+<td align="right">0.384</td>
+<td align="right">1.39</td>
+<td align="right">2 (둘 다 n=10 WMW)</td>
+</tr>
+<tr class="odd">
+<td>내 주 구성(평균·중앙값 동일)</td>
+<td align="right">0.630</td>
+<td align="right">2.82</td>
+<td align="right">5</td>
+</tr>
+</tbody>
+</table>
+<p>팀원이 더 정확해 보이는 것은 거의 전부 연속성 보정 때문이다. WMW의
+(로컬 − 참조) 평균 편향을 표본크기별로 보면 다음과 같다.</p>
+<table>
+<thead>
+<tr class="header">
+<th>n</th>
+<th align="right">10</th>
+<th align="right">25</th>
+<th align="right">50</th>
+<th align="right">100</th>
+<th align="right">250</th>
+<th align="right">500</th>
+<th align="right">1000</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>팀원 로컬</td>
+<td align="right">+0.09</td>
+<td align="right">−0.05</td>
+<td align="right">−0.29</td>
+<td align="right">−0.24</td>
+<td align="right">−0.27</td>
+<td align="right">−0.33</td>
+<td align="right">−0.39</td>
+</tr>
+<tr class="even">
+<td>내 민감도 B</td>
+<td align="right">+1.27</td>
+<td align="right">+0.40</td>
+<td align="right">+0.06</td>
+<td align="right">−0.52</td>
+<td align="right">−0.02</td>
+<td align="right">−0.25</td>
+<td align="right">−0.31</td>
+</tr>
+</tbody>
+</table>
+<p>n≤25에서만 내 값이 높고, n≥50에서는 두 구현을 구분할 수 없다. 팀원의
+로컬 결과와 내 민감도 B를 직접 비교하면 MAE 0.349%p이고, 절대 z가 3을
+넘는 2칸은 모두 n=10 WMW다(z −3.36, −3.76). 이 차이는 3장 작업 5의
+<code>04b</code> 진단이 보인 <code>correct</code> 설정 차이의 크기와
+방향에 맞는다. 내 주 구성의 5칸 이탈은 논문의 구성이 아니라서 예상된
+것이다(7.4절).</p>
+</div>
+</div>
+<div id="팀원-작업에서-확인된-문제" class="section level2">
+<h2>10.5 팀원 작업에서 확인된 문제</h2>
+<ol style="list-style-type: decimal">
+<li><strong>참조값 28개의 출처를 검증하지 못했다.</strong> 내가 팀원
+저장소의 논문 PDF(본문 7쪽, 보충자료 없음)와 대조한 9개 값(27.6, 98.8,
+2.8, 6.3, 85.7, 57.5, 28.1, 16.3, 10.6) 중 본문에 있는 것은
+98.8뿐이었다. 나머지는 논문의 Additional file 1에서 왔다는 뜻인데, 그
+파일도 출처 표기도 저장소에 없다. 나도 1차 출처에 접근하지
+못했다(7.2절). 간접 근거는 있다. 내 독립
+시뮬레이션(<code>correct=FALSE</code>)이 28개 중 26개와 |z|≤3으로
+일치하고, 벗어난 2개는 n=10 WMW다. 따라서 값이 맞을 가능성은 높지만,
+“28/28 통과”는 그 값이 맞다는 전제 위의 결과다.</li>
+<li><strong>반례가 역설을 보이지 못한다.</strong> 팀원의 반례(gamma,
+왜도 4, SD비 1.10, 중앙값 정렬)는 중앙값이 같지만 평균이 0.5413과 0.5로
+다르다. Welch의 귀무가설이 거짓이다. 팀원 문서는 단일 표본의 p값(Welch
+0.94, WMW 0.00015)만 제시한다. 내가 n=1000으로 10,000회 돌려 보니
+<strong>Welch 13.9%, WMW 88.2%</strong> 기각한다. 표본 하나가 전형적이긴
+하지만, Welch가 기각하지 않은 것이 Welch가 “옳다”는 증거는 아니다. 내
+반례 A와 같은 약점이며 정도만 약하다(d=0.039). 팀원 문서는 이 약점을
+적지 않았다.</li>
+<li><strong>NHANES를 하지 못했다.</strong>
+<code>data/raw/nhanes_week2.rds</code>가 없어서 중단했다. 원인은
+저장소의 <code>.gitignore</code>(<code>**/data/*.rds</code>) 때문에
+2주차 자료가 GitHub에 올라가지 않는 것이다. 파일은 로컬
+<code>2nd_weeks/data/analytic_sample_v2.rds</code>에 있다. 없는 입력을
+지어내지 않고 멈춘 것은 규칙 9에 맞는 행동이다. 내 작업도 같은 파일에
+의존하므로 같은 재현성 한계가 있다(7.11절).</li>
+<li><strong>내 프롬프트 기준의 미달이 여럿 있다.</strong> 위 10.2절 표의
+“없음/미실행” 항목이다. 특히 규칙 4(<code>correct=TRUE</code>), Student
+미포함, Satterthwaite 검증 1설계, 순열검정이 프롬프트가 무효라고 한
+원자료 평균차 버전뿐이라는 점, 격자가 n=1000·500회·WMW만이고 순차
+팔레트를 쓴다는 점, HL 구간이 평균 구간과 같은 패널에 쌓인 점이다.</li>
+<li><strong>근거 없는 서술이 하나 있다.</strong> 팀원 문서 6.7절은
+“논문과 같이 WMW의 정규근사와 연속성 보정을 사용한다”고 쓰지만 논문
+본문에는 그런 서술이 없다.</li>
+<li><strong>빠른 구현의 검증이 얇다.</strong> 저장소에는 Welch 자유도
+1설계만 있고 <code>wmw_p_fast</code>의 검증이 없다. 내가 대신 확인했다:
+팀원의 <code>welch_p_fast</code>, <code>wmw_p_fast</code>(연속성 보정
+유무 모두)는 base R과 3e-16 이내로 일치한다(300개 설계). 저장된 반례
+p값과 gamma n=1000 칸(4.93%, 98.94%)은 소수점 그대로 재현된다. 코드는
+옳다. 저장소 안의 증거가 부족했을 뿐이다.</li>
+</ol>
+</div>
+<div id="팀원-작업의-강점과-내게-없는-것" class="section level2">
+<h2>10.6 팀원 작업의 강점과 내게 없는 것</h2>
+<ul>
+<li>보정 루프가 선택용 값과 검증용 값을 분리한다(10.3절).</li>
+<li>논문 Figure 1(밀도)과 Figure 2(히스토그램)를 재현했다. 나는 Figure
+3에 해당하는 그림만 만들었다.</li>
+<li>표본크기별 곡선 28칸을 논문과 나란히 놓고 MAE·RMSE·Lin CCC 같은
+유사도 지표를 계산했다(참조값이 맞다는 전제).</li>
+<li><code>manifest.csv</code>에 결과 파일마다 시드와 입력 PDF 체크섬을
+기록한다.</li>
+<li>두 “에이전트”가 실제로는 한 에이전트라는 한계를 문서에서 스스로
+밝혔다.</li>
+<li>재현 실패를 숨기지 않고 미해결 항목을 체크리스트에
+남겼다(NHANES).</li>
+</ul>
+</div>
+<div id="이-비교가-내-작업에-준-것" class="section level2">
+<h2>10.7 이 비교가 내 작업에 준 것</h2>
+<p><strong>정정한 것(v2에서 수정, 4장 13번).</strong> 팀원의
+<code>correct=TRUE</code>가 n≤25의 논문 값에 맞는다는 사실이, 내가 n=10
+불일치를 “정확검정” 탓으로 단정한 것이 과잉이었음을 드러냈다. 연속성
+보정 근사와 정확검정은 n=10에서 칸별로 같아서 구분되지 않는다. 표 5의
+n=25 이탈도 이 비교 과정에서 다시 계산하다 발견했다.</p>
+<p><strong>채택을 검토할 것.</strong> 1. 팀원의 참조값 28개는 출처를
+확인한 뒤 부록으로 붙인다. 내 격자에 같은 칸이 이미 있어서 추가 계산이
+필요 없다. 2. 논문 Figure 1·2 재현. 3. <code>manifest.csv</code> 방식의
+체크섬 기록. 4. 선택용 값과 검증용 값을 사전에 분리하는 설계.</p>
+<p><strong>같은 한계.</strong> NHANES 자료가 gitignore로 저장소에 없다는
+점, 논문 보충자료를 확보하지 못했다는 점.</p>
+</div>
+<div id="이-비교의-한계" class="section level2">
+<h2>10.8 이 비교의 한계</h2>
+<ul>
+<li>28칸은 모두 왜도 3, SD비 1.10 한 조건이다. 팀원의 64칸 격자(n=1000,
+500회)는 내 격자와 칸별로 대조하지 않았다.</li>
+<li>두 작업의 시드가 달라서 칸별 z에는 몬테카를로 변동이 섞여 있다.</li>
+<li>팀원 파이프라인 전체를 돌리지 않았고 그림과
+<code>final_report.md</code>를 열어 보지 않았다.</li>
+<li>참조값 28개의 출처를 확인하지 못했다.</li>
+</ul>
+<hr />
+</div>
+</div>
 <div id="부록-실행-순서" class="section level1">
-<h1>10. 부록: 실행 순서</h1>
+<h1>11. 부록: 실행 순서</h1>
 <pre class="text"><code>Rscript R/00_validate_utils.R
 Rscript R/01_verify_satterthwaite.R
 Rscript R/02_distributions.R
