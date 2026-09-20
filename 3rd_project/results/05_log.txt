@@ -1,0 +1,75 @@
+﻿
+== Counterexample A: minimal construction ==
+X = 0.5*U(-1,0) + 0.5*U(0,10);  Y = 0.5*U(-10,0) + 0.5*U(0,1)
+exact P(X<Y) = 0.25*(0.05 + 1 + 0 + 0.05) = 0.275
+
+simulation with 4e+06 draws:
+median_X median_Y   mean_X   mean_Y   p_less    cliff 
+ 0.00314 -0.00544  2.25014 -2.25069  0.27460  0.45044 
+
+|P(X<Y) simulated - exact| = 0.000401   (MC SE = 0.000223)
+Cliff's delta: exact 0.45, simulated 0.45044
+
+rejection rates at n = 20 per group (B = 10000):
+  welch student     wmw 
+   99.7    99.7    71.9 
+  guide's stated WMW value: ~71%
+
+-- the weakness of Counterexample A, stated plainly --
+  means differ: 2.25 vs -2.25 (difference 4.5)
+  so Welch rejects 99.7% of the time too. A proves 'WMW is not a median test';
+  it does NOT prove the paradox, because the t-test is not wrong here.
+
+
+== Counterexample B: paper-style construction ==
+X: lognormal(meanlog = 0, sdlog = 0.71557)
+Y: -0.46196 + lognormal(meanlog = 0.37978, sdlog = 0.60328)
+
+                    X          Y
+mean         1.29178    1.29178   (equal: TRUE)
+median       1.00000    1.00000   (equal: TRUE)
+sd           1.05633    1.16196   (ratio: 1.10000)
+skewness     3.00000    2.27855   (NOT equal -- 4 constraints, 3 parameters)
+
+exact P(X < Y) = 0.482533   (guide states 0.4824)
+departure from the null P(X<Y)=0.5 : 0.017467
+Cliff's delta (population) = 0.034934
+
+-- rejection rates (%), B = 10000 (the guide used B = 2,000) --
+    n welch guide_welch   wmw guide_wmw student p_wmw_lt_welch
+   25  4.53         4.3  5.93       5.4    4.73          49.99
+   50  4.86         4.5  6.42       6.8    4.91          51.88
+  100  5.13         5.0  7.54       6.9    5.15          54.32
+  250  4.58         4.9 10.38      10.2    4.58          60.53
+  500  5.35         5.7 16.40      16.7    5.35          67.37
+ 1000  4.81         5.1 27.23      30.0    4.81          75.84
+
+Monte Carlo SE at p=0.05 : 0.218 pp (guide's B=2,000 gives 0.487 pp)
+
+-- the guide's snippet draws a fresh sample for each test --
+    n welch   wmw p_wmw_lt_welch welch_sep wmw_sep p_wmw_lt_welch_sep
+   25  4.53  5.93          49.99      4.39    5.30              50.86
+   50  4.86  6.42          51.88      4.74    6.06              50.95
+  100  5.13  7.54          54.32      5.02    6.94              51.72
+  250  4.58 10.38          60.53      4.93   10.47              56.61
+  500  5.35 16.40          67.37      4.93   16.57              62.55
+ 1000  4.81 27.23          75.84      5.11   26.76              70.96
+
+Marginal rejection rates agree (both are unbiased). What breaks is the
+PAIRED quantity P(p_WMW < p_Welch): with independent samples it is
+estimated with much larger variance and loses its meaning as a
+within-sample comparison, which is exactly what the paper's Table 5 is.
+
+SD of the estimated P(p_WMW < p_Welch) across 40 independent runs of
+B = 1,000 at n = 250:
+  common random numbers : 1.228 pp
+  independent samples   : 1.517 pp
+  variance ratio        : 1.52x
+
+-- how to read this --
+WMW's rising rejection rate is POWER, not Type I error: its own null
+hypothesis P(X<Y) = 0.5 is false here (P = 0.4825).
+The error is in translating that p-value into 'the medians differ',
+when the medians are identical by construction.
+
+saved -> results/05_counterexamples.rds

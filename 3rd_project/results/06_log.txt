@@ -1,0 +1,78 @@
+﻿
+== (1) permutation tests under heteroscedasticity ==
+equal means everywhere, so every rejection is a Type I error
+B_sim = 2000, B_perm = 499, alpha = 0.05
+
+           label perm_raw perm_stud welch student   wmw
+ n=10:40, sd=3:1    24.80      5.75  5.40   25.25 14.90
+ n=10:40, sd=1:1     4.70      4.40  5.10    4.90  4.50
+ n=40:10, sd=3:1     0.15      4.15  5.50    0.20  1.15
+ n=25:25, sd=3:1     5.90      5.90  5.60    5.80  7.10
+ n=10:40, sd=1:3     0.10      4.55  5.55    0.15  1.50
+
+MC SE at 5% with B_sim = 2000 : 0.49 pp
+
+The raw-mean-difference permutation test tracks Student's t, not
+Welch's: it inflates when the small group has the larger SD and turns
+conservative when the large group does. Studentizing repairs it.
+
+
+== (2) rank permutation test == WMW, by complete enumeration ==
+permutations enumerated per replicate: 1716  (C(13,6))
+max |p_permutation - p_wilcox(exact)| over 25 replicates: 5.55e-17
+identical to machine precision: TRUE
+
+So WMW's null really is 'the labels are exchangeable', which is why it
+reacts to a difference in spread and not only to a difference in
+location. That is the whole mechanism behind the paper.
+
+
+== (3) paired t / signed-rank vs independent t / rank-sum ==
+n pairs = 30, sd1 = 1, sd2 = 2, true mean difference = -0.8, B = 10000
+
+  rho theory_var_d empirical_var_d power_paired_t power_unpaired_t
+ -0.5          7.0           7.031          35.89            48.54
+  0.0          5.0           5.025          47.47            48.59
+  0.3          3.8           3.808          58.04            47.70
+  0.6          2.6           2.586          75.22            48.20
+  0.9          1.4           1.390          95.01            48.20
+ power_signed_rank power_rank_sum
+             34.22          46.47
+             45.85          47.01
+             56.72          46.72
+             73.68          46.17
+             94.06          46.64
+
+max |theoretical Var(d) - empirical| : 0.0315
+Var(d) = s1^2 + s2^2 - 2*rho*s1*s2 is confirmed; positive rho shrinks
+it, which is where the paired design's extra power comes from.
+
+Naming: the PAIRED rank test is Wilcoxon's SIGNED-RANK test; the
+independent-samples one is the RANK-SUM test. Same R function,
+different statistic, different null.
+
+
+== (4) effect sizes, Counterexample B ==
+population values: P(X<Y) = CLES = 0.48253 , Cliff's delta = 0.03493 , true mean difference = 0
+
+    n   cohen_d   hedges_g glass_delta cliff_delta   cles median_p_welch
+   25 -0.008502 -0.0083683   0.0354833     0.02818 0.4859         0.4757
+   50  0.008639  0.0085724   0.0291498     0.04173 0.4791         0.4998
+  100  0.001873  0.0018659   0.0125255     0.03558 0.4822         0.4859
+  250 -0.001968 -0.0019646   0.0027589     0.03314 0.4834         0.4721
+  500 -0.001895 -0.0018939   0.0003574     0.03428 0.4829         0.4932
+ 1000 -0.000139 -0.0001389   0.0009662     0.03521 0.4824         0.5109
+ median_p_wmw
+       0.4909
+       0.4820
+       0.4576
+       0.4037
+       0.3085
+       0.1697
+
+The point of the table: every effect size is essentially CONSTANT in n,
+while the WMW p-value collapses toward 0. The effect (Cliff's delta
+about 0.035) is real but tiny; only the
+p-value creates the impression that it grows with the study.
+
+saved -> results/06_permutation_effectsize.rds

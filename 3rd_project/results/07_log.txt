@@ -1,0 +1,119 @@
+﻿
+== NHANES ==
+source : C:\Users\tjdgn\OneDrive\바탕 화면\4-2\의생명과학프로그래밍\R project\2nd_weeks\data\analytic_sample_v2.rds
+rows   : 23389 | cols: 38
+cycles : G, H, I, P
+
+-- missing data (complete-case analysis) --
+ variable                   label n_total n_missing_value n_missing_group
+    LBXTR   Triglycerides (mg/dL)   23389           12705               0
+   LBDHDD HDL cholesterol (mg/dL)   23389            1263               0
+ n_complete pct_dropped
+      10684        54.3
+      22126         5.4
+
+LBXTR is measured only on the fasting subsample, which is why more
+than half the rows drop. That is by design, not data loss.
+
+-- descriptives by sex --
+ variable  group     n   mean median     sd iqr skewness  max
+    LBXTR   Male  5214 128.18    100 115.94  82    7.142 2684
+    LBXTR Female  5470 106.91     90  89.54  69   19.753 4233
+   LBDHDD   Male 10778  48.45     46  14.22  16    1.388  173
+   LBDHDD Female 11348  57.88     55  16.49  21    1.140  226
+
+-- full-sample tests (unweighted) --
+ variable   welch_p student_p     wmw_p welch_df mean_diff sd_ratio
+    LBXTR 5.156e-26 2.542e-26 1.793e-28     9805    21.273   1.2949
+   LBDHDD 0.000e+00 0.000e+00 0.000e+00    21923    -9.425   0.8626
+
+agreement with base R on the real data:
+  max |welch_p - t.test|        : 3.62e-40
+  max |student_p - t.test|      : 0
+  max |wmw_p - wilcox.test|     : 1.79e-28
+
+-- effect sizes --
+ variable cohen_d hedges_g glass_delta cliff_delta   cles
+    LBXTR   0.206   0.2060      0.2376      0.1237 0.4382
+   LBDHDD  -0.611  -0.6109     -0.5716     -0.3646 0.6823
+
+-- interval estimates (note the scale mismatch) --
+LBXTR   Welch mean diff  95% CI : [  17.331,   25.215]
+        Hodges-Lehmann   95% CI : [   9.000,   13.000]  (est 11.000)
+LBDHDD  Welch mean diff  95% CI : [  -9.830,   -9.020]
+        Hodges-Lehmann   95% CI : [  -9.000,   -9.000]  (est -9.000)
+The Hodges-Lehmann interval estimates the median of all pairwise
+differences, NOT the difference in means. Same units, different
+estimand -- they are not interchangeable.
+
+-- design-based reference: survey::svyttest --
+ variable                   label svy_diff     svy_p svy_df svy_lo svy_hi
+    LBXTR   Triglycerides (mg/dL)    22.44 1.648e-11     71  16.85  28.03
+   LBDHDD HDL cholesterol (mg/dL)   -10.95 1.705e-46     71 -11.58 -10.33
+ unweighted_welch_p unweighted_diff
+          5.156e-26         -21.273
+          0.000e+00           9.425
+
+(svy_diff is Male - Female, matching unweighted_diff's sign.)
+
+WEIGHT CAVEAT: WTCOMB is the MEC examination weight. It is the
+correct weight for LBDHDD. LBXTR comes from the FASTING subsample,
+whose design-correct weight is WTSAF2YR; that variable is not in the
+Week 2 analytic file, so the triglyceride svyttest row is indicative
+only and its standard error is not design-correct.
+
+-- subsampling experiment (2000 draws per n) --
+ variable    n rej_welch rej_wmw median_p_welch median_p_wmw p_wmw_lt_welch
+    LBXTR   25     10.75   10.80      3.379e-01    3.798e-01          42.80
+    LBXTR   50     20.45   19.60      2.095e-01    2.611e-01          41.70
+    LBXTR  100     39.35   33.30      8.182e-02    1.212e-01          38.20
+    LBXTR  250     75.45   67.55      9.470e-03    1.501e-02          36.80
+    LBXTR  500     89.80   93.05      3.723e-04    7.830e-04          36.90
+    LBXTR 1000     99.05  100.00      7.896e-07    1.626e-06          40.60
+    LBXTR 2500    100.00  100.00      1.680e-13    4.057e-14          51.60
+   LBDHDD   25     58.55   61.20      3.057e-02    2.585e-02          52.70
+   LBDHDD   50     85.25   89.25      2.488e-03    1.621e-03          61.45
+   LBDHDD  100     99.45   99.80      2.081e-05    7.162e-06          69.65
+   LBDHDD  250    100.00  100.00      2.136e-11    1.997e-12          82.75
+   LBDHDD  500    100.00  100.00      2.592e-21    1.864e-23          93.20
+   LBDHDD 1000    100.00  100.00      9.372e-41    4.188e-45          98.75
+   LBDHDD 2500    100.00  100.00      1.804e-99   1.660e-110         100.00
+ mean_cliff
+     0.1247
+     0.1258
+     0.1241
+     0.1252
+     0.1234
+     0.1237
+     0.1234
+    -0.3639
+    -0.3628
+    -0.3656
+    -0.3634
+    -0.3642
+    -0.3642
+    -0.3649
+
+mean_log10_ratio is the average of log10(p_WMW) - log10(p_Welch):
+ variable    n mean_log10_ratio
+    LBXTR   25          0.01981
+    LBXTR   50          0.04796
+    LBXTR  100          0.10300
+    LBXTR  250          0.14110
+    LBXTR  500          0.13702
+    LBXTR 1000          0.00485
+    LBXTR 2500         -0.62078
+   LBDHDD   25         -0.06497
+   LBDHDD   50         -0.19339
+   LBDHDD  100         -0.41484
+   LBDHDD  250         -1.03305
+   LBDHDD  500         -2.21241
+   LBDHDD 1000         -4.47335
+   LBDHDD 2500        -11.23995
+
+Note: unlike the simulation, the null is NOT true here -- the two
+groups genuinely differ in both location and spread -- so these are
+POWER curves, not Type I error curves. What carries over from the
+paper is that WMW's p-value falls faster than Welch's as n grows.
+
+saved -> results/07_nhanes.rds
