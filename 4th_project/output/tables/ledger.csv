@@ -35,10 +35,10 @@ paper,Results text p.3,SIRI,IQR upper,1.68,2,,,0.005,,,FLAG text vs table: diffe
 paper,Results text p.3,SII,median,481.85,2,,,0.005,,,FLAG text vs table: differs from Table 1 Total column median (IQR) for the same marker
 paper,Results text p.3,SII,IQR lower,339.58,2,,,0.005,,,FLAG text vs table: differs from Table 1 Total column median (IQR) for the same marker
 paper,Results text p.3,SII,IQR upper,689.61,2,,,0.005,,,FLAG text vs table: differs from Table 1 Total column median (IQR) for the same marker
-paper,Table 1 p.5,N,FI<=0.3,9778,0,,,0.5,,,
-paper,Table 1 p.5,N %,FI<=0.3,76,0,,,0.5,,,"FLAG: footnote b says percentages are unweighted, but 3729/13507 = 27.6% (printed 24%) and male 6722/13507 = 49.8% (printed 46%); percentages look survey-weighted, matching the title 'by sampling weight'"
-paper,Table 1 p.5,N,FI>0.3,3729,0,,,0.5,,,
-paper,Table 1 p.5,N %,FI>0.3,24,0,,,0.5,,,"FLAG: footnote b says percentages are unweighted, but 3729/13507 = 27.6% (printed 24%) and male 6722/13507 = 49.8% (printed 46%); percentages look survey-weighted, matching the title 'by sampling weight'"
+paper,Table 1 p.5,N,FI<=0.3,9778,0,11033,1255,0.5,open,,our value from output/tables/exclusion_flow.csv (R/20_build_analytic_sample.R); FI <= 0.3; 14054 - 3021; FI item scoring per build_decisions.csv
+paper,Table 1 p.5,N %,FI<=0.3,76,0,81.27,5.27,0.5,open,,"FLAG: footnote b says percentages are unweighted, but 3729/13507 = 27.6% (printed 24%) and male 6722/13507 = 49.8% (printed 46%); percentages look survey-weighted, matching the title 'by sampling weight' | our value from output/tables/exclusion_flow.csv (R/20_build_analytic_sample.R); survey-weighted svymean(~frail) on frailty_cbc_svydesign.rds"
+paper,Table 1 p.5,N,FI>0.3,3729,0,3021,708,0.5,open,,our value from output/tables/exclusion_flow.csv (R/20_build_analytic_sample.R); FI > 0.3; frail prevalence gap ~6 pp unexplained after audit fixes
+paper,Table 1 p.5,N %,FI>0.3,24,0,18.73,5.27,0.5,open,,"FLAG: footnote b says percentages are unweighted, but 3729/13507 = 27.6% (printed 24%) and male 6722/13507 = 49.8% (printed 46%); percentages look survey-weighted, matching the title 'by sampling weight' | our value from output/tables/exclusion_flow.csv (R/20_build_analytic_sample.R); survey-weighted svymean(~frail); unweighted 21.50%"
 paper,Table 1 p.5,NLR,Total median,2.14,2,,,0.005,,,
 paper,Table 1 p.5,NLR,Total p25,1.60,2,,,0.005,,,
 paper,Table 1 p.5,NLR,Total p75,2.88,2,,,0.005,,,
@@ -229,11 +229,11 @@ paper,Table 3 p.6,SII Q4,Model 1 CI upper,1.82,2,,,0.005,,,
 paper,Table 3 p.6,SII Q4,Model 2 OR,1.31,2,,,0.005,,,
 paper,Table 3 p.6,SII Q4,Model 2 CI lower,1.09,2,,,0.005,,,
 paper,Table 3 p.6,SII Q4,Model 2 CI upper,1.57,2,,,0.005,,,
-paper,Fig. 1 p.4,recruited 1999-2016,n,92062,0,,,0.5,,,
-paper,Fig. 1 p.4,excluded: age < 50,n,70392,0,,,0.5,,,
-paper,Fig. 1 p.4,remaining,n,21670,0,,,0.5,,,
-paper,Fig. 1 p.4,excluded: insufficient CBC,n,2508,0,,,0.5,,,
-paper,Fig. 1 p.4,remaining,n,19162,0,,,0.5,,,
-paper,Fig. 1 p.4,excluded: insufficient frailty data,n,5503,0,,,0.5,,,
-paper,Fig. 1 p.4,excluded: missing covariates,n,152,0,,,0.5,,,
-paper,Fig. 1 p.4,final,n,13507,0,,,0.5,,,final box says 'included in the survival analysis' though the study is cross-sectional logistic regression
+paper,Fig. 1 p.4,recruited 1999-2016,n,92062,0,92062,0,0.5,match,,our value from output/tables/exclusion_flow.csv (R/20_build_analytic_sample.R)
+paper,Fig. 1 p.4,excluded: age < 50,n,70392,0,67943,2449,0.5,open,,our value from output/tables/exclusion_flow.csv (R/20_build_analytic_sample.R); age >= 50 in DEMO 1999-2016 = 24119; examined-only = 22734; age > 50 = 23313; none reproduces 21670
+paper,Fig. 1 p.4,remaining,n,21670,0,24119,2449,0.5,open,,our value from output/tables/exclusion_flow.csv (R/20_build_analytic_sample.R); see age < 50 row
+paper,Fig. 1 p.4,excluded: insufficient CBC,n,2508,0,2508,0,0.5,match,,"our value from output/tables/exclusion_flow.csv (R/20_build_analytic_sample.R); equal count is coincidental: ours removes 2508 of 24119 (incl. 1385 not examined), paper 2508 of 21670; paper N not used in the code"
+paper,Fig. 1 p.4,remaining,n,19162,0,21611,2449,0.5,open,,our value from output/tables/exclusion_flow.csv (R/20_build_analytic_sample.R); inherits the age < 50 gap
+paper,Fig. 1 p.4,excluded: insufficient frailty data,n,5503,0,4670,833,0.5,open,,our value from output/tables/exclusion_flow.csv (R/20_build_analytic_sample.R); our rule >= 29/36 FI items answered is not stated in the paper (build_decisions.csv); 70% of 50-59s fail it due to the PFQ skip pattern (fi_completeness_by_age.csv)
+paper,Fig. 1 p.4,excluded: missing covariates,n,152,0,2887,2735,0.5,open,,our value from output/tables/exclusion_flow.csv (R/20_build_analytic_sample.R); PIR and dietary nonresponse dominate; paper's 152 is implausibly small for PIR missingness unless imputed (not stated)
+paper,Fig. 1 p.4,final,n,13507,0,14054,547,0.5,open,,final box says 'included in the survival analysis' though the study is cross-sectional logistic regression | our value from output/tables/exclusion_flow.csv (R/20_build_analytic_sample.R); net of the step differences above
