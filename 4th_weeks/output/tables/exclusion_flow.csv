@@ -1,0 +1,6 @@
+"step","description","n_removed","n_remaining","paper_n","paper_removed"
+"0_start","NHANES 1999-2016, all ages, 9 cycles pooled",NA,92062,92062,NA
+"1_age_lt_50","excluded: age < 50 years",67943,24119,21670,70392
+"2_cbc_incomplete","excluded: missing >=1 of LBDNENO/LBDLYMNO/LBDMONO/LBXPLTSI (cannot compute NLR/MLR/SIRI/SII)",2508,21611,19162,2508
+"3_frailty_insufficient","excluded: fewer than 80% (29/36) of frailty-index items answered",4670,16941,13659,5503
+"4_covariates_missing","excluded: missing >=1 Model-2 covariate (age/sex/cycle/race/education/PIR/BMI/PA/energy/smoking/diabetes/hypertension); drinking status excluded from this rule because 'missing data' is itself a retained category in the paper's Table 1",2887,14054,13507,152

@@ -1,0 +1,282 @@
+---
+title: "Week 4: frailty index and CBC-derived inflammatory markers"
+subtitle: "Reproduction of Han et al., BMC Public Health 2024;24:3408 (NHANES 1999-2016)"
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+    self_contained: true
+---
+
+```{r setup, include = FALSE}
+set.seed(20261010L)
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+TAB <- function(x) file.path("..", "tables", x)
+FIG <- function(x) file.path("..", "figures", x)
+rd  <- function(x) read.csv(TAB(x), check.names = FALSE, stringsAsFactors = FALSE)
+kt  <- function(x, ...) knitr::kable(x, format = "html", row.names = FALSE, ...)
+f2  <- function(x, d = 2) formatC(x, format = "f", digits = d)
+pv  <- function(p) ifelse(is.na(p), "", ifelse(p < 0.001, formatC(p, format = "e", digits = 1), formatC(p, format = "f", digits = 3)))
+ci  <- function(o, l, u) sprintf("%.2f (%.2f, %.2f)", o, l, u)
+
+ledger <- read.csv(TAB("ledger.csv"), colClasses = "character")
+st     <- table(factor(ledger$status, levels = c("match", "mismatch", "not reproduced", "open")))
+flow   <- rd("exclusion_flow.csv")
+fic    <- rd("22_fi_comparison_summary.csv")
+mc11   <- rd("11_multiplicity_inflation_v2_B10000.csv")
+mc12   <- rd("12_pvalue_uniformity_v2_B10000.csv")
+diag   <- rd("05_diagnostics.csv")
+gc     <- rd("06_group_comparisons.csv")
+tr     <- rd("07_trend_fi.csv")
+t2     <- rd("07_table2_logistic.csv")
+t3     <- rd("07_table3_quartiles.csv")
+err    <- rd("09_ai_error_healthcare.csv")
+B      <- fic[2, ]
+final_n <- tail(flow$n_remaining, 1)
+
+## numbers quoted in the summary, computed rather than typed
+lc <- ledger[ledger$table == "Methods p.3" & ledger$cause != "paper typo", ]
+cut_rel <- 100 * max(abs(as.numeric(lc$ours) - as.numeric(lc$target)) / as.numeric(lc$target))
+q4 <- ledger[ledger$table == "Table 3 p.6" & grepl("Q4$", ledger$row) & ledger$col == "Model 2 OR", ]
+q4_gap <- as.numeric(q4$target) - as.numeric(q4$ours)
+ptr <- ledger[ledger$table == "Table 3 p.6" & grepl("p trend", ledger$col), ]
+ptr_fail <- ptr[as.numeric(ptr$ours) >= 0.001, ]
+gap_closed <- diff(err$frail_pct_weighted) / (24 - err$frail_pct_weighted[1])
+```
+
+<style>
+table { border-collapse: collapse; margin: 0.5em 0 1.2em; font-size: 0.9em; }
+th, td { border-bottom: 1px solid #ddd; padding: 3px 8px; text-align: right; }
+th { background: #f3f3f3; }
+td:first-child, th:first-child { text-align: left; }
+.match { color: #1e7b34; } .open { color: #b35900; } .mismatch { color: #1f4e9c; }
+</style>
+
+## 1. Summary
+
+Of `r nrow(ledger)` reported numbers, `r st[["match"]]` match within rounding, `r st[["mismatch"]]` differ for an identified reason (`r sum(ledger$cause == "sample exclusion")` because our analytic sample differs, `r sum(ledger$cause == "paper typo")` paper typos) and `r st[["open"]]` differ without a proven cause. Our analytic sample has N = `r final_n` against the paper's 13,507, and the counts already differ at the first exclusion step (`r flow$n_remaining[2]` aged 50+ in the downloaded files against the paper's 21,670; no age or exam-status rule reproduces 21,670). Marker distributions agree closely (Table 1 total NLR median `r f2(as.numeric(ledger$ours[ledger$table == "Table 1 p.5" & ledger$row == "NLR" & ledger$col == "Total median"]))` vs 2.14; our sample quartile cut-offs are within `r f2(cut_rel, 1)`% of the printed ones). The frailty index does not: weighted frail prevalence is `r f2(B$frail_prev_builder_wtd, 1)`% in our build and `r f2(B$frail_prev_independent_wtd, 1)`% in an independent build written without access to ours (FI r = `r f2(B$pearson_r, 4)`), against the paper's 24%, so every odds ratio and event count sits below the paper's and stays open. Two unstated choices in the paper were identified from the numbers: Table 2 odds ratios are per log10 unit (per-ln odds ratios match no cell), and the models are survey-weighted (confidence-interval widths match the weighted fit, not the unweighted one). With both, Table 3 top-quartile odds ratios (Model 2) are `r f2(min(q4_gap))`-`r f2(max(q4_gap))` below the paper's with overlapping intervals and the same direction; every P for trend is below 0.001 except `r paste(sprintf("%s in %s (%s)", ptr_fail$row, sub(" p trend", "", ptr_fail$col), formatC(as.numeric(ptr_fail$ours), format = "f", digits = 4)), collapse = ", ")`. The week's two verification checks pass: simulated FWER agrees with 1 - 0.95^k within Monte Carlo error, and null p-values are uniform except Kruskal-Wallis at n = 10 per group, whose chi-square approximation is conservative.
+
+## 2. Verification
+
+### Multiplicity inflation
+
+k independent tests at alpha = 0.05 under the global null, B = 10,000 per condition, L'Ecuyer-CMRG stream per condition (R/11). Pass: analytical value inside the 99% Monte Carlo interval estimate ± 2.576·SE. With `r nrow(mc11)` checks, `r f2(0.01 * nrow(mc11), 2)` false fails are expected by chance.
+
+![](`r FIG("11_multiplicity_inflation_v2_B10000.png")`)
+
+```{r mc11}
+agg <- do.call(rbind, Map(function(k, m) {
+  x <- mc11[mc11$k == k & mc11$method == m, ]
+  data.frame(k = k, method = m, analytical = f2(x$target[1], 4),
+             `estimates (6 conditions)` = sprintf("%.4f - %.4f", min(x$estimate), max(x$estimate)),
+             `inside 99% MC interval` = sprintf("%d / %d", sum(x$pass), nrow(x)), check.names = FALSE)
+}, rep(sort(unique(mc11$k)), 3), rep(c("uncorrected", "bonferroni", "bh"), each = length(unique(mc11$k)))))
+kt(agg)
+fails <- mc11[!as.logical(mc11$pass), ]
+```
+
+Failed checks: `r nrow(fails)` of `r nrow(mc11)` (`r paste(sprintf("%s, n = %d, k = %d, %s: %.4f [%.4f, %.4f] vs %.2f", fails$test, fails$n, fails$k, fails$method, fails$estimate, fails$lower, fails$upper, fails$target), collapse = "; ")`), within the `r f2(0.01 * nrow(mc11), 2)` expected.
+
+### Null p-value distributions
+
+Four groups, B = 10,000 per scenario (R/12). Pass: 0.05 inside the 99% MC interval of the rejection rate, and KS p ≥ 0.01. The contrast scenario (equal means, n = 10/20/30/40, SD = 3/2/1.5/1) is a designed break for classic ANOVA; Kruskal-Wallis and JT test identical distributions, which is false there, so they have no target.
+
+![](`r FIG("12_pvalue_uniformity_v2_B10000_histograms.png")`)
+
+```{r mc12}
+x <- mc12
+x$role <- ifelse(x$expected_break, "expected break", ifelse(x$h0_true, "check", "no target"))
+kt(data.frame(scenario = x$scenario, `n per group` = x$n, test = x$test, role = x$role,
+              `rejection rate` = f2(x$estimate, 4),
+              `99% MC interval` = sprintf("%.4f - %.4f", x$lower, x$upper),
+              `0.05 inside` = ifelse(is.na(x$rate_pass), "", ifelse(as.logical(x$rate_pass), "yes", "no")),
+              `KS p` = signif(x$ks_p, 3),
+              `KS p ≥ 0.01` = ifelse(is.na(x$ks_pass), "", ifelse(as.logical(x$ks_pass), "yes", "no")),
+              check.names = FALSE))
+```
+
+## 3. Data
+
+### Exclusions vs Fig. 1
+
+```{r flow}
+kt(data.frame(step = flow$description, `removed (ours)` = flow$n_removed,
+              `remaining (ours)` = flow$n_remaining,
+              `removed (paper)` = flow$paper_removed, `remaining (paper)` = flow$paper_n,
+              check.names = FALSE))
+```
+
+### Frail prevalence (FI > 0.3)
+
+Both builds on the same analytic sample (n = `r B$n` with both FIs). The independent build (R/21) was written by a separate agent given only the paper's Methods text, its references 21-23 and the raw file list.
+
+```{r prev}
+kt(data.frame(
+  source = c("Paper (Table 1, as printed)", "Paper (3729 / 13507, computed)", "Our build (R/20)", "Independent build (R/21)"),
+  weighted = c("24", "", sprintf("%.2f (SE %.2f)", B$frail_prev_builder_wtd, B$frail_prev_builder_wtd_se),
+               sprintf("%.2f (SE %.2f)", B$frail_prev_independent_wtd, B$frail_prev_independent_wtd_se)),
+  unweighted = c("", "27.61", f2(B$frail_prev_builder_unw), f2(B$frail_prev_independent_unw))))
+kt(data.frame(`FI correlation (Pearson)` = f2(B$pearson_r, 4),
+              `mean difference (indep - ours)` = f2(B$mean_diff_ind_minus_builder, 4),
+              `95% limits of agreement` = sprintf("%.4f, %.4f", B$loa_lower, B$loa_upper),
+              `FI > 0.3 agreement` = paste0(f2(B$frail_agreement_pct, 1), "%"),
+              kappa = f2(B$frail_kappa, 3), check.names = FALSE))
+```
+
+## 4. Group comparisons
+
+FI across quartiles of each marker (our sample quartiles), N = `r final_n`, unweighted.
+
+### Boxplots
+
+```{r box, results = "asis"}
+cat(paste0("![](", FIG(sprintf("04_fi_boxplot_%s.png", c("NLR", "MLR", "SIRI", "SII"))), "){width=49%}"), sep = " ")
+```
+
+### Residual diagnostics
+
+```{r resid, results = "asis"}
+cat(paste0("![](", FIG(sprintf("05_residuals_%s.png", c("NLR", "MLR", "SIRI", "SII"))), "){width=49%}"), sep = " ")
+```
+
+No normality test is used: at N ≈ 14,000 any test rejects trivial departures. The plots show right-skewed residuals (skewness ≈ 0.8) with a floor at FI = 0; with about 3,500 per group the group means are close to normal regardless.
+
+### Chosen omnibus test
+
+Rule fixed before the results: Levene (Brown-Forsythe) p < 0.05 → Welch ANOVA, otherwise one-way ANOVA; Kruskal-Wallis as the rank-based sensitivity analysis.
+
+```{r omni-choice}
+kt(data.frame(marker = diag$marker, `residual skewness` = f2(diag$resid_skewness),
+              `SD ratio max/min` = f2(diag$sd_ratio_max_min, 3),
+              `Levene p` = pv(diag$levene_p), `Bartlett p` = pv(diag$bartlett_p),
+              chosen = diag$recommended,
+              reason = sprintf("Levene rejects; SD ratio %.2f is small, so Welch and ANOVA agree", diag$sd_ratio_max_min),
+              check.names = FALSE))
+o <- gc[gc$family == "omnibus", ]
+kt(data.frame(marker = o$marker, test = o$method, statistic = f2(o$statistic), df = o$df, p = pv(o$p_raw)))
+```
+
+### Post-hoc tests
+
+Each omnibus test with its matched post-hoc: ANOVA → Tukey HSD, Welch → Games-Howell, Kruskal-Wallis → Dunn (Holm). Adjusted p-values; "<1e-08" marks values below the numerical precision of ptukey.
+
+```{r posthoc}
+ph <- gc[gc$family == "posthoc", ]
+ph$show <- ifelse(as.logical(ph$p_is_upper_bound), "<1e-08", pv(ph$p_method_adjusted))
+w <- reshape(ph[c("marker", "contrast", "method", "show")], idvar = c("marker", "contrast"),
+             timevar = "method", direction = "wide")
+names(w) <- sub("^show\\.", "", names(w))
+md <- ph[ph$method == "TukeyHSD", c("marker", "contrast", "estimate")]
+w <- merge(md, w, sort = FALSE); w$estimate <- f2(w$estimate, 4)
+names(w)[names(w) == "estimate"] <- "mean FI difference"
+kt(w[c("marker", "contrast", "mean FI difference", "TukeyHSD", "Games-Howell", "Dunn (Holm)")])
+```
+
+### Multiple-comparison correction
+
+Pairwise Welch t-tests (6 per marker, 24 in total), adjusted within marker and across all 24.
+
+```{r corr}
+p2 <- gc[gc$family == "pairwise_t", ]
+kt(data.frame(marker = p2$marker, contrast = p2$contrast, `raw p` = pv(p2$p_raw),
+              `Bonferroni (6)` = pv(p2$p_bonf_within), `BH (6)` = pv(p2$p_bh_within),
+              `Bonferroni (24)` = pv(p2$p_bonf_all24), `BH (24)` = pv(p2$p_bh_all24), check.names = FALSE))
+kt(data.frame(correction = c("none", "Bonferroni within marker", "BH within marker", "Bonferroni across 24", "BH across 24"),
+              `significant at 0.05 (of 24)` = c(sum(p2$p_raw < 0.05), sum(p2$p_bonf_within < 0.05), sum(p2$p_bh_within < 0.05),
+                                               sum(p2$p_bonf_all24 < 0.05), sum(p2$p_bh_all24 < 0.05)), check.names = FALSE))
+```
+
+## 5. Trend tests and comparison with Tables 2 and 3
+
+### Trend of FI across quartiles
+
+```{r trend}
+kt(data.frame(marker = tr$marker, `slope per quartile` = f2(tr$linear_slope_per_quartile, 4),
+              `linear p` = pv(tr$linear_p), `JT z` = f2(tr$jt_z), `JT p` = pv(tr$jt_p), check.names = FALSE))
+```
+
+### Table 2: OR per unit of log(marker)
+
+Ours as entered in the ledger: weighted, per log10 unit. Per-ln and unweighted versions shown to justify that choice.
+
+```{r t2}
+lg <- ledger[ledger$table == "Table 2 p.6", ]
+cell <- function(m, mod, what) lg[lg$row == paste0("log", m) & lg$col == paste(mod, what), ]
+grid <- expand.grid(marker = c("NLR", "MLR", "SIRI", "SII"), model = c("Model 1", "Model 2"), stringsAsFactors = FALSE)
+rows <- do.call(rbind, Map(function(m, mod) {
+  o <- cell(m, mod, "OR"); l <- cell(m, mod, "CI lower"); u <- cell(m, mod, "CI upper")
+  mk <- if (mod == "Model 1") "model1" else "model2"
+  w <- t2[t2$marker == m & t2$model == mk & t2$weighting == "weighted", ]
+  uw <- t2[t2$marker == m & t2$model == mk & t2$weighting == "unweighted", ]
+  data.frame(marker = m, model = mod,
+             paper = sprintf("%s (%s, %s)", o$target, l$target, u$target),
+             `ours: weighted, log10` = ci(w$or_per_log10, w$lcl_log10, w$ucl_log10),
+             `unweighted, log10` = ci(uw$or_per_log10, uw$lcl_log10, uw$ucl_log10),
+             `weighted, ln` = ci(w$or_per_ln, w$lcl, w$ucl),
+             `CI ratio paper / weighted / unweighted` = sprintf("%.2f / %.2f / %.2f",
+               as.numeric(u$target) / as.numeric(l$target), w$ucl_log10 / w$lcl_log10, uw$ucl_log10 / uw$lcl_log10),
+             `ledger (OR, lower, upper)` = paste(o$status, l$status, u$status, sep = ", "),
+             check.names = FALSE)
+}, grid$marker, grid$model))
+kt(rows)
+```
+
+### Table 3: quartiles (Q1 = reference)
+
+Ours: weighted, our sample quartiles. Event / N unweighted.
+
+```{r t3}
+l3 <- ledger[ledger$table == "Table 3 p.6", ]
+g <- function(r, c, what = "target") { x <- l3[l3$row == r & l3$col == c, what]; if (length(x)) x else "" }
+grid3 <- expand.grid(q = c("Q1", "Q2", "Q3", "Q4"), marker = c("NLR", "MLR", "SIRI", "SII"), stringsAsFactors = FALSE)
+rows3 <- do.call(rbind, Map(function(m, q) {
+  r <- paste(m, q)
+  ev_p <- if (nzchar(g(r, "Event/N"))) g(r, "Event/N") else paste0(g(r, "Event"), "/", g(r, "N"))
+  ev_o <- if (nzchar(g(r, "Event/N", "ours"))) g(r, "Event/N", "ours") else paste0(g(r, "Event", "ours"), "/", g(r, "N", "ours"))
+  orc <- function(mod, what) if (q == "Q1") "Ref" else {
+    o <- as.numeric(g(r, paste(mod, "OR"), what)); l <- as.numeric(g(r, paste(mod, "CI lower"), what)); u <- as.numeric(g(r, paste(mod, "CI upper"), what))
+    ci(o, l, u)
+  }
+  data.frame(marker = m, quartile = q, `events/N paper` = ev_p, `events/N ours` = ev_o,
+             `Model 1 paper` = orc("Model 1", "target"), `Model 1 ours` = orc("Model 1", "ours"),
+             `Model 2 paper` = orc("Model 2", "target"), `Model 2 ours` = orc("Model 2", "ours"),
+             check.names = FALSE)
+}, grid3$marker, grid3$q))
+kt(rows3)
+pt <- do.call(rbind, Map(function(m) data.frame(marker = m,
+        `Model 1 paper` = g(m, "Model 1 p trend"), `Model 1 ours` = pv(as.numeric(g(m, "Model 1 p trend", "ours"))),
+        `Model 2 paper` = g(m, "Model 2 p trend"), `Model 2 ours` = pv(as.numeric(g(m, "Model 2 p trend", "ours"))),
+        check.names = FALSE), c("NLR", "MLR", "SIRI", "SII")))
+kt(pt, caption = "P for trend (quartile score 1-4 in the same model)")
+```
+
+### Ledger status
+
+```{r ledger}
+tab <- as.data.frame.matrix(table(ledger$table, factor(ledger$status, levels = c("match", "mismatch", "not reproduced", "open"))))
+kt(cbind(`paper location` = rownames(tab), tab, total = rowSums(tab)))
+cz <- ledger[ledger$status == "mismatch", ]
+kt(as.data.frame(table(cause = cz$cause), responseName = "mismatch rows"))
+```
+
+Open rows have no proven cause. Most depend on the frailty split, whose prevalence gap (above) is shared by both independent FI builds and is not explained by anything found in the code.
+
+## 6. An AI error that changed results
+
+**What.** In the first version of the data build (written by the nhanes-data-builder agent), the frailty-index item "healthcare use: 10 or more visits in the past year" was scored as code ≥ 6 in every cycle. That cut-off is right for HUQ051 (2013-2016, codes 0-8), but HUQ050 (1999-2012) has only codes 0-5 (4 = 10-12 visits, 5 = 13 or more). The deficit could therefore never be scored for anyone in 1999-2012, silently lowering the frailty index for 7 of 9 cycles.
+
+**How it was caught.** The ai-error-auditor agent checked each FI item's code against the NHANES codebooks and found zero people aged 50+ with HUQ050 codes 6-8 in any 1999-2012 cycle. The coordinator confirmed it in the raw files (HUQ050 values 0-5 plus 77/99 only) before the fix, and a second audit verified the fix against an independent rebuild of all 36 items (0 mismatches).
+
+**Before and after.** R/09 re-runs the final FI code with only this cut-off reverted, so the difference below is this error alone (same analytic sample).
+
+```{r err}
+kt(data.frame(version = err$version, `analytic N` = err$analytic_n,
+              `healthcare deficit, 1999-2012 (%)` = f2(err$healthcare_deficit_pct_1999_2012),
+              `healthcare deficit, 2013-2016 (%)` = f2(err$healthcare_deficit_pct_2013_2016),
+              `mean FI` = f2(err$mean_fi, 4), `frail n` = err$frail_n,
+              `frail % (unweighted)` = f2(err$frail_pct_unweighted),
+              `frail % (weighted)` = sprintf("%.2f (SE %.2f)", err$frail_pct_weighted, err$frail_pct_weighted_se),
+              check.names = FALSE))
+```
+
+The fix moved `r diff(err$frail_n)` people above FI = 0.3 and raised the weighted prevalence by `r f2(diff(err$frail_pct_weighted))` percentage points, closing `r f2(100 * gap_closed, 0)`% of the gap to the paper's 24%.
