@@ -1,0 +1,294 @@
+---
+title: "4주차: 노쇠지수와 혈구 계수 유래 염증지표"
+subtitle: "Han et al., BMC Public Health 2024;24:3408 재현 (NHANES 1999-2016)"
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+    self_contained: true
+---
+
+```{r setup, include = FALSE}
+set.seed(20261010L)
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+TAB <- function(x) file.path("..", "tables", x)
+FIG <- function(x) file.path("..", "figures", x)
+rd  <- function(x) read.csv(TAB(x), check.names = FALSE, stringsAsFactors = FALSE)
+kt  <- function(x, ...) knitr::kable(x, format = "html", row.names = FALSE, ...)
+f2  <- function(x, d = 2) formatC(x, format = "f", digits = d)
+pv  <- function(p) ifelse(is.na(p), "", ifelse(p < 0.001, formatC(p, format = "e", digits = 1), formatC(p, format = "f", digits = 3)))
+ci  <- function(o, l, u) sprintf("%.2f (%.2f, %.2f)", o, l, u)
+yn  <- function(x) ifelse(is.na(x), "", ifelse(as.logical(x), "예", "아니오"))
+STATUS_KO <- c(match = "일치", mismatch = "불일치(원인 규명)", `not reproduced` = "재현 불가", open = "미해결")
+METHOD_KO <- c(uncorrected = "보정 없음", bonferroni = "Bonferroni", bh = "BH")
+
+ledger <- read.csv(TAB("ledger.csv"), colClasses = "character")
+st     <- table(factor(ledger$status, levels = c("match", "mismatch", "not reproduced", "open")))
+flow   <- rd("exclusion_flow.csv")
+fic    <- rd("22_fi_comparison_summary.csv")
+mc11   <- rd("11_multiplicity_inflation_v2_B10000.csv")
+mc12   <- rd("12_pvalue_uniformity_v2_B10000.csv")
+diag   <- rd("05_diagnostics.csv")
+gc     <- rd("06_group_comparisons.csv")
+tr     <- rd("07_trend_fi.csv")
+t2     <- rd("07_table2_logistic.csv")
+t3     <- rd("07_table3_quartiles.csv")
+err    <- rd("09_ai_error_healthcare.csv")
+B      <- fic[2, ]
+final_n <- tail(flow$n_remaining, 1)
+
+## 요약에 인용하는 수치는 입력하지 않고 계산한다
+lc <- ledger[ledger$table == "Methods p.3" & ledger$cause != "paper typo", ]
+cut_rel <- 100 * max(abs(as.numeric(lc$ours) - as.numeric(lc$target)) / as.numeric(lc$target))
+q4 <- ledger[ledger$table == "Table 3 p.6" & grepl("Q4$", ledger$row) & ledger$col == "Model 2 OR", ]
+q4_gap <- as.numeric(q4$target) - as.numeric(q4$ours)
+ptr <- ledger[ledger$table == "Table 3 p.6" & grepl("p trend", ledger$col), ]
+ptr_fail <- ptr[as.numeric(ptr$ours) >= 0.001, ]
+gap_closed <- diff(err$frail_pct_weighted) / (24 - err$frail_pct_weighted[1])
+```
+
+<style>
+table { border-collapse: collapse; margin: 0.5em 0 1.2em; font-size: 0.9em; }
+th, td { border-bottom: 1px solid #ddd; padding: 3px 8px; text-align: right; }
+th { background: #f3f3f3; }
+td:first-child, th:first-child { text-align: left; }
+</style>
+
+## 1. 요약
+
+논문이 보고한 수치 `r nrow(ledger)`개 가운데 `r st[["match"]]`개는 반올림 범위 안에서 일치하고, `r st[["mismatch"]]`개는 원인을 규명한 불일치(분석 표본 차이 `r sum(ledger$cause == "sample exclusion")`개, 논문 오타 `r sum(ledger$cause == "paper typo")`개), `r st[["open"]]`개는 원인이 입증되지 않은 불일치이다. 분석 표본은 N = `r final_n`으로 논문의 13,507명과 다르며, 첫 제외 단계부터 이미 차이가 난다(내려받은 자료의 50세 이상 `r flow$n_remaining[2]`명 대 논문 21,670명; 어떤 연령·검진 여부 기준으로도 21,670명이 재현되지 않는다). 염증지표의 분포는 논문과 거의 같다(Table 1 전체 NLR 중앙값 `r f2(as.numeric(ledger$ours[ledger$table == "Table 1 p.5" & ledger$row == "NLR" & ledger$col == "Total median"]))` 대 2.14; 우리 표본의 사분위 절단값은 논문 값과 `r f2(cut_rel, 1)`% 이내). 노쇠지수는 다르다. 가중 노쇠 유병률은 우리 구축본 `r f2(B$frail_prev_builder_wtd, 1)`%, 우리 코드를 보지 못한 채 작성된 독립 구축본 `r f2(B$frail_prev_independent_wtd, 1)`%(FI 상관 r = `r f2(B$pearson_r, 4)`)로 논문의 24%보다 낮고, 그래서 모든 오즈비와 사건 수가 논문보다 작으며 미해결로 남는다. 논문이 밝히지 않은 두 가지 선택을 수치로 확인했다. Table 2의 오즈비는 log10 단위당 값이고(자연로그 기준 오즈비는 어느 칸과도 맞지 않는다), 모형은 표본가중치를 적용했다(신뢰구간 폭이 비가중이 아니라 가중 적합과 일치한다). 이 두 가지를 반영하면 Table 3 최상위 사분위 오즈비(Model 2)는 논문보다 `r f2(min(q4_gap))`–`r f2(max(q4_gap))` 작지만 신뢰구간이 겹치고 방향이 같다. 경향성 P는 `r paste(sprintf("%s의 %s(%s)", ptr_fail$row, sub(" p trend", "", ptr_fail$col), formatC(as.numeric(ptr_fail$ours), format = "f", digits = 4)), collapse = ", ")`를 제외하고 모두 0.001 미만이다. 이번 주 검증 과제 두 가지는 통과했다. 모의실험 FWER은 1 − 0.95^k와 몬테카를로 오차 범위에서 일치하고, 귀무가설 하 p값은 균등하다. 예외는 군당 n = 10의 Kruskal-Wallis로, 카이제곱 근사가 보수적이기 때문이다.
+
+## 2. 검증
+
+### 다중성 팽창
+
+전체 귀무가설 하에서 유의수준 0.05의 독립 검정 k개, 조건당 B = 10,000, 조건마다 독립된 L'Ecuyer-CMRG 난수 스트림(R/11). 통과 기준: 해석적 값이 99% 몬테카를로 구간(추정치 ± 2.576·SE) 안에 있음. 검사 `r nrow(mc11)`건이므로 우연에 의한 실패가 `r f2(0.01 * nrow(mc11), 2)`건 예상된다.
+
+![](`r FIG("11_multiplicity_inflation_v2_B10000.png")`)
+
+```{r mc11}
+agg <- do.call(rbind, Map(function(k, m) {
+  x <- mc11[mc11$k == k & mc11$method == m, ]
+  data.frame(k = k, `보정` = METHOD_KO[[m]], `해석적 값` = f2(x$target[1], 4),
+             `추정치 범위 (6개 조건)` = sprintf("%.4f - %.4f", min(x$estimate), max(x$estimate)),
+             `99% MC 구간 안` = sprintf("%d / %d", sum(x$pass), nrow(x)), check.names = FALSE)
+}, rep(sort(unique(mc11$k)), 3), rep(c("uncorrected", "bonferroni", "bh"), each = length(unique(mc11$k)))))
+kt(agg)
+fails <- mc11[!as.logical(mc11$pass), ]
+```
+
+실패한 검사: `r nrow(fails)` / `r nrow(mc11)`건(`r paste(sprintf("%s, n = %d, k = %d, %s: %.4f [%.4f, %.4f] 대 %.2f", fails$test, fails$n, fails$k, fails$method, fails$estimate, fails$lower, fails$upper, fails$target), collapse = "; ")`). 예상치 `r f2(0.01 * nrow(mc11), 2)`건 이내이다.
+
+### 귀무가설 하 p값 분포
+
+4개 군, 시나리오당 B = 10,000(R/12). 통과 기준: 기각률의 99% MC 구간이 0.05를 포함하고 KS p ≥ 0.01. 대조 시나리오(평균 동일, n = 10/20/30/40, SD = 3/2/1.5/1)는 고전적 ANOVA가 깨지도록 설계한 시연이다. Kruskal-Wallis와 JT는 "분포가 같다"를 검정하는데 이 시나리오에서는 그 가설이 거짓이므로 목표값이 없다.
+
+![](`r FIG("12_pvalue_uniformity_v2_B10000_histograms.png")`)
+
+```{r mc12}
+x <- mc12
+x$role <- ifelse(x$expected_break, "의도된 붕괴", ifelse(x$h0_true, "검사", "목표값 없음"))
+kt(data.frame(`시나리오` = ifelse(x$scenario == "null_equal", "귀무", "대조"), `군당 n` = x$n, `검정` = x$test, `역할` = x$role,
+              `기각률` = f2(x$estimate, 4),
+              `99% MC 구간` = sprintf("%.4f - %.4f", x$lower, x$upper),
+              `0.05 포함` = yn(x$rate_pass),
+              `KS p` = signif(x$ks_p, 3),
+              `KS p ≥ 0.01` = yn(x$ks_pass),
+              check.names = FALSE))
+```
+
+## 3. 자료
+
+### 제외 과정 (Fig. 1 대비)
+
+```{r flow}
+step_ko <- c("NHANES 1999-2016 전체", "50세 미만 제외", "CBC 자료 불충분 제외",
+             "노쇠 평가 자료 불충분 제외 (36문항 중 29개 미만 응답)", "공변량 결측 제외")
+kt(data.frame(`단계` = step_ko[seq_len(nrow(flow))], `제외 (우리)` = flow$n_removed,
+              `잔여 (우리)` = flow$n_remaining,
+              `제외 (논문)` = flow$paper_removed, `잔여 (논문)` = flow$paper_n,
+              check.names = FALSE))
+```
+
+### 노쇠 유병률 (FI > 0.3)
+
+두 구축본 모두 같은 분석 표본에서 계산했다(두 FI가 모두 있는 n = `r B$n`). 독립 구축본(R/21)은 논문 Methods 원문, 참고문헌 21–23, 원자료 파일 목록만 받은 별도 에이전트가 작성했다.
+
+```{r prev}
+kt(data.frame(
+  `출처` = c("논문 (Table 1 인쇄값)", "논문 (3729 / 13507 계산값)", "우리 구축본 (R/20)", "독립 구축본 (R/21)"),
+  `가중` = c("24", "", sprintf("%.2f (SE %.2f)", B$frail_prev_builder_wtd, B$frail_prev_builder_wtd_se),
+            sprintf("%.2f (SE %.2f)", B$frail_prev_independent_wtd, B$frail_prev_independent_wtd_se)),
+  `비가중` = c("", "27.61", f2(B$frail_prev_builder_unw), f2(B$frail_prev_independent_unw)),
+  check.names = FALSE))
+kt(data.frame(`FI 상관 (Pearson)` = f2(B$pearson_r, 4),
+              `평균 차이 (독립 − 우리)` = f2(B$mean_diff_ind_minus_builder, 4),
+              `95% 일치한계` = sprintf("%.4f, %.4f", B$loa_lower, B$loa_upper),
+              `FI > 0.3 판정 일치율` = paste0(f2(B$frail_agreement_pct, 1), "%"),
+              kappa = f2(B$frail_kappa, 3), check.names = FALSE))
+```
+
+## 4. 군 간 비교
+
+각 지표의 사분위군(우리 표본 사분위)별 FI, N = `r final_n`, 비가중.
+
+### 상자그림
+
+```{r box, results = "asis"}
+cat(paste0("![](", FIG(sprintf("04_fi_boxplot_%s.png", c("NLR", "MLR", "SIRI", "SII"))), "){width=49%}"), sep = " ")
+```
+
+### 잔차 진단
+
+```{r resid, results = "asis"}
+cat(paste0("![](", FIG(sprintf("05_residuals_%s.png", c("NLR", "MLR", "SIRI", "SII"))), "){width=49%}"), sep = " ")
+```
+
+정규성 검정은 쓰지 않았다. N ≈ 14,000에서는 어떤 정규성 검정이든 사소한 이탈까지 기각한다. 그림에서 잔차는 오른쪽으로 치우쳤고(왜도 ≈ 0.8) FI = 0에서 바닥 효과가 있다. 군당 약 3,500명이므로 군 평균은 그래도 정규분포에 가깝다.
+
+### 선택한 전체(omnibus) 검정
+
+결과를 보기 전에 정한 규칙: Levene(Brown-Forsythe) p < 0.05이면 Welch ANOVA, 아니면 일원 분산분석. Kruskal-Wallis는 순위 기반 민감도 분석.
+
+```{r omni-choice}
+kt(data.frame(`지표` = diag$marker, `잔차 왜도` = f2(diag$resid_skewness),
+              `SD 최대/최소 비` = f2(diag$sd_ratio_max_min, 3),
+              `Levene p` = pv(diag$levene_p), `Bartlett p` = pv(diag$bartlett_p),
+              `선택` = ifelse(diag$recommended == "Welch ANOVA", "Welch ANOVA", "일원 분산분석"),
+              `이유` = sprintf("Levene 기각; SD 비 %.2f로 작아 Welch와 ANOVA 결과가 같음", diag$sd_ratio_max_min),
+              check.names = FALSE))
+o <- gc[gc$family == "omnibus", ]
+kt(data.frame(`지표` = o$marker, `검정` = o$method, `통계량` = f2(o$statistic), `자유도` = o$df, p = pv(o$p_raw),
+              check.names = FALSE))
+```
+
+### 사후검정
+
+각 전체 검정에 짝지은 사후검정: ANOVA → Tukey HSD, Welch → Games-Howell, Kruskal-Wallis → Dunn(Holm). 보정된 p값이며, "<1e-08"은 ptukey의 계산 정밀도보다 작은 값이다.
+
+```{r posthoc}
+ph <- gc[gc$family == "posthoc", ]
+ph$show <- ifelse(as.logical(ph$p_is_upper_bound), "<1e-08", pv(ph$p_method_adjusted))
+w <- reshape(ph[c("marker", "contrast", "method", "show")], idvar = c("marker", "contrast"),
+             timevar = "method", direction = "wide")
+names(w) <- sub("^show\\.", "", names(w))
+md <- ph[ph$method == "TukeyHSD", c("marker", "contrast", "estimate")]
+w <- merge(md, w, sort = FALSE); w$estimate <- f2(w$estimate, 4)
+w <- w[c("marker", "contrast", "estimate", "TukeyHSD", "Games-Howell", "Dunn (Holm)")]
+names(w)[1:3] <- c("지표", "대비", "FI 평균 차이")
+kt(w)
+```
+
+### 다중비교 보정
+
+짝별 Welch t검정(지표당 6개, 전체 24개)을 지표 안에서, 그리고 24개 전체에서 보정했다.
+
+```{r corr}
+p2 <- gc[gc$family == "pairwise_t", ]
+kt(data.frame(`지표` = p2$marker, `대비` = p2$contrast, `원래 p` = pv(p2$p_raw),
+              `Bonferroni (6)` = pv(p2$p_bonf_within), `BH (6)` = pv(p2$p_bh_within),
+              `Bonferroni (24)` = pv(p2$p_bonf_all24), `BH (24)` = pv(p2$p_bh_all24), check.names = FALSE))
+kt(data.frame(`보정` = c("없음", "지표 안 Bonferroni", "지표 안 BH", "24개 전체 Bonferroni", "24개 전체 BH"),
+              `0.05에서 유의 (24개 중)` = c(sum(p2$p_raw < 0.05), sum(p2$p_bonf_within < 0.05), sum(p2$p_bh_within < 0.05),
+                                         sum(p2$p_bonf_all24 < 0.05), sum(p2$p_bh_all24 < 0.05)), check.names = FALSE))
+```
+
+## 5. 경향성 검정과 Table 2·3 대조
+
+### 사분위에 따른 FI의 경향
+
+```{r trend}
+kt(data.frame(`지표` = tr$marker, `사분위당 기울기` = f2(tr$linear_slope_per_quartile, 4),
+              `선형 p` = pv(tr$linear_p), `JT z` = f2(tr$jt_z), `JT p` = pv(tr$jt_p), check.names = FALSE))
+```
+
+### Table 2: log(지표) 1단위당 OR
+
+ledger에 넣은 우리 값은 가중, log10 단위당이다. 그 선택의 근거로 자연로그 기준과 비가중 결과를 함께 보인다.
+
+```{r t2}
+lg <- ledger[ledger$table == "Table 2 p.6", ]
+cell <- function(m, mod, what) lg[lg$row == paste0("log", m) & lg$col == paste(mod, what), ]
+grid <- expand.grid(marker = c("NLR", "MLR", "SIRI", "SII"), model = c("Model 1", "Model 2"), stringsAsFactors = FALSE)
+rows <- do.call(rbind, Map(function(m, mod) {
+  o <- cell(m, mod, "OR"); l <- cell(m, mod, "CI lower"); u <- cell(m, mod, "CI upper")
+  mk <- if (mod == "Model 1") "model1" else "model2"
+  w <- t2[t2$marker == m & t2$model == mk & t2$weighting == "weighted", ]
+  uw <- t2[t2$marker == m & t2$model == mk & t2$weighting == "unweighted", ]
+  data.frame(`지표` = m, `모형` = mod,
+             `논문` = sprintf("%s (%s, %s)", o$target, l$target, u$target),
+             `우리: 가중, log10` = ci(w$or_per_log10, w$lcl_log10, w$ucl_log10),
+             `비가중, log10` = ci(uw$or_per_log10, uw$lcl_log10, uw$ucl_log10),
+             `가중, 자연로그` = ci(w$or_per_ln, w$lcl, w$ucl),
+             `CI 상한/하한 비 (논문 / 가중 / 비가중)` = sprintf("%.2f / %.2f / %.2f",
+               as.numeric(u$target) / as.numeric(l$target), w$ucl_log10 / w$lcl_log10, uw$ucl_log10 / uw$lcl_log10),
+             `ledger 판정 (OR, 하한, 상한)` = paste(STATUS_KO[o$status], STATUS_KO[l$status], STATUS_KO[u$status], sep = ", "),
+             check.names = FALSE)
+}, grid$marker, grid$model))
+kt(rows)
+```
+
+### Table 3: 사분위 (Q1 = 기준)
+
+우리 값: 가중, 우리 표본 사분위. 사건/N은 비가중 인원수.
+
+```{r t3}
+l3 <- ledger[ledger$table == "Table 3 p.6", ]
+g <- function(r, c, what = "target") { x <- l3[l3$row == r & l3$col == c, what]; if (length(x)) x else "" }
+grid3 <- expand.grid(q = c("Q1", "Q2", "Q3", "Q4"), marker = c("NLR", "MLR", "SIRI", "SII"), stringsAsFactors = FALSE)
+rows3 <- do.call(rbind, Map(function(m, q) {
+  r <- paste(m, q)
+  ev_p <- if (nzchar(g(r, "Event/N"))) g(r, "Event/N") else paste0(g(r, "Event"), "/", g(r, "N"))
+  ev_o <- if (nzchar(g(r, "Event/N", "ours"))) g(r, "Event/N", "ours") else paste0(g(r, "Event", "ours"), "/", g(r, "N", "ours"))
+  orc <- function(mod, what) if (q == "Q1") "기준" else {
+    o <- as.numeric(g(r, paste(mod, "OR"), what)); l <- as.numeric(g(r, paste(mod, "CI lower"), what)); u <- as.numeric(g(r, paste(mod, "CI upper"), what))
+    ci(o, l, u)
+  }
+  data.frame(`지표` = m, `사분위` = q, `사건/N 논문` = ev_p, `사건/N 우리` = ev_o,
+             `Model 1 논문` = orc("Model 1", "target"), `Model 1 우리` = orc("Model 1", "ours"),
+             `Model 2 논문` = orc("Model 2", "target"), `Model 2 우리` = orc("Model 2", "ours"),
+             check.names = FALSE)
+}, grid3$marker, grid3$q))
+kt(rows3)
+pt <- do.call(rbind, Map(function(m) data.frame(`지표` = m,
+        `Model 1 논문` = g(m, "Model 1 p trend"), `Model 1 우리` = pv(as.numeric(g(m, "Model 1 p trend", "ours"))),
+        `Model 2 논문` = g(m, "Model 2 p trend"), `Model 2 우리` = pv(as.numeric(g(m, "Model 2 p trend", "ours"))),
+        check.names = FALSE), c("NLR", "MLR", "SIRI", "SII")))
+kt(pt, caption = "경향성 P (같은 모형에서 사분위 점수 1-4를 연속변수로)")
+```
+
+Table 3의 SIRI Q4와 SII Q4 사건/N(`12,313,377`, `11,813,377`)은 논문 인쇄 그대로이며, 슬래시가 빠진 논문 오타로 ledger에 기록했다.
+
+### ledger 판정 현황
+
+```{r ledger}
+tab <- as.data.frame.matrix(table(ledger$table, factor(ledger$status, levels = c("match", "mismatch", "not reproduced", "open"))))
+names(tab) <- STATUS_KO[names(tab)]
+kt(cbind(`논문 위치` = rownames(tab), tab, `합계` = rowSums(tab)))
+cz <- ledger[ledger$status == "mismatch", ]
+cause_ko <- c(`sample exclusion` = "분석 표본 차이 (sample exclusion)", `paper typo` = "논문 오타 (paper typo)")
+ct <- as.data.frame(table(cz$cause))
+kt(data.frame(`원인` = cause_ko[as.character(ct$Var1)], `불일치 행 수` = ct$Freq, check.names = FALSE))
+```
+
+미해결 행은 원인이 입증되지 않은 행이다. 대부분 노쇠 판정에 달린 값이며, 그 유병률 차이(위)는 서로 독립인 두 FI 구축본에서 똑같이 나타나고 코드에서 찾은 어떤 요인으로도 설명되지 않는다.
+
+## 6. 결과를 바꾼 AI 오류 한 건
+
+**무엇이었나.** 자료 구축 첫 버전(nhanes-data-builder 에이전트 작성)에서 노쇠지수 문항 "의료 이용: 지난 1년 10회 이상 방문"을 모든 주기에서 코드 ≥ 6으로 채점했다. 이 기준은 HUQ051(2013-2016, 코드 0-8)에는 맞지만 HUQ050(1999-2012)은 코드가 0-5뿐이다(4 = 10-12회, 5 = 13회 이상). 따라서 1999-2012년에는 누구도 이 결손으로 채점될 수 없었고, 9개 주기 중 7개에서 노쇠지수가 조용히 낮아졌다.
+
+**어떻게 발견했나.** ai-error-auditor 에이전트가 FI 문항별 코드를 NHANES codebook과 대조해, 1999-2012년 어느 주기에서도 50세 이상 중 HUQ050 코드 6-8인 사람이 0명임을 찾았다. 수정 전에 코디네이터가 원자료에서 확인했고(HUQ050 값은 0-5와 77/99뿐), 두 번째 감사가 36개 문항 전체를 독립적으로 재구축해 수정 결과를 검증했다(불일치 0건).
+
+**수정 전후.** R/09는 최종 FI 코드에서 이 기준값만 되돌려 다시 계산한다. 따라서 아래 차이는 이 오류 하나의 효과이다(분석 표본 동일).
+
+```{r err}
+kt(data.frame(`버전` = c("수정 전 (HUQ050 ≥ 6)", "수정 후 (HUQ050 ≥ 4)"), `분석 N` = err$analytic_n,
+              `의료이용 결손, 1999-2012 (%)` = f2(err$healthcare_deficit_pct_1999_2012),
+              `의료이용 결손, 2013-2016 (%)` = f2(err$healthcare_deficit_pct_2013_2016),
+              `FI 평균` = f2(err$mean_fi, 4), `노쇠 n` = err$frail_n,
+              `노쇠 % (비가중)` = f2(err$frail_pct_unweighted),
+              `노쇠 % (가중)` = sprintf("%.2f (SE %.2f)", err$frail_pct_weighted, err$frail_pct_weighted_se),
+              check.names = FALSE))
+```
+
+수정으로 `r diff(err$frail_n)`명이 FI = 0.3 위로 올라갔고 가중 유병률이 `r f2(diff(err$frail_pct_weighted))`%p 올라, 논문 24%와의 격차 중 `r f2(100 * gap_closed, 0)`%를 좁혔다.
