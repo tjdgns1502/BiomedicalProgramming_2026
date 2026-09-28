@@ -1,0 +1,65 @@
+{
+  "task_id": "V2-P01",
+  "revision": 1,
+  "stage_ids": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "08",
+    "09",
+    "10"
+  ],
+  "issue_id": "ISSUE-01",
+  "type": "data_quality",
+  "question": "Which source claims and ambiguities define the paper flow?",
+  "estimand": "See reviewed plan; environment/source tasks do not estimate a population parameter",
+  "owner_role": "P",
+  "worker_id": "v2_evidence",
+  "reviewer_id": "v2_reviewer",
+  "required_or_optional": "required",
+  "dependencies": [],
+  "allowed_inputs": [],
+  "assumptions": [
+    "Existing operational36 is not verified author FI"
+  ],
+  "exposure_history": [
+    "root has seen publication and old results; planner receives design facts only"
+  ],
+  "plan_version": "v2-1",
+  "plan_review": {
+    "accepted": false
+  },
+  "methods": [
+    "Source/environment audit or pending V2-D01 plan"
+  ],
+  "acceptance_criteria": [
+    "Source or execution evidence with bounded conclusions; no promotion of candidate to author-identical"
+  ],
+  "limits": {
+    "search": "existing primary material and existing source audit first",
+    "implementation_attempts": 3,
+    "additional_scope": "log-base identity, marker-quartile model1, prespecified nonlinear diagnostic"
+  },
+  "outputs": [
+    "analysis/tasks/V2-P01/rev-1/work/evidence_map.json",
+    "analysis/tasks/V2-P01/rev-1/work/handoff.md"
+  ],
+  "write_scope": [
+    "analysis/tasks/V2-P01/rev-1/work"
+  ],
+  "state": "submitted",
+  "freshness": "current",
+  "attempts": [],
+  "result_path": "analysis/tasks/V2-P01/rev-1/result.json",
+  "review_path": "analysis/tasks/V2-P01/rev-1/review.json",
+  "document_anchors": [
+    "v2-stage-01",
+    "v2-stage-02",
+    "v2-stage-03",
+    "v2-stage-04",
+    "v2-stage-08",
+    "v2-stage-09",
+    "v2-stage-10"
+  ]
+}

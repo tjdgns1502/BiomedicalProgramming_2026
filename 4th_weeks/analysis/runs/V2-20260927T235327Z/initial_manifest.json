@@ -1,0 +1,61 @@
+{
+  "project": {
+    "protocol_version": "2.0",
+    "run_id": "V2-20260927T235327Z",
+    "started_at": "20260927T235327Z",
+    "status": "running",
+    "paper": "s12889-024-20908-9.pdf",
+    "supplement": "supplement.docx",
+    "canonical_prompt": "frailty-agent-workflow/docs/05-prompts.md",
+    "prompt_sha256": "27f0e9f1cd9ce0624642056a9f399a099fcef117eebe270f7ebb1c983c7d64fb",
+    "learning_root": "4주차/염증과 노쇠 - 분석 길잡이",
+    "analysis_root": "analysis",
+    "purpose": "Paper-flow learning, bounded reconstruction and statistical scrutiny; assignment remains a separate extension",
+    "permissions": {
+      "public_NHANES": true,
+      "existing_notes_edit": true,
+      "new_HTML": false,
+      "separate_final_report": false
+    },
+    "required": [
+      "initial paper flow and unresolved questions",
+      "reuse audit",
+      "reviewed bounded plan and implementation",
+      "independent result review",
+      "stage-ordered integration"
+    ],
+    "exclusions": [
+      "claim exact author FI without evidence",
+      "claim causal effects",
+      "re-run unchanged old simulations",
+      "pretend observational data are randomized experiments"
+    ]
+  },
+  "original_note_hashes": {
+    "00-start 처음부터 따라가는 분석 흐름.md": "91c3380de6f54bb935cbd2ef2eb03e666c91377cdb672b4292901871d782d2a8",
+    "01-concept 01 데이터 한 행과 변수의 종류.md": "c504c938a1463ee63ed64640908a96ca7548f5d89a20ece51740be8da8a9f997",
+    "01-paper 01 논문 데이터의 모양.md": "d75e3a6cbc3e633ed8b1aa2af699540f93fb5884fbc2e0751ffe2ef9fcb99670",
+    "02-concept 02 염증을 무엇으로 측정하는가.md": "d5bbba8ca2b81f1611e7864227ecd720b17de35a9b0227ee710c693eea78e73c",
+    "02-paper 02 논문에서 네 지표를 만든 방법.md": "cdfd7fad093cd71cd0eec7c92ad180bce94575a6af4ff50f79d3422d7733dc49",
+    "03-concept 03 FI와 노쇠 여부를 구별하기.md": "0901fad90c68715a5094df29a93130e24677f17489adc99743c2a1fb021b692e",
+    "03-paper 03 이 논문은 FI를 어떻게 정의했나.md": "05d6dbc09f24e87a2ba42248929c1a0eca9be5355f338ed3726b1f9fe190e656",
+    "03b-fried 03 보충 — Fried의 노쇠 기준.md": "98bd763986874c2a85186c53da80492b4a45d707a5b5263331b4a3e0e6ea23a8",
+    "04-concept 04 누구를 언제 관찰했는가.md": "aaad68ac0df16a9ae9118263a17d64759129000c61c12ef2c61529bd04b8803b",
+    "04-paper 04 표본 선정과 단면자료의 한계.md": "5ab94bda4cce8c2508c9c1cb9167caa614a6770d6cdbf6bfbd78525abd88a92e",
+    "05-concept 05 중앙값·IQR·빈도·비율 직접 계산.md": "24c9b4b4c3574f7534796e89e8f8a67ec511e73c0fa79eddcfddb0d971856b73",
+    "05-paper 05 Table 1을 읽는 순서.md": "8d4b87bd4cd0d6fe90dedf06417e96ce43d991c3dd92322b8cc15876ab904611",
+    "06-concept 06 확률에서 오즈와 로지스틱으로.md": "aaab1aac4b9859ac48b8215a0cbd2337b22d420ab22e7f13a64f1f9972c90ef3",
+    "06-paper 06 이 논문의 OR를 정확히 읽기.md": "e8bffce53b707538bdb24486dcc5e8e3fb8039f23a10e7c7c4d3688117a43678",
+    "07-concept 07 로그변환과 로지스틱의 가정.md": "f0f1ecffb5ffc0ea214209709ce3445cecd540bce2bf92527186e752f53c6c79",
+    "07-paper 07 논문이 한 전처리와 보고하지 않은 점검.md": "710c3c901db7e5ea291264e0c9b30ac48f1157b7bd1ad8505ddb42bfbfdeeb15",
+    "08-concept 08 공변량 보정과 두 모형의 목적.md": "97310f91403d972f778d3062583a11b0e5809e975a46af60ce1370562efc49bd",
+    "08-paper 08 Table 2의 Model 1과 Model 2.md": "2f691a651dacca4f2f1d7672772a98eabcf4104bd9daf92630e3fdfc1eaafeed",
+    "09-concept 09 사분위군은 보정이 아니라 비교 방식.md": "7fd7ec900d947128eaca232c22d80e70a078f5c2d70cbb73dce98d0a475e01be",
+    "09-paper 09 Table 3은 같은 데이터를 어떻게 다시 보나.md": "c3cc0c3d636d89a3309f00c8765413f907f95606906eaaecc948a82b357f8065",
+    "10-concept 10 곡선·집단차·민감도로 해석 점검.md": "b98ee3bb843c672c0e55101e0687b6b8a995f5bc61dad20eaa74e397e8750620",
+    "10-paper 10 Figure를 통해 결론의 범위 정하기.md": "912ff991bd960141a0830c78a4a867d9d64f573b8914f93f70826aa03a1da346",
+    "11-learning-level 다음 설명을 위한 사전지식 수준.md": "cfb74a16e254aa201b6048791afdb32da9ea79448f04aecb13ccb6297a873e19",
+    "12-reusable-prompt 다음 논문에도 사용할 요청 프롬프트.md": "2abbb6f8661a566f30f77fb2c5c4f5de9112616dc7a4378822f31ef28055f5f5",
+    "13-sources 근거와 용어 찾아보기.md": "595f1d61cc3fa524e3b07d71c2d66561bfa20aa2a3738cc9ac415b5f640fa2ab"
+  }
+}

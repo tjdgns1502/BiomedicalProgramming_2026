@@ -1,0 +1,49 @@
+SIMULATION ONLY. Started: 2026-09-27 20:51:25 UTC
+Master seed: 20260928  B: 10000 
+RNGkind: Mersenne-Twister, Inversion, Rejection 
+Design 1 k 1 rho 0 global_null seed 20260929 
+Design 2 k 5 rho 0 global_null seed 20260930 
+Design 3 k 10 rho 0 global_null seed 20260931 
+Design 4 k 20 rho 0 global_null seed 20260932 
+Design 5 k 50 rho 0 global_null seed 20260933 
+Design 6 k 100 rho 0 global_null seed 20260934 
+Design 7 k 1 rho 0.5 global_null seed 20260935 
+Design 8 k 5 rho 0.5 global_null seed 20260936 
+Design 9 k 10 rho 0.5 global_null seed 20260937 
+Design 10 k 20 rho 0.5 global_null seed 20260938 
+Design 11 k 50 rho 0.5 global_null seed 20260939 
+Design 12 k 100 rho 0.5 global_null seed 20260940 
+Design 13 k 5 rho 0 mixed seed 20260941 
+Design 14 k 10 rho 0 mixed seed 20260942 
+Design 15 k 20 rho 0 mixed seed 20260943 
+Design 16 k 50 rho 0 mixed seed 20260944 
+Design 17 k 100 rho 0 mixed seed 20260945 
+Design 18 k 5 rho 0.5 mixed seed 20260946 
+Design 19 k 10 rho 0.5 mixed seed 20260947 
+Design 20 k 20 rho 0.5 mixed seed 20260948 
+Design 21 k 50 rho 0.5 mixed seed 20260949 
+Design 22 k 100 rho 0.5 mixed seed 20260950 
+Theory comparisons (pointwise intervals may miss by chance):
+     k FWER_estimate independent_raw_FWER_theory standardized_deviation
+1    1        0.0497                   0.0500000            -0.13764944
+4    5        0.2192                   0.2262191            -1.67766598
+7   10        0.4008                   0.4012631            -0.09447249
+10  20        0.6420                   0.6415141             0.10132761
+13  50        0.9266                   0.9230550             1.33017654
+16 100        0.9945                   0.9940795             0.54815750
+   theory_inside_pointwise95
+1                       TRUE
+4                       TRUE
+7                       TRUE
+10                      TRUE
+13                      TRUE
+16                      TRUE
+Generator diagnostics:
+  simulation rho diagnostic_seed       mean_z mean_variance_z
+1       TRUE 0.0        20310928 0.0002510008        1.003019
+2       TRUE 0.5        20310928 0.0188716235        1.002337
+  average_correlation null_p_below_05
+1       -0.0008563846        0.050095
+2        0.5015191043        0.051985
+Completed 22 design cells and 66 method summaries.
+Finished: 2026-09-27 20:53:55 UTC

@@ -1,0 +1,90 @@
+{
+  "task_id": "V2-I01",
+  "revision": 1,
+  "stage_ids": [
+    "07",
+    "08",
+    "09",
+    "10"
+  ],
+  "issue_id": "ISSUE-07",
+  "type": "implementation",
+  "question": "Implement reviewed plan on declared candidate cohort",
+  "estimand": "See reviewed plan; environment/source tasks do not estimate a population parameter",
+  "owner_role": "I",
+  "worker_id": "v2_implementer",
+  "reviewer_id": "v2_reviewer",
+  "required_or_optional": "required",
+  "dependencies": [
+    "V2-D01",
+    "V2-E01"
+  ],
+  "allowed_inputs": [
+    {
+      "path": "analysis/tasks/V2-D01/rev-1/work/plan.json",
+      "sha256": "c6d28ca682f581ebb91d524a6d35be77ad60901c20cac1725c70291ea1aca86a"
+    },
+    {
+      "path": "analysis/tasks/V2-Q01/rev-1/work/plan_review.json",
+      "sha256": "9a37c1e077b975dfc8fde38e144061e09439a5d49cf2273a9de5bef0366f064f"
+    },
+    {
+      "path": "analysis/data/derived/candidate_complete36.csv",
+      "sha256": "df841d2bab22ed0d3e4f3b870a2ed45629c2699b031faade5be12957332037fe"
+    },
+    {
+      "path": "analysis/data/derived/nhanes_design_all.csv",
+      "sha256": "6546bf16e35636be47bd9074de95372bca9129dd0c1c3801cd7d0b482f705e3f"
+    },
+    {
+      "path": "analysis/config/fi_candidate.json",
+      "sha256": "85a6625ec4f43fb90fc5f41be581d2ab579093d270c4c378ec17f9bbffe373ee"
+    }
+  ],
+  "assumptions": [
+    "Existing operational36 is not verified author FI"
+  ],
+  "exposure_history": [
+    "root has seen publication and old results; planner receives design facts only"
+  ],
+  "plan_version": "V2-D01/rev-1",
+  "plan_review": {
+    "accepted": true,
+    "reviewer_id": "v2_reviewer",
+    "path": "analysis/tasks/V2-Q01/rev-1/work/plan_review.json",
+    "sha256": "9a37c1e077b975dfc8fde38e144061e09439a5d49cf2273a9de5bef0366f064f"
+  },
+  "methods": [
+    "Approved four bounded checks; common sample; no published effect targets supplied to implementation"
+  ],
+  "acceptance_criteria": [
+    "Source or execution evidence with bounded conclusions; no promotion of candidate to author-identical"
+  ],
+  "limits": {
+    "search": "existing primary material and existing source audit first",
+    "implementation_attempts": 3,
+    "additional_scope": "log-base identity, marker-quartile model1, prespecified nonlinear diagnostic"
+  },
+  "outputs": [
+    "work/handoff.md"
+  ],
+  "write_scope": [
+    "analysis/tasks/V2-I01/rev-1/work"
+  ],
+  "state": "running",
+  "freshness": "current",
+  "attempts": [
+    {
+      "status": "running",
+      "plan_sha256": "c6d28ca682f581ebb91d524a6d35be77ad60901c20cac1725c70291ea1aca86a"
+    }
+  ],
+  "result_path": "analysis/tasks/V2-I01/rev-1/result.json",
+  "review_path": "analysis/tasks/V2-I01/rev-1/review.json",
+  "document_anchors": [
+    "v2-stage-07",
+    "v2-stage-08",
+    "v2-stage-09",
+    "v2-stage-10"
+  ]
+}

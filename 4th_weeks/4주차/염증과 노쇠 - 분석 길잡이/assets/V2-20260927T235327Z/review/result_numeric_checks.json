@@ -1,0 +1,26 @@
+{
+  "status": "pass",
+  "scope": "Independent arithmetic checks of submitted CSV and stored basis files; no model refit or raw marker provenance validation",
+  "maximum_absolute_errors": {
+    "logbeta": 1.021405182655144e-14,
+    "logse": 7.8270723236073536e-15,
+    "quartile_OR": 4.8849813083506888e-15,
+    "quartile_CI": 5.1070259132757201e-15,
+    "quartile_p": 1.3322676295501878e-15,
+    "nonlinear_p": 1.2281977735187355e-19,
+    "bonferroni": 3.9704669402545328e-23,
+    "BH": 9.9261673506363321e-24,
+    "curve_OR": 5.3290705182007514e-15,
+    "curve_CI": 5.773159728050814e-15
+  },
+  "unique_rows": 9786,
+  "quartile_sums": {
+    "MLR": 9786,
+    "NLR": 9786,
+    "SII": 9786,
+    "SIRI": 9786
+  },
+  "reference_rows": 4,
+  "cycle_sum_identity": true,
+  "basis_RDS_JSON_agree": true
+}

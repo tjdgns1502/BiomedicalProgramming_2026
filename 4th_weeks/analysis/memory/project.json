@@ -1,0 +1,39 @@
+{
+  "protocol_version": "2.0",
+  "run_id": "V3-20260928T003525Z",
+  "started_at": "20260927T235327Z",
+  "status": "completed_executable_candidate_coverage",
+  "paper": "s12889-024-20908-9.pdf",
+  "supplement": "supplement.docx",
+  "canonical_prompt": "frailty-agent-workflow/docs/05-prompts.md",
+  "prompt_sha256": "1d6592706c667210a3a2803561b63da985cc18ba0bbc29e63d408f077666217f",
+  "learning_root": "4주차/염증과 노쇠 - 분석 길잡이",
+  "analysis_root": "analysis",
+  "purpose": "Paper-flow learning, bounded reconstruction and statistical scrutiny; assignment remains a separate extension",
+  "permissions": {
+    "public_NHANES": true,
+    "existing_notes_edit": true,
+    "new_HTML": false,
+    "separate_final_report": false
+  },
+  "required": [
+    "initial paper flow and unresolved questions",
+    "reuse audit",
+    "reviewed bounded plan and implementation",
+    "independent result review",
+    "stage-ordered integration",
+    "paper Table1/Table2 Model2/Table3 Model2/Figure2/Figure3 explicit implementation coverage",
+    "FI missingness and coding candidate evidence",
+    "independent review of remaining implementations and stage integration"
+  ],
+  "exclusions": [
+    "claim exact author FI without evidence",
+    "claim causal effects",
+    "re-run unchanged old simulations",
+    "pretend observational data are randomized experiments"
+  ],
+  "full_paper_replication": "exact_author_settings_unresolved",
+  "prior_run_id": "V2-20260927T235327Z",
+  "continuation_reason": "User rejected arbitrary bounded-v2 stop; unresolved author settings limit claims, not all candidate execution.",
+  "completed_at": "2026-09-28T01:00:13.201460+00:00"
+}

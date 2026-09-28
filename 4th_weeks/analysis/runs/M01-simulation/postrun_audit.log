@@ -1,0 +1,10 @@
+Post-run audit, prompted by above-.05 corrected FWER at k=100. Same original seed; no new simulation seed.
+Exact event agreement: p.adjust Bonferroni versus min-p cutoff; p.adjust BH versus sorted-step-up cutoff.
+bonferroni observed= 0.0556 theory= 0.04878247 theoretical_SE= 0.00215413 z= 3.164866 
+   estimate        mcse     lower95     upper95 
+0.055600000 0.002291476 0.051277059 0.060264239 
+BH observed= 0.0573 theory= 0.05 theoretical_SE= 0.002179449 z= 3.34947 
+  estimate       mcse    lower95    upper95 
+0.05730000 0.00232415 0.05291245 0.06202754 
+Redrew mixed FDR/power figure to move legend clear of curves. No result values changed.
+Interpretation: this fixed Monte Carlo run has above-target estimates; retain and report them without seed selection.

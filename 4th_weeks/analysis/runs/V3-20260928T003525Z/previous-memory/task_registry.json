@@ -1,0 +1,490 @@
+{
+  "protocol_version": "2.0",
+  "run_id": "V2-20260927T235327Z",
+  "tasks": [
+    {
+      "task_id": "V2-P01",
+      "revision": 1,
+      "stage_ids": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "08",
+        "09",
+        "10"
+      ],
+      "issue_id": "ISSUE-01",
+      "type": "data_quality",
+      "question": "Which source claims and ambiguities define the paper flow?",
+      "estimand": "See reviewed plan; environment/source tasks do not estimate a population parameter",
+      "owner_role": "P",
+      "worker_id": "v2_evidence",
+      "reviewer_id": "root",
+      "required_or_optional": "required",
+      "dependencies": [],
+      "allowed_inputs": [],
+      "assumptions": [
+        "Existing operational36 is not verified author FI"
+      ],
+      "exposure_history": [
+        "root has seen publication and old results; planner receives design facts only"
+      ],
+      "plan_version": "v2-1",
+      "plan_review": {
+        "applicable": false,
+        "reason": "Source/environment/document audit or planning/review itself; not a new fitted analysis"
+      },
+      "methods": [
+        "Source/environment audit or pending V2-D01 plan"
+      ],
+      "acceptance_criteria": [
+        "Source or execution evidence with bounded conclusions; no promotion of candidate to author-identical"
+      ],
+      "limits": {
+        "search": "existing primary material and existing source audit first",
+        "implementation_attempts": 3,
+        "additional_scope": "log-base identity, marker-quartile model1, prespecified nonlinear diagnostic"
+      },
+      "outputs": [
+        "analysis/tasks/V2-P01/rev-1/work/evidence_map.json",
+        "analysis/tasks/V2-P01/rev-1/work/handoff.md"
+      ],
+      "write_scope": [
+        "analysis/tasks/V2-P01/rev-1/work"
+      ],
+      "state": "accepted",
+      "freshness": "current",
+      "attempts": [],
+      "result_path": "analysis/tasks/V2-P01/rev-1/result.json",
+      "review_path": "analysis/tasks/V2-P01/rev-1/review.json",
+      "document_anchors": [
+        "v2-stage-01",
+        "v2-stage-02",
+        "v2-stage-03",
+        "v2-stage-04",
+        "v2-stage-08",
+        "v2-stage-09",
+        "v2-stage-10"
+      ],
+      "review_reference": "analysis/tasks/V2-P01/rev-1/work/evidence_map.json",
+      "acceptance_scope": "Bounded v2 task only; author-identical FI/cohort and full paper replication remain unresolved"
+    },
+    {
+      "task_id": "V2-E01",
+      "revision": 1,
+      "stage_ids": [
+        "04",
+        "07"
+      ],
+      "issue_id": "ISSUE-04",
+      "type": "environment",
+      "question": "Can existing input/code/environment evidence be reused?",
+      "estimand": "See reviewed plan; environment/source tasks do not estimate a population parameter",
+      "owner_role": "E",
+      "worker_id": "v2_environment",
+      "reviewer_id": "v2_reviewer",
+      "required_or_optional": "required",
+      "dependencies": [],
+      "allowed_inputs": [],
+      "assumptions": [
+        "Existing operational36 is not verified author FI"
+      ],
+      "exposure_history": [
+        "root has seen publication and old results; planner receives design facts only"
+      ],
+      "plan_version": "v2-1",
+      "plan_review": {
+        "applicable": false,
+        "reason": "Source/environment/document audit or planning/review itself; not a new fitted analysis"
+      },
+      "methods": [
+        "Source/environment audit or pending V2-D01 plan"
+      ],
+      "acceptance_criteria": [
+        "Source or execution evidence with bounded conclusions; no promotion of candidate to author-identical"
+      ],
+      "limits": {
+        "search": "existing primary material and existing source audit first",
+        "implementation_attempts": 3,
+        "additional_scope": "log-base identity, marker-quartile model1, prespecified nonlinear diagnostic"
+      },
+      "outputs": [
+        "analysis/tasks/V2-E01/rev-1/work/audit_reuse.py",
+        "analysis/tasks/V2-E01/rev-1/work/handoff.md",
+        "analysis/tasks/V2-E01/rev-1/work/reuse_audit.json"
+      ],
+      "write_scope": [
+        "analysis/tasks/V2-E01/rev-1/work"
+      ],
+      "state": "accepted",
+      "freshness": "current",
+      "attempts": [],
+      "result_path": "analysis/tasks/V2-E01/rev-1/result.json",
+      "review_path": "analysis/tasks/V2-E01/rev-1/review.json",
+      "document_anchors": [
+        "v2-stage-04",
+        "v2-stage-07"
+      ],
+      "review_reference": "analysis/tasks/V2-Q01/rev-1/work/plan_review.json",
+      "acceptance_scope": "Bounded v2 task only; author-identical FI/cohort and full paper replication remain unresolved"
+    },
+    {
+      "task_id": "V2-D01",
+      "revision": 1,
+      "stage_ids": [
+        "07",
+        "08",
+        "09",
+        "10"
+      ],
+      "issue_id": "ISSUE-07",
+      "type": "statistical_validity",
+      "question": "What bounded checks address log scale, exposure grouping and nonlinearity?",
+      "estimand": "See reviewed plan; environment/source tasks do not estimate a population parameter",
+      "owner_role": "D",
+      "worker_id": "v2_planner",
+      "reviewer_id": "v2_reviewer",
+      "required_or_optional": "required",
+      "dependencies": [],
+      "allowed_inputs": [],
+      "assumptions": [
+        "Existing operational36 is not verified author FI"
+      ],
+      "exposure_history": [
+        "root has seen publication and old results; planner receives design facts only"
+      ],
+      "plan_version": "v2-1",
+      "plan_review": {
+        "applicable": false,
+        "reason": "Source/environment/document audit or planning/review itself; not a new fitted analysis"
+      },
+      "methods": [
+        "Source/environment audit or pending V2-D01 plan"
+      ],
+      "acceptance_criteria": [
+        "Source or execution evidence with bounded conclusions; no promotion of candidate to author-identical"
+      ],
+      "limits": {
+        "search": "existing primary material and existing source audit first",
+        "implementation_attempts": 3,
+        "additional_scope": "log-base identity, marker-quartile model1, prespecified nonlinear diagnostic"
+      },
+      "outputs": [
+        "analysis/tasks/V2-D01/rev-1/work/handoff.md",
+        "analysis/tasks/V2-D01/rev-1/work/plan.json"
+      ],
+      "write_scope": [
+        "analysis/tasks/V2-D01/rev-1/work"
+      ],
+      "state": "accepted",
+      "freshness": "current",
+      "attempts": [],
+      "result_path": "analysis/tasks/V2-D01/rev-1/result.json",
+      "review_path": "analysis/tasks/V2-D01/rev-1/review.json",
+      "document_anchors": [
+        "v2-stage-07",
+        "v2-stage-08",
+        "v2-stage-09",
+        "v2-stage-10"
+      ],
+      "review_reference": "analysis/tasks/V2-Q01/rev-1/work/plan_review.json",
+      "acceptance_scope": "Bounded v2 task only; author-identical FI/cohort and full paper replication remain unresolved"
+    },
+    {
+      "task_id": "V2-I01",
+      "revision": 1,
+      "stage_ids": [
+        "07",
+        "08",
+        "09",
+        "10"
+      ],
+      "issue_id": "ISSUE-07",
+      "type": "implementation",
+      "question": "Implement reviewed plan on declared candidate cohort",
+      "estimand": "See reviewed plan; environment/source tasks do not estimate a population parameter",
+      "owner_role": "I",
+      "worker_id": "v2_implementer",
+      "reviewer_id": "v2_reviewer",
+      "required_or_optional": "required",
+      "dependencies": [
+        "V2-D01",
+        "V2-E01"
+      ],
+      "allowed_inputs": [
+        {
+          "path": "analysis/tasks/V2-D01/rev-1/work/plan.json",
+          "sha256": "c6d28ca682f581ebb91d524a6d35be77ad60901c20cac1725c70291ea1aca86a"
+        },
+        {
+          "path": "analysis/tasks/V2-Q01/rev-1/work/plan_review.json",
+          "sha256": "9a37c1e077b975dfc8fde38e144061e09439a5d49cf2273a9de5bef0366f064f"
+        },
+        {
+          "path": "analysis/data/derived/candidate_complete36.csv",
+          "sha256": "df841d2bab22ed0d3e4f3b870a2ed45629c2699b031faade5be12957332037fe"
+        },
+        {
+          "path": "analysis/data/derived/nhanes_design_all.csv",
+          "sha256": "6546bf16e35636be47bd9074de95372bca9129dd0c1c3801cd7d0b482f705e3f"
+        },
+        {
+          "path": "analysis/config/fi_candidate.json",
+          "sha256": "85a6625ec4f43fb90fc5f41be581d2ab579093d270c4c378ec17f9bbffe373ee"
+        }
+      ],
+      "assumptions": [
+        "Existing operational36 is not verified author FI"
+      ],
+      "exposure_history": [
+        "root has seen publication and old results; planner receives design facts only"
+      ],
+      "plan_version": "V2-D01/rev-1",
+      "plan_review": {
+        "accepted": true,
+        "reviewer_id": "v2_reviewer",
+        "path": "analysis/tasks/V2-Q01/rev-1/work/plan_review.json",
+        "sha256": "9a37c1e077b975dfc8fde38e144061e09439a5d49cf2273a9de5bef0366f064f"
+      },
+      "methods": [
+        "Approved four bounded checks; common sample; no published effect targets supplied to implementation"
+      ],
+      "acceptance_criteria": [
+        "Source or execution evidence with bounded conclusions; no promotion of candidate to author-identical"
+      ],
+      "limits": {
+        "search": "existing primary material and existing source audit first",
+        "implementation_attempts": 3,
+        "additional_scope": "log-base identity, marker-quartile model1, prespecified nonlinear diagnostic"
+      },
+      "outputs": [
+        "analysis/tasks/V2-I01/rev-1/work/age_boundary_counts.csv",
+        "analysis/tasks/V2-I01/rev-1/work/analysis_rows.csv",
+        "analysis/tasks/V2-I01/rev-1/work/attempt-1.stderr.log",
+        "analysis/tasks/V2-I01/rev-1/work/attempt-1.stdout.log",
+        "analysis/tasks/V2-I01/rev-1/work/attempt-2.stderr.log",
+        "analysis/tasks/V2-I01/rev-1/work/attempt-2.stdout.log",
+        "analysis/tasks/V2-I01/rev-1/work/attempt-3.stderr.log",
+        "analysis/tasks/V2-I01/rev-1/work/attempt-3.stdout.log",
+        "analysis/tasks/V2-I01/rev-1/work/basis_transformations.json",
+        "analysis/tasks/V2-I01/rev-1/work/basis_transformations.rds",
+        "analysis/tasks/V2-I01/rev-1/work/checks.R",
+        "analysis/tasks/V2-I01/rev-1/work/diagnostic_curves.png",
+        "analysis/tasks/V2-I01/rev-1/work/diagnostic_curve_data.csv",
+        "analysis/tasks/V2-I01/rev-1/work/execution.json",
+        "analysis/tasks/V2-I01/rev-1/work/frozen_spec.json",
+        "analysis/tasks/V2-I01/rev-1/work/handoff.md",
+        "analysis/tasks/V2-I01/rev-1/work/log_base_checks.csv",
+        "analysis/tasks/V2-I01/rev-1/work/nonlinearity_tests.csv",
+        "analysis/tasks/V2-I01/rev-1/work/quartile_cutpoints_counts.csv",
+        "analysis/tasks/V2-I01/rev-1/work/quartile_model1.csv",
+        "analysis/tasks/V2-I01/rev-1/work/sample_audit.json",
+        "analysis/tasks/V2-I01/rev-1/work/sessionInfo.txt",
+        "analysis/tasks/V2-I01/rev-1/work/synthetic_tests.json"
+      ],
+      "write_scope": [
+        "analysis/tasks/V2-I01/rev-1/work"
+      ],
+      "state": "accepted",
+      "freshness": "current",
+      "attempts": [
+        {
+          "attempt": 1,
+          "exit_code": 0,
+          "note": "Initial execution successful; logs retained"
+        },
+        {
+          "attempt": 2,
+          "exit_code": 1,
+          "note": "Additional absolute CBC count formula assertion failed before analysis; frozen derived marker inputs retained and reconstruction assertion removed"
+        },
+        {
+          "attempt": 3,
+          "exit_code": 0,
+          "note": "Final code successful; all four bounded checks complete"
+        }
+      ],
+      "result_path": "analysis/tasks/V2-I01/rev-1/result.json",
+      "review_path": "analysis/tasks/V2-I01/rev-1/review.json",
+      "document_anchors": [
+        "v2-stage-07",
+        "v2-stage-08",
+        "v2-stage-09",
+        "v2-stage-10"
+      ],
+      "review_reference": "analysis/tasks/V2-Q01/rev-1/work/result_review.json",
+      "acceptance_scope": "Bounded v2 task only; author-identical FI/cohort and full paper replication remain unresolved"
+    },
+    {
+      "task_id": "V2-Q01",
+      "revision": 1,
+      "stage_ids": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10"
+      ],
+      "issue_id": "ISSUE-01",
+      "type": "statistical_validity",
+      "question": "Do plan, execution and interpretation agree?",
+      "estimand": "See reviewed plan; environment/source tasks do not estimate a population parameter",
+      "owner_role": "Q",
+      "worker_id": "v2_reviewer",
+      "reviewer_id": "root",
+      "required_or_optional": "required",
+      "dependencies": [
+        "V2-I01"
+      ],
+      "allowed_inputs": [],
+      "assumptions": [
+        "Existing operational36 is not verified author FI"
+      ],
+      "exposure_history": [
+        "root has seen publication and old results; planner receives design facts only"
+      ],
+      "plan_version": "v2-1",
+      "plan_review": {
+        "applicable": false,
+        "reason": "Source/environment/document audit or planning/review itself; not a new fitted analysis"
+      },
+      "methods": [
+        "Source/environment audit or pending V2-D01 plan"
+      ],
+      "acceptance_criteria": [
+        "Source or execution evidence with bounded conclusions; no promotion of candidate to author-identical"
+      ],
+      "limits": {
+        "search": "existing primary material and existing source audit first",
+        "implementation_attempts": 3,
+        "additional_scope": "log-base identity, marker-quartile model1, prespecified nonlinear diagnostic"
+      },
+      "outputs": [
+        "analysis/tasks/V2-Q01/rev-1/work/document_review.json",
+        "analysis/tasks/V2-Q01/rev-1/work/marker_assertion_reconciliation.json",
+        "analysis/tasks/V2-Q01/rev-1/work/plan_review.json",
+        "analysis/tasks/V2-Q01/rev-1/work/reconcile_marker_assertion.R",
+        "analysis/tasks/V2-Q01/rev-1/work/result_numeric_checks.json",
+        "analysis/tasks/V2-Q01/rev-1/work/result_review.json",
+        "analysis/tasks/V2-Q01/rev-1/work/review_notes.md",
+        "analysis/tasks/V2-Q01/rev-1/work/review_numeric.R"
+      ],
+      "write_scope": [
+        "analysis/tasks/V2-Q01/rev-1/work"
+      ],
+      "state": "accepted",
+      "freshness": "current",
+      "attempts": [],
+      "result_path": "analysis/tasks/V2-Q01/rev-1/result.json",
+      "review_path": "analysis/tasks/V2-Q01/rev-1/review.json",
+      "document_anchors": [
+        "v2-stage-01",
+        "v2-stage-02",
+        "v2-stage-03",
+        "v2-stage-04",
+        "v2-stage-05",
+        "v2-stage-06",
+        "v2-stage-07",
+        "v2-stage-08",
+        "v2-stage-09",
+        "v2-stage-10"
+      ],
+      "review_reference": "analysis/tasks/V2-Q01/rev-1/work/result_review.json",
+      "acceptance_scope": "Bounded v2 task only; author-identical FI/cohort and full paper replication remain unresolved"
+    },
+    {
+      "task_id": "V2-DOC",
+      "revision": 1,
+      "stage_ids": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10"
+      ],
+      "issue_id": "ISSUE-01",
+      "type": "documentation",
+      "question": "Can a learner follow paper explanation, question, implementation, review and updated interpretation?",
+      "estimand": "See reviewed plan; environment/source tasks do not estimate a population parameter",
+      "owner_role": "O",
+      "worker_id": "root",
+      "reviewer_id": "v2_reviewer",
+      "required_or_optional": "required",
+      "dependencies": [
+        "V2-P01",
+        "V2-Q01"
+      ],
+      "allowed_inputs": [],
+      "assumptions": [
+        "Existing operational36 is not verified author FI"
+      ],
+      "exposure_history": [
+        "root has seen publication and old results; planner receives design facts only"
+      ],
+      "plan_version": "v2-1",
+      "plan_review": {
+        "applicable": false,
+        "reason": "Source/environment/document audit or planning/review itself; not a new fitted analysis"
+      },
+      "methods": [
+        "Source/environment audit or pending V2-D01 plan"
+      ],
+      "acceptance_criteria": [
+        "Source or execution evidence with bounded conclusions; no promotion of candidate to author-identical"
+      ],
+      "limits": {
+        "search": "existing primary material and existing source audit first",
+        "implementation_attempts": 3,
+        "additional_scope": "log-base identity, marker-quartile model1, prespecified nonlinear diagnostic"
+      },
+      "outputs": [
+        "4주차/염증과 노쇠 - 분석 길잡이/01-paper 01 논문 데이터의 모양.md",
+        "4주차/염증과 노쇠 - 분석 길잡이/02-paper 02 논문에서 네 지표를 만든 방법.md",
+        "4주차/염증과 노쇠 - 분석 길잡이/03-paper 03 이 논문은 FI를 어떻게 정의했나.md",
+        "4주차/염증과 노쇠 - 분석 길잡이/04-paper 04 표본 선정과 단면자료의 한계.md",
+        "4주차/염증과 노쇠 - 분석 길잡이/05-paper 05 Table 1을 읽는 순서.md",
+        "4주차/염증과 노쇠 - 분석 길잡이/06-paper 06 이 논문의 OR를 정확히 읽기.md",
+        "4주차/염증과 노쇠 - 분석 길잡이/07-paper 07 논문이 한 전처리와 보고하지 않은 점검.md",
+        "4주차/염증과 노쇠 - 분석 길잡이/08-paper 08 Table 2의 Model 1과 Model 2.md",
+        "4주차/염증과 노쇠 - 분석 길잡이/09-paper 09 Table 3은 같은 데이터를 어떻게 다시 보나.md",
+        "4주차/염증과 노쇠 - 분석 길잡이/10-paper 10 Figure를 통해 결론의 범위 정하기.md",
+        "4주차/염증과 노쇠 - 분석 길잡이/00-start 처음부터 따라가는 분석 흐름.md"
+      ],
+      "write_scope": [
+        "4주차/염증과 노쇠 - 분석 길잡이",
+        "analysis/memory",
+        "analysis/runs/V2-20260927T235327Z"
+      ],
+      "state": "accepted",
+      "freshness": "current",
+      "attempts": [],
+      "result_path": "analysis/tasks/V2-DOC/rev-1/result.json",
+      "review_path": "analysis/tasks/V2-DOC/rev-1/review.json",
+      "document_anchors": [
+        "v2-stage-01",
+        "v2-stage-02",
+        "v2-stage-03",
+        "v2-stage-04",
+        "v2-stage-05",
+        "v2-stage-06",
+        "v2-stage-07",
+        "v2-stage-08",
+        "v2-stage-09",
+        "v2-stage-10"
+      ],
+      "review_reference": "analysis/tasks/V2-Q01/rev-1/work/document_review.json",
+      "acceptance_scope": "Bounded v2 task only; author-identical FI/cohort and full paper replication remain unresolved"
+    }
+  ]
+}

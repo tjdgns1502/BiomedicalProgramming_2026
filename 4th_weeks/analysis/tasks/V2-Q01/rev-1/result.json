@@ -1,0 +1,15 @@
+{
+  "task_id": "V2-Q01",
+  "state": "accepted",
+  "outputs": [
+    "analysis/tasks/V2-Q01/rev-1/work/document_review.json",
+    "analysis/tasks/V2-Q01/rev-1/work/marker_assertion_reconciliation.json",
+    "analysis/tasks/V2-Q01/rev-1/work/plan_review.json",
+    "analysis/tasks/V2-Q01/rev-1/work/reconcile_marker_assertion.R",
+    "analysis/tasks/V2-Q01/rev-1/work/result_numeric_checks.json",
+    "analysis/tasks/V2-Q01/rev-1/work/result_review.json",
+    "analysis/tasks/V2-Q01/rev-1/work/review_notes.md",
+    "analysis/tasks/V2-Q01/rev-1/work/review_numeric.R"
+  ],
+  "scope": "Bounded v2 task only; author-identical FI/cohort and full paper replication remain unresolved"
+}

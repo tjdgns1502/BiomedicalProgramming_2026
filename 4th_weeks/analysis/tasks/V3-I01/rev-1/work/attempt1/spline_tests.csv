@@ -1,0 +1,9 @@
+"model","marker","F","p","overall_F","overall_p","df","status","reason","p_BH","p_holm","overall_p_holm","overall_p_BH"
+"M2","NLR",NA,NA,NA,NA,124,"non-estimable","!is.null(f) is not TRUE",NA,NA,NA,NA
+"M2","MLR",NA,NA,NA,NA,124,"non-estimable","!is.null(f) is not TRUE",NA,NA,NA,NA
+"M2","SIRI",NA,NA,NA,NA,124,"non-estimable","!is.null(f) is not TRUE",NA,NA,NA,NA
+"M2","SII",NA,NA,NA,NA,124,"non-estimable","!is.null(f) is not TRUE",NA,NA,NA,NA
+"M2_plus16","NLR",NA,NA,NA,NA,124,"non-estimable","!is.null(f) is not TRUE",NA,NA,NA,NA
+"M2_plus16","MLR",NA,NA,NA,NA,124,"non-estimable","!is.null(f) is not TRUE",NA,NA,NA,NA
+"M2_plus16","SIRI",NA,NA,NA,NA,124,"non-estimable","!is.null(f) is not TRUE",NA,NA,NA,NA
+"M2_plus16","SII",NA,NA,NA,NA,124,"non-estimable","!is.null(f) is not TRUE",NA,NA,NA,NA

@@ -1,0 +1,31 @@
+{
+  "task_id": "V3-Q01", "revision": 1, "reviewer": "continuation_review", "review_type": "coverage_audit", "verdict": "needs_revision_of_project_scope_and_tracking",
+  "inputs": ["frailty-agent-workflow/docs/05-prompts.md", "analysis/memory/project.json", "analysis/memory/issues.json", "analysis/memory/task_registry.json", "analysis/config/analysis_plan.json", "analysis/config/extensions_plan.json", "analysis/tasks/V2-P01/rev-1/work/evidence_map.json"],
+  "scope": "Read-only completion coverage review, not numeric revalidation or new primary-source audit.",
+  "main_finding": "V2 task acceptance is explicitly limited and may remain accepted. However completed_bounded_v2 and five bounded required items do not fulfill the user's continued full-paper implementation intent. Scientific unresolved status must not globally block implementation of declared candidates.",
+  "already_done_reuse_with_provenance": [
+    {"item":"Paper-flow and ambiguity evidence map", "evidence":"analysis/tasks/V2-P01/rev-1/work/evidence_map.json", "limit":"Audit reused existing primary extracts; exact FI/cohort not resolved."},
+    {"item":"Log-base equivalence, age-boundary counts, marker-quartile Model1, fixed df3 nonlinearity checks", "evidence":"analysis/tasks/V2-I01/rev-1/work", "limit":"Four bounded candidate checks; not entire Table2/Table3/Fig2/Fig3 coverage."},
+    {"item":"Candidate survey Model1, threshold/age/fractional/platelet sensitivities and marker dependence", "evidence":"analysis/runs/A02-models", "limit":"Reuse after manifest/review confirmation; do not rerun unchanged analyses simply for a new phase."},
+    {"item":"Assignment FI-group comparisons and simulations", "evidence":"analysis/runs/A01-groups; analysis/runs/M01-simulation; analysis/runs/M02-procedure", "limit":"Separate extension; cannot substitute for paper marker-group ORs or actual-paper robustness analyses."}
+  ],
+  "must_do": [
+    {"id":"COV-01", "action":"Create output-level coverage matrix for Fig1, Table1, Table2 Models1/2, Table3 Models1/2 and trend, Fig2 curves, Fig3 subgroup/interaction, supplement S6/S7/FigS1 and relevant supplement tables.", "reason":"Canonical section9 requires requirement-stage-task-review-output-document chain; current required list and stage-level statuses cannot reveal absent analyses."},
+    {"id":"COV-02", "action":"Implement explicit candidate Model2 after covariate provenance, cross-cycle coding and missingness plans are reviewed. Audit/download accessible official fields; do not defer all computation solely because author thresholds are unknown.", "reason":"Source map identifies Model2 but old plans blanket defer it; declared candidate is permitted by R workflow."},
+    {"id":"COV-03", "action":"Complete descriptive and cohort accounting outputs with model-specific N, missingness, unweighted denominators and design-based estimates; retain separate candidate/author columns.", "reason":"Count/percentage contradiction and missing smoking/drinking require direct accounting, not just a narrative uncertainty label."},
+    {"id":"COV-04", "action":"Plan and execute remaining Table3 trend, paper-aligned curve, subgroup interaction, and supplemental adjustment candidates where inputs are available.", "reason":"df3 Model1 diagnostic and alternative educational sensitivities do not cover distinct paper outputs."},
+    {"id":"COV-05", "action":"Review numerical/definition/implementation/inference claims separately and integrate into original stage-paper anchors, linking accepted outputs and actual remaining dependencies.", "reason":"A single same-text partial status on ISSUE04/06/07/08/09/10 conflates mathematical identity, source uncertainty and unimplemented work."}
+  ],
+  "actual_unavailable_or_unidentifiable": [
+    {"item":"Author-identical FI recoding and denominator, exact missing handling, regression survey settings, spline knots/reference and interaction details", "status":"Not established by inspected source audit", "allowed_consequence":"Exact reproduction stays unresolved/comparison-limited; fixed evidence-based candidate analyses can proceed."},
+    {"item":"Causal or external validation claims", "status":"Not identified by cross-sectional reconstruction", "allowed_consequence":"Keep interpretation limited; no need to invent a new dataset or causal study."}
+  ],
+  "state_repairs": [
+    "Retain historical V2 accepted states and their explicit acceptance_scope; do not retroactively relabel them full replication.",
+    "Record active full-paper continuation independently of completed bounded run. Replace project required scope with output-level requirements, each with executable/pending/unavailable classification.",
+    "Split source_confirmation, candidate_implementation, numeric_review, validity_scope, documentation and freshness. Unknown author FI does not make completed log identity unresolved and does not justify deferring all Model2/subgroup computation.",
+    "Do not treat proposed contract empty allowed_inputs or generic acceptance criteria as ready; new implementation must have frozen methods, inputs, estimand, uncertainty/denominator checks, and independent plan_review.",
+    "Four-check and three-attempt limits are task-level budgets. Extending full project scope requires documented revised tasks, not automatic project cessation or arbitrary unlimited retries."
+  ],
+  "completion_test": "Every paper output receives either reviewed candidate implementation with explicit comparison limits, reviewed reusable evidence, or a specific evidenced unavailable dependency. Exact-author settings can remain unresolved. Independent review and stage-ordered documentation must be finished for executable coverage before final response."
+}

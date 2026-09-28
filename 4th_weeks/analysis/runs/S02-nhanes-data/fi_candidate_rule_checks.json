@@ -1,0 +1,8 @@
+{
+  "yes_no_unknown": true,
+  "inclusive_lab_bounds": true,
+  "early_visit_straddling_primary6": true,
+  "early_visit_alt4": true,
+  "late_visit_primary6": true,
+  "medication_zero_and_missing": true
+}

@@ -1,0 +1,15 @@
+## Verified two-day dietary sensitivity contract (final addendum)
+
+Official sources support WTDR2D for analyses that use both recalls. CDC2003–2004 DR2TOT_C, Analytic Notes/sample weights, explicitly distinguishes day1WTDRD1 from two-dayWTDR2D;2015–2016 DR2TOT_I reiterates WTDR2D for the smaller completed-both-days sample and explains second-recall nonresponse/weekend-weekday adjustment. MEC weights do not make the dietary subset representative in the same way. This supports a separate two-day dietary-weight analysis, while the current MEC-weight/day1 model retains its exploratory label.
+
+- Two-day energy=(DR1TKCAL+DR2TKCAL)/2, requiring both nonmissing and DR1DRSTZ=1 and DR2DRSTZ=1 for adult candidate membership; WTDR2D must be finite and>0. Code1 means reliable and minimum completion criteria met. Do not require calories>0: official documents explicitly permit fasting/zero nutrient recalls as complete and reliable. Other status codes and systemmissing are not silently converted to1.
+- Public two-day data begin with2003–2004. Seven2year cycles2003–04,05–06,07–08,09–10,11–12,13–14,15–16 imply pooled weightWTDR2D/7. This is application of CDC's stated rule (2001+ equal2year cycles divide the2yearweight by number ofcycles), not an author-specific Han specification. No1999weight exception needed in this2003+ sensitivity.
+- Join all-age DEMO records to dietaryweight records by cycle+SEQN before marking age/FI/model complete-case eligibility. Build survey design from the positiveWTDR2D parent and use a domain/subpopulation indicator for adult candidate eligibility. Do not prefilter toage>=50 or modelcomplete rows before design. Parent includes any legitimate positiveweight records, including infant specialstatus cases, while adult analysis domain specifically requires bothstatus1; this avoids inadvertently deleting samplingunits before domainvariance calculation. DEMO supplies SDMVSTRA/SDMVPSU. Verify uniqueness, joins, and actual positiveweight coverage.
+- Matched day1 versusmean2 sensitivity should use exactly the same two-day eligible domain and WTDR2D/7 design, changing only energy covariate. This is a controlled analyst comparison within two-day responders; it is not the standard full day1 population estimate (which would useWTDRD1). Neither comparison establishes Han's unavailable1999–2002 two-daymean.
+
+URLs/locations:
+1. https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/DR2TOT_C.htm — What's New/Table1(firsttwo-dayrelease); Analytic Notes/sampleweights; fastingparagraph; DR2DRSTZ andWTDR2D codebook.
+2. https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/DR2TOT_I.htm — dietaryrecallstatuscodes(DR1DRSTZ/DR2DRSTZ), status1; Sampleweightsfordietaryintakedata, paragraphsWTDRD1/WTDR2D; zero-intakeparagraph.
+3. https://wwwn.cdc.gov/nchs/nhanes/tutorials/weighting.aspx — CombiningSurveyCycles, rulefor2001–2002onward; smallest-relevant-sampleweight guidance.
+4. https://wwwn.cdc.gov/nchs/nhanes/tutorials/varianceestimation.aspx — subpopulation/domainanalysis guidance. Surveyparent/domain implementation is an application of officialvariance guidance, not an exact published Han code claim.
+

@@ -1,0 +1,16 @@
+MULTIPLE-TESTING SIMULATION PLAN (recorded before execution)
+Design fixed: 2026-09-28, seed 20260928, default B=10000, pilot B=1000.
+Purpose: educational simulation only; no participant data, no validation of the paper or a real FI measure.
+Known-variance one-sided normal z tests at alpha=.05; n=30, known sd=1.
+Null z has N(0,1); p = P(N(0,1) >= z), hence null p is Uniform(0,1).
+Independent global null: k=1,5,10,20,50,100; FWER benchmark 1-.95^k.
+Dependent global null: same k; compound-symmetric shared-person indicators, rho=.5.
+Mixed null: k=5,10,20,50,100; first max(1,floor(.2*k)) hypotheses have mean shift .5.
+Methods: unadjusted, Bonferroni, BH. Metrics: FWER, FDR, marginal power (mean true-discovery fraction).
+Report Monte Carlo standard errors and pointwise 95% intervals; Wilson intervals for event probabilities.
+Use expand.grid for design and Map for scenario runs. Record each seed and sessionInfo.
+Diagnostic normal-statistic correlation check and null raw-p histogram; inflation curves PNG/PDF.
+Meaningful tests: p construction, rho=1 limiting case, error metrics, analytic theory within probabilistic tolerance.
+All tests use pre-fixed seeds. No seed search or rerun to obtain closer agreement; stochastic failures are investigated and reported.
+Pilot is execution verification; final B=10000 must use the same fixed master seed, with mode and seeds recorded.
+Numerical theory agreement is probabilistic, not a guarantee for every run or pointwise 95% interval.

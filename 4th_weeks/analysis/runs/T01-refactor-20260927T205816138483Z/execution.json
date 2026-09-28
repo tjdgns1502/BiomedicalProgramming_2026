@@ -1,0 +1,16 @@
+{
+  "task_id": "T01-refactor",
+  "run_id": "T01-refactor-20260927T205816138483Z",
+  "started": "2026-09-27T20:58:16.139536+00:00",
+  "command": [
+    "C:\\Program Files\\R\\R-4.6.1\\bin\\Rscript.exe",
+    "--vanilla",
+    "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\4주차\\analysis\\tests\\test_group_analysis.R"
+  ],
+  "cwd": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\4주차",
+  "script_sha256": "a626d9c0389ad3c85ceb8266a4c91a054887e4e2aef9e1171ac5a5d604ed0d6a",
+  "plan_sha256": "e3f01d831d170e0de6d391e0f675fa1de4bd83ce176d4cf5fb787dd15fb1b876",
+  "status": "submitted",
+  "finished": "2026-09-27T20:58:17.738041+00:00",
+  "exit_code": 0
+}

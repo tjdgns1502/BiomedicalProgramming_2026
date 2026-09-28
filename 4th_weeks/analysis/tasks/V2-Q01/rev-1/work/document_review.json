@@ -1,0 +1,25 @@
+{
+ "task":"V2-Q01 document review",
+ "decision":"accept_with_limits",
+ "required_changes":[],
+ "findings":[
+  {"topic":"document flow","status":"pass","detail":"00-start explains observational data and separates paper marker-to-frailty models from assignment FI-group-to-marker means. Four paper notes follow the same six sections, preserve initial explanation with an explicit time label, and attach current implementation and limits."},
+  {"topic":"current numeric claims","status":"pass","detail":"04 boundary counts, 07/10 nonlinearity p values/df and 09 candidate Model1 Q4 contrasts agree with independently reviewed V2-I01 outputs after rounding."},
+  {"topic":"paper/candidate/assignment separation","status":"pass","detail":"09 explicitly distinguishes Model1 candidate results from original Model2 explanation and reverses neither X/Y nor estimands. 10 labels the new curve as an analyst diagnostic rather than a Figure2 copy; old sensitivity/simulation sections are labelled reused."},
+  {"topic":"inference limits","status":"pass","detail":"Pointwise versus simultaneous uncertainty, four diagnostic tests versus other families, noncausal interpretation, missing author definitions, and lack of clinical/biological validation are stated. No assertion that executing a model certifies its assumptions was found."},
+  {"topic":"04 data-source labels","status":"optional_clarification","detail":"The new count table still uses original_DEMO_full and section5 says original-source age condition. Add a short sentence that this run counted recorded ages in the full design derivative and did not reread raw DEMO, and the candidate input already restricts age>=50. This would align it exactly with result_review age scope."},
+  {"topic":"10 model identity","status":"optional_clarification","detail":"Add Model1 (age, sex, race, cycle) to the new diagnostic curve paragraph and t(df=138) to its pointwise CI description. Current wording already denies Figure2 replication, so this is clarity rather than a blocking mismatch."}
+ ],
+ "limits":[
+  "Review evaluated narrative structure and current-result consistency, not a new audit of original-paper source values or the old sensitivity/simulation computations.",
+  "Claims about prior XPT checks and old statistical analyses remain attributable to their cited historical artifacts, not newly certified by this document review.",
+  "02-paper was outside the requested five-note read; root reports incorporating the separate marker assertion reconciliation there."
+ ],
+ "inspected_files":[
+  "4주차/염증과 노쇠 - 분석 길잡이/00-start 처음부터 따라가는 분석 흐름.md",
+  "4주차/염증과 노쇠 - 분석 길잡이/04-paper 04 표본 선정과 단면자료의 한계.md",
+  "4주차/염증과 노쇠 - 분석 길잡이/07-paper 07 논문이 한 전처리와 보고하지 않은 점검.md",
+  "4주차/염증과 노쇠 - 분석 길잡이/09-paper 09 Table 3은 같은 데이터를 어떻게 다시 보나.md",
+  "4주차/염증과 노쇠 - 분석 길잡이/10-paper 10 Figure를 통해 결론의 범위 정하기.md"
+ ]
+}

@@ -1,0 +1,30 @@
+{
+  "task_id": "V2-I01",
+  "state": "accepted",
+  "outputs": [
+    "analysis/tasks/V2-I01/rev-1/work/age_boundary_counts.csv",
+    "analysis/tasks/V2-I01/rev-1/work/analysis_rows.csv",
+    "analysis/tasks/V2-I01/rev-1/work/attempt-1.stderr.log",
+    "analysis/tasks/V2-I01/rev-1/work/attempt-1.stdout.log",
+    "analysis/tasks/V2-I01/rev-1/work/attempt-2.stderr.log",
+    "analysis/tasks/V2-I01/rev-1/work/attempt-2.stdout.log",
+    "analysis/tasks/V2-I01/rev-1/work/attempt-3.stderr.log",
+    "analysis/tasks/V2-I01/rev-1/work/attempt-3.stdout.log",
+    "analysis/tasks/V2-I01/rev-1/work/basis_transformations.json",
+    "analysis/tasks/V2-I01/rev-1/work/basis_transformations.rds",
+    "analysis/tasks/V2-I01/rev-1/work/checks.R",
+    "analysis/tasks/V2-I01/rev-1/work/diagnostic_curves.png",
+    "analysis/tasks/V2-I01/rev-1/work/diagnostic_curve_data.csv",
+    "analysis/tasks/V2-I01/rev-1/work/execution.json",
+    "analysis/tasks/V2-I01/rev-1/work/frozen_spec.json",
+    "analysis/tasks/V2-I01/rev-1/work/handoff.md",
+    "analysis/tasks/V2-I01/rev-1/work/log_base_checks.csv",
+    "analysis/tasks/V2-I01/rev-1/work/nonlinearity_tests.csv",
+    "analysis/tasks/V2-I01/rev-1/work/quartile_cutpoints_counts.csv",
+    "analysis/tasks/V2-I01/rev-1/work/quartile_model1.csv",
+    "analysis/tasks/V2-I01/rev-1/work/sample_audit.json",
+    "analysis/tasks/V2-I01/rev-1/work/sessionInfo.txt",
+    "analysis/tasks/V2-I01/rev-1/work/synthetic_tests.json"
+  ],
+  "scope": "Bounded v2 task only; author-identical FI/cohort and full paper replication remain unresolved"
+}

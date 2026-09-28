@@ -1,0 +1,3 @@
+{"fact": "PFQ route reconstruction independently agrees for all 24119 rows", "run_id": "V3-20260928T003525Z", "source": "analysis/tasks/V3-Q01/rev-1/work/result_review.json", "scope": "V3 declared candidate"}
+{"fact": "1999 reliability is DRDDRSTS, not DRDDRSTZ", "run_id": "V3-20260928T003525Z", "source": "analysis/tasks/V3-Q01/rev-1/work/result_review.json", "scope": "V3 declared candidate"}
+{"fact": "Ordinary beta cannot directly include observed FI zero endpoints", "run_id": "V3-20260928T003525Z", "source": "analysis/tasks/V3-Q01/rev-1/work/result_review.json", "scope": "V3 declared candidate"}

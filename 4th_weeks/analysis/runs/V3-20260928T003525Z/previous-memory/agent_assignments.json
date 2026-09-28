@@ -1,0 +1,58 @@
+{
+  "coordinator": "/root",
+  "run_id": "V2-20260927T235327Z",
+  "workers": [
+    {
+      "task": "V2-P01",
+      "agent": "v2_evidence",
+      "write_scope": [
+        "analysis/tasks/V2-P01/rev-1/work"
+      ],
+      "reviewer": "root"
+    },
+    {
+      "task": "V2-E01",
+      "agent": "v2_environment",
+      "write_scope": [
+        "analysis/tasks/V2-E01/rev-1/work"
+      ],
+      "reviewer": "v2_reviewer"
+    },
+    {
+      "task": "V2-D01",
+      "agent": "v2_planner",
+      "write_scope": [
+        "analysis/tasks/V2-D01/rev-1/work"
+      ],
+      "reviewer": "v2_reviewer"
+    },
+    {
+      "task": "V2-I01",
+      "agent": "v2_implementer",
+      "write_scope": [
+        "analysis/tasks/V2-I01/rev-1/work"
+      ],
+      "reviewer": "v2_reviewer"
+    },
+    {
+      "task": "V2-Q01",
+      "agent": "v2_reviewer",
+      "write_scope": [
+        "analysis/tasks/V2-Q01/rev-1/work"
+      ],
+      "reviewer": "root"
+    },
+    {
+      "task": "V2-DOC",
+      "agent": "root",
+      "write_scope": [
+        "4주차/염증과 노쇠 - 분석 길잡이",
+        "analysis/memory",
+        "analysis/runs/V2-20260927T235327Z"
+      ],
+      "reviewer": "v2_reviewer"
+    }
+  ],
+  "isolation": "Fresh worker contexts and assigned write ownership; shared filesystem, not OS-enforced isolation",
+  "documentation_writer": "root"
+}

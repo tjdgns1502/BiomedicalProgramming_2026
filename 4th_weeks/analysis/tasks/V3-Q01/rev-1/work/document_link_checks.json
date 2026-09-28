@@ -1,0 +1,181 @@
+{
+  "status": "PASS",
+  "selected_notes": 11,
+  "v3_asset_links": 19,
+  "source_copy_checks": 19,
+  "links": [
+    {
+      "source": "03-paper 03 이 논문은 FI를 어떻게 정의했나.md",
+      "target": "assets/V3-20260928T003525Z/endpoint_audit.csv",
+      "exists": true
+    },
+    {
+      "source": "03-paper 03 이 논문은 FI를 어떻게 정의했나.md",
+      "target": "assets/V3-20260928T003525Z/expected_pfqqa.json",
+      "exists": true
+    },
+    {
+      "source": "04-paper 04 표본 선정과 단면자료의 한계.md",
+      "target": "assets/V3-20260928T003525Z/flow_counts.csv",
+      "exists": true
+    },
+    {
+      "source": "04-paper 04 표본 선정과 단면자료의 한계.md",
+      "target": "assets/V3-20260928T003525Z/covariate_availability_dictionary.csv",
+      "exists": true
+    },
+    {
+      "source": "04-paper 04 표본 선정과 단면자료의 한계.md",
+      "target": "assets/V3-20260928T003525Z/Figure1_flow.png",
+      "exists": true
+    },
+    {
+      "source": "05-paper 05 Table 1을 읽는 순서.md",
+      "target": "assets/V3-20260928T003525Z/table1_descriptions.csv",
+      "exists": true
+    },
+    {
+      "source": "05-paper 05 Table 1을 읽는 순서.md",
+      "target": "assets/V3-20260928T003525Z/S2_S5_descriptions.csv",
+      "exists": true
+    },
+    {
+      "source": "05-paper 05 Table 1을 읽는 순서.md",
+      "target": "assets/V3-20260928T003525Z/table1_tests.csv",
+      "exists": true
+    },
+    {
+      "source": "05-paper 05 Table 1을 읽는 순서.md",
+      "target": "assets/V3-20260928T003525Z/S2_S5_tests.csv",
+      "exists": true
+    },
+    {
+      "source": "05-paper 05 Table 1을 읽는 순서.md",
+      "target": "assets/V3-20260928T003525Z/descriptive_test_row_manifest.csv",
+      "exists": true
+    },
+    {
+      "source": "08-paper 08 Table 2의 Model 1과 Model 2.md",
+      "target": "assets/V3-20260928T003525Z/continuous_models.csv",
+      "exists": true
+    },
+    {
+      "source": "09-paper 09 Table 3은 같은 데이터를 어떻게 다시 보나.md",
+      "target": "assets/V3-20260928T003525Z/quartile_models.csv",
+      "exists": true
+    },
+    {
+      "source": "09-paper 09 Table 3은 같은 데이터를 어떻게 다시 보나.md",
+      "target": "assets/V3-20260928T003525Z/trend_models.csv",
+      "exists": true
+    },
+    {
+      "source": "09-paper 09 Table 3은 같은 데이터를 어떻게 다시 보나.md",
+      "target": "assets/V3-20260928T003525Z/frozen_quartiles.csv",
+      "exists": true
+    },
+    {
+      "source": "10-paper 10 Figure를 통해 결론의 범위 정하기.md",
+      "target": "assets/V3-20260928T003525Z/subgroup_slopes.csv",
+      "exists": true
+    },
+    {
+      "source": "10-paper 10 Figure를 통해 결론의 범위 정하기.md",
+      "target": "assets/V3-20260928T003525Z/interactions.csv",
+      "exists": true
+    },
+    {
+      "source": "10-paper 10 Figure를 통해 결론의 범위 정하기.md",
+      "target": "assets/V3-20260928T003525Z/FigS1_plus16_curves.png",
+      "exists": true
+    },
+    {
+      "source": "10-paper 10 Figure를 통해 결론의 범위 정하기.md",
+      "target": "assets/V3-20260928T003525Z/Figure2_Model2_curves.png",
+      "exists": true
+    },
+    {
+      "source": "10-paper 10 Figure를 통해 결론의 범위 정하기.md",
+      "target": "assets/V3-20260928T003525Z/Figure3_subgroup_forest.png",
+      "exists": true
+    }
+  ],
+  "copies": [
+    {
+      "name": "endpoint_audit.csv",
+      "identical": true
+    },
+    {
+      "name": "expected_pfqqa.json",
+      "identical": true
+    },
+    {
+      "name": "flow_counts.csv",
+      "identical": true
+    },
+    {
+      "name": "covariate_availability_dictionary.csv",
+      "identical": true
+    },
+    {
+      "name": "Figure1_flow.png",
+      "identical": true
+    },
+    {
+      "name": "table1_descriptions.csv",
+      "identical": true
+    },
+    {
+      "name": "S2_S5_descriptions.csv",
+      "identical": true
+    },
+    {
+      "name": "table1_tests.csv",
+      "identical": true
+    },
+    {
+      "name": "S2_S5_tests.csv",
+      "identical": true
+    },
+    {
+      "name": "descriptive_test_row_manifest.csv",
+      "identical": true
+    },
+    {
+      "name": "continuous_models.csv",
+      "identical": true
+    },
+    {
+      "name": "quartile_models.csv",
+      "identical": true
+    },
+    {
+      "name": "trend_models.csv",
+      "identical": true
+    },
+    {
+      "name": "frozen_quartiles.csv",
+      "identical": true
+    },
+    {
+      "name": "subgroup_slopes.csv",
+      "identical": true
+    },
+    {
+      "name": "interactions.csv",
+      "identical": true
+    },
+    {
+      "name": "FigS1_plus16_curves.png",
+      "identical": true
+    },
+    {
+      "name": "Figure2_Model2_curves.png",
+      "identical": true
+    },
+    {
+      "name": "Figure3_subgroup_forest.png",
+      "identical": true
+    }
+  ]
+}

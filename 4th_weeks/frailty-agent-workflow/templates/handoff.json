@@ -1,0 +1,14 @@
+{
+  "task_id": "REPLACE",
+  "accepted": false,
+  "status": "complete",
+  "reviewer_id": "",
+  "author_id": "",
+  "content_class": "methods_only",
+  "summary": "runs/REPLACE/handoff.md",
+  "summary_sha256": "",
+  "artifacts": [],
+  "dependency_summary_sha256": {},
+  "review_notes": "",
+  "accepted_at": ""
+}

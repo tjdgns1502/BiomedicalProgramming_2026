@@ -1,0 +1,7 @@
+{
+  "rank_tolerance": 1e-10,
+  "CI": "pointwise 95% t, df=degf(domain)",
+  "age": ">=50 operational; parent-reported conflicting source wording",
+  "spline": "ln; type7 1/3,2/3; observed boundaries; median reference; display raw-marker type7 5%-95%",
+  "interpretation": "analyst candidate FI; conditional diagnostic only"
+}

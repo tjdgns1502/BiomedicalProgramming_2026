@@ -1,0 +1,23 @@
+{
+  "version": "1.0-before-real-data-analysis",
+  "status": "provisional-data-definition-pending",
+  "prior_exposure": "Coordinator has read the published findings; this is not preregistration or blinded validation.",
+  "user_authorization": "Use publicly available NHANES data; preserve existing Markdown and append reviewed results; no new final report or HTML.",
+  "paper": "10.1186/s12889-024-20908-9",
+  "paper_target_population": "NHANES 1999-2016 participants age >=50",
+  "data_priority": "Try documented public data reconstruction; label any single-cycle and coding-candidate analysis explicitly.",
+  "primary_assignment_estimand": "Unadjusted arithmetic mean differences in each CBC-derived marker across FI quartile groups in the analyzable educational sample",
+  "primary_assignment_method": "Welch ANOVA, with all ANOVA and Kruskal-Wallis results reported as required method comparisons",
+  "reason": "Question concerns mean levels; unequal variances plausible for skewed CBC ratios. Choice is before new data outcomes, not smallest p-value.",
+  "grouping": {"variable": "FI", "quantile_type": 7, "weighted": false, "reference_population": "All eligible participants with valid FI before marker-specific complete cases", "ties": "Same FI goes to same group using right-closed cuts; unequal group sizes allowed; duplicated cut points require explicit revision, no random tie splitting"},
+  "comparisons": {"ANOVA": "Tukey with its within-marker family retained", "Welch": "Pairwise Welch t tests, raw p and Bonferroni/BH over all 24 pairs across 4 markers", "KW": "Omnibus rank test, not automatically interpreted as medians"},
+  "families": {"F_omnibus": "4 primary Welch tests", "F_pairs": "24 pairwise Welch comparisons across 4 markers", "F_trend": "4 preplanned marker trend tests"},
+  "trend": {"score": "FI-group median on original FI scale", "model": "linear regression with HC3 heteroskedasticity-robust covariance", "report": "slope, confidence interval, raw p and Bonferroni/BH over F_trend; linear association is not proof of monotonicity"},
+  "diagnostics": ["boxplots for four markers", "ANOVA residual-vs-fitted", "residual Q-Q", "scale-location", "residual-vs-leverage"],
+  "missing": "Use valid FI reference cohort; each marker complete-case subset with explicit n; no invented imputation",
+  "survey_extension": "If appropriate MEC weight/PSU/stratum verified, provide separate design-based group means and Wald test; never label ordinary ANOVA as NHANES population inference",
+  "reproduction": {"model1": "binary FI>.3, one log marker at a time, age/sex/race/cycle if present", "model2": "Only when all reported covariate definitions and columns are verified", "log": "Natural log as declared reconstruction choice; publication log base unspecified", "target_matching": "No tuning to published p/OR; report discrepancy and uncertainty"},
+  "sensitivity": ["FI definition and platelet overlap only if item-level coding verified", "fractional logit only if defined FI available; a different estimand from binary OR", "missingness and cycle scope recorded"],
+  "scope_limits": ["Cannot infer causal effect from cross-sectional analysis", "Cannot assert exact 36-item FI replication without item coding and denominator evidence", "Actual sample statistics and simulation evidence kept separate"],
+  "simulation": {"independent_global_null": "FWER=1-.95^k only for independent valid tests", "dependent": "separate scenario, not required to equal independent formula", "B": 10000, "implementation": "R expand.grid and Map", "metrics": ["FWER", "FDR", "Monte Carlo SE", "power for mixed alternatives"]}
+}

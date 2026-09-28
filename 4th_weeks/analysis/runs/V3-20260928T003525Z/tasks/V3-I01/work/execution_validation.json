@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "matched_row_identities": true,
+  "inferential_family_cardinality": true,
+  "multiplicity_recomputed": true,
+  "spline_reference_zero_variance": true,
+  "total_fits": 120,
+  "estimable_fits": 120,
+  "failed_fits": 0,
+  "ordinary_beta": {
+    "status": "not_applicable",
+    "reason": "FI endpoint values present; no squeezing or deletion",
+    "endpoints": [
+      {
+        "candidate": "FI_candidate36",
+        "n": 9814,
+        "min": 0,
+        "max": 0.6944,
+        "zeros": 272,
+        "ones": 0,
+        "distinct": 26
+      },
+      {
+        "candidate": "FI_candidate36_alt",
+        "n": 13355,
+        "min": 0,
+        "max": 0.6944,
+        "zeros": 191,
+        "ones": 0,
+        "distinct": 26
+      },
+      {
+        "candidate": "FI_route",
+        "n": 13289,
+        "min": 0,
+        "max": 0.6944,
+        "zeros": 894,
+        "ones": 0,
+        "distinct": 26
+      },
+      {
+        "candidate": "FI30",
+        "n": 16885,
+        "min": 0,
+        "max": 0.8,
+        "zeros": 356,
+        "ones": 0,
+        "distinct": 147
+      }
+    ]
+  },
+  "candidate_label": "route-confirmed complete36 analyst reconstruction; not author-identical"
+}

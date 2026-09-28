@@ -1,0 +1,18 @@
+{
+  "primary": "route-confirmed complete36",
+  "Table1": ["table1_descriptions.csv", "table1_tests.csv"],
+  "Table2": "continuous_models.csv",
+  "Table3": ["quartile_models.csv", "trend_models.csv", "omnibus_tests.csv"],
+  "Figure1": "Figure1_flow.png",
+  "Figure2": ["Figure2_Model2_curves.png", "spline_tests.csv"],
+  "Figure3": ["Figure3_subgroup_forest.png", "interactions.csv", "subgroup_slopes.csv"],
+  "S2_S5": ["S2_S5_descriptions.csv", "S2_S5_tests.csv"],
+  "S6_S7": ["continuous_models.csv", "quartile_models.csv", "trend_models.csv"],
+  "FigS1": "FigS1_plus16_curves.png",
+  "FI30": "continuous_models.csv: FI30_M1",
+  "diet": "continuous_models.csv: Diet_day1_matched and Diet_mean2_matched",
+  "fractional": "existing original36 fractional retained; no new Model2 fractional",
+  "beta": "not applicable endpoints; see endpoint_audit.csv",
+  "audit": ["execution_validation.json", "fit_audit.csv", "model_row_ids.rds", "covariate_coding_dictionary.csv", "covariate_availability_dictionary.csv", "derived_analysis_inputs.csv"],
+  "limitations": "post-result continuation; source-independent frozen candidate rules; component-overlap adjustment; separate exploratory families; pointwise intervals"
+}

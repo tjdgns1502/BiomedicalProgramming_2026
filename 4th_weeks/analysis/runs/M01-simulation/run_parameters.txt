@@ -1,0 +1,8 @@
+SIMULATION ONLY
+B=10000
+master_seed=20260928
+alpha=.05
+n=30
+known_sd=1
+test=one-sided normal z
+diagnostic_seed=master_seed+50000

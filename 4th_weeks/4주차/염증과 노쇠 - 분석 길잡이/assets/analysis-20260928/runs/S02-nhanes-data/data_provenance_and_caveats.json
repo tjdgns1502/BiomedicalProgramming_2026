@@ -1,0 +1,45 @@
+{
+  "created_utc": "2026-09-27T20:56:32.386039+00:00",
+  "scope": "Public-use CDC NHANES 1999-2016 nine cycles; 50+ observed data and CBC biomarkers; not an author-identical FI reconstruction",
+  "authority": "All NHANES datasets/codebooks downloaded from wwwn.cdc.gov. Data is public use. CDC terms: https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/overview.aspx?BeginYear=2015",
+  "software": "Locally authored Python downloader/preparer. uv script dependencies pandas==3.0.3. No third-party FI source code reused.",
+  "commands": [
+    "uv run analysis/src/download_nhanes.py",
+    "uv run analysis/src/prepare_nhanes.py",
+    "uv run analysis/src/prepare_nhanes_design.py",
+    "uv run analysis/src/construct_fi_candidate.py"
+  ],
+  "survey_weight_source": "https://wwwn.cdc.gov/nchs/nhanes/tutorials/weighting.aspx",
+  "weight_rule": {
+    "1999-2000_and_2001-2002": "WTMEC4YR * (4/18)",
+    "2003-2016": "WTMEC2YR * (2/18)"
+  },
+  "author_code_search": {
+    "search_terms": [
+      "s12889-024-20908-9 code frailty index",
+      "NHANES frailty Han github",
+      "Blodgett frailty index NHANES code 46"
+    ],
+    "result": "No code attributable to Han 2024 was located in this bounded search. This is not proof no code exists.",
+    "non_author_hit": "https://github.com/yikeshu0611/nhanesR/blob/master/R/Frailty53.R",
+    "why_not_used": "Different 53-item index, includes partial scores that conflict with Han binary description; not established author provenance. Code not copied so license-based reuse not applicable."
+  },
+  "important_mapping_issues": [
+    "2015 source files contain candidates for all 36 S1 concepts, but mapping is analyst-selected and thresholds/denominator not supplied by Han.",
+    "1999 MCQ160I asks another thyroid disease; goiter is separate MCQ160H, whereas 2001 MCD160M and later MCQ160M ask thyroid problem.",
+    "2001 uses adjusted LBDSLDSI and LBDSAPSI instead of LBXSLDSI and LBXSAPSI. Current published adjusted values retained.",
+    "2001 L40_2_B repeat-exam convenience sample cached but excluded from analysis.",
+    "HUQ050 and HUQ051 are ordinal healthcare-frequency bins and wording/bin boundaries changed. Never interpret their codes as visit counts.",
+    "HUQ010 and HSD010 collect health status in home versus MEC interviews; participants can give different answers; do not merge blindly.",
+    "PFQ061 (early PFQ060) code 5 means does not do activity. Refused/dont-know codes and skip-driven missing values require explicit handling.",
+    "Some 50-59 year olds skip PFQ difficulty items after negative screening responses. Missingness is partly structural.",
+    "Prescription file is medicine-level long. RXDCOUNT/RXD295 and RXDUSE/RXD030 were checked for within-person consistency and retained once.",
+    "DIQ010=3 is borderline diabetes, and its binary deficit interpretation is unspecified in Han.",
+    "BPX contains up to four systolic/diastolic measurements; Han does not identify which to use or aggregation rule.",
+    "Public-use age is topcoded differently across cycles; RIDAGEYR preserved as released.",
+    "All original observed-code variables retain special missing sentinel values; NaN-only filtering is insufficient for questionnaires.",
+    "No FI or frailty group is calculated in prepare_nhanes.py. Downstream candidate rules must be versioned and explicitly distinguished from Han author implementation."
+  ],
+  "parser_correction": "pandas3.0.3 read_sas XPORT converted IBM zero to exact16**-65. Replaced only that exact numeric representation with0. R4.6.1 foreign0.8.91 crosscheck of6files268632values confirmed all zero classifications and numeric values. See xpt_zero_crosscheck.json.",
+  "candidate_implementation": "Downstream analyst-specified operational36 candidate exists in construct_fi_candidate.py and config/fi_candidate.json. It is not author-identical recovered coding. Prepared observed CSV itself has no FI."
+}

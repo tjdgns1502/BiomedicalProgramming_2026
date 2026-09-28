@@ -1,0 +1,9 @@
+SIMULATION ONLY
+B=2000
+master_seed=20260929
+alpha=.05; four independent groups; n=30 each
+pairwise multiplicity family=6
+actual core source MD5 follows
+     analysis/src/group_analysis.R 
+"8600cd035acaa327ceaaaebfab0291e4" 
+[1] "Mersenne-Twister" "Inversion"        "Rejection"       

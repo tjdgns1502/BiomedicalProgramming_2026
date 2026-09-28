@@ -1,0 +1,305 @@
+{
+  "notes": [
+    {
+      "path": "4주차/염증과 노쇠 - 분석 길잡이/01-paper 01 논문 데이터의 모양.md",
+      "sha256": "3ef8bdfaada0d14d69b270da43bc3c6d0b754e86bdc97bd97561961537185ff5"
+    },
+    {
+      "path": "4주차/염증과 노쇠 - 분석 길잡이/02-paper 02 논문에서 네 지표를 만든 방법.md",
+      "sha256": "3e16fc19e04e46e5611a358a3d4dfe8c0d40a45addf8547c75e8fb1f677c200c"
+    },
+    {
+      "path": "4주차/염증과 노쇠 - 분석 길잡이/03-paper 03 이 논문은 FI를 어떻게 정의했나.md",
+      "sha256": "d1ee4a82851a7370d98d297a1d944a17d74b62661f29f276867bac5a3c4af303"
+    },
+    {
+      "path": "4주차/염증과 노쇠 - 분석 길잡이/04-paper 04 표본 선정과 단면자료의 한계.md",
+      "sha256": "b6c087a4c331e64a69aef77d648c15af1bcf16457c1febd0166d4203cea5d2d6"
+    },
+    {
+      "path": "4주차/염증과 노쇠 - 분석 길잡이/05-paper 05 Table 1을 읽는 순서.md",
+      "sha256": "ced97ccaac3a8c53577a4a314d27077b430ab6c4f775c430f59cdc4d2e4a0b1b"
+    },
+    {
+      "path": "4주차/염증과 노쇠 - 분석 길잡이/06-paper 06 이 논문의 OR를 정확히 읽기.md",
+      "sha256": "ae999fc7838e8c2fa60417cd5fab4872170689040d2e61bde066d2f9f9a05573"
+    },
+    {
+      "path": "4주차/염증과 노쇠 - 분석 길잡이/07-paper 07 논문이 한 전처리와 보고하지 않은 점검.md",
+      "sha256": "ee0e82be4829c085ac226488aebad37935fcf9b531d3a7d66cd3157c8f6cae1c"
+    },
+    {
+      "path": "4주차/염증과 노쇠 - 분석 길잡이/08-paper 08 Table 2의 Model 1과 Model 2.md",
+      "sha256": "52672f0cf36f4b0fd83d8ad3e0a96cf119900a97a548b14ae77b879790bbf183"
+    },
+    {
+      "path": "4주차/염증과 노쇠 - 분석 길잡이/09-paper 09 Table 3은 같은 데이터를 어떻게 다시 보나.md",
+      "sha256": "abda90e841c154a54adeea9768b326bd3bac68e9d4bcc21bcf5c17993123b6a4"
+    },
+    {
+      "path": "4주차/염증과 노쇠 - 분석 길잡이/10-paper 10 Figure를 통해 결론의 범위 정하기.md",
+      "sha256": "46609f3b11347f8d46cdbd9a75c2e98c1237e1d6422924b7f262fc87b7664821"
+    }
+  ],
+  "assets": [
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/basis_transformations.json",
+      "asset": "assets/V3-20260928T003525Z/basis_transformations.json",
+      "sha256": "47104180fb5b8c666ce6fbdec53d7d97192e694ac8ed2a7a34d4d462c20f8d93"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/CBC_selection_counts.csv",
+      "asset": "assets/V3-20260928T003525Z/CBC_selection_counts.csv",
+      "sha256": "913b4fba14cdd54da3a339f069342941c8a4a06b4b98bd289b4db0f199a746e6"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/comparison_register.csv",
+      "asset": "assets/V3-20260928T003525Z/comparison_register.csv",
+      "sha256": "ea4590e50717a82f2dc2309e4c5689cd377f92c123e68ae91140a442efcc6345"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/continuous_models.csv",
+      "asset": "assets/V3-20260928T003525Z/continuous_models.csv",
+      "sha256": "4db925e23c964b8ba292cf5dce4c2cd0cff3546ef67e7e3f0657c66bbdcede25"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/covariate_availability_dictionary.csv",
+      "asset": "assets/V3-20260928T003525Z/covariate_availability_dictionary.csv",
+      "sha256": "8032fa8dda87c91373ed4c764b76ca01c9116a2507acd877376097eb859fd195"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/covariate_coding_dictionary.csv",
+      "asset": "assets/V3-20260928T003525Z/covariate_coding_dictionary.csv",
+      "sha256": "cc03c34d8e0d916a77bfed11913f00ad78859d0dabe3204b709d9d61105ca8f6"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/coverage_manifest.json",
+      "asset": "assets/V3-20260928T003525Z/coverage_manifest.json",
+      "sha256": "a79ee526a10b476198a423ebb0b2b1dff7cac27ab935d669967245252eb3b526"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/curve_data.csv",
+      "asset": "assets/V3-20260928T003525Z/curve_data.csv",
+      "sha256": "1489eca93e6eb84e1da8c420119fdd0ff3c160c254000ccf08a097ed9006131b"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/descriptions.log",
+      "asset": "assets/V3-20260928T003525Z/descriptions.log",
+      "sha256": "81b3e1489290eab0c2cf7ad2e16d3c0a089fe374f309a550807110feea59861c"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/descriptions.R",
+      "asset": "assets/V3-20260928T003525Z/descriptions.R",
+      "sha256": "0f978fe86a0804a247089f644d8ef29516ffa8b4432bd928203808c111a2e7d4"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/descriptive_test_row_manifest.csv",
+      "asset": "assets/V3-20260928T003525Z/descriptive_test_row_manifest.csv",
+      "sha256": "4b72067a26c9e3674ebe7054ef2872470ed4e91484b19f85028cf802a70baf05"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/design_audit.log",
+      "asset": "assets/V3-20260928T003525Z/design_audit.log",
+      "sha256": "7f890f77ed9a8fe52f3d4bee85e9ecf3db80e7a198707a03141f9b85cfe777a8"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/design_audit.R",
+      "asset": "assets/V3-20260928T003525Z/design_audit.R",
+      "sha256": "1434aec67d47854cc5b83ef3ef2d5d490e469c073d6dc9032f25ec7f473722c2"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/design_parent_audit.csv",
+      "asset": "assets/V3-20260928T003525Z/design_parent_audit.csv",
+      "sha256": "1b1274cd6db4a6c204fa37914dbf93bc41da83d9adc22a23baf1c1d62f23a382"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/diet_join_audit.csv",
+      "asset": "assets/V3-20260928T003525Z/diet_join_audit.csv",
+      "sha256": "265cb837e9a674fc4a57946a54ce67948125a9658f145f7075ee584ac20dc5d5"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/endpoint_audit.csv",
+      "asset": "assets/V3-20260928T003525Z/endpoint_audit.csv",
+      "sha256": "8e4d64fe5d26d107379fdf9e851bce5a8f21ab390a2aa516633cec5b435a4c39"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/execution_validation.json",
+      "asset": "assets/V3-20260928T003525Z/execution_validation.json",
+      "sha256": "e4059850c9f49876c37273504c5cd2575dbbb45de094d55b11edf0227a232dab"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/FigS1_plus16_curves.png",
+      "asset": "assets/V3-20260928T003525Z/FigS1_plus16_curves.png",
+      "sha256": "557e3720bf0a6e5235b25dc58426227565b172c362376ed94d74d4af783b06ec"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/Figure1_flow.png",
+      "asset": "assets/V3-20260928T003525Z/Figure1_flow.png",
+      "sha256": "3881c636925d514dca4a70596183ed01afd76ee6db8d40e9f5e0ea762930a2b9"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/Figure2_Model2_curves.png",
+      "asset": "assets/V3-20260928T003525Z/Figure2_Model2_curves.png",
+      "sha256": "47e323e6cb903817350f0590bb8927da09bee95904aa61be848c9c4b05631759"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/Figure3_subgroup_forest.png",
+      "asset": "assets/V3-20260928T003525Z/Figure3_subgroup_forest.png",
+      "sha256": "94390df77128f28f80fb0982806873cb85d8b9ec254b954d9001d52418615775"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/fit_audit.csv",
+      "asset": "assets/V3-20260928T003525Z/fit_audit.csv",
+      "sha256": "ee3cfcd6ba2b686ad20314be61947a73c81ebe7bb50315b5248c9466a294deb6"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/flow_counts.csv",
+      "asset": "assets/V3-20260928T003525Z/flow_counts.csv",
+      "sha256": "07c552b1e7680e312c888b3f9bef2679e88b572930dd32dc6e9a00948b951c5e"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/frozen_quartiles.csv",
+      "asset": "assets/V3-20260928T003525Z/frozen_quartiles.csv",
+      "sha256": "589a2a3a2cd47458a40c3aa4f8d926e12b15925f31e2d63ba493a31124120bf0"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/input_provenance.json",
+      "asset": "assets/V3-20260928T003525Z/input_provenance.json",
+      "sha256": "a51a87763d28ea7f908beb00b930406aaaf661072f11799f37c542f8b70b1d20"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/interactions.csv",
+      "asset": "assets/V3-20260928T003525Z/interactions.csv",
+      "sha256": "7d95cf9b1f584360ac3b480919cbca932bcfc02ce811d10c47a906d05caf2cac"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/interpretation_notes.txt",
+      "asset": "assets/V3-20260928T003525Z/interpretation_notes.txt",
+      "sha256": "f067726c988d786be8dfc52ed74b005e5196b809cc4cedfc617134f7269147bd"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/item_missingness.csv",
+      "asset": "assets/V3-20260928T003525Z/item_missingness.csv",
+      "sha256": "ac73dc595153c8617f1d0d0734f00a0389875c336fbe350774020f4d427c646f"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/models.log",
+      "asset": "assets/V3-20260928T003525Z/models.log",
+      "sha256": "a32d42defdb66c35c38e9e263bddd42254821209a6a6a352af93d6ecc0784b3f"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/models.R",
+      "asset": "assets/V3-20260928T003525Z/models.R",
+      "sha256": "6aa83738c9108bf27f5fb3b787ff712ffbbfad3f3e58c3186a63aade3b66dd58"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/observed_item_count_distribution.csv",
+      "asset": "assets/V3-20260928T003525Z/observed_item_count_distribution.csv",
+      "sha256": "bccee2a4d402db6710c4cd2b5f497d23511c20f7579ff5c7175b9d679a959f0b"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/omnibus_tests.csv",
+      "asset": "assets/V3-20260928T003525Z/omnibus_tests.csv",
+      "sha256": "d404c2debc11f5b99e3b52705107855dab6ed59b963c77d5c89302a0e96206f7"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/prefit_qa.json",
+      "asset": "assets/V3-20260928T003525Z/prefit_qa.json",
+      "sha256": "7cbf4f0dd69fae1bafb3b45ef90a07ab0dd3d8bcf44ab25303919af76efd6bd3"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/prepare.log",
+      "asset": "assets/V3-20260928T003525Z/prepare.log",
+      "sha256": "65ba46862ad6d0d9939e0cb8b2f8e1aa2835dfb4485fff27675c16e003d54499"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/prepare.R",
+      "asset": "assets/V3-20260928T003525Z/prepare.R",
+      "sha256": "ade8e028f98034e778a9880d078d1745fd66cdb88fb620630a097c0978cd8b0e"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/quartile_models.csv",
+      "asset": "assets/V3-20260928T003525Z/quartile_models.csv",
+      "sha256": "e37f7713e430c55638d5ae84595a28565e7bf8e017f051148c92abcd8552bd6c"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/route_flags_counts.csv",
+      "asset": "assets/V3-20260928T003525Z/route_flags_counts.csv",
+      "sha256": "33c318cd501a1a8a3ec954cd365e569a2a01620cf65ab83bd6e1b75df9dd5b82"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/S2_S5_descriptions.csv",
+      "asset": "assets/V3-20260928T003525Z/S2_S5_descriptions.csv",
+      "sha256": "58b2bb9bb0d8e42c38686d24750abb0fdfb65303a264a516bb3422158461ccb7"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/S2_S5_tests.csv",
+      "asset": "assets/V3-20260928T003525Z/S2_S5_tests.csv",
+      "sha256": "f1909da66e7d3b664a35cae152b6f47459df68c3fb2dcdc01aeb65d325ccf5ed"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/selection.log",
+      "asset": "assets/V3-20260928T003525Z/selection.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/selection.R",
+      "asset": "assets/V3-20260928T003525Z/selection.R",
+      "sha256": "eb6f4642a599953fbde72005bc641860754d086e3e058dcf199caf2bf99ad59a"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/selection_continuous_distributions.csv",
+      "asset": "assets/V3-20260928T003525Z/selection_continuous_distributions.csv",
+      "sha256": "cb917d13a4ac4950a20e5a6aedefbe3b78b53657d1927ad47a6d03174b220f2b"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/selection_retention.csv",
+      "asset": "assets/V3-20260928T003525Z/selection_retention.csv",
+      "sha256": "068ff1bc3a8478f37cdf84cdd83ee1270eae0d3428191606461a44ae736fb676"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/sessionInfo.txt",
+      "asset": "assets/V3-20260928T003525Z/sessionInfo.txt",
+      "sha256": "df52565c58e1a30059e3a1702c2ee77fc3e4b3975e135fc5e82d2660a76ca64f"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/spline_tests.csv",
+      "asset": "assets/V3-20260928T003525Z/spline_tests.csv",
+      "sha256": "4ec8929ef80f027a646d9e85941e0a7e38699021c03b042a2322e5c6ed8093c4"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/subgroup_slopes.csv",
+      "asset": "assets/V3-20260928T003525Z/subgroup_slopes.csv",
+      "sha256": "f99d764d52c9d15f90e2044acbe586005665f29e2124bde88c3e8c1a1fc6f3ae"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/table1_descriptions.csv",
+      "asset": "assets/V3-20260928T003525Z/table1_descriptions.csv",
+      "sha256": "cf8cafda54644ad2370e439b9339a1a875bbc1884ed3259159a6f45178ce5dd9"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/table1_tests.csv",
+      "asset": "assets/V3-20260928T003525Z/table1_tests.csv",
+      "sha256": "8f08552e304507cf7d886a41efb78beb33ce9e9a6a810c5ffd0a4c2a8f426719"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/trend_models.csv",
+      "asset": "assets/V3-20260928T003525Z/trend_models.csv",
+      "sha256": "99bde951885cf93eb145a54a1e4a7405576e0ce490da5267ee77a04feea120e6"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/validate.log",
+      "asset": "assets/V3-20260928T003525Z/validate.log",
+      "sha256": "ed1c7636ad2285805b3cc1e82078677c25832dd07b582481900cb64a53c0fee9"
+    },
+    {
+      "source": "analysis/tasks/V3-I01/rev-1/work/validate.R",
+      "asset": "assets/V3-20260928T003525Z/validate.R",
+      "sha256": "c745c3414f4f70c24dea2388b778f8b9e54f0b29886a4bb9c34089036769f5d2"
+    }
+  ],
+  "review": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\4주차\\analysis\\tasks\\V3-Q01\\rev-1\\work\\result_review.json",
+  "new_HTML": false,
+  "separate_final_report": false,
+  "final_review": "analysis/tasks/V3-Q01/rev-1/work/document_review.json"
+}

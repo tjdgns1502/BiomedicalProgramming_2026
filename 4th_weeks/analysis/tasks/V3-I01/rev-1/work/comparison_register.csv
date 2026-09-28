@@ -1,0 +1,10 @@
+comparison,status,implementation,interpretation
+Original strict36 versus route36 on shared eligible persons,identity verified,FI_route exactly equals FI_candidate36 on every original complete36 record; Strict36_M1 is therefore also route36 M1 on this shared domain,No coding difference among already complete cases
+Original strict36 versus route36 full eligible domains,executed,Strict36_M1 versus M1_large in continuous_models.csv,Expanded route cohort differs by composition
+Original strict36 versus FI30 on shared complete persons,identity verified,FI30 exactly equals FI_candidate36 on every original complete36 record; same Model1 on same persons is identical,No denominator difference on fully observed participants
+Original strict36 versus FI30 expanded domains,executed,Strict36_M1 versus FI30_M1 in continuous_models.csv,Differences combine partial denominator assumptions and composition
+Model1 larger versus Model1 matched Model2,executed,M1_large versus M1_matched,Selection effect under identical Model1 specification
+Matched Model1 versus Model2,executed,M1_matched versus M2 exact common SEQN identities verified,Additional adjustment conditional interpretation
+Model2 larger versus supplement matched base,executed,M2 versus M2_supp_matched exact identical rows here,No further deletion because complete36 already requires all supplemental components
+Matched Model2 versus Model2 plus16,executed,M2_supp_matched versus M2_plus16 exact row identities,Additional outcome-component-overlapping conditional adjustment
+Diet matched day1 versus mean2,executed,Diet_day1_matched versus Diet_mean2_matched exact rows and WTDR2D/7 design,Only energy covariate changes within two-day responders

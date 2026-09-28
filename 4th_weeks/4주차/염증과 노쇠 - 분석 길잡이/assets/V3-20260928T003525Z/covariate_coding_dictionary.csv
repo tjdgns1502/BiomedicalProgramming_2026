@@ -1,0 +1,33 @@
+variable,raw_source,coding,units,reference,missing,interpretation
+age,RIDAGEYR,continuous,years,,system missing,public use age topcoding retained
+sex,RIAGENDR,factor raw 1 or 2,,1,system missing,sex classification
+race,RIDRETH1,factor raw five categories,,1,system missing,race ethnicity
+cycle_adjust,DEMO cycle,factor chronological,,1999-2000,system missing,cycle indicators
+education,DMDEDUC2,1/2 belowHS;3 HS;4/5 aboveHS,,belowHS,other codes,analyst categories
+pir,INDFMPIR,finite nonnegative <=1;>1 <=3;>3,ratio,LE1,negative nonfinite or missing,boundary gaps resolved by frozen rule
+bmi,BMXBMI,finite positive <25;25 <=BMI<30;>=30,kg/m2,LT25,nonpositive nonfinite or missing,frozen boundary rule
+smoking,SMQ020,1 Yes;2 No,,No,other codes,lifetime smoked 100 cigarettes
+alcohol,ALQ100 1999;ALD100 2001;ALQ101 2003+,1 Yes;2 No,,No,other codes,at least 12 drinks in any one year; not current drinking
+activity,PAD200/PAD320 through 2006;PAQ650/PAQ665 later,vig1 Vigorous;vig2 mod1 Moderate;both2 Low,,Low,all unresolved cases including early unable3,leisure intensity candidate; 30day vs usualweek recall differs
+energy,DRXTKCAL early;DR1TKCAL later,finite >=0 and reliable status1,kcal,,otherwise missing,day1 MEC weighted exploratory adjustment
+energy2,DR1TKCAL DR2TKCAL DR1DRSTZ DR2DRSTZ,both reliable1 finite>=0 then arithmetic mean,kcal,,otherwise missing,2003-2016 dietary sensitivity WTDR2D/7
+hypertension,BPQ020,1 Yes;2 No,,No,other codes,self report overlaps outcome
+diabetes,DIQ010,1 Yes;2 No,,No,other codes including borderline3,self report overlaps outcome
+extra_angina,MCQ160D,1 Yes;2 No,,No,other codes,outcome component overlap
+extra_MI,MCQ160E,1 Yes;2 No,,No,other codes,outcome component overlap
+extra_CHD,MCQ160C,1 Yes;2 No,,No,other codes,outcome component overlap
+extra_stroke,MCQ160F,1 Yes;2 No,,No,other codes,outcome component overlap
+extra_thyroid,MCQ160M/MCD160M/MCQ160I first available alias,1 Yes;2 No,,No,other codes,outcome component overlap
+extra_cancer,MCQ220,1 Yes;2 No,,No,other codes,outcome component overlap
+extra_arthritis,MCQ160A,1 Yes;2 No,,No,other codes,outcome component overlap
+extra_kidney,KIQ022/KIQ020 first available alias,1 Yes;2 No,,No,other codes,outcome component overlap
+extra_BPXPLS,BPXPLS,continuous,beats/min,,system missing,outcome component overlap
+extra_candidate_pulse_pressure_mean,candidate_pulse_pressure_mean,existing mean of within-reading positive SBP minus positive DBP pairs,mmHg,,no valid pairs,existing frozen aggregation
+extra_LBXPLTSI,LBXPLTSI,continuous,1000 cells/uL,,system missing,outcome and exposure shared component
+extra_LBXSBU,LBXSBU,continuous,mg/dL,,system missing,existing frozen lab unit
+extra_LBXSC3SI,LBXSC3SI,continuous,mmol/L,,system missing,existing frozen lab unit
+extra_LBXRDW,LBXRDW,continuous,percent,,system missing,existing frozen lab unit
+extra_LDH,LBDSLDSI 2001;LBXSLDSI otherwise,continuous,U/L,,system missing,2001 officially adjusted alias reused
+extra_LBDSUASI,LBDSUASI,continuous,umol/L,,system missing,existing frozen lab unit
+energy_reliability,DRDDRSTS 1999;DRDDRSTZ 2001;DR1DRSTZ 2003+,1 reliable and minimum criteria met,,,all other codes,1999 alias corrected before final accepted fit under plan_review_v3
+

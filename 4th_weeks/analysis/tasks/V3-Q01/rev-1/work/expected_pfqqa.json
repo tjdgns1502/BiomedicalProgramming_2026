@@ -1,0 +1,249 @@
+{
+  "reviewer": "continuation_review",
+  "method": "Independent raw PFQ reconstruction, no implementation-agent code read; no fitting",
+  "inputs": [
+    {
+      "path": "analysis\\data\\derived\\candidate_all_age50.csv",
+      "sha256": "870fbdef967cd7e68e396e7f7d7e82821d23d8ce92f341704805511d7af6c772"
+    },
+    {
+      "path": "analysis\\data\\raw\\1999-2000\\PFQ.xpt",
+      "sha256": "3b8a3f6490f46000a3c7a1245f5d3eacda3209b44882f3ca9a78af95434e6657"
+    },
+    {
+      "path": "analysis\\data\\raw\\2001-2002\\PFQ_B.xpt",
+      "sha256": "949acfbc9973939db799ba71d7252f2e1ff700b77bff0c7f43b4928ee1a67a87"
+    },
+    {
+      "path": "analysis\\data\\raw\\2003-2004\\PFQ_C.xpt",
+      "sha256": "c68278953fbc9f535ecab2a25ca7c881680012c5b3c8695976ae655826936ba4"
+    },
+    {
+      "path": "analysis\\data\\raw\\2005-2006\\PFQ_D.xpt",
+      "sha256": "8bbad8c5a0657f59f7c98f9a24e74a298678087165c61e2a837835a96a624182"
+    },
+    {
+      "path": "analysis\\data\\raw\\2007-2008\\PFQ_E.xpt",
+      "sha256": "1a60f71f41be17907a437e6bdf00dbbe6b8323e63f195688930e8f389f13b0c5"
+    },
+    {
+      "path": "analysis\\data\\raw\\2009-2010\\PFQ_F.xpt",
+      "sha256": "6d157101ea2ec2ee00177e042a47b95a380aff7291b91b315a32c287b4b7dd76"
+    },
+    {
+      "path": "analysis\\data\\raw\\2011-2012\\PFQ_G.xpt",
+      "sha256": "453ef39e77298921ff9d192cb03d40412e79100edd970e2bda13cf8e95937a10"
+    },
+    {
+      "path": "analysis\\data\\raw\\2013-2014\\PFQ_H.xpt",
+      "sha256": "f0f396ecc38899933d447ca7b3060cdcb6d8f88c44adfc0a4fcf303d84d2bb9a"
+    },
+    {
+      "path": "analysis\\data\\raw\\2015-2016\\PFQ_I.xpt",
+      "sha256": "3fcaa103214739ee6cb4fcf91121989d9d3bdd72740f03ba150f1ec7bbe5b90b"
+    }
+  ],
+  "n_age50": 24119,
+  "route_eligible": 4995,
+  "persons_any_modified": 4992,
+  "modified_cells": 44928,
+  "strict_complete": 9814,
+  "route_complete": 13289,
+  "new_complete": 3475,
+  "strict_complete_positive4markers": 9786,
+  "route_complete_positive4markers": 13252,
+  "strict_shared_fi_identical": true,
+  "observed_deficits_unchanged": true,
+  "outside_route_unchanged": true,
+  "by_cycle": [
+    {
+      "cycle": "1999-2000",
+      "n_age50": 2420,
+      "route_eligible": 436,
+      "modified_cells_by_suffix": {
+        "A": 436,
+        "D": 436,
+        "E": 436,
+        "H": 436,
+        "I": 436,
+        "J": 436,
+        "L": 436,
+        "P": 436,
+        "R": 436
+      },
+      "modified_cells": 3924,
+      "persons_any_modified": 436,
+      "strict_complete": 968,
+      "route_complete": 1239,
+      "new_complete": 271
+    },
+    {
+      "cycle": "2001-2002",
+      "n_age50": 2563,
+      "route_eligible": 518,
+      "modified_cells_by_suffix": {
+        "A": 518,
+        "D": 518,
+        "E": 518,
+        "H": 518,
+        "I": 518,
+        "J": 518,
+        "L": 518,
+        "P": 518,
+        "R": 518
+      },
+      "modified_cells": 4662,
+      "persons_any_modified": 518,
+      "strict_complete": 972,
+      "route_complete": 1305,
+      "new_complete": 333
+    },
+    {
+      "cycle": "2003-2004",
+      "n_age50": 2510,
+      "route_eligible": 384,
+      "modified_cells_by_suffix": {
+        "A": 384,
+        "D": 384,
+        "E": 384,
+        "H": 384,
+        "I": 384,
+        "J": 384,
+        "L": 384,
+        "P": 384,
+        "R": 384
+      },
+      "modified_cells": 3456,
+      "persons_any_modified": 384,
+      "strict_complete": 884,
+      "route_complete": 1106,
+      "new_complete": 222
+    },
+    {
+      "cycle": "2005-2006",
+      "n_age50": 2214,
+      "route_eligible": 437,
+      "modified_cells_by_suffix": {
+        "A": 435,
+        "D": 435,
+        "E": 435,
+        "H": 435,
+        "I": 435,
+        "J": 435,
+        "L": 435,
+        "P": 435,
+        "R": 435
+      },
+      "modified_cells": 3915,
+      "persons_any_modified": 435,
+      "strict_complete": 824,
+      "route_complete": 1108,
+      "new_complete": 284
+    },
+    {
+      "cycle": "2007-2008",
+      "n_age50": 3074,
+      "route_eligible": 662,
+      "modified_cells_by_suffix": {
+        "A": 662,
+        "D": 662,
+        "E": 662,
+        "H": 662,
+        "I": 662,
+        "J": 662,
+        "L": 662,
+        "P": 662,
+        "R": 662
+      },
+      "modified_cells": 5958,
+      "persons_any_modified": 662,
+      "strict_complete": 1050,
+      "route_complete": 1476,
+      "new_complete": 426
+    },
+    {
+      "cycle": "2009-2010",
+      "n_age50": 3029,
+      "route_eligible": 656,
+      "modified_cells_by_suffix": {
+        "A": 655,
+        "D": 655,
+        "E": 655,
+        "H": 655,
+        "I": 655,
+        "J": 655,
+        "L": 655,
+        "P": 655,
+        "R": 655
+      },
+      "modified_cells": 5895,
+      "persons_any_modified": 655,
+      "strict_complete": 1121,
+      "route_complete": 1549,
+      "new_complete": 428
+    },
+    {
+      "cycle": "2011-2012",
+      "n_age50": 2704,
+      "route_eligible": 631,
+      "modified_cells_by_suffix": {
+        "A": 631,
+        "D": 631,
+        "E": 631,
+        "H": 631,
+        "I": 631,
+        "J": 631,
+        "L": 631,
+        "P": 631,
+        "R": 631
+      },
+      "modified_cells": 5679,
+      "persons_any_modified": 631,
+      "strict_complete": 939,
+      "route_complete": 1346,
+      "new_complete": 407
+    },
+    {
+      "cycle": "2013-2014",
+      "n_age50": 2780,
+      "route_eligible": 641,
+      "modified_cells_by_suffix": {
+        "A": 641,
+        "D": 641,
+        "E": 641,
+        "H": 641,
+        "I": 641,
+        "J": 641,
+        "L": 641,
+        "P": 641,
+        "R": 641
+      },
+      "modified_cells": 5769,
+      "persons_any_modified": 641,
+      "strict_complete": 1536,
+      "route_complete": 2096,
+      "new_complete": 560
+    },
+    {
+      "cycle": "2015-2016",
+      "n_age50": 2825,
+      "route_eligible": 630,
+      "modified_cells_by_suffix": {
+        "A": 630,
+        "D": 630,
+        "E": 630,
+        "H": 630,
+        "I": 630,
+        "J": 630,
+        "L": 630,
+        "P": 630,
+        "R": 630
+      },
+      "modified_cells": 5670,
+      "persons_any_modified": 630,
+      "strict_complete": 1520,
+      "route_complete": 2064,
+      "new_complete": 544
+    }
+  ]
+}

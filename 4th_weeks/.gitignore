@@ -1,0 +1,14 @@
+**/__pycache__/
+**/backups/
+**/data/raw/
+**/data/derived/
+**/*.rds
+**/*.xpt
+**/*.XPT
+**/derived_analysis_inputs.csv
+**/analysis_rows.csv
+**/expected_pfqqa_rows.csv
+**/r_xpt_reference_values.csv
+.venv/
+.Rhistory
+.RData

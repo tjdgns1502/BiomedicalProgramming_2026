@@ -1,0 +1,522 @@
+{
+  "audit_id": "V2-E01/rev-1",
+  "audited_at_utc": "2026-09-27T23:52:22.816119+00:00",
+  "method": "Read-only SHA-256 comparisons with existing execution/provenance records; no statistical analyses or tests rerun. Current output hashes are a new inventory, not historical integrity proof.",
+  "runs": [
+    {
+      "task_id": "A01",
+      "execution_path": "analysis/runs/A01-20260927T210626704130Z/execution.json",
+      "execution_sha256": "d3e6392e1062c9ad7d91dfc7b4d55808e44ccf26c279c05cbe8eab36f97b2379",
+      "exit_code": 0,
+      "finished": "2026-09-27T21:06:43.568443+00:00",
+      "recorded_status": "submitted",
+      "status_note": "submitted is stale lifecycle wording; finished and exit_code=0 record completion",
+      "checks": {
+        "source_hashes": [
+          {
+            "path": "analysis/src/group_analysis.R",
+            "recorded_sha256": "366937c9e37a15ee48c64ca1ce71883c257cf37af434e402196b157a28f72c07",
+            "current_sha256": "366937c9e37a15ee48c64ca1ce71883c257cf37af434e402196b157a28f72c07",
+            "match": true
+          },
+          {
+            "path": "analysis/src/model_extensions.R",
+            "recorded_sha256": "4a43374a2811f289f2970c8bda018393f52cca4e134a6ec6485cecadc86fe2fe",
+            "current_sha256": "4a43374a2811f289f2970c8bda018393f52cca4e134a6ec6485cecadc86fe2fe",
+            "match": true
+          },
+          {
+            "path": "analysis/src/procedure_simulation.R",
+            "recorded_sha256": "5ddb01d02db5717d776e972f66823d514b46c478ce5896a3e90181e30c8f1086",
+            "current_sha256": "5ddb01d02db5717d776e972f66823d514b46c478ce5896a3e90181e30c8f1086",
+            "match": true
+          },
+          {
+            "path": "analysis/src/simulation.R",
+            "recorded_sha256": "a584ae522a5bab5d0ce99c34866cb2e1f3870a41a1590e94fe7c886c9a92333e",
+            "current_sha256": "a584ae522a5bab5d0ce99c34866cb2e1f3870a41a1590e94fe7c886c9a92333e",
+            "match": true
+          }
+        ],
+        "config_hashes": [
+          {
+            "path": "analysis/config/analysis_plan.json",
+            "recorded_sha256": "e3f01d831d170e0de6d391e0f675fa1de4bd83ce176d4cf5fb787dd15fb1b876",
+            "current_sha256": "e3f01d831d170e0de6d391e0f675fa1de4bd83ce176d4cf5fb787dd15fb1b876",
+            "match": true
+          },
+          {
+            "path": "analysis/config/environment.json",
+            "recorded_sha256": "57c2bbd9f92504fc7db36d6530b41b98c369b606c81b370a9991bf1a97944a7e",
+            "current_sha256": "57c2bbd9f92504fc7db36d6530b41b98c369b606c81b370a9991bf1a97944a7e",
+            "match": true
+          },
+          {
+            "path": "analysis/config/extensions_plan.json",
+            "recorded_sha256": "a331c3819573eb7dd46f236774f85440df108c68cd33522d5ba7f64b7356b1f7",
+            "current_sha256": "a331c3819573eb7dd46f236774f85440df108c68cd33522d5ba7f64b7356b1f7",
+            "match": true
+          },
+          {
+            "path": "analysis/config/fi_candidate.json",
+            "recorded_sha256": "85a6625ec4f43fb90fc5f41be581d2ab579093d270c4c378ec17f9bbffe373ee",
+            "current_sha256": "85a6625ec4f43fb90fc5f41be581d2ab579093d270c4c378ec17f9bbffe373ee",
+            "match": true
+          }
+        ],
+        "input_hashes": [
+          {
+            "path": "analysis/data/derived/candidate_complete36.csv",
+            "recorded_sha256": "df841d2bab22ed0d3e4f3b870a2ed45629c2699b031faade5be12957332037fe",
+            "current_sha256": "df841d2bab22ed0d3e4f3b870a2ed45629c2699b031faade5be12957332037fe",
+            "match": true
+          }
+        ]
+      },
+      "all_recorded_hashes_match": true
+    },
+    {
+      "task_id": "A02",
+      "execution_path": "analysis/runs/A02-20260927T210626709227Z/execution.json",
+      "execution_sha256": "933302dab7b07765d4a574e47c325e9e99d196a926f9e25fe04f03c215c20040",
+      "exit_code": 0,
+      "finished": "2026-09-27T21:06:55.051012+00:00",
+      "recorded_status": "submitted",
+      "status_note": "submitted is stale lifecycle wording; finished and exit_code=0 record completion",
+      "checks": {
+        "source_hashes": [
+          {
+            "path": "analysis/src/group_analysis.R",
+            "recorded_sha256": "366937c9e37a15ee48c64ca1ce71883c257cf37af434e402196b157a28f72c07",
+            "current_sha256": "366937c9e37a15ee48c64ca1ce71883c257cf37af434e402196b157a28f72c07",
+            "match": true
+          },
+          {
+            "path": "analysis/src/model_extensions.R",
+            "recorded_sha256": "4a43374a2811f289f2970c8bda018393f52cca4e134a6ec6485cecadc86fe2fe",
+            "current_sha256": "4a43374a2811f289f2970c8bda018393f52cca4e134a6ec6485cecadc86fe2fe",
+            "match": true
+          },
+          {
+            "path": "analysis/src/procedure_simulation.R",
+            "recorded_sha256": "5ddb01d02db5717d776e972f66823d514b46c478ce5896a3e90181e30c8f1086",
+            "current_sha256": "5ddb01d02db5717d776e972f66823d514b46c478ce5896a3e90181e30c8f1086",
+            "match": true
+          },
+          {
+            "path": "analysis/src/simulation.R",
+            "recorded_sha256": "a584ae522a5bab5d0ce99c34866cb2e1f3870a41a1590e94fe7c886c9a92333e",
+            "current_sha256": "a584ae522a5bab5d0ce99c34866cb2e1f3870a41a1590e94fe7c886c9a92333e",
+            "match": true
+          }
+        ],
+        "config_hashes": [
+          {
+            "path": "analysis/config/analysis_plan.json",
+            "recorded_sha256": "e3f01d831d170e0de6d391e0f675fa1de4bd83ce176d4cf5fb787dd15fb1b876",
+            "current_sha256": "e3f01d831d170e0de6d391e0f675fa1de4bd83ce176d4cf5fb787dd15fb1b876",
+            "match": true
+          },
+          {
+            "path": "analysis/config/environment.json",
+            "recorded_sha256": "57c2bbd9f92504fc7db36d6530b41b98c369b606c81b370a9991bf1a97944a7e",
+            "current_sha256": "57c2bbd9f92504fc7db36d6530b41b98c369b606c81b370a9991bf1a97944a7e",
+            "match": true
+          },
+          {
+            "path": "analysis/config/extensions_plan.json",
+            "recorded_sha256": "a331c3819573eb7dd46f236774f85440df108c68cd33522d5ba7f64b7356b1f7",
+            "current_sha256": "a331c3819573eb7dd46f236774f85440df108c68cd33522d5ba7f64b7356b1f7",
+            "match": true
+          },
+          {
+            "path": "analysis/config/fi_candidate.json",
+            "recorded_sha256": "85a6625ec4f43fb90fc5f41be581d2ab579093d270c4c378ec17f9bbffe373ee",
+            "current_sha256": "85a6625ec4f43fb90fc5f41be581d2ab579093d270c4c378ec17f9bbffe373ee",
+            "match": true
+          }
+        ],
+        "input_hashes": [
+          {
+            "path": "analysis/data/derived/candidate_complete36.csv",
+            "recorded_sha256": "df841d2bab22ed0d3e4f3b870a2ed45629c2699b031faade5be12957332037fe",
+            "current_sha256": "df841d2bab22ed0d3e4f3b870a2ed45629c2699b031faade5be12957332037fe",
+            "match": true
+          },
+          {
+            "path": "analysis/data/derived/nhanes_design_all.csv",
+            "recorded_sha256": "6546bf16e35636be47bd9074de95372bca9129dd0c1c3801cd7d0b482f705e3f",
+            "current_sha256": "6546bf16e35636be47bd9074de95372bca9129dd0c1c3801cd7d0b482f705e3f",
+            "match": true
+          }
+        ]
+      },
+      "all_recorded_hashes_match": true
+    },
+    {
+      "task_id": "A03",
+      "execution_path": "analysis/runs/A03-20260927T210742070434Z/execution.json",
+      "execution_sha256": "e20a16039ccca8a123a4b3514b3ac044fe0c2e0b18571ddb9c5f330f82253fee",
+      "exit_code": 0,
+      "finished": "2026-09-27T21:07:57.292615+00:00",
+      "recorded_status": "submitted",
+      "status_note": "submitted is stale lifecycle wording; finished and exit_code=0 record completion",
+      "checks": {
+        "source_hashes": [
+          {
+            "path": "analysis/src/fi_coding_sensitivity.R",
+            "recorded_sha256": "d06fa6cb9b4162745ee8cf45389606b7c0a8028fe95b60a154100f2656b34099",
+            "current_sha256": "d06fa6cb9b4162745ee8cf45389606b7c0a8028fe95b60a154100f2656b34099",
+            "match": true
+          },
+          {
+            "path": "analysis/src/group_analysis.R",
+            "recorded_sha256": "366937c9e37a15ee48c64ca1ce71883c257cf37af434e402196b157a28f72c07",
+            "current_sha256": "366937c9e37a15ee48c64ca1ce71883c257cf37af434e402196b157a28f72c07",
+            "match": true
+          },
+          {
+            "path": "analysis/src/model_extensions.R",
+            "recorded_sha256": "4a43374a2811f289f2970c8bda018393f52cca4e134a6ec6485cecadc86fe2fe",
+            "current_sha256": "4a43374a2811f289f2970c8bda018393f52cca4e134a6ec6485cecadc86fe2fe",
+            "match": true
+          },
+          {
+            "path": "analysis/src/procedure_simulation.R",
+            "recorded_sha256": "5ddb01d02db5717d776e972f66823d514b46c478ce5896a3e90181e30c8f1086",
+            "current_sha256": "5ddb01d02db5717d776e972f66823d514b46c478ce5896a3e90181e30c8f1086",
+            "match": true
+          },
+          {
+            "path": "analysis/src/simulation.R",
+            "recorded_sha256": "a584ae522a5bab5d0ce99c34866cb2e1f3870a41a1590e94fe7c886c9a92333e",
+            "current_sha256": "a584ae522a5bab5d0ce99c34866cb2e1f3870a41a1590e94fe7c886c9a92333e",
+            "match": true
+          }
+        ],
+        "config_hashes": [
+          {
+            "path": "analysis/config/analysis_plan.json",
+            "recorded_sha256": "e3f01d831d170e0de6d391e0f675fa1de4bd83ce176d4cf5fb787dd15fb1b876",
+            "current_sha256": "e3f01d831d170e0de6d391e0f675fa1de4bd83ce176d4cf5fb787dd15fb1b876",
+            "match": true
+          },
+          {
+            "path": "analysis/config/environment.json",
+            "recorded_sha256": "57c2bbd9f92504fc7db36d6530b41b98c369b606c81b370a9991bf1a97944a7e",
+            "current_sha256": "57c2bbd9f92504fc7db36d6530b41b98c369b606c81b370a9991bf1a97944a7e",
+            "match": true
+          },
+          {
+            "path": "analysis/config/extensions_plan.json",
+            "recorded_sha256": "a331c3819573eb7dd46f236774f85440df108c68cd33522d5ba7f64b7356b1f7",
+            "current_sha256": "a331c3819573eb7dd46f236774f85440df108c68cd33522d5ba7f64b7356b1f7",
+            "match": true
+          },
+          {
+            "path": "analysis/config/fi_candidate.json",
+            "recorded_sha256": "85a6625ec4f43fb90fc5f41be581d2ab579093d270c4c378ec17f9bbffe373ee",
+            "current_sha256": "85a6625ec4f43fb90fc5f41be581d2ab579093d270c4c378ec17f9bbffe373ee",
+            "match": true
+          }
+        ],
+        "input_hashes": [
+          {
+            "path": "analysis/data/derived/candidate_all_age50.csv",
+            "recorded_sha256": "870fbdef967cd7e68e396e7f7d7e82821d23d8ce92f341704805511d7af6c772",
+            "current_sha256": "870fbdef967cd7e68e396e7f7d7e82821d23d8ce92f341704805511d7af6c772",
+            "match": true
+          }
+        ]
+      },
+      "all_recorded_hashes_match": true
+    }
+  ],
+  "candidate_provenance": {
+    "path": "analysis/runs/S02-nhanes-data/fi_candidate_provenance.json",
+    "sha256": "89913acdeb57131eed7c10aedf1e5b0308f161938f166608533a8b983be74b92",
+    "checks": [
+      {
+        "path": "analysis/data/derived/nhanes_1999_2016_age50_observed.csv",
+        "recorded_sha256": "aea64a4485e81ac97847039979cb65cc6daede45b0f02056e2e81d8ea127b043",
+        "current_sha256": "aea64a4485e81ac97847039979cb65cc6daede45b0f02056e2e81d8ea127b043",
+        "match": true
+      },
+      {
+        "path": "analysis/config/fi_candidate.json",
+        "recorded_sha256": "85a6625ec4f43fb90fc5f41be581d2ab579093d270c4c378ec17f9bbffe373ee",
+        "current_sha256": "85a6625ec4f43fb90fc5f41be581d2ab579093d270c4c378ec17f9bbffe373ee",
+        "match": true
+      },
+      {
+        "path": "analysis/src/construct_fi_candidate.py",
+        "recorded_sha256": "5fbd7893c0b40e7bd90fc3fff6a7af38260fb7e3e153f629da8959e8b3a2b09c",
+        "current_sha256": "5fbd7893c0b40e7bd90fc3fff6a7af38260fb7e3e153f629da8959e8b3a2b09c",
+        "match": true
+      },
+      {
+        "path": "analysis/data/derived/candidate_all_age50.csv",
+        "recorded_sha256": "870fbdef967cd7e68e396e7f7d7e82821d23d8ce92f341704805511d7af6c772",
+        "current_sha256": "870fbdef967cd7e68e396e7f7d7e82821d23d8ce92f341704805511d7af6c772",
+        "match": true
+      },
+      {
+        "path": "analysis/data/derived/candidate_complete36.csv",
+        "recorded_sha256": "df841d2bab22ed0d3e4f3b870a2ed45629c2699b031faade5be12957332037fe",
+        "current_sha256": "df841d2bab22ed0d3e4f3b870a2ed45629c2699b031faade5be12957332037fe",
+        "match": true
+      },
+      {
+        "path": "analysis/data/derived/candidate_complete36_alt.csv",
+        "recorded_sha256": "6fc670fe5e69d0e0affc1a5246c0ff822075df2e9f3b3189ec2721372cf9b2fa",
+        "current_sha256": "6fc670fe5e69d0e0affc1a5246c0ff822075df2e9f3b3189ec2721372cf9b2fa",
+        "match": true
+      }
+    ],
+    "recorded_counts": {
+      "n_input": 24119,
+      "n_primary_complete": 9814,
+      "n_primary_complete_cbc_positive": 9786,
+      "n_primary_frail": 1923,
+      "n_alt_complete": 13355,
+      "n_alt_complete_cbc_positive": 13323,
+      "n_alt_frail": 3217,
+      "n_items": 36,
+      "all_nonmissing_deficits_binary": true,
+      "all_FI_complete36": true,
+      "FI_equals_alias": true,
+      "FI_bounds_ok": true,
+      "primary_complete_by_cycle": {
+        "1999-2000": 968,
+        "2001-2002": 972,
+        "2003-2004": 884,
+        "2005-2006": 824,
+        "2007-2008": 1050,
+        "2009-2010": 1121,
+        "2011-2012": 939,
+        "2013-2014": 1536,
+        "2015-2016": 1520
+      }
+    },
+    "status": "analyst-specified candidate; not author-identical Han 2024 FI"
+  },
+  "environment": {
+    "config_sha256": "57c2bbd9f92504fc7db36d6530b41b98c369b606c81b370a9991bf1a97944a7e",
+    "rscript_path": "C:\\Program Files\\R\\R-4.6.1\\bin\\Rscript.exe",
+    "exists": true,
+    "current_probe_exit_code": 0,
+    "current_probe_stdout": "R version 4.6.1 (2026-06-24 ucrt) \nsurvey=4.5\n",
+    "current_probe_stderr": "During startup - Warning messages:\n1: Setting LC_COLLATE=C.UTF-8 failed \n2: Setting LC_CTYPE=C.UTF-8 failed \n3: Setting LC_MONETARY=C.UTF-8 failed \n4: Setting LC_TIME=C.UTF-8 failed \n",
+    "historical_session_info_sha256": "a861be88f333bdf441d0389463b739730751e7f090a65e558287ac2ebd6b4ac7",
+    "limit": "Path and current R/survey version checked; full historical package/binary equivalence is not established."
+  },
+  "existing_output_inventory": [
+    {
+      "path": "analysis/runs/A01-groups/analysis.rds",
+      "current_sha256": "c4d61652c2ec5da2cf9bdad584eb56b431f2466315bdd5b56cb934f99a1238a9",
+      "bytes": 4323329
+    },
+    {
+      "path": "analysis/runs/A01-groups/boxplots.png",
+      "current_sha256": "039d921e6a4b2642bf1b4635f2276561a5ed8f48fbe110d14b5f7a1eb7d600a8",
+      "bytes": 21570
+    },
+    {
+      "path": "analysis/runs/A01-groups/boxplots_log_axis.png",
+      "current_sha256": "e2002b9da7a6adb7d500bb553914d5055704c79c8906b0ca0fae8149f79431b1",
+      "bytes": 27251
+    },
+    {
+      "path": "analysis/runs/A01-groups/diagnostics_MLR.png",
+      "current_sha256": "0f0a9d905b5f7ca4c7057c8b28a1697cd02e53555c42cf007c190bf1591fa940",
+      "bytes": 30798
+    },
+    {
+      "path": "analysis/runs/A01-groups/diagnostics_NLR.png",
+      "current_sha256": "47a0fb7a17f40cd2fd5e1cae1b6b7c53035f36d0a4564e6afd2840a2b53f9291",
+      "bytes": 30539
+    },
+    {
+      "path": "analysis/runs/A01-groups/diagnostics_SII.png",
+      "current_sha256": "0dd3ac12bce680ebc79714e361766a9cd45a90f5250eec3205439c04911699b2",
+      "bytes": 28843
+    },
+    {
+      "path": "analysis/runs/A01-groups/diagnostics_SIRI.png",
+      "current_sha256": "3485080a1eb023c6f05d39873db37f3df7fec6ed7d2a538e03925c57d695b66d",
+      "bytes": 29110
+    },
+    {
+      "path": "analysis/runs/A01-groups/execution-notes.txt",
+      "current_sha256": "40ffd330a7d17c355cd5270fd4f4a182ea8081084afdb148f21225785151a581",
+      "bytes": 1028
+    },
+    {
+      "path": "analysis/runs/A01-groups/group_membership_summary.csv",
+      "current_sha256": "519993c790de3bf3aa5e523a951a312f2614b5e881999941d95fa8456fda0723",
+      "bytes": 142
+    },
+    {
+      "path": "analysis/runs/A01-groups/means_with_pointwise_CI.png",
+      "current_sha256": "f2f7554972fdbb7aa7f2890c13c87411bab6e61a81136bdc9c2dbf52b9c34816",
+      "bytes": 19853
+    },
+    {
+      "path": "analysis/runs/A01-groups/omnibus.csv",
+      "current_sha256": "a07d5f392b757580abfd8761b51c44a3af0ae08acff32ff0ce0357bb6c268076",
+      "bytes": 557
+    },
+    {
+      "path": "analysis/runs/A01-groups/pairwise.csv",
+      "current_sha256": "65047fe6a915984023c09a4ef7618e2685bdd46cb8d8a47447991f719c24c23e",
+      "bytes": 4223
+    },
+    {
+      "path": "analysis/runs/A01-groups/primary.csv",
+      "current_sha256": "4ef5dd9dcfa6d7d791ac71b1c89cc3d463830be68b77c2a2289f0539a120f02b",
+      "bytes": 449
+    },
+    {
+      "path": "analysis/runs/A01-groups/quartile_boundaries.csv",
+      "current_sha256": "7a042fdb7dd9bed365aa5178d1f02c39c700bd5d4175f2c9b098a3ed0abc70a0",
+      "bytes": 72
+    },
+    {
+      "path": "analysis/runs/A01-groups/summary.csv",
+      "current_sha256": "2f6099a557602992d3cbc7cb35d3f15a1fdfa5438bb7de380840d6937a127f59",
+      "bytes": 1576
+    },
+    {
+      "path": "analysis/runs/A01-groups/trend.csv",
+      "current_sha256": "74c6764ee91c905989280926acfd9044d12966af5c05826648102ae7d962a7ef",
+      "bytes": 764
+    },
+    {
+      "path": "analysis/runs/A01-groups/tukey.csv",
+      "current_sha256": "ff871efcbd331b3010c0297dd9551bcf0866702252c66f4dc60190fe2e92cd70",
+      "bytes": 2022
+    },
+    {
+      "path": "analysis/runs/A02-models/design_counts.csv",
+      "current_sha256": "a4be688b3d89d6f1e1ffa4f554c71fc4fdc885bb9adfbca0da80aee738baa323",
+      "bytes": 68
+    },
+    {
+      "path": "analysis/runs/A02-models/execution-notes.txt",
+      "current_sha256": "1d62bc6b5a33f1d3de5fea04fab896b82b876fbe380d0c16d086b36df79079cf",
+      "bytes": 1455
+    },
+    {
+      "path": "analysis/runs/A02-models/fractional_mean_predictions.csv",
+      "current_sha256": "befcd94b6daf241717b188f24268791560a7811d83f4b5f2f47ac4d8321dbcf7",
+      "bytes": 714
+    },
+    {
+      "path": "analysis/runs/A02-models/marker_correlations.png",
+      "current_sha256": "5164baff84d17bd207f379142994166d9fbe77e65ae5ff15f1e3c4301c13ac93",
+      "bytes": 24280
+    },
+    {
+      "path": "analysis/runs/A02-models/marker_spearman.csv",
+      "current_sha256": "5d98f44e04438a006aa7c9dc6cfe59265db61d200f361b5c297877b6f8cf0235",
+      "bytes": 280
+    },
+    {
+      "path": "analysis/runs/A02-models/model_sensitivities.csv",
+      "current_sha256": "891cb7462ed0cf127937330c6fa02b03ce17b6f33938cb8774d7e323bb1c0f92",
+      "bytes": 7246
+    },
+    {
+      "path": "analysis/runs/A02-models/sample_vs_weighted_percent.csv",
+      "current_sha256": "12ff36e53412adf5553e97a33cbbbbc89d4e17daf7f29a183e54397bb3a0bf68",
+      "bytes": 1300
+    },
+    {
+      "path": "analysis/runs/A02-models/survey_group_means.csv",
+      "current_sha256": "93b94fe82f00fff92c29d2a9b6827359a541c50767e6a23bf3dad28d8f6218f0",
+      "bytes": 801
+    },
+    {
+      "path": "analysis/runs/A02-models/survey_group_tests.csv",
+      "current_sha256": "e9bc8b32f1f5f0045845b69fb269643d50fda5a5296f9efcd7c5ab082bbfe5b0",
+      "bytes": 480
+    },
+    {
+      "path": "analysis/runs/A02-models/threshold_sensitivity.png",
+      "current_sha256": "c08cd59bc1b82d679a62b9e378be1958e7995854efade193eea341361ce671cc",
+      "bytes": 24376
+    },
+    {
+      "path": "analysis/runs/A03-coding/alternative_same_people/group_membership_summary.csv",
+      "current_sha256": "13789291b83c6e76816217194867d8274b790585ee9163f74da49001c38af1bc",
+      "bytes": 142
+    },
+    {
+      "path": "analysis/runs/A03-coding/alternative_same_people/omnibus.csv",
+      "current_sha256": "e0be2e8db6b9ab5169b984e1cfa4775f8f169ca7a04ebead63a37f41dd1632c7",
+      "bytes": 558
+    },
+    {
+      "path": "analysis/runs/A03-coding/alternative_same_people/pairwise.csv",
+      "current_sha256": "fa173859532d9728d07e7bbe60795687260d2dbf918e16b3de1f6995d398c112",
+      "bytes": 4201
+    },
+    {
+      "path": "analysis/runs/A03-coding/alternative_same_people/primary.csv",
+      "current_sha256": "4efa9e39d2566b99a51d9fa03cc0726a5689c88001961aca58d0345cfd97e60c",
+      "bytes": 450
+    },
+    {
+      "path": "analysis/runs/A03-coding/alternative_same_people/quartile_boundaries.csv",
+      "current_sha256": "166b3c31fa7f807ccf1dc99817573e8da96d5d7cc94e6bba6b328c34d14dee64",
+      "bytes": 84
+    },
+    {
+      "path": "analysis/runs/A03-coding/alternative_same_people/summary.csv",
+      "current_sha256": "4e336f714e2deb4428b44f1143bd45f1ac2b065c9360ec815057faa13b6fad0c",
+      "bytes": 1576
+    },
+    {
+      "path": "analysis/runs/A03-coding/alternative_same_people/trend.csv",
+      "current_sha256": "e973697eca9ee810c6ceab4e783c71ff5f22b5b9c7d4adfb0d019c1db733e4cb",
+      "bytes": 760
+    },
+    {
+      "path": "analysis/runs/A03-coding/alternative_same_people/tukey.csv",
+      "current_sha256": "e502a7d0a083efc57c9e584610da4f946b627edbc13f36454a236e82e5ff12de",
+      "bytes": 1988
+    },
+    {
+      "path": "analysis/runs/A03-coding/execution-notes.txt",
+      "current_sha256": "24409c95b20971a864e7276b6db773c1cd3e62fd6d6dd074a6ec4f691e3e96e1",
+      "bytes": 919
+    },
+    {
+      "path": "analysis/runs/A03-coding/group_transition_same_people.csv",
+      "current_sha256": "bc23606f79e53f7505d6b9d2d4303e8d1d5eb26d06ec9c0dc82cbc7ecb3dac03",
+      "bytes": 272
+    },
+    {
+      "path": "analysis/runs/A03-coding/retention_by_demography.csv",
+      "current_sha256": "b60c192bf293a835c1ae836a59a671190d4d9da05fd5775d65e80423fe46a0b4",
+      "bytes": 968
+    },
+    {
+      "path": "analysis/runs/A03-coding/same_people_summary.csv",
+      "current_sha256": "dc4646c8540e55093488accb9cba1fe162460654c99786660ff97d08ad8b0a51",
+      "bytes": 166
+    }
+  ],
+  "reuse_decision": {
+    "conditional_artifact_reuse": true,
+    "statistical_validity_certified": false,
+    "author_identical_reproduction_certified": false,
+    "limits": [
+      "9814 complete FI and 9786 positive-CBC complete FI are analyst-defined candidate cohort counts, not proof of author-identical data.",
+      "No execution record provides historical output hashes; current output inventory cannot establish that outputs were unchanged since execution.",
+      "Unchanged bytes and a prior zero exit code do not establish statistical validity, correct inference, or original-paper replication.",
+      "analysis_plan status provisional-data-definition-pending is descriptive metadata; unchanged runtime inputs and source hashes determine this narrow reuse audit. Changes to explanatory documents alone do not imply changed statistical inputs.",
+      "Any future change to candidate input, executed code, grouping/coding choices or relevant model configuration requires reassessment and potentially rerun."
+    ]
+  }
+}

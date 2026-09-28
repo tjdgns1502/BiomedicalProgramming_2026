@@ -1,0 +1,411 @@
+cycle,file,variable,label,n,n_nonmissing,url
+1999-2000,ALQ,SEQN,Respondent sequence number,4444,4444,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/ALQ.htm#SEQN
+1999-2000,ALQ,ALQ100,Had at least 12 alcohol drinks/1 yr?,4444,4161,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/ALQ.htm#ALQ100
+1999-2000,ALQ,ALQ110,Had at least 12 alcohol drinks/lifetime?,4444,1408,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/ALQ.htm#ALQ110
+1999-2000,ALQ,ALQ120Q,How often drink alcohol over past 12 mos,4444,3519,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/ALQ.htm#ALQ120Q
+1999-2000,ALQ,ALQ120U,"# days drink alcohol per wk, mo, yr",4444,2651,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/ALQ.htm#ALQ120U
+1999-2000,ALQ,ALQ130,Avg # alcoholic drinks/day -past 12 mos,4444,2656,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/ALQ.htm#ALQ130
+1999-2000,BMX,SEQN,Respondent sequence number,9282,9282,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/BMX.htm#SEQN
+1999-2000,BMX,BMXBMI,Body Mass Index (kg/m**2),9282,8462,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/BMX.htm#BMXBMI
+1999-2000,BPQ,SEQN,Respondent sequence number,6044,6044,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/BPQ.htm#SEQN
+1999-2000,BPQ,BPQ020,Ever told you had high blood pressure,6044,5951,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/BPQ.htm#BPQ020
+1999-2000,BPQ,BPQ050A,Now taking prescribed medicine,6044,1225,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/BPQ.htm#BPQ050A
+1999-2000,BPX,SEQN,Respondent sequence number,9282,9282,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/BPX.htm#SEQN
+1999-2000,BPX,BPXSY1,Systolic: Blood pres (1st rdg) mm Hg,9282,6457,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/BPX.htm#BPXSY1
+1999-2000,BPX,BPXDI1,Diastolic: Blood pres (1st rdg) mm Hg,9282,6457,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/BPX.htm#BPXDI1
+1999-2000,DEMO,SEQN,Respondent sequence number,9965,9965,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/DEMO.htm#SEQN
+1999-2000,DEMO,RIAGENDR,Gender,9965,9965,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/DEMO.htm#RIAGENDR
+1999-2000,DEMO,RIDAGEYR,Age at Screening Adjudicated - Recode,9965,9965,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/DEMO.htm#RIDAGEYR
+1999-2000,DEMO,RIDRETH1,Race/Ethnicity - Recode,9965,9965,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/DEMO.htm#RIDRETH1
+1999-2000,DEMO,DMDEDUC2,Education Level - Adults 20+,9965,4878,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/DEMO.htm#DMDEDUC2
+1999-2000,DEMO,INDFMPIR,Family PIR,9965,8482,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/DEMO.htm#INDFMPIR
+1999-2000,DEMO,SDMVPSU,Masked Variance Pseudo-PSU,9965,9965,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/DEMO.htm#SDMVPSU
+1999-2000,DEMO,SDMVSTRA,Masked Variance Pseudo-Stratum,9965,9965,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/DEMO.htm#SDMVSTRA
+1999-2000,DIQ,SEQN,Respondent sequence number,9493,9493,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/DIQ.htm#SEQN
+1999-2000,DIQ,DIQ010,Doctor told you have diabetes,9493,9488,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/DIQ.htm#DIQ010
+1999-2000,DIQ,DIQ050,Taking insulin now,9493,6649,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/DIQ.htm#DIQ050
+1999-2000,DIQ,DIQ070,Take diabetic pills to lower blood sugar,9493,489,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/DIQ.htm#DIQ070
+1999-2000,DRXTOT,SEQN,Respondent sequence number,9282,9282,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/DRXTOT.htm#SEQN
+1999-2000,DRXTOT,DRXTKCAL,Energy (kcal),9282,8725,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/DRXTOT.htm#DRXTKCAL
+1999-2000,HSQ,SEQN,Respondent sequence number,8832,8832,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/HSQ.htm#SEQN
+1999-2000,HUQ,SEQN,Respondent sequence number,9965,9965,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/HUQ.htm#SEQN
+1999-2000,KIQ,SEQN,Respondent sequence number,4880,4880,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/KIQ.htm#SEQN
+1999-2000,LAB18,SEQN,Respondent sequence number,6758,6758,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/LAB18.htm#SEQN
+1999-2000,LAB25,SEQN,Respondent sequence number,8832,8832,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/LAB25.htm#SEQN
+1999-2000,MCQ,SEQN,Respondent sequence number,9493,9493,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/MCQ.htm#SEQN
+1999-2000,PAQ,SEQN,Respondent sequence number,9188,9188,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/PAQ.htm#SEQN
+1999-2000,PAQ,PAD200,Vigorous activity over past 30 days,9188,7198,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/PAQ.htm#PAD200
+1999-2000,PAQ,PAD320,Moderate activity over past 30 days,9188,7198,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/PAQ.htm#PAD320
+1999-2000,PFQ,SEQN,Respondent sequence number,9493,9493,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/PFQ.htm#SEQN
+1999-2000,RXQ_RX,SEQN,Respondent sequence number,15643,15643,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/RXQ_RX.htm#SEQN
+1999-2000,SMQ,SEQN,Respondent sequence number,4880,4880,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/SMQ.htm#SEQN
+1999-2000,SMQ,SMQ020,Smoked at least 100 cigarettes in life,4880,4877,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/SMQ.htm#SMQ020
+2001-2002,ALQ_B,SEQN,Respondent sequence number,5027,5027,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/ALQ_B.htm#SEQN
+2001-2002,ALQ_B,ALQ110,Had at least 12 alcohol drinks/lifetime?,5027,1482,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/ALQ_B.htm#ALQ110
+2001-2002,ALQ_B,ALQ120Q,How often drink alcohol over past 12 mos,5027,3896,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/ALQ_B.htm#ALQ120Q
+2001-2002,ALQ_B,ALQ120U,"# days drink alcohol per wk, mo, yr",5027,2979,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/ALQ_B.htm#ALQ120U
+2001-2002,ALQ_B,ALQ130,Avg # alcoholic drinks/day -past 12 mos,5027,2981,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/ALQ_B.htm#ALQ130
+2001-2002,BMX_B,SEQN,Respondent sequence number,10477,10477,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/BMX_B.htm#SEQN
+2001-2002,BMX_B,BMXBMI,Body Mass Index (kg/m**2),10477,9010,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/BMX_B.htm#BMXBMI
+2001-2002,BPQ_B,SEQN,Respondent sequence number,6634,6634,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/BPQ_B.htm#SEQN
+2001-2002,BPQ_B,BPQ020,Ever told you had high blood pressure,6634,6534,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/BPQ_B.htm#BPQ020
+2001-2002,BPQ_B,BPQ050A,Now taking prescribed medicine,6634,1339,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/BPQ_B.htm#BPQ050A
+2001-2002,BPX_B,SEQN,Respondent sequence number,10477,10477,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/BPX_B.htm#SEQN
+2001-2002,BPX_B,BPXSY1,Systolic: Blood pres (1st rdg) mm Hg,10477,7126,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/BPX_B.htm#BPXSY1
+2001-2002,BPX_B,BPXDI1,Diastolic: Blood pres (1st rdg) mm Hg,10477,7126,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/BPX_B.htm#BPXDI1
+2001-2002,DEMO_B,SEQN,Respondent sequence number,11039,11039,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/DEMO_B.htm#SEQN
+2001-2002,DEMO_B,RIAGENDR,Gender,11039,11039,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/DEMO_B.htm#RIAGENDR
+2001-2002,DEMO_B,RIDAGEYR,Age at Screening Adjudicated - Recode,11039,11039,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/DEMO_B.htm#RIDAGEYR
+2001-2002,DEMO_B,RIDRETH1,Race/Ethnicity - Recode,11039,11039,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/DEMO_B.htm#RIDRETH1
+2001-2002,DEMO_B,DMDEDUC2,Education Level - Adults 20+,11039,5407,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/DEMO_B.htm#DMDEDUC2
+2001-2002,DEMO_B,INDFMPIR,Family PIR,11039,10245,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/DEMO_B.htm#INDFMPIR
+2001-2002,DEMO_B,SDMVPSU,Masked Variance Pseudo-PSU,11039,11039,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/DEMO_B.htm#SDMVPSU
+2001-2002,DEMO_B,SDMVSTRA,Masked Variance Pseudo-Stratum,11039,11039,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/DEMO_B.htm#SDMVSTRA
+2001-2002,DIQ_B,SEQN,Respondent sequence number,10470,10470,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/DIQ_B.htm#SEQN
+2001-2002,DIQ_B,DIQ010,Doctor told you have diabetes,10470,10468,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/DIQ_B.htm#DIQ010
+2001-2002,DIQ_B,DIQ050,Taking insulin now,10470,10468,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/DIQ_B.htm#DIQ050
+2001-2002,DIQ_B,DIQ070,Take diabetic pills to lower blood sugar,10470,528,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/DIQ_B.htm#DIQ070
+2001-2002,DRXTOT_B,SEQN,Respondent sequence number,10477,10477,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/DRXTOT_B.htm#SEQN
+2001-2002,DRXTOT_B,DRDDRSTZ,Dietary recall status,10477,10477,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/DRXTOT_B.htm#DRDDRSTZ
+2001-2002,DRXTOT_B,DRXTKCAL,Energy (kcal),10477,9701,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/DRXTOT_B.htm#DRXTKCAL
+2001-2002,HSQ_B,SEQN,Respondent sequence number,10382,10382,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/HSQ_B.htm#SEQN
+2001-2002,HUQ_B,SEQN,Respondent sequence number,11039,11039,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/HUQ_B.htm#SEQN
+2001-2002,KIQ_U_B,SEQN,Respondent sequence number,5411,5411,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/KIQ_U_B.htm#SEQN
+2001-2002,L25_B,SEQN,Respondent sequence number,9929,9929,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/L25_B.htm#SEQN
+2001-2002,L40_B,SEQN,Respondent sequence number,7445,7445,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/L40_B.htm#SEQN
+2001-2002,MCQ_B,SEQN,Respondent sequence number,10470,10470,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/MCQ_B.htm#SEQN
+2001-2002,PAQ_B,SEQN,Respondent sequence number,10094,10094,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/PAQ_B.htm#SEQN
+2001-2002,PAQ_B,PAD200,Vigorous activity over past 30 days,10094,7786,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/PAQ_B.htm#PAD200
+2001-2002,PAQ_B,PAD320,Moderate activity over past 30 days,10094,7784,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/PAQ_B.htm#PAD320
+2001-2002,PFQ_B,SEQN,Respondent sequence number,10470,10470,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/PFQ_B.htm#SEQN
+2001-2002,RXQ_RX_B,SEQN,Respondent sequence number,18418,18418,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/RXQ_RX_B.htm#SEQN
+2001-2002,SMQ_B,SEQN,Respondent sequence number,5411,5411,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/SMQ_B.htm#SEQN
+2001-2002,SMQ_B,SMQ020,Smoked at least 100 cigarettes in life,5411,5407,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/SMQ_B.htm#SMQ020
+2003-2004,ALQ_C,SEQN,Respondent sequence number,4742,4742,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/ALQ_C.htm#SEQN
+2003-2004,ALQ_C,ALQ101,Had at least 12 alcohol drinks/1 yr?,4742,4313,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/ALQ_C.htm#ALQ101
+2003-2004,ALQ_C,ALQ110,Had at least 12 alcohol drinks/lifetime?,4742,1357,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/ALQ_C.htm#ALQ110
+2003-2004,ALQ_C,ALQ120Q,How often drink alcohol over past 12 mos,4742,3679,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/ALQ_C.htm#ALQ120Q
+2003-2004,ALQ_C,ALQ120U,"# days drink alcohol per wk, mo, yr",4742,2695,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/ALQ_C.htm#ALQ120U
+2003-2004,ALQ_C,ALQ130,Avg # alcoholic drinks/day -past 12 mos,4742,2699,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/ALQ_C.htm#ALQ130
+2003-2004,BMX_C,SEQN,Respondent sequence number,9643,9643,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/BMX_C.htm#SEQN
+2003-2004,BMX_C,BMXBMI,Body Mass Index (kg/m**2),9643,8687,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/BMX_C.htm#BMXBMI
+2003-2004,BPQ_C,SEQN,Respondent sequence number,6213,6213,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/BPQ_C.htm#SEQN
+2003-2004,BPQ_C,BPQ020,Ever told you had high blood pressure,6213,6138,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/BPQ_C.htm#BPQ020
+2003-2004,BPQ_C,BPQ050A,Now taking prescribed medicine,6213,1452,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/BPQ_C.htm#BPQ050A
+2003-2004,BPX_C,SEQN,Respondent sequence number,9643,9643,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/BPX_C.htm#SEQN
+2003-2004,BPX_C,BPXSY1,Systolic: Blood pres (1st rdg) mm Hg,9643,6274,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/BPX_C.htm#BPXSY1
+2003-2004,BPX_C,BPXDI1,Diastolic: Blood pres (1st rdg) mm Hg,9643,6274,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/BPX_C.htm#BPXDI1
+2003-2004,DEMO_C,SEQN,Respondent sequence number,10122,10122,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/DEMO_C.htm#SEQN
+2003-2004,DEMO_C,RIAGENDR,Gender,10122,10122,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/DEMO_C.htm#RIAGENDR
+2003-2004,DEMO_C,RIDAGEYR,Age at Screening Adjudicated - Recode,10122,10122,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/DEMO_C.htm#RIDAGEYR
+2003-2004,DEMO_C,RIDRETH1,Race/Ethnicity - Recode,10122,10122,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/DEMO_C.htm#RIDRETH1
+2003-2004,DEMO_C,DMDEDUC2,Education Level - Adults 20+,10122,5041,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/DEMO_C.htm#DMDEDUC2
+2003-2004,DEMO_C,INDFMPIR,Family PIR,10122,9535,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/DEMO_C.htm#INDFMPIR
+2003-2004,DEMO_C,SDMVPSU,Masked Variance Pseudo-PSU,10122,10122,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/DEMO_C.htm#SDMVPSU
+2003-2004,DEMO_C,SDMVSTRA,Masked Variance Pseudo-Stratum,10122,10122,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/DEMO_C.htm#SDMVSTRA
+2003-2004,DIQ_C,SEQN,Respondent sequence number,9645,9645,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/DIQ_C.htm#SEQN
+2003-2004,DIQ_C,DIQ010,Doctor told you have diabetes,9645,9645,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/DIQ_C.htm#DIQ010
+2003-2004,DIQ_C,DIQ050,Taking insulin now,9645,9645,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/DIQ_C.htm#DIQ050
+2003-2004,DIQ_C,DIQ070,Take diabetic pills to lower blood sugar,9645,559,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/DIQ_C.htm#DIQ070
+2003-2004,DR1TOT_C,SEQN,Respondent sequence number,9643,9643,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/DR1TOT_C.htm#SEQN
+2003-2004,DR1TOT_C,DR1DRSTZ,Dietary recall status,9643,9643,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/DR1TOT_C.htm#DR1DRSTZ
+2003-2004,DR1TOT_C,DR1TKCAL,Energy (kcal),9643,8894,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/DR1TOT_C.htm#DR1TKCAL
+2003-2004,DR2TOT_C,SEQN,Respondent sequence number,9643,9643,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/DR2TOT_C.htm#SEQN
+2003-2004,DR2TOT_C,DR2DRSTZ,Dietary recall status,9643,9643,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/DR2TOT_C.htm#DR2DRSTZ
+2003-2004,DR2TOT_C,DR2TKCAL,Energy (kcal),9643,8220,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/DR2TOT_C.htm#DR2TKCAL
+2003-2004,HSQ_C,SEQN,Respondent sequence number,9535,9535,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/HSQ_C.htm#SEQN
+2003-2004,HUQ_C,SEQN,Respondent sequence number,10122,10122,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/HUQ_C.htm#SEQN
+2003-2004,KIQ_U_C,SEQN,Respondent sequence number,5041,5041,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/KIQ_U_C.htm#SEQN
+2003-2004,L25_C,SEQN,Respondent sequence number,9179,9179,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/L25_C.htm#SEQN
+2003-2004,L40_C,SEQN,Respondent sequence number,6990,6990,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/L40_C.htm#SEQN
+2003-2004,MCQ_C,SEQN,Respondent sequence number,9645,9645,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/MCQ_C.htm#SEQN
+2003-2004,PAQ_C,SEQN,Respondent sequence number,9278,9278,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/PAQ_C.htm#SEQN
+2003-2004,PAQ_C,PAD200,Vigorous activity over past 30 days,9278,7242,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/PAQ_C.htm#PAD200
+2003-2004,PAQ_C,PAD320,Moderate activity over past 30 days,9278,7240,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/PAQ_C.htm#PAD320
+2003-2004,PFQ_C,SEQN,Respondent sequence number,9645,9645,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/PFQ_C.htm#SEQN
+2003-2004,RXQ_RX_C,SEQN,Respondent sequence number,18401,18401,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/RXQ_RX_C.htm#SEQN
+2003-2004,SMQ_C,SEQN,Respondent sequence number,5041,5041,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/SMQ_C.htm#SEQN
+2003-2004,SMQ_C,SMQ020,Smoked at least 100 cigarettes in life,5041,5040,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/SMQ_C.htm#SMQ020
+2005-2006,ALQ_D,SEQN,Respondent sequence number,4773,4773,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/ALQ_D.htm#SEQN
+2005-2006,ALQ_D,ALQ101,Had at least 12 alcohol drinks/1 yr?,4773,4354,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/ALQ_D.htm#ALQ101
+2005-2006,ALQ_D,ALQ110,Had at least 12 alcohol drinks/lifetime?,4773,1360,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/ALQ_D.htm#ALQ110
+2005-2006,ALQ_D,ALQ120Q,How often drink alcohol over past 12 mos,4773,3747,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/ALQ_D.htm#ALQ120Q
+2005-2006,ALQ_D,ALQ120U,"# days drink alcohol per wk, mo, yr",4773,2815,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/ALQ_D.htm#ALQ120U
+2005-2006,ALQ_D,ALQ130,Avg # alcoholic drinks/day -past 12 mos,4773,2822,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/ALQ_D.htm#ALQ130
+2005-2006,BIOPRO_D,SEQN,Respondent sequence number,6980,6980,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/BIOPRO_D.htm#SEQN
+2005-2006,BMX_D,SEQN,Respondent sequence number,9950,9950,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/BMX_D.htm#SEQN
+2005-2006,BMX_D,BMXBMI,Body Mass Index (kg/m**2),9950,8949,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/BMX_D.htm#BMXBMI
+2005-2006,BPQ_D,SEQN,Respondent sequence number,6139,6139,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/BPQ_D.htm#SEQN
+2005-2006,BPQ_D,BPQ020,Ever told you had high blood pressure,6139,6139,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/BPQ_D.htm#BPQ020
+2005-2006,BPQ_D,BPQ050A,Now taking prescribed medicine for HBP,6139,1328,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/BPQ_D.htm#BPQ050A
+2005-2006,BPX_D,SEQN,Respondent sequence number,9950,9950,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/BPX_D.htm#SEQN
+2005-2006,BPX_D,BPXSY1,Systolic: Blood pres (1st rdg) mm Hg,9950,6668,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/BPX_D.htm#BPXSY1
+2005-2006,BPX_D,BPXDI1,Diastolic: Blood pres (1st rdg) mm Hg,9950,6668,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/BPX_D.htm#BPXDI1
+2005-2006,CBC_D,SEQN,Respondent sequence number,9440,9440,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/CBC_D.htm#SEQN
+2005-2006,DEMO_D,SEQN,Respondent sequence number,10348,10348,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/DEMO_D.htm#SEQN
+2005-2006,DEMO_D,RIAGENDR,Gender,10348,10348,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/DEMO_D.htm#RIAGENDR
+2005-2006,DEMO_D,RIDAGEYR,Age at Screening Adjudicated - Recode,10348,10348,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/DEMO_D.htm#RIDAGEYR
+2005-2006,DEMO_D,RIDRETH1,Race/Ethnicity - Recode,10348,10348,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/DEMO_D.htm#RIDRETH1
+2005-2006,DEMO_D,DMDEDUC2,Education Level - Adults 20+,10348,4979,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/DEMO_D.htm#DMDEDUC2
+2005-2006,DEMO_D,INDFMPIR,Family PIR,10348,9814,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/DEMO_D.htm#INDFMPIR
+2005-2006,DEMO_D,SDMVPSU,Masked Variance Pseudo-PSU,10348,10348,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/DEMO_D.htm#SDMVPSU
+2005-2006,DEMO_D,SDMVSTRA,Masked Variance Pseudo-Stratum,10348,10348,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/DEMO_D.htm#SDMVSTRA
+2005-2006,DIQ_D,SEQN,Respondent sequence number,9822,9822,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/DIQ_D.htm#SEQN
+2005-2006,DIQ_D,DIQ010,Doctor told you have diabetes,9822,9822,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/DIQ_D.htm#DIQ010
+2005-2006,DIQ_D,DIQ050,Taking insulin now,9822,9822,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/DIQ_D.htm#DIQ050
+2005-2006,DR1TOT_D,SEQN,Respondent sequence number,9950,9950,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/DR1TOT_D.htm#SEQN
+2005-2006,DR1TOT_D,DR1DRSTZ,Dietary recall status,9950,9950,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/DR1TOT_D.htm#DR1DRSTZ
+2005-2006,DR1TOT_D,DR1TKCAL,Energy (kcal),9950,9169,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/DR1TOT_D.htm#DR1TKCAL
+2005-2006,DR2TOT_D,SEQN,Respondent sequence number,9950,9950,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/DR2TOT_D.htm#SEQN
+2005-2006,DR2TOT_D,DR2DRSTZ,Dietary recall status,9950,9950,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/DR2TOT_D.htm#DR2DRSTZ
+2005-2006,DR2TOT_D,DR2TKCAL,Energy (kcal),9950,8264,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/DR2TOT_D.htm#DR2TKCAL
+2005-2006,HSQ_D,SEQN,Respondent sequence number,9440,9440,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/HSQ_D.htm#SEQN
+2005-2006,HUQ_D,SEQN,Respondent sequence number,10348,10348,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/HUQ_D.htm#SEQN
+2005-2006,KIQ_U_D,SEQN,Respondent sequence number,4979,4979,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/KIQ_U_D.htm#SEQN
+2005-2006,MCQ_D,SEQN,Respondent sequence number,9822,9822,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/MCQ_D.htm#SEQN
+2005-2006,PAQ_D,SEQN,Respondent sequence number,9424,9424,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/PAQ_D.htm#SEQN
+2005-2006,PAQ_D,PAD200,Vigorous activity over past 30 days,9424,7151,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/PAQ_D.htm#PAD200
+2005-2006,PAQ_D,PAD320,Moderate activity over past 30 days,9424,7151,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/PAQ_D.htm#PAD320
+2005-2006,PFQ_D,SEQN,Respondent sequence number,9822,9822,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/PFQ_D.htm#SEQN
+2005-2006,RXQ_RX_D,SEQN,Respondent sequence number,18005,18005,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/RXQ_RX_D.htm#SEQN
+2005-2006,SMQ_D,SEQN,Respondent sequence number,7186,7186,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/SMQ_D.htm#SEQN
+2005-2006,SMQ_D,SMQ020,Smoked at least 100 cigarettes in life,7186,4979,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/SMQ_D.htm#SMQ020
+2007-2008,ALQ_E,SEQN,Respondent sequence number,5707,5707,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/ALQ_E.htm#SEQN
+2007-2008,ALQ_E,ALQ101,Had at least 12 alcohol drinks/1 yr?,5707,5233,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/ALQ_E.htm#ALQ101
+2007-2008,ALQ_E,ALQ110,Had at least 12 alcohol drinks/lifetime?,5707,1563,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/ALQ_E.htm#ALQ110
+2007-2008,ALQ_E,ALQ120Q,How often drink alcohol over past 12 mos,5707,4434,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/ALQ_E.htm#ALQ120Q
+2007-2008,ALQ_E,ALQ120U,"# days drink alcohol per wk, mo, yr",5707,3312,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/ALQ_E.htm#ALQ120U
+2007-2008,ALQ_E,ALQ130,Avg # alcoholic drinks/day -past 12 mos,5707,3323,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/ALQ_E.htm#ALQ130
+2007-2008,BIOPRO_E,SEQN,Respondent sequence number,6917,6917,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/BIOPRO_E.htm#SEQN
+2007-2008,BMX_E,SEQN,Respondent sequence number,9762,9762,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/BMX_E.htm#SEQN
+2007-2008,BMX_E,BMXBMI,Body Mass Index (kg/m**2),9762,8861,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/BMX_E.htm#BMXBMI
+2007-2008,BPQ_E,SEQN,Respondent sequence number,6546,6546,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/BPQ_E.htm#SEQN
+2007-2008,BPQ_E,BPQ020,Ever told you had high blood pressure,6546,6546,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/BPQ_E.htm#BPQ020
+2007-2008,BPQ_E,BPQ050A,Now taking prescribed medicine for HBP,6546,1892,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/BPQ_E.htm#BPQ050A
+2007-2008,BPX_E,SEQN,Respondent sequence number,9762,9762,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/BPX_E.htm#SEQN
+2007-2008,BPX_E,BPXSY1,Systolic: Blood pres (1st rdg) mm Hg,9762,7147,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/BPX_E.htm#BPXSY1
+2007-2008,BPX_E,BPXDI1,Diastolic: Blood pres (1st rdg) mm Hg,9762,7147,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/BPX_E.htm#BPXDI1
+2007-2008,CBC_E,SEQN,Respondent sequence number,9307,9307,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/CBC_E.htm#SEQN
+2007-2008,DEMO_E,SEQN,Respondent sequence number,10149,10149,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/DEMO_E.htm#SEQN
+2007-2008,DEMO_E,RIAGENDR,Gender,10149,10149,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/DEMO_E.htm#RIAGENDR
+2007-2008,DEMO_E,RIDAGEYR,Age at Screening Adjudicated - Recode,10149,10149,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/DEMO_E.htm#RIDAGEYR
+2007-2008,DEMO_E,RIDRETH1,Race/Ethnicity - Recode,10149,10149,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/DEMO_E.htm#RIDRETH1
+2007-2008,DEMO_E,DMDEDUC2,Education Level - Adults 20+,10149,5935,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/DEMO_E.htm#DMDEDUC2
+2007-2008,DEMO_E,INDFMPIR,Ratio of family income to poverty,10149,9255,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/DEMO_E.htm#INDFMPIR
+2007-2008,DEMO_E,SDMVPSU,Masked Variance Pseudo-PSU,10149,10149,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/DEMO_E.htm#SDMVPSU
+2007-2008,DEMO_E,SDMVSTRA,Masked Variance Pseudo-Stratum,10149,10149,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/DEMO_E.htm#SDMVSTRA
+2007-2008,DIQ_E,SEQN,Respondent sequence number,9666,9666,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/DIQ_E.htm#SEQN
+2007-2008,DIQ_E,DIQ010,Doctor told you have diabetes,9666,9666,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/DIQ_E.htm#DIQ010
+2007-2008,DIQ_E,DIQ050,Taking insulin now,9666,9666,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/DIQ_E.htm#DIQ050
+2007-2008,DR1TOT_E,SEQN,Respondent sequence number,9762,9762,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/DR1TOT_E.htm#SEQN
+2007-2008,DR1TOT_E,DR1DRSTZ,Dietary recall status,9762,9762,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/DR1TOT_E.htm#DR1DRSTZ
+2007-2008,DR1TOT_E,DR1TKCAL,Energy (kcal),9762,9118,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/DR1TOT_E.htm#DR1TKCAL
+2007-2008,DR2TOT_E,SEQN,Respondent sequence number,9762,9762,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/DR2TOT_E.htm#SEQN
+2007-2008,DR2TOT_E,DR2DRSTZ,Dietary recall status,9762,9762,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/DR2TOT_E.htm#DR2DRSTZ
+2007-2008,DR2TOT_E,DR2TKCAL,Energy (kcal),9762,7715,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/DR2TOT_E.htm#DR2TKCAL
+2007-2008,HSQ_E,SEQN,Respondent sequence number,9307,9307,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/HSQ_E.htm#SEQN
+2007-2008,HUQ_E,SEQN,Respondent sequence number,10149,10149,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/HUQ_E.htm#SEQN
+2007-2008,KIQ_U_E,SEQN,Respondent sequence number,5935,5935,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/KIQ_U_E.htm#SEQN
+2007-2008,MCQ_E,SEQN,Respondent sequence number,9666,9666,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/MCQ_E.htm#SEQN
+2007-2008,PAQ_E,SEQN,Respondent sequence number,9359,9359,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/PAQ_E.htm#SEQN
+2007-2008,PAQ_E,PAQ605,Vigorous work activity,9359,7105,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/PAQ_E.htm#PAQ605
+2007-2008,PAQ_E,PAQ620,Moderate work activity,9359,7105,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/PAQ_E.htm#PAQ620
+2007-2008,PAQ_E,PAQ635,Walk or bicycle,9359,7105,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/PAQ_E.htm#PAQ635
+2007-2008,PAQ_E,PAQ650,Vigorous recreational activities,9359,7105,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/PAQ_E.htm#PAQ650
+2007-2008,PAQ_E,PAQ665,Moderate recreational activities,9359,7105,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/PAQ_E.htm#PAQ665
+2007-2008,PFQ_E,SEQN,Respondent sequence number,9666,9666,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/PFQ_E.htm#SEQN
+2007-2008,RXQ_RX_E,SEQN,Respondent sequence number,20516,20516,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/RXQ_RX_E.htm#SEQN
+2007-2008,SMQ_E,SEQN,Respondent sequence number,7145,7145,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/SMQ_E.htm#SEQN
+2007-2008,SMQ_E,SMQ020,Smoked at least 100 cigarettes in life,7145,5935,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/SMQ_E.htm#SMQ020
+2009-2010,ALQ_F,SEQN,Respondent sequence number,6059,6059,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/ALQ_F.htm#SEQN
+2009-2010,ALQ_F,ALQ101,Had at least 12 alcohol drinks/1 yr?,6059,5332,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/ALQ_F.htm#ALQ101
+2009-2010,ALQ_F,ALQ110,Had at least 12 alcohol drinks/lifetime?,6059,1425,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/ALQ_F.htm#ALQ110
+2009-2010,ALQ_F,ALQ120Q,How often drink alcohol over past 12 mos,6059,4652,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/ALQ_F.htm#ALQ120Q
+2009-2010,ALQ_F,ALQ120U,"# days drink alcohol per wk, mo, yr",6059,3664,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/ALQ_F.htm#ALQ120U
+2009-2010,ALQ_F,ALQ130,Avg # alcoholic drinks/day -past 12 mos,6059,3666,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/ALQ_F.htm#ALQ130
+2009-2010,BIOPRO_F,SEQN,Respondent sequence number,7369,7369,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/BIOPRO_F.htm#SEQN
+2009-2010,BMX_F,SEQN,Respondent sequence number,10253,10253,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/BMX_F.htm#SEQN
+2009-2010,BMX_F,BMXBMI,Body Mass Index (kg/m**2),10253,9412,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/BMX_F.htm#BMXBMI
+2009-2010,BPQ_F,SEQN,Respondent sequence number,6889,6889,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/BPQ_F.htm#SEQN
+2009-2010,BPQ_F,BPQ020,Ever told you had high blood pressure,6889,6889,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/BPQ_F.htm#BPQ020
+2009-2010,BPQ_F,BPQ050A,Now taking prescribed medicine for HBP,6889,1937,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/BPQ_F.htm#BPQ050A
+2009-2010,BPX_F,SEQN,Respondent sequence number,10253,10253,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/BPX_F.htm#SEQN
+2009-2010,BPX_F,BPXSY1,Systolic: Blood pres (1st rdg) mm Hg,10253,7529,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/BPX_F.htm#BPXSY1
+2009-2010,BPX_F,BPXDI1,Diastolic: Blood pres (1st rdg) mm Hg,10253,7529,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/BPX_F.htm#BPXDI1
+2009-2010,CBC_F,SEQN,Respondent sequence number,9835,9835,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/CBC_F.htm#SEQN
+2009-2010,DEMO_F,SEQN,Respondent sequence number,10537,10537,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/DEMO_F.htm#SEQN
+2009-2010,DEMO_F,RIAGENDR,Gender,10537,10537,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/DEMO_F.htm#RIAGENDR
+2009-2010,DEMO_F,RIDAGEYR,Age at Screening Adjudicated - Recode,10537,10537,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/DEMO_F.htm#RIDAGEYR
+2009-2010,DEMO_F,RIDRETH1,Race/Ethnicity - Recode,10537,10537,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/DEMO_F.htm#RIDRETH1
+2009-2010,DEMO_F,DMDEDUC2,Education Level - Adults 20+,10537,6218,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/DEMO_F.htm#DMDEDUC2
+2009-2010,DEMO_F,INDFMPIR,Ratio of family income to poverty,10537,9541,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/DEMO_F.htm#INDFMPIR
+2009-2010,DEMO_F,SDMVPSU,Masked Variance Pseudo-PSU,10537,10537,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/DEMO_F.htm#SDMVPSU
+2009-2010,DEMO_F,SDMVSTRA,Masked Variance Pseudo-Stratum,10537,10537,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/DEMO_F.htm#SDMVSTRA
+2009-2010,DIQ_F,SEQN,Respondent sequence number,10109,10109,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/DIQ_F.htm#SEQN
+2009-2010,DIQ_F,DIQ010,Doctor told you have diabetes,10109,10109,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/DIQ_F.htm#DIQ010
+2009-2010,DIQ_F,DIQ050,Taking insulin now,10109,10109,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/DIQ_F.htm#DIQ050
+2009-2010,DIQ_F,DIQ070,Take diabetic pills to lower blood sugar,10109,1135,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/DIQ_F.htm#DIQ070
+2009-2010,DR1TOT_F,SEQN,Respondent sequence number,10253,10253,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/DR1TOT_F.htm#SEQN
+2009-2010,DR1TOT_F,DR1DRSTZ,Dietary recall status,10253,10253,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/DR1TOT_F.htm#DR1DRSTZ
+2009-2010,DR1TOT_F,DR1TKCAL,Energy (kcal),10253,9623,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/DR1TOT_F.htm#DR1TKCAL
+2009-2010,DR2TOT_F,SEQN,Respondent sequence number,10253,10253,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/DR2TOT_F.htm#SEQN
+2009-2010,DR2TOT_F,DR2DRSTZ,Dietary recall status,10253,10253,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/DR2TOT_F.htm#DR2DRSTZ
+2009-2010,DR2TOT_F,DR2TKCAL,Energy (kcal),10253,8288,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/DR2TOT_F.htm#DR2TKCAL
+2009-2010,HSQ_F,SEQN,Respondent sequence number,9835,9835,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/HSQ_F.htm#SEQN
+2009-2010,HUQ_F,SEQN,Respondent sequence number,10537,10537,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/HUQ_F.htm#SEQN
+2009-2010,KIQ_U_F,SEQN,Respondent sequence number,6218,6218,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/KIQ_U_F.htm#SEQN
+2009-2010,MCQ_F,SEQN,Respondent sequence number,10109,10109,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/MCQ_F.htm#SEQN
+2009-2010,PAQ_F,SEQN,Respondent sequence number,9771,9771,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/PAQ_F.htm#SEQN
+2009-2010,PAQ_F,PAQ605,Vigorous work activity,9771,7500,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/PAQ_F.htm#PAQ605
+2009-2010,PAQ_F,PAQ620,Moderate work activity,9771,7500,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/PAQ_F.htm#PAQ620
+2009-2010,PAQ_F,PAQ635,Walk or bicycle,9771,7500,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/PAQ_F.htm#PAQ635
+2009-2010,PAQ_F,PAQ650,Vigorous recreational activities,9771,7500,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/PAQ_F.htm#PAQ650
+2009-2010,PAQ_F,PAQ665,Moderate recreational activities,9771,7500,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/PAQ_F.htm#PAQ665
+2009-2010,PFQ_F,SEQN,Respondent sequence number,9016,9016,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/PFQ_F.htm#SEQN
+2009-2010,RXQ_RX_F,SEQN,Respondent sequence number,20905,20905,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/RXQ_RX_F.htm#SEQN
+2009-2010,SMQ_F,SEQN,Respondent sequence number,7528,7528,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/SMQ_F.htm#SEQN
+2009-2010,SMQ_F,SMQ020,Smoked at least 100 cigarettes in life,7528,6218,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/SMQ_F.htm#SMQ020
+2011-2012,ALQ_G,SEQN,Respondent sequence number,5615,5615,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/ALQ_G.htm#SEQN
+2011-2012,ALQ_G,ALQ101,Had at least 12 alcohol drinks/1 yr?,5615,4977,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/ALQ_G.htm#ALQ101
+2011-2012,ALQ_G,ALQ110,Had at least 12 alcohol drinks/lifetime?,5615,1400,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/ALQ_G.htm#ALQ110
+2011-2012,ALQ_G,ALQ120Q,How often drink alcohol over past 12 mos,5615,4188,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/ALQ_G.htm#ALQ120Q
+2011-2012,ALQ_G,ALQ120U,"# days drink alcohol per wk, mo, yr",5615,3327,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/ALQ_G.htm#ALQ120U
+2011-2012,ALQ_G,ALQ130,Avg # alcoholic drinks/day - past 12 mos,5615,3334,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/ALQ_G.htm#ALQ130
+2011-2012,BIOPRO_G,SEQN,Respondent sequence number,6549,6549,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/BIOPRO_G.htm#SEQN
+2011-2012,BMX_G,SEQN,Respondent sequence number,9338,9338,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/BMX_G.htm#SEQN
+2011-2012,BMX_G,BMXBMI,Body Mass Index (kg/m**2),9338,8602,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/BMX_G.htm#BMXBMI
+2011-2012,BPQ_G,SEQN,Respondent sequence number,6175,6175,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/BPQ_G.htm#SEQN
+2011-2012,BPQ_G,BPQ020,Ever told you had high blood pressure,6175,6174,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/BPQ_G.htm#BPQ020
+2011-2012,BPQ_G,BPQ050A,Now taking prescribed medicine for HBP,6175,1745,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/BPQ_G.htm#BPQ050A
+2011-2012,BPX_G,SEQN,Respondent sequence number,9338,9338,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/BPX_G.htm#SEQN
+2011-2012,BPX_G,BPXSY1,Systolic: Blood pres (1st rdg) mm Hg,9338,6756,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/BPX_G.htm#BPXSY1
+2011-2012,BPX_G,BPXDI1,Diastolic: Blood pres (1st rdg) mm Hg,9338,6756,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/BPX_G.htm#BPXDI1
+2011-2012,CBC_G,SEQN,Respondent sequence number,8956,8956,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/CBC_G.htm#SEQN
+2011-2012,DEMO_G,SEQN,Respondent sequence number,9756,9756,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/DEMO_G.htm#SEQN
+2011-2012,DEMO_G,RIAGENDR,Gender,9756,9756,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/DEMO_G.htm#RIAGENDR
+2011-2012,DEMO_G,RIDAGEYR,Age in years at screening,9756,9756,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/DEMO_G.htm#RIDAGEYR
+2011-2012,DEMO_G,RIDRETH1,Race/Hispanic origin,9756,9756,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/DEMO_G.htm#RIDRETH1
+2011-2012,DEMO_G,DMDEDUC2,Education level - Adults 20+,9756,5560,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/DEMO_G.htm#DMDEDUC2
+2011-2012,DEMO_G,SDMVPSU,Masked variance pseudo-PSU,9756,9756,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/DEMO_G.htm#SDMVPSU
+2011-2012,DEMO_G,SDMVSTRA,Masked variance pseudo-stratum,9756,9756,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/DEMO_G.htm#SDMVSTRA
+2011-2012,DEMO_G,INDFMPIR,Ratio of family income to poverty,9756,8916,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/DEMO_G.htm#INDFMPIR
+2011-2012,DIQ_G,SEQN,Respondent sequence number,9364,9364,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/DIQ_G.htm#SEQN
+2011-2012,DIQ_G,DIQ010,Doctor told you have diabetes,9364,9363,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/DIQ_G.htm#DIQ010
+2011-2012,DIQ_G,DIQ050,Taking insulin now,9364,9363,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/DIQ_G.htm#DIQ050
+2011-2012,DIQ_G,DIQ070,Take diabetic pills to lower blood sugar,9364,1078,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/DIQ_G.htm#DIQ070
+2011-2012,DR1TOT_G,SEQN,Respondent sequence number,9338,9338,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/DR1TOT_G.htm#SEQN
+2011-2012,DR1TOT_G,DR1DRSTZ,Dietary recall status,9338,9338,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/DR1TOT_G.htm#DR1DRSTZ
+2011-2012,DR1TOT_G,DR1TKCAL,Energy (kcal),9338,8389,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/DR1TOT_G.htm#DR1TKCAL
+2011-2012,DR2TOT_G,SEQN,Respondent sequence number,9338,9338,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/DR2TOT_G.htm#SEQN
+2011-2012,DR2TOT_G,DR2DRSTZ,Dietary recall status,9338,9338,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/DR2TOT_G.htm#DR2DRSTZ
+2011-2012,DR2TOT_G,DR2TKCAL,Energy (kcal),9338,7496,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/DR2TOT_G.htm#DR2TKCAL
+2011-2012,HSQ_G,SEQN,Respondent sequence number,8956,8956,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/HSQ_G.htm#SEQN
+2011-2012,HUQ_G,SEQN,Respondent sequence number,9756,9756,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/HUQ_G.htm#SEQN
+2011-2012,KIQ_U_G,SEQN,Respondent sequence number,5560,5560,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/KIQ_U_G.htm#SEQN
+2011-2012,MCQ_G,SEQN,Respondent sequence number,9364,9364,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/MCQ_G.htm#SEQN
+2011-2012,PAQ_G,SEQN,Respondent sequence number,9107,9107,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/PAQ_G.htm#SEQN
+2011-2012,PAQ_G,PAQ605,Vigorous work activity,9107,6779,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/PAQ_G.htm#PAQ605
+2011-2012,PAQ_G,PAQ620,Moderate work activity,9107,6779,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/PAQ_G.htm#PAQ620
+2011-2012,PAQ_G,PAQ635,Walk or bicycle,9107,6779,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/PAQ_G.htm#PAQ635
+2011-2012,PAQ_G,PAQ650,Vigorous recreational activities,9107,6779,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/PAQ_G.htm#PAQ650
+2011-2012,PAQ_G,PAQ665,Moderate recreational activities,9107,6779,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/PAQ_G.htm#PAQ665
+2011-2012,PFQ_G,SEQN,Respondent sequence number,8350,8350,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/PFQ_G.htm#SEQN
+2011-2012,RXQ_RX_G,SEQN,Respondent sequence number,18704,18704,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/RXQ_RX_G.htm#SEQN
+2011-2012,SMQ_G,SEQN,Respondent sequence number,6790,6790,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/SMQ_G.htm#SEQN
+2011-2012,SMQ_G,SMQ020,Smoked at least 100 cigarettes in life,6790,5559,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/SMQ_G.htm#SMQ020
+2013-2014,ALQ_H,SEQN,Respondent sequence number,5924,5924,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/ALQ_H.htm#SEQN
+2013-2014,ALQ_H,ALQ101,Had at least 12 alcohol drinks/1 yr?,5924,5421,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/ALQ_H.htm#ALQ101
+2013-2014,ALQ_H,ALQ110,Had at least 12 alcohol drinks/lifetime?,5924,1631,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/ALQ_H.htm#ALQ110
+2013-2014,ALQ_H,ALQ120Q,How often drink alcohol over past 12 mos,5924,4479,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/ALQ_H.htm#ALQ120Q
+2013-2014,ALQ_H,ALQ120U,"# days drink alcohol per wk, mo, yr",5924,3593,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/ALQ_H.htm#ALQ120U
+2013-2014,ALQ_H,ALQ130,Avg # alcoholic drinks/day - past 12 mos,5924,3596,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/ALQ_H.htm#ALQ130
+2013-2014,BIOPRO_H,SEQN,Respondent sequence number,6979,6979,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/BIOPRO_H.htm#SEQN
+2013-2014,BMX_H,SEQN,Respondent sequence number,9813,9813,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/BMX_H.htm#SEQN
+2013-2014,BMX_H,BMXBMI,Body Mass Index (kg/m**2),9813,9055,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/BMX_H.htm#BMXBMI
+2013-2014,BPQ_H,SEQN,Respondent sequence number,6464,6464,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/BPQ_H.htm#SEQN
+2013-2014,BPQ_H,BPQ020,Ever told you had high blood pressure,6464,6464,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/BPQ_H.htm#BPQ020
+2013-2014,BPQ_H,BPQ050A,Now taking prescribed medicine for HBP,6464,1815,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/BPQ_H.htm#BPQ050A
+2013-2014,BPX_H,SEQN,Respondent sequence number,9813,9813,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/BPX_H.htm#SEQN
+2013-2014,BPX_H,BPXSY1,Systolic: Blood pres (1st rdg) mm Hg,9813,7172,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/BPX_H.htm#BPXSY1
+2013-2014,BPX_H,BPXDI1,Diastolic: Blood pres (1st rdg) mm Hg,9813,7172,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/BPX_H.htm#BPXDI1
+2013-2014,CBC_H,SEQN,Respondent sequence number,9422,9422,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/CBC_H.htm#SEQN
+2013-2014,DEMO_H,SEQN,Respondent sequence number,10175,10175,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/DEMO_H.htm#SEQN
+2013-2014,DEMO_H,RIAGENDR,Gender,10175,10175,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/DEMO_H.htm#RIAGENDR
+2013-2014,DEMO_H,RIDAGEYR,Age in years at screening,10175,10175,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/DEMO_H.htm#RIDAGEYR
+2013-2014,DEMO_H,RIDRETH1,Race/Hispanic origin,10175,10175,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/DEMO_H.htm#RIDRETH1
+2013-2014,DEMO_H,DMDEDUC2,Education level - Adults 20+,10175,5769,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/DEMO_H.htm#DMDEDUC2
+2013-2014,DEMO_H,SDMVPSU,Masked variance pseudo-PSU,10175,10175,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/DEMO_H.htm#SDMVPSU
+2013-2014,DEMO_H,SDMVSTRA,Masked variance pseudo-stratum,10175,10175,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/DEMO_H.htm#SDMVSTRA
+2013-2014,DEMO_H,INDFMPIR,Ratio of family income to poverty,10175,9390,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/DEMO_H.htm#INDFMPIR
+2013-2014,DIQ_H,SEQN,Respondent sequence number,9770,9770,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/DIQ_H.htm#SEQN
+2013-2014,DIQ_H,DIQ010,Doctor told you have diabetes,9770,9769,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/DIQ_H.htm#DIQ010
+2013-2014,DIQ_H,DIQ050,Taking insulin now,9770,9768,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/DIQ_H.htm#DIQ050
+2013-2014,DIQ_H,DIQ070,Take diabetic pills to lower blood sugar,9770,1200,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/DIQ_H.htm#DIQ070
+2013-2014,DR1TOT_H,SEQN,Respondent sequence number,9813,9813,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/DR1TOT_H.htm#SEQN
+2013-2014,DR1TOT_H,DR1DRSTZ,Dietary recall status,9813,9813,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/DR1TOT_H.htm#DR1DRSTZ
+2013-2014,DR1TOT_H,DR1TKCAL,Energy (kcal),9813,8531,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/DR1TOT_H.htm#DR1TKCAL
+2013-2014,DR2TOT_H,SEQN,Respondent sequence number,9813,9813,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/DR2TOT_H.htm#SEQN
+2013-2014,DR2TOT_H,DR2DRSTZ,Dietary recall status,9813,9813,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/DR2TOT_H.htm#DR2DRSTZ
+2013-2014,DR2TOT_H,DR2TKCAL,Energy (kcal),9813,7453,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/DR2TOT_H.htm#DR2TKCAL
+2013-2014,HSQ_H,SEQN,Respondent sequence number,9422,9422,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/HSQ_H.htm#SEQN
+2013-2014,HUQ_H,SEQN,Respondent sequence number,10175,10175,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/HUQ_H.htm#SEQN
+2013-2014,KIQ_U_H,SEQN,Respondent sequence number,5769,5769,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/KIQ_U_H.htm#SEQN
+2013-2014,MCQ_H,SEQN,Respondent sequence number,9770,9770,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/MCQ_H.htm#SEQN
+2013-2014,PAQ_H,SEQN,Respondent sequence number,9484,9484,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/PAQ_H.htm#SEQN
+2013-2014,PAQ_H,PAQ605,Vigorous work activity,9484,7148,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/PAQ_H.htm#PAQ605
+2013-2014,PAQ_H,PAQ620,Moderate work activity,9484,7148,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/PAQ_H.htm#PAQ620
+2013-2014,PAQ_H,PAQ635,Walk or bicycle,9484,7147,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/PAQ_H.htm#PAQ635
+2013-2014,PAQ_H,PAQ650,Vigorous recreational activities,9484,7147,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/PAQ_H.htm#PAQ650
+2013-2014,PAQ_H,PAQ665,Moderate recreational activities,9484,7145,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/PAQ_H.htm#PAQ665
+2013-2014,PFQ_H,SEQN,Respondent sequence number,9230,9230,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/PFQ_H.htm#SEQN
+2013-2014,RXQ_RX_H,SEQN,Respondent sequence number,20194,20194,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/RXQ_RX_H.htm#SEQN
+2013-2014,SMQ_H,SEQN,Respondent sequence number,7168,7168,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/SMQ_H.htm#SEQN
+2013-2014,SMQ_H,SMQ020,Smoked at least 100 cigarettes in life,7168,6113,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/SMQ_H.htm#SMQ020
+2015-2016,ALQ_I,SEQN,Respondent sequence number,5735,5735,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/ALQ_I.htm#SEQN
+2015-2016,ALQ_I,ALQ101,Had at least 12 alcohol drinks/1 yr?,5735,5208,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/ALQ_I.htm#ALQ101
+2015-2016,ALQ_I,ALQ110,Had at least 12 alcohol drinks/lifetime?,5735,1731,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/ALQ_I.htm#ALQ110
+2015-2016,ALQ_I,ALQ120Q,How often drink alcohol over past 12 mos,5735,4224,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/ALQ_I.htm#ALQ120Q
+2015-2016,ALQ_I,ALQ120U,"# days drink alcohol per wk, mo, yr",5735,3376,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/ALQ_I.htm#ALQ120U
+2015-2016,ALQ_I,ALQ130,Avg # alcoholic drinks/day - past 12 mos,5735,3379,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/ALQ_I.htm#ALQ130
+2015-2016,BIOPRO_I,SEQN,Respondent sequence number,6744,6744,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/BIOPRO_I.htm#SEQN
+2015-2016,BMX_I,SEQN,Respondent sequence number,9544,9544,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/BMX_I.htm#SEQN
+2015-2016,BMX_I,BMXBMI,Body Mass Index (kg/m**2),9544,8756,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/BMX_I.htm#BMXBMI
+2015-2016,BPQ_I,SEQN,Respondent sequence number,6327,6327,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/BPQ_I.htm#SEQN
+2015-2016,BPQ_I,BPQ020,Ever told you had high blood pressure,6327,6327,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/BPQ_I.htm#BPQ020
+2015-2016,BPQ_I,BPQ050A,Now taking prescribed medicine for HBP,6327,1851,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/BPQ_I.htm#BPQ050A
+2015-2016,BPX_I,SEQN,Respondent sequence number,9544,9544,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/BPX_I.htm#SEQN
+2015-2016,BPX_I,BPXSY1,Systolic: Blood pres (1st rdg) mm Hg,9544,7145,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/BPX_I.htm#BPXSY1
+2015-2016,BPX_I,BPXDI1,Diastolic: Blood pres (1st rdg) mm Hg,9544,7145,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/BPX_I.htm#BPXDI1
+2015-2016,CBC_I,SEQN,Respondent sequence number,9165,9165,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/CBC_I.htm#SEQN
+2015-2016,DEMO_I,SEQN,Respondent sequence number,9971,9971,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/DEMO_I.htm#SEQN
+2015-2016,DEMO_I,RIAGENDR,Gender,9971,9971,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/DEMO_I.htm#RIAGENDR
+2015-2016,DEMO_I,RIDAGEYR,Age in years at screening,9971,9971,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/DEMO_I.htm#RIDAGEYR
+2015-2016,DEMO_I,RIDRETH1,Race/Hispanic origin,9971,9971,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/DEMO_I.htm#RIDRETH1
+2015-2016,DEMO_I,DMDEDUC2,Education level - Adults 20+,9971,5719,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/DEMO_I.htm#DMDEDUC2
+2015-2016,DEMO_I,SDMVPSU,Masked variance pseudo-PSU,9971,9971,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/DEMO_I.htm#SDMVPSU
+2015-2016,DEMO_I,SDMVSTRA,Masked variance pseudo-stratum,9971,9971,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/DEMO_I.htm#SDMVSTRA
+2015-2016,DEMO_I,INDFMPIR,Ratio of family income to poverty,9971,8919,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/DEMO_I.htm#INDFMPIR
+2015-2016,DIQ_I,SEQN,Respondent sequence number,9575,9575,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/DIQ_I.htm#SEQN
+2015-2016,DIQ_I,DIQ010,Doctor told you have diabetes,9575,9575,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/DIQ_I.htm#DIQ010
+2015-2016,DIQ_I,DIQ050,Taking insulin now,9575,9575,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/DIQ_I.htm#DIQ050
+2015-2016,DIQ_I,DIQ070,Take diabetic pills to lower blood sugar,9575,1515,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/DIQ_I.htm#DIQ070
+2015-2016,DR1TOT_I,SEQN,Respondent sequence number,9544,9544,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/DR1TOT_I.htm#SEQN
+2015-2016,DR1TOT_I,DR1DRSTZ,Dietary recall status,9544,9544,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/DR1TOT_I.htm#DR1DRSTZ
+2015-2016,DR1TOT_I,DR1TKCAL,Energy (kcal),9544,8327,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/DR1TOT_I.htm#DR1TKCAL
+2015-2016,DR2TOT_I,SEQN,Respondent sequence number,9544,9544,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/DR2TOT_I.htm#SEQN
+2015-2016,DR2TOT_I,DR2DRSTZ,Dietary recall status,9544,9544,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/DR2TOT_I.htm#DR2DRSTZ
+2015-2016,DR2TOT_I,DR2TKCAL,Energy (kcal),9544,6875,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/DR2TOT_I.htm#DR2TKCAL
+2015-2016,HSQ_I,SEQN,Respondent sequence number,9165,9165,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/HSQ_I.htm#SEQN
+2015-2016,HUQ_I,SEQN,Respondent sequence number,9971,9971,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/HUQ_I.htm#SEQN
+2015-2016,KIQ_U_I,SEQN,Respondent sequence number,5719,5719,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/KIQ_U_I.htm#SEQN
+2015-2016,MCQ_I,SEQN,Respondent sequence number,9575,9575,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/MCQ_I.htm#SEQN
+2015-2016,PAQ_I,SEQN,Respondent sequence number,9255,9255,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/PAQ_I.htm#SEQN
+2015-2016,PAQ_I,PAQ605,Vigorous work activity,9255,6966,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/PAQ_I.htm#PAQ605
+2015-2016,PAQ_I,PAQ620,Moderate work activity,9255,6965,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/PAQ_I.htm#PAQ620
+2015-2016,PAQ_I,PAQ635,Walk or bicycle,9255,6965,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/PAQ_I.htm#PAQ635
+2015-2016,PAQ_I,PAQ650,Vigorous recreational activities,9255,6963,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/PAQ_I.htm#PAQ650
+2015-2016,PAQ_I,PAQ665,Moderate recreational activities,9255,6963,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/PAQ_I.htm#PAQ665
+2015-2016,PFQ_I,SEQN,Respondent sequence number,8991,8991,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/PFQ_I.htm#SEQN
+2015-2016,RXQ_RX_I,SEQN,Respondent sequence number,19647,19647,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/RXQ_RX_I.htm#SEQN
+2015-2016,SMQ_I,SEQN,Respondent sequence number,7001,7001,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/SMQ_I.htm#SEQN
+2015-2016,SMQ_I,SMQ020,Smoked at least 100 cigarettes in life,7001,5992,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/SMQ_I.htm#SMQ020

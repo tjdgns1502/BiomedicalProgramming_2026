@@ -1,0 +1,21 @@
+{
+  "run_id": "",
+  "task_id": "",
+  "registered_at": "",
+  "hypothesis_type": "",
+  "setting_hypothesis": "",
+  "evidence": [],
+  "config": {},
+  "plan_sha256": "",
+  "data_sha256": "",
+  "code_sha256": "",
+  "seed": null,
+  "command": "",
+  "exit_code": null,
+  "outputs": [],
+  "failure": null,
+  "reproduction_errors": null,
+  "observations": [],
+  "scope_of_claim": "",
+  "new_candidate_reason": null
+}

@@ -1,0 +1,262 @@
+{
+  "created_at": "2026-09-27T21:17:40.846704+00:00",
+  "files": {
+    "4주차\\염증과 노쇠 - 분석 길잡이\\assets\\analysis-20260928\\README.md": {
+      "source": "analysis\\README.md",
+      "sha256": "c9e10b33e8f81d298a11435f5fdd19ad9fb716b8779bab2279caed96d9dc9f3e",
+      "bytes": 4443
+    },
+    "4주차\\염증과 노쇠 - 분석 길잡이\\assets\\analysis-20260928\\memory\\task_registry.json": {
+      "source": "analysis\\memory\\task_registry.json",
+      "sha256": "b9e26a7ef936ef6ce87cbe21d0e48c0e356cde994b387cf73da322b706cdd92f",
+      "bytes": 4566
+    },
+    "4주차\\염증과 노쇠 - 분석 길잡이\\assets\\analysis-20260928\\memory\\progress.md": {
+      "source": "analysis\\memory\\progress.md",
+      "sha256": "0bcbf523fd14215007e5d01718c997392d6c4ae0010d554819421fcc26ee7320",
+      "bytes": 2756
+    },
+    "4주차\\염증과 노쇠 - 분석 길잡이\\assets\\analysis-20260928\\memory\\events.jsonl": {
+      "source": "analysis\\memory\\events.jsonl",
+      "sha256": "3db46c2d53efeca8f577c1ea47ad9f745de03d1e147bb9ea1fe6f390640ad477",
+      "bytes": 9575
+    },
+    "4주차\\염증과 노쇠 - 분석 길잡이\\assets\\analysis-20260928\\runs\\S02-nhanes-data\\fi36_candidate_variable_availability.csv": {
+      "source": "analysis\\runs\\S02-nhanes-data\\fi36_candidate_variable_availability.csv",
+      "sha256": "e6f5ccda6bba3cf279c7c4e7e98f9f6bb18aef64a2d7c135b37217b7e2898022",
+      "bytes": 39364
+    },
+    "4주차\\염증과 노쇠 - 분석 길잡이\\assets\\analysis-20260928\\runs\\S02-nhanes-data\\fi_candidate_one_person_trace.json": {
+      "source": "analysis\\runs\\S02-nhanes-data\\fi_candidate_one_person_trace.json",
+      "sha256": "6a1ef6ece89b57cc5de0078301c3c46ba0af4cf309593cbc1bcca5f5854c61c5",
+      "bytes": 1214
+    },
+    "4주차\\염증과 노쇠 - 분석 길잡이\\assets\\analysis-20260928\\runs\\S02-nhanes-data\\data_provenance_and_caveats.json": {
+      "source": "analysis\\runs\\S02-nhanes-data\\data_provenance_and_caveats.json",
+      "sha256": "dabe67cc0f04b3068fe4365025b3a9c1346dcce3297a71fb17a3aec514cc3533",
+      "bytes": 3960
+    },
+    "4주차\\염증과 노쇠 - 분석 길잡이\\assets\\analysis-20260928\\runs\\A02-models\\marker_correlations.png": {
+      "source": "analysis\\runs\\A02-models\\marker_correlations.png",
+      "sha256": "5164baff84d17bd207f379142994166d9fbe77e65ae5ff15f1e3c4301c13ac93",
+      "bytes": 24280
+    },
+    "4주차\\염증과 노쇠 - 분석 길잡이\\assets\\analysis-20260928\\config\\fi_candidate.json": {
+      "source": "analysis\\config\\fi_candidate.json",
+      "sha256": "85a6625ec4f43fb90fc5f41be581d2ab579093d270c4c378ec17f9bbffe373ee",
+      "bytes": 2345
+    },
+    "4주차\\염증과 노쇠 - 분석 길잡이\\assets\\analysis-20260928\\runs\\A03-coding\\same_people_summary.csv": {
+      "source": "analysis\\runs\\A03-coding\\same_people_summary.csv",
+      "sha256": "dc4646c8540e55093488accb9cba1fe162460654c99786660ff97d08ad8b0a51",
+      "bytes": 166
+    },
+    "4주차\\염증과 노쇠 - 분석 길잡이\\assets\\analysis-20260928\\runs\\A03-coding\\group_transition_same_people.csv": {
+      "source": "analysis\\runs\\A03-coding\\group_transition_same_people.csv",
+      "sha256": "bc23606f79e53f7505d6b9d2d4303e8d1d5eb26d06ec9c0dc82cbc7ecb3dac03",
+      "bytes": 272
+    },
+    "4주차\\염증과 노쇠 - 분석 길잡이\\assets\\analysis-20260928\\runs\\A03-coding\\alternative_same_people\\primary.csv": {
+      "source": "analysis\\runs\\A03-coding\\alternative_same_people\\primary.csv",
+      "sha256": "4efa9e39d2566b99a51d9fa03cc0726a5689c88001961aca58d0345cfd97e60c",
+      "bytes": 450
+    },
+    "4주차\\염증과 노쇠 - 분석 길잡이\\assets\\analysis-20260928\\runs\\S02-nhanes-data\\fi_candidate_retention_flow.csv": {
+      "source": "analysis\\runs\\S02-nhanes-data\\fi_candidate_retention_flow.csv",
+      "sha256": "3903e918054420f87ce0d47b16376f9d3a17ec05f98b7020b261dfaa1e1e5922",
+      "bytes": 867
+    },
+    "4주차\\염증과 노쇠 - 분석 길잡이\\assets\\analysis-20260928\\runs\\A03-coding\\retention_by_demography.csv": {
+      "source": "analysis\\runs\\A03-coding\\retention_by_demography.csv",
+      "sha256": "b60c192bf293a835c1ae836a59a671190d4d9da05fd5775d65e80423fe46a0b4",
+      "bytes": 968
+    },
+    "4주차\\염증과 노쇠 - 분석 길잡이\\assets\\analysis-20260928\\runs\\A01-groups\\summary.csv": {
+      "source": "analysis\\runs\\A01-groups\\summary.csv",
+      "sha256": "2f6099a557602992d3cbc7cb35d3f15a1fdfa5438bb7de380840d6937a127f59",
+      "bytes": 1576
+    },
+    "4주차\\염증과 노쇠 - 분석 길잡이\\assets\\analysis-20260928\\runs\\A02-models\\sample_vs_weighted_percent.csv": {
+      "source": "analysis\\runs\\A02-models\\sample_vs_weighted_percent.csv",
+      "sha256": "12ff36e53412adf5553e97a33cbbbbc89d4e17daf7f29a183e54397bb3a0bf68",
+      "bytes": 1300
+    },
+    "4주차\\염증과 노쇠 - 분석 길잡이\\assets\\analysis-20260928\\runs\\S02-nhanes-data\\xpt_zero_crosscheck.json": {
+      "source": "analysis\\runs\\S02-nhanes-data\\xpt_zero_crosscheck.json",
+      "sha256": "9e4c0d9524e318ce4401f4892906c33f52dbf06714c2977b679a330015da96db",
+      "bytes": 9941
+    },
+    "4주차\\염증과 노쇠 - 분석 길잡이\\assets\\analysis-20260928\\runs\\A01-groups\\diagnostics_NLR.png": {
+      "source": "analysis\\runs\\A01-groups\\diagnostics_NLR.png",
+      "sha256": "47a0fb7a17f40cd2fd5e1cae1b6b7c53035f36d0a4564e6afd2840a2b53f9291",
+      "bytes": 30539
+    },
+    "4주차\\염증과 노쇠 - 분석 길잡이\\assets\\analysis-20260928\\runs\\A01-groups\\diagnostics_MLR.png": {
+      "source": "analysis\\runs\\A01-groups\\diagnostics_MLR.png",
+      "sha256": "0f0a9d905b5f7ca4c7057c8b28a1697cd02e53555c42cf007c190bf1591fa940",
+      "bytes": 30798
+    },
+    "4주차\\염증과 노쇠 - 분석 길잡이\\assets\\analysis-20260928\\runs\\A01-groups\\diagnostics_SIRI.png": {
+      "source": "analysis\\runs\\A01-groups\\diagnostics_SIRI.png",
+      "sha256": "3485080a1eb023c6f05d39873db37f3df7fec6ed7d2a538e03925c57d695b66d",
+      "bytes": 29110
+    },
+    "4주차\\염증과 노쇠 - 분석 길잡이\\assets\\analysis-20260928\\runs\\A01-groups\\diagnostics_SII.png": {
+      "source": "analysis\\runs\\A01-groups\\diagnostics_SII.png",
+      "sha256": "0dd3ac12bce680ebc79714e361766a9cd45a90f5250eec3205439c04911699b2",
+      "bytes": 28843
+    },
+    "4주차\\염증과 노쇠 - 분석 길잡이\\assets\\analysis-20260928\\runs\\A02-models\\model_sensitivities.csv": {
+      "source": "analysis\\runs\\A02-models\\model_sensitivities.csv",
+      "sha256": "891cb7462ed0cf127937330c6fa02b03ce17b6f33938cb8774d7e323bb1c0f92",
+      "bytes": 7246
+    },
+    "4주차\\염증과 노쇠 - 분석 길잡이\\assets\\analysis-20260928\\runs\\A02-models\\fractional_mean_predictions.csv": {
+      "source": "analysis\\runs\\A02-models\\fractional_mean_predictions.csv",
+      "sha256": "befcd94b6daf241717b188f24268791560a7811d83f4b5f2f47ac4d8321dbcf7",
+      "bytes": 714
+    },
+    "4주차\\염증과 노쇠 - 분석 길잡이\\assets\\analysis-20260928\\runs\\S01-paper-contract\\extensions_review.md": {
+      "source": "analysis\\runs\\S01-paper-contract\\extensions_review.md",
+      "sha256": "935009ea589a1f366ebbe84f585d9e68497de02427c2f663839988db3bb17dc5",
+      "bytes": 14686
+    },
+    "4주차\\염증과 노쇠 - 분석 길잡이\\assets\\analysis-20260928\\runs\\A01-groups\\boxplots_log_axis.png": {
+      "source": "analysis\\runs\\A01-groups\\boxplots_log_axis.png",
+      "sha256": "e2002b9da7a6adb7d500bb553914d5055704c79c8906b0ca0fae8149f79431b1",
+      "bytes": 27251
+    },
+    "4주차\\염증과 노쇠 - 분석 길잡이\\assets\\analysis-20260928\\runs\\A01-groups\\boxplots.png": {
+      "source": "analysis\\runs\\A01-groups\\boxplots.png",
+      "sha256": "039d921e6a4b2642bf1b4635f2276561a5ed8f48fbe110d14b5f7a1eb7d600a8",
+      "bytes": 21570
+    },
+    "4주차\\염증과 노쇠 - 분석 길잡이\\assets\\analysis-20260928\\runs\\A01-groups\\means_with_pointwise_CI.png": {
+      "source": "analysis\\runs\\A01-groups\\means_with_pointwise_CI.png",
+      "sha256": "f2f7554972fdbb7aa7f2890c13c87411bab6e61a81136bdc9c2dbf52b9c34816",
+      "bytes": 19853
+    },
+    "4주차\\염증과 노쇠 - 분석 길잡이\\assets\\analysis-20260928\\runs\\A01-groups\\omnibus.csv": {
+      "source": "analysis\\runs\\A01-groups\\omnibus.csv",
+      "sha256": "a07d5f392b757580abfd8761b51c44a3af0ae08acff32ff0ce0357bb6c268076",
+      "bytes": 557
+    },
+    "4주차\\염증과 노쇠 - 분석 길잡이\\assets\\analysis-20260928\\runs\\A01-groups\\pairwise.csv": {
+      "source": "analysis\\runs\\A01-groups\\pairwise.csv",
+      "sha256": "65047fe6a915984023c09a4ef7618e2685bdd46cb8d8a47447991f719c24c23e",
+      "bytes": 4223
+    },
+    "4주차\\염증과 노쇠 - 분석 길잡이\\assets\\analysis-20260928\\runs\\A01-groups\\tukey.csv": {
+      "source": "analysis\\runs\\A01-groups\\tukey.csv",
+      "sha256": "ff871efcbd331b3010c0297dd9551bcf0866702252c66f4dc60190fe2e92cd70",
+      "bytes": 2022
+    },
+    "4주차\\염증과 노쇠 - 분석 길잡이\\assets\\analysis-20260928\\runs\\A01-groups\\trend.csv": {
+      "source": "analysis\\runs\\A01-groups\\trend.csv",
+      "sha256": "74c6764ee91c905989280926acfd9044d12966af5c05826648102ae7d962a7ef",
+      "bytes": 764
+    },
+    "4주차\\염증과 노쇠 - 분석 길잡이\\assets\\analysis-20260928\\src\\group_analysis.R": {
+      "source": "analysis\\src\\group_analysis.R",
+      "sha256": "366937c9e37a15ee48c64ca1ce71883c257cf37af434e402196b157a28f72c07",
+      "bytes": 6927
+    },
+    "4주차\\염증과 노쇠 - 분석 길잡이\\assets\\analysis-20260928\\runs\\A02-models\\threshold_sensitivity.png": {
+      "source": "analysis\\runs\\A02-models\\threshold_sensitivity.png",
+      "sha256": "c08cd59bc1b82d679a62b9e378be1958e7995854efade193eea341361ce671cc",
+      "bytes": 24376
+    },
+    "4주차\\염증과 노쇠 - 분석 길잡이\\assets\\analysis-20260928\\runs\\M01-simulation\\fwer_inflation.png": {
+      "source": "analysis\\runs\\M01-simulation\\fwer_inflation.png",
+      "sha256": "2ae109f7a4c8ba4ea508896b7f2f891d439f1a1a74686ea86b9ffd48c4f27d27",
+      "bytes": 19808
+    },
+    "4주차\\염증과 노쇠 - 분석 길잡이\\assets\\analysis-20260928\\runs\\M01-simulation\\null_raw_p_histogram.png": {
+      "source": "analysis\\runs\\M01-simulation\\null_raw_p_histogram.png",
+      "sha256": "ba34aa8f52fe4e1b4e046d928b842b93c9054c52045a6db22b7e6e7d8454bcf1",
+      "bytes": 15894
+    },
+    "4주차\\염증과 노쇠 - 분석 길잡이\\assets\\analysis-20260928\\runs\\M01-simulation\\theory_comparison.csv": {
+      "source": "analysis\\runs\\M01-simulation\\theory_comparison.csv",
+      "sha256": "299b5c516d1abc50890303ad8aa8e15c03383357558f57785f4cd0e2d42674a7",
+      "bytes": 2090
+    },
+    "4주차\\염증과 노쇠 - 분석 길잡이\\assets\\analysis-20260928\\runs\\M01-simulation\\simulation_summary.csv": {
+      "source": "analysis\\runs\\M01-simulation\\simulation_summary.csv",
+      "sha256": "c514d97fab204e8ace095f81b2481b959bc800c668a2f4f540281fd4c2f7339a",
+      "bytes": 16194
+    },
+    "4주차\\염증과 노쇠 - 분석 길잡이\\assets\\analysis-20260928\\runs\\M02-procedure\\omnibus_summary.csv": {
+      "source": "analysis\\runs\\M02-procedure\\omnibus_summary.csv",
+      "sha256": "c39aa4d030eb5af4bb40505d1743ab13178a0b0ffcb54a858fd40090874685d0",
+      "bytes": 2024
+    },
+    "4주차\\염증과 노쇠 - 분석 길잡이\\assets\\analysis-20260928\\runs\\M02-procedure\\pairwise_summary.csv": {
+      "source": "analysis\\runs\\M02-procedure\\pairwise_summary.csv",
+      "sha256": "9650d44f7a08e6caa976c4a0e33a34b1baffa20edf5037507a4320f03cc2a5a3",
+      "bytes": 3795
+    },
+    "4주차\\염증과 노쇠 - 분석 길잡이\\assets\\analysis-20260928\\runs\\M02-procedure\\review.md": {
+      "source": "analysis\\runs\\M02-procedure\\review.md",
+      "sha256": "5ee9d86589c59d5cc306d276a779f006397be892cec9cd3ec6baafc3d005d4ed",
+      "bytes": 10205
+    }
+  },
+  "adjusted_notes": [
+    {
+      "path": "4주차\\염증과 노쇠 - 분석 길잡이\\00-start 처음부터 따라가는 분석 흐름.md",
+      "before_adjust_sha256": "3cac64ab8f3538a1244e170f2b12df372da162ee7ab0e3b24106f31dbe483bea",
+      "after_sha256": "d59c2cbc58ce6553cd124bb4954d41dab1a453d315b27882e84fd9b86387f351"
+    },
+    {
+      "path": "4주차\\염증과 노쇠 - 분석 길잡이\\01-paper 01 논문 데이터의 모양.md",
+      "before_adjust_sha256": "8c2b930389b19b2024fb1f0527b33a48f9399d3a4fc36443508ebe6db97f2e53",
+      "after_sha256": "d75e3a6cbc3e633ed8b1aa2af699540f93fb5884fbc2e0751ffe2ef9fcb99670"
+    },
+    {
+      "path": "4주차\\염증과 노쇠 - 분석 길잡이\\02-paper 02 논문에서 네 지표를 만든 방법.md",
+      "before_adjust_sha256": "6ed6fe7eb754d02425e18fddfc5bc28076301b9c0d2863425dacf17d9a1ae645",
+      "after_sha256": "cdfd7fad093cd71cd0eec7c92ad180bce94575a6af4ff50f79d3422d7733dc49"
+    },
+    {
+      "path": "4주차\\염증과 노쇠 - 분석 길잡이\\03-paper 03 이 논문은 FI를 어떻게 정의했나.md",
+      "before_adjust_sha256": "acfae0379193d9b47de82dfa49707738f6ed6349e5a7898e0835fc717ade720f",
+      "after_sha256": "05d6dbc09f24e87a2ba42248929c1a0eca9be5355f338ed3726b1f9fe190e656"
+    },
+    {
+      "path": "4주차\\염증과 노쇠 - 분석 길잡이\\04-paper 04 표본 선정과 단면자료의 한계.md",
+      "before_adjust_sha256": "35348b5412bce34e5361b6b476b683e7ed000a6dd2b94a7730ff7e95f855f586",
+      "after_sha256": "5ab94bda4cce8c2508c9c1cb9167caa614a6770d6cdbf6bfbd78525abd88a92e"
+    },
+    {
+      "path": "4주차\\염증과 노쇠 - 분석 길잡이\\05-paper 05 Table 1을 읽는 순서.md",
+      "before_adjust_sha256": "2d61e0e4bbfa905c65ea4c730d41cf73f21517d4afe67a4fd52a8ce40e08ff22",
+      "after_sha256": "e3b93e733bd9ffa8ab4c0d9e56efd67b626c6e4736729ff549dbf4d198685559"
+    },
+    {
+      "path": "4주차\\염증과 노쇠 - 분석 길잡이\\06-paper 06 이 논문의 OR를 정확히 읽기.md",
+      "before_adjust_sha256": "d4f5465401cab36c055591790ac033b398db32b96c91109440aca5054206f51e",
+      "after_sha256": "e8bffce53b707538bdb24486dcc5e8e3fb8039f23a10e7c7c4d3688117a43678"
+    },
+    {
+      "path": "4주차\\염증과 노쇠 - 분석 길잡이\\07-paper 07 논문이 한 전처리와 보고하지 않은 점검.md",
+      "before_adjust_sha256": "24ca912550e2c8f3ee85e6f0fb4cbaca9ee0a3cd7823a6aea20b269baa208318",
+      "after_sha256": "710c3c901db7e5ea291264e0c9b30ac48f1157b7bd1ad8505ddb42bfbfdeeb15"
+    },
+    {
+      "path": "4주차\\염증과 노쇠 - 분석 길잡이\\08-paper 08 Table 2의 Model 1과 Model 2.md",
+      "before_adjust_sha256": "7cc56bdd22bed85af9b9223300b7047453ceb51def31fdb2a8f62babee89ef45",
+      "after_sha256": "2f691a651dacca4f2f1d7672772a98eabcf4104bd9daf92630e3fdfc1eaafeed"
+    },
+    {
+      "path": "4주차\\염증과 노쇠 - 분석 길잡이\\09-paper 09 Table 3은 같은 데이터를 어떻게 다시 보나.md",
+      "before_adjust_sha256": "d36f7c251a58ed38eb2acb1cce6d3bf88e60b0a978a762227380e4913b8a9fbd",
+      "after_sha256": "c3cc0c3d636d89a3309f00c8765413f907f95606906eaaecc948a82b357f8065"
+    },
+    {
+      "path": "4주차\\염증과 노쇠 - 분석 길잡이\\10-paper 10 Figure를 통해 결론의 범위 정하기.md",
+      "before_adjust_sha256": "63db4258cf7915277472d58183030103fe1e86838942da97e3e195d3ba3ca3f6",
+      "after_sha256": "912ff991bd960141a0830c78a4a867d9d64f573b8914f93f70826aa03a1da346"
+    }
+  ]
+}

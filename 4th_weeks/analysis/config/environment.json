@@ -1,0 +1,15 @@
+{
+  "rscript": "C:\\Program Files\\R\\R-4.6.1\\bin\\Rscript.exe",
+  "command": [
+    "C:\\Program Files\\R\\R-4.6.1\\bin\\Rscript.exe",
+    "--vanilla",
+    "-e",
+    "sessionInfo(); cat(\"\\nPACKAGES\\n\"); p<-installed.packages(); print(p[,c(\"Package\",\"Version\")])"
+  ],
+  "exit_code": 0,
+  "locale_override": "C, process only",
+  "workspace": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\4주차",
+  "captured_at": "2026-09-27T20:50:34.508592+00:00",
+  "session_info": "runs/E00-environment/session-info.txt",
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]"
+}

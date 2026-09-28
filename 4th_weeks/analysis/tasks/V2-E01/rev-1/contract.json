@@ -1,0 +1,58 @@
+{
+  "task_id": "V2-E01",
+  "revision": 1,
+  "stage_ids": [
+    "04",
+    "07"
+  ],
+  "issue_id": "ISSUE-04",
+  "type": "environment",
+  "question": "Can existing input/code/environment evidence be reused?",
+  "estimand": "See reviewed plan; environment/source tasks do not estimate a population parameter",
+  "owner_role": "E",
+  "worker_id": "v2_environment",
+  "reviewer_id": "v2_reviewer",
+  "required_or_optional": "required",
+  "dependencies": [],
+  "allowed_inputs": [],
+  "assumptions": [
+    "Existing operational36 is not verified author FI"
+  ],
+  "exposure_history": [
+    "root has seen publication and old results; planner receives design facts only"
+  ],
+  "plan_version": "v2-1",
+  "plan_review": {
+    "accepted": false
+  },
+  "methods": [
+    "Source/environment audit or pending V2-D01 plan"
+  ],
+  "acceptance_criteria": [
+    "Source or execution evidence with bounded conclusions; no promotion of candidate to author-identical"
+  ],
+  "limits": {
+    "search": "existing primary material and existing source audit first",
+    "implementation_attempts": 3,
+    "additional_scope": "log-base identity, marker-quartile model1, prespecified nonlinear diagnostic"
+  },
+  "outputs": [
+    "analysis/tasks/V2-E01/rev-1/work/audit_reuse.py",
+    "analysis/tasks/V2-E01/rev-1/work/handoff.md",
+    "analysis/tasks/V2-E01/rev-1/work/reuse_audit.json"
+  ],
+  "write_scope": [
+    "analysis/tasks/V2-E01/rev-1/work"
+  ],
+  "state": "accepted",
+  "freshness": "current",
+  "attempts": [],
+  "result_path": "analysis/tasks/V2-E01/rev-1/result.json",
+  "review_path": "analysis/tasks/V2-E01/rev-1/review.json",
+  "document_anchors": [
+    "v2-stage-04",
+    "v2-stage-07"
+  ],
+  "review_reference": "analysis/tasks/V2-Q01/rev-1/work/plan_review.json",
+  "acceptance_scope": "plan and input reuse only; not statistical validity of historical results"
+}

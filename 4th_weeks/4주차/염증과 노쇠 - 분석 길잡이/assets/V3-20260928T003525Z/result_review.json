@@ -1,0 +1,185 @@
+{
+  "task_id": "V3-Q01",
+  "reviewer_id": "continuation_review",
+  "review_type": "independent_implementation_and_result_review",
+  "verdict": "accept_with_limits",
+  "blocking_findings": [],
+  "reviewed_artifact_manifest": [
+    {
+      "path": "analysis/tasks/V3-I01/rev-1/work/prepare.R",
+      "sha256": "ade8e028f98034e778a9880d078d1745fd66cdb88fb620630a097c0978cd8b0e"
+    },
+    {
+      "path": "analysis/tasks/V3-I01/rev-1/work/models.R",
+      "sha256": "6aa83738c9108bf27f5fb3b787ff712ffbbfad3f3e58c3186a63aade3b66dd58"
+    },
+    {
+      "path": "analysis/tasks/V3-I01/rev-1/work/descriptions.R",
+      "sha256": "0f978fe86a0804a247089f644d8ef29516ffa8b4432bd928203808c111a2e7d4"
+    },
+    {
+      "path": "analysis/tasks/V3-I01/rev-1/work/prepared.rds",
+      "sha256": "9e9df0a41b730040a2825e44598584a811b39d50062c7653fed737b1327e0873"
+    },
+    {
+      "path": "analysis/tasks/V3-I01/rev-1/work/derived_analysis_inputs.csv",
+      "sha256": "93ba59b018ee9705b2d92d1c93c4ee08925dd8ecfbc6c9359c0b0207c9257a1e"
+    },
+    {
+      "path": "analysis/tasks/V3-I01/rev-1/work/covariate_coding_dictionary.csv",
+      "sha256": "cc03c34d8e0d916a77bfed11913f00ad78859d0dabe3204b709d9d61105ca8f6"
+    },
+    {
+      "path": "analysis/tasks/V3-I01/rev-1/work/covariate_availability_dictionary.csv",
+      "sha256": "8032fa8dda87c91373ed4c764b76ca01c9116a2507acd877376097eb859fd195"
+    },
+    {
+      "path": "analysis/tasks/V3-I01/rev-1/work/flow_counts.csv",
+      "sha256": "07c552b1e7680e312c888b3f9bef2679e88b572930dd32dc6e9a00948b951c5e"
+    },
+    {
+      "path": "analysis/tasks/V3-I01/rev-1/work/frozen_quartiles.csv",
+      "sha256": "589a2a3a2cd47458a40c3aa4f8d926e12b15925f31e2d63ba493a31124120bf0"
+    },
+    {
+      "path": "analysis/tasks/V3-I01/rev-1/work/continuous_models.csv",
+      "sha256": "4db925e23c964b8ba292cf5dce4c2cd0cff3546ef67e7e3f0657c66bbdcede25"
+    },
+    {
+      "path": "analysis/tasks/V3-I01/rev-1/work/quartile_models.csv",
+      "sha256": "e37f7713e430c55638d5ae84595a28565e7bf8e017f051148c92abcd8552bd6c"
+    },
+    {
+      "path": "analysis/tasks/V3-I01/rev-1/work/trend_models.csv",
+      "sha256": "99bde951885cf93eb145a54a1e4a7405576e0ce490da5267ee77a04feea120e6"
+    },
+    {
+      "path": "analysis/tasks/V3-I01/rev-1/work/omnibus_tests.csv",
+      "sha256": "d404c2debc11f5b99e3b52705107855dab6ed59b963c77d5c89302a0e96206f7"
+    },
+    {
+      "path": "analysis/tasks/V3-I01/rev-1/work/spline_tests.csv",
+      "sha256": "4ec8929ef80f027a646d9e85941e0a7e38699021c03b042a2322e5c6ed8093c4"
+    },
+    {
+      "path": "analysis/tasks/V3-I01/rev-1/work/curve_data.csv",
+      "sha256": "1489eca93e6eb84e1da8c420119fdd0ff3c160c254000ccf08a097ed9006131b"
+    },
+    {
+      "path": "analysis/tasks/V3-I01/rev-1/work/interactions.csv",
+      "sha256": "7d95cf9b1f584360ac3b480919cbca932bcfc02ce811d10c47a906d05caf2cac"
+    },
+    {
+      "path": "analysis/tasks/V3-I01/rev-1/work/subgroup_slopes.csv",
+      "sha256": "f99d764d52c9d15f90e2044acbe586005665f29e2124bde88c3e8c1a1fc6f3ae"
+    },
+    {
+      "path": "analysis/tasks/V3-I01/rev-1/work/fit_audit.csv",
+      "sha256": "ee3cfcd6ba2b686ad20314be61947a73c81ebe7bb50315b5248c9466a294deb6"
+    },
+    {
+      "path": "analysis/tasks/V3-I01/rev-1/work/model_row_ids.rds",
+      "sha256": "a8dbca6ed7a66440a95b82eca01ab05bfebdc2a3f4b25f7fbb3d32c52e82f6fb"
+    },
+    {
+      "path": "analysis/tasks/V3-I01/rev-1/work/table1_descriptions.csv",
+      "sha256": "cf8cafda54644ad2370e439b9339a1a875bbc1884ed3259159a6f45178ce5dd9"
+    },
+    {
+      "path": "analysis/tasks/V3-I01/rev-1/work/table1_tests.csv",
+      "sha256": "8f08552e304507cf7d886a41efb78beb33ce9e9a6a810c5ffd0a4c2a8f426719"
+    },
+    {
+      "path": "analysis/tasks/V3-I01/rev-1/work/S2_S5_descriptions.csv",
+      "sha256": "58b2bb9bb0d8e42c38686d24750abb0fdfb65303a264a516bb3422158461ccb7"
+    },
+    {
+      "path": "analysis/tasks/V3-I01/rev-1/work/S2_S5_tests.csv",
+      "sha256": "f1909da66e7d3b664a35cae152b6f47459df68c3fb2dcdc01aeb65d325ccf5ed"
+    },
+    {
+      "path": "analysis/tasks/V3-I01/rev-1/work/descriptive_test_row_manifest.csv",
+      "sha256": "4b72067a26c9e3674ebe7054ef2872470ed4e91484b19f85028cf802a70baf05"
+    },
+    {
+      "path": "analysis/tasks/V3-I01/rev-1/work/selection_retention.csv",
+      "sha256": "068ff1bc3a8478f37cdf84cdd83ee1270eae0d3428191606461a44ae736fb676"
+    },
+    {
+      "path": "analysis/tasks/V3-I01/rev-1/work/endpoint_audit.csv",
+      "sha256": "8e4d64fe5d26d107379fdf9e851bce5a8f21ab390a2aa516633cec5b435a4c39"
+    },
+    {
+      "path": "analysis/tasks/V3-I01/rev-1/work/Figure1_flow.png",
+      "sha256": "3881c636925d514dca4a70596183ed01afd76ee6db8d40e9f5e0ea762930a2b9"
+    },
+    {
+      "path": "analysis/tasks/V3-I01/rev-1/work/Figure2_Model2_curves.png",
+      "sha256": "47e323e6cb903817350f0590bb8927da09bee95904aa61be848c9c4b05631759"
+    },
+    {
+      "path": "analysis/tasks/V3-I01/rev-1/work/Figure3_subgroup_forest.png",
+      "sha256": "94390df77128f28f80fb0982806873cb85d8b9ec254b954d9001d52418615775"
+    },
+    {
+      "path": "analysis/tasks/V3-I01/rev-1/work/FigS1_plus16_curves.png",
+      "sha256": "557e3720bf0a6e5235b25dc58426227565b172c362376ed94d74d4af783b06ec"
+    },
+    {
+      "path": "analysis/tasks/V3-I01/rev-1/work/input_provenance.json",
+      "sha256": "a51a87763d28ea7f908beb00b930406aaaf661072f11799f37c542f8b70b1d20"
+    },
+    {
+      "path": "analysis/tasks/V3-I01/rev-1/work/sessionInfo.txt",
+      "sha256": "df52565c58e1a30059e3a1702c2ee77fc3e4b3975e135fc5e82d2660a76ca64f"
+    },
+    {
+      "path": "analysis/tasks/V3-I01/rev-1/work/interpretation_notes.txt",
+      "sha256": "f067726c988d786be8dfc52ed74b005e5196b809cc4cedfc617134f7269147bd"
+    }
+  ],
+  "approved_plan_reviews": [
+    "plan_review_v2.json",
+    "plan_review_v3.json",
+    "table_test_addition_review.json"
+  ],
+  "exact_version_scope": "Current corrected work artifacts at listed hashes only. attempt1 is superseded failure history and is not accepted result evidence.",
+  "evidence": {
+    "raw_PFQ_independent_reconstruction": "expected_pfqqa.json / expected_pfqqa_rows.csv: all24119rows,route flags,modified-cell counts,andFI_route matched independently read nine raw XPTs. strict shared FI and observed cells unchanged.",
+    "numeric_all_rows": "corrected_numeric_review.json: OR/CI/t-p identities, fixed family Holm/BH,matched model participant IDs andFI30 recomputation passed.",
+    "independent_refits": "independent_model_checks.json: NLRModel2 beta/SE; NLR BMI interaction Wald and all subgroup full-covariance CIs; allpoints NLRcurve reparameterized with direct nsbasis; NLRtwo-day diet beta/SE; raw1999energy and seven rawdietweight files verified.",
+    "tables": "table_numeric_checks.json:90planned rows,85actual tests,5explicit structurallycoupled descriptive-only rows; all5familiesn18, allcategory sums/denominators, independent Table1/S2age/sex tests and ageweighted/unweightedquantiles passed.",
+    "visual_QA": "Viewed Figure1,Figure2,Figure3,FigS1 actualPNGs. Legible,no clipping,values/axes consistent. Figure captions must supply interpretation details listed below.",
+    "code_audit": "prepare.R/models.R/descriptions.R read. Conservative route, finite nonnegative energy, sourcecorrected1999alias, all-ageMEC/dietparent then domains, fixedcuts/trend,16supplementalterms, matchedcomparisons, planned24interaction family andfullcovariancecontrasts checked."
+  },
+  "counts": {
+    "all_age_parent": 92062,
+    "age50": 24119,
+    "strict_complete36": 9814,
+    "route_complete36": 13289,
+    "reference": 13252,
+    "Model2": 10874,
+    "supplement": 10874,
+    "diet": 8174,
+    "estimable_fit_audit_rows": 120,
+    "interaction_tests": 24,
+    "subgroup_slope_rows": 56,
+    "spline_models": 8
+  },
+  "limitations": [
+    "Declared route-complete36 and covariate candidates do not identify author FI, cohort, alcohol/activity convention, or originalRCS knots. Exactreproduction remains unresolved.",
+    "Main MEC-weighted day1energy-adjusted analysis is exploratory; separateWTDR2D/7 branch addresses two-day responders only.",
+    "Completecase selection, cross-sectional design and outcomecomponent covariate overlap prevent causal or clinicalvalidation claims.",
+    "Independent refitting sampled meaningful model types, not every fit. Allrows numeric identities/families and participant sets were checked; source alias mapping beyond targeted PFQ/diet audits reuses reviewed candidate definitions.",
+    "Five deterministic tablegroup comparisons deliberately have no pvalue and explicit reason; do not report90tests executed.",
+    "Scientific validity remains conditional support within declared definitions; successful120fits are not120validated scientific conclusions."
+  ],
+  "documentation_requirements": [
+    "Figure1 explain candidate cohort and separate dietary design parent.",
+    "Figure2/FigS1 caption primarycandidateN10874, respective adjustmentset, rawmarker axes plottedlogarithmically, medianreference, pointwise95%design-t CIs and fixed3df diagnostic not authorRCS.",
+    "Figure3 decode sex1=male/2=female, ageLT65=50-64/GE65=65+, categoricalBMI; state pooledModel2N10874, OR pere-fold,pointwise95%CI,24interactiontests and raw/Holm distinction.",
+    "Map each sourceTable/Figure to these outputs and retain exact-reproduction uncertainty; integrate reviewed candidate evidence into existing stage notes."
+  ],
+  "project_completion_approval": false,
+  "completion_note": "Implementation/result acceptance only. Root must finish stage-document integration, source/candidate comparison matrix and delivery checks before project completion."
+}

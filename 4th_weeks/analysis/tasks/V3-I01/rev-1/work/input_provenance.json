@@ -1,0 +1,141 @@
+{
+  "created_utc": "2026-09-28T00:51:02.145714+00:00",
+  "read_scope": "own methods packet, candidate and survey inputs, approved reference code, ALQ and diet XPT only; no paper effect-result matching",
+  "inputs": [
+    {
+      "path": "analysis/data/derived/candidate_all_age50.csv",
+      "sha256": "870fbdef967cd7e68e396e7f7d7e82821d23d8ce92f341704805511d7af6c772",
+      "bytes": 39106986
+    },
+    {
+      "path": "analysis/data/derived/nhanes_design_all.csv",
+      "sha256": "6546bf16e35636be47bd9074de95372bca9129dd0c1c3801cd7d0b482f705e3f",
+      "bytes": 7227179
+    },
+    {
+      "path": "analysis/config/fi_candidate.json",
+      "sha256": "85a6625ec4f43fb90fc5f41be581d2ab579093d270c4c378ec17f9bbffe373ee",
+      "bytes": 2345
+    },
+    {
+      "path": "analysis/tasks/V3-I01/rev-1/packet/diet_source.md",
+      "sha256": "eb3e04202dfe6e437972ebe3bbdc116a5fa18c20bb039c8d34cc8f04843f080a",
+      "bytes": 3190
+    },
+    {
+      "path": "analysis/tasks/V3-I01/rev-1/packet/energy_correction.md",
+      "sha256": "ba327f861e5f684d5b5b5199d69a33a143ee926459e35244edfa977cf0031a2c",
+      "bytes": 1267
+    },
+    {
+      "path": "analysis/tasks/V3-I01/rev-1/packet/freeze_addendum.md",
+      "sha256": "95924bdd21b3c37c430505db9d4949a1a0e88a43767e5c2ba1857cd317dad3a3",
+      "bytes": 5574
+    },
+    {
+      "path": "analysis/tasks/V3-I01/rev-1/packet/plan.md",
+      "sha256": "af199758700639807144a07554afbd99a28497075868c232eec6dc81c7d92ec0",
+      "bytes": 19008
+    },
+    {
+      "path": "analysis/tasks/V3-I01/rev-1/packet/source_methods.md",
+      "sha256": "451eafaae4bc0c8da07873d5c54e64b90226ee96f5ef754762f8c382802130f4",
+      "bytes": 5493
+    },
+    {
+      "path": "analysis/tasks/V2-I01/rev-1/work/checks.R",
+      "sha256": "af038f5de3d2016381a67855bef22c6247511443c134478c81f62cc96f1fbe55",
+      "bytes": 10034
+    },
+    {
+      "path": "analysis/src/model_extensions.R",
+      "sha256": "4a43374a2811f289f2970c8bda018393f52cca4e134a6ec6485cecadc86fe2fe",
+      "bytes": 8280
+    },
+    {
+      "path": "analysis/data/raw/1999-2000/ALQ.xpt",
+      "sha256": "7164f56e28c150b4218014f72b40735a5ca901686726a9215effc29209b68c9c",
+      "bytes": 322000
+    },
+    {
+      "path": "analysis/data/raw/2001-2002/ALQ_B.xpt",
+      "sha256": "ed2f90b82e1d9dc87ada702c2fb3f11c7f53942bd5a7a6d7463c209b894e3765",
+      "bytes": 364000
+    },
+    {
+      "path": "analysis/data/raw/2003-2004/ALQ_C.xpt",
+      "sha256": "e223a963ad4470e1a2e0dd1561b55a3fa91781dab3b46f5017f9eb1f62d0ced9",
+      "bytes": 343440
+    },
+    {
+      "path": "analysis/data/raw/2005-2006/ALQ_D.xpt",
+      "sha256": "be651da341d629cf2456e5c2fa0387c48fa67cd0949d6dc9acc46ff6060bcabe",
+      "bytes": 345680
+    },
+    {
+      "path": "analysis/data/raw/2007-2008/ALQ_E.xpt",
+      "sha256": "3fca970ac6ed096119d47962f3c72157dde7c11b13a499380e9a1bbb33123789",
+      "bytes": 412960
+    },
+    {
+      "path": "analysis/data/raw/2009-2010/ALQ_F.xpt",
+      "sha256": "15a46b2310d5ba90e1488df5f84846d97468247b0aae6608407fa9bf2405d0d1",
+      "bytes": 438320
+    },
+    {
+      "path": "analysis/data/raw/2011-2012/ALQ_G.xpt",
+      "sha256": "5f06ba3506f9d69cedffa0380ad0cecbc15df2d6d9b7a3644ac3e2678aaac5e5",
+      "bytes": 451360
+    },
+    {
+      "path": "analysis/data/raw/2013-2014/ALQ_H.xpt",
+      "sha256": "174e4dd21e05f81df8bc786a6e76253a2cdc07503cd7cde4c7dd1c1b9d3e3098",
+      "bytes": 476080
+    },
+    {
+      "path": "analysis/data/raw/2015-2016/ALQ_I.xpt",
+      "sha256": "ed445c40ec3f3f993f78321f86e513340d4f131708c7624d88803bde3909102d",
+      "bytes": 460960
+    },
+    {
+      "path": "analysis/data/raw/2003-2004/DR2TOT_C.xpt",
+      "sha256": "2949672b030a1936a13ef74e205e259c0c2d95f6f07c877de6d8f88af97df8af",
+      "bytes": 6260800
+    },
+    {
+      "path": "analysis/data/raw/2005-2006/DR2TOT_D.xpt",
+      "sha256": "d7476e3fa08b0fc04bed3d6f24dc05546a147c237f44721a2fed8fff7883f511",
+      "bytes": 6459680
+    },
+    {
+      "path": "analysis/data/raw/2007-2008/DR2TOT_E.xpt",
+      "sha256": "9980449a908bb2f21a9bc9f68117662bbf109f87bb36acc76480afd880e10ac9",
+      "bytes": 6494400
+    },
+    {
+      "path": "analysis/data/raw/2009-2010/DR2TOT_F.xpt",
+      "sha256": "214759831d18d9bc0f0b2975fed277a7836e4d35774c5dc655643b582a28adbe",
+      "bytes": 6820400
+    },
+    {
+      "path": "analysis/data/raw/2011-2012/DR2TOT_G.xpt",
+      "sha256": "fade17bfa233609832197f8dee2dc95d86ba320831034f647aec96487a6316ba",
+      "bytes": 6212880
+    },
+    {
+      "path": "analysis/data/raw/2013-2014/DR2TOT_H.xpt",
+      "sha256": "12fa3550afbd57ec62d1543c668f1736387f3421fc6668369b5fa4c15a369f91",
+      "bytes": 6685520
+    },
+    {
+      "path": "analysis/data/raw/2015-2016/DR2TOT_I.xpt",
+      "sha256": "0940dad7ba10cb705945665de06329affb3a59495d4947b7249602ae18d92643",
+      "bytes": 6502560
+    },
+    {
+      "path": "analysis/data/raw/1999-2000/DRXTOT.xpt",
+      "sha256": "655869c938565c8001988211e5829c59ddcaa509ff82c7ecf154b9a0cdba7751",
+      "bytes": 9895440
+    }
+  ]
+}

@@ -1,0 +1,335 @@
+{
+  "recorded_at": "2026-09-27T21:17:38.067912+00:00",
+  "files": [
+    {
+      "path": "analysis\\src\\append_reviewed_results.py",
+      "bytes": 30646,
+      "sha256": "07d40237e9376626763f92a6f07876372258ec72b5392fca2a011e4ed3bd2f7c"
+    },
+    {
+      "path": "analysis\\src\\construct_fi_candidate.py",
+      "bytes": 8254,
+      "sha256": "5fbd7893c0b40e7bd90fc3fff6a7af38260fb7e3e153f629da8959e8b3a2b09c"
+    },
+    {
+      "path": "analysis\\src\\construct_fi_candidate.py.lock",
+      "bytes": 63314,
+      "sha256": "a9a37d00e701504909715df5640758787bcaccba209296498884969f2b74492d"
+    },
+    {
+      "path": "analysis\\src\\download_nhanes.py",
+      "bytes": 4174,
+      "sha256": "7d26fe9d60ea8f9124ac39e0a26916e857e78eef3ca5f24dfbce55cead34073a"
+    },
+    {
+      "path": "analysis\\src\\fi_coding_sensitivity.R",
+      "bytes": 2244,
+      "sha256": "d06fa6cb9b4162745ee8cf45389606b7c0a8028fe95b60a154100f2656b34099"
+    },
+    {
+      "path": "analysis\\src\\finalize_records.py",
+      "bytes": 1828,
+      "sha256": "663372a745c9266d902aaf409eb1cd854cf824708b830bbab0ac6d4fa5590131"
+    },
+    {
+      "path": "analysis\\src\\group_analysis.R",
+      "bytes": 6927,
+      "sha256": "366937c9e37a15ee48c64ca1ce71883c257cf37af434e402196b157a28f72c07"
+    },
+    {
+      "path": "analysis\\src\\model_extensions.R",
+      "bytes": 8280,
+      "sha256": "4a43374a2811f289f2970c8bda018393f52cca4e134a6ec6485cecadc86fe2fe"
+    },
+    {
+      "path": "analysis\\src\\package_obsidian_assets.py",
+      "bytes": 2399,
+      "sha256": "1e58a20e4360549d954ccef5757120ba40b9dcbc6715a24d331565cb1e5a6df6"
+    },
+    {
+      "path": "analysis\\src\\prepare_nhanes.py",
+      "bytes": 5671,
+      "sha256": "34e1d35f3648a978f9e13116a06180c6a0b82ec0118b2a3ad3466fc0351ac550"
+    },
+    {
+      "path": "analysis\\src\\prepare_nhanes.py.lock",
+      "bytes": 63314,
+      "sha256": "a9a37d00e701504909715df5640758787bcaccba209296498884969f2b74492d"
+    },
+    {
+      "path": "analysis\\src\\prepare_nhanes_design.py",
+      "bytes": 1572,
+      "sha256": "e46ea3ba9c85989407245c5401f69bac626182ca55fc7c6bf4f34483d52c989c"
+    },
+    {
+      "path": "analysis\\src\\prepare_nhanes_design.py.lock",
+      "bytes": 63314,
+      "sha256": "a9a37d00e701504909715df5640758787bcaccba209296498884969f2b74492d"
+    },
+    {
+      "path": "analysis\\src\\presentation_figures.R",
+      "bytes": 627,
+      "sha256": "917b0b91a4da96395dbab6ab2c20fae057890c5468fbd4a55ca65fbbce4b272d"
+    },
+    {
+      "path": "analysis\\src\\procedure_simulation.R",
+      "bytes": 7909,
+      "sha256": "5ddb01d02db5717d776e972f66823d514b46c478ce5896a3e90181e30c8f1086"
+    },
+    {
+      "path": "analysis\\src\\project.py",
+      "bytes": 4134,
+      "sha256": "e2c65b76e0eb34fac142258d3c2489bc707a5dbee929d1fe4a7e81b0118e9872"
+    },
+    {
+      "path": "analysis\\src\\record_orchestration.py",
+      "bytes": 5019,
+      "sha256": "4252f0a489a28136abbb72c15b24bd0fd2414c9d4c8fbee565b0daabf52d2229"
+    },
+    {
+      "path": "analysis\\src\\simulation.R",
+      "bytes": 12929,
+      "sha256": "a584ae522a5bab5d0ce99c34866cb2e1f3870a41a1590e94fe7c886c9a92333e"
+    },
+    {
+      "path": "analysis\\src\\verify_delivery.py",
+      "bytes": 3006,
+      "sha256": "5840b9fe93f8398a4e7e59c3a5b298c7966e1802725e4d13001984fc8714ae2f"
+    },
+    {
+      "path": "analysis\\config\\analysis_plan.json",
+      "bytes": 3630,
+      "sha256": "e3f01d831d170e0de6d391e0f675fa1de4bd83ce176d4cf5fb787dd15fb1b876"
+    },
+    {
+      "path": "analysis\\config\\environment.json",
+      "bytes": 646,
+      "sha256": "57c2bbd9f92504fc7db36d6530b41b98c369b606c81b370a9991bf1a97944a7e"
+    },
+    {
+      "path": "analysis\\config\\extensions_plan.json",
+      "bytes": 1973,
+      "sha256": "a331c3819573eb7dd46f236774f85440df108c68cd33522d5ba7f64b7356b1f7"
+    },
+    {
+      "path": "analysis\\config\\fi_candidate.json",
+      "bytes": 2345,
+      "sha256": "85a6625ec4f43fb90fc5f41be581d2ab579093d270c4c378ec17f9bbffe373ee"
+    },
+    {
+      "path": "analysis\\tests\\test_group_analysis.R",
+      "bytes": 1674,
+      "sha256": "a626d9c0389ad3c85ceb8266a4c91a054887e4e2aef9e1171ac5a5d604ed0d6a"
+    },
+    {
+      "path": "analysis\\tests\\test_model_extensions.R",
+      "bytes": 1240,
+      "sha256": "09b4814f6a31355445e1a0fe80392fa7cf2da3bdb3504bc489a4d011c3b0f4b8"
+    },
+    {
+      "path": "analysis\\tests\\test_procedure_simulation.R",
+      "bytes": 2439,
+      "sha256": "217647fe500c5fabdad80e2e9cae3f66b0ddb5f39b8f308c58c66c00807009cc"
+    },
+    {
+      "path": "analysis\\tests\\test_simulation.R",
+      "bytes": 3562,
+      "sha256": "c0a69ab4ce49c3c6db26566b7c6e224d43dd16d9800989cad208bc007a485a21"
+    },
+    {
+      "path": "analysis\\runs\\A01-groups\\analysis.rds",
+      "bytes": 4323329,
+      "sha256": "c4d61652c2ec5da2cf9bdad584eb56b431f2466315bdd5b56cb934f99a1238a9"
+    },
+    {
+      "path": "analysis\\runs\\A01-groups\\boxplots.png",
+      "bytes": 21570,
+      "sha256": "039d921e6a4b2642bf1b4635f2276561a5ed8f48fbe110d14b5f7a1eb7d600a8"
+    },
+    {
+      "path": "analysis\\runs\\A01-groups\\boxplots_log_axis.png",
+      "bytes": 27251,
+      "sha256": "e2002b9da7a6adb7d500bb553914d5055704c79c8906b0ca0fae8149f79431b1"
+    },
+    {
+      "path": "analysis\\runs\\A01-groups\\diagnostics_MLR.png",
+      "bytes": 30798,
+      "sha256": "0f0a9d905b5f7ca4c7057c8b28a1697cd02e53555c42cf007c190bf1591fa940"
+    },
+    {
+      "path": "analysis\\runs\\A01-groups\\diagnostics_NLR.png",
+      "bytes": 30539,
+      "sha256": "47a0fb7a17f40cd2fd5e1cae1b6b7c53035f36d0a4564e6afd2840a2b53f9291"
+    },
+    {
+      "path": "analysis\\runs\\A01-groups\\diagnostics_SII.png",
+      "bytes": 28843,
+      "sha256": "0dd3ac12bce680ebc79714e361766a9cd45a90f5250eec3205439c04911699b2"
+    },
+    {
+      "path": "analysis\\runs\\A01-groups\\diagnostics_SIRI.png",
+      "bytes": 29110,
+      "sha256": "3485080a1eb023c6f05d39873db37f3df7fec6ed7d2a538e03925c57d695b66d"
+    },
+    {
+      "path": "analysis\\runs\\A01-groups\\execution-notes.txt",
+      "bytes": 1028,
+      "sha256": "40ffd330a7d17c355cd5270fd4f4a182ea8081084afdb148f21225785151a581"
+    },
+    {
+      "path": "analysis\\runs\\A01-groups\\group_membership_summary.csv",
+      "bytes": 142,
+      "sha256": "519993c790de3bf3aa5e523a951a312f2614b5e881999941d95fa8456fda0723"
+    },
+    {
+      "path": "analysis\\runs\\A01-groups\\means_with_pointwise_CI.png",
+      "bytes": 19853,
+      "sha256": "f2f7554972fdbb7aa7f2890c13c87411bab6e61a81136bdc9c2dbf52b9c34816"
+    },
+    {
+      "path": "analysis\\runs\\A01-groups\\omnibus.csv",
+      "bytes": 557,
+      "sha256": "a07d5f392b757580abfd8761b51c44a3af0ae08acff32ff0ce0357bb6c268076"
+    },
+    {
+      "path": "analysis\\runs\\A01-groups\\pairwise.csv",
+      "bytes": 4223,
+      "sha256": "65047fe6a915984023c09a4ef7618e2685bdd46cb8d8a47447991f719c24c23e"
+    },
+    {
+      "path": "analysis\\runs\\A01-groups\\primary.csv",
+      "bytes": 449,
+      "sha256": "4ef5dd9dcfa6d7d791ac71b1c89cc3d463830be68b77c2a2289f0539a120f02b"
+    },
+    {
+      "path": "analysis\\runs\\A01-groups\\quartile_boundaries.csv",
+      "bytes": 72,
+      "sha256": "7a042fdb7dd9bed365aa5178d1f02c39c700bd5d4175f2c9b098a3ed0abc70a0"
+    },
+    {
+      "path": "analysis\\runs\\A01-groups\\summary.csv",
+      "bytes": 1576,
+      "sha256": "2f6099a557602992d3cbc7cb35d3f15a1fdfa5438bb7de380840d6937a127f59"
+    },
+    {
+      "path": "analysis\\runs\\A01-groups\\trend.csv",
+      "bytes": 764,
+      "sha256": "74c6764ee91c905989280926acfd9044d12966af5c05826648102ae7d962a7ef"
+    },
+    {
+      "path": "analysis\\runs\\A01-groups\\tukey.csv",
+      "bytes": 2022,
+      "sha256": "ff871efcbd331b3010c0297dd9551bcf0866702252c66f4dc60190fe2e92cd70"
+    },
+    {
+      "path": "analysis\\runs\\A02-models\\design_counts.csv",
+      "bytes": 68,
+      "sha256": "a4be688b3d89d6f1e1ffa4f554c71fc4fdc885bb9adfbca0da80aee738baa323"
+    },
+    {
+      "path": "analysis\\runs\\A02-models\\execution-notes.txt",
+      "bytes": 1455,
+      "sha256": "1d62bc6b5a33f1d3de5fea04fab896b82b876fbe380d0c16d086b36df79079cf"
+    },
+    {
+      "path": "analysis\\runs\\A02-models\\fractional_mean_predictions.csv",
+      "bytes": 714,
+      "sha256": "befcd94b6daf241717b188f24268791560a7811d83f4b5f2f47ac4d8321dbcf7"
+    },
+    {
+      "path": "analysis\\runs\\A02-models\\marker_correlations.png",
+      "bytes": 24280,
+      "sha256": "5164baff84d17bd207f379142994166d9fbe77e65ae5ff15f1e3c4301c13ac93"
+    },
+    {
+      "path": "analysis\\runs\\A02-models\\marker_spearman.csv",
+      "bytes": 280,
+      "sha256": "5d98f44e04438a006aa7c9dc6cfe59265db61d200f361b5c297877b6f8cf0235"
+    },
+    {
+      "path": "analysis\\runs\\A02-models\\model_sensitivities.csv",
+      "bytes": 7246,
+      "sha256": "891cb7462ed0cf127937330c6fa02b03ce17b6f33938cb8774d7e323bb1c0f92"
+    },
+    {
+      "path": "analysis\\runs\\A02-models\\sample_vs_weighted_percent.csv",
+      "bytes": 1300,
+      "sha256": "12ff36e53412adf5553e97a33cbbbbc89d4e17daf7f29a183e54397bb3a0bf68"
+    },
+    {
+      "path": "analysis\\runs\\A02-models\\survey_group_means.csv",
+      "bytes": 801,
+      "sha256": "93b94fe82f00fff92c29d2a9b6827359a541c50767e6a23bf3dad28d8f6218f0"
+    },
+    {
+      "path": "analysis\\runs\\A02-models\\survey_group_tests.csv",
+      "bytes": 480,
+      "sha256": "e9bc8b32f1f5f0045845b69fb269643d50fda5a5296f9efcd7c5ab082bbfe5b0"
+    },
+    {
+      "path": "analysis\\runs\\A02-models\\threshold_sensitivity.png",
+      "bytes": 24376,
+      "sha256": "c08cd59bc1b82d679a62b9e378be1958e7995854efade193eea341361ce671cc"
+    },
+    {
+      "path": "analysis\\runs\\A03-coding\\alternative_same_people\\group_membership_summary.csv",
+      "bytes": 142,
+      "sha256": "13789291b83c6e76816217194867d8274b790585ee9163f74da49001c38af1bc"
+    },
+    {
+      "path": "analysis\\runs\\A03-coding\\alternative_same_people\\omnibus.csv",
+      "bytes": 558,
+      "sha256": "e0be2e8db6b9ab5169b984e1cfa4775f8f169ca7a04ebead63a37f41dd1632c7"
+    },
+    {
+      "path": "analysis\\runs\\A03-coding\\alternative_same_people\\pairwise.csv",
+      "bytes": 4201,
+      "sha256": "fa173859532d9728d07e7bbe60795687260d2dbf918e16b3de1f6995d398c112"
+    },
+    {
+      "path": "analysis\\runs\\A03-coding\\alternative_same_people\\primary.csv",
+      "bytes": 450,
+      "sha256": "4efa9e39d2566b99a51d9fa03cc0726a5689c88001961aca58d0345cfd97e60c"
+    },
+    {
+      "path": "analysis\\runs\\A03-coding\\alternative_same_people\\quartile_boundaries.csv",
+      "bytes": 84,
+      "sha256": "166b3c31fa7f807ccf1dc99817573e8da96d5d7cc94e6bba6b328c34d14dee64"
+    },
+    {
+      "path": "analysis\\runs\\A03-coding\\alternative_same_people\\summary.csv",
+      "bytes": 1576,
+      "sha256": "4e336f714e2deb4428b44f1143bd45f1ac2b065c9360ec815057faa13b6fad0c"
+    },
+    {
+      "path": "analysis\\runs\\A03-coding\\alternative_same_people\\trend.csv",
+      "bytes": 760,
+      "sha256": "e973697eca9ee810c6ceab4e783c71ff5f22b5b9c7d4adfb0d019c1db733e4cb"
+    },
+    {
+      "path": "analysis\\runs\\A03-coding\\alternative_same_people\\tukey.csv",
+      "bytes": 1988,
+      "sha256": "e502a7d0a083efc57c9e584610da4f946b627edbc13f36454a236e82e5ff12de"
+    },
+    {
+      "path": "analysis\\runs\\A03-coding\\execution-notes.txt",
+      "bytes": 919,
+      "sha256": "24409c95b20971a864e7276b6db773c1cd3e62fd6d6dd074a6ec4f691e3e96e1"
+    },
+    {
+      "path": "analysis\\runs\\A03-coding\\group_transition_same_people.csv",
+      "bytes": 272,
+      "sha256": "bc23606f79e53f7505d6b9d2d4303e8d1d5eb26d06ec9c0dc82cbc7ecb3dac03"
+    },
+    {
+      "path": "analysis\\runs\\A03-coding\\retention_by_demography.csv",
+      "bytes": 968,
+      "sha256": "b60c192bf293a835c1ae836a59a671190d4d9da05fd5775d65e80423fe46a0b4"
+    },
+    {
+      "path": "analysis\\runs\\A03-coding\\same_people_summary.csv",
+      "bytes": 166,
+      "sha256": "dc4646c8540e55093488accb9cba1fe162460654c99786660ff97d08ad8b0a51"
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+[
+  {
+    "stage_id": "01",
+    "label": "연구 질문과 관측 단위",
+    "observation_unit": "participant; statistical inference uses pooled survey sample",
+    "concept_path": "4주차/염증과 노쇠 - 분석 길잡이/01-concept 01 데이터 한 행과 변수의 종류.md",
+    "paper_path": "4주차/염증과 노쇠 - 분석 길잡이/01-paper 01 논문 데이터의 모양.md",
+    "learning_previous": null,
+    "learning_next": "02",
+    "source": "s12889-024-20908-9.pdf and supplement.docx; source locations in V2-P01 evidence_map",
+    "figure_table_ids": [],
+    "issues": [
+      "ISSUE-01"
+    ],
+    "document_anchor": "v2-stage-01"
+  },
+  {
+    "stage_id": "02",
+    "label": "혈구 측정과 설명변수",
+    "observation_unit": "participant; statistical inference uses pooled survey sample",
+    "concept_path": "4주차/염증과 노쇠 - 분석 길잡이/02-concept 02 염증을 무엇으로 측정하는가.md",
+    "paper_path": "4주차/염증과 노쇠 - 분석 길잡이/02-paper 02 논문에서 네 지표를 만든 방법.md",
+    "learning_previous": "01",
+    "learning_next": "03",
+    "source": "s12889-024-20908-9.pdf and supplement.docx; source locations in V2-P01 evidence_map",
+    "figure_table_ids": [],
+    "issues": [
+      "ISSUE-02"
+    ],
+    "document_anchor": "v2-stage-02"
+  },
+  {
+    "stage_id": "03",
+    "label": "노쇠 측정과 결과변수",
+    "observation_unit": "participant; statistical inference uses pooled survey sample",
+    "concept_path": "4주차/염증과 노쇠 - 분석 길잡이/03-concept 03 FI와 노쇠 여부를 구별하기.md",
+    "paper_path": "4주차/염증과 노쇠 - 분석 길잡이/03-paper 03 이 논문은 FI를 어떻게 정의했나.md",
+    "learning_previous": "02",
+    "learning_next": "04",
+    "source": "s12889-024-20908-9.pdf and supplement.docx; source locations in V2-P01 evidence_map",
+    "figure_table_ids": [],
+    "issues": [
+      "ISSUE-03"
+    ],
+    "document_anchor": "v2-stage-03"
+  },
+  {
+    "stage_id": "04",
+    "label": "표본 선정·결측·설계",
+    "observation_unit": "participant; statistical inference uses pooled survey sample",
+    "concept_path": "4주차/염증과 노쇠 - 분석 길잡이/04-concept 04 누구를 언제 관찰했는가.md",
+    "paper_path": "4주차/염증과 노쇠 - 분석 길잡이/04-paper 04 표본 선정과 단면자료의 한계.md",
+    "learning_previous": "03",
+    "learning_next": "05",
+    "source": "s12889-024-20908-9.pdf and supplement.docx; source locations in V2-P01 evidence_map",
+    "figure_table_ids": [
+      "Figure1"
+    ],
+    "issues": [
+      "ISSUE-04"
+    ],
+    "document_anchor": "v2-stage-04"
+  },
+  {
+    "stage_id": "05",
+    "label": "기술통계와 Table1",
+    "observation_unit": "participant; statistical inference uses pooled survey sample",
+    "concept_path": "4주차/염증과 노쇠 - 분석 길잡이/05-concept 05 중앙값·IQR·빈도·비율 직접 계산.md",
+    "paper_path": "4주차/염증과 노쇠 - 분석 길잡이/05-paper 05 Table 1을 읽는 순서.md",
+    "learning_previous": "04",
+    "learning_next": "06",
+    "source": "s12889-024-20908-9.pdf and supplement.docx; source locations in V2-P01 evidence_map",
+    "figure_table_ids": [
+      "Table1"
+    ],
+    "issues": [
+      "ISSUE-05"
+    ],
+    "document_anchor": "v2-stage-05"
+  },
+  {
+    "stage_id": "06",
+    "label": "이진 결과와 오즈",
+    "observation_unit": "participant; statistical inference uses pooled survey sample",
+    "concept_path": "4주차/염증과 노쇠 - 분석 길잡이/06-concept 06 확률에서 오즈와 로지스틱으로.md",
+    "paper_path": "4주차/염증과 노쇠 - 분석 길잡이/06-paper 06 이 논문의 OR를 정확히 읽기.md",
+    "learning_previous": "05",
+    "learning_next": "07",
+    "source": "s12889-024-20908-9.pdf and supplement.docx; source locations in V2-P01 evidence_map",
+    "figure_table_ids": [],
+    "issues": [
+      "ISSUE-06"
+    ],
+    "document_anchor": "v2-stage-06"
+  },
+  {
+    "stage_id": "07",
+    "label": "척도·가정·진단",
+    "observation_unit": "participant; statistical inference uses pooled survey sample",
+    "concept_path": "4주차/염증과 노쇠 - 분석 길잡이/07-concept 07 로그변환과 로지스틱의 가정.md",
+    "paper_path": "4주차/염증과 노쇠 - 분석 길잡이/07-paper 07 논문이 한 전처리와 보고하지 않은 점검.md",
+    "learning_previous": "06",
+    "learning_next": "08",
+    "source": "s12889-024-20908-9.pdf and supplement.docx; source locations in V2-P01 evidence_map",
+    "figure_table_ids": [],
+    "issues": [
+      "ISSUE-07"
+    ],
+    "document_anchor": "v2-stage-07"
+  },
+  {
+    "stage_id": "08",
+    "label": "보정 모형과 Table2",
+    "observation_unit": "participant; statistical inference uses pooled survey sample",
+    "concept_path": "4주차/염증과 노쇠 - 분석 길잡이/08-concept 08 공변량 보정과 두 모형의 목적.md",
+    "paper_path": "4주차/염증과 노쇠 - 분석 길잡이/08-paper 08 Table 2의 Model 1과 Model 2.md",
+    "learning_previous": "07",
+    "learning_next": "09",
+    "source": "s12889-024-20908-9.pdf and supplement.docx; source locations in V2-P01 evidence_map",
+    "figure_table_ids": [
+      "Table2"
+    ],
+    "issues": [
+      "ISSUE-08"
+    ],
+    "document_anchor": "v2-stage-08"
+  },
+  {
+    "stage_id": "09",
+    "label": "설명변수 사분위와 Table3",
+    "observation_unit": "participant; statistical inference uses pooled survey sample",
+    "concept_path": "4주차/염증과 노쇠 - 분석 길잡이/09-concept 09 사분위군은 보정이 아니라 비교 방식.md",
+    "paper_path": "4주차/염증과 노쇠 - 분석 길잡이/09-paper 09 Table 3은 같은 데이터를 어떻게 다시 보나.md",
+    "learning_previous": "08",
+    "learning_next": "10",
+    "source": "s12889-024-20908-9.pdf and supplement.docx; source locations in V2-P01 evidence_map",
+    "figure_table_ids": [
+      "Table3"
+    ],
+    "issues": [
+      "ISSUE-09"
+    ],
+    "document_anchor": "v2-stage-09"
+  },
+  {
+    "stage_id": "10",
+    "label": "그림·민감도·결론",
+    "observation_unit": "participant; statistical inference uses pooled survey sample",
+    "concept_path": "4주차/염증과 노쇠 - 분석 길잡이/10-concept 10 곡선·집단차·민감도로 해석 점검.md",
+    "paper_path": "4주차/염증과 노쇠 - 분석 길잡이/10-paper 10 Figure를 통해 결론의 범위 정하기.md",
+    "learning_previous": "09",
+    "learning_next": null,
+    "source": "s12889-024-20908-9.pdf and supplement.docx; source locations in V2-P01 evidence_map",
+    "figure_table_ids": [
+      "Figure2",
+      "Figure3",
+      "FigureS1"
+    ],
+    "issues": [
+      "ISSUE-10"
+    ],
+    "document_anchor": "v2-stage-10"
+  }
+]

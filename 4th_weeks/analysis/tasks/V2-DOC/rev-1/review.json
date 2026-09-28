@@ -1,0 +1,6 @@
+{
+  "reviewer": "v2_reviewer",
+  "reference": "analysis/tasks/V2-Q01/rev-1/work/document_review.json",
+  "scope": "Bounded v2 task only; author-identical FI/cohort and full paper replication remain unresolved",
+  "review_type": "scoped evidence or integration review"
+}

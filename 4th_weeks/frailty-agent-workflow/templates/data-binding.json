@@ -1,0 +1,10 @@
+{
+  "status": "pending",
+  "workspace_relative_path": null,
+  "sha256": null,
+  "reviewer_id": null,
+  "source": null,
+  "data_contract_path": null,
+  "verified_fields": [],
+  "limitations": ["원자료를 확인한 뒤 채울 것. 가상 자료를 실제 NHANES 자료로 등록하지 말 것."]
+}

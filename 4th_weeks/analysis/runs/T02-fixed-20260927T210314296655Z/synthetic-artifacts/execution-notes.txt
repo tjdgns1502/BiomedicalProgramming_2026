@@ -1,0 +1,33 @@
+All analyses use analyst-defined complete-36-item candidate FI, NOT the author FI.
+Survey weights correct design probabilities, not nonresponse from complete-FI selection.
+Weighted percentage descriptions are point estimates; no percentage CIs computed.
+Age and race public-use coding retained; age is topcoded; model1 only.
+Fractional logit targets conditional mean FI: exp(beta) is NOT odds of binary frailty.
+Pointwise confidence intervals; exploratory BH across 32 sensitivity coefficients shown separately.
+Platelet removal changes the outcome definition; it cannot prove removal of all shared-component bias.
+Threshold and age analyses are sensitivity, not threshold validation or evidence of optimal age cutoff.
+Model2, beta regression and spline replication are not asserted: unresolved definitions remain.
+R version 4.6.1 (2026-06-24 ucrt)
+Platform: x86_64-w64-mingw32/x64
+Running under: Windows 11 x64 (build 26200)
+
+Matrix products: default
+  LAPACK version 3.12.1
+
+locale:
+[1] C
+system code page: 65001
+
+time zone: Asia/Seoul
+tzcode source: internal
+
+attached base packages:
+[1] grid      stats     graphics  grDevices utils     datasets  methods  
+[8] base     
+
+other attached packages:
+[1] survey_4.5     survival_3.8-6 Matrix_1.7-5  
+
+loaded via a namespace (and not attached):
+[1] compiler_4.6.1 tools_4.6.1    DBI_1.3.0      otel_0.2.0     Rcpp_1.1.2    
+[6] splines_4.6.1  lattice_0.22-9 mitools_2.7   

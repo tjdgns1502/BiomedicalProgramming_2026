@@ -1,0 +1,93 @@
+{
+  "status": "corrected_numeric_checks_pass",
+  "pfq_rows_compared": 24119,
+  "PFQ_exact_match": true,
+  "FI30_exact_match": true,
+  "matched_model_IDs": {
+    "NLR ": 10874,
+    "NLR _quartile": 10874,
+    "NLR _trend": 10874,
+    "MLR ": 10874,
+    "MLR _quartile": 10874,
+    "MLR _trend": 10874,
+    "SIRI ": 10874,
+    "SIRI _quartile": 10874,
+    "SIRI _trend": 10874,
+    "SII ": 10874,
+    "SII _quartile": 10874,
+    "SII _trend": 10874
+  },
+  "numeric": {
+    "continuous_models": {
+      "rows": 40,
+      "finite_p": 40,
+      "planned_family_N": 4
+    },
+    "quartile_models": {
+      "rows": 72,
+      "finite_p": 72,
+      "planned_family_N": 12
+    },
+    "trend_models": {
+      "rows": 24,
+      "finite_p": 24,
+      "planned_family_N": 4
+    },
+    "omnibus_tests": {
+      "rows": 24,
+      "finite_p": 24,
+      "planned_family_N": 4
+    },
+    "spline_tests": {
+      "rows": 8,
+      "finite_p": 8,
+      "planned_family_N": 4
+    },
+    "interactions": {
+      "rows": 24,
+      "finite_p": 24,
+      "planned_family_N": 24
+    }
+  },
+  "energy_by_cycle": [
+    {
+      "cycle": "1999-2000",
+      "x": 2067
+    },
+    {
+      "cycle": "2001-2002",
+      "x": 2166
+    },
+    {
+      "cycle": "2003-2004",
+      "x": 2197
+    },
+    {
+      "cycle": "2005-2006",
+      "x": 2001
+    },
+    {
+      "cycle": "2007-2008",
+      "x": 2791
+    },
+    {
+      "cycle": "2009-2010",
+      "x": 2798
+    },
+    {
+      "cycle": "2011-2012",
+      "x": 2306
+    },
+    {
+      "cycle": "2013-2014",
+      "x": 2404
+    },
+    {
+      "cycle": "2015-2016",
+      "x": 2500
+    }
+  ],
+  "resolved_implementation_findings": ["1999 reliable dietary status must be DRDDRSTS; DRDDRSTZ is2001 field. Corrected raw1999 extraction now verified.", "Drop unused factor levels within domains before design-matrix rank check; zero dummy columns from absent cycles are not genuine nonestimable targets."],
+  "table_plot_review": "separate_review"
+}
+

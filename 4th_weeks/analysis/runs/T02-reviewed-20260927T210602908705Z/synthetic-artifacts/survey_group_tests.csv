@@ -1,0 +1,5 @@
+"marker","n","p","design_df","method","p_bonferroni","p_BH"
+"NLR",1272,0.379496396012602,40,"Survey Wald group means",1,0.712485719389263
+"MLR",1272,0.0867491103805361,40,"Survey Wald group means",0.346996441522144,0.346996441522144
+"SIRI",1272,0.559395661829373,40,"Survey Wald group means",1,0.712485719389263
+"SII",1272,0.712485719389263,40,"Survey Wald group means",1,0.712485719389263

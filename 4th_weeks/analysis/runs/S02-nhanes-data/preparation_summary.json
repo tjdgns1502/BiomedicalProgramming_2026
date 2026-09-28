@@ -1,0 +1,15 @@
+{
+  "cycles": 9,
+  "n": 24119,
+  "columns": 673,
+  "fi_computed": false,
+  "biomarker_units": "cell counts 1000 cells/uL; SIRI and SII in 1000 cells/uL; NLR/MLR unitless",
+  "notes": [
+    "Observed raw codes retained, including refused/dont-know sentinel values.",
+    "Age is public-use topcoded; use RIDAGEYR as released.",
+    "No author-specific FI coding inferred.",
+    "Use cbc_complete_positive for logarithmic biomarker analyses.",
+    "MEC combined weight 1999/2001 WTMEC4YR*(4/18); later WTMEC2YR*(2/18).",
+    "Single-cycle analysis must use original WTMEC2YR."
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "block_id": "<!-- NHANES-EXECUTION-20260928-v1 -->",
+  "files": [
+    {
+      "path": "frailty-learning\\source\\00-start.md",
+      "original_bytes": 5477,
+      "before_sha256": "9a4b82144ab3f13e841bd168eb05de2e71def710b1fab001b23f0fcc72389075",
+      "after_sha256": "3656e451bdf719a26f651805135c3c5f965e7cc9ec76721bedb00fe863681b5d",
+      "added_bytes": 3366,
+      "original_prefix_preserved": true
+    },
+    {
+      "path": "4주차\\염증과 노쇠 - 분석 길잡이\\00-start 처음부터 따라가는 분석 흐름.md",
+      "original_bytes": 6883,
+      "before_sha256": "f23f50ba48e19fec2de4ec93ba1d5f7837d29c9eeed19a74eadb65b460dc5b9c",
+      "after_sha256": "d59c2cbc58ce6553cd124bb4954d41dab1a453d315b27882e84fd9b86387f351",
+      "added_bytes": 4176,
+      "original_prefix_preserved": true
+    },
+    {
+      "path": "frailty-learning\\source\\01-paper.md",
+      "original_bytes": 2280,
+      "before_sha256": "fa13f26f7f686f99dd54f60bce25178374c3a063a8bf2685904619003b7cf8c1",
+      "after_sha256": "efda1d30fac4c4fb03fc290f0b0bc03d8f516c0aed6563d3080c44ad647e2a80",
+      "added_bytes": 1537,
+      "original_prefix_preserved": true
+    },
+    {
+      "path": "4주차\\염증과 노쇠 - 분석 길잡이\\01-paper 01 논문 데이터의 모양.md",
+      "original_bytes": 2762,
+      "before_sha256": "a4237a381adf7994d5e9ce75952188fca3da60c57bf4116ea70b84d93873164f",
+      "after_sha256": "d75e3a6cbc3e633ed8b1aa2af699540f93fb5884fbc2e0751ffe2ef9fcb99670",
+      "added_bytes": 1811,
+      "original_prefix_preserved": true
+    },
+    {
+      "path": "frailty-learning\\source\\02-paper.md",
+      "original_bytes": 2458,
+      "before_sha256": "c64b078fe0cff99fd35469bfd8f2a214db08ed05cbb5f9b2af651286aa256ff7",
+      "after_sha256": "c7a04c413ff1a4bcc5e4ace8aaaf0fefa4f88f36ed9149a0cec30826cbe66934",
+      "added_bytes": 1495,
+      "original_prefix_preserved": true
+    },
+    {
+      "path": "4주차\\염증과 노쇠 - 분석 길잡이\\02-paper 02 논문에서 네 지표를 만든 방법.md",
+      "original_bytes": 2938,
+      "before_sha256": "8d67cfb5f63e15e45644a4a1cd455a375991f95290a14b2775aead0d5941c170",
+      "after_sha256": "cdfd7fad093cd71cd0eec7c92ad180bce94575a6af4ff50f79d3422d7733dc49",
+      "added_bytes": 1825,
+      "original_prefix_preserved": true
+    },
+    {
+      "path": "frailty-learning\\source\\03-paper.md",
+      "original_bytes": 5198,
+      "before_sha256": "ef9df0866c476e29e66a16b0c6d5041990b68ecec538bbe131d53db121f6b3ab",
+      "after_sha256": "84a9f4aa0c8e5b440a80409239cea4136347e9868a79ed072c742fc5c7fc4db1",
+      "added_bytes": 2483,
+      "original_prefix_preserved": true
+    },
+    {
+      "path": "4주차\\염증과 노쇠 - 분석 길잡이\\03-paper 03 이 논문은 FI를 어떻게 정의했나.md",
+      "original_bytes": 5679,
+      "before_sha256": "261c2fb360161203f77b35ac6e32205c426230341963bd98325321b02d864dce",
+      "after_sha256": "05d6dbc09f24e87a2ba42248929c1a0eca9be5355f338ed3726b1f9fe190e656",
+      "added_bytes": 2927,
+      "original_prefix_preserved": true
+    },
+    {
+      "path": "frailty-learning\\source\\04-paper.md",
+      "original_bytes": 3052,
+      "before_sha256": "3a3204a35f946f630df0965a5e4fec7bdab7837831b1501c820a306b740a0d94",
+      "after_sha256": "1705a6f7a90473c1277867275746207edb5c294516db6b996d3cb4415464263c",
+      "added_bytes": 2050,
+      "original_prefix_preserved": true
+    },
+    {
+      "path": "4주차\\염증과 노쇠 - 분석 길잡이\\04-paper 04 표본 선정과 단면자료의 한계.md",
+      "original_bytes": 3537,
+      "before_sha256": "e861e6c423112268db7b94fba028c8017baf0841276b025b6ee67a4eb0974ee5",
+      "after_sha256": "5ab94bda4cce8c2508c9c1cb9167caa614a6770d6cdbf6bfbd78525abd88a92e",
+      "added_bytes": 2324,
+      "original_prefix_preserved": true
+    },
+    {
+      "path": "frailty-learning\\source\\05-paper.md",
+      "original_bytes": 2641,
+      "before_sha256": "2975de2ed0415ea78268c60199bc28ff99e04af66c6b6e0c785ddb1d12493ae7",
+      "after_sha256": "d1d2f99e0c4324f84fc04767006e45bfb84d53f55ad74a362e8da00ccb9d9b46",
+      "added_bytes": 1772,
+      "original_prefix_preserved": true
+    },
+    {
+      "path": "4주차\\염증과 노쇠 - 분석 길잡이\\05-paper 05 Table 1을 읽는 순서.md",
+      "original_bytes": 3149,
+      "before_sha256": "9e7b0920b2210779ba435bb97f352c51895f2880b3cc997f9479017e8262f54d",
+      "after_sha256": "e3b93e733bd9ffa8ab4c0d9e56efd67b626c6e4736729ff549dbf4d198685559",
+      "added_bytes": 2046,
+      "original_prefix_preserved": true
+    },
+    {
+      "path": "frailty-learning\\source\\06-paper.md",
+      "original_bytes": 2495,
+      "before_sha256": "2a7e93380b1716fe051f69fb50607f7401d6b0b7c7d8aa36a155f681758d9437",
+      "after_sha256": "7fe0d0f0854e1bc22883bdca029db4ad200adf18d8b5bccc0563045fd5723a4c",
+      "added_bytes": 1040,
+      "original_prefix_preserved": true
+    },
+    {
+      "path": "4주차\\염증과 노쇠 - 분석 길잡이\\06-paper 06 이 논문의 OR를 정확히 읽기.md",
+      "original_bytes": 2986,
+      "before_sha256": "e690dc68891161d2a90c761ab65a9972f5fb1583d40b400e040af018bb52b44c",
+      "after_sha256": "e8bffce53b707538bdb24486dcc5e8e3fb8039f23a10e7c7c4d3688117a43678",
+      "added_bytes": 1336,
+      "original_prefix_preserved": true
+    },
+    {
+      "path": "frailty-learning\\source\\07-paper.md",
+      "original_bytes": 2395,
+      "before_sha256": "2c05e7890d91e7152594c375fad66c8470e8e8779747e0f1c6983c5640b1f0e5",
+      "after_sha256": "1314b9d8e4f7418e22bc1b3f38bdf9f35972addae034a316a6aabbf57b9beb15",
+      "added_bytes": 2080,
+      "original_prefix_preserved": true
+    },
+    {
+      "path": "4주차\\염증과 노쇠 - 분석 길잡이\\07-paper 07 논문이 한 전처리와 보고하지 않은 점검.md",
+      "original_bytes": 2878,
+      "before_sha256": "d1a9dedad9bdcc5291e07529eea48c49ccaa880991da7beec1bcd3f28ff93f05",
+      "after_sha256": "710c3c901db7e5ea291264e0c9b30ac48f1157b7bd1ad8505ddb42bfbfdeeb15",
+      "added_bytes": 2440,
+      "original_prefix_preserved": true
+    },
+    {
+      "path": "frailty-learning\\source\\08-paper.md",
+      "original_bytes": 2268,
+      "before_sha256": "e360536412b6a34b7f28c655005430361cb4508d5e375624a54bf5187058134e",
+      "after_sha256": "211293cf999575d2bb7078786b16ebfbedbdd61637dba5b9f16983891c5f8140",
+      "added_bytes": 2618,
+      "original_prefix_preserved": true
+    },
+    {
+      "path": "4주차\\염증과 노쇠 - 분석 길잡이\\08-paper 08 Table 2의 Model 1과 Model 2.md",
+      "original_bytes": 2792,
+      "before_sha256": "d6e778e7e51a1f639431a9c273a38e777471b37c9e189ad938ad49cc77fcfae7",
+      "after_sha256": "2f691a651dacca4f2f1d7672772a98eabcf4104bd9daf92630e3fdfc1eaafeed",
+      "added_bytes": 2902,
+      "original_prefix_preserved": true
+    },
+    {
+      "path": "frailty-learning\\source\\09-paper.md",
+      "original_bytes": 2569,
+      "before_sha256": "a202191625ace5e11fc8165745f2b3a839d14f939412b01f60718e7ae0e6f18a",
+      "after_sha256": "1e1890ce18315722c32cb6e045c9d3aea2cd267ea25d49b0909b23cc88a955e9",
+      "added_bytes": 3843,
+      "original_prefix_preserved": true
+    },
+    {
+      "path": "4주차\\염증과 노쇠 - 분석 길잡이\\09-paper 09 Table 3은 같은 데이터를 어떻게 다시 보나.md",
+      "original_bytes": 3108,
+      "before_sha256": "5019aa2843c8151de4cce5ebd78467ab3cf7c66638f2f88817394031a51c515b",
+      "after_sha256": "c3cc0c3d636d89a3309f00c8765413f907f95606906eaaecc948a82b357f8065",
+      "added_bytes": 4177,
+      "original_prefix_preserved": true
+    },
+    {
+      "path": "frailty-learning\\source\\10-paper.md",
+      "original_bytes": 4196,
+      "before_sha256": "0f0972b5d02fda29864993888e6447a8ab81b408e58acdd041274854d0ecd185",
+      "after_sha256": "de5548342995e5c82ed59579a02780b72f2dfcc78c171b76bf89d85f29747089",
+      "added_bytes": 4495,
+      "original_prefix_preserved": true
+    },
+    {
+      "path": "4주차\\염증과 노쇠 - 분석 길잡이\\10-paper 10 Figure를 통해 결론의 범위 정하기.md",
+      "original_bytes": 4727,
+      "before_sha256": "e37ac3dac59942c6809a67bb033d9c20b30f16be85ae21f4868e217cb411f83b",
+      "after_sha256": "912ff991bd960141a0830c78a4a867d9d64f573b8914f93f70826aa03a1da346",
+      "added_bytes": 4839,
+      "original_prefix_preserved": true
+    }
+  ],
+  "html_changed": false,
+  "obsidian_adjustment": "Only appended block links changed to internal evidence snapshots; original byte prefixes still preserved."
+}

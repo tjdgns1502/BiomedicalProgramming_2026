@@ -1,0 +1,110 @@
+     marker    n          p design_df                  method p_bonferroni
+NLR     NLR 1272 0.37949640        40 Survey Wald group means    1.0000000
+MLR     MLR 1272 0.08674911        40 Survey Wald group means    0.3469964
+SIRI   SIRI 1272 0.55939566        40 Survey Wald group means    1.0000000
+SII     SII 1272 0.71248572        40 Survey Wald group means    1.0000000
+          p_BH
+NLR  0.7124857
+MLR  0.3469964
+SIRI 0.7124857
+SII  0.7124857
+       marker                                 analysis    n   beta_logx
+logx      NLR      unweighted_binary_FI_gt_0.30_model1 1272 -0.15631386
+logx1     NLR        weighted_binary_FI_gt_0.20_model1 1272 -0.21004673
+logx2     NLR        weighted_binary_FI_gt_0.25_model1 1272 -0.33801557
+logx3     NLR        weighted_binary_FI_gt_0.30_model1 1272 -0.19113395
+logx4     NLR        weighted_binary_FI_gt_0.35_model1 1272 -0.11195746
+logx5     NLR         weighted_binary_FI_gt_0.30_age60  919 -0.27084938
+logx6     NLR                   weighted_fractional_FI 1272 -0.03947906
+logx7     NLR weighted_fractional_FI_without_platelets 1272 -0.04042160
+logx8     MLR      unweighted_binary_FI_gt_0.30_model1 1272  0.04277399
+logx9     MLR        weighted_binary_FI_gt_0.20_model1 1272  0.03568165
+logx10    MLR        weighted_binary_FI_gt_0.25_model1 1272  0.03728896
+logx11    MLR        weighted_binary_FI_gt_0.30_model1 1272  0.12445516
+logx12    MLR        weighted_binary_FI_gt_0.35_model1 1272  0.55145409
+logx13    MLR         weighted_binary_FI_gt_0.30_age60  919  0.19041345
+logx14    MLR                   weighted_fractional_FI 1272  0.03590122
+logx15    MLR weighted_fractional_FI_without_platelets 1272  0.04237221
+logx16   SIRI      unweighted_binary_FI_gt_0.30_model1 1272 -0.04449566
+logx17   SIRI        weighted_binary_FI_gt_0.20_model1 1272 -0.01209970
+logx18   SIRI        weighted_binary_FI_gt_0.25_model1 1272 -0.16008537
+logx19   SIRI        weighted_binary_FI_gt_0.30_model1 1272 -0.05727988
+logx20   SIRI        weighted_binary_FI_gt_0.35_model1 1272 -0.45591161
+logx21   SIRI         weighted_binary_FI_gt_0.30_age60  919 -0.13611101
+logx22   SIRI                   weighted_fractional_FI 1272 -0.02439854
+logx23   SIRI weighted_fractional_FI_without_platelets 1272 -0.02034067
+logx24    SII      unweighted_binary_FI_gt_0.30_model1 1272 -0.28125735
+logx25    SII        weighted_binary_FI_gt_0.20_model1 1272 -0.18306332
+logx26    SII        weighted_binary_FI_gt_0.25_model1 1272 -0.20227064
+logx27    SII        weighted_binary_FI_gt_0.30_model1 1272 -0.29863652
+logx28    SII        weighted_binary_FI_gt_0.35_model1 1272 -0.37191800
+logx29    SII         weighted_binary_FI_gt_0.30_age60  919 -0.29916824
+logx30    SII                   weighted_fractional_FI 1272 -0.02504598
+logx31    SII weighted_fractional_FI_without_platelets 1272 -0.01971749
+               se      ci_low    ci_high  exp_beta exp_ci_low exp_ci_high
+logx   0.19678180 -0.54199911 0.22937138 0.8552907  0.5815844    1.257809
+logx1  0.16286842 -0.54179885 0.12170539 0.8105464  0.5817009    1.129421
+logx2  0.18291995 -0.71061133 0.03458018 0.7131842  0.4913437    1.035185
+logx3  0.21648048 -0.63209025 0.24982236 0.8260219  0.5314797    1.283797
+logx4  0.40706763 -0.94112709 0.71721217 0.8940823  0.3901878    2.048714
+logx5  0.24754778 -0.77508770 0.23338894 0.7627314  0.4606634    1.262873
+logx6  0.03250446 -0.10568848 0.02673035 0.9612901  0.8997049    1.027091
+logx7  0.03357135 -0.10880420 0.02796100 0.9603845  0.8969060    1.028356
+logx8  0.19039777 -0.33039877 0.41594675 1.0437020  0.7186371    1.515805
+logx9  0.15908423 -0.28836232 0.35972561 1.0363259  0.7494900    1.432936
+logx10 0.16087227 -0.29039714 0.36497505 1.0379929  0.7479665    1.440478
+logx11 0.22624896 -0.33639890 0.58530922 1.1325312  0.7143381    1.795546
+logx12 0.40808126 -0.27978024 1.38268841 1.7357752  0.7559499    3.985602
+logx13 0.27247561 -0.36460121 0.74542812 1.2097497  0.6944735    2.107343
+logx14 0.02965159 -0.02449710 0.09629953 1.0365534  0.9758005    1.101089
+logx15 0.03098526 -0.02074269 0.10548712 1.0432827  0.9794710    1.111252
+logx16 0.18624003 -0.40951942 0.32052810 0.9564798  0.6639693    1.377855
+logx17 0.14659750 -0.31070902 0.28650963 0.9879732  0.7329271    1.331771
+logx18 0.17012703 -0.50662279 0.18645205 0.8520710  0.6025270    1.204967
+logx19 0.20888472 -0.48276413 0.36820438 0.9443297  0.6170754    1.445137
+logx20 0.35525863 -1.17954975 0.26772653 0.6338699  0.3074171    1.306990
+logx21 0.24202373 -0.62909722 0.35687519 0.8727457  0.5330728    1.428858
+logx22 0.03051064 -0.08654669 0.03774961 0.9758967  0.9170927    1.038471
+logx23 0.02937382 -0.08017318 0.03949184 0.9798648  0.9229565    1.040282
+logx24 0.19466711 -0.66279789 0.10028318 0.7548341  0.5154073    1.105484
+logx25 0.16512955 -0.51942121 0.15329456 0.8327154  0.5948648    1.165668
+logx26 0.18956534 -0.58840261 0.18386133 0.8168738  0.5552135    1.201849
+logx27 0.23673821 -0.78085647 0.18358343 0.7418290  0.4580136    1.201515
+logx28 0.29754361 -0.97799450 0.23415851 0.6894108  0.3760645    1.263845
+logx29 0.23630009 -0.78049577 0.18215929 0.7414347  0.4581788    1.199805
+logx30 0.03539512 -0.09714348 0.04705153 0.9752651  0.9074258    1.048176
+logx31 0.03598325 -0.09301298 0.05357799 0.9804756  0.9111817    1.055039
+                p  df convergence p_BH_exploratory_all
+logx   0.42699100 Inf        TRUE            0.7180119
+logx1  0.20640829  32        TRUE            0.6270839
+logx2  0.07388002  32        TRUE            0.6270839
+logx3  0.38386693  32        TRUE            0.7180119
+logx4  0.78505813  32        TRUE            0.8505337
+logx5  0.28206587  32        TRUE            0.6270839
+logx6  0.23341563  32        TRUE            0.6270839
+logx7  0.23740104  32        TRUE            0.6270839
+logx8  0.82224694 Inf        TRUE            0.8505337
+logx9  0.82395449  32        TRUE            0.8505337
+logx10 0.81817523  32        TRUE            0.8505337
+logx11 0.58608355  32        TRUE            0.7520252
+logx12 0.18606533  32        TRUE            0.6270839
+logx13 0.48970813  32        TRUE            0.7180119
+logx14 0.23485093  32        TRUE            0.6270839
+logx15 0.18099867  32        TRUE            0.6270839
+logx16 0.81117099 Inf        TRUE            0.8505337
+logx17 0.93473394  32        TRUE            0.9347339
+logx18 0.35376705  32        TRUE            0.7075341
+logx19 0.78567985  32        TRUE            0.8505337
+logx20 0.20859523  32        TRUE            0.6270839
+logx21 0.57777111  32        TRUE            0.7520252
+logx22 0.42979666  32        TRUE            0.7180119
+logx23 0.49363321  32        TRUE            0.7180119
+logx24 0.14851074 Inf        TRUE            0.6270839
+logx25 0.27586371  32        TRUE            0.6270839
+logx26 0.29394559  32        TRUE            0.6270839
+logx27 0.21626059  32        TRUE            0.6270839
+logx28 0.22037815  32        TRUE            0.6270839
+logx29 0.21463404  32        TRUE            0.6270839
+logx30 0.48430902  32        TRUE            0.7180119
+logx31 0.58751970  32        TRUE            0.7520252
+PASS synthetic only: full design preserved, domain counted, 32 models converged, bounded fractional predictions

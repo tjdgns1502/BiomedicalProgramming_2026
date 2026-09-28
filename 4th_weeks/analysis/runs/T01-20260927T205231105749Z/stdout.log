@@ -1,0 +1,2 @@
+PASS: grouping, ties, invalid data, family size, sign, scale invariance, missingness
+These tests use synthetic fixtures and are not NHANES results.

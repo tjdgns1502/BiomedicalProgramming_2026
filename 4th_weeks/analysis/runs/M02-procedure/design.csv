@@ -1,0 +1,5 @@
+"scenario_id","scenario","distribution","mean_parameters","sd_parameters","equal_means","identical_distributions","n_per_group"
+1,"normal_equal_null","normal","0,0,0,0","1,1,1,1",TRUE,TRUE,30
+2,"normal_hetero_equal_mean","normal","0,0,0,0","1,2,3,4",TRUE,FALSE,30
+3,"lognormal_identical_null","lognormal","logmean=0,0,0,0","logsd=1,1,1,1",TRUE,TRUE,30
+4,"normal_mean_alternative","normal","0,.2,.4,.6","1,1,1,1",FALSE,FALSE,30

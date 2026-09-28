@@ -1,0 +1,18 @@
+{
+  "task_id": "V2-DOC",
+  "state": "accepted",
+  "outputs": [
+    "4주차/염증과 노쇠 - 분석 길잡이/01-paper 01 논문 데이터의 모양.md",
+    "4주차/염증과 노쇠 - 분석 길잡이/02-paper 02 논문에서 네 지표를 만든 방법.md",
+    "4주차/염증과 노쇠 - 분석 길잡이/03-paper 03 이 논문은 FI를 어떻게 정의했나.md",
+    "4주차/염증과 노쇠 - 분석 길잡이/04-paper 04 표본 선정과 단면자료의 한계.md",
+    "4주차/염증과 노쇠 - 분석 길잡이/05-paper 05 Table 1을 읽는 순서.md",
+    "4주차/염증과 노쇠 - 분석 길잡이/06-paper 06 이 논문의 OR를 정확히 읽기.md",
+    "4주차/염증과 노쇠 - 분석 길잡이/07-paper 07 논문이 한 전처리와 보고하지 않은 점검.md",
+    "4주차/염증과 노쇠 - 분석 길잡이/08-paper 08 Table 2의 Model 1과 Model 2.md",
+    "4주차/염증과 노쇠 - 분석 길잡이/09-paper 09 Table 3은 같은 데이터를 어떻게 다시 보나.md",
+    "4주차/염증과 노쇠 - 분석 길잡이/10-paper 10 Figure를 통해 결론의 범위 정하기.md",
+    "4주차/염증과 노쇠 - 분석 길잡이/00-start 처음부터 따라가는 분석 흐름.md"
+  ],
+  "scope": "Bounded v2 task only; author-identical FI/cohort and full paper replication remain unresolved"
+}

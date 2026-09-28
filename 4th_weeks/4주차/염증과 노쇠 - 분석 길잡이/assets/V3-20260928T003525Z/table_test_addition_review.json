@@ -1,0 +1,19 @@
+{
+ "task_id":"V3-Q01", "review_type":"independent_plan_addition_review", "reviewer_id":"continuation_review", "verdict":"accept_small_source_required_extension", "does_not_block_existing_implementation":true,
+ "source_evidence":["paper_extracted.txt lines198-204: continuous Mann-Whitney/t and categorical chi-square", "paper_extracted.txt line338: complex-survey Wilcoxon and Rao-Scott second order", "analysis/runs/S01-paper-contract/supplement_extracted.txt lines384,724,1072,1413: same survey test footnote"],
+ "reason":"These are paper table analyses, not arbitrary p columns. Current descriptive-only outputs remain valid but should not be labelled complete Table1/S2-S5 candidate analytical coverage until tests are included or specifically nonestimable. Supplemental four-group ranks can use the same small testing function.",
+ "frozen_extension":{
+  "tables":"Table1 (frailty binary groups), S2-S5 (each respective four marker quartiles)",
+  "rows":"Freeze source-aligned variable row manifest from existing descriptive table schema before any new test results; one test per variable, not one test per category level. Document absent source fields explicitly. Missingness/count-only rows receive no invented test.",
+  "continuous":"survey::svyranktest(y~group, design, test='wilcoxon'); same rank-score method for two or four groups. Four-group implementation is documented k-sample rank test, also named KruskalWallis. Not an automatic test solely of medians, and not survey-weighted mean Wald.",
+  "categorical":"survey::svychisq(~variable+group, design, statistic='F') second-order Rao-Scott F. Preserve p/statistic/df/method and warnings.",
+  "domain":"Use frozen primary table reference cohort and fixed marker cuts. For each row subset existing all-age parent design to the eligible cohort with nonmissing row variable/group; do not rebuild survey design in subsets. Record row N/group N/missing N/design df.",
+  "multiplicity":"Separate family for each of five tables. Raw p plus Holm over full planned test-row count, retaining unavailable rows in family denominator. These adjusted p values are analyst additions; no total experiment-wide control claimed. No pairwise posthoc tests or normality-selected method changes.",
+  "self_defined_group_rows":"Keep any source-required own-marker versus own-marker-quartile or FI versus FI-derived binary comparison visibly structurally coupled. Such p values cannot validate an independent association. If structurally degenerate/unestimable, retain named row with NA/reason; do not silently remove it or use it as a discovery.",
+  "failure":"Absent group levels, constant variable, rank/singular covariance/invalid df yield NA with exact reason. No category merging or alternative method selected after results.",
+  "implementation_note":"svyranktest returns different statistic/parameter placement for >2 groups; extract via names/method and retain original named objects, not a presumed universal scalar layout."
+ },
+ "official_method_reference":"https://r-survey.r-forge.r-project.org/pkgdown/docs/reference/svyranktest.html",
+ "scope_limit":"Candidate source-aligned tests; weighting, cohort and variable definitions remain declared candidate, not exact author reproduction. Existing no-p-column freeze is superseded solely for these documented source table tests. This is a post-result plan extension without new test-result inspection.",
+ "final_coverage_language":"Descriptive table rows + source-required group comparisons implemented or individually nonestimable; unreported author details unresolved. Do not call omitted p analyses complete merely because descriptive summaries exist."
+}

@@ -1,0 +1,31 @@
+{
+  "version": "draft",
+  "status": "draft",
+  "prior_exposure": true,
+  "population": null,
+  "analysis_unit": "participant",
+  "data_contract_sha256": null,
+  "estimands": [],
+  "primary_method": null,
+  "secondary_methods": [
+    "ANOVA",
+    "Welch",
+    "Kruskal-Wallis"
+  ],
+  "group_definition": {
+    "variable": "FI",
+    "quantile_algorithm": null,
+    "weighted": null,
+    "ties": null,
+    "boundaries": null
+  },
+  "missingness": null,
+  "transformations": [],
+  "survey_design": null,
+  "trend_scores": null,
+  "comparison_families": [],
+  "sensitivity": [],
+  "simulation": null,
+  "stop_rules": [],
+  "pending_decisions": []
+}

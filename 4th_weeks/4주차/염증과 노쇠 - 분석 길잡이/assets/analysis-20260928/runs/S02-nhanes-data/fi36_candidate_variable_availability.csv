@@ -1,0 +1,325 @@
+cycle,s1_item,item,candidate_variables,codebook_files,labels,status
+1999-2000,1,angina,MCQ160D,MCQ.htm,Ever told you had angina/angina pectoris,candidate_mapping_not_author_verified
+1999-2000,2,heart_attack,MCQ160E,MCQ.htm,Ever told you had heart attack,candidate_mapping_not_author_verified
+1999-2000,3,coronary_heart_disease,MCQ160C,MCQ.htm,Ever told you had coronary heart disease,candidate_mapping_not_author_verified
+1999-2000,4,stroke,MCQ160F,MCQ.htm,Ever told you had a stroke,candidate_mapping_not_author_verified
+1999-2000,5,thyroid,MCQ160I,MCQ.htm,Ever told you had thyroid disease,candidate_mapping_not_author_verified
+1999-2000,6,cancer,MCQ220,MCQ.htm,Ever told you had cancer or malignancy,candidate_mapping_not_author_verified
+1999-2000,7,arthritis,MCQ160A,MCQ.htm,Doctor ever said you had arthritis,candidate_mapping_not_author_verified
+1999-2000,8,hypertension,BPQ020,BPQ.htm,Ever told you had high blood pressure,candidate_mapping_not_author_verified
+1999-2000,9,diabetes,DIQ010,DIQ.htm,Doctor told you have diabetes,candidate_mapping_not_author_verified
+1999-2000,10,kidney,KIQ020,KIQ.htm,Ever told you had weak/failing kidneys,candidate_mapping_not_author_verified
+1999-2000,11,confusion,PFQ056,PFQ.htm,Experience confusion/memory problems,candidate_mapping_not_author_verified
+1999-2000,12,managing_money,PFQ060a,PFQ.htm,Managing money difficulty,candidate_mapping_not_author_verified
+1999-2000,13,stooping,PFQ060d,PFQ.htm,"Stooping, crouching, kneeling difficulty",candidate_mapping_not_author_verified
+1999-2000,14,lifting,PFQ060e,PFQ.htm,Lifting or carrying difficulty,candidate_mapping_not_author_verified
+1999-2000,15,walking_rooms,PFQ060h,PFQ.htm,Walking between rooms on same floor,candidate_mapping_not_author_verified
+1999-2000,16,chair_rise,PFQ060i,PFQ.htm,Standingup from armless chair difficulty,candidate_mapping_not_author_verified
+1999-2000,17,bed,PFQ060j,PFQ.htm,Getting in and out of bed difficulty,candidate_mapping_not_author_verified
+1999-2000,18,dressing,PFQ060l,PFQ.htm,Dressing yourself difficulty,candidate_mapping_not_author_verified
+1999-2000,19,grasping,PFQ060p,PFQ.htm,Grasp/holding small objects difficulty,candidate_mapping_not_author_verified
+1999-2000,20,social_event,PFQ060r,PFQ.htm,Attending social event difficulty,candidate_mapping_not_author_verified
+1999-2000,21,self_rated_health,HUQ010,HUQ.htm,General health condition,candidate_mapping_not_author_verified
+1999-2000,22,healthcare_use,HUQ050,HUQ.htm,#Times received healthcare over past yr,candidate_mapping_not_author_verified
+1999-2000,23,health_last_year,HUQ020,HUQ.htm,Health now compared with 1 year ago,candidate_mapping_not_author_verified
+1999-2000,24,hospital_stay,HUQ070,HUQ.htm,Overnight hospital patient in last year,candidate_mapping_not_author_verified
+1999-2000,25,medication_count,RXD295,RXQ_RX.htm,Number of prescription medicines taken,candidate_mapping_not_author_verified
+1999-2000,26,pulse,BPXPLS,BPX.htm,60 sec. pulse (30 sec. pulse * 2):,candidate_mapping_not_author_verified
+1999-2000,27,systolic_bp,BPXSY1;BPXSY2;BPXSY3;BPXSY4,BPX.htm;BPX.htm;BPX.htm;BPX.htm,Systolic: Blood pres (1st rdg) mm Hg;Systolic: Blood pres (2nd rdg) mm Hg;Systolic: Blood pres (3rd rdg) mm Hg;Systolic: Blood pres (4th rdg) mm Hg,candidate_mapping_not_author_verified
+1999-2000,28,pulse_pressure,BPXSY1;BPXDI1,BPX.htm;BPX.htm,Systolic: Blood pres (1st rdg) mm Hg;Diastolic: Blood pres (1st rdg) mm Hg,candidate_mapping_not_author_verified
+1999-2000,29,platelets,LBXPLTSI,LAB25.htm,Platelet count (%) SI,candidate_mapping_not_author_verified
+1999-2000,30,bun,LBXSBU,LAB18.htm,Blood urea nitrogen (mg/dL),candidate_mapping_not_author_verified
+1999-2000,31,bicarbonate,LBXSC3SI,LAB18.htm,Bicarbonate (mmol/L),candidate_mapping_not_author_verified
+1999-2000,32,rdw,LBXRDW,LAB25.htm,Red cell distribution width (%),candidate_mapping_not_author_verified
+1999-2000,33,ldh,LBXSLDSI,LAB18.htm,LDH (U/L),candidate_mapping_not_author_verified
+1999-2000,34,alkaline_phosphatase,LBXSAPSI,LAB18.htm,Alkaline phosphotase (U/L),candidate_mapping_not_author_verified
+1999-2000,35,uric_acid,LBDSUASI,LAB18.htm,Uric acid (umol/L),candidate_mapping_not_author_verified
+1999-2000,36,calcium,LBDSCASI,LAB18.htm,"Calcium, total (mmol/L)",candidate_mapping_not_author_verified
+2001-2002,1,angina,MCQ160D,MCQ_B.htm,Ever told you had angina/angina pectoris,candidate_mapping_not_author_verified
+2001-2002,2,heart_attack,MCQ160E,MCQ_B.htm,Ever told you had heart attack,candidate_mapping_not_author_verified
+2001-2002,3,coronary_heart_disease,MCQ160C,MCQ_B.htm,Ever told you had coronary heart disease,candidate_mapping_not_author_verified
+2001-2002,4,stroke,MCQ160F,MCQ_B.htm,Ever told you had a stroke,candidate_mapping_not_author_verified
+2001-2002,5,thyroid,MCD160M,MCQ_B.htm,Ever told you had a thyroid problem,candidate_mapping_not_author_verified
+2001-2002,6,cancer,MCQ220,MCQ_B.htm,Ever told you had cancer or malignancy,candidate_mapping_not_author_verified
+2001-2002,7,arthritis,MCQ160A,MCQ_B.htm,Doctor ever said you had arthritis,candidate_mapping_not_author_verified
+2001-2002,8,hypertension,BPQ020,BPQ_B.htm,Ever told you had high blood pressure,candidate_mapping_not_author_verified
+2001-2002,9,diabetes,DIQ010,DIQ_B.htm,Doctor told you have diabetes,candidate_mapping_not_author_verified
+2001-2002,10,kidney,KIQ022,KIQ_U_B.htm,Ever told you had weak/failing kidneys,candidate_mapping_not_author_verified
+2001-2002,11,confusion,PFQ056,PFQ_B.htm,Experience confusion/memory problems,candidate_mapping_not_author_verified
+2001-2002,12,managing_money,PFQ060A,PFQ_B.htm,Managing money difficulty,candidate_mapping_not_author_verified
+2001-2002,13,stooping,PFQ060D,PFQ_B.htm,"Stooping, crouching, kneeling difficulty",candidate_mapping_not_author_verified
+2001-2002,14,lifting,PFQ060E,PFQ_B.htm,Lifting or carrying difficulty,candidate_mapping_not_author_verified
+2001-2002,15,walking_rooms,PFQ060H,PFQ_B.htm,Walking between rooms on same floor,candidate_mapping_not_author_verified
+2001-2002,16,chair_rise,PFQ060I,PFQ_B.htm,Standingup from armless chair difficulty,candidate_mapping_not_author_verified
+2001-2002,17,bed,PFQ060J,PFQ_B.htm,Getting in and out of bed difficulty,candidate_mapping_not_author_verified
+2001-2002,18,dressing,PFQ060L,PFQ_B.htm,Dressing yourself difficulty,candidate_mapping_not_author_verified
+2001-2002,19,grasping,PFQ060P,PFQ_B.htm,Grasp/holding small objects difficulty,candidate_mapping_not_author_verified
+2001-2002,20,social_event,PFQ060R,PFQ_B.htm,Attending social event difficulty,candidate_mapping_not_author_verified
+2001-2002,21,self_rated_health,HUQ010;HSD010,HUQ_B.htm;HSQ_B.htm,General health condition;General health condition,candidate_mapping_not_author_verified
+2001-2002,22,healthcare_use,HUQ050,HUQ_B.htm,#Times receive healthcare over past year,candidate_mapping_not_author_verified
+2001-2002,23,health_last_year,HUQ020,HUQ_B.htm,Health now compared with 1 year ago,candidate_mapping_not_author_verified
+2001-2002,24,hospital_stay,HUD070,HUQ_B.htm,Overnight hospital patient in last year,candidate_mapping_not_author_verified
+2001-2002,25,medication_count,RXD295,RXQ_RX_B.htm,Number of prescription medicines taken,candidate_mapping_not_author_verified
+2001-2002,26,pulse,BPXPLS,BPX_B.htm,60 sec. pulse (30 sec. pulse * 2):,candidate_mapping_not_author_verified
+2001-2002,27,systolic_bp,BPXSY1;BPXSY2;BPXSY3;BPXSY4,BPX_B.htm;BPX_B.htm;BPX_B.htm;BPX_B.htm,Systolic: Blood pres (1st rdg) mm Hg;Systolic: Blood pres (2nd rdg) mm Hg;Systolic: Blood pres (3rd rdg) mm Hg;Systolic: Blood pres (4th rdg) mm Hg,candidate_mapping_not_author_verified
+2001-2002,28,pulse_pressure,BPXSY1;BPXDI1,BPX_B.htm;BPX_B.htm,Systolic: Blood pres (1st rdg) mm Hg;Diastolic: Blood pres (1st rdg) mm Hg,candidate_mapping_not_author_verified
+2001-2002,29,platelets,LBXPLTSI,L25_B.htm,Platelet count (%) SI,candidate_mapping_not_author_verified
+2001-2002,30,bun,LBXSBU,L40_B.htm,Blood urea nitrogen (mg/dL),candidate_mapping_not_author_verified
+2001-2002,31,bicarbonate,LBXSC3SI,L40_B.htm,Bicarbonate: SI (mmol/L),candidate_mapping_not_author_verified
+2001-2002,32,rdw,LBXRDW,L25_B.htm,Red cell distribution width (%),candidate_mapping_not_author_verified
+2001-2002,33,ldh,LBDSLDSI,L40_B.htm,LDH (U/L),candidate_mapping_not_author_verified
+2001-2002,34,alkaline_phosphatase,LBDSAPSI,L40_B.htm,Alkaline phosphatase (U/L),candidate_mapping_not_author_verified
+2001-2002,35,uric_acid,LBDSUASI,L40_B.htm,Uric acid (umol/L),candidate_mapping_not_author_verified
+2001-2002,36,calcium,LBDSCASI,L40_B.htm,Total Calcium (mmol/L),candidate_mapping_not_author_verified
+2003-2004,1,angina,MCQ160D,MCQ_C.htm,Ever told you had angina/angina pectoris,candidate_mapping_not_author_verified
+2003-2004,2,heart_attack,MCQ160E,MCQ_C.htm,Ever told you had heart attack,candidate_mapping_not_author_verified
+2003-2004,3,coronary_heart_disease,MCQ160C,MCQ_C.htm,Ever told you had coronary heart disease,candidate_mapping_not_author_verified
+2003-2004,4,stroke,MCQ160F,MCQ_C.htm,Ever told you had a stroke,candidate_mapping_not_author_verified
+2003-2004,5,thyroid,MCQ160M,MCQ_C.htm,Ever told you had a thyroid problem,candidate_mapping_not_author_verified
+2003-2004,6,cancer,MCQ220,MCQ_C.htm,Ever told you had cancer or malignancy,candidate_mapping_not_author_verified
+2003-2004,7,arthritis,MCQ160A,MCQ_C.htm,Doctor ever said you had arthritis,candidate_mapping_not_author_verified
+2003-2004,8,hypertension,BPQ020,BPQ_C.htm,Ever told you had high blood pressure,candidate_mapping_not_author_verified
+2003-2004,9,diabetes,DIQ010,DIQ_C.htm,Doctor told you have diabetes,candidate_mapping_not_author_verified
+2003-2004,10,kidney,KIQ022,KIQ_U_C.htm,Ever told you had weak/failing kidneys,candidate_mapping_not_author_verified
+2003-2004,11,confusion,PFQ057,PFQ_C.htm,Experience confusion/memory problems,candidate_mapping_not_author_verified
+2003-2004,12,managing_money,PFQ061A,PFQ_C.htm,Managing money difficulty,candidate_mapping_not_author_verified
+2003-2004,13,stooping,PFQ061D,PFQ_C.htm,"Stooping, crouching, kneeling difficulty",candidate_mapping_not_author_verified
+2003-2004,14,lifting,PFQ061E,PFQ_C.htm,Lifting or carrying difficulty,candidate_mapping_not_author_verified
+2003-2004,15,walking_rooms,PFQ061H,PFQ_C.htm,Walking between rooms on same floor,candidate_mapping_not_author_verified
+2003-2004,16,chair_rise,PFQ061I,PFQ_C.htm,Standingup from armless chair difficulty,candidate_mapping_not_author_verified
+2003-2004,17,bed,PFQ061J,PFQ_C.htm,Getting in and out of bed difficulty,candidate_mapping_not_author_verified
+2003-2004,18,dressing,PFQ061L,PFQ_C.htm,Dressing yourself difficulty,candidate_mapping_not_author_verified
+2003-2004,19,grasping,PFQ061P,PFQ_C.htm,Grasp/holding small objects difficulty,candidate_mapping_not_author_verified
+2003-2004,20,social_event,PFQ061R,PFQ_C.htm,Attending social event difficulty,candidate_mapping_not_author_verified
+2003-2004,21,self_rated_health,HUQ010;HSD010,HUQ_C.htm;HSQ_C.htm,General health condition;General health condition,candidate_mapping_not_author_verified
+2003-2004,22,healthcare_use,HUQ050,HUQ_C.htm,#Times receive healthcare over past year,candidate_mapping_not_author_verified
+2003-2004,23,health_last_year,HUQ020,HUQ_C.htm,Health now compared with 1 year ago,candidate_mapping_not_author_verified
+2003-2004,24,hospital_stay,HUQ071,HUQ_C.htm,Overnight hospital patient in last year,candidate_mapping_not_author_verified
+2003-2004,25,medication_count,RXDCOUNT,RXQ_RX_C.htm,Number of prescription medicines taken,candidate_mapping_not_author_verified
+2003-2004,26,pulse,BPXPLS,BPX_C.htm,60 sec. pulse (30 sec. pulse * 2):,candidate_mapping_not_author_verified
+2003-2004,27,systolic_bp,BPXSY1;BPXSY2;BPXSY3;BPXSY4,BPX_C.htm;BPX_C.htm;BPX_C.htm;BPX_C.htm,Systolic: Blood pres (1st rdg) mm Hg;Systolic: Blood pres (2nd rdg) mm Hg;Systolic: Blood pres (3rd rdg) mm Hg;Systolic: Blood pres (4th rdg) mm Hg,candidate_mapping_not_author_verified
+2003-2004,28,pulse_pressure,BPXSY1;BPXDI1,BPX_C.htm;BPX_C.htm,Systolic: Blood pres (1st rdg) mm Hg;Diastolic: Blood pres (1st rdg) mm Hg,candidate_mapping_not_author_verified
+2003-2004,29,platelets,LBXPLTSI,L25_C.htm,Platelet count SI (1000 cells/uL),candidate_mapping_not_author_verified
+2003-2004,30,bun,LBXSBU,L40_C.htm,Blood urea nitrogen (mg/dL),candidate_mapping_not_author_verified
+2003-2004,31,bicarbonate,LBXSC3SI,L40_C.htm,Bicarbonate (mmol/L),candidate_mapping_not_author_verified
+2003-2004,32,rdw,LBXRDW,L25_C.htm,Red cell distribution width (%),candidate_mapping_not_author_verified
+2003-2004,33,ldh,LBXSLDSI,L40_C.htm,Lactate dehydrogenase LDH (U/L),candidate_mapping_not_author_verified
+2003-2004,34,alkaline_phosphatase,LBXSAPSI,L40_C.htm,Alkaline phosphotase (U/L),candidate_mapping_not_author_verified
+2003-2004,35,uric_acid,LBDSUASI,L40_C.htm,Uric acid (umol/L),candidate_mapping_not_author_verified
+2003-2004,36,calcium,LBDSCASI,L40_C.htm,Total calcium (mmol/L),candidate_mapping_not_author_verified
+2005-2006,1,angina,MCQ160D,MCQ_D.htm,Ever told you had angina/angina pectoris,candidate_mapping_not_author_verified
+2005-2006,2,heart_attack,MCQ160E,MCQ_D.htm,Ever told you had heart attack,candidate_mapping_not_author_verified
+2005-2006,3,coronary_heart_disease,MCQ160C,MCQ_D.htm,Ever told you had coronary heart disease,candidate_mapping_not_author_verified
+2005-2006,4,stroke,MCQ160F,MCQ_D.htm,Ever told you had a stroke,candidate_mapping_not_author_verified
+2005-2006,5,thyroid,MCQ160M,MCQ_D.htm,Ever told you had a thyroid problem,candidate_mapping_not_author_verified
+2005-2006,6,cancer,MCQ220,MCQ_D.htm,Ever told you had cancer or malignancy,candidate_mapping_not_author_verified
+2005-2006,7,arthritis,MCQ160A,MCQ_D.htm,Doctor ever said you had arthritis,candidate_mapping_not_author_verified
+2005-2006,8,hypertension,BPQ020,BPQ_D.htm,Ever told you had high blood pressure,candidate_mapping_not_author_verified
+2005-2006,9,diabetes,DIQ010,DIQ_D.htm,Doctor told you have diabetes,candidate_mapping_not_author_verified
+2005-2006,10,kidney,KIQ022,KIQ_U_D.htm,Ever told you had weak/failing kidneys,candidate_mapping_not_author_verified
+2005-2006,11,confusion,PFQ057,PFQ_D.htm,Experience confusion/memory problems,candidate_mapping_not_author_verified
+2005-2006,12,managing_money,PFQ061A,PFQ_D.htm,Managing money difficulty,candidate_mapping_not_author_verified
+2005-2006,13,stooping,PFQ061D,PFQ_D.htm,"Stooping, crouching, kneeling difficulty",candidate_mapping_not_author_verified
+2005-2006,14,lifting,PFQ061E,PFQ_D.htm,Lifting or carrying difficulty,candidate_mapping_not_author_verified
+2005-2006,15,walking_rooms,PFQ061H,PFQ_D.htm,Walking between rooms on same floor,candidate_mapping_not_author_verified
+2005-2006,16,chair_rise,PFQ061I,PFQ_D.htm,Standingup from armless chair difficulty,candidate_mapping_not_author_verified
+2005-2006,17,bed,PFQ061J,PFQ_D.htm,Getting in and out of bed difficulty,candidate_mapping_not_author_verified
+2005-2006,18,dressing,PFQ061L,PFQ_D.htm,Dressing yourself difficulty,candidate_mapping_not_author_verified
+2005-2006,19,grasping,PFQ061P,PFQ_D.htm,Grasp/holding small objects difficulty,candidate_mapping_not_author_verified
+2005-2006,20,social_event,PFQ061R,PFQ_D.htm,Attending social event difficulty,candidate_mapping_not_author_verified
+2005-2006,21,self_rated_health,HUQ010;HSD010,HUQ_D.htm;HSQ_D.htm,General health condition;General health condition,candidate_mapping_not_author_verified
+2005-2006,22,healthcare_use,HUQ050,HUQ_D.htm,#times receive healthcare over past year,candidate_mapping_not_author_verified
+2005-2006,23,health_last_year,HUQ020,HUQ_D.htm,Health now compared with 1 year ago,candidate_mapping_not_author_verified
+2005-2006,24,hospital_stay,HUQ071,HUQ_D.htm,Overnite hospital patient in last year,candidate_mapping_not_author_verified
+2005-2006,25,medication_count,RXDCOUNT,RXQ_RX_D.htm,Number of prescription medicines taken,candidate_mapping_not_author_verified
+2005-2006,26,pulse,BPXPLS,BPX_D.htm,60 sec. pulse (30 sec. pulse * 2):,candidate_mapping_not_author_verified
+2005-2006,27,systolic_bp,BPXSY1;BPXSY2;BPXSY3;BPXSY4,BPX_D.htm;BPX_D.htm;BPX_D.htm;BPX_D.htm,Systolic: Blood pres (1st rdg) mm Hg;Systolic: Blood pres (2nd rdg) mm Hg;Systolic: Blood pres (3rd rdg) mm Hg;Systolic: Blood pres (4th rdg) mm Hg,candidate_mapping_not_author_verified
+2005-2006,28,pulse_pressure,BPXSY1;BPXDI1,BPX_D.htm;BPX_D.htm,Systolic: Blood pres (1st rdg) mm Hg;Diastolic: Blood pres (1st rdg) mm Hg,candidate_mapping_not_author_verified
+2005-2006,29,platelets,LBXPLTSI,CBC_D.htm,Platelet count SI (1000 cells/uL),candidate_mapping_not_author_verified
+2005-2006,30,bun,LBXSBU,BIOPRO_D.htm,Blood urea nitrogen (mg/dL),candidate_mapping_not_author_verified
+2005-2006,31,bicarbonate,LBXSC3SI,BIOPRO_D.htm,Bicarbonate (mmol/L),candidate_mapping_not_author_verified
+2005-2006,32,rdw,LBXRDW,CBC_D.htm,Red cell distribution width (%),candidate_mapping_not_author_verified
+2005-2006,33,ldh,LBXSLDSI,BIOPRO_D.htm,Lactate dehydrogenase LDH (U/L),candidate_mapping_not_author_verified
+2005-2006,34,alkaline_phosphatase,LBXSAPSI,BIOPRO_D.htm,Alkaline phosphotase (U/L),candidate_mapping_not_author_verified
+2005-2006,35,uric_acid,LBDSUASI,BIOPRO_D.htm,Uric acid (umol/L),candidate_mapping_not_author_verified
+2005-2006,36,calcium,LBDSCASI,BIOPRO_D.htm,Total calcium (mmol/L),candidate_mapping_not_author_verified
+2007-2008,1,angina,MCQ160D,MCQ_E.htm,Ever told you had angina/angina pectoris,candidate_mapping_not_author_verified
+2007-2008,2,heart_attack,MCQ160E,MCQ_E.htm,Ever told you had heart attack,candidate_mapping_not_author_verified
+2007-2008,3,coronary_heart_disease,MCQ160C,MCQ_E.htm,Ever told you had coronary heart disease,candidate_mapping_not_author_verified
+2007-2008,4,stroke,MCQ160F,MCQ_E.htm,Ever told you had a stroke,candidate_mapping_not_author_verified
+2007-2008,5,thyroid,MCQ160M,MCQ_E.htm,Ever told you had a thyroid problem,candidate_mapping_not_author_verified
+2007-2008,6,cancer,MCQ220,MCQ_E.htm,Ever told you had cancer or malignancy,candidate_mapping_not_author_verified
+2007-2008,7,arthritis,MCQ160A,MCQ_E.htm,Doctor ever said you had arthritis,candidate_mapping_not_author_verified
+2007-2008,8,hypertension,BPQ020,BPQ_E.htm,Ever told you had high blood pressure,candidate_mapping_not_author_verified
+2007-2008,9,diabetes,DIQ010,DIQ_E.htm,Doctor told you have diabetes,candidate_mapping_not_author_verified
+2007-2008,10,kidney,KIQ022,KIQ_U_E.htm,Ever told you had weak/failing kidneys,candidate_mapping_not_author_verified
+2007-2008,11,confusion,PFQ057,PFQ_E.htm,Experience confusion/memory problems,candidate_mapping_not_author_verified
+2007-2008,12,managing_money,PFQ061A,PFQ_E.htm,Managing money difficulty,candidate_mapping_not_author_verified
+2007-2008,13,stooping,PFQ061D,PFQ_E.htm,"Stooping, crouching, kneeling difficulty",candidate_mapping_not_author_verified
+2007-2008,14,lifting,PFQ061E,PFQ_E.htm,Lifting or carrying difficulty,candidate_mapping_not_author_verified
+2007-2008,15,walking_rooms,PFQ061H,PFQ_E.htm,Walking between rooms on same floor,candidate_mapping_not_author_verified
+2007-2008,16,chair_rise,PFQ061I,PFQ_E.htm,Standingup from armless chair difficulty,candidate_mapping_not_author_verified
+2007-2008,17,bed,PFQ061J,PFQ_E.htm,Getting in and out of bed difficulty,candidate_mapping_not_author_verified
+2007-2008,18,dressing,PFQ061L,PFQ_E.htm,Dressing yourself difficulty,candidate_mapping_not_author_verified
+2007-2008,19,grasping,PFQ061P,PFQ_E.htm,Grasp/holding small objects difficulty,candidate_mapping_not_author_verified
+2007-2008,20,social_event,PFQ061R,PFQ_E.htm,Attending social event difficulty,candidate_mapping_not_author_verified
+2007-2008,21,self_rated_health,HUQ010;HSD010,HUQ_E.htm;HSQ_E.htm,General health condition;General health condition,candidate_mapping_not_author_verified
+2007-2008,22,healthcare_use,HUQ050,HUQ_E.htm,#times receive healthcare over past year,candidate_mapping_not_author_verified
+2007-2008,23,health_last_year,HUQ020,HUQ_E.htm,Health now compared with 1 year ago,candidate_mapping_not_author_verified
+2007-2008,24,hospital_stay,HUQ071,HUQ_E.htm,Overnite hospital patient in last year,candidate_mapping_not_author_verified
+2007-2008,25,medication_count,RXDCOUNT,RXQ_RX_E.htm,Number of prescription medicines taken,candidate_mapping_not_author_verified
+2007-2008,26,pulse,BPXPLS,BPX_E.htm,60 sec. pulse (30 sec. pulse * 2):,candidate_mapping_not_author_verified
+2007-2008,27,systolic_bp,BPXSY1;BPXSY2;BPXSY3;BPXSY4,BPX_E.htm;BPX_E.htm;BPX_E.htm;BPX_E.htm,Systolic: Blood pres (1st rdg) mm Hg;Systolic: Blood pres (2nd rdg) mm Hg;Systolic: Blood pres (3rd rdg) mm Hg;Systolic: Blood pres (4th rdg) mm Hg,candidate_mapping_not_author_verified
+2007-2008,28,pulse_pressure,BPXSY1;BPXDI1,BPX_E.htm;BPX_E.htm,Systolic: Blood pres (1st rdg) mm Hg;Diastolic: Blood pres (1st rdg) mm Hg,candidate_mapping_not_author_verified
+2007-2008,29,platelets,LBXPLTSI,CBC_E.htm,Platelet count (1000 cells/uL),candidate_mapping_not_author_verified
+2007-2008,30,bun,LBXSBU,BIOPRO_E.htm,Blood urea nitrogen (mg/dL),candidate_mapping_not_author_verified
+2007-2008,31,bicarbonate,LBXSC3SI,BIOPRO_E.htm,Bicarbonate (mmol/L),candidate_mapping_not_author_verified
+2007-2008,32,rdw,LBXRDW,CBC_E.htm,Red cell distribution width (%),candidate_mapping_not_author_verified
+2007-2008,33,ldh,LBXSLDSI,BIOPRO_E.htm,Lactate dehydrogenase LDH (U/L),candidate_mapping_not_author_verified
+2007-2008,34,alkaline_phosphatase,LBXSAPSI,BIOPRO_E.htm,Alkaline phosphotase (U/L),candidate_mapping_not_author_verified
+2007-2008,35,uric_acid,LBDSUASI,BIOPRO_E.htm,Uric acid (umol/L),candidate_mapping_not_author_verified
+2007-2008,36,calcium,LBDSCASI,BIOPRO_E.htm,Total calcium (mmol/L),candidate_mapping_not_author_verified
+2009-2010,1,angina,MCQ160D,MCQ_F.htm,Ever told you had angina/angina pectoris,candidate_mapping_not_author_verified
+2009-2010,2,heart_attack,MCQ160E,MCQ_F.htm,Ever told you had heart attack,candidate_mapping_not_author_verified
+2009-2010,3,coronary_heart_disease,MCQ160C,MCQ_F.htm,Ever told you had coronary heart disease,candidate_mapping_not_author_verified
+2009-2010,4,stroke,MCQ160F,MCQ_F.htm,Ever told you had a stroke,candidate_mapping_not_author_verified
+2009-2010,5,thyroid,MCQ160M,MCQ_F.htm,Ever told you had a thyroid problem,candidate_mapping_not_author_verified
+2009-2010,6,cancer,MCQ220,MCQ_F.htm,Ever told you had cancer or malignancy,candidate_mapping_not_author_verified
+2009-2010,7,arthritis,MCQ160A,MCQ_F.htm,Doctor ever said you had arthritis,candidate_mapping_not_author_verified
+2009-2010,8,hypertension,BPQ020,BPQ_F.htm,Ever told you had high blood pressure,candidate_mapping_not_author_verified
+2009-2010,9,diabetes,DIQ010,DIQ_F.htm,Doctor told you have diabetes,candidate_mapping_not_author_verified
+2009-2010,10,kidney,KIQ022,KIQ_U_F.htm,Ever told you had weak/failing kidneys,candidate_mapping_not_author_verified
+2009-2010,11,confusion,PFQ057,PFQ_F.htm,Experience confusion/memory problems,candidate_mapping_not_author_verified
+2009-2010,12,managing_money,PFQ061A,PFQ_F.htm,Managing money difficulty,candidate_mapping_not_author_verified
+2009-2010,13,stooping,PFQ061D,PFQ_F.htm,"Stooping, crouching, kneeling difficulty",candidate_mapping_not_author_verified
+2009-2010,14,lifting,PFQ061E,PFQ_F.htm,Lifting or carrying difficulty,candidate_mapping_not_author_verified
+2009-2010,15,walking_rooms,PFQ061H,PFQ_F.htm,Walking between rooms on same floor,candidate_mapping_not_author_verified
+2009-2010,16,chair_rise,PFQ061I,PFQ_F.htm,Standingup from armless chair difficulty,candidate_mapping_not_author_verified
+2009-2010,17,bed,PFQ061J,PFQ_F.htm,Getting in and out of bed difficulty,candidate_mapping_not_author_verified
+2009-2010,18,dressing,PFQ061L,PFQ_F.htm,Dressing yourself difficulty,candidate_mapping_not_author_verified
+2009-2010,19,grasping,PFQ061P,PFQ_F.htm,Grasp/holding small objects difficulty,candidate_mapping_not_author_verified
+2009-2010,20,social_event,PFQ061R,PFQ_F.htm,Attending social event difficulty,candidate_mapping_not_author_verified
+2009-2010,21,self_rated_health,HUQ010;HSD010,HUQ_F.htm;HSQ_F.htm,General health condition;General health condition,candidate_mapping_not_author_verified
+2009-2010,22,healthcare_use,HUQ050,HUQ_F.htm,#times receive healthcare over past year,candidate_mapping_not_author_verified
+2009-2010,23,health_last_year,HUQ020,HUQ_F.htm,Health now compared with 1 year ago,candidate_mapping_not_author_verified
+2009-2010,24,hospital_stay,HUQ071,HUQ_F.htm,Overnite hospital patient in last year,candidate_mapping_not_author_verified
+2009-2010,25,medication_count,RXDCOUNT,RXQ_RX_F.htm,Number of prescription medicines taken,candidate_mapping_not_author_verified
+2009-2010,26,pulse,BPXPLS,BPX_F.htm,60 sec. pulse (30 sec. pulse * 2):,candidate_mapping_not_author_verified
+2009-2010,27,systolic_bp,BPXSY1;BPXSY2;BPXSY3;BPXSY4,BPX_F.htm;BPX_F.htm;BPX_F.htm;BPX_F.htm,Systolic: Blood pres (1st rdg) mm Hg;Systolic: Blood pres (2nd rdg) mm Hg;Systolic: Blood pres (3rd rdg) mm Hg;Systolic: Blood pres (4th rdg) mm Hg,candidate_mapping_not_author_verified
+2009-2010,28,pulse_pressure,BPXSY1;BPXDI1,BPX_F.htm;BPX_F.htm,Systolic: Blood pres (1st rdg) mm Hg;Diastolic: Blood pres (1st rdg) mm Hg,candidate_mapping_not_author_verified
+2009-2010,29,platelets,LBXPLTSI,CBC_F.htm,Platelet count (1000 cells/uL),candidate_mapping_not_author_verified
+2009-2010,30,bun,LBXSBU,BIOPRO_F.htm,Blood urea nitrogen (mg/dL),candidate_mapping_not_author_verified
+2009-2010,31,bicarbonate,LBXSC3SI,BIOPRO_F.htm,Bicarbonate (mmol/L),candidate_mapping_not_author_verified
+2009-2010,32,rdw,LBXRDW,CBC_F.htm,Red cell distribution width (%),candidate_mapping_not_author_verified
+2009-2010,33,ldh,LBXSLDSI,BIOPRO_F.htm,Lactate dehydrogenase (U/L),candidate_mapping_not_author_verified
+2009-2010,34,alkaline_phosphatase,LBXSAPSI,BIOPRO_F.htm,Alkaline phosphotase (U/L),candidate_mapping_not_author_verified
+2009-2010,35,uric_acid,LBDSUASI,BIOPRO_F.htm,Uric acid (umol/L),candidate_mapping_not_author_verified
+2009-2010,36,calcium,LBDSCASI,BIOPRO_F.htm,Total calcium (mmol/L),candidate_mapping_not_author_verified
+2011-2012,1,angina,MCQ160d,MCQ_G.htm,Ever told you had angina/angina pectoris,candidate_mapping_not_author_verified
+2011-2012,2,heart_attack,MCQ160e,MCQ_G.htm,Ever told you had heart attack,candidate_mapping_not_author_verified
+2011-2012,3,coronary_heart_disease,MCQ160c,MCQ_G.htm,Ever told you had coronary heart disease,candidate_mapping_not_author_verified
+2011-2012,4,stroke,MCQ160f,MCQ_G.htm,Ever told you had a stroke,candidate_mapping_not_author_verified
+2011-2012,5,thyroid,MCQ160m,MCQ_G.htm,Ever told you had thyroid problem,candidate_mapping_not_author_verified
+2011-2012,6,cancer,MCQ220,MCQ_G.htm,Ever told you had cancer or malignancy,candidate_mapping_not_author_verified
+2011-2012,7,arthritis,MCQ160a,MCQ_G.htm,Doctor ever said you had arthritis,candidate_mapping_not_author_verified
+2011-2012,8,hypertension,BPQ020,BPQ_G.htm,Ever told you had high blood pressure,candidate_mapping_not_author_verified
+2011-2012,9,diabetes,DIQ010,DIQ_G.htm,Doctor told you have diabetes,candidate_mapping_not_author_verified
+2011-2012,10,kidney,KIQ022,KIQ_U_G.htm,Ever told you had weak/failing kidneys,candidate_mapping_not_author_verified
+2011-2012,11,confusion,PFQ057,PFQ_G.htm,Experience confusion/memory problems,candidate_mapping_not_author_verified
+2011-2012,12,managing_money,PFQ061A,PFQ_G.htm,Managing money difficulty,candidate_mapping_not_author_verified
+2011-2012,13,stooping,PFQ061D,PFQ_G.htm,"Stooping, crouching, kneeling difficulty",candidate_mapping_not_author_verified
+2011-2012,14,lifting,PFQ061E,PFQ_G.htm,Lifting or carrying difficulty,candidate_mapping_not_author_verified
+2011-2012,15,walking_rooms,PFQ061H,PFQ_G.htm,Walking between rooms on same floor,candidate_mapping_not_author_verified
+2011-2012,16,chair_rise,PFQ061I,PFQ_G.htm,Standingup from armless chair difficulty,candidate_mapping_not_author_verified
+2011-2012,17,bed,PFQ061J,PFQ_G.htm,Getting in and out of bed difficulty,candidate_mapping_not_author_verified
+2011-2012,18,dressing,PFQ061L,PFQ_G.htm,Dressing yourself difficulty,candidate_mapping_not_author_verified
+2011-2012,19,grasping,PFQ061P,PFQ_G.htm,Grasp/holding small objects difficulty,candidate_mapping_not_author_verified
+2011-2012,20,social_event,PFQ061R,PFQ_G.htm,Attending social event difficulty,candidate_mapping_not_author_verified
+2011-2012,21,self_rated_health,HUQ010;HSD010,HUQ_G.htm;HSQ_G.htm,General health condition;General health condition,candidate_mapping_not_author_verified
+2011-2012,22,healthcare_use,HUQ050,HUQ_G.htm,#times receive healthcare over past year,candidate_mapping_not_author_verified
+2011-2012,23,health_last_year,HUQ020,HUQ_G.htm,Health now compared with 1 year ago,candidate_mapping_not_author_verified
+2011-2012,24,hospital_stay,HUQ071,HUQ_G.htm,Overnite hospital patient in last year,candidate_mapping_not_author_verified
+2011-2012,25,medication_count,RXDCOUNT,RXQ_RX_G.htm,Number of prescription medicines taken,candidate_mapping_not_author_verified
+2011-2012,26,pulse,BPXPLS,BPX_G.htm,60 sec. pulse (30 sec. pulse * 2),candidate_mapping_not_author_verified
+2011-2012,27,systolic_bp,BPXSY1;BPXSY2;BPXSY3;BPXSY4,BPX_G.htm;BPX_G.htm;BPX_G.htm;BPX_G.htm,Systolic: Blood pres (1st rdg) mm Hg;Systolic: Blood pres (2nd rdg) mm Hg;Systolic: Blood pres (3rd rdg) mm Hg;Systolic: Blood pres (4th rdg) mm Hg,candidate_mapping_not_author_verified
+2011-2012,28,pulse_pressure,BPXSY1;BPXDI1,BPX_G.htm;BPX_G.htm,Systolic: Blood pres (1st rdg) mm Hg;Diastolic: Blood pres (1st rdg) mm Hg,candidate_mapping_not_author_verified
+2011-2012,29,platelets,LBXPLTSI,CBC_G.htm,Platelet count (1000 cells/uL),candidate_mapping_not_author_verified
+2011-2012,30,bun,LBXSBU,BIOPRO_G.htm,Blood urea nitrogen (mg/dL),candidate_mapping_not_author_verified
+2011-2012,31,bicarbonate,LBXSC3SI,BIOPRO_G.htm,Bicarbonate (mmol/L),candidate_mapping_not_author_verified
+2011-2012,32,rdw,LBXRDW,CBC_G.htm,Red cell distribution width (%),candidate_mapping_not_author_verified
+2011-2012,33,ldh,LBXSLDSI,BIOPRO_G.htm,Lactate dehydrogenase (U/L),candidate_mapping_not_author_verified
+2011-2012,34,alkaline_phosphatase,LBXSAPSI,BIOPRO_G.htm,Alkaline phosphotase (U/L),candidate_mapping_not_author_verified
+2011-2012,35,uric_acid,LBDSUASI,BIOPRO_G.htm,Uric acid (umol/L),candidate_mapping_not_author_verified
+2011-2012,36,calcium,LBDSCASI,BIOPRO_G.htm,Total calcium (mmol/L),candidate_mapping_not_author_verified
+2013-2014,1,angina,MCQ160d,MCQ_H.htm,Ever told you had angina/angina pectoris,candidate_mapping_not_author_verified
+2013-2014,2,heart_attack,MCQ160e,MCQ_H.htm,Ever told you had heart attack,candidate_mapping_not_author_verified
+2013-2014,3,coronary_heart_disease,MCQ160c,MCQ_H.htm,Ever told you had coronary heart disease,candidate_mapping_not_author_verified
+2013-2014,4,stroke,MCQ160f,MCQ_H.htm,Ever told you had a stroke,candidate_mapping_not_author_verified
+2013-2014,5,thyroid,MCQ160m,MCQ_H.htm,Ever told you had thyroid problem,candidate_mapping_not_author_verified
+2013-2014,6,cancer,MCQ220,MCQ_H.htm,Ever told you had cancer or malignancy,candidate_mapping_not_author_verified
+2013-2014,7,arthritis,MCQ160a,MCQ_H.htm,Doctor ever said you had arthritis,candidate_mapping_not_author_verified
+2013-2014,8,hypertension,BPQ020,BPQ_H.htm,Ever told you had high blood pressure,candidate_mapping_not_author_verified
+2013-2014,9,diabetes,DIQ010,DIQ_H.htm,Doctor told you have diabetes,candidate_mapping_not_author_verified
+2013-2014,10,kidney,KIQ022,KIQ_U_H.htm,Ever told you had weak/failing kidneys,candidate_mapping_not_author_verified
+2013-2014,11,confusion,PFQ057,PFQ_H.htm,Experience confusion/memory problems,candidate_mapping_not_author_verified
+2013-2014,12,managing_money,PFQ061A,PFQ_H.htm,Managing money difficulty,candidate_mapping_not_author_verified
+2013-2014,13,stooping,PFQ061D,PFQ_H.htm,"Stooping, crouching, kneeling difficulty",candidate_mapping_not_author_verified
+2013-2014,14,lifting,PFQ061E,PFQ_H.htm,Lifting or carrying difficulty,candidate_mapping_not_author_verified
+2013-2014,15,walking_rooms,PFQ061H,PFQ_H.htm,Walking between rooms on same floor,candidate_mapping_not_author_verified
+2013-2014,16,chair_rise,PFQ061I,PFQ_H.htm,Standingup from armless chair difficulty,candidate_mapping_not_author_verified
+2013-2014,17,bed,PFQ061J,PFQ_H.htm,Getting in and out of bed difficulty,candidate_mapping_not_author_verified
+2013-2014,18,dressing,PFQ061L,PFQ_H.htm,Dressing yourself difficulty,candidate_mapping_not_author_verified
+2013-2014,19,grasping,PFQ061P,PFQ_H.htm,Grasp/holding small objects difficulty,candidate_mapping_not_author_verified
+2013-2014,20,social_event,PFQ061R,PFQ_H.htm,Attending social event difficulty,candidate_mapping_not_author_verified
+2013-2014,21,self_rated_health,HUQ010;HSD010,HUQ_H.htm;HSQ_H.htm,General health condition;General health condition,candidate_mapping_not_author_verified
+2013-2014,22,healthcare_use,HUQ051,HUQ_H.htm,#times receive healthcare over past year,candidate_mapping_not_author_verified
+2013-2014,23,health_last_year,HUQ020,HUQ_H.htm,Health now compared with 1 year ago,candidate_mapping_not_author_verified
+2013-2014,24,hospital_stay,HUQ071,HUQ_H.htm,Overnight hospital patient in last year,candidate_mapping_not_author_verified
+2013-2014,25,medication_count,RXDCOUNT,RXQ_RX_H.htm,Number of prescription medicines taken,candidate_mapping_not_author_verified
+2013-2014,26,pulse,BPXPLS,BPX_H.htm,60 sec. pulse (30 sec. pulse * 2),candidate_mapping_not_author_verified
+2013-2014,27,systolic_bp,BPXSY1;BPXSY2;BPXSY3;BPXSY4,BPX_H.htm;BPX_H.htm;BPX_H.htm;BPX_H.htm,Systolic: Blood pres (1st rdg) mm Hg;Systolic: Blood pres (2nd rdg) mm Hg;Systolic: Blood pres (3rd rdg) mm Hg;Systolic: Blood pres (4th rdg) mm Hg,candidate_mapping_not_author_verified
+2013-2014,28,pulse_pressure,BPXSY1;BPXDI1,BPX_H.htm;BPX_H.htm,Systolic: Blood pres (1st rdg) mm Hg;Diastolic: Blood pres (1st rdg) mm Hg,candidate_mapping_not_author_verified
+2013-2014,29,platelets,LBXPLTSI,CBC_H.htm,Platelet count (1000 cells/uL),candidate_mapping_not_author_verified
+2013-2014,30,bun,LBXSBU,BIOPRO_H.htm,Blood urea nitrogen (mg/dL),candidate_mapping_not_author_verified
+2013-2014,31,bicarbonate,LBXSC3SI,BIOPRO_H.htm,Bicarbonate (mmol/L),candidate_mapping_not_author_verified
+2013-2014,32,rdw,LBXRDW,CBC_H.htm,Red cell distribution width (%),candidate_mapping_not_author_verified
+2013-2014,33,ldh,LBXSLDSI,BIOPRO_H.htm,Lactate dehydrogenase (U/L),candidate_mapping_not_author_verified
+2013-2014,34,alkaline_phosphatase,LBXSAPSI,BIOPRO_H.htm,Alkaline phosphatase (IU/L),candidate_mapping_not_author_verified
+2013-2014,35,uric_acid,LBDSUASI,BIOPRO_H.htm,Uric acid (umol/L),candidate_mapping_not_author_verified
+2013-2014,36,calcium,LBDSCASI,BIOPRO_H.htm,Total calcium (mmol/L),candidate_mapping_not_author_verified
+2015-2016,1,angina,MCQ160d,MCQ_I.htm,Ever told you had angina/angina pectoris,candidate_mapping_not_author_verified
+2015-2016,2,heart_attack,MCQ160e,MCQ_I.htm,Ever told you had heart attack,candidate_mapping_not_author_verified
+2015-2016,3,coronary_heart_disease,MCQ160c,MCQ_I.htm,Ever told you had coronary heart disease,candidate_mapping_not_author_verified
+2015-2016,4,stroke,MCQ160f,MCQ_I.htm,Ever told you had a stroke,candidate_mapping_not_author_verified
+2015-2016,5,thyroid,MCQ160m,MCQ_I.htm,Ever told you had thyroid problem,candidate_mapping_not_author_verified
+2015-2016,6,cancer,MCQ220,MCQ_I.htm,Ever told you had cancer or malignancy,candidate_mapping_not_author_verified
+2015-2016,7,arthritis,MCQ160a,MCQ_I.htm,Doctor ever said you had arthritis,candidate_mapping_not_author_verified
+2015-2016,8,hypertension,BPQ020,BPQ_I.htm,Ever told you had high blood pressure,candidate_mapping_not_author_verified
+2015-2016,9,diabetes,DIQ010,DIQ_I.htm,Doctor told you have diabetes,candidate_mapping_not_author_verified
+2015-2016,10,kidney,KIQ022,KIQ_U_I.htm,Ever told you had weak/failing kidneys,candidate_mapping_not_author_verified
+2015-2016,11,confusion,PFQ057,PFQ_I.htm,Experience confusion/memory problems,candidate_mapping_not_author_verified
+2015-2016,12,managing_money,PFQ061A,PFQ_I.htm,Managing money difficulty,candidate_mapping_not_author_verified
+2015-2016,13,stooping,PFQ061D,PFQ_I.htm,"Stooping, crouching, kneeling difficulty",candidate_mapping_not_author_verified
+2015-2016,14,lifting,PFQ061E,PFQ_I.htm,Lifting or carrying difficulty,candidate_mapping_not_author_verified
+2015-2016,15,walking_rooms,PFQ061H,PFQ_I.htm,Walking between rooms on same floor,candidate_mapping_not_author_verified
+2015-2016,16,chair_rise,PFQ061I,PFQ_I.htm,Standingup from armless chair difficulty,candidate_mapping_not_author_verified
+2015-2016,17,bed,PFQ061J,PFQ_I.htm,Getting in and out of bed difficulty,candidate_mapping_not_author_verified
+2015-2016,18,dressing,PFQ061L,PFQ_I.htm,Dressing yourself difficulty,candidate_mapping_not_author_verified
+2015-2016,19,grasping,PFQ061P,PFQ_I.htm,Grasp/holding small objects difficulty,candidate_mapping_not_author_verified
+2015-2016,20,social_event,PFQ061R,PFQ_I.htm,Attending social event difficulty,candidate_mapping_not_author_verified
+2015-2016,21,self_rated_health,HUQ010;HSD010,HUQ_I.htm;HSQ_I.htm,General health condition;General health condition,candidate_mapping_not_author_verified
+2015-2016,22,healthcare_use,HUQ051,HUQ_I.htm,#times receive healthcare over past year,candidate_mapping_not_author_verified
+2015-2016,23,health_last_year,HUQ020,HUQ_I.htm,Health now compared with 1 year ago,candidate_mapping_not_author_verified
+2015-2016,24,hospital_stay,HUQ071,HUQ_I.htm,Overnight hospital patient in last year,candidate_mapping_not_author_verified
+2015-2016,25,medication_count,RXDCOUNT,RXQ_RX_I.htm,Number of prescription medicines taken,candidate_mapping_not_author_verified
+2015-2016,26,pulse,BPXPLS,BPX_I.htm,60 sec. pulse (30 sec. pulse * 2),candidate_mapping_not_author_verified
+2015-2016,27,systolic_bp,BPXSY1;BPXSY2;BPXSY3;BPXSY4,BPX_I.htm;BPX_I.htm;BPX_I.htm;BPX_I.htm,Systolic: Blood pres (1st rdg) mm Hg;Systolic: Blood pres (2nd rdg) mm Hg;Systolic: Blood pres (3rd rdg) mm Hg;Systolic: Blood pres (4th rdg) mm Hg,candidate_mapping_not_author_verified
+2015-2016,28,pulse_pressure,BPXSY1;BPXDI1,BPX_I.htm;BPX_I.htm,Systolic: Blood pres (1st rdg) mm Hg;Diastolic: Blood pres (1st rdg) mm Hg,candidate_mapping_not_author_verified
+2015-2016,29,platelets,LBXPLTSI,CBC_I.htm,Platelet count (1000 cells/uL),candidate_mapping_not_author_verified
+2015-2016,30,bun,LBXSBU,BIOPRO_I.htm,Blood Urea Nitrogen (mg/dL),candidate_mapping_not_author_verified
+2015-2016,31,bicarbonate,LBXSC3SI,BIOPRO_I.htm,Bicarbonate (mmol/L),candidate_mapping_not_author_verified
+2015-2016,32,rdw,LBXRDW,CBC_I.htm,Red cell distribution width (%),candidate_mapping_not_author_verified
+2015-2016,33,ldh,LBXSLDSI,BIOPRO_I.htm,Lactate Dehydrogenase (LDH) (U/L),candidate_mapping_not_author_verified
+2015-2016,34,alkaline_phosphatase,LBXSAPSI,BIOPRO_I.htm,Alkaline Phosphatase (ALP) (IU/L),candidate_mapping_not_author_verified
+2015-2016,35,uric_acid,LBDSUASI,BIOPRO_I.htm,Uric acid (umol/L),candidate_mapping_not_author_verified
+2015-2016,36,calcium,LBDSCASI,BIOPRO_I.htm,Total Calcium (mmol/L),candidate_mapping_not_author_verified

@@ -1,0 +1,18 @@
+M02 PROCEDURE SIMULATION PLAN - recorded before simulation execution
+Simulation only; no published numeric results are inspected for this task.
+Fixed master seed: 20260929; B=2000 per scenario; alpha=.05.
+Independent repetitions: distinct recorded seed master + scenario_id*100000 + replication_id.
+Four independently sampled groups; n=30 per group; no shared individuals between groups.
+Scenarios:
+1 normal_equal_null: mean=0, SD=1 in all groups. Mean/distribution null true.
+2 normal_hetero_equal_mean: mean=0, SD=1,2,3,4. Mean null true; identical-distribution null false. KW rejection frequency is NOT distribution-null size.
+3 lognormal_identical_null: exp(N(0,1)) in all groups. Mean/distribution null true; normality false.
+4 normal_mean_alternative: means=0,.2,.4,.6, SD=1. All six pairwise mean nulls false.
+Methods: actual group_analysis.R comparison_core shared with real-data compare_marker: ANOVA, Welch, KW, six pairwise Welch tests.
+Omnibus endpoint: rejection probability, labeled mean-null size / distribution-null size / power / rejection rate with differing distributions as appropriate.
+Pairs: unadjusted, Bonferroni, BH across six pairs only; compare FWER/FDR/power with explicit truth status. At global alternative all pairs false: FWER=0 structurally, not evidence of control.
+MCSE sqrt(p_hat*(1-p_hat)/B); pointwise Wilson 95% intervals for event probabilities; replicate-level ratio MCSE for FDR/power.
+No formula 1-.95^6 applied to overlapping pair comparisons; their statistics are dependent.
+No seed replacement, stopping-rule tuning, or tuning to paper findings.
+Tests compare shared core outputs to base R calls and verify generation, truth labels, metrics, zero-rejection handling.
+All seed lists, runtime warnings, sessionInfo, test/execution logs retained.

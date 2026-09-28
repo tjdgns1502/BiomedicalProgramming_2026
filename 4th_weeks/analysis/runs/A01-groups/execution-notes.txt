@@ -1,0 +1,26 @@
+Educational unweighted sample analysis. Not automatic population inference.
+FI is an analyst-defined operational36 complete-case candidate, not author-identical FI.
+Trend score is the group median FI, not each participant's continuous FI.
+BH FDR guarantees require independence or suitable positive dependence; arbitrary dependence not guaranteed.
+FI boundaries: type 7, tied scores kept together; higher minus lower contrast.
+Pairwise Welch CIs pointwise; Tukey intervals simultaneous within each marker only.
+Three separate families do not control a single global claim across all families.
+R version 4.6.1 (2026-06-24 ucrt)
+Platform: x86_64-w64-mingw32/x64
+Running under: Windows 11 x64 (build 26200)
+
+Matrix products: default
+  LAPACK version 3.12.1
+
+locale:
+[1] C
+system code page: 65001
+
+time zone: Asia/Seoul
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+loaded via a namespace (and not attached):
+[1] compiler_4.6.1

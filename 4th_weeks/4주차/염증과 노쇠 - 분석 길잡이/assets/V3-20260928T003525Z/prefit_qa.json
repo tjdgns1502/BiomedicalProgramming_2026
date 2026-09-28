@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "duplicate_ids": false,
+  "strict_route_shared_identical": true,
+  "strict_FI30_shared_identical": true,
+  "all_design_columns_match": true,
+  "fitting_run": false
+}

@@ -1,0 +1,7 @@
+Error in file(file, ifelse(append, "a", "w")) : 
+  cannot open the connection
+Calls: extensions ... write.csv -> eval.parent -> eval -> eval -> <Anonymous> -> file
+In addition: Warning message:
+In file(file, ifelse(append, "a", "w")) :
+  cannot open file 'C:\Users\doyun\Desktop\2026-2\llk*mk!j78kk0\4l#<l0(\analysis\runs\T02-20260927T210218757672Z/synthetic-artifacts/design_counts.csv': Invalid argument
+Execution halted

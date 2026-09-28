@@ -1,0 +1,9 @@
+{
+  "task_id": "V2-P01",
+  "state": "accepted",
+  "outputs": [
+    "analysis/tasks/V2-P01/rev-1/work/evidence_map.json",
+    "analysis/tasks/V2-P01/rev-1/work/handoff.md"
+  ],
+  "scope": "Bounded v2 task only; author-identical FI/cohort and full paper replication remain unresolved"
+}

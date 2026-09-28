@@ -1,0 +1,692 @@
+{
+  "schema_version": "1.0",
+  "scope": "Source evidence and implementation handoff only; no empirical findings generated.",
+  "sources": [
+    {
+      "path": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\4주차\\s12889-024-20908-9.pdf",
+      "bytes": 1697989,
+      "sha256": "39e3706fac8c9848c1b6688462150fc759b748947c8d4a0c9fbf4784e9f48927",
+      "role": "primary_source"
+    },
+    {
+      "path": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\4주차\\supplement.docx",
+      "bytes": 232650,
+      "sha256": "c69ed8b2d851663bdee4e4e22d13cd639505a2dd0c4edef5dfc4506af326af05",
+      "role": "primary_source"
+    },
+    {
+      "path": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\4주차\\paper_extracted.txt",
+      "bytes": 47545,
+      "sha256": "3e6cd520d7568f6502b50d89a9bc26ad15c4e72df1436f06e42f6a2a3fac1bd4",
+      "role": "secondary_text_extraction_cross_checked_against_pdf"
+    }
+  ],
+  "verification": {
+    "pdf_pages": 11,
+    "docx_tables": 7,
+    "pdf_visual_pages_checked": [
+      3,
+      5,
+      6
+    ],
+    "fi_items_verified": 36,
+    "table1_unweighted_footnote_confirmed_visually": true,
+    "paper_extracted_text_role": "Used for discovery and cross-checked against independently extracted PDF pages and visual page renders; no automated equality asserted."
+  },
+  "claims": [
+    {
+      "id": "population",
+      "status": "explicit",
+      "value": "NHANES 1999–2016; cross-sectional; age >=50 years.",
+      "location": "PDF p2 Study population; p3 Results"
+    },
+    {
+      "id": "sample_flow",
+      "status": "explicit",
+      "value": {
+        "initial": 92062,
+        "age_under_50_excluded": 70392,
+        "cbc_insufficient_excluded": 2508,
+        "fi_insufficient_excluded": 5503,
+        "covariate_missing_excluded": 152,
+        "included": 13507,
+        "fit_n": 9778,
+        "frail_n": 3729
+      },
+      "location": "PDF p3 Results; p4 Fig1; p5 Table1"
+    },
+    {
+      "id": "cbc_formulas",
+      "status": "explicit",
+      "value": {
+        "NLR": "neutrophil_count / lymphocyte_count",
+        "MLR": "monocyte_count / lymphocyte_count",
+        "SIRI": "neutrophil_count * monocyte_count / lymphocyte_count",
+        "SII": "platelet_count * neutrophil_count / lymphocyte_count"
+      },
+      "location": "PDF p2 Assessment of CBC-derived inflammatory biomarkers"
+    },
+    {
+      "id": "cbc_units",
+      "status": "explicit",
+      "value": "Cell counts reported in 10^3/uL; SIRI and SII in 10^3/uL; NLR/MLR are ratios.",
+      "location": "PDF p5 Table1"
+    },
+    {
+      "id": "fi_items",
+      "status": "explicit",
+      "value": "Modified Rockwood FI: 36 items after omitting 10 intake/nutrition-related items from original 46.",
+      "location": "PDF p2 Frailty assessment; supplemental S1"
+    },
+    {
+      "id": "fi_generic_score",
+      "status": "explicit",
+      "value": "Criterion met is scored 1, otherwise 0; points added. The denominator formula is not explicitly printed.",
+      "location": "PDF p2 Frailty assessment"
+    },
+    {
+      "id": "fi_denominator",
+      "status": "not_reported",
+      "value": "Using sum of 36 binary items /36 is a reasonable complete-data FI implementation but is not an explicit denominator formula in these sources. No available-item denominator, minimum completed count, or partial-missing allowance specified.",
+      "location": "PDF p2 Frailty assessment; supplemental S1"
+    },
+    {
+      "id": "frailty_cutoff",
+      "status": "explicit",
+      "value": {
+        "fit": "FI <= 0.3",
+        "frail": "FI > 0.3"
+      },
+      "location": "PDF p2 Frailty assessment"
+    },
+    {
+      "id": "model_direction",
+      "status": "explicit",
+      "value": "Logistic regression uses binary frailty as outcome and each CBC-derived inflammatory marker as predictor. This is a cross-sectional association, despite the words incident/risk in table titles.",
+      "location": "PDF pp2–3 methods; p6 Tables2–3"
+    },
+    {
+      "id": "log_transform",
+      "status": "explicit",
+      "value": "All four markers were logarithmically transformed because of nonnormality.",
+      "location": "PDF p3 Statistical analysis; p6 Table2 footnote"
+    },
+    {
+      "id": "log_base",
+      "status": "not_reported",
+      "value": "Base of logarithm, zero handling and transformation implementation are not specified.",
+      "location": "PDF p3 Statistical analysis; p6 Table2 footnote"
+    },
+    {
+      "id": "model1",
+      "status": "explicit",
+      "value": [
+        "age (continuous)",
+        "sex (male/female)",
+        "NHANES cycle",
+        "race (Mexican American / Other Hispanic / Non-Hispanic White / Non-Hispanic Black / Other)"
+      ],
+      "location": "PDF p6 Table2 footnote; p3 Statistical analysis"
+    },
+    {
+      "id": "model2",
+      "status": "explicit",
+      "value": [
+        "all model1 covariates",
+        "education (below high school / high school / above high school)",
+        "family PIR (<=1.0 / 1.1–3.0 / >3.0)",
+        "drinking status",
+        "smoking status",
+        "BMI (<25.0 /25.0–29.9 />29.9)",
+        "physical activity (never / moderate / active)",
+        "total energy intake",
+        "self-reported diabetes",
+        "self-reported hypertension"
+      ],
+      "location": "PDF p6 Table2 footnote"
+    },
+    {
+      "id": "covariate_definitions",
+      "status": "explicit",
+      "value": {
+        "smoking": "at least 100 cigarettes in lifetime",
+        "drinking": "at least 12 drinks in previous year; non-drinker wording also refers to lifetime",
+        "energy": "mean of 2 days",
+        "physical_activity": "3 categories; no rule supplied",
+        "hypertension_diabetes": "self-reported questionnaires"
+      },
+      "location": "PDF p3 Covariate assessment"
+    },
+    {
+      "id": "covariate_boundaries",
+      "status": "ambiguous",
+      "value": "BMI p3 gives <=25 healthy and >=25 overweight (overlap at 25); Table1/Table2 specify <25. PIR labels leave (1.0,1.1) unresolved if raw PIR is more precise than one decimal. Physical-activity cutoffs, drinking harmonization, and categorical reference levels are not specified.",
+      "location": "PDF p3 Covariate assessment; p5 Table1; p6 Table2 footnote"
+    },
+    {
+      "id": "missing_covariates",
+      "status": "ambiguous",
+      "value": "Results says 152 omitted for missing covariates, yet Table1 and S2–S5 show 627 missing drinking values. Model-specific missing handling / missing category / imputation not described. Table1 smoking counts also sum to 13495 whereas supplement sums to 13507.",
+      "location": "PDF p3 Results; p5 Table1; supplement S2–S5"
+    },
+    {
+      "id": "survey_evidence",
+      "status": "ambiguous",
+      "value": "Table1 and S2–S5 titles say by sampling weight. Table1 footnote c says complex-survey Wilcoxon and Rao–Scott correction. Table1 and S5 footnote b say survey unweighted; S2–S4 say survey weighted. Weight variable, combined-cycle weights, design variables, lonely-PSU treatment and regression-weight specification absent.",
+      "location": "PDF p5 Table1 title/footnotes; supplement S2–S5 captions/footnotes"
+    },
+    {
+      "id": "fraction_vs_percent",
+      "status": "explicit",
+      "value": "3729/13507 is approximately 27.61%; reported frail percentage is 24%. These are distinct reported quantities; survey weighting may explain difference, but sources conflict on percentages.",
+      "location": "PDF p1 Abstract; p5 Table1"
+    },
+    {
+      "id": "quartile_method",
+      "status": "not_reported",
+      "value": "Markers, not FI, are divided into quartiles. Weighted vs unweighted quantile algorithm, R quantile type, tie handling and unrounded thresholds not specified.",
+      "location": "PDF p3 Statistical analysis; p6 Table3; supplement S2–S5"
+    },
+    {
+      "id": "quartile_errors",
+      "status": "ambiguous",
+      "value": "Body gives NLR Q1 as 1.53 without inequality; SIRI Q1 <0.76 and Q3 >0.76; SII Q1 <339.58. Supplement headers resolve to <= lower cutoff, and SIRI Q3 >1.13. Prefer reporting both source statements; any implementation using supplement must be declared.",
+      "location": "PDF p3 Statistical analysis; supplemental S2–S5 header rows"
+    },
+    {
+      "id": "trend_method",
+      "status": "not_reported",
+      "value": "p-trend reported but coding of ordinal predictor / quartile medians / test implementation not given.",
+      "location": "PDF p6 Table3"
+    },
+    {
+      "id": "rcs",
+      "status": "explicit",
+      "value": "Restricted cubic splines compared with linear model to assess nonlinearity; p<0.05; knot count/locations and reference point not specified.",
+      "location": "PDF p3 Statistical analysis; p7 Fig2"
+    },
+    {
+      "id": "software_alpha",
+      "status": "explicit",
+      "value": "R 4.3; two-tailed p<0.05.",
+      "location": "PDF p3 Statistical analysis"
+    },
+    {
+      "id": "component_overlap",
+      "status": "inference",
+      "value": "Platelet count is both an SII input and FI item29; hypertension and diabetes are both FI items8/9 and model2 covariates. This overlap should be disclosed when interpreting associations.",
+      "location": "PDF p2 formulas; p6 Table2 footnote; supplemental S1"
+    },
+    {
+      "id": "course_scope",
+      "status": "task_requirement",
+      "value": "FI quartiles -> compare NLR, MLR, SIRI, SII by ANOVA/Welch/Kruskal–Wallis/trend and Tukey/Bonferroni/BH; boxplots, four residual plots, null p histogram, 1-.95^k Monte Carlo, expand.grid and Map. These are classroom extensions and are not claimed to reproduce paper analyses.",
+      "location": "Parent task instructions; not a claim sourced to the paper"
+    }
+  ],
+  "fi_items": [
+    {
+      "number": 1,
+      "source_label": "Angina/angina pectoris",
+      "source_location": "supplement.docx, Supplemental Table S1, XML table 1 row 2 cell 1",
+      "domain": "self_report",
+      "label_status": "explicit",
+      "raw_variable_name": null,
+      "raw_variable_status": "not_reported",
+      "exact_deficit_coding_status": "not_reported",
+      "interpretation": "Yes/no disease or difficulty is a plausible binary deficit interpretation, but NHANES response-code mapping is not supplied."
+    },
+    {
+      "number": 2,
+      "source_label": "Heart attack",
+      "source_location": "supplement.docx, Supplemental Table S1, XML table 1 row 3 cell 1",
+      "domain": "self_report",
+      "label_status": "explicit",
+      "raw_variable_name": null,
+      "raw_variable_status": "not_reported",
+      "exact_deficit_coding_status": "not_reported",
+      "interpretation": "Yes/no disease or difficulty is a plausible binary deficit interpretation, but NHANES response-code mapping is not supplied."
+    },
+    {
+      "number": 3,
+      "source_label": "Coronary heart disease",
+      "source_location": "supplement.docx, Supplemental Table S1, XML table 1 row 4 cell 1",
+      "domain": "self_report",
+      "label_status": "explicit",
+      "raw_variable_name": null,
+      "raw_variable_status": "not_reported",
+      "exact_deficit_coding_status": "not_reported",
+      "interpretation": "Yes/no disease or difficulty is a plausible binary deficit interpretation, but NHANES response-code mapping is not supplied."
+    },
+    {
+      "number": 4,
+      "source_label": "Stroke",
+      "source_location": "supplement.docx, Supplemental Table S1, XML table 1 row 5 cell 1",
+      "domain": "self_report",
+      "label_status": "explicit",
+      "raw_variable_name": null,
+      "raw_variable_status": "not_reported",
+      "exact_deficit_coding_status": "not_reported",
+      "interpretation": "Yes/no disease or difficulty is a plausible binary deficit interpretation, but NHANES response-code mapping is not supplied."
+    },
+    {
+      "number": 5,
+      "source_label": "Thyroid condition",
+      "source_location": "supplement.docx, Supplemental Table S1, XML table 1 row 6 cell 1",
+      "domain": "self_report",
+      "label_status": "explicit",
+      "raw_variable_name": null,
+      "raw_variable_status": "not_reported",
+      "exact_deficit_coding_status": "not_reported",
+      "interpretation": "Yes/no disease or difficulty is a plausible binary deficit interpretation, but NHANES response-code mapping is not supplied."
+    },
+    {
+      "number": 6,
+      "source_label": "Cancer",
+      "source_location": "supplement.docx, Supplemental Table S1, XML table 1 row 7 cell 1",
+      "domain": "self_report",
+      "label_status": "explicit",
+      "raw_variable_name": null,
+      "raw_variable_status": "not_reported",
+      "exact_deficit_coding_status": "not_reported",
+      "interpretation": "Yes/no disease or difficulty is a plausible binary deficit interpretation, but NHANES response-code mapping is not supplied."
+    },
+    {
+      "number": 7,
+      "source_label": "Arthritis",
+      "source_location": "supplement.docx, Supplemental Table S1, XML table 1 row 8 cell 1",
+      "domain": "self_report",
+      "label_status": "explicit",
+      "raw_variable_name": null,
+      "raw_variable_status": "not_reported",
+      "exact_deficit_coding_status": "not_reported",
+      "interpretation": "Yes/no disease or difficulty is a plausible binary deficit interpretation, but NHANES response-code mapping is not supplied."
+    },
+    {
+      "number": 8,
+      "source_label": "High blood pressure",
+      "source_location": "supplement.docx, Supplemental Table S1, XML table 1 row 9 cell 1",
+      "domain": "self_report",
+      "label_status": "explicit",
+      "raw_variable_name": null,
+      "raw_variable_status": "not_reported",
+      "exact_deficit_coding_status": "not_reported",
+      "interpretation": "Yes/no disease or difficulty is a plausible binary deficit interpretation, but NHANES response-code mapping is not supplied."
+    },
+    {
+      "number": 9,
+      "source_label": "Diabetes mellitus",
+      "source_location": "supplement.docx, Supplemental Table S1, XML table 1 row 10 cell 1",
+      "domain": "self_report",
+      "label_status": "explicit",
+      "raw_variable_name": null,
+      "raw_variable_status": "not_reported",
+      "exact_deficit_coding_status": "not_reported",
+      "interpretation": "Yes/no disease or difficulty is a plausible binary deficit interpretation, but NHANES response-code mapping is not supplied."
+    },
+    {
+      "number": 10,
+      "source_label": "Weak/failing kidneys",
+      "source_location": "supplement.docx, Supplemental Table S1, XML table 1 row 11 cell 1",
+      "domain": "self_report",
+      "label_status": "explicit",
+      "raw_variable_name": null,
+      "raw_variable_status": "not_reported",
+      "exact_deficit_coding_status": "not_reported",
+      "interpretation": "Yes/no disease or difficulty is a plausible binary deficit interpretation, but NHANES response-code mapping is not supplied."
+    },
+    {
+      "number": 11,
+      "source_label": "Confusion or inability to remember things",
+      "source_location": "supplement.docx, Supplemental Table S1, XML table 1 row 12 cell 1",
+      "domain": "self_report",
+      "label_status": "explicit",
+      "raw_variable_name": null,
+      "raw_variable_status": "not_reported",
+      "exact_deficit_coding_status": "not_reported",
+      "interpretation": "Yes/no disease or difficulty is a plausible binary deficit interpretation, but NHANES response-code mapping is not supplied."
+    },
+    {
+      "number": 12,
+      "source_label": "Difficulty managing money",
+      "source_location": "supplement.docx, Supplemental Table S1, XML table 1 row 13 cell 1",
+      "domain": "self_report",
+      "label_status": "explicit",
+      "raw_variable_name": null,
+      "raw_variable_status": "not_reported",
+      "exact_deficit_coding_status": "not_reported",
+      "interpretation": "Yes/no disease or difficulty is a plausible binary deficit interpretation, but NHANES response-code mapping is not supplied."
+    },
+    {
+      "number": 13,
+      "source_label": "Difficulty stooping, crouching, kneeling",
+      "source_location": "supplement.docx, Supplemental Table S1, XML table 1 row 14 cell 1",
+      "domain": "self_report",
+      "label_status": "explicit",
+      "raw_variable_name": null,
+      "raw_variable_status": "not_reported",
+      "exact_deficit_coding_status": "not_reported",
+      "interpretation": "Yes/no disease or difficulty is a plausible binary deficit interpretation, but NHANES response-code mapping is not supplied."
+    },
+    {
+      "number": 14,
+      "source_label": "Difficulty lifting or carrying",
+      "source_location": "supplement.docx, Supplemental Table S1, XML table 1 row 2 cell 2",
+      "domain": "self_report",
+      "label_status": "explicit",
+      "raw_variable_name": null,
+      "raw_variable_status": "not_reported",
+      "exact_deficit_coding_status": "not_reported",
+      "interpretation": "Yes/no disease or difficulty is a plausible binary deficit interpretation, but NHANES response-code mapping is not supplied."
+    },
+    {
+      "number": 15,
+      "source_label": "Difficulty walking between rooms on same floor",
+      "source_location": "supplement.docx, Supplemental Table S1, XML table 1 row 3 cell 2",
+      "domain": "self_report",
+      "label_status": "explicit",
+      "raw_variable_name": null,
+      "raw_variable_status": "not_reported",
+      "exact_deficit_coding_status": "not_reported",
+      "interpretation": "Yes/no disease or difficulty is a plausible binary deficit interpretation, but NHANES response-code mapping is not supplied."
+    },
+    {
+      "number": 16,
+      "source_label": "Difficulty standing up from an armless chair",
+      "source_location": "supplement.docx, Supplemental Table S1, XML table 1 row 4 cell 2",
+      "domain": "self_report",
+      "label_status": "explicit",
+      "raw_variable_name": null,
+      "raw_variable_status": "not_reported",
+      "exact_deficit_coding_status": "not_reported",
+      "interpretation": "Yes/no disease or difficulty is a plausible binary deficit interpretation, but NHANES response-code mapping is not supplied."
+    },
+    {
+      "number": 17,
+      "source_label": "Difficulty getting in and out of bed",
+      "source_location": "supplement.docx, Supplemental Table S1, XML table 1 row 5 cell 2",
+      "domain": "self_report",
+      "label_status": "explicit",
+      "raw_variable_name": null,
+      "raw_variable_status": "not_reported",
+      "exact_deficit_coding_status": "not_reported",
+      "interpretation": "Yes/no disease or difficulty is a plausible binary deficit interpretation, but NHANES response-code mapping is not supplied."
+    },
+    {
+      "number": 18,
+      "source_label": "Difficulty dressing yourself",
+      "source_location": "supplement.docx, Supplemental Table S1, XML table 1 row 6 cell 2",
+      "domain": "self_report",
+      "label_status": "explicit",
+      "raw_variable_name": null,
+      "raw_variable_status": "not_reported",
+      "exact_deficit_coding_status": "not_reported",
+      "interpretation": "Yes/no disease or difficulty is a plausible binary deficit interpretation, but NHANES response-code mapping is not supplied."
+    },
+    {
+      "number": 19,
+      "source_label": "Difficulty grasping/holding small objects",
+      "source_location": "supplement.docx, Supplemental Table S1, XML table 1 row 7 cell 2",
+      "domain": "self_report",
+      "label_status": "explicit",
+      "raw_variable_name": null,
+      "raw_variable_status": "not_reported",
+      "exact_deficit_coding_status": "not_reported",
+      "interpretation": "Yes/no disease or difficulty is a plausible binary deficit interpretation, but NHANES response-code mapping is not supplied."
+    },
+    {
+      "number": 20,
+      "source_label": "Difficulty attending social events",
+      "source_location": "supplement.docx, Supplemental Table S1, XML table 1 row 8 cell 2",
+      "domain": "self_report",
+      "label_status": "explicit",
+      "raw_variable_name": null,
+      "raw_variable_status": "not_reported",
+      "exact_deficit_coding_status": "not_reported",
+      "interpretation": "Yes/no disease or difficulty is a plausible binary deficit interpretation, but NHANES response-code mapping is not supplied."
+    },
+    {
+      "number": 21,
+      "source_label": "Self-reported health",
+      "source_location": "supplement.docx, Supplemental Table S1, XML table 1 row 9 cell 2",
+      "domain": "self_report",
+      "label_status": "explicit",
+      "raw_variable_name": null,
+      "raw_variable_status": "not_reported",
+      "exact_deficit_coding_status": "not_reported",
+      "interpretation": "Threshold separating a deficit from no deficit is not supplied."
+    },
+    {
+      "number": 22,
+      "source_label": "Frequency of healthcare use",
+      "source_location": "supplement.docx, Supplemental Table S1, XML table 1 row 10 cell 2",
+      "domain": "self_report",
+      "label_status": "explicit",
+      "raw_variable_name": null,
+      "raw_variable_status": "not_reported",
+      "exact_deficit_coding_status": "not_reported",
+      "interpretation": "Threshold separating a deficit from no deficit is not supplied."
+    },
+    {
+      "number": 23,
+      "source_label": "Health compared to 1 year ago",
+      "source_location": "supplement.docx, Supplemental Table S1, XML table 1 row 11 cell 2",
+      "domain": "self_report",
+      "label_status": "explicit",
+      "raw_variable_name": null,
+      "raw_variable_status": "not_reported",
+      "exact_deficit_coding_status": "not_reported",
+      "interpretation": "Threshold separating a deficit from no deficit is not supplied."
+    },
+    {
+      "number": 24,
+      "source_label": "Overnight hospital stays",
+      "source_location": "supplement.docx, Supplemental Table S1, XML table 1 row 12 cell 2",
+      "domain": "self_report",
+      "label_status": "explicit",
+      "raw_variable_name": null,
+      "raw_variable_status": "not_reported",
+      "exact_deficit_coding_status": "not_reported",
+      "interpretation": "Threshold separating a deficit from no deficit is not supplied."
+    },
+    {
+      "number": 25,
+      "source_label": "Medications",
+      "source_location": "supplement.docx, Supplemental Table S1, XML table 1 row 13 cell 2",
+      "domain": "self_report",
+      "label_status": "explicit",
+      "raw_variable_name": null,
+      "raw_variable_status": "not_reported",
+      "exact_deficit_coding_status": "not_reported",
+      "interpretation": "Threshold separating a deficit from no deficit is not supplied."
+    },
+    {
+      "number": 26,
+      "source_label": "Pulse rate (60-99 bpm)",
+      "source_location": "supplement.docx, Supplemental Table S1, XML table 1 row 16 cell 1",
+      "domain": "laboratory_or_examination",
+      "label_status": "explicit",
+      "raw_variable_name": null,
+      "raw_variable_status": "not_reported",
+      "exact_deficit_coding_status": "not_reported",
+      "interpretation": "Parenthesized range is supplied; treating outside range as a deficit is an interpretation, not an explicit direction-of-coding statement."
+    },
+    {
+      "number": 27,
+      "source_label": "Systolic blood pressure (90-140 mmHg)",
+      "source_location": "supplement.docx, Supplemental Table S1, XML table 1 row 17 cell 1",
+      "domain": "laboratory_or_examination",
+      "label_status": "explicit",
+      "raw_variable_name": null,
+      "raw_variable_status": "not_reported",
+      "exact_deficit_coding_status": "not_reported",
+      "interpretation": "Parenthesized range is supplied; treating outside range as a deficit is an interpretation, not an explicit direction-of-coding statement."
+    },
+    {
+      "number": 28,
+      "source_label": "Pulse pressure (30-60 mmHg)",
+      "source_location": "supplement.docx, Supplemental Table S1, XML table 1 row 18 cell 1",
+      "domain": "laboratory_or_examination",
+      "label_status": "explicit",
+      "raw_variable_name": null,
+      "raw_variable_status": "not_reported",
+      "exact_deficit_coding_status": "not_reported",
+      "interpretation": "Parenthesized range is supplied; treating outside range as a deficit is an interpretation, not an explicit direction-of-coding statement."
+    },
+    {
+      "number": 29,
+      "source_label": "Platelet count SI (150-450 unit 1000 cells/uL)",
+      "source_location": "supplement.docx, Supplemental Table S1, XML table 1 row 19 cell 1",
+      "domain": "laboratory_or_examination",
+      "label_status": "explicit",
+      "raw_variable_name": null,
+      "raw_variable_status": "not_reported",
+      "exact_deficit_coding_status": "not_reported",
+      "interpretation": "Parenthesized range is supplied; treating outside range as a deficit is an interpretation, not an explicit direction-of-coding statement."
+    },
+    {
+      "number": 30,
+      "source_label": "Blood urea nitrogen (3-20 mg/dL)",
+      "source_location": "supplement.docx, Supplemental Table S1, XML table 1 row 20 cell 1",
+      "domain": "laboratory_or_examination",
+      "label_status": "explicit",
+      "raw_variable_name": null,
+      "raw_variable_status": "not_reported",
+      "exact_deficit_coding_status": "not_reported",
+      "interpretation": "Parenthesized range is supplied; treating outside range as a deficit is an interpretation, not an explicit direction-of-coding statement."
+    },
+    {
+      "number": 31,
+      "source_label": "Bicarbonate (≤28 mmol/L)",
+      "source_location": "supplement.docx, Supplemental Table S1, XML table 1 row 21 cell 1",
+      "domain": "laboratory_or_examination",
+      "label_status": "explicit",
+      "raw_variable_name": null,
+      "raw_variable_status": "not_reported",
+      "exact_deficit_coding_status": "not_reported",
+      "interpretation": "Parenthesized range is supplied; treating outside range as a deficit is an interpretation, not an explicit direction-of-coding statement."
+    },
+    {
+      "number": 32,
+      "source_label": "Red cell distribution width (≤14.6%)",
+      "source_location": "supplement.docx, Supplemental Table S1, XML table 1 row 16 cell 2",
+      "domain": "laboratory_or_examination",
+      "label_status": "explicit",
+      "raw_variable_name": null,
+      "raw_variable_status": "not_reported",
+      "exact_deficit_coding_status": "not_reported",
+      "interpretation": "Parenthesized range is supplied; treating outside range as a deficit is an interpretation, not an explicit direction-of-coding statement."
+    },
+    {
+      "number": 33,
+      "source_label": "Lactate dehydrogenase (≤190 U/L)",
+      "source_location": "supplement.docx, Supplemental Table S1, XML table 1 row 17 cell 2",
+      "domain": "laboratory_or_examination",
+      "label_status": "explicit",
+      "raw_variable_name": null,
+      "raw_variable_status": "not_reported",
+      "exact_deficit_coding_status": "not_reported",
+      "interpretation": "Parenthesized range is supplied; treating outside range as a deficit is an interpretation, not an explicit direction-of-coding statement."
+    },
+    {
+      "number": 34,
+      "source_label": "Alkaline phosphatase (≤115 U/L)",
+      "source_location": "supplement.docx, Supplemental Table S1, XML table 1 row 18 cell 2",
+      "domain": "laboratory_or_examination",
+      "label_status": "explicit",
+      "raw_variable_name": null,
+      "raw_variable_status": "not_reported",
+      "exact_deficit_coding_status": "not_reported",
+      "interpretation": "Parenthesized range is supplied; treating outside range as a deficit is an interpretation, not an explicit direction-of-coding statement."
+    },
+    {
+      "number": 35,
+      "source_label": "Uric acid (M:  240-510, F: 160-430 umol/L)",
+      "source_location": "supplement.docx, Supplemental Table S1, XML table 1 row 19 cell 2",
+      "domain": "laboratory_or_examination",
+      "label_status": "explicit",
+      "raw_variable_name": null,
+      "raw_variable_status": "not_reported",
+      "exact_deficit_coding_status": "not_reported",
+      "interpretation": "Parenthesized range is supplied; treating outside range as a deficit is an interpretation, not an explicit direction-of-coding statement."
+    },
+    {
+      "number": 36,
+      "source_label": "Total calcium (2.0-2.5 mmol/L)",
+      "source_location": "supplement.docx, Supplemental Table S1, XML table 1 row 20 cell 2",
+      "domain": "laboratory_or_examination",
+      "label_status": "explicit",
+      "raw_variable_name": null,
+      "raw_variable_status": "not_reported",
+      "exact_deficit_coding_status": "not_reported",
+      "interpretation": "Parenthesized range is supplied; treating outside range as a deficit is an interpretation, not an explicit direction-of-coding statement."
+    }
+  ],
+  "fi_reconstruction": {
+    "status": "not_fully_identified_from_supplied_sources",
+    "usable_now": [
+      "CBC formulas",
+      "36 item identities",
+      "11 laboratory/examination range labels",
+      "binary FI cutoff",
+      "model covariate lists"
+    ],
+    "must_resolve_before_paper_equivalence": [
+      "cycle-specific raw variable and response mappings",
+      "exact self-report deficit thresholds especially items21–25",
+      "measurement aggregation and units",
+      "lab deficit direction and endpoint handling",
+      "complete-item denominator and partial-missing policy",
+      "survey design specification",
+      "log base",
+      "model-specific missing data handling"
+    ],
+    "prohibited_shortcuts": [
+      "Treat unanswered/unknown/refused as zero",
+      "Substitute Fried phenotype for Rockwood FI",
+      "Drop unavailable FI items without explicit renamed modified outcome",
+      "Choose coding/log base/weights to match published N/OR/p-values",
+      "Use rounded published marker cutoffs as FI quartiles"
+    ]
+  },
+  "reference_followup": {
+    "scope": "Bounded follow-up requested by root; cited original research checked for missing coding. These sources do not prove Han2024 used all their implementation choices.",
+    "references": [
+      {
+        "han_reference": 23,
+        "url": "https://link.springer.com/article/10.1186/s12916-021-01918-5",
+        "supplement_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1186%2Fs12916-021-01918-5/MediaObjects/12916_2021_1918_MOESM1_ESM.docx",
+        "local_file": "reference23_supplement.docx",
+        "finding": "S2 repeats the same 36 labels/ranges without self-report scoring thresholds. Main Frailty index section explicitly divides deficit count by total possible deficits. This supports the general denominator concept, not Han partial-missing policy.",
+        "local_sha256": "54d7d041f50519a0c39268b01996481992620c02c6a08b16d8e6f7a311b8256c"
+      },
+      {
+        "han_reference": 22,
+        "url": "https://link.springer.com/article/10.1007/s11357-017-9993-7",
+        "supplement_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1007%2Fs11357-017-9993-7/MediaObjects/11357_2017_9993_MOESM1_ESM.docx",
+        "local_file": "reference22_supplement.docx",
+        "finding": "Frailty index construction section: outside normal range=1, otherwise0; calculate FI only when <20% variables missing. However self-report36/lab32/combined68 indices differ from Han36. Supplemental Table1 contains labels/ranges, no detailed self-report thresholds. Lab examples differ: pulse pressure30–65, calcium2.3–2.74, bicarbonate21–28, ALP20–130.",
+        "local_sha256": "5a42bf23a3e689cbddb4c2f32853bf98cab317c087ad8e1514e5543971631993"
+      },
+      {
+        "han_reference": 21,
+        "url": "https://www.cmaj.ca/content/189/33/E1056",
+        "supplement_url": "https://www.cmaj.ca/lookup/suppl/doi:10.1503/cmaj.161034/-/DC1",
+        "finding": "Search-indexed primary article describes a46-itemFI. Primary-page and supplement direct fetch failed; no coding from this uninspected supplement is claimed."
+      },
+      {
+        "han_reference": null,
+        "relationship": "Jayanama2021 cited antecedent",
+        "url": "https://link.springer.com/article/10.1186/s12916-018-1176-6",
+        "finding": "Frailty index section supports36-item deficit-count/total-considered formula and identifies10 excluded nutrition items. Its >80% rule appears in Nutrition index section and must not be attributed to FI without additional evidence."
+      }
+    ],
+    "remaining_unknowns": [
+      "Han-specific binary self-report thresholds",
+      "HUQ healthcare-use cutoff",
+      "Medication count cutoff",
+      "Han-specific FI partial-missing denominator and minimum item count"
+    ],
+    "course_plan_resolution": "Root froze analysis/config/analysis_plan.json before results: primary Welch; trend uses group FI medians with HC3; pairwise family has24 comparisons across4 markers. This overrides the initial optional1–4 score/6-pair suggestions in this handoff."
+  }
+}

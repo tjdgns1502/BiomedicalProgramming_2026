@@ -1,0 +1,26 @@
+{
+  "n": 9786,
+  "outcomes": 1910,
+  "parent_n": 88062,
+  "design_df": 138,
+  "parent_design_df": 138,
+  "strata": 133,
+  "PSU": 271,
+  "cycles": {
+    "1999-2000": 966,
+    "2001-2002": 968,
+    "2003-2004": 876,
+    "2005-2006": 823,
+    "2007-2008": 1044,
+    "2009-2010": 1120,
+    "2011-2012": 938,
+    "2013-2014": 1531,
+    "2015-2016": 1520
+  },
+  "references": {
+    "sex": "1",
+    "race": "1",
+    "cycle": "1999-2000"
+  },
+  "limitation": "Existing operational FI and frozen pooled weights reused; not independent source rederivation. Candidate input already age>=50; adequate for boundary comparison, not younger-age eligibility."
+}

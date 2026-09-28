@@ -1,0 +1,81 @@
+{
+  "task": "V2-D01",
+  "revision": 1,
+  "role": "D independent conceptual planner",
+  "status": "proposed_for_independent_review_before_implementation",
+  "exposure": {
+    "publication_results_or_effect_targets_read": false,
+    "current_data_or_existing_effect_estimates_read": false,
+    "basis": "Parent-supplied study-design inputs only; no result-driven method selection."
+  },
+  "scope": {
+    "population": "NHANES 1999-2016 adults; exact age >=50 versus >50 eligibility awaits source-method verification.",
+    "outcome": "Binary analyst-operational 36-deficit FI >0.3 among complete cases; not a confirmed reconstruction of the authors' FI.",
+    "markers": ["NLR", "MLR", "SIRI", "SII"],
+    "adjustment": ["age", "sex", "race", "cycle"],
+    "model": "Survey-weighted logistic Model 1; age continuous and sex/race/cycle categorical using previously frozen encodings.",
+    "not_in_scope": ["Selecting methods using published effect sizes or significance", "Searching new FI definitions", "Choosing spline complexity from fit results", "Claiming reproduction of an unspecified original restricted cubic spline analysis", "Expanding covariates or analyses beyond the listed checks"]
+  },
+  "implementation_gate": [
+    "Obtain independent reviewer approval of this plan before implementation.",
+    "Confirm source age wording without consulting results, and record exact source wording and resulting predicate.",
+    "Freeze marker formulas, FI items and coding, exclusions, pooling weights, strata/PSU construction and covariate reference levels from the existing approved specification.",
+    "Verify that the frozen survey design correctly pools the cycles and handles domain restriction; unresolved design or outcome-definition questions block inferential interpretation rather than being silently patched."
+  ],
+  "estimands": {
+    "continuous": "Adjusted conditional odds ratio per one-unit change in the specified log(marker) among the eligible operational-FI complete-case population under the survey-weighted working logistic model.",
+    "quartile": "Three adjusted conditional odds ratios, Q2/Q1, Q3/Q1 and Q4/Q1, using sample-defined unweighted quartile cutpoints; these are not population weighted quartiles or a single trend coefficient.",
+    "nonlinearity": "Design-based joint test that the two additional natural-spline degrees of freedom beyond a linear log(marker) term equal zero; diagnostic for the working logit linearity assumption, not proof of biological linearity or causality."
+  },
+  "sample_control": {
+    "rule": "Freeze one common analysis-row set with valid binary FI, all four finite positive markers, all Model 1 covariates and all valid survey-design variables/weights. Use precisely this row set for all base-e/base-10, quartile, linear and spline fits in the primary family.",
+    "audit": "Record stable row IDs or hash, n, outcome count, cycle counts, PSU count, strata count and design degrees of freedom. If the already approved reproduction uses marker-specific samples, preserve those as separately labelled analyses; do not silently replace or compare them as same-sample fits.",
+    "domain": "Construct the approved parent survey design before analysis-domain subsetting where data permit; preserve domain variance information. Document any pre-existing complete-case-only design limitation."
+  },
+  "checks": [
+    {
+      "id": "log_base_identity",
+      "specification": "Fit identical Model 1 twice, x_e=ln(marker) and x_10=log10(marker), with unchanged rows, weights, design, covariates, link and convergence settings.",
+      "identities": ["x_e = ln(10) * x_10", "beta_10 = ln(10) * beta_e", "SE_10 = ln(10) * SE_e", "CI endpoints on the coefficient scale transform by ln(10)", "OR_10 = exp(ln(10) * beta_e)", "Intercept and covariate coefficients are invariant; linear predictors and fitted probabilities are invariant", "The full covariance transforms as V_10 = T V_e T', with the marker diagonal of T equal to ln(10) and all other diagonals one", "The marker Wald statistic and p value are invariant up to numerical error"],
+      "interpretation": "A numeric per-log-unit odds ratio depends on base; an odds ratio for an explicitly fixed fold change does not. The publication log base is unresolved, so no base is selected to match a target."
+    },
+    {
+      "id": "quartile_model1",
+      "specification": "For each marker on the frozen primary rows, calculate raw-marker unweighted R quantile(type=7) cutpoints at 0.25, 0.50, 0.75. Assign Q1: x<=c1; Q2: c1<x<=c2; Q3: c2<x<=c3; Q4: x>c3. Preserve ties without rank-based splitting. Compute cutpoints on the raw marker because type-7 interpolation need not commute exactly with logarithms.",
+      "fit": "Replace the continuous marker term by a four-level factor, reference Q1; retain the same complex survey design and Model 1 covariates. Report the three coefficient/SE/CI/OR rows and counts per category.",
+      "variance": "Standard survey model variance conditional on the estimated cutpoints; do not claim cutpoint-estimation uncertainty is included.",
+      "failure": "If cutpoints coincide or any category is empty or the design matrix loses rank, report a non-estimable planned four-category model; do not jitter, split ties, collapse categories or change quantile method to obtain a desired result."
+    },
+    {
+      "id": "age_boundary_audit",
+      "specification": "Read original age values and compute counts for age=50, age>=50 and age>50 at the raw age-valid level and after all other frozen eligibility/complete-case criteria. Tabulate by cycle and report missing age separately.",
+      "invariant": "At each identical filtering level, n(age>=50)-n(age>50)=n(age=50). Use integer age as recorded; do not infer birthdays or fractional ages.",
+      "decision": "Primary eligibility follows verified methods wording only. If wording remains ambiguous, report both counts and retain the explicitly labelled existing operational predicate; do not select a boundary from agreement with published sample sizes or estimates. Additional age-boundary model fits are outside this bounded scope."
+    },
+    {
+      "id": "fixed_nonlinearity_diagnostic",
+      "specification": "On each marker's natural-log scale, use a natural cubic spline with fixed df=3 and no intercept. Set two internal knots to unweighted type-7 log-marker quantiles 1/3 and 2/3 and boundary knots to the observed minimum and maximum of the frozen rows. Freeze these choices before any fit. This describes an analyst diagnostic, not the paper's RCS reproduction.",
+      "nested_parameterization": "Use a full-rank basis spanning the natural-spline space with an explicit linear log-marker column and two nonlinear columns. Obtain the nonlinear columns by numerically stable QR orthogonalization of the three spline columns against intercept and the linear column, retaining exactly rank two. Verify that the augmented span equals intercept plus the original spline basis. The linear model is nested by setting both nonlinear coefficients to zero.",
+      "fit_and_test": "Fit survey-weighted logistic models with the identical frozen rows, design and covariates. Use a design-based joint Wald F test of the two nonlinear coefficients, numerator df=2 and explicitly specified denominator df=survey::degf(analysis_design). Report both degrees of freedom, statistic and raw p. Do not use an ordinary likelihood-ratio test or ordinary independent-observation GLM covariance.",
+      "multiplicity": "The sole diagnostic family comprises four preplanned nonlinear Wald tests, one per marker. Primary familywise adjustment is Bonferroni at alpha=0.05 (adjusted p=min(1,4*p)); report BH-adjusted p as secondary exploratory FDR summaries, using n=4 even if a planned test fails. Retain all four planned entries and mark failed tests non-estimable. Do not select the preferred adjustment based on significance.",
+      "interpretation": "Report evidence against logit linearity with uncertainty; a nonsignificant diagnostic is insufficient evidence that linearity is true. Do not replace the reproduction model or tune knots using these results.",
+      "failure": "Repeated knots, insufficient distinct marker values, rank failure, nonpositive design df, failed convergence or nonfinite covariance stop the affected diagnostic with an explicit reason; no adaptive spline retuning."
+    }
+  ],
+  "numerical_acceptance": {
+    "row_and_count_checks": "Exact equality for row identities, category totals and count invariants.",
+    "fit_prerequisite": "Both compared fits converge with finite coefficients/covariance and the same model-matrix rank; otherwise the algebraic invariance test is not considered passed.",
+    "coefficients_and_standard_errors": "abs(actual-expected) <= 1e-8 + 1e-7*abs(expected).",
+    "covariance_transform": "Elementwise abs(actual-expected) <= 1e-8 + 1e-7*abs(expected).",
+    "linear_predictors": "Maximum absolute difference <=1e-7.",
+    "probabilities": "Maximum absolute difference <=1e-8.",
+    "wald_and_pvalues": "abs(actual-expected) <=1e-8 + 1e-7*abs(expected); do not require relative agreement of tiny p values.",
+    "basis_span": "Relative Frobenius residual after projection <=1e-10; report condition/rank problems rather than weakening the threshold after seeing results.",
+    "failure_policy": "Investigate only implementation, convergence and conditioning errors; document failures and preserve predeclared specifications."
+  },
+  "outputs_and_stop": {
+    "minimum_outputs": ["Frozen specification and row-set/design audit", "Per-marker base-conversion identity checks", "Per-marker raw quartile cutpoints, group counts and three Model 1 contrast rows", "Raw and otherwise-eligible age boundary counts by cycle", "Four fixed nonlinear diagnostic entries with raw, Bonferroni and BH p values and explicit non-estimability reasons if needed", "Clear labels separating faithful method components, unresolved publication details and analyst sensitivity/diagnostic additions"],
+    "stop_when": "Stop after all four bounded checks have passed or have explicit auditable non-estimability/failure records and independent review is resolved. No method search or further exploratory models are authorized by this plan.",
+    "planner_delivery": "Planner writes only this plan.json and handoff.md; implementation and final learning-document changes belong to the parent after approval."
+  }
+}

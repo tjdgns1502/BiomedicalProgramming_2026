@@ -1,0 +1,409 @@
+{
+  "scope": "Schema and existing raw-file inventory only; no models or effect outputs read",
+  "derived": {
+    "candidate_complete36.csv": {
+      "column_count": 725,
+      "groups": {
+        "education": {
+          "DMDEDUC2": true
+        },
+        "poverty": {
+          "INDFMPIR": true
+        },
+        "BMI": {
+          "BMXBMI": true
+        },
+        "smoking": {
+          "SMQ020": true
+        },
+        "drinking": {
+          "ALQ100": true,
+          "ALQ101": true,
+          "ALQ110": true,
+          "ALQ120Q": true,
+          "ALQ120U": true,
+          "ALQ130": true
+        },
+        "activity": {
+          "PAD200": true,
+          "PAD320": true,
+          "PAQ650": true,
+          "PAQ665": true,
+          "PAQ605": true,
+          "PAQ620": true,
+          "PAQ635": true
+        },
+        "energy": {
+          "DRXTKCAL": true,
+          "DR1TKCAL": true,
+          "DR2TKCAL": true,
+          "DRDDRSTZ": true,
+          "DR1DRSTZ": true,
+          "DR2DRSTZ": true
+        },
+        "diabetes": {
+          "DIQ010": true,
+          "DIQ050": true,
+          "DIQ070": true
+        },
+        "hypertension": {
+          "BPQ020": true,
+          "BPQ050A": true,
+          "BPXSY1": true,
+          "BPXDI1": true
+        },
+        "subgroups": {
+          "RIDAGEYR": true,
+          "RIAGENDR": true,
+          "RIDRETH1": true,
+          "DMDEDUC2": true,
+          "INDFMPIR": true,
+          "BMXBMI": true,
+          "SMQ020": true
+        },
+        "FI": {
+          "candidate36_observed_items": true,
+          "FI_candidate36": true,
+          "FI_candidate36_alt": true,
+          "deficit_29": true
+        },
+        "survey": {
+          "SEQN": true,
+          "SDMVPSU": true,
+          "SDMVSTRA": true,
+          "weight_mec_18yr": true
+        }
+      }
+    },
+    "candidate_all_age50.csv": {
+      "column_count": 725,
+      "groups": {
+        "education": {
+          "DMDEDUC2": true
+        },
+        "poverty": {
+          "INDFMPIR": true
+        },
+        "BMI": {
+          "BMXBMI": true
+        },
+        "smoking": {
+          "SMQ020": true
+        },
+        "drinking": {
+          "ALQ100": true,
+          "ALQ101": true,
+          "ALQ110": true,
+          "ALQ120Q": true,
+          "ALQ120U": true,
+          "ALQ130": true
+        },
+        "activity": {
+          "PAD200": true,
+          "PAD320": true,
+          "PAQ650": true,
+          "PAQ665": true,
+          "PAQ605": true,
+          "PAQ620": true,
+          "PAQ635": true
+        },
+        "energy": {
+          "DRXTKCAL": true,
+          "DR1TKCAL": true,
+          "DR2TKCAL": true,
+          "DRDDRSTZ": true,
+          "DR1DRSTZ": true,
+          "DR2DRSTZ": true
+        },
+        "diabetes": {
+          "DIQ010": true,
+          "DIQ050": true,
+          "DIQ070": true
+        },
+        "hypertension": {
+          "BPQ020": true,
+          "BPQ050A": true,
+          "BPXSY1": true,
+          "BPXDI1": true
+        },
+        "subgroups": {
+          "RIDAGEYR": true,
+          "RIAGENDR": true,
+          "RIDRETH1": true,
+          "DMDEDUC2": true,
+          "INDFMPIR": true,
+          "BMXBMI": true,
+          "SMQ020": true
+        },
+        "FI": {
+          "candidate36_observed_items": true,
+          "FI_candidate36": true,
+          "FI_candidate36_alt": true,
+          "deficit_29": true
+        },
+        "survey": {
+          "SEQN": true,
+          "SDMVPSU": true,
+          "SDMVSTRA": true,
+          "weight_mec_18yr": true
+        }
+      }
+    },
+    "nhanes_design_all.csv": {
+      "column_count": 11,
+      "groups": {
+        "education": {
+          "DMDEDUC2": false
+        },
+        "poverty": {
+          "INDFMPIR": false
+        },
+        "BMI": {
+          "BMXBMI": false
+        },
+        "smoking": {
+          "SMQ020": false
+        },
+        "drinking": {
+          "ALQ100": false,
+          "ALQ101": false,
+          "ALQ110": false,
+          "ALQ120Q": false,
+          "ALQ120U": false,
+          "ALQ130": false
+        },
+        "activity": {
+          "PAD200": false,
+          "PAD320": false,
+          "PAQ650": false,
+          "PAQ665": false,
+          "PAQ605": false,
+          "PAQ620": false,
+          "PAQ635": false
+        },
+        "energy": {
+          "DRXTKCAL": false,
+          "DR1TKCAL": false,
+          "DR2TKCAL": false,
+          "DRDDRSTZ": false,
+          "DR1DRSTZ": false,
+          "DR2DRSTZ": false
+        },
+        "diabetes": {
+          "DIQ010": false,
+          "DIQ050": false,
+          "DIQ070": false
+        },
+        "hypertension": {
+          "BPQ020": false,
+          "BPQ050A": false,
+          "BPXSY1": false,
+          "BPXDI1": false
+        },
+        "subgroups": {
+          "RIDAGEYR": true,
+          "RIAGENDR": true,
+          "RIDRETH1": true,
+          "DMDEDUC2": false,
+          "INDFMPIR": false,
+          "BMXBMI": false,
+          "SMQ020": false
+        },
+        "FI": {
+          "candidate36_observed_items": false,
+          "FI_candidate36": false,
+          "FI_candidate36_alt": false,
+          "deficit_29": false
+        },
+        "survey": {
+          "SEQN": true,
+          "SDMVPSU": true,
+          "SDMVSTRA": true,
+          "weight_mec_18yr": true
+        }
+      }
+    }
+  },
+  "raw_files_by_cycle": {
+    "1999-2000": [
+      "ALQ.xpt",
+      "BMX.xpt",
+      "BPQ.xpt",
+      "BPX.xpt",
+      "DEMO.xpt",
+      "DIQ.xpt",
+      "DRXTOT.xpt",
+      "HSQ.xpt",
+      "HUQ.xpt",
+      "KIQ.xpt",
+      "LAB18.xpt",
+      "LAB25.xpt",
+      "MCQ.xpt",
+      "PAQ.xpt",
+      "PFQ.xpt",
+      "RXQ_RX.xpt",
+      "SMQ.xpt"
+    ],
+    "2001-2002": [
+      "ALQ_B.xpt",
+      "BMX_B.xpt",
+      "BPQ_B.xpt",
+      "BPX_B.xpt",
+      "DEMO_B.xpt",
+      "DIQ_B.xpt",
+      "DRXTOT_B.xpt",
+      "HSQ_B.xpt",
+      "HUQ_B.xpt",
+      "KIQ_U_B.xpt",
+      "L25_2_B.xpt",
+      "L25_B.xpt",
+      "L40_2_B.xpt",
+      "L40_B.xpt",
+      "MCQ_B.xpt",
+      "PAQ_B.xpt",
+      "PFQ_B.xpt",
+      "RXQ_RX_B.xpt",
+      "SMQ_B.xpt"
+    ],
+    "2003-2004": [
+      "ALQ_C.xpt",
+      "BMX_C.xpt",
+      "BPQ_C.xpt",
+      "BPX_C.xpt",
+      "DEMO_C.xpt",
+      "DIQ_C.xpt",
+      "DR1TOT_C.xpt",
+      "DR2TOT_C.xpt",
+      "HSQ_C.xpt",
+      "HUQ_C.xpt",
+      "KIQ_U_C.xpt",
+      "L25_C.xpt",
+      "L40_C.xpt",
+      "MCQ_C.xpt",
+      "PAQ_C.xpt",
+      "PFQ_C.xpt",
+      "RXQ_RX_C.xpt",
+      "SMQ_C.xpt"
+    ],
+    "2005-2006": [
+      "ALQ_D.xpt",
+      "BIOPRO_D.xpt",
+      "BMX_D.xpt",
+      "BPQ_D.xpt",
+      "BPX_D.xpt",
+      "CBC_D.xpt",
+      "DEMO_D.xpt",
+      "DIQ_D.xpt",
+      "DR1TOT_D.xpt",
+      "DR2TOT_D.xpt",
+      "HSQ_D.xpt",
+      "HUQ_D.xpt",
+      "KIQ_U_D.xpt",
+      "MCQ_D.xpt",
+      "PAQ_D.xpt",
+      "PFQ_D.xpt",
+      "RXQ_RX_D.xpt",
+      "SMQ_D.xpt"
+    ],
+    "2007-2008": [
+      "ALQ_E.xpt",
+      "BIOPRO_E.xpt",
+      "BMX_E.xpt",
+      "BPQ_E.xpt",
+      "BPX_E.xpt",
+      "CBC_E.xpt",
+      "DEMO_E.xpt",
+      "DIQ_E.xpt",
+      "DR1TOT_E.xpt",
+      "DR2TOT_E.xpt",
+      "HSQ_E.xpt",
+      "HUQ_E.xpt",
+      "KIQ_U_E.xpt",
+      "MCQ_E.xpt",
+      "PAQ_E.xpt",
+      "PFQ_E.xpt",
+      "RXQ_RX_E.xpt",
+      "SMQ_E.xpt"
+    ],
+    "2009-2010": [
+      "ALQ_F.xpt",
+      "BIOPRO_F.xpt",
+      "BMX_F.xpt",
+      "BPQ_F.xpt",
+      "BPX_F.xpt",
+      "CBC_F.xpt",
+      "DEMO_F.xpt",
+      "DIQ_F.xpt",
+      "DR1TOT_F.xpt",
+      "DR2TOT_F.xpt",
+      "HSQ_F.xpt",
+      "HUQ_F.xpt",
+      "KIQ_U_F.xpt",
+      "MCQ_F.xpt",
+      "PAQ_F.xpt",
+      "PFQ_F.xpt",
+      "RXQ_RX_F.xpt",
+      "SMQ_F.xpt"
+    ],
+    "2011-2012": [
+      "ALQ_G.xpt",
+      "BIOPRO_G.xpt",
+      "BMX_G.xpt",
+      "BPQ_G.xpt",
+      "BPX_G.xpt",
+      "CBC_G.xpt",
+      "DEMO_G.xpt",
+      "DIQ_G.xpt",
+      "DR1TOT_G.xpt",
+      "DR2TOT_G.xpt",
+      "HSQ_G.xpt",
+      "HUQ_G.xpt",
+      "KIQ_U_G.xpt",
+      "MCQ_G.xpt",
+      "PAQ_G.xpt",
+      "PFQ_G.xpt",
+      "RXQ_RX_G.xpt",
+      "SMQ_G.xpt"
+    ],
+    "2013-2014": [
+      "ALQ_H.xpt",
+      "BIOPRO_H.xpt",
+      "BMX_H.xpt",
+      "BPQ_H.xpt",
+      "BPX_H.xpt",
+      "CBC_H.xpt",
+      "DEMO_H.xpt",
+      "DIQ_H.xpt",
+      "DR1TOT_H.xpt",
+      "DR2TOT_H.xpt",
+      "HSQ_H.xpt",
+      "HUQ_H.xpt",
+      "KIQ_U_H.xpt",
+      "MCQ_H.xpt",
+      "PAQ_H.xpt",
+      "PFQ_H.xpt",
+      "RXQ_RX_H.xpt",
+      "SMQ_H.xpt"
+    ],
+    "2015-2016": [
+      "ALQ_I.xpt",
+      "BIOPRO_I.xpt",
+      "BMX_I.xpt",
+      "BPQ_I.xpt",
+      "BPX_I.xpt",
+      "CBC_I.xpt",
+      "DEMO_I.xpt",
+      "DIQ_I.xpt",
+      "DR1TOT_I.xpt",
+      "DR2TOT_I.xpt",
+      "HSQ_I.xpt",
+      "HUQ_I.xpt",
+      "KIQ_U_I.xpt",
+      "MCQ_I.xpt",
+      "PAQ_I.xpt",
+      "PFQ_I.xpt",
+      "RXQ_RX_I.xpt",
+      "SMQ_I.xpt"
+    ]
+  }
+}

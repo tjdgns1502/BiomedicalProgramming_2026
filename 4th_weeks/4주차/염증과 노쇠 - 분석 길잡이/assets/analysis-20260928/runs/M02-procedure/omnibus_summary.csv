@@ -1,0 +1,13 @@
+"simulation","scenario_id","scenario","B","n_per_group","method","endpoint","alpha","estimate","mcse","lower95","upper95"
+TRUE,1,"normal_equal_null",2000,30,"ANOVA","size_under_equal_mean_null",0.05,0.0495,0.0048502448391808,0.0408272546108082,0.0599000049896006
+TRUE,1,"normal_equal_null",2000,30,"Welch","size_under_equal_mean_null",0.05,0.051,0.00491929873051027,0.0421899699173155,0.0615315385412496
+TRUE,1,"normal_equal_null",2000,30,"Kruskal-Wallis","size_under_identical_distribution_null",0.05,0.045,0.00463546114210873,0.0367538170447133,0.0549906959812269
+TRUE,2,"normal_hetero_equal_mean",2000,30,"ANOVA","size_under_equal_mean_null",0.05,0.0615,0.00537204569973116,0.0517881702341286,0.0728930802315302
+TRUE,2,"normal_hetero_equal_mean",2000,30,"Welch","size_under_equal_mean_null",0.05,0.05,0.00487339717240448,0.0412812336187317,0.0604441089343959
+TRUE,2,"normal_hetero_equal_mean",2000,30,"Kruskal-Wallis","rejection_frequency_different_distributions_NOT_null_size",0.05,0.061,0.00535158854920667,0.0513289811081226,0.0723541864048174
+TRUE,3,"lognormal_identical_null",2000,30,"ANOVA","size_under_equal_mean_null",0.05,0.041,0.00443390347211123,0.0331534907492744,0.0506063586549158
+TRUE,3,"lognormal_identical_null",2000,30,"Welch","size_under_equal_mean_null",0.05,0.062,0.00539240206216117,0.0522475544613382,0.0734317789570393
+TRUE,3,"lognormal_identical_null",2000,30,"Kruskal-Wallis","size_under_identical_distribution_null",0.05,0.05,0.00487339717240448,0.0412812336187317,0.0604441089343959
+TRUE,4,"normal_mean_alternative",2000,30,"ANOVA","power_under_mean_and_distribution_alternative",0.05,0.489,0.0111776339177842,0.467134326629644,0.510907848410543
+TRUE,4,"normal_mean_alternative",2000,30,"Welch","power_under_mean_and_distribution_alternative",0.05,0.4785,0.011169998880931,0.456669376996088,0.500413056037006
+TRUE,4,"normal_mean_alternative",2000,30,"Kruskal-Wallis","power_under_mean_and_distribution_alternative",0.05,0.461,0.0111462774054839,0.43924928475348,0.482900244934458

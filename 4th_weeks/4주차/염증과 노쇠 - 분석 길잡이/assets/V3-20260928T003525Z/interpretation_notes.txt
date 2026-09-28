@@ -1,0 +1,7 @@
+Primary: route-confirmed complete36 analyst candidate. Main Model2 MEC-weighted with reliable day1 energy is exploratory energy-adjusted association.
+Tables use variable-specific observed denominators; survey weighted quantiles are CDF quantiles, unweighted type7 quantiles. Tests, when approved, use variable-specific survey domains.
+Supplement adds 16 fixed disease/laboratory covariates, overlapping FI outcome components. No causal interpretation.
+Figure2/FigS1 use fixed3df natural splines, observed boundaries, median reference, pointwise design-t 95% intervals; not recovered author RCS.
+Figure3 uses pooled models and design Wald interaction F. Subgroup CI are pointwise descriptive.
+Ordinary beta branch not applicable because FI endpoints exist; no endpoint removal or squeezing. Existing original36 fractional analyses retained externally; new fractional fitting not required.
+All inferential families separate; full planned denominators used; Holm primary/BH secondary. Reference quartiles/medians fixed before Model2 selection.

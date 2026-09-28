@@ -1,0 +1,225 @@
+[
+  {
+    "output_id": "Figure1",
+    "stage_id": "04",
+    "question": "Cohort inclusion and exclusion counts",
+    "source_confirmation": "reported structure verified; exact author implementation remains partly unknown",
+    "candidate_implementation": "reviewed_candidate_complete",
+    "numeric_review": "accepted_with_limits",
+    "validity_scope": "candidate observational association; not author-identical",
+    "documentation": "integrated_existing_stage",
+    "task_id": "V3-I01",
+    "freshness": "current_for_declared_candidate",
+    "artifacts": [
+      "analysis/tasks/V3-I01/rev-1/work/flow_counts.csv",
+      "analysis/tasks/V3-I01/rev-1/work/Figure1_flow.png"
+    ],
+    "review": "analysis/tasks/V3-Q01/rev-1/work/result_review.json"
+  },
+  {
+    "output_id": "Table1",
+    "stage_id": "05",
+    "question": "Frail/nonfrail continuous and categorical descriptions",
+    "source_confirmation": "reported structure verified; exact author implementation remains partly unknown",
+    "candidate_implementation": "reviewed_candidate_complete",
+    "numeric_review": "accepted_with_limits",
+    "validity_scope": "candidate observational association; not author-identical",
+    "documentation": "integrated_existing_stage",
+    "task_id": "V3-I01",
+    "freshness": "current_for_declared_candidate",
+    "artifacts": [
+      "analysis/tasks/V3-I01/rev-1/work/table1_descriptions.csv",
+      "analysis/tasks/V3-I01/rev-1/work/table1_tests.csv"
+    ],
+    "review": "analysis/tasks/V3-Q01/rev-1/work/result_review.json"
+  },
+  {
+    "output_id": "Table2-Model1",
+    "stage_id": "08",
+    "question": "Continuous log-marker adjusted association",
+    "source_confirmation": "reported structure verified; exact author implementation remains partly unknown",
+    "candidate_implementation": "reviewed_candidate_complete",
+    "numeric_review": "accepted_with_limits",
+    "validity_scope": "candidate observational association; not author-identical",
+    "documentation": "integrated_existing_stage",
+    "task_id": "V3-I01",
+    "freshness": "current_for_declared_candidate",
+    "artifacts": [
+      "analysis/tasks/V3-I01/rev-1/work/continuous_models.csv"
+    ],
+    "review": "analysis/tasks/V3-Q01/rev-1/work/result_review.json"
+  },
+  {
+    "output_id": "Table2-Model2",
+    "stage_id": "08",
+    "question": "Full covariate candidate adjustment",
+    "source_confirmation": "reported structure verified; exact author implementation remains partly unknown",
+    "candidate_implementation": "reviewed_candidate_complete",
+    "numeric_review": "accepted_with_limits",
+    "validity_scope": "candidate observational association; not author-identical",
+    "documentation": "integrated_existing_stage",
+    "task_id": "V3-I01",
+    "freshness": "current_for_declared_candidate",
+    "artifacts": [
+      "analysis/tasks/V3-I01/rev-1/work/continuous_models.csv"
+    ],
+    "review": "analysis/tasks/V3-Q01/rev-1/work/result_review.json"
+  },
+  {
+    "output_id": "Table3-Model1",
+    "stage_id": "09",
+    "question": "Marker quartile contrasts and trend",
+    "source_confirmation": "reported structure verified; exact author implementation remains partly unknown",
+    "candidate_implementation": "reviewed_candidate_complete",
+    "numeric_review": "accepted_with_limits",
+    "validity_scope": "candidate observational association; not author-identical",
+    "documentation": "integrated_existing_stage",
+    "task_id": "V3-I01",
+    "freshness": "current_for_declared_candidate",
+    "artifacts": [
+      "analysis/tasks/V3-I01/rev-1/work/quartile_models.csv",
+      "analysis/tasks/V3-I01/rev-1/work/trend_models.csv",
+      "analysis/tasks/V3-I01/rev-1/work/omnibus_tests.csv"
+    ],
+    "review": "analysis/tasks/V3-Q01/rev-1/work/result_review.json"
+  },
+  {
+    "output_id": "Table3-Model2",
+    "stage_id": "09",
+    "question": "Full-adjusted quartiles and trend",
+    "source_confirmation": "reported structure verified; exact author implementation remains partly unknown",
+    "candidate_implementation": "reviewed_candidate_complete",
+    "numeric_review": "accepted_with_limits",
+    "validity_scope": "candidate observational association; not author-identical",
+    "documentation": "integrated_existing_stage",
+    "task_id": "V3-I01",
+    "freshness": "current_for_declared_candidate",
+    "artifacts": [
+      "analysis/tasks/V3-I01/rev-1/work/quartile_models.csv",
+      "analysis/tasks/V3-I01/rev-1/work/trend_models.csv",
+      "analysis/tasks/V3-I01/rev-1/work/omnibus_tests.csv"
+    ],
+    "review": "analysis/tasks/V3-Q01/rev-1/work/result_review.json"
+  },
+  {
+    "output_id": "Figure2",
+    "stage_id": "10",
+    "question": "Full-adjusted nonlinear curves",
+    "source_confirmation": "reported structure verified; exact author implementation remains partly unknown",
+    "candidate_implementation": "reviewed_candidate_complete",
+    "numeric_review": "accepted_with_limits",
+    "validity_scope": "candidate observational association; not author-identical",
+    "documentation": "integrated_existing_stage",
+    "task_id": "V3-I01",
+    "freshness": "current_for_declared_candidate",
+    "artifacts": [
+      "analysis/tasks/V3-I01/rev-1/work/spline_tests.csv",
+      "analysis/tasks/V3-I01/rev-1/work/Figure2_Model2_curves.png"
+    ],
+    "review": "analysis/tasks/V3-Q01/rev-1/work/result_review.json"
+  },
+  {
+    "output_id": "Figure3",
+    "stage_id": "10",
+    "question": "Six moderators and interaction tests",
+    "source_confirmation": "reported structure verified; exact author implementation remains partly unknown",
+    "candidate_implementation": "reviewed_candidate_complete",
+    "numeric_review": "accepted_with_limits",
+    "validity_scope": "candidate observational association; not author-identical",
+    "documentation": "integrated_existing_stage",
+    "task_id": "V3-I01",
+    "freshness": "current_for_declared_candidate",
+    "artifacts": [
+      "analysis/tasks/V3-I01/rev-1/work/interactions.csv",
+      "analysis/tasks/V3-I01/rev-1/work/subgroup_slopes.csv",
+      "analysis/tasks/V3-I01/rev-1/work/Figure3_subgroup_forest.png"
+    ],
+    "review": "analysis/tasks/V3-Q01/rev-1/work/result_review.json"
+  },
+  {
+    "output_id": "Supplement-S2-S5",
+    "stage_id": "05",
+    "question": "Descriptions by marker quartiles",
+    "source_confirmation": "reported structure verified; exact author implementation remains partly unknown",
+    "candidate_implementation": "reviewed_candidate_complete",
+    "numeric_review": "accepted_with_limits",
+    "validity_scope": "candidate observational association; not author-identical",
+    "documentation": "integrated_existing_stage",
+    "task_id": "V3-I01",
+    "freshness": "current_for_declared_candidate",
+    "artifacts": [
+      "analysis/tasks/V3-I01/rev-1/work/S2_S5_descriptions.csv",
+      "analysis/tasks/V3-I01/rev-1/work/S2_S5_tests.csv"
+    ],
+    "review": "analysis/tasks/V3-Q01/rev-1/work/result_review.json"
+  },
+  {
+    "output_id": "Supplement-S6-S7-FigS1",
+    "stage_id": "10",
+    "question": "Additional disease/lab adjustment candidate",
+    "source_confirmation": "reported structure verified; exact author implementation remains partly unknown",
+    "candidate_implementation": "reviewed_candidate_complete",
+    "numeric_review": "accepted_with_limits",
+    "validity_scope": "candidate observational association; not author-identical",
+    "documentation": "integrated_existing_stage",
+    "task_id": "V3-I01",
+    "freshness": "current_for_declared_candidate",
+    "artifacts": [
+      "analysis/tasks/V3-I01/rev-1/work/continuous_models.csv",
+      "analysis/tasks/V3-I01/rev-1/work/quartile_models.csv",
+      "analysis/tasks/V3-I01/rev-1/work/trend_models.csv",
+      "analysis/tasks/V3-I01/rev-1/work/FigS1_plus16_curves.png"
+    ],
+    "review": "analysis/tasks/V3-Q01/rev-1/work/result_review.json"
+  },
+  {
+    "output_id": "FI-routing-sensitivity",
+    "stage_id": "03",
+    "question": "Verified skip-derived zero candidate versus complete36",
+    "source_confirmation": "reported structure verified; exact author implementation remains partly unknown",
+    "candidate_implementation": "reviewed_candidate_complete",
+    "numeric_review": "accepted_with_limits",
+    "validity_scope": "candidate observational association; not author-identical",
+    "documentation": "integrated_existing_stage",
+    "task_id": "V3-I01",
+    "freshness": "current_for_declared_candidate",
+    "artifacts": [
+      "analysis/tasks/V3-I01/rev-1/work/flow_counts.csv",
+      "analysis/tasks/V3-I01/rev-1/work/item_missingness.csv",
+      "analysis/tasks/V3-I01/rev-1/work/continuous_models.csv"
+    ],
+    "review": "analysis/tasks/V3-Q01/rev-1/work/result_review.json"
+  },
+  {
+    "output_id": "FI-fractional-beta",
+    "stage_id": "03",
+    "question": "Existing fractional results and beta eligibility",
+    "source_confirmation": "reported structure verified; exact author implementation remains partly unknown",
+    "candidate_implementation": "reviewed_reuse_with_endpoint_gate",
+    "numeric_review": "accepted_with_limits",
+    "validity_scope": "candidate observational association; not author-identical",
+    "documentation": "integrated_existing_stage",
+    "task_id": "V3-I01",
+    "freshness": "current_for_declared_candidate",
+    "artifacts": [
+      "analysis/tasks/V3-I01/rev-1/work/endpoint_audit.csv"
+    ],
+    "review": "analysis/tasks/V3-Q01/rev-1/work/result_review.json",
+    "limit": "Existing fractional mean-FI models reused; ordinary beta inapplicable to unmodified all-person FI with zero endpoints; no fit by silent endpoint removal."
+  },
+  {
+    "output_id": "Assignment",
+    "stage_id": "09",
+    "question": "Prior FI-group comparisons and procedure simulations",
+    "source_confirmation": "reported structure verified; exact author implementation remains partly unknown",
+    "candidate_implementation": "historical_reviewed_reuse",
+    "numeric_review": "accepted_with_limits",
+    "validity_scope": "candidate observational association; not author-identical",
+    "documentation": "integrated_existing_stage",
+    "task_id": "historical A01/M01/M02",
+    "freshness": "current_for_declared_candidate",
+    "artifacts": [],
+    "review": "analysis/tasks/V3-Q01/rev-1/work/result_review.json",
+    "limit": "Prior strict36 candidate assignment/simulation kept historical, not rerun on new FI candidate."
+  }
+]

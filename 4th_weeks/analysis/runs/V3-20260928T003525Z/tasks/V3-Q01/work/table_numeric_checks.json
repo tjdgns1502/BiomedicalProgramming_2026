@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "planned_test_rows": 90,
+  "actual_tests": 85,
+  "structurally_coupled_descriptive_only": 5,
+  "independently_refitted_tests": ["Table1 age", "Table1 sex", "S2 age", "S2 sex"],
+  "denominators_and_category_sums": "all_rows_pass",
+  "age_quantiles": "unweighted_and_survey_recomputed",
+  "family_adjustments": "all_five_families_n18_pass"
+}

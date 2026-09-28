@@ -1,0 +1,30 @@
+{
+  "task_id": "T02-fixed",
+  "run_id": "T02-fixed-20260927T210314296655Z",
+  "started": "2026-09-27T21:03:14.299001+00:00",
+  "command": [
+    "C:\\Program Files\\R\\R-4.6.1\\bin\\Rscript.exe",
+    "--vanilla",
+    "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\4주차\\analysis\\tests\\test_model_extensions.R",
+    "analysis/runs/T02-fixed-20260927T210314296655Z/synthetic-artifacts"
+  ],
+  "cwd": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\4주차",
+  "script_sha256": "09b4814f6a31355445e1a0fe80392fa7cf2da3bdb3504bc489a4d011c3b0f4b8",
+  "plan_sha256": "e3f01d831d170e0de6d391e0f675fa1de4bd83ce176d4cf5fb787dd15fb1b876",
+  "status": "submitted",
+  "source_hashes": {
+    "analysis\\src\\group_analysis.R": "f95bdc90c2de9fd58c61e46e2c49b1be7df6223f412140692c3e7d0c6cda0daf",
+    "analysis\\src\\model_extensions.R": "bcaa4fe99643d5cb4d7a343c9990984663c1868fe2b01a1d35316b247876ebde",
+    "analysis\\src\\procedure_simulation.R": "5ddb01d02db5717d776e972f66823d514b46c478ce5896a3e90181e30c8f1086",
+    "analysis\\src\\simulation.R": "a584ae522a5bab5d0ce99c34866cb2e1f3870a41a1590e94fe7c886c9a92333e"
+  },
+  "config_hashes": {
+    "analysis\\config\\analysis_plan.json": "e3f01d831d170e0de6d391e0f675fa1de4bd83ce176d4cf5fb787dd15fb1b876",
+    "analysis\\config\\environment.json": "57c2bbd9f92504fc7db36d6530b41b98c369b606c81b370a9991bf1a97944a7e",
+    "analysis\\config\\extensions_plan.json": "a331c3819573eb7dd46f236774f85440df108c68cd33522d5ba7f64b7356b1f7",
+    "analysis\\config\\fi_candidate.json": "85a6625ec4f43fb90fc5f41be581d2ab579093d270c4c378ec17f9bbffe373ee"
+  },
+  "input_hashes": {},
+  "finished": "2026-09-27T21:03:25.008541+00:00",
+  "exit_code": 0
+}

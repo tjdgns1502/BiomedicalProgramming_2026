@@ -1,0 +1,50 @@
+{
+  "task": "V2-Q01",
+  "revision": 1,
+  "decision": "accept",
+  "scope": "Independent pre-implementation conceptual review of V2-D01 plan and V2-E01 provenance reuse audit, plus parent-proposed diagnostic display.",
+  "exposure": {
+    "read_publication_results": false,
+    "read_existing_model_results": false,
+    "read_raw_analysis_data": false,
+    "note": "Only the four assigned local artifacts were read. The reuse audit embeds cohort counts and file inventory, which were visible; no effect estimates were inspected."
+  },
+  "checks": {
+    "log_base_identity": "accept: coefficient, SE and covariance transformations are correct; same rows/design are essential.",
+    "quartile_model1": "accept: raw-scale type-7 cutpoints, preserved ties, Q1 reference and three contrasts are well defined; variance is conditional on estimated cutpoints.",
+    "age_boundary": "accept: exact count identity is appropriate; outcome/sample-size agreement must not select the boundary.",
+    "natural_spline_rank_two": "accept: two internal knots yield three ns columns without intercept and a four-dimensional space including intercept. The linear subspace span(1,x) has dimension two; its complement has dimension two under nondegenerate support.",
+    "survey_wald": "accept: test only the two explicit nonlinear terms with the survey covariance, F=W/2 and declared denominator df=degf(analysis_design). This is an approximate design-based test, not an exact finite-sample guarantee.",
+    "multiplicity": "accept: four predeclared tests and Bonferroni primary adjustment are suitable; BH remains exploratory under unspecified dependence.",
+    "diagnostic_plot": "accept: predeclare marker median reference and 5th-95th percentile display range on frozen rows; same spline model, no added test or model selection. Label analyst diagnostic, not original Figure 2 reproduction."
+  },
+  "implementation_clarifications": [
+    "Use B=ns(x,knots=c(q1/3,q2/3),Boundary.knots=range(x),intercept=FALSE), with x=ln(marker). Compute residual B against L=cbind(1,x), then rank-revealing QR retaining exactly two independent columns. Do not blindly take the first two original ns columns or test their coefficients.",
+    "Check rank of the complete adjusted model matrix as well as basis rank. A finite but singular nonlinear covariance does not support a two-df Wald test: require an invertible positive-definite tested covariance and otherwise mark non-estimable.",
+    "Store the basis transformation and knots. Evaluate new plot x values with the same transformation; do not independently recompute QR on the plotting grid.",
+    "For plotting use a full design contrast d(x)=m(x,z)-m(x_ref,z), log OR=d beta and SE=sqrt(d V d'). This correctly includes covariance with the reference; additive noninteracting covariates cancel. At the reference OR=1 and contrast SE=0.",
+    "Declare a fixed CI convention before fitting, preferably t quantile with the same design df used in the diagnostic. Call intervals pointwise 95% CIs, not simultaneous bands. Use the same convention in compared log-base fits.",
+    "Freeze numeric rank tolerance and CI convention in the implementation specification before outcomes are fitted. These are numerical/reporting clarifications, not requests to revise the substantive plan."
+  ],
+  "reuse_audit_review": {
+    "conditional_artifact_reuse": "accept",
+    "reason": "Audit reports separate matching historical source/config/input hashes and zero exit codes for A01-A03, a current R/survey probe, and explicit provenance limitations.",
+    "statistical_validity_certified": false,
+    "author_identical_reproduction_certified": false,
+    "independent_source_verification_certified": false,
+    "limits": [
+      "This reviewer evaluated the supplied audit, not the underlying execution logs or files independently.",
+      "Current output hashes are an inventory, not proof outputs were unchanged since execution.",
+      "Current environment probe is not full historical binary/package equivalence.",
+      "Hashes and successful exits do not validate FI definition, pooling weights, survey domain handling, model inference, or original-paper methods.",
+      "Source-method confirmation and unresolved design-definition gates remain active even though implementation of this bounded plan is approved."
+    ]
+  },
+  "references": [
+    "https://stat.ethz.ch/R-manual/R-devel/library/splines/html/ns.html",
+    "https://cran.r-project.org/web/packages/survey/refman/survey.html"
+  ],
+  "required_plan_revision": false,
+  "implementation_may_start": true,
+  "age_source_gate": "Parent reports source wording conflict: 50 and older / younger than 50 excluded / over 50. This satisfies the plan ambiguity branch when documented as externally supplied source verification: retain existing >=50 operational predicate and audit both boundary counts; no boundary model reruns. Exact author code predicate remains unverified. This reviewer did not independently read the article."
+}

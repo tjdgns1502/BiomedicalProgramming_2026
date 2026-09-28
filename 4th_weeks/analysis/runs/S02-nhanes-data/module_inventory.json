@@ -1,0 +1,974 @@
+[
+  {
+    "cycle": "2015-2016",
+    "file": "ALQ_I",
+    "description": "Alcohol Use ALQ_I Doc ALQ_I Data [XPT - 450.2 KB] March 2018",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/ALQ_I.xpt"
+  },
+  {
+    "cycle": "2015-2016",
+    "file": "BPX_I",
+    "description": "Blood Pressure BPX_I Doc BPX_I Data [XPT - 1.5 MB] September 2017",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/BPX_I.xpt"
+  },
+  {
+    "cycle": "2015-2016",
+    "file": "BPQ_I",
+    "description": "Blood Pressure & Cholesterol BPQ_I Doc BPQ_I Data [XPT - 546 KB] September 2017",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/BPQ_I.xpt"
+  },
+  {
+    "cycle": "2015-2016",
+    "file": "BMX_I",
+    "description": "Body Measures BMX_I Doc BMX_I Data [XPT - 1.9 MB] September 2017",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/BMX_I.xpt"
+  },
+  {
+    "cycle": "2015-2016",
+    "file": "CBC_I",
+    "description": "Complete Blood Count with 5-Part Differential - Whole Blood CBC_I Doc CBC_I Data [XPT - 1.5 MB] Updated January 2020",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/CBC_I.xpt"
+  },
+  {
+    "cycle": "2015-2016",
+    "file": "HSQ_I",
+    "description": "Current Health Status HSQ_I Doc HSQ_I Data [XPT - 646.4 KB] September 2017",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/HSQ_I.xpt"
+  },
+  {
+    "cycle": "2015-2016",
+    "file": "DEMO_I",
+    "description": "Demographic Variables and Sample Weights DEMO_I Doc DEMO_I Data [XPT - 3.6 MB] September 2017",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/DEMO_I.xpt"
+  },
+  {
+    "cycle": "2015-2016",
+    "file": "DIQ_I",
+    "description": "Diabetes DIQ_I Doc DIQ_I Data [XPT - 4 MB] September 2017",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/DIQ_I.xpt"
+  },
+  {
+    "cycle": "2015-2016",
+    "file": "DR1TOT_I",
+    "description": "Dietary Interview - Total Nutrient Intakes, First Day DR1TOT_I Doc DR1TOT_I Data [XPT - 12.3 MB] July 2018",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/DR1TOT_I.xpt"
+  },
+  {
+    "cycle": "2015-2016",
+    "file": "DR2TOT_I",
+    "description": "Dietary Interview - Total Nutrient Intakes, Second Day DR2TOT_I Doc DR2TOT_I Data [XPT - 6.2 MB] July 2018",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/DR2TOT_I.xpt"
+  },
+  {
+    "cycle": "2015-2016",
+    "file": "HUQ_I",
+    "description": "Hospital Utilization & Access to Care HUQ_I Doc HUQ_I Data [XPT - 781.1 KB] September 2017",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/HUQ_I.xpt"
+  },
+  {
+    "cycle": "2015-2016",
+    "file": "KIQ_U_I",
+    "description": "Kidney Conditions - Urology KIQ_U_I Doc KIQ_U_I Data [XPT - 717.8 KB] December 2018",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/KIQ_U_I.xpt"
+  },
+  {
+    "cycle": "2015-2016",
+    "file": "MCQ_I",
+    "description": "Medical Conditions MCQ_I Doc MCQ_I Data [XPT - 6.6 MB] September 2017",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/MCQ_I.xpt"
+  },
+  {
+    "cycle": "2015-2016",
+    "file": "PAQ_I",
+    "description": "Physical Activity PAQ_I Doc PAQ_I Data [XPT - 6.7 MB] September 2017",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/PAQ_I.xpt"
+  },
+  {
+    "cycle": "2015-2016",
+    "file": "PFQ_I",
+    "description": "Physical Functioning PFQ_I Doc PFQ_I Data [XPT - 2.5 MB] September 2017",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/PFQ_I.xpt"
+  },
+  {
+    "cycle": "2015-2016",
+    "file": "RXQ_RX_I",
+    "description": "Prescription Medications RXQ_RX_I Doc RXQ_RX_I Data [XPT - 9.2 MB] January 2019",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/RXQ_RX_I.xpt"
+  },
+  {
+    "cycle": "2015-2016",
+    "file": "SMQ_I",
+    "description": "Smoking - Cigarette Use SMQ_I Doc SMQ_I Data [XPT - 2.6 MB] September 2017",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/SMQ_I.xpt"
+  },
+  {
+    "cycle": "2015-2016",
+    "file": "BIOPRO_I",
+    "description": "Standard Biochemistry Profile BIOPRO_I Doc BIOPRO_I Data [XPT - 2 MB] September 2017",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/BIOPRO_I.xpt"
+  },
+  {
+    "cycle": "1999-2000",
+    "file": "ALQ",
+    "description": "Alcohol Use ALQ Doc ALQ Data [XPT - 314.5 KB] June 2002",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/ALQ.xpt"
+  },
+  {
+    "cycle": "1999-2000",
+    "file": "BPX",
+    "description": "Blood Pressure BPX Doc BPX Data [XPT - 2.1 MB] June 2002",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/BPX.xpt"
+  },
+  {
+    "cycle": "1999-2000",
+    "file": "BPQ",
+    "description": "Blood Pressure & Cholesterol BPQ Doc BPQ Data [XPT - 1.7 MB] June 2002",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/BPQ.xpt"
+  },
+  {
+    "cycle": "1999-2000",
+    "file": "BMX",
+    "description": "Body Measures BMX Doc BMX Data [XPT - 2.7 MB] June 2002",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/BMX.xpt"
+  },
+  {
+    "cycle": "1999-2000",
+    "file": "LAB25",
+    "description": "Complete Blood Count with 5-part Differential - Whole Blood LAB25 Doc LAB25 Data [XPT - 1.4 MB] Updated April 2006",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/LAB25.xpt"
+  },
+  {
+    "cycle": "1999-2000",
+    "file": "HSQ",
+    "description": "Current Health Status HSQ Doc HSQ Data [XPT - 553.8 KB] June 2002",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/HSQ.xpt"
+  },
+  {
+    "cycle": "1999-2000",
+    "file": "DEMO",
+    "description": "Demographic Variables & Sample Weights DEMO Doc DEMO Data [XPT - 11 MB] Updated September 2009",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/DEMO.xpt"
+  },
+  {
+    "cycle": "1999-2000",
+    "file": "DIQ",
+    "description": "Diabetes DIQ Doc DIQ Data [XPT - 1.2 MB] June 2002",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/DIQ.xpt"
+  },
+  {
+    "cycle": "1999-2000",
+    "file": "DRXTOT",
+    "description": "Dietary Interview - Total Nutrient Intakes DRXTOT Doc DRXTOT Data [XPT - 9.4 MB] Updated July 2010",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/DRXTOT.xpt"
+  },
+  {
+    "cycle": "1999-2000",
+    "file": "HUQ",
+    "description": "Hospital Utilization & Access to Care HUQ Doc HUQ Data [XPT - 780.6 KB] June 2002",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/HUQ.xpt"
+  },
+  {
+    "cycle": "1999-2000",
+    "file": "KIQ",
+    "description": "Kidney Conditions KIQ Doc KIQ Data [XPT - 804.2 KB] June 2002",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/KIQ.xpt"
+  },
+  {
+    "cycle": "1999-2000",
+    "file": "MCQ",
+    "description": "Medical Conditions MCQ Doc MCQ Data [XPT - 12.1 MB] Updated August 2006",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/MCQ.xpt"
+  },
+  {
+    "cycle": "1999-2000",
+    "file": "PAQ",
+    "description": "Physical Activity PAQ Doc PAQ Data [XPT - 1.5 MB] Updated September 2004",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/PAQ.xpt"
+  },
+  {
+    "cycle": "1999-2000",
+    "file": "PFQ",
+    "description": "Physical Functioning PFQ Doc PFQ Data [XPT - 6.7 MB] June 2002",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/PFQ.xpt"
+  },
+  {
+    "cycle": "1999-2000",
+    "file": "RXQ_RX",
+    "description": "Prescription Medications RXQ_RX Doc RXQ_RX Data [XPT - 3 MB] Updated June 2009",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/RXQ_RX.xpt"
+  },
+  {
+    "cycle": "1999-2000",
+    "file": "SMQ",
+    "description": "Smoking - Cigarette/Tobacco Use - Adult SMQ Doc SMQ Data [XPT - 1.7 MB] Updated February 2003",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/SMQ.xpt"
+  },
+  {
+    "cycle": "1999-2000",
+    "file": "LAB18",
+    "description": "Standard Biochemistry Profile & Hormones LAB18 Doc LAB18 Data [XPT - 2.1 MB] Updated August 2006",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/LAB18.xpt"
+  },
+  {
+    "cycle": "2001-2002",
+    "file": "ALQ_B",
+    "description": "Alcohol Use ALQ_B Doc ALQ_B Data [XPT - 355.5 KB] May 2004",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/ALQ_B.xpt"
+  },
+  {
+    "cycle": "2001-2002",
+    "file": "BPX_B",
+    "description": "Blood Pressure BPX_B Doc BPX_B Data [XPT - 2.4 MB] May 2004",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/BPX_B.xpt"
+  },
+  {
+    "cycle": "2001-2002",
+    "file": "BPQ_B",
+    "description": "Blood Pressure & Cholesterol BPQ_B Doc BPQ_B Data [XPT - 1.8 MB] May 2004",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/BPQ_B.xpt"
+  },
+  {
+    "cycle": "2001-2002",
+    "file": "BMX_B",
+    "description": "Body Measures BMX_B Doc BMX_B Data [XPT - 2.1 MB] May 2004",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/BMX_B.xpt"
+  },
+  {
+    "cycle": "2001-2002",
+    "file": "L25_B",
+    "description": "Complete Blood Count with 5-part Differential - Whole Blood L25_B Doc L25_B Data [XPT - 1.6 MB] Updated August 2007",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/L25_B.xpt"
+  },
+  {
+    "cycle": "2001-2002",
+    "file": "L25_2_B",
+    "description": "Complete Blood Count with 5-part Differential - Whole Blood, Second Exam L25_2_B Doc L25_2_B Data [XPT - 99.5 KB] August 2010",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/L25_2_B.xpt"
+  },
+  {
+    "cycle": "2001-2002",
+    "file": "HSQ_B",
+    "description": "Current Health Status HSQ_B Doc HSQ_B Data [XPT - 975.7 KB] January 2004",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/HSQ_B.xpt"
+  },
+  {
+    "cycle": "2001-2002",
+    "file": "DEMO_B",
+    "description": "Demographic Variables & Sample Weights DEMO_B Doc DEMO_B Data [XPT - 3.1 MB] Updated September 2009",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/DEMO_B.xpt"
+  },
+  {
+    "cycle": "2001-2002",
+    "file": "DIQ_B",
+    "description": "Diabetes DIQ_B Doc DIQ_B Data [XPT - 1.4 MB] May 2004",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/DIQ_B.xpt"
+  },
+  {
+    "cycle": "2001-2002",
+    "file": "DRXTOT_B",
+    "description": "Dietary Interview - Total Nutrient Intakes DRXTOT_B Doc DRXTOT_B Data [XPT - 11.4 MB] Updated July 2010",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/DRXTOT_B.xpt"
+  },
+  {
+    "cycle": "2001-2002",
+    "file": "HUQ_B",
+    "description": "Hospital Utilization & Access to Care HUQ_B Doc HUQ_B Data [XPT - 1.4 MB] January 2004",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/HUQ_B.xpt"
+  },
+  {
+    "cycle": "2001-2002",
+    "file": "KIQ_U_B",
+    "description": "Kidney Conditions - Urology KIQ_U_B Doc KIQ_U_B Data [XPT - 509.7 KB] July 2004",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/KIQ_U_B.xpt"
+  },
+  {
+    "cycle": "2001-2002",
+    "file": "MCQ_B",
+    "description": "Medical Conditions MCQ_B Doc MCQ_B Data [XPT - 11.8 MB] May 2004",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/MCQ_B.xpt"
+  },
+  {
+    "cycle": "2001-2002",
+    "file": "PAQ_B",
+    "description": "Physical Activity PAQ_B Doc PAQ_B Data [XPT - 1.6 MB] September 2004",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/PAQ_B.xpt"
+  },
+  {
+    "cycle": "2001-2002",
+    "file": "PFQ_B",
+    "description": "Physical Functioning PFQ_B Doc PFQ_B Data [XPT - 4.3 MB] May 2004",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/PFQ_B.xpt"
+  },
+  {
+    "cycle": "2001-2002",
+    "file": "RXQ_RX_B",
+    "description": "Prescription Medications RXQ_RX_B Doc RXQ_RX_B Data [XPT - 3.4 MB] Updated June 2009",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/RXQ_RX_B.xpt"
+  },
+  {
+    "cycle": "2001-2002",
+    "file": "SMQ_B",
+    "description": "Smoking - Cigarette/Tobacco Use - Adult SMQ_B Doc SMQ_B Data [XPT - 2 MB] July 2004",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/SMQ_B.xpt"
+  },
+  {
+    "cycle": "2001-2002",
+    "file": "L40_B",
+    "description": "Standard Biochemistry Profile L40_B Doc L40_B Data [XPT - 2.3 MB] September 2006",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/L40_B.xpt"
+  },
+  {
+    "cycle": "2001-2002",
+    "file": "L40_2_B",
+    "description": "Standard Biochemistry Profile, Follicle Stimulating Hormone & Luteinizing Hormone, Second Exam L40_2_B Doc L40_2_B Data [XPT - 172.5 KB] December 2008",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/L40_2_B.xpt"
+  },
+  {
+    "cycle": "2003-2004",
+    "file": "ALQ_C",
+    "description": "Alcohol Use ALQ_C Doc ALQ_C Data [XPT - 335.4 KB] December 2006",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/ALQ_C.xpt"
+  },
+  {
+    "cycle": "2003-2004",
+    "file": "BPX_C",
+    "description": "Blood Pressure BPX_C Doc BPX_C Data [XPT - 2.2 MB] December 2005",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/BPX_C.xpt"
+  },
+  {
+    "cycle": "2003-2004",
+    "file": "BPQ_C",
+    "description": "Blood Pressure & Cholesterol BPQ_C Doc BPQ_C Data [XPT - 1.7 MB] April 2006",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/BPQ_C.xpt"
+  },
+  {
+    "cycle": "2003-2004",
+    "file": "BMX_C",
+    "description": "Body Measures BMX_C Doc BMX_C Data [XPT - 2.4 MB] November 2005",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/BMX_C.xpt"
+  },
+  {
+    "cycle": "2003-2004",
+    "file": "L25_C",
+    "description": "Complete Blood Count with 5-part Differential - Whole Blood L25_C Doc L25_C Data [XPT - 1.5 MB] Updated August 2007",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/L25_C.xpt"
+  },
+  {
+    "cycle": "2003-2004",
+    "file": "HSQ_C",
+    "description": "Current Health Status HSQ_C Doc HSQ_C Data [XPT - 896.2 KB] May 2006",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/HSQ_C.xpt"
+  },
+  {
+    "cycle": "2003-2004",
+    "file": "DEMO_C",
+    "description": "Demographic Variables & Sample Weights DEMO_C Doc DEMO_C Data [XPT - 3.4 MB] Updated September 2009",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/DEMO_C.xpt"
+  },
+  {
+    "cycle": "2003-2004",
+    "file": "DIQ_C",
+    "description": "Diabetes DIQ_C Doc DIQ_C Data [XPT - 1.3 MB] April 2006",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/DIQ_C.xpt"
+  },
+  {
+    "cycle": "2003-2004",
+    "file": "DR1TOT_C",
+    "description": "Dietary Interview - Total Nutrient Intakes, First Day DR1TOT_C Doc DR1TOT_C Data [XPT - 11.8 MB] Updated November 2007",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/DR1TOT_C.xpt"
+  },
+  {
+    "cycle": "2003-2004",
+    "file": "DR2TOT_C",
+    "description": "Dietary Interview - Total Nutrient Intakes, Second Day DR2TOT_C Doc DR2TOT_C Data [XPT - 6 MB] Updated November 2007",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/DR2TOT_C.xpt"
+  },
+  {
+    "cycle": "2003-2004",
+    "file": "HUQ_C",
+    "description": "Hospital Utilization & Access to Care HUQ_C Doc HUQ_C Data [XPT - 1.2 MB] August 2006",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/HUQ_C.xpt"
+  },
+  {
+    "cycle": "2003-2004",
+    "file": "KIQ_U_C",
+    "description": "Kidney Conditions - Urology KIQ_U_C Doc KIQ_U_C Data [XPT - 475 KB] August 2006",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/KIQ_U_C.xpt"
+  },
+  {
+    "cycle": "2003-2004",
+    "file": "MCQ_C",
+    "description": "Medical Conditions MCQ_C Doc MCQ_C Data [XPT - 11.4 MB] August 2006",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/MCQ_C.xpt"
+  },
+  {
+    "cycle": "2003-2004",
+    "file": "PAQ_C",
+    "description": "Physical Activity PAQ_C Doc PAQ_C Data [XPT - 1.4 MB] November 2005",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/PAQ_C.xpt"
+  },
+  {
+    "cycle": "2003-2004",
+    "file": "PFQ_C",
+    "description": "Physical Functioning PFQ_C Doc PFQ_C Data [XPT - 4.1 MB] Updated March 2008",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/PFQ_C.xpt"
+  },
+  {
+    "cycle": "2003-2004",
+    "file": "RXQ_RX_C",
+    "description": "Prescription Medications RXQ_RX_C Doc RXQ_RX_C Data [XPT - 2.8 MB] Updated June 2009",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/RXQ_RX_C.xpt"
+  },
+  {
+    "cycle": "2003-2004",
+    "file": "SMQ_C",
+    "description": "Smoking - Cigarette/Tobacco Use - Adult SMQ_C Doc SMQ_C Data [XPT - 1.8 MB] September 2006",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/SMQ_C.xpt"
+  },
+  {
+    "cycle": "2003-2004",
+    "file": "L40_C",
+    "description": "Standard Biochemistry Profile L40_C Doc L40_C Data [XPT - 2 MB] Updated October 2007",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/L40_C.xpt"
+  },
+  {
+    "cycle": "2005-2006",
+    "file": "ALQ_D",
+    "description": "Alcohol Use ALQ_D Doc ALQ_D Data [XPT - 337.6 KB] March 2008",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/ALQ_D.xpt"
+  },
+  {
+    "cycle": "2005-2006",
+    "file": "BPX_D",
+    "description": "Blood Pressure BPX_D Doc BPX_D Data [XPT - 2.1 MB] November 2007",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/BPX_D.xpt"
+  },
+  {
+    "cycle": "2005-2006",
+    "file": "BPQ_D",
+    "description": "Blood Pressure & Cholesterol BPQ_D Doc BPQ_D Data [XPT - 770.3 KB] November 2007",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/BPQ_D.xpt"
+  },
+  {
+    "cycle": "2005-2006",
+    "file": "BMX_D",
+    "description": "Body Measures BMX_D Doc BMX_D Data [XPT - 2.1 MB] November 2007",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/BMX_D.xpt"
+  },
+  {
+    "cycle": "2005-2006",
+    "file": "CBC_D",
+    "description": "Complete Blood Count with 5-Part Differential - Whole Blood CBC_D Doc CBC_D Data [XPT - 1.5 MB] November 2007",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/CBC_D.xpt"
+  },
+  {
+    "cycle": "2005-2006",
+    "file": "HSQ_D",
+    "description": "Current Health Status HSQ_D Doc HSQ_D Data [XPT - 887.3 KB] January 2008",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/HSQ_D.xpt"
+  },
+  {
+    "cycle": "2005-2006",
+    "file": "DEMO_D",
+    "description": "Demographic Variables & Sample Weights DEMO_D Doc DEMO_D Data [XPT - 3.4 MB] Updated September 2009",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/DEMO_D.xpt"
+  },
+  {
+    "cycle": "2005-2006",
+    "file": "DIQ_D",
+    "description": "Diabetes DIQ_D Doc DIQ_D Data [XPT - 2.7 MB] Updated April 2011",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/DIQ_D.xpt"
+  },
+  {
+    "cycle": "2005-2006",
+    "file": "DR1TOT_D",
+    "description": "Dietary Interview - Total Nutrient Intakes, First Day DR1TOT_D Doc DR1TOT_D Data [XPT - 12.2 MB] July 2008",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/DR1TOT_D.xpt"
+  },
+  {
+    "cycle": "2005-2006",
+    "file": "DR2TOT_D",
+    "description": "Dietary Interview - Total Nutrient Intakes, Second Day DR2TOT_D Doc DR2TOT_D Data [XPT - 6.2 MB] July 2008",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/DR2TOT_D.xpt"
+  },
+  {
+    "cycle": "2005-2006",
+    "file": "HUQ_D",
+    "description": "Hospital Utilization & Access to Care HUQ_D Doc HUQ_D Data [XPT - 810.5 KB] February 2008",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/HUQ_D.xpt"
+  },
+  {
+    "cycle": "2005-2006",
+    "file": "KIQ_U_D",
+    "description": "Kidney Conditions - Urology KIQ_U_D Doc KIQ_U_D Data [XPT - 547.3 KB] January 2008",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/KIQ_U_D.xpt"
+  },
+  {
+    "cycle": "2005-2006",
+    "file": "MCQ_D",
+    "description": "Medical Conditions MCQ_D Doc MCQ_D Data [XPT - 6.7 MB] November 2007",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/MCQ_D.xpt"
+  },
+  {
+    "cycle": "2005-2006",
+    "file": "PAQ_D",
+    "description": "Physical Activity PAQ_D Doc PAQ_D Data [XPT - 1.4 MB] November 2007",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/PAQ_D.xpt"
+  },
+  {
+    "cycle": "2005-2006",
+    "file": "PFQ_D",
+    "description": "Physical Functioning PFQ_D Doc PFQ_D Data [XPT - 4.1 MB] Updated March 2008",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/PFQ_D.xpt"
+  },
+  {
+    "cycle": "2005-2006",
+    "file": "RXQ_RX_D",
+    "description": "Prescription Medications RXQ_RX_D Doc RXQ_RX_D Data [XPT - 2.7 MB] Updated June 2009",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/RXQ_RX_D.xpt"
+  },
+  {
+    "cycle": "2005-2006",
+    "file": "SMQ_D",
+    "description": "Smoking - Cigarette Use SMQ_D Doc SMQ_D Data [XPT - 2.5 MB] Updated June 2008",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/SMQ_D.xpt"
+  },
+  {
+    "cycle": "2005-2006",
+    "file": "BIOPRO_D",
+    "description": "Standard Biochemistry Profile BIOPRO_D Doc BIOPRO_D Data [XPT - 2 MB] March 2008",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/BIOPRO_D.xpt"
+  },
+  {
+    "cycle": "2007-2008",
+    "file": "ALQ_E",
+    "description": "Alcohol Use ALQ_E Doc ALQ_E Data [XPT - 403.3 KB] September 2009",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/ALQ_E.xpt"
+  },
+  {
+    "cycle": "2007-2008",
+    "file": "BPX_E",
+    "description": "Blood Pressure BPX_E Doc BPX_E Data [XPT - 2 MB] September 2009",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/BPX_E.xpt"
+  },
+  {
+    "cycle": "2007-2008",
+    "file": "BPQ_E",
+    "description": "Blood Pressure & Cholesterol BPQ_E Doc BPQ_E Data [XPT - 975.1 KB] September 2009",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/BPQ_E.xpt"
+  },
+  {
+    "cycle": "2007-2008",
+    "file": "BMX_E",
+    "description": "Body Measures BMX_E Doc BMX_E Data [XPT - 1.7 MB] Updated April 2011",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/BMX_E.xpt"
+  },
+  {
+    "cycle": "2007-2008",
+    "file": "CBC_E",
+    "description": "Complete Blood Count with 5-part Differential - Whole Blood CBC_E Doc CBC_E Data [XPT - 1.5 MB] September 2009",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/CBC_E.xpt"
+  },
+  {
+    "cycle": "2007-2008",
+    "file": "HSQ_E",
+    "description": "Current Health Status HSQ_E Doc HSQ_E Data [XPT - 1020.6 KB] September 2009",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/HSQ_E.xpt"
+  },
+  {
+    "cycle": "2007-2008",
+    "file": "DEMO_E",
+    "description": "Demographic Variables & Sample Weights DEMO_E Doc DEMO_E Data [XPT - 3.3 MB] September 2009",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/DEMO_E.xpt"
+  },
+  {
+    "cycle": "2007-2008",
+    "file": "DIQ_E",
+    "description": "Diabetes DIQ_E Doc DIQ_E Data [XPT - 2.7 MB] Updated April 2011",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/DIQ_E.xpt"
+  },
+  {
+    "cycle": "2007-2008",
+    "file": "DR1TOT_E",
+    "description": "Dietary Interview - Total Nutrient Intakes, First Day DR1TOT_E Doc DR1TOT_E Data [XPT - 12.2 MB] Updated May 2013",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/DR1TOT_E.xpt"
+  },
+  {
+    "cycle": "2007-2008",
+    "file": "DR2TOT_E",
+    "description": "Dietary Interview - Total Nutrient Intakes, Second Day DR2TOT_E Doc DR2TOT_E Data [XPT - 6.2 MB] Updated May 2013",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/DR2TOT_E.xpt"
+  },
+  {
+    "cycle": "2007-2008",
+    "file": "HUQ_E",
+    "description": "Hospital Utilization & Access to Care HUQ_E Doc HUQ_E Data [XPT - 795 KB] September 2009",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/HUQ_E.xpt"
+  },
+  {
+    "cycle": "2007-2008",
+    "file": "KIQ_U_E",
+    "description": "Kidney Conditions - Urology KIQ_U_E Doc KIQ_U_E Data [XPT - 744.8 KB] September 2009",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/KIQ_U_E.xpt"
+  },
+  {
+    "cycle": "2007-2008",
+    "file": "MCQ_E",
+    "description": "Medical Conditions MCQ_E Doc MCQ_E Data [XPT - 6.8 MB] September 2009",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/MCQ_E.xpt"
+  },
+  {
+    "cycle": "2007-2008",
+    "file": "PAQ_E",
+    "description": "Physical Activity PAQ_E Doc PAQ_E Data [XPT - 1.5 MB] Updated March 2017",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/PAQ_E.xpt"
+  },
+  {
+    "cycle": "2007-2008",
+    "file": "PFQ_E",
+    "description": "Physical Functioning PFQ_E Doc PFQ_E Data [XPT - 4.1 MB] September 2009",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/PFQ_E.xpt"
+  },
+  {
+    "cycle": "2007-2008",
+    "file": "RXQ_RX_E",
+    "description": "Prescription Medications RXQ_RX_E Doc RXQ_RX_E Data [XPT - 3.1 MB] April 2010",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/RXQ_RX_E.xpt"
+  },
+  {
+    "cycle": "2007-2008",
+    "file": "SMQ_E",
+    "description": "Smoking - Cigarette Use SMQ_E Doc SMQ_E Data [XPT - 2.3 MB] Updated May 2015",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/SMQ_E.xpt"
+  },
+  {
+    "cycle": "2007-2008",
+    "file": "BIOPRO_E",
+    "description": "Standard Biochemistry Profile BIOPRO_E Doc BIOPRO_E Data [XPT - 2 MB] Updated June 2010",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2007/DataFiles/BIOPRO_E.xpt"
+  },
+  {
+    "cycle": "2009-2010",
+    "file": "ALQ_F",
+    "description": "Alcohol Use ALQ_F Doc ALQ_F Data [XPT - 428 KB] January 2012",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/ALQ_F.xpt"
+  },
+  {
+    "cycle": "2009-2010",
+    "file": "BPX_F",
+    "description": "Blood Pressure BPX_F Doc BPX_F Data [XPT - 2.1 MB] September 2011",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/BPX_F.xpt"
+  },
+  {
+    "cycle": "2009-2010",
+    "file": "BPQ_F",
+    "description": "Blood Pressure & Cholesterol BPQ_F Doc BPQ_F Data [XPT - 1.1 MB] September 2011",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/BPQ_F.xpt"
+  },
+  {
+    "cycle": "2009-2010",
+    "file": "BMX_F",
+    "description": "Body Measures BMX_F Doc BMX_F Data [XPT - 1.8 MB] September 2011",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/BMX_F.xpt"
+  },
+  {
+    "cycle": "2009-2010",
+    "file": "CBC_F",
+    "description": "Complete Blood Count with 5-part Differential - Whole Blood CBC_F Doc CBC_F Data [XPT - 1.6 MB] Updated January 2012",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/CBC_F.xpt"
+  },
+  {
+    "cycle": "2009-2010",
+    "file": "HSQ_F",
+    "description": "Current Health Status HSQ_F Doc HSQ_F Data [XPT - 1.1 MB] August 2012",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/HSQ_F.xpt"
+  },
+  {
+    "cycle": "2009-2010",
+    "file": "DEMO_F",
+    "description": "Demographic Variables & Sample Weights DEMO_F Doc DEMO_F Data [XPT - 3.5 MB] September 2011",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/DEMO_F.xpt"
+  },
+  {
+    "cycle": "2009-2010",
+    "file": "DIQ_F",
+    "description": "Diabetes DIQ_F Doc DIQ_F Data [XPT - 1.5 MB] September 2011",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/DIQ_F.xpt"
+  },
+  {
+    "cycle": "2009-2010",
+    "file": "DR1TOT_F",
+    "description": "Dietary Interview - Total Nutrient Intakes, First Day DR1TOT_F Doc DR1TOT_F Data [XPT - 13 MB] Updated May 2013",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/DR1TOT_F.xpt"
+  },
+  {
+    "cycle": "2009-2010",
+    "file": "DR2TOT_F",
+    "description": "Dietary Interview - Total Nutrient Intakes, Second Day DR2TOT_F Doc DR2TOT_F Data [XPT - 6.5 MB] Updated May 2013",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/DR2TOT_F.xpt"
+  },
+  {
+    "cycle": "2009-2010",
+    "file": "HUQ_F",
+    "description": "Hospital Utilization & Access to Care HUQ_F Doc HUQ_F Data [XPT - 825.3 KB] September 2011",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/HUQ_F.xpt"
+  },
+  {
+    "cycle": "2009-2010",
+    "file": "KIQ_U_F",
+    "description": "Kidney Conditions - Urology KIQ_U_F Doc KIQ_U_F Data [XPT - 780.2 KB] January 2012",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/KIQ_U_F.xpt"
+  },
+  {
+    "cycle": "2009-2010",
+    "file": "MCQ_F",
+    "description": "Medical Conditions MCQ_F Doc MCQ_F Data [XPT - 6.3 MB] September 2011",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/MCQ_F.xpt"
+  },
+  {
+    "cycle": "2009-2010",
+    "file": "PAQ_F",
+    "description": "Physical Activity PAQ_F Doc PAQ_F Data [XPT - 1.6 MB] September 2011",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/PAQ_F.xpt"
+  },
+  {
+    "cycle": "2009-2010",
+    "file": "PFQ_F",
+    "description": "Physical Functioning PFQ_F Doc PFQ_F Data [XPT - 2.4 MB] September 2011",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/PFQ_F.xpt"
+  },
+  {
+    "cycle": "2009-2010",
+    "file": "RXQ_RX_F",
+    "description": "Prescription Medications RXQ_RX_F Doc RXQ_RX_F Data [XPT - 3.2 MB] May 2012",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/RXQ_RX_F.xpt"
+  },
+  {
+    "cycle": "2009-2010",
+    "file": "SMQ_F",
+    "description": "Smoking - Cigarette Use SMQ_F Doc SMQ_F Data [XPT - 2.5 MB] Updated May 2015",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/SMQ_F.xpt"
+  },
+  {
+    "cycle": "2009-2010",
+    "file": "BIOPRO_F",
+    "description": "Standard Biochemistry Profile BIOPRO_F Doc BIOPRO_F Data [XPT - 2.1 MB] Updated May 2014",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/BIOPRO_F.xpt"
+  },
+  {
+    "cycle": "2011-2012",
+    "file": "ALQ_G",
+    "description": "Alcohol Use ALQ_G Doc ALQ_G Data [XPT - 440.8 KB] October 2013",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/ALQ_G.xpt"
+  },
+  {
+    "cycle": "2011-2012",
+    "file": "BPX_G",
+    "description": "Blood Pressure BPX_G Doc BPX_G Data [XPT - 1.9 MB] September 2013",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/BPX_G.xpt"
+  },
+  {
+    "cycle": "2011-2012",
+    "file": "BPQ_G",
+    "description": "Blood Pressure & Cholesterol BPQ_G Doc BPQ_G Data [XPT - 726.5 KB] September 2013",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/BPQ_G.xpt"
+  },
+  {
+    "cycle": "2011-2012",
+    "file": "BMX_G",
+    "description": "Body Measures BMX_G Doc BMX_G Data [XPT - 1.9 MB] Updated September 2015",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/BMX_G.xpt"
+  },
+  {
+    "cycle": "2011-2012",
+    "file": "CBC_G",
+    "description": "Complete Blood Count with 5-part Differential - Whole Blood CBC_G Doc CBC_G Data [XPT - 1.4 MB] January 2014",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/CBC_G.xpt"
+  },
+  {
+    "cycle": "2011-2012",
+    "file": "HSQ_G",
+    "description": "Current Health Status HSQ_G Doc HSQ_G Data [XPT - 982.3 KB] September 2013",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/HSQ_G.xpt"
+  },
+  {
+    "cycle": "2011-2012",
+    "file": "DEMO_G",
+    "description": "Demographic Variables & Sample Weights DEMO_G Doc DEMO_G Data [XPT - 3.6 MB] Updated January 2015",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/DEMO_G.xpt"
+  },
+  {
+    "cycle": "2011-2012",
+    "file": "DIQ_G",
+    "description": "Diabetes DIQ_G Doc DIQ_G Data [XPT - 3.8 MB] September 2013",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/DIQ_G.xpt"
+  },
+  {
+    "cycle": "2011-2012",
+    "file": "DR1TOT_G",
+    "description": "Dietary Interview - Total Nutrient Intakes, First Day DR1TOT_G Doc DR1TOT_G Data [XPT - 11.8 MB] September 2014",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/DR1TOT_G.xpt"
+  },
+  {
+    "cycle": "2011-2012",
+    "file": "DR2TOT_G",
+    "description": "Dietary Interview - Total Nutrient Intakes, Second Day DR2TOT_G Doc DR2TOT_G Data [XPT - 5.9 MB] September 2014",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/DR2TOT_G.xpt"
+  },
+  {
+    "cycle": "2011-2012",
+    "file": "HUQ_G",
+    "description": "Hospital Utilization & Access to Care HUQ_G Doc HUQ_G Data [XPT - 764.3 KB] September 2013",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/HUQ_G.xpt"
+  },
+  {
+    "cycle": "2011-2012",
+    "file": "KIQ_U_G",
+    "description": "Kidney Conditions - Urology KIQ_U_G Doc KIQ_U_G Data [XPT - 697.9 KB] November 2014",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/KIQ_U_G.xpt"
+  },
+  {
+    "cycle": "2011-2012",
+    "file": "MCQ_G",
+    "description": "Medical Conditions MCQ_G Doc MCQ_G Data [XPT - 6.6 MB] September 2013",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/MCQ_G.xpt"
+  },
+  {
+    "cycle": "2011-2012",
+    "file": "PAQ_G",
+    "description": "Physical Activity PAQ_G Doc PAQ_G Data [XPT - 1.5 MB] Updated March 2017",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/PAQ_G.xpt"
+  },
+  {
+    "cycle": "2011-2012",
+    "file": "PFQ_G",
+    "description": "Physical Functioning PFQ_G Doc PFQ_G Data [XPT - 2.2 MB] September 2013",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/PFQ_G.xpt"
+  },
+  {
+    "cycle": "2011-2012",
+    "file": "RXQ_RX_G",
+    "description": "Prescription Medications RXQ_RX_G Doc RXQ_RX_G Data [XPT - 2.9 MB] July 2014",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/RXQ_RX_G.xpt"
+  },
+  {
+    "cycle": "2011-2012",
+    "file": "SMQ_G",
+    "description": "Smoking - Cigarette Use SMQ_G Doc SMQ_G Data [XPT - 1.9 MB] Updated May 2015",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/SMQ_G.xpt"
+  },
+  {
+    "cycle": "2011-2012",
+    "file": "BIOPRO_G",
+    "description": "Standard Biochemistry Profile BIOPRO_G Doc BIOPRO_G Data [XPT - 1.9 MB] Updated February 2014",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/BIOPRO_G.xpt"
+  },
+  {
+    "cycle": "2013-2014",
+    "file": "ALQ_H",
+    "description": "Alcohol Use ALQ_H Doc ALQ_H Data [XPT - 464.9 KB] March 2016",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/ALQ_H.xpt"
+  },
+  {
+    "cycle": "2013-2014",
+    "file": "BPX_H",
+    "description": "Blood Pressure BPX_H Doc BPX_H Data [XPT - 1.7 MB] October 2015",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/BPX_H.xpt"
+  },
+  {
+    "cycle": "2013-2014",
+    "file": "BPQ_H",
+    "description": "Blood Pressure & Cholesterol BPQ_H Doc BPQ_H Data [XPT - 709.7 KB] October 2015",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/BPQ_H.xpt"
+  },
+  {
+    "cycle": "2013-2014",
+    "file": "BMX_H",
+    "description": "Body Measures BMX_H Doc BMX_H Data [XPT - 2 MB] October 2015",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/BMX_H.xpt"
+  },
+  {
+    "cycle": "2013-2014",
+    "file": "CBC_H",
+    "description": "Complete Blood Count with 5-part Differential - Whole Blood CBC_H Doc CBC_H Data [XPT - 1.5 MB] July 2016",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/CBC_H.xpt"
+  },
+  {
+    "cycle": "2013-2014",
+    "file": "HSQ_H",
+    "description": "Current Health Status HSQ_H Doc HSQ_H Data [XPT - 664.5 KB] December 2015",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/HSQ_H.xpt"
+  },
+  {
+    "cycle": "2013-2014",
+    "file": "DEMO_H",
+    "description": "Demographic Variables and Sample Weights DEMO_H Doc DEMO_H Data [XPT - 3.7 MB] October 2015",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/DEMO_H.xpt"
+  },
+  {
+    "cycle": "2013-2014",
+    "file": "DIQ_H",
+    "description": "Diabetes DIQ_H Doc DIQ_H Data [XPT - 4 MB] October 2015",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/DIQ_H.xpt"
+  },
+  {
+    "cycle": "2013-2014",
+    "file": "DR1TOT_H",
+    "description": "Dietary Interview - Total Nutrient Intakes, First Day DR1TOT_H Doc DR1TOT_H Data [XPT - 12.6 MB] September 2016",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/DR1TOT_H.xpt"
+  },
+  {
+    "cycle": "2013-2014",
+    "file": "DR2TOT_H",
+    "description": "Dietary Interview - Total Nutrient Intakes, Second Day DR2TOT_H Doc DR2TOT_H Data [XPT - 6.4 MB] September 2016",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/DR2TOT_H.xpt"
+  },
+  {
+    "cycle": "2013-2014",
+    "file": "HUQ_H",
+    "description": "Hospital Utilization & Access to Care HUQ_H Doc HUQ_H Data [XPT - 797 KB] October 2015",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/HUQ_H.xpt"
+  },
+  {
+    "cycle": "2013-2014",
+    "file": "KIQ_U_H",
+    "description": "Kidney Conditions - Urology KIQ_U_H Doc KIQ_U_H Data [XPT - 724.1 KB] February 2017",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/KIQ_U_H.xpt"
+  },
+  {
+    "cycle": "2013-2014",
+    "file": "MCQ_H",
+    "description": "Medical Conditions MCQ_H Doc MCQ_H Data [XPT - 7.1 MB] October 2015",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/MCQ_H.xpt"
+  },
+  {
+    "cycle": "2013-2014",
+    "file": "PAQ_H",
+    "description": "Physical Activity PAQ_H Doc PAQ_H Data [XPT - 7 MB] Updated March 2017",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/PAQ_H.xpt"
+  },
+  {
+    "cycle": "2013-2014",
+    "file": "PFQ_H",
+    "description": "Physical Functioning PFQ_H Doc PFQ_H Data [XPT - 2.5 MB] Updated November 2016",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/PFQ_H.xpt"
+  },
+  {
+    "cycle": "2013-2014",
+    "file": "RXQ_RX_H",
+    "description": "Prescription Medications RXQ_RX_H Doc RXQ_RX_H Data [XPT - 9.4 MB] December 2016",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/RXQ_RX_H.xpt"
+  },
+  {
+    "cycle": "2013-2014",
+    "file": "SMQ_H",
+    "description": "Smoking - Cigarette Use SMQ_H Doc SMQ_H Data [XPT - 2.1 MB] Updated September 2016",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/SMQ_H.xpt"
+  },
+  {
+    "cycle": "2013-2014",
+    "file": "BIOPRO_H",
+    "description": "Standard Biochemistry Profile BIOPRO_H Doc BIOPRO_H Data [XPT - 2 MB] October 2015",
+    "xpt_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/BIOPRO_H.xpt"
+  }
+]

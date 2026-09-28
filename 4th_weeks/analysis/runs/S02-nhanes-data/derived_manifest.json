@@ -1,0 +1,72 @@
+[
+  {
+    "path": "analysis\\data\\derived\\candidate_all_age50.csv",
+    "bytes": 39106986,
+    "sha256": "870fbdef967cd7e68e396e7f7d7e82821d23d8ce92f341704805511d7af6c772"
+  },
+  {
+    "path": "analysis\\data\\derived\\candidate_complete36.csv",
+    "bytes": 16799764,
+    "sha256": "df841d2bab22ed0d3e4f3b870a2ed45629c2699b031faade5be12957332037fe"
+  },
+  {
+    "path": "analysis\\data\\derived\\candidate_complete36_alt.csv",
+    "bytes": 22748604,
+    "sha256": "6fc670fe5e69d0e0affc1a5246c0ff822075df2e9f3b3189ec2721372cf9b2fa"
+  },
+  {
+    "path": "analysis\\data\\derived\\nhanes_1999-2000_age50_observed.csv",
+    "bytes": 2613998,
+    "sha256": "2521cff7a4d010a6ed856a1ad8fdbdfb907153408d0c00c54956b3cca6b37f18"
+  },
+  {
+    "path": "analysis\\data\\derived\\nhanes_1999_2016_age50_observed.csv",
+    "bytes": 32148301,
+    "sha256": "aea64a4485e81ac97847039979cb65cc6daede45b0f02056e2e81d8ea127b043"
+  },
+  {
+    "path": "analysis\\data\\derived\\nhanes_2001-2002_age50_observed.csv",
+    "bytes": 2523345,
+    "sha256": "1c8cdf3e065f1e7a9e0744d3e341a1190813de8ee2b03b08e319c7765e7ab275"
+  },
+  {
+    "path": "analysis\\data\\derived\\nhanes_2003-2004_age50_observed.csv",
+    "bytes": 2556531,
+    "sha256": "d549269eace8058e0788233e262aa1499b3cf65fa2966bcaee700c556829d5bd"
+  },
+  {
+    "path": "analysis\\data\\derived\\nhanes_2005-2006_age50_observed.csv",
+    "bytes": 2063720,
+    "sha256": "0c26e599c320735ced2ae799144dcb383b6d79a02bf824dd23a98eb7473ffde1"
+  },
+  {
+    "path": "analysis\\data\\derived\\nhanes_2007-2008_age50_observed.csv",
+    "bytes": 2882531,
+    "sha256": "8e8035cc8ca8fa74e7e16c5941da454ff4cfc561b6e01e21a1447eee34852c68"
+  },
+  {
+    "path": "analysis\\data\\derived\\nhanes_2009-2010_age50_observed.csv",
+    "bytes": 2730292,
+    "sha256": "67cc5e97e2c6c67f6ab8a2ce1d11a81df800158c07ccdcc0deb8f88a2b0ec0ee"
+  },
+  {
+    "path": "analysis\\data\\derived\\nhanes_2011-2012_age50_observed.csv",
+    "bytes": 2609559,
+    "sha256": "a99ca9035d0651718921cd4ba46c814cd75ea69b67999ace99d8f604d7b69a14"
+  },
+  {
+    "path": "analysis\\data\\derived\\nhanes_2013-2014_age50_observed.csv",
+    "bytes": 2898276,
+    "sha256": "739bf090ea256232925c0880065ef09001ad5dce75057470922e0835d04f9c51"
+  },
+  {
+    "path": "analysis\\data\\derived\\nhanes_2015-2016_age50_observed.csv",
+    "bytes": 2867085,
+    "sha256": "c3a4ceb58d8c8e810b33d88137eb801327b877c4c8978f6cd03c8411ca79844a"
+  },
+  {
+    "path": "analysis\\data\\derived\\nhanes_design_all.csv",
+    "bytes": 7227179,
+    "sha256": "6546bf16e35636be47bd9074de95372bca9129dd0c1c3801cd7d0b482f705e3f"
+  }
+]

@@ -1,0 +1,280 @@
+{
+  "schema_version": "2.0",
+  "role": "P: primary-paper evidence and learning-stage handoff",
+  "scope": "Existing extracted primary text, previous source audit and six existing Obsidian notes only; no new statistics, data downloads, or literature search.",
+  "publication_results_exposure": true,
+  "exposure_note": "Published N/OR/CI and earlier operational36 outcomes were visible before this audit. This is neither preregistration nor blinded validation. Earlier outcomes are not author-identical.",
+  "source_hierarchy": [
+    "paper_extracted.txt with PAGE markers and line references (primary-paper text extraction)",
+    "analysis/runs/S01-paper-contract/evidence.json and methods_handoff.md (previous audit, including supplement and reference evidence; not newly independently verified here)",
+    "4주차/염증과 노쇠 - 분석 길잡이/{00-start,01-paper,03-paper,04-paper,08-paper,10-paper}*.md (teaching narrative and earlier candidate results)"
+  ],
+  "argument_map": {
+    "gap": "Authors state earlier work focused on NLR, lacked SIRI–FI evaluation, and had limited population generalizability; this is an attributed literature-gap claim, not a newly verified systematic review.",
+    "gap_location": "paper_extracted.txt L106–120; PDF p2 Background final paragraph; p8 Discussion",
+    "question": "In US NHANES 1999–2016 adults described as 50 and older, are CBC-derived inflammatory markers associated with concurrently measured FI-defined frailty?",
+    "measurement": "N/L, M/L, N*M/L, P*N/L → log continuous or marker quartiles as X; modified 36-item Rockwood FI → FI>0.3 as Y.",
+    "estimation": "Logistic models with two covariate sets → conditional odds ratios; RCS/subgroups/additional adjustment probe shape, heterogeneity and sensitivity.",
+    "outputs": "Fig1 defines sample; Table1 describes it; Table2 continuous-marker OR; Table3 marker-quartile OR; Fig2 RCS; Fig3 subgroup analysis; supplement S6/S7/FigS1 additional adjustment.",
+    "conclusion_limit": "Cross-sectional adjusted association under the chosen frailty definition. Causal effect, validated clinical threshold and future prediction performance are not established."
+  },
+  "age_boundary": {
+    "fact_inclusive": "Abstract L29 and Background L120 say '50 and older'; Results L247–255 excludes participants younger than 50.",
+    "fact_exclusive_wording": "Discussion Principal findings p6, L532–534 says 'aged over 50'.",
+    "decision": "Use >=50 only as interpretation supported by eligibility wording, preserve >50 wording as unresolved textual inconsistency; no verified author code.",
+    "not_established": "The age wording alone does not explain the sample-count discrepancy. Count at exactly age 50 was not examined in this audit.",
+    "question_id": "V2-P-Q04a"
+  },
+  "sample_discrepancies": [
+    {
+      "id": "V2-P-Q04b",
+      "fact": "Published sequential arithmetic: 92062-70392-2508-5503-152=13507; age step leaves21670.",
+      "location": "PDF p3 Results, paper_extracted.txt L247–256; previous audit Fig1 p4",
+      "existing_candidate": "04-paper execution section reports public RIDAGEYR>=50 N=24119, FI complete N=9814, marker N=9786.",
+      "judgment": "Published arithmetic is internally consistent but raw-data selection is not reproduced. Different inclusion/missing rules, age boundary and reporting error remain candidates, not established causes. No count tuning."
+    },
+    {
+      "id": "V2-P-Q04c",
+      "fact": "152 excluded for covariate missingness, yet Table1 retains627 missing drinking values.",
+      "location": "paper_extracted.txt L253–255, L424–427; PDF pp3,5",
+      "judgment": "Do not infer universal complete-case analysis; model-specific N and missing-category/imputation policy unreported."
+    },
+    {
+      "id": "V2-P-Q05a",
+      "fact": "Table1 smoking yes7187 + no6308 =13495, twelve below total13507; subgroup yes5077+2110=7187, no4690+1618=6308.",
+      "location": "paper_extracted.txt L405–414; PDF p5 Table1; previous audit reports supplement smoking total13507",
+      "judgment": "Potential table discrepancy; cannot determine which number or coding is correct."
+    },
+    {
+      "id": "V2-P-Q05b",
+      "fact": "Published frail count3729/13507 is approximately27.61%, whereas Table1/Abstract report24%.",
+      "location": "paper_extracted.txt L29–30,L343–344; PDF pp1,5",
+      "judgment": "Weights may explain count/percentage difference, but title/footnote conflict prevents treating this explanation as confirmed."
+    }
+  ],
+  "stages": [
+    {
+      "stage": "stage01",
+      "title": "Data row and research question",
+      "original_claim": "Participant-level cross-sectional NHANES1999–2016 data join CBC, frailty and covariates.",
+      "why_needed": "Connect literature gap to target population, X/Y and one-person row before calculations.",
+      "location": [
+        "PDF p2 Background/Study population; text L106–144"
+      ],
+      "not_reported": [
+        "Author files, raw variable names, join keys/duplicate handling and code"
+      ],
+      "question_ids": [
+        "V2-P-Q01"
+      ],
+      "reuse": "Existing one-person trace and variable map are teaching/candidate lineage only; verify against raw artifact before reuse. Not author-identical."
+    },
+    {
+      "stage": "stage02",
+      "title": "CBC measurement",
+      "original_claim": "NLR=N/L; MLR=M/L; SIRI=N*M/L; SII=P*N/L from absolute cell counts.",
+      "why_needed": "Turn measured counts into interpretable exposures; distinguish accessible proxies from complete inflammation measurement.",
+      "location": [
+        "PDF p2 Assessment of CBC-derived inflammatory biomarkers; p5 Table1 units"
+      ],
+      "not_reported": [
+        "Cycle-specific raw mappings, zero/invalid counts and repeated measurement handling"
+      ],
+      "question_ids": [
+        "V2-P-Q02"
+      ],
+      "reuse": "Formula implementation reusable after unit and denominator checks; candidate distribution cannot establish author equivalence."
+    },
+    {
+      "stage": "stage03",
+      "title": "Frailty measurement",
+      "original_claim": "Rockwood multidimensional deficit accumulation chosen;46 minus10 nutritional items gives36; criterion1/0; FI>.3 frail.",
+      "why_needed": "Define what Y measures before choosing binary outcome model; Fried and FI are distinct constructs.",
+      "location": [
+        "PDF p2 Background/Frailty assessment; supplement S1 via previous audit; PDF p9 limitations"
+      ],
+      "not_reported": [
+        "Self-report thresholds and raw response codes",
+        "Exact FI denominator and partial-missing rules",
+        "Optimality evidence for0.3",
+        "Author-specific treatment of laboratory range boundaries"
+      ],
+      "question_ids": [
+        "V2-P-Q03a",
+        "V2-P-Q03b"
+      ],
+      "reuse": "operational36, complete36 sum/36 and coding sensitivity may be reused only as declared reconstruction choices. Prior reference22 68-item missing rule must not be imported as Han36 fact; reference23 does not resolve all thresholds."
+    },
+    {
+      "stage": "stage04",
+      "title": "Eligibility and missingness",
+      "original_claim": "Cross-sectional; younger-than50 exclusion and CBC/FI/covariate exclusions reported.",
+      "why_needed": "Determine whom associations describe and how missingness changes sample composition.",
+      "location": [
+        "PDF p3 Results L247–256; p4 Fig1 via previous audit; p6 L532–534; p9 limitations"
+      ],
+      "not_reported": [
+        "Code implementing age boundary",
+        "Operational definition of insufficient FI/CBC data",
+        "Model-specific missing handling and denominator",
+        "Why exactly age50 is preferable"
+      ],
+      "question_ids": [
+        "V2-P-Q04a",
+        "V2-P-Q04b",
+        "V2-P-Q04c"
+      ],
+      "reuse": "Earlier24119/9814/9786 selection results are diagnostic candidates only. Require artifact/provenance validation; discrepancy remains open."
+    },
+    {
+      "stage": "stage05",
+      "title": "Descriptive distributions/Table1",
+      "original_claim": "Medians/IQR and counts/percentages summarize sample; survey test footnotes appear.",
+      "why_needed": "Inspect distributions, imbalance and denominators before association models.",
+      "location": [
+        "PDF p3 Statistical analysis; p5 Table1 title/footnotes, text L331–338"
+      ],
+      "not_reported": [
+        "Consistent weighted/unweighted percentage definition",
+        "Weight/strata/PSU and pooled-cycle implementation",
+        "Resolution of smoking count mismatch"
+      ],
+      "question_ids": [
+        "V2-P-Q05a",
+        "V2-P-Q05b",
+        "V2-P-Q05c"
+      ],
+      "reuse": "Earlier descriptive figures usable as explicitly candidate sample output, never substituted for original Table1."
+    },
+    {
+      "stage": "stage06",
+      "title": "Binary outcome and odds",
+      "original_claim": "Logistic regression estimates odds of FI>.3 with OR/95%CI.",
+      "why_needed": "Distinguish probability, odds, OR and continuous-FI change; choose estimator for Y.",
+      "location": [
+        "PDF p2 Frailty assessment; p3 Statistical analysis; p6 Tables2–3"
+      ],
+      "not_reported": [
+        "Exact link implementation/package and inferential details"
+      ],
+      "question_ids": [
+        "V2-P-Q06"
+      ],
+      "reuse": "OR teaching and candidate binary Model1 interpretation reusable; cross-sectional OR is not incidence risk or future prediction accuracy."
+    },
+    {
+      "stage": "stage07",
+      "title": "Scale and model assumptions",
+      "original_claim": "Authors log-transform four markers citing nonnormality.",
+      "why_needed": "Define exposure contrast and check functional form; predictor normality is not logistic-regression requirement.",
+      "location": [
+        "PDF p3 Statistical analysis; p6 Table2 footnote"
+      ],
+      "not_reported": [
+        "Log base and zero handling",
+        "Functional-form diagnostics, influential cases, collinearity, separation checks"
+      ],
+      "question_ids": [
+        "V2-P-Q07"
+      ],
+      "reuse": "Natural-log models are declared candidate choice; previous diagnostics do not validate author model or prove all assumptions."
+    },
+    {
+      "stage": "stage08",
+      "title": "Adjustment/Table2",
+      "original_claim": "Model1 age/sex/cycle/race; Model2 adds education/PIR/drinking/smoking/BMI/activity/energy/diabetes/hypertension.",
+      "why_needed": "Ask whether association persists conditional on measured covariates; compare adjustment scope.",
+      "location": [
+        "PDF p3 Covariate assessment and Statistical analysis; p6 Table2 footnote"
+      ],
+      "not_reported": [
+        "Activity thresholds",
+        "Drinking harmonization across cycles",
+        "Diet day availability",
+        "BMI25/PIR boundaries, references, model-specific N and survey regression setting"
+      ],
+      "question_ids": [
+        "V2-P-Q08a",
+        "V2-P-Q08b"
+      ],
+      "reuse": "Candidate Model1 and fractional mean model may illustrate different estimands; Model2 author reproduction remains unconfirmed. Outcome components overlap with diabetes/hypertension adjustment."
+    },
+    {
+      "stage": "stage09",
+      "title": "Marker quartiles/Table3 versus classroom extension",
+      "original_claim": "Table3 uses quartiles of each inflammatory marker, lowest as reference; reports p-trend.",
+      "why_needed": "Express exposure comparison in groups; distinguish it from grouping FI and comparing marker means.",
+      "location": [
+        "PDF p3 Statistical analysis; p6 Table3; supplemental S2–S5 via previous audit"
+      ],
+      "not_reported": [
+        "Weighted quantile algorithm, ties and unrounded cuts",
+        "Trend scores/test",
+        "Conflicting SIRI Q3 bound in main text"
+      ],
+      "question_ids": [
+        "V2-P-Q09a",
+        "V2-P-Q09b"
+      ],
+      "reuse": "Earlier FI-quartile Welch/ANOVA/KW results are course extension, not Table3 reproduction. Use frozen analysis_plan.json families24 pairs/4 omnibus/4 trend; old handoff six-pair recommendation is superseded."
+    },
+    {
+      "stage": "stage10",
+      "title": "Shape, heterogeneity, robustness and conclusion",
+      "original_claim": "RCS investigates nonlinearity; subgroups and added-covariate sensitivity explore heterogeneity and stability.",
+      "why_needed": "Bound a single OR with evidence on shape, uncertainty and definition dependence.",
+      "location": [
+        "PDF p3 Statistical analysis; p4 Results; pp7–8 Figs2–3; p9 limitations; supplement S6/S7/FigS1 via previous audit"
+      ],
+      "not_reported": [
+        "RCS knots/reference/test implementation",
+        "Clear Figure2 P-non-overall meaning",
+        "Multiplicity and exact subgroup interaction implementation",
+        "Resolution of text SIRI smoking versus Fig3c discrepancy"
+      ],
+      "question_ids": [
+        "V2-P-Q10a",
+        "V2-P-Q10b"
+      ],
+      "reuse": "Candidate threshold/platelet/fractional sensitivities and simulations are separate educational evidence. Neither confirms original spline nor clinical validation; original10-paper exposes published and candidate results."
+    }
+  ],
+  "reuse_gate": "Reuse existing results only with source artifact, candidate definition, cohort, estimand, code/environment provenance and status label retained. This audit did not rerun or independently validate any prior numeric output.",
+  "log_base_source_check": {
+    "location": "PDF p5 Table1; paper_extracted.txt L495–515; PDF p3 methods and p6 Table2 note",
+    "fact": "Table1 presents unlogged marker values, not paired logged marker values: total NLR2.14, MLR0.29, SIRI1.17, SII496; fit2.08/0.29/1.13/486; frail2.35/0.31/1.33/531.",
+    "judgment": "These values cannot identify the log base. Original text only says logarithmically transformed. Any ln/log10 coefficient rescaling is mathematical sensitivity, not evidence of author implementation.",
+    "additional_note": "p3 Results text describes2.08/0.29/1.13/481.85 and quartile cutoffs, whereas Table1 total values differ. We do not resolve this reporting difference by choosing a log base."
+  },
+  "table3_model1_Q4_vs_Q1": [
+    {
+      "marker": "NLR",
+      "OR": 2.06,
+      "CI_low": 1.75,
+      "CI_high": 2.43,
+      "location": "PDF p6 Table3, text L611–614"
+    },
+    {
+      "marker": "MLR",
+      "OR": 1.55,
+      "CI_low": 1.32,
+      "CI_high": 1.82,
+      "location": "PDF p6 Table3, text L631–634"
+    },
+    {
+      "marker": "SIRI",
+      "printed_extraction_label": "RISI",
+      "OR": 2.29,
+      "CI_low": 1.94,
+      "CI_high": 2.71,
+      "location": "PDF p6 Table3, text L651–654"
+    },
+    {
+      "marker": "SII",
+      "OR": 1.55,
+      "CI_low": 1.31,
+      "CI_high": 1.82,
+      "location": "PDF p6 Table3, text L671–674"
+    }
+  ]
+}

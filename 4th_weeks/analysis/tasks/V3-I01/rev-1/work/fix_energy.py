@@ -1,0 +1,2 @@
+p='analysis/tasks/V3-I01/rev-1/work/prepare.R'
+s=open(p,encoding='utf-8-sig').read();s=s.replace("kcal<-ifelse", "dr99<-rawread('1999-2000','DRXTOT');dat$DRDDRSTS<-dr99$DRDDRSTS[match(dat$SEQN,dr99$SEQN)]\nkcal<-ifelse");s=s.replace("status<-ifelse(dat$cycle_start<2003,dat$DRDDRSTZ,dat$DR1DRSTZ)","status<-ifelse(dat$cycle_start==1999,dat$DRDDRSTS,ifelse(dat$cycle_start==2001,dat$DRDDRSTZ,dat$DR1DRSTZ))");open(p,'w',encoding='utf-8').write(s)

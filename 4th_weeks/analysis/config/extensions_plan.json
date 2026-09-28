@@ -1,0 +1,27 @@
+{
+  "version": "1.0-before-candidate-outcome-analysis",
+  "scope": "Exploratory statistical validity checks, separate from original-paper reproduction and assignment primary tests",
+  "outcome": "Analyst-declared operational 36-item complete-case FI; no unpublished author rules assumed",
+  "adjustment": ["age (released, topcoded)", "sex", "race RIDRETH1", "cycle"],
+  "design": "All-age public-use MEC design, original SDMVSTRA and SDMVPSU, nest=TRUE; subset to complete-candidate domain after design creation",
+  "extensions": [
+    "Weighted mean group comparisons with survey Wald test, 4-marker family",
+    "Sample versus weighted percentages to illustrate Table1 denominator distinction",
+    "Binary logit FI>.30 unweighted model1 and weighted design-based model1",
+    "Weighted binary threshold sensitivity .20,.25,.30,.35, same participants",
+    "Weighted binary age60+ sensitivity, no claim of optimal age limit",
+    "Survey quasi-binomial fractional mean FI logit; endpoints allowed",
+    "Fractional mean model with platelet deficit removed and denominator35, same participants",
+    "Spearman marker correlations; no simultaneous four-marker regression"
+  ],
+  "inference": "Pointwise confidence intervals; exploratory 32-model BH correction separately; no total familywise control across primary and extensions",
+  "limits": [
+    "No independent confirmation dataset",
+    "Analysis plan specified after exposure to published findings, not preregistration",
+    "Survey design weights cannot repair selection from complete FI rules",
+    "Fractional mean effects and binary frailty odds have different estimands",
+    "No optimal cutpoint selected by significance",
+    "Model2 and exact paper splines deferred pending undocumented covariate and model definitions",
+    "Beta regression considered but not fitted: candidate FI discrete multiples of 1/36 and endpoints possible; fractional mean chosen without asserting beta regression impossible"
+  ]
+}

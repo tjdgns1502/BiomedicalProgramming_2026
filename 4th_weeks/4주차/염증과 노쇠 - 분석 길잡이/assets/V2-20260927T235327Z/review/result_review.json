@@ -1,0 +1,111 @@
+{
+  "task": "V2-Q01",
+  "reviewed_implementation": "V2-I01/rev-1",
+  "decision": "accept_with_limits",
+  "blocking_findings": [],
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "pass",
+      "topic": "survey domain",
+      "evidence": "checks.R constructs svydesign from all positive finite-weight parent rows before subset(full,eligible), nest=TRUE, with lonely PSU set to fail; reported parent n=88062, domain n=9786, 133 strata, 271 nested PSUs and degf=138. Candidate/common design fields are matched by SEQN before fitting.",
+      "limit": "Pooled weights, parent design variables and cycle construction were reused; their derivation was not independently reconstructed."
+    },
+    {
+      "id": "F2",
+      "severity": "pass",
+      "topic": "log base",
+      "evidence": "All coefficient and entire covariance transformations, SEs, coefficient CIs, signed Wald ratios, p values, fitted probabilities and linear predictors are checked with fixed tolerances. Recorded maximum probability error is 5.93969318174459e-15. Separate Q arithmetic confirms reported marker coefficients and SE scaling.",
+      "limit": "Full fitted objects/covariance matrices are not persisted, so the whole-covariance evidence consists of inspected assertions, final successful execution and recorded error maxima, not a Q independent refit."
+    },
+    {
+      "id": "F3",
+      "severity": "pass",
+      "topic": "quartiles and CIs",
+      "evidence": "Raw-marker type-7 quartiles, right-closed intervals preserving ties, factor Q1 reference, unchanged domain/covariates and t(138) Wald CIs match plan. Twelve contrasts are present; all four category totals equal 9786. Q recomputation of ORs, CIs and p values agrees to below 1e-10."
+    },
+    {
+      "id": "F4",
+      "severity": "pass",
+      "topic": "spline and plot",
+      "evidence": "Two log-scale internal knots, observed boundaries, rank-2 residual basis against (1,x), bidirectional span checks, full adjusted model rank check and Cholesky check of tested covariance are implemented. The saved transform evaluates plot grids, and full model-row differences compute reference covariance. Four tests use F=W/2, numerator df=2, denominator df=138. Q checked p values, Bonferroni/BH n=4, all curve CI arithmetic, exact OR=1/SE=0 at each reference, and RDS/JSON basis agreement. Plot visually inspected with readable labels.",
+      "limit": "Reported CIs are pointwise and conditional on sample-derived knots/reference; no simultaneous band or biological shape guarantee."
+    },
+    {
+      "id": "F5",
+      "severity": "limited_pass",
+      "topic": "age counts",
+      "evidence": "Overall and per-cycle difference and sum identities independently pass: full design derivative >=50/>50/=50 counts 24119/23313/806; candidate common counts 9786/9693/93.",
+      "limit": "The original_DEMO_full label refers to the stored full design derivative, not a fresh raw-DEMO reread. Candidate input was already age>=50 and valid rows were filtered before its counts; this establishes the exact age-50 comparison, not unrestricted other-criteria or missing-age eligibility below age 50."
+    },
+    {
+      "id": "F6",
+      "severity": "resolved_assertion_with_provenance_limit",
+      "topic": "removed marker assertion",
+      "evidence": "Additional Q read of prepare_nhanes.py formulas and NA-aware reconciliation of candidate_complete36.csv reproduces the failed near() as NA on full n=9814, with 28 nonfinite pairs and zero finite mismatches for every marker. All common n=9786 rows are finite and match direct absolute-CBC formulas within predeclared tolerance; maximum absolute difference across markers is 4.55e-13.",
+      "limit": "The attempt-2 assertion failure is explained by NA-unsafe all() on the unfiltered input, not demonstrated marker disagreement. This limited derived-column arithmetic check does not certify raw XPT variable selection, units, merging, or source generation end to end."
+    },
+    {
+      "id": "F7",
+      "severity": "pass",
+      "topic": "execution integrity",
+      "evidence": "All 21 recorded output hashes and all 8 source/input/approval hashes match at review time. Logs show attempt 1 and 3 exit success and attempt 2 assertion failure. Q independent CSV arithmetic checks passed; only locale startup warnings occurred in Q arithmetic execution.",
+      "limit": "The review_notes.md hash refers to the pre-result-review approval document; this reviewer appends the present findings afterward as requested."
+    },
+    {
+      "id": "F8",
+      "severity": "nonblocking",
+      "topic": "failure recording robustness",
+      "evidence": "Spline failures have per-marker records, whereas unexpected log/quartile assertion failures stop the entire script before final summary CSVs. All four actual log/quartile checks succeeded, so no current result is missing.",
+      "limit": "This script is accepted for the submitted bounded run, not certified as a general failure-reporting framework for different future data."
+    }
+  ],
+  "approved_claims": [
+    "On the frozen common operational candidate domain, ln/log10 fits are numerically equivalent after the declared coefficient/covariance rescaling; per-unit OR values differ by definition.",
+    "The submitted 12 survey-weighted quartile contrasts implement the declared unweighted raw type-7 grouping and Q1 reference with pointwise t(138) Wald CIs.",
+    "All four planned spline diagnostics are estimable and reject logit linearity at Bonferroni family alpha 0.05 within this fixed candidate-FI analysis; their maximum adjusted p is about 1.883e-5.",
+    "The curves are analyst diagnostics from the same spline models, relative to each marker median over its fixed 5th-95th percentile display range, with pointwise CIs.",
+    "Age-50 inclusion adds 806 rows in the full design derivative and 93 in the common operational domain; this does not identify the authors' unique code predicate."
+  ],
+  "limits": [
+    "No certification of author-identical FI, original-paper replication, or causal inference.",
+    "No independent certification of existing marker generation, raw-source pooling weights, or upstream complete-case derivation.",
+    "Q reviewed code, saved outputs, logs, hashes and independently recomputed derived output arithmetic; Q did not independently refit the statistical models or reread raw source data.",
+    "Four-test multiplicity adjustment applies to nonlinearity diagnostics only; quartile CIs and p values are pointwise/unadjusted and must not be described as familywise corrected.",
+    "A significant spline diagnostic does not identify a threshold, prove causation, or validate a selected biological curve; it assesses the fixed working logit specification.",
+    "Marker formula arithmetic on the submitted derived columns is reconciled; raw-source marker provenance remains outside independent certification."
+  ],
+  "inspected_files": [
+    "analysis/tasks/V2-D01/rev-1/work/plan.json",
+    "analysis/tasks/V2-Q01/rev-1/work/plan_review.json",
+    "analysis/tasks/V2-I01/rev-1/work/handoff.md",
+    "analysis/tasks/V2-I01/rev-1/work/checks.R",
+    "analysis/tasks/V2-I01/rev-1/work/execution.json",
+    "analysis/tasks/V2-I01/rev-1/work/frozen_spec.json",
+    "analysis/tasks/V2-I01/rev-1/work/sample_audit.json",
+    "analysis/tasks/V2-I01/rev-1/work/synthetic_tests.json",
+    "analysis/tasks/V2-I01/rev-1/work/sessionInfo.txt",
+    "analysis/tasks/V2-I01/rev-1/work/log_base_checks.csv",
+    "analysis/tasks/V2-I01/rev-1/work/quartile_model1.csv",
+    "analysis/tasks/V2-I01/rev-1/work/quartile_cutpoints_counts.csv",
+    "analysis/tasks/V2-I01/rev-1/work/nonlinearity_tests.csv",
+    "analysis/tasks/V2-I01/rev-1/work/age_boundary_counts.csv",
+    "analysis/tasks/V2-I01/rev-1/work/analysis_rows.csv",
+    "analysis/tasks/V2-I01/rev-1/work/diagnostic_curve_data.csv",
+    "analysis/tasks/V2-I01/rev-1/work/diagnostic_curves.png",
+    "analysis/tasks/V2-I01/rev-1/work/basis_transformations.json",
+    "analysis/tasks/V2-I01/rev-1/work/basis_transformations.rds",
+    "analysis/tasks/V2-I01/rev-1/work/attempt-1.stdout.log",
+    "analysis/tasks/V2-I01/rev-1/work/attempt-1.stderr.log",
+    "analysis/tasks/V2-I01/rev-1/work/attempt-2.stdout.log",
+    "analysis/tasks/V2-I01/rev-1/work/attempt-2.stderr.log",
+    "analysis/tasks/V2-I01/rev-1/work/attempt-3.stdout.log",
+    "analysis/tasks/V2-I01/rev-1/work/attempt-3.stderr.log",
+    "analysis/src/prepare_nhanes.py (formula excerpt)",
+    "analysis/data/derived/candidate_complete36.csv (limited marker/CBC reconciliation)"
+  ],
+  "independent_numeric_evidence": "analysis/tasks/V2-Q01/rev-1/work/result_numeric_checks.json",
+  "required_revisions_for_current_bounded_run": [],
+  "source_generation_validation_out_of_scope": true,
+  "marker_assertion_evidence": "analysis/tasks/V2-Q01/rev-1/work/marker_assertion_reconciliation.json"
+}

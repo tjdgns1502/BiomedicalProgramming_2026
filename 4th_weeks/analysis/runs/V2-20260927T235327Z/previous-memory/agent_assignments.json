@@ -1,0 +1,49 @@
+{
+  "coordinator": "/root",
+  "workers": [
+    {
+      "task": "S01",
+      "agent": "/root/paper_contract",
+      "context": "fresh; source-only evidence task",
+      "write_scope": [
+        "analysis/runs/S01-paper-contract"
+      ],
+      "additional_tasks": [
+        "Review group_analysis.R",
+        "Review model_extensions.R"
+      ]
+    },
+    {
+      "task": "S02",
+      "agent": "/root/nhanes_data",
+      "context": "fresh; source/data reconstruction task",
+      "write_scope": [
+        "analysis/data",
+        "analysis/src/download_nhanes.*",
+        "analysis/src/prepare_nhanes.*",
+        "analysis/runs/S02-nhanes-data",
+        "analysis/src/construct_fi_candidate.py",
+        "analysis/config/fi_candidate.json"
+      ]
+    },
+    {
+      "task": "M01",
+      "agent": "/root/simulation",
+      "context": "fresh; independent method simulation task",
+      "write_scope": [
+        "analysis/src/simulation.R",
+        "analysis/tests/test_simulation.R",
+        "analysis/runs/M01-simulation",
+        "analysis/src/procedure_simulation.R",
+        "analysis/tests/test_procedure_simulation.R",
+        "analysis/runs/M02-procedure"
+      ],
+      "additional_tasks": [
+        "M02 actual shared comparison-core simulation",
+        "Independent code review"
+      ]
+    }
+  ],
+  "security": "Instruction and output ownership boundaries; workers share filesystem access; not an OS sandbox or statistically independent validation.",
+  "doc_writer": "/root"
+}

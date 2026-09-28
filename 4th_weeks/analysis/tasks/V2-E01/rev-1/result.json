@@ -1,0 +1,10 @@
+{
+  "task_id": "V2-E01",
+  "state": "accepted",
+  "outputs": [
+    "analysis/tasks/V2-E01/rev-1/work/audit_reuse.py",
+    "analysis/tasks/V2-E01/rev-1/work/handoff.md",
+    "analysis/tasks/V2-E01/rev-1/work/reuse_audit.json"
+  ],
+  "scope": "Bounded v2 task only; author-identical FI/cohort and full paper replication remain unresolved"
+}

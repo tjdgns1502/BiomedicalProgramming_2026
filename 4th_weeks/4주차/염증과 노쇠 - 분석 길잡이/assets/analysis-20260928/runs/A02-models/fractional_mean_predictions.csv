@@ -1,0 +1,5 @@
+"marker","logx_p25","logx_p75","adjusted_mean_FI_at_p25","adjusted_mean_FI_at_p75","difference","uncertainty"
+"NLR",0.421624311512236,1.03609193168678,0.1619398392259,0.185853918717681,0.0239140794917816,"Point estimates only; not causal and no CI computed"
+"MLR",-1.51982575374441,-0.980829253011727,0.1661510178705,0.182312330301522,0.0161613124310226,"Point estimates only; not causal and no CI computed"
+"SIRI",-0.272294379111655,0.510825623765991,0.15825602584747,0.188422921585557,0.0301668957380868,"Point estimates only; not causal and no CI computed"
+"SII",5.82924565203334,6.53099909505144,0.166280393645714,0.182720208171469,0.0164398145257554,"Point estimates only; not causal and no CI computed"

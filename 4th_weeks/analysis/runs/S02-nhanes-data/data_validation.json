@@ -1,0 +1,14 @@
+{
+  "n": 24119,
+  "unique_seqn": 24119,
+  "all_age50": true,
+  "cycles": 9,
+  "cbc_complete_positive": 21611,
+  "infinite_biomarkers": 0,
+  "n_age50_positive_mec_weight": 22734,
+  "n_age50_zero_mec_weight": 1385,
+  "no_IBM_zero_artifacts_remaining": true,
+  "n_full_design": 92062,
+  "n_full_design_positive_mec_weight": 88062,
+  "source_aliases_present": true
+}

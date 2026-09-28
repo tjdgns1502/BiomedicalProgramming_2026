@@ -1,0 +1,21 @@
+{
+  "task_id": "REPLACE",
+  "status": "needs_input",
+  "question": "",
+  "claim_type": "unknown",
+  "inputs": [],
+  "plan_sha256": null,
+  "data_sha256": null,
+  "code_sha256": null,
+  "execution_command": null,
+  "outputs": [],
+  "checks": [],
+  "observations": [],
+  "limitations": [],
+  "prior_exposure": true,
+  "context_exposure": [],
+  "changes": [],
+  "next_required_input": [],
+  "author_id": "",
+  "reviewed": false
+}

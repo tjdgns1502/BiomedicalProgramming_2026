@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "main_n": 10874,
+  "diet_n": 8174,
+  "checks": ["IndependentNLRModel2betaSE", "IndependentNLRBMIinteractionWald", "IndependentNLRBMIalllevelcovarianceCIs", "IndependentNLR3dfcurvealternativebasisallpoints", "Raw1999statusenergy", "Rawall7dietweights", "IndependentNLRmean2dietbetaSE"]
+}

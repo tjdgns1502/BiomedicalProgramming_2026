@@ -1,0 +1,128 @@
+{
+  "recorded_at": "2026-09-27T21:04:47.039030+00:00",
+  "tasks": [
+    {
+      "id": "E00",
+      "agent": "/root",
+      "question": "Can this workspace run R reproducibly?",
+      "depends": [],
+      "accept": "R session and packages captured; no global locale changes",
+      "state": "accepted"
+    },
+    {
+      "id": "S01",
+      "agent": "/root/paper_contract",
+      "question": "What does the paper explicitly specify and omit?",
+      "depends": [],
+      "accept": "Claim-level source locations and uncertainty recorded",
+      "state": "accepted"
+    },
+    {
+      "id": "S02",
+      "agent": "/root/nhanes_data",
+      "question": "Can public rows yield the needed biomarkers and declared candidate FI?",
+      "depends": [
+        "S01"
+      ],
+      "accept": "Unique participant joins, source checksums, codebook rules, item missingness and transform trace",
+      "state": "accepted_with_limits"
+    },
+    {
+      "id": "M01",
+      "agent": "/root/simulation",
+      "question": "Does independent multiple-testing inflation agree with theory within Monte Carlo uncertainty?",
+      "depends": [],
+      "accept": "Fixed seeds, raw replicates, MC intervals and all departures reported",
+      "state": "accepted_with_limits"
+    },
+    {
+      "id": "A01",
+      "agent": "/root",
+      "question": "Do mean markers differ across candidate FI groups?",
+      "depends": [
+        "S02"
+      ],
+      "accept": "Same-score grouping, prechosen Welch family, effect estimates, corrected p and diagnostics",
+      "state": "accepted"
+    },
+    {
+      "id": "M02",
+      "agent": "/root/simulation",
+      "question": "How does the actual comparison code behave under stated data-generating models?",
+      "depends": [
+        "A01-code-reviewed"
+      ],
+      "accept": "Shared statistical core, known nulls, MC uncertainty; limitations explicit",
+      "state": "accepted_with_limits"
+    },
+    {
+      "id": "A02",
+      "agent": "/root",
+      "question": "How do survey design, outcome choice and measurement definitions affect inference?",
+      "depends": [
+        "S02"
+      ],
+      "accept": "Preserved all-age survey design, domain analysis, distinct estimands and complete reporting",
+      "state": "accepted_with_limits"
+    },
+    {
+      "id": "D01",
+      "agent": "/root",
+      "question": "Can reviewed results be traced in existing learning documents?",
+      "depends": [
+        "S01",
+        "S02",
+        "A01",
+        "A02",
+        "M01",
+        "M02"
+      ],
+      "accept": "Append only to existing source and Obsidian notes; same blocks and valid links; no separate report",
+      "state": "accepted"
+    },
+    {
+      "id": "A03",
+      "agent": "/root",
+      "state": "accepted_exploratory",
+      "depends": [
+        "S02"
+      ],
+      "question": "How do predeclared alternative FI rules change classification on identical people?",
+      "accept": "Same cohort asserted; binary/quartile transition and separate attrition reported",
+      "output": "runs/A03-coding",
+      "review": "Root checked deterministic count and transition identities; not an independent clinical validation"
+    }
+  ],
+  "states": [
+    "planned",
+    "ready",
+    "running",
+    "submitted",
+    "reviewed",
+    "accepted",
+    "needs_revision",
+    "limited_by_missing_definition"
+  ],
+  "protocol": "Workers submit file paths, source/input hashes, result, limitations; root reviews and alone updates shared notes. No passing unreviewed conclusions as common facts.",
+  "global_limits": [
+    "Public data only",
+    "Do not alter raw data",
+    "Do not tune to published p values",
+    "No causal claims",
+    "No pretending candidate equals author FI"
+  ],
+  "coordinator_limits": [
+    "Do not fill missing author definitions silently",
+    "Do not treat worker success as reviewed acceptance",
+    "Do not merge tasks with different estimands"
+  ],
+  "worker_limits": [
+    "Read only relevant assigned inputs",
+    "Write only assigned files",
+    "Distinguish observed result, assumption and recommendation",
+    "Report failures, do not discard inconvenient runs"
+  ],
+  "log_limits": "Artifact and message handoff audit; not hidden reasoning logs or an OS-enforced sandbox",
+  "finalized_at": "2026-09-27T21:17:38.005626+00:00",
+  "scope_status": "Assignment implementation and documented candidate analyses executed; exact paper-identical reproduction remains underdetermined."
+}

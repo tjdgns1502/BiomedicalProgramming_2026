@@ -1,0 +1,78 @@
+SIMULATION ONLY. Actual comparison_core shared with group_analysis.R.
+Started: 2026-09-27 21:00:55 UTC; B= 2000 master seed= 20260929 
+Scenario 1 normal_equal_null 
+  Completed 500 of 2000 repetitions
+  Completed 1000 of 2000 repetitions
+  Completed 1500 of 2000 repetitions
+  Completed 2000 of 2000 repetitions
+Scenario 2 normal_hetero_equal_mean 
+  Completed 500 of 2000 repetitions
+  Completed 1000 of 2000 repetitions
+  Completed 1500 of 2000 repetitions
+  Completed 2000 of 2000 repetitions
+Scenario 3 lognormal_identical_null 
+  Completed 500 of 2000 repetitions
+  Completed 1000 of 2000 repetitions
+  Completed 1500 of 2000 repetitions
+  Completed 2000 of 2000 repetitions
+Scenario 4 normal_mean_alternative 
+  Completed 500 of 2000 repetitions
+  Completed 1000 of 2000 repetitions
+  Completed 1500 of 2000 repetitions
+  Completed 2000 of 2000 repetitions
+Omnibus results (KW heteroscedastic equal-mean scenario is NOT null size):
+                   scenario         method estimate        mcse    lower95
+1         normal_equal_null          ANOVA   0.0495 0.004850245 0.04082725
+2         normal_equal_null          Welch   0.0510 0.004919299 0.04218997
+3         normal_equal_null Kruskal-Wallis   0.0450 0.004635461 0.03675382
+4  normal_hetero_equal_mean          ANOVA   0.0615 0.005372046 0.05178817
+5  normal_hetero_equal_mean          Welch   0.0500 0.004873397 0.04128123
+6  normal_hetero_equal_mean Kruskal-Wallis   0.0610 0.005351589 0.05132898
+7  lognormal_identical_null          ANOVA   0.0410 0.004433903 0.03315349
+8  lognormal_identical_null          Welch   0.0620 0.005392402 0.05224755
+9  lognormal_identical_null Kruskal-Wallis   0.0500 0.004873397 0.04128123
+10  normal_mean_alternative          ANOVA   0.4890 0.011177634 0.46713433
+11  normal_mean_alternative          Welch   0.4785 0.011169999 0.45666938
+12  normal_mean_alternative Kruskal-Wallis   0.4610 0.011146277 0.43924928
+      upper95
+1  0.05990000
+2  0.06153154
+3  0.05499070
+4  0.07289308
+5  0.06044411
+6  0.07235419
+7  0.05060636
+8  0.07343178
+9  0.06044411
+10 0.51090785
+11 0.50041306
+12 0.48290024
+Six-pair family summaries:
+                   scenario     method FWER_estimate FDR_estimate
+1         normal_equal_null unadjusted        0.2105       0.2105
+2         normal_equal_null bonferroni        0.0400       0.0400
+3         normal_equal_null         BH        0.0455       0.0455
+4  normal_hetero_equal_mean unadjusted        0.1925       0.1925
+5  normal_hetero_equal_mean bonferroni        0.0360       0.0360
+6  normal_hetero_equal_mean         BH        0.0405       0.0405
+7  lognormal_identical_null unadjusted        0.1625       0.1625
+8  lognormal_identical_null bonferroni        0.0130       0.0130
+9  lognormal_identical_null         BH        0.0155       0.0155
+10  normal_mean_alternative unadjusted        0.0000       0.0000
+11  normal_mean_alternative bonferroni        0.0000       0.0000
+12  normal_mean_alternative         BH        0.0000       0.0000
+   power_estimate
+1              NA
+2              NA
+3              NA
+4              NA
+5              NA
+6              NA
+7              NA
+8              NA
+9              NA
+10      0.2705000
+11      0.1120833
+12      0.1582500
+Completed actual shared-core simulation; no paper outcomes were used.
+Finished: 2026-09-27 21:06:37 UTC
