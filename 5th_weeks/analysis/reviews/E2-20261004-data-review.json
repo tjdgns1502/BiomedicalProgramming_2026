@@ -1,0 +1,2232 @@
+{
+  "role": "Q-data",
+  "review_id": "Q-DATA-E2-20261004",
+  "run_id": "E2-20261004",
+  "status": "accept",
+  "reviewer_exposure": {
+    "source_author": true,
+    "published_targets_seen": true,
+    "analysis_code_author": false,
+    "statement": "내부 독립 자료 검토. 원시 E1을 별도로 검증한 인스턴스이며, 원문 목표 수치 노출 및 출처 작성 역할을 공개함. 외부 검증을 주장하지 않음."
+  },
+  "exact_version": {
+    "data_version": "nhanes-2009-2018-harmonizedJ-d8f04b7c96c89c31956a",
+    "upstream_data_version": "nhanes-2009-2018-full-b21b4e903b63d715068c",
+    "upstream_master_sha256": "4ad1870f3f98a75921e1e3b433d645183b657b322327874698a02ae53ec329be",
+    "executed_script_sha256": "38ac14542f2147f096d0035b3397964b66a255868811d6215d2eef08f2a09ab3",
+    "current_source_sha256": "38ac14542f2147f096d0035b3397964b66a255868811d6215d2eef08f2a09ab3",
+    "master_sha256": "ed831aa35c25da5b032d5a1dc846268326a1ba6cede793a295b67ffa99fe4b60",
+    "report_sha256": "1d0ac88a02fd05bd0d1d72b8c877e1fe72bb8f9d8750ea102fc28b2fd6aa4cc2",
+    "reviewer_script_sha256": "98c24b5567d6c26e8b727a744f5a44878460fa43c12156f3f3a4f4c33a16c576"
+  },
+  "scope": "검증된 E1에서 J 전용 CDC 역방향 변환·원값 보존·변환 뒤 중앙값/flag·상류/domain 불변성·재사용 출처·Model3/추세/상호작용 자료버전·Table1 평균 및 해시를 독립 검산. 모델 재적합/추론 수치 검토는 Q-stat 범위.",
+  "decision": {
+    "value": "accept",
+    "accepted_scope": "명시된 E1 기반 부분 검사 조화 후보의 자료 정의·변환·연계·점추정 검산",
+    "excluded_scope": "모델 추론 수치, 원 논문의 정확한 복제, 비공복 TG의 참조법 동등성, 모든 편향 해결은 이 자료 판정 범위 밖"
+  },
+  "checks": [
+    {
+      "id": "upstream_E1_master_hash",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "upstream_E1_report_hash",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "upstream_E1_manifest_hash",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "same_participant_order",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "unaffected_SEQN",
+      "passed": true,
+      "evidence": "SEQN"
+    },
+    {
+      "id": "unaffected_SDDSRVYR",
+      "passed": true,
+      "evidence": "SDDSRVYR"
+    },
+    {
+      "id": "unaffected_RIDSTATR",
+      "passed": true,
+      "evidence": "RIDSTATR"
+    },
+    {
+      "id": "unaffected_RIDEXMON",
+      "passed": true,
+      "evidence": "RIDEXMON"
+    },
+    {
+      "id": "unaffected_RIAGENDR",
+      "passed": true,
+      "evidence": "RIAGENDR"
+    },
+    {
+      "id": "unaffected_RIDAGEYR",
+      "passed": true,
+      "evidence": "RIDAGEYR"
+    },
+    {
+      "id": "unaffected_RIDAGEMN",
+      "passed": true,
+      "evidence": "RIDAGEMN"
+    },
+    {
+      "id": "unaffected_RIDAGEEX",
+      "passed": true,
+      "evidence": "RIDAGEEX"
+    },
+    {
+      "id": "unaffected_RIDRETH1",
+      "passed": true,
+      "evidence": "RIDRETH1"
+    },
+    {
+      "id": "unaffected_DMQMILIT",
+      "passed": true,
+      "evidence": "DMQMILIT"
+    },
+    {
+      "id": "unaffected_DMDBORN2",
+      "passed": true,
+      "evidence": "DMDBORN2"
+    },
+    {
+      "id": "unaffected_DMDCITZN",
+      "passed": true,
+      "evidence": "DMDCITZN"
+    },
+    {
+      "id": "unaffected_DMDYRSUS",
+      "passed": true,
+      "evidence": "DMDYRSUS"
+    },
+    {
+      "id": "unaffected_DMDEDUC3",
+      "passed": true,
+      "evidence": "DMDEDUC3"
+    },
+    {
+      "id": "unaffected_DMDEDUC2",
+      "passed": true,
+      "evidence": "DMDEDUC2"
+    },
+    {
+      "id": "unaffected_DMDSCHOL",
+      "passed": true,
+      "evidence": "DMDSCHOL"
+    },
+    {
+      "id": "unaffected_DMDMARTL",
+      "passed": true,
+      "evidence": "DMDMARTL"
+    },
+    {
+      "id": "unaffected_DMDHHSIZ",
+      "passed": true,
+      "evidence": "DMDHHSIZ"
+    },
+    {
+      "id": "unaffected_DMDFMSIZ",
+      "passed": true,
+      "evidence": "DMDFMSIZ"
+    },
+    {
+      "id": "unaffected_INDHHIN2",
+      "passed": true,
+      "evidence": "INDHHIN2"
+    },
+    {
+      "id": "unaffected_INDFMIN2",
+      "passed": true,
+      "evidence": "INDFMIN2"
+    },
+    {
+      "id": "unaffected_INDFMPIR",
+      "passed": true,
+      "evidence": "INDFMPIR"
+    },
+    {
+      "id": "unaffected_RIDEXPRG",
+      "passed": true,
+      "evidence": "RIDEXPRG"
+    },
+    {
+      "id": "unaffected_DMDHRGND",
+      "passed": true,
+      "evidence": "DMDHRGND"
+    },
+    {
+      "id": "unaffected_DMDHRAGE",
+      "passed": true,
+      "evidence": "DMDHRAGE"
+    },
+    {
+      "id": "unaffected_DMDHRBR2",
+      "passed": true,
+      "evidence": "DMDHRBR2"
+    },
+    {
+      "id": "unaffected_DMDHREDU",
+      "passed": true,
+      "evidence": "DMDHREDU"
+    },
+    {
+      "id": "unaffected_DMDHRMAR",
+      "passed": true,
+      "evidence": "DMDHRMAR"
+    },
+    {
+      "id": "unaffected_DMDHSEDU",
+      "passed": true,
+      "evidence": "DMDHSEDU"
+    },
+    {
+      "id": "unaffected_SIALANG",
+      "passed": true,
+      "evidence": "SIALANG"
+    },
+    {
+      "id": "unaffected_SIAPROXY",
+      "passed": true,
+      "evidence": "SIAPROXY"
+    },
+    {
+      "id": "unaffected_SIAINTRP",
+      "passed": true,
+      "evidence": "SIAINTRP"
+    },
+    {
+      "id": "unaffected_FIALANG",
+      "passed": true,
+      "evidence": "FIALANG"
+    },
+    {
+      "id": "unaffected_FIAPROXY",
+      "passed": true,
+      "evidence": "FIAPROXY"
+    },
+    {
+      "id": "unaffected_FIAINTRP",
+      "passed": true,
+      "evidence": "FIAINTRP"
+    },
+    {
+      "id": "unaffected_MIALANG",
+      "passed": true,
+      "evidence": "MIALANG"
+    },
+    {
+      "id": "unaffected_MIAPROXY",
+      "passed": true,
+      "evidence": "MIAPROXY"
+    },
+    {
+      "id": "unaffected_MIAINTRP",
+      "passed": true,
+      "evidence": "MIAINTRP"
+    },
+    {
+      "id": "unaffected_AIALANG",
+      "passed": true,
+      "evidence": "AIALANG"
+    },
+    {
+      "id": "unaffected_WTINT2YR",
+      "passed": true,
+      "evidence": "WTINT2YR"
+    },
+    {
+      "id": "unaffected_WTMEC2YR",
+      "passed": true,
+      "evidence": "WTMEC2YR"
+    },
+    {
+      "id": "unaffected_SDMVPSU",
+      "passed": true,
+      "evidence": "SDMVPSU"
+    },
+    {
+      "id": "unaffected_SDMVSTRA",
+      "passed": true,
+      "evidence": "SDMVSTRA"
+    },
+    {
+      "id": "unaffected_OHQ835",
+      "passed": true,
+      "evidence": "OHQ835"
+    },
+    {
+      "id": "unaffected_OHQ845",
+      "passed": true,
+      "evidence": "OHQ845"
+    },
+    {
+      "id": "unaffected_OHQ850",
+      "passed": true,
+      "evidence": "OHQ850"
+    },
+    {
+      "id": "unaffected_OHQ855",
+      "passed": true,
+      "evidence": "OHQ855"
+    },
+    {
+      "id": "unaffected_OHQ860",
+      "passed": true,
+      "evidence": "OHQ860"
+    },
+    {
+      "id": "unaffected_OHQ865",
+      "passed": true,
+      "evidence": "OHQ865"
+    },
+    {
+      "id": "unaffected_OHQ870",
+      "passed": true,
+      "evidence": "OHQ870"
+    },
+    {
+      "id": "unaffected_OHQ875",
+      "passed": true,
+      "evidence": "OHQ875"
+    },
+    {
+      "id": "unaffected_BPQ020",
+      "passed": true,
+      "evidence": "BPQ020"
+    },
+    {
+      "id": "unaffected_BPQ030",
+      "passed": true,
+      "evidence": "BPQ030"
+    },
+    {
+      "id": "unaffected_BPD035",
+      "passed": true,
+      "evidence": "BPD035"
+    },
+    {
+      "id": "unaffected_BPQ040A",
+      "passed": true,
+      "evidence": "BPQ040A"
+    },
+    {
+      "id": "unaffected_BPQ050A",
+      "passed": true,
+      "evidence": "BPQ050A"
+    },
+    {
+      "id": "unaffected_BPQ057",
+      "passed": true,
+      "evidence": "BPQ057"
+    },
+    {
+      "id": "unaffected_BPQ056",
+      "passed": true,
+      "evidence": "BPQ056"
+    },
+    {
+      "id": "unaffected_BPD058",
+      "passed": true,
+      "evidence": "BPD058"
+    },
+    {
+      "id": "unaffected_BPQ059",
+      "passed": true,
+      "evidence": "BPQ059"
+    },
+    {
+      "id": "unaffected_BPQ060",
+      "passed": true,
+      "evidence": "BPQ060"
+    },
+    {
+      "id": "unaffected_BPQ070",
+      "passed": true,
+      "evidence": "BPQ070"
+    },
+    {
+      "id": "unaffected_BPQ080",
+      "passed": true,
+      "evidence": "BPQ080"
+    },
+    {
+      "id": "unaffected_BPQ090A",
+      "passed": true,
+      "evidence": "BPQ090A"
+    },
+    {
+      "id": "unaffected_BPQ090B",
+      "passed": true,
+      "evidence": "BPQ090B"
+    },
+    {
+      "id": "unaffected_BPQ090C",
+      "passed": true,
+      "evidence": "BPQ090C"
+    },
+    {
+      "id": "unaffected_BPQ090D",
+      "passed": true,
+      "evidence": "BPQ090D"
+    },
+    {
+      "id": "unaffected_BPQ100A",
+      "passed": true,
+      "evidence": "BPQ100A"
+    },
+    {
+      "id": "unaffected_BPQ100B",
+      "passed": true,
+      "evidence": "BPQ100B"
+    },
+    {
+      "id": "unaffected_BPQ100C",
+      "passed": true,
+      "evidence": "BPQ100C"
+    },
+    {
+      "id": "unaffected_BPQ100D",
+      "passed": true,
+      "evidence": "BPQ100D"
+    },
+    {
+      "id": "unaffected_PEASCST1",
+      "passed": true,
+      "evidence": "PEASCST1"
+    },
+    {
+      "id": "unaffected_PEASCTM1",
+      "passed": true,
+      "evidence": "PEASCTM1"
+    },
+    {
+      "id": "unaffected_PEASCCT1",
+      "passed": true,
+      "evidence": "PEASCCT1"
+    },
+    {
+      "id": "unaffected_BPXCHR",
+      "passed": true,
+      "evidence": "BPXCHR"
+    },
+    {
+      "id": "unaffected_BPQ150A",
+      "passed": true,
+      "evidence": "BPQ150A"
+    },
+    {
+      "id": "unaffected_BPQ150B",
+      "passed": true,
+      "evidence": "BPQ150B"
+    },
+    {
+      "id": "unaffected_BPQ150C",
+      "passed": true,
+      "evidence": "BPQ150C"
+    },
+    {
+      "id": "unaffected_BPQ150D",
+      "passed": true,
+      "evidence": "BPQ150D"
+    },
+    {
+      "id": "unaffected_BPAARM",
+      "passed": true,
+      "evidence": "BPAARM"
+    },
+    {
+      "id": "unaffected_BPACSZ",
+      "passed": true,
+      "evidence": "BPACSZ"
+    },
+    {
+      "id": "unaffected_BPXPLS",
+      "passed": true,
+      "evidence": "BPXPLS"
+    },
+    {
+      "id": "unaffected_BPXPULS",
+      "passed": true,
+      "evidence": "BPXPULS"
+    },
+    {
+      "id": "unaffected_BPXPTY",
+      "passed": true,
+      "evidence": "BPXPTY"
+    },
+    {
+      "id": "unaffected_BPXML1",
+      "passed": true,
+      "evidence": "BPXML1"
+    },
+    {
+      "id": "unaffected_BPXSY1",
+      "passed": true,
+      "evidence": "BPXSY1"
+    },
+    {
+      "id": "unaffected_BPXDI1",
+      "passed": true,
+      "evidence": "BPXDI1"
+    },
+    {
+      "id": "unaffected_BPAEN1",
+      "passed": true,
+      "evidence": "BPAEN1"
+    },
+    {
+      "id": "unaffected_BPXSY2",
+      "passed": true,
+      "evidence": "BPXSY2"
+    },
+    {
+      "id": "unaffected_BPXDI2",
+      "passed": true,
+      "evidence": "BPXDI2"
+    },
+    {
+      "id": "unaffected_BPAEN2",
+      "passed": true,
+      "evidence": "BPAEN2"
+    },
+    {
+      "id": "unaffected_BPXSY3",
+      "passed": true,
+      "evidence": "BPXSY3"
+    },
+    {
+      "id": "unaffected_BPXDI3",
+      "passed": true,
+      "evidence": "BPXDI3"
+    },
+    {
+      "id": "unaffected_BPAEN3",
+      "passed": true,
+      "evidence": "BPAEN3"
+    },
+    {
+      "id": "unaffected_BPXSY4",
+      "passed": true,
+      "evidence": "BPXSY4"
+    },
+    {
+      "id": "unaffected_BPXDI4",
+      "passed": true,
+      "evidence": "BPXDI4"
+    },
+    {
+      "id": "unaffected_BPAEN4",
+      "passed": true,
+      "evidence": "BPAEN4"
+    },
+    {
+      "id": "unaffected_SMQ020",
+      "passed": true,
+      "evidence": "SMQ020"
+    },
+    {
+      "id": "unaffected_SMD030",
+      "passed": true,
+      "evidence": "SMD030"
+    },
+    {
+      "id": "unaffected_SMQ040",
+      "passed": true,
+      "evidence": "SMQ040"
+    },
+    {
+      "id": "unaffected_SMQ050Q",
+      "passed": true,
+      "evidence": "SMQ050Q"
+    },
+    {
+      "id": "unaffected_SMQ050U",
+      "passed": true,
+      "evidence": "SMQ050U"
+    },
+    {
+      "id": "unaffected_SMD055",
+      "passed": true,
+      "evidence": "SMD055"
+    },
+    {
+      "id": "unaffected_SMD057",
+      "passed": true,
+      "evidence": "SMD057"
+    },
+    {
+      "id": "unaffected_SMQ077",
+      "passed": true,
+      "evidence": "SMQ077"
+    },
+    {
+      "id": "unaffected_SMD641",
+      "passed": true,
+      "evidence": "SMD641"
+    },
+    {
+      "id": "unaffected_SMD650",
+      "passed": true,
+      "evidence": "SMD650"
+    },
+    {
+      "id": "unaffected_SMD093",
+      "passed": true,
+      "evidence": "SMD093"
+    },
+    {
+      "id": "unaffected_SMDUPCA",
+      "passed": true,
+      "evidence": "SMDUPCA"
+    },
+    {
+      "id": "unaffected_SMD100BR",
+      "passed": true,
+      "evidence": "SMD100BR"
+    },
+    {
+      "id": "unaffected_SMD100FL",
+      "passed": true,
+      "evidence": "SMD100FL"
+    },
+    {
+      "id": "unaffected_SMD100MN",
+      "passed": true,
+      "evidence": "SMD100MN"
+    },
+    {
+      "id": "unaffected_SMD100LN",
+      "passed": true,
+      "evidence": "SMD100LN"
+    },
+    {
+      "id": "unaffected_SMD100TR",
+      "passed": true,
+      "evidence": "SMD100TR"
+    },
+    {
+      "id": "unaffected_SMD100NI",
+      "passed": true,
+      "evidence": "SMD100NI"
+    },
+    {
+      "id": "unaffected_SMD100CO",
+      "passed": true,
+      "evidence": "SMD100CO"
+    },
+    {
+      "id": "unaffected_SMQ620",
+      "passed": true,
+      "evidence": "SMQ620"
+    },
+    {
+      "id": "unaffected_SMD630",
+      "passed": true,
+      "evidence": "SMD630"
+    },
+    {
+      "id": "unaffected_SMQ660",
+      "passed": true,
+      "evidence": "SMQ660"
+    },
+    {
+      "id": "unaffected_SMQ664M",
+      "passed": true,
+      "evidence": "SMQ664M"
+    },
+    {
+      "id": "unaffected_SMQ664C",
+      "passed": true,
+      "evidence": "SMQ664C"
+    },
+    {
+      "id": "unaffected_SMQ664W",
+      "passed": true,
+      "evidence": "SMQ664W"
+    },
+    {
+      "id": "unaffected_SMQ664B",
+      "passed": true,
+      "evidence": "SMQ664B"
+    },
+    {
+      "id": "unaffected_SMQ664O",
+      "passed": true,
+      "evidence": "SMQ664O"
+    },
+    {
+      "id": "unaffected_SMQ666M",
+      "passed": true,
+      "evidence": "SMQ666M"
+    },
+    {
+      "id": "unaffected_SMQ666C",
+      "passed": true,
+      "evidence": "SMQ666C"
+    },
+    {
+      "id": "unaffected_SMQ666K",
+      "passed": true,
+      "evidence": "SMQ666K"
+    },
+    {
+      "id": "unaffected_SMQ666W",
+      "passed": true,
+      "evidence": "SMQ666W"
+    },
+    {
+      "id": "unaffected_SMQ666B",
+      "passed": true,
+      "evidence": "SMQ666B"
+    },
+    {
+      "id": "unaffected_SMQ666S",
+      "passed": true,
+      "evidence": "SMQ666S"
+    },
+    {
+      "id": "unaffected_SMQ666O",
+      "passed": true,
+      "evidence": "SMQ666O"
+    },
+    {
+      "id": "unaffected_SMQ670",
+      "passed": true,
+      "evidence": "SMQ670"
+    },
+    {
+      "id": "unaffected_SMAQUEX2",
+      "passed": true,
+      "evidence": "SMAQUEX2"
+    },
+    {
+      "id": "unaffected_cycle",
+      "passed": true,
+      "evidence": "cycle"
+    },
+    {
+      "id": "unaffected_cycle_start",
+      "passed": true,
+      "evidence": "cycle_start"
+    },
+    {
+      "id": "unaffected_cycle_suffix",
+      "passed": true,
+      "evidence": "cycle_suffix"
+    },
+    {
+      "id": "unaffected_RIDRETH3",
+      "passed": true,
+      "evidence": "RIDRETH3"
+    },
+    {
+      "id": "unaffected_RIDEXAGY",
+      "passed": true,
+      "evidence": "RIDEXAGY"
+    },
+    {
+      "id": "unaffected_RIDEXAGM",
+      "passed": true,
+      "evidence": "RIDEXAGM"
+    },
+    {
+      "id": "unaffected_DMQMILIZ",
+      "passed": true,
+      "evidence": "DMQMILIZ"
+    },
+    {
+      "id": "unaffected_DMQADFC",
+      "passed": true,
+      "evidence": "DMQADFC"
+    },
+    {
+      "id": "unaffected_DMDBORN4",
+      "passed": true,
+      "evidence": "DMDBORN4"
+    },
+    {
+      "id": "unaffected_AIALANGA",
+      "passed": true,
+      "evidence": "AIALANGA"
+    },
+    {
+      "id": "unaffected_DMDHHSZA",
+      "passed": true,
+      "evidence": "DMDHHSZA"
+    },
+    {
+      "id": "unaffected_DMDHHSZB",
+      "passed": true,
+      "evidence": "DMDHHSZB"
+    },
+    {
+      "id": "unaffected_DMDHHSZE",
+      "passed": true,
+      "evidence": "DMDHHSZE"
+    },
+    {
+      "id": "unaffected_DMDHRBR4",
+      "passed": true,
+      "evidence": "DMDHRBR4"
+    },
+    {
+      "id": "unaffected_OHQ030",
+      "passed": true,
+      "evidence": "OHQ030"
+    },
+    {
+      "id": "unaffected_OHQ033",
+      "passed": true,
+      "evidence": "OHQ033"
+    },
+    {
+      "id": "unaffected_OHQ770",
+      "passed": true,
+      "evidence": "OHQ770"
+    },
+    {
+      "id": "unaffected_OHQ780A",
+      "passed": true,
+      "evidence": "OHQ780A"
+    },
+    {
+      "id": "unaffected_OHQ780B",
+      "passed": true,
+      "evidence": "OHQ780B"
+    },
+    {
+      "id": "unaffected_OHQ780C",
+      "passed": true,
+      "evidence": "OHQ780C"
+    },
+    {
+      "id": "unaffected_OHQ780D",
+      "passed": true,
+      "evidence": "OHQ780D"
+    },
+    {
+      "id": "unaffected_OHQ780E",
+      "passed": true,
+      "evidence": "OHQ780E"
+    },
+    {
+      "id": "unaffected_OHQ780F",
+      "passed": true,
+      "evidence": "OHQ780F"
+    },
+    {
+      "id": "unaffected_OHQ780G",
+      "passed": true,
+      "evidence": "OHQ780G"
+    },
+    {
+      "id": "unaffected_OHQ780H",
+      "passed": true,
+      "evidence": "OHQ780H"
+    },
+    {
+      "id": "unaffected_OHQ780I",
+      "passed": true,
+      "evidence": "OHQ780I"
+    },
+    {
+      "id": "unaffected_OHQ780J",
+      "passed": true,
+      "evidence": "OHQ780J"
+    },
+    {
+      "id": "unaffected_OHQ780K",
+      "passed": true,
+      "evidence": "OHQ780K"
+    },
+    {
+      "id": "unaffected_OHQ610",
+      "passed": true,
+      "evidence": "OHQ610"
+    },
+    {
+      "id": "unaffected_OHQ612",
+      "passed": true,
+      "evidence": "OHQ612"
+    },
+    {
+      "id": "unaffected_OHQ614",
+      "passed": true,
+      "evidence": "OHQ614"
+    },
+    {
+      "id": "unaffected_OHQ620",
+      "passed": true,
+      "evidence": "OHQ620"
+    },
+    {
+      "id": "unaffected_OHQ640",
+      "passed": true,
+      "evidence": "OHQ640"
+    },
+    {
+      "id": "unaffected_OHQ680",
+      "passed": true,
+      "evidence": "OHQ680"
+    },
+    {
+      "id": "unaffected_OHQ880",
+      "passed": true,
+      "evidence": "OHQ880"
+    },
+    {
+      "id": "unaffected_OHQ885",
+      "passed": true,
+      "evidence": "OHQ885"
+    },
+    {
+      "id": "unaffected_OHQ895",
+      "passed": true,
+      "evidence": "OHQ895"
+    },
+    {
+      "id": "unaffected_OHQ900",
+      "passed": true,
+      "evidence": "OHQ900"
+    },
+    {
+      "id": "unaffected_SMQ621",
+      "passed": true,
+      "evidence": "SMQ621"
+    },
+    {
+      "id": "unaffected_OHQ555G",
+      "passed": true,
+      "evidence": "OHQ555G"
+    },
+    {
+      "id": "unaffected_OHQ555Q",
+      "passed": true,
+      "evidence": "OHQ555Q"
+    },
+    {
+      "id": "unaffected_OHQ555U",
+      "passed": true,
+      "evidence": "OHQ555U"
+    },
+    {
+      "id": "unaffected_OHQ560G",
+      "passed": true,
+      "evidence": "OHQ560G"
+    },
+    {
+      "id": "unaffected_OHQ560Q",
+      "passed": true,
+      "evidence": "OHQ560Q"
+    },
+    {
+      "id": "unaffected_OHQ560U",
+      "passed": true,
+      "evidence": "OHQ560U"
+    },
+    {
+      "id": "unaffected_OHQ565",
+      "passed": true,
+      "evidence": "OHQ565"
+    },
+    {
+      "id": "unaffected_OHQ570Q",
+      "passed": true,
+      "evidence": "OHQ570Q"
+    },
+    {
+      "id": "unaffected_OHQ570U",
+      "passed": true,
+      "evidence": "OHQ570U"
+    },
+    {
+      "id": "unaffected_OHQ575G",
+      "passed": true,
+      "evidence": "OHQ575G"
+    },
+    {
+      "id": "unaffected_OHQ575Q",
+      "passed": true,
+      "evidence": "OHQ575Q"
+    },
+    {
+      "id": "unaffected_OHQ575U",
+      "passed": true,
+      "evidence": "OHQ575U"
+    },
+    {
+      "id": "unaffected_OHQ580",
+      "passed": true,
+      "evidence": "OHQ580"
+    },
+    {
+      "id": "unaffected_OHQ585Q",
+      "passed": true,
+      "evidence": "OHQ585Q"
+    },
+    {
+      "id": "unaffected_OHQ585U",
+      "passed": true,
+      "evidence": "OHQ585U"
+    },
+    {
+      "id": "unaffected_OHQ590G",
+      "passed": true,
+      "evidence": "OHQ590G"
+    },
+    {
+      "id": "unaffected_OHQ590Q",
+      "passed": true,
+      "evidence": "OHQ590Q"
+    },
+    {
+      "id": "unaffected_OHQ590U",
+      "passed": true,
+      "evidence": "OHQ590U"
+    },
+    {
+      "id": "unaffected_OHQ848G",
+      "passed": true,
+      "evidence": "OHQ848G"
+    },
+    {
+      "id": "unaffected_OHQ848Q",
+      "passed": true,
+      "evidence": "OHQ848Q"
+    },
+    {
+      "id": "unaffected_OHQ849",
+      "passed": true,
+      "evidence": "OHQ849"
+    },
+    {
+      "id": "unaffected_SMQ078",
+      "passed": true,
+      "evidence": "SMQ078"
+    },
+    {
+      "id": "unaffected_SMQ661",
+      "passed": true,
+      "evidence": "SMQ661"
+    },
+    {
+      "id": "unaffected_SMQ665A",
+      "passed": true,
+      "evidence": "SMQ665A"
+    },
+    {
+      "id": "unaffected_SMQ665B",
+      "passed": true,
+      "evidence": "SMQ665B"
+    },
+    {
+      "id": "unaffected_SMQ665C",
+      "passed": true,
+      "evidence": "SMQ665C"
+    },
+    {
+      "id": "unaffected_SMQ665D",
+      "passed": true,
+      "evidence": "SMQ665D"
+    },
+    {
+      "id": "unaffected_SMQ848",
+      "passed": true,
+      "evidence": "SMQ848"
+    },
+    {
+      "id": "unaffected_SMQ852Q",
+      "passed": true,
+      "evidence": "SMQ852Q"
+    },
+    {
+      "id": "unaffected_SMQ852U",
+      "passed": true,
+      "evidence": "SMQ852U"
+    },
+    {
+      "id": "unaffected_OHQ566",
+      "passed": true,
+      "evidence": "OHQ566"
+    },
+    {
+      "id": "unaffected_OHQ571Q",
+      "passed": true,
+      "evidence": "OHQ571Q"
+    },
+    {
+      "id": "unaffected_OHQ571U",
+      "passed": true,
+      "evidence": "OHQ571U"
+    },
+    {
+      "id": "unaffected_OHQ576G",
+      "passed": true,
+      "evidence": "OHQ576G"
+    },
+    {
+      "id": "unaffected_OHQ576Q",
+      "passed": true,
+      "evidence": "OHQ576Q"
+    },
+    {
+      "id": "unaffected_OHQ576U",
+      "passed": true,
+      "evidence": "OHQ576U"
+    },
+    {
+      "id": "unaffected_SMQ925",
+      "passed": true,
+      "evidence": "SMQ925"
+    },
+    {
+      "id": "unaffected_SMQ930",
+      "passed": true,
+      "evidence": "SMQ930"
+    },
+    {
+      "id": "unaffected_SMQ935",
+      "passed": true,
+      "evidence": "SMQ935"
+    },
+    {
+      "id": "unaffected_SMQ080",
+      "passed": true,
+      "evidence": "SMQ080"
+    },
+    {
+      "id": "unaffected_SMQ890",
+      "passed": true,
+      "evidence": "SMQ890"
+    },
+    {
+      "id": "unaffected_SMQ895",
+      "passed": true,
+      "evidence": "SMQ895"
+    },
+    {
+      "id": "unaffected_SMQ900",
+      "passed": true,
+      "evidence": "SMQ900"
+    },
+    {
+      "id": "unaffected_SMQ905",
+      "passed": true,
+      "evidence": "SMQ905"
+    },
+    {
+      "id": "unaffected_SMQ910",
+      "passed": true,
+      "evidence": "SMQ910"
+    },
+    {
+      "id": "unaffected_SMQ915",
+      "passed": true,
+      "evidence": "SMQ915"
+    },
+    {
+      "id": "unaffected_DMDHRAGZ",
+      "passed": true,
+      "evidence": "DMDHRAGZ"
+    },
+    {
+      "id": "unaffected_DMDHREDZ",
+      "passed": true,
+      "evidence": "DMDHREDZ"
+    },
+    {
+      "id": "unaffected_DMDHRMAZ",
+      "passed": true,
+      "evidence": "DMDHRMAZ"
+    },
+    {
+      "id": "unaffected_DMDHSEDZ",
+      "passed": true,
+      "evidence": "DMDHSEDZ"
+    },
+    {
+      "id": "unaffected_age",
+      "passed": true,
+      "evidence": "age"
+    },
+    {
+      "id": "unaffected_periodontal_code",
+      "passed": true,
+      "evidence": "periodontal_code"
+    },
+    {
+      "id": "unaffected_periodontal",
+      "passed": true,
+      "evidence": "periodontal"
+    },
+    {
+      "id": "unaffected_oral_health",
+      "passed": true,
+      "evidence": "oral_health"
+    },
+    {
+      "id": "unaffected_oral_score",
+      "passed": true,
+      "evidence": "oral_score"
+    },
+    {
+      "id": "unaffected_smoking_code",
+      "passed": true,
+      "evidence": "smoking_code"
+    },
+    {
+      "id": "unaffected_smoking",
+      "passed": true,
+      "evidence": "smoking"
+    },
+    {
+      "id": "unaffected_sex",
+      "passed": true,
+      "evidence": "sex"
+    },
+    {
+      "id": "unaffected_race",
+      "passed": true,
+      "evidence": "race"
+    },
+    {
+      "id": "unaffected_education",
+      "passed": true,
+      "evidence": "education"
+    },
+    {
+      "id": "unaffected_education_missing",
+      "passed": true,
+      "evidence": "education_missing"
+    },
+    {
+      "id": "unaffected_mean_sbp",
+      "passed": true,
+      "evidence": "mean_sbp"
+    },
+    {
+      "id": "unaffected_mean_dbp",
+      "passed": true,
+      "evidence": "mean_dbp"
+    },
+    {
+      "id": "unaffected_n_valid_sbp",
+      "passed": true,
+      "evidence": "n_valid_sbp"
+    },
+    {
+      "id": "unaffected_n_valid_dbp",
+      "passed": true,
+      "evidence": "n_valid_dbp"
+    },
+    {
+      "id": "unaffected_n_zero_dbp",
+      "passed": true,
+      "evidence": "n_zero_dbp"
+    },
+    {
+      "id": "unaffected_bp_measured_complete",
+      "passed": true,
+      "evidence": "bp_measured_complete"
+    },
+    {
+      "id": "unaffected_measured_htn",
+      "passed": true,
+      "evidence": "measured_htn"
+    },
+    {
+      "id": "unaffected_diagnosis_htn",
+      "passed": true,
+      "evidence": "diagnosis_htn"
+    },
+    {
+      "id": "unaffected_medication_htn",
+      "passed": true,
+      "evidence": "medication_htn"
+    },
+    {
+      "id": "unaffected_medication_structural_no",
+      "passed": true,
+      "evidence": "medication_structural_no"
+    },
+    {
+      "id": "unaffected_medication_conflict",
+      "passed": true,
+      "evidence": "medication_conflict"
+    },
+    {
+      "id": "unaffected_hypertension_code",
+      "passed": true,
+      "evidence": "hypertension_code"
+    },
+    {
+      "id": "unaffected_hypertension",
+      "passed": true,
+      "evidence": "hypertension"
+    },
+    {
+      "id": "unaffected_diagnosed_or_treated_htn",
+      "passed": true,
+      "evidence": "diagnosed_or_treated_htn"
+    },
+    {
+      "id": "unaffected_mec_weight",
+      "passed": true,
+      "evidence": "mec_weight"
+    },
+    {
+      "id": "unaffected_mec_design_eligible",
+      "passed": true,
+      "evidence": "mec_design_eligible"
+    },
+    {
+      "id": "unaffected_domain_age30",
+      "passed": true,
+      "evidence": "domain_age30"
+    },
+    {
+      "id": "unaffected_domain_bp",
+      "passed": true,
+      "evidence": "domain_bp"
+    },
+    {
+      "id": "unaffected_domain_periodontal",
+      "passed": true,
+      "evidence": "domain_periodontal"
+    },
+    {
+      "id": "unaffected_domain_oral",
+      "passed": true,
+      "evidence": "domain_oral"
+    },
+    {
+      "id": "unaffected_domain_smoking",
+      "passed": true,
+      "evidence": "domain_smoking"
+    },
+    {
+      "id": "unaffected_domain_htn",
+      "passed": true,
+      "evidence": "domain_htn"
+    },
+    {
+      "id": "unaffected_analysis_domain",
+      "passed": true,
+      "evidence": "analysis_domain"
+    },
+    {
+      "id": "unaffected_age_group",
+      "passed": true,
+      "evidence": "age_group"
+    },
+    {
+      "id": "unaffected_BMXBMI",
+      "passed": true,
+      "evidence": "BMXBMI"
+    },
+    {
+      "id": "unaffected_SLD010H",
+      "passed": true,
+      "evidence": "SLD010H"
+    },
+    {
+      "id": "unaffected_SLD012",
+      "passed": true,
+      "evidence": "SLD012"
+    },
+    {
+      "id": "unaffected_ALQ101",
+      "passed": true,
+      "evidence": "ALQ101"
+    },
+    {
+      "id": "unaffected_ALQ110",
+      "passed": true,
+      "evidence": "ALQ110"
+    },
+    {
+      "id": "unaffected_ALQ120Q",
+      "passed": true,
+      "evidence": "ALQ120Q"
+    },
+    {
+      "id": "unaffected_ALQ120U",
+      "passed": true,
+      "evidence": "ALQ120U"
+    },
+    {
+      "id": "unaffected_ALQ111",
+      "passed": true,
+      "evidence": "ALQ111"
+    },
+    {
+      "id": "unaffected_ALQ121",
+      "passed": true,
+      "evidence": "ALQ121"
+    },
+    {
+      "id": "unaffected_ALQ130",
+      "passed": true,
+      "evidence": "ALQ130"
+    },
+    {
+      "id": "unaffected_PAQ605",
+      "passed": true,
+      "evidence": "PAQ605"
+    },
+    {
+      "id": "unaffected_PAQ620",
+      "passed": true,
+      "evidence": "PAQ620"
+    },
+    {
+      "id": "unaffected_PAQ635",
+      "passed": true,
+      "evidence": "PAQ635"
+    },
+    {
+      "id": "unaffected_PAQ650",
+      "passed": true,
+      "evidence": "PAQ650"
+    },
+    {
+      "id": "unaffected_PAQ665",
+      "passed": true,
+      "evidence": "PAQ665"
+    },
+    {
+      "id": "unaffected_MCQ160B",
+      "passed": true,
+      "evidence": "MCQ160B"
+    },
+    {
+      "id": "unaffected_MCQ160C",
+      "passed": true,
+      "evidence": "MCQ160C"
+    },
+    {
+      "id": "unaffected_MCQ160D",
+      "passed": true,
+      "evidence": "MCQ160D"
+    },
+    {
+      "id": "unaffected_MCQ160E",
+      "passed": true,
+      "evidence": "MCQ160E"
+    },
+    {
+      "id": "unaffected_MCQ160F",
+      "passed": true,
+      "evidence": "MCQ160F"
+    },
+    {
+      "id": "unaffected_DIQ010",
+      "passed": true,
+      "evidence": "DIQ010"
+    },
+    {
+      "id": "unaffected_WTDRD1",
+      "passed": true,
+      "evidence": "WTDRD1"
+    },
+    {
+      "id": "unaffected_DR1DRSTZ",
+      "passed": true,
+      "evidence": "DR1DRSTZ"
+    },
+    {
+      "id": "unaffected_DR1TSODI",
+      "passed": true,
+      "evidence": "DR1TSODI"
+    },
+    {
+      "id": "unaffected_DR1TTFAT",
+      "passed": true,
+      "evidence": "DR1TTFAT"
+    },
+    {
+      "id": "unaffected_LBXTC",
+      "passed": true,
+      "evidence": "LBXTC"
+    },
+    {
+      "id": "unaffected_LBDHDD",
+      "passed": true,
+      "evidence": "LBDHDD"
+    },
+    {
+      "id": "unaffected_LBXGH",
+      "passed": true,
+      "evidence": "LBXGH"
+    },
+    {
+      "id": "unaffected_LBXSCR",
+      "passed": true,
+      "evidence": "LBXSCR"
+    },
+    {
+      "id": "unaffected_LBXSTR",
+      "passed": true,
+      "evidence": "LBXSTR"
+    },
+    {
+      "id": "unaffected_bmi",
+      "passed": true,
+      "evidence": "bmi"
+    },
+    {
+      "id": "unaffected_bmi_category",
+      "passed": true,
+      "evidence": "bmi_category"
+    },
+    {
+      "id": "unaffected_sleep_hours",
+      "passed": true,
+      "evidence": "sleep_hours"
+    },
+    {
+      "id": "unaffected_sleep_category",
+      "passed": true,
+      "evidence": "sleep_category"
+    },
+    {
+      "id": "unaffected_alcohol_weekly_drinks",
+      "passed": true,
+      "evidence": "alcohol_weekly_drinks"
+    },
+    {
+      "id": "unaffected_alcohol_weekly_frequency",
+      "passed": true,
+      "evidence": "alcohol_weekly_frequency"
+    },
+    {
+      "id": "unaffected_alcohol_category",
+      "passed": true,
+      "evidence": "alcohol_category"
+    },
+    {
+      "id": "unaffected_alcohol_lifetime_lt12_proxy",
+      "passed": true,
+      "evidence": "alcohol_lifetime_lt12_proxy"
+    },
+    {
+      "id": "unaffected_activity_category",
+      "passed": true,
+      "evidence": "activity_category"
+    },
+    {
+      "id": "unaffected_cvd_category",
+      "passed": true,
+      "evidence": "cvd_category"
+    },
+    {
+      "id": "unaffected_diabetes_category",
+      "passed": true,
+      "evidence": "diabetes_category"
+    },
+    {
+      "id": "unaffected_sodium",
+      "passed": true,
+      "evidence": "sodium"
+    },
+    {
+      "id": "unaffected_sodium_filled",
+      "passed": true,
+      "evidence": "sodium_filled"
+    },
+    {
+      "id": "unaffected_sodium_missing",
+      "passed": true,
+      "evidence": "sodium_missing"
+    },
+    {
+      "id": "unaffected_fat",
+      "passed": true,
+      "evidence": "fat"
+    },
+    {
+      "id": "unaffected_fat_filled",
+      "passed": true,
+      "evidence": "fat_filled"
+    },
+    {
+      "id": "unaffected_fat_missing",
+      "passed": true,
+      "evidence": "fat_missing"
+    },
+    {
+      "id": "unaffected_total_cholesterol",
+      "passed": true,
+      "evidence": "total_cholesterol"
+    },
+    {
+      "id": "unaffected_total_cholesterol_filled",
+      "passed": true,
+      "evidence": "total_cholesterol_filled"
+    },
+    {
+      "id": "unaffected_total_cholesterol_missing",
+      "passed": true,
+      "evidence": "total_cholesterol_missing"
+    },
+    {
+      "id": "unaffected_hba1c",
+      "passed": true,
+      "evidence": "hba1c"
+    },
+    {
+      "id": "unaffected_hba1c_filled",
+      "passed": true,
+      "evidence": "hba1c_filled"
+    },
+    {
+      "id": "unaffected_hba1c_missing",
+      "passed": true,
+      "evidence": "hba1c_missing"
+    },
+    {
+      "id": "unaffected_hdl",
+      "passed": true,
+      "evidence": "hdl"
+    },
+    {
+      "id": "unaffected_hdl_filled",
+      "passed": true,
+      "evidence": "hdl_filled"
+    },
+    {
+      "id": "unaffected_hdl_missing",
+      "passed": true,
+      "evidence": "hdl_missing"
+    },
+    {
+      "id": "unaffected_diet_weight",
+      "passed": true,
+      "evidence": "diet_weight"
+    },
+    {
+      "id": "unaffected_diet_design_eligible",
+      "passed": true,
+      "evidence": "diet_design_eligible"
+    },
+    {
+      "id": "unaffected_dietary_sensitivity_domain",
+      "passed": true,
+      "evidence": "dietary_sensitivity_domain"
+    },
+    {
+      "id": "creatinine_equation",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "creatinine_preJ_unchanged",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "creatinine_assay_raw_preserved",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "creatinine_before_harmonization_preserved",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "creatinine_J_flag",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "creatinine_new_median_fill",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "creatinine_missing_flag_preserved",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "creatinine_positive_observed",
+      "passed": true,
+      "evidence": 0.14000000000000001
+    },
+    {
+      "id": "triglycerides_biopro_equation",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "triglycerides_biopro_preJ_unchanged",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "triglycerides_biopro_assay_raw_preserved",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "triglycerides_biopro_before_harmonization_preserved",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "triglycerides_biopro_J_flag",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "triglycerides_biopro_new_median_fill",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "triglycerides_biopro_missing_flag_preserved",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "triglycerides_biopro_positive_observed",
+      "passed": true,
+      "evidence": 9
+    },
+    {
+      "id": "imputation_summary_creatinine",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "imputation_summary_triglycerides_biopro",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "all160_immutable_source_hashes",
+      "passed": true,
+      "evidence": {
+        "n": 160,
+        "failed": []
+      }
+    },
+    {
+      "id": "sources_manifest_identical_E1",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "frozen_core_snapshot",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "frozen_E1_extension_snapshot",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "copied_plan_hash",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "new_version_bound_to_E1_plan_equations",
+      "passed": true,
+      "evidence": "nhanes-2009-2018-harmonizedJ-d8f04b7c96c89c31956a"
+    },
+    {
+      "id": "all_copied_unaffected_hash_and_provenance",
+      "passed": true,
+      "evidence": {
+        "n": 135
+      }
+    },
+    {
+      "id": "no_copied_Model3_or_interactions",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "all_model_keys_all_model_coefficients.csv",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "M1_M2_values_reused_all_model_coefficients.csv",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "every_row_current_provenance_all_model_coefficients.csv",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "all_model_keys_model_sample_counts_formulas.csv",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "M1_M2_values_reused_model_sample_counts_formulas.csv",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "every_row_current_provenance_model_sample_counts_formulas.csv",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "all_model_denominators_formulas_unchanged",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "all_model_keys_oral_trend_tests.csv",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "M1_M2_values_reused_oral_trend_tests.csv",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "every_row_current_provenance_oral_trend_tests.csv",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "every_lean_model_data_version",
+      "passed": true,
+      "evidence": {
+        "n": 96,
+        "failed": []
+      }
+    },
+    {
+      "id": "all_interactions_new_version_interaction_joint_wald.csv",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "all_interactions_new_version_interaction_coefficients.csv",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "A_Table1_unchanged_rows",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "B_Table1_unchanged_rows",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "all_changed_Table1_n_raw_and_weighted_means",
+      "passed": true,
+      "evidence": [
+        {
+          "candidate": "A",
+          "variable": "creatinine",
+          "hypertension_group": "All",
+          "observed_n": 20220,
+          "raw_mean": 0.91383504451038577,
+          "weighted_mean": 0.89163752527414031,
+          "n_matches": true,
+          "raw_mean_matches": true,
+          "weighted_mean_matches": true
+        },
+        {
+          "candidate": "A",
+          "variable": "creatinine",
+          "hypertension_group": "No",
+          "observed_n": 10203,
+          "raw_mean": 0.837979640301872,
+          "weighted_mean": 0.84510496337341712,
+          "n_matches": true,
+          "raw_mean_matches": true,
+          "weighted_mean_matches": true
+        },
+        {
+          "candidate": "A",
+          "variable": "creatinine",
+          "hypertension_group": "Yes",
+          "observed_n": 10017,
+          "raw_mean": 0.99109896475990811,
+          "weighted_mean": 0.94914996524457207,
+          "n_matches": true,
+          "raw_mean_matches": true,
+          "weighted_mean_matches": true
+        },
+        {
+          "candidate": "A",
+          "variable": "triglycerides_biopro",
+          "hypertension_group": "All",
+          "observed_n": 20206,
+          "raw_mean": 156.03005248441056,
+          "weighted_mean": 155.67804250840692,
+          "n_matches": true,
+          "raw_mean_matches": true,
+          "weighted_mean_matches": true
+        },
+        {
+          "candidate": "A",
+          "variable": "triglycerides_biopro",
+          "hypertension_group": "No",
+          "observed_n": 10197,
+          "raw_mean": 147.81479292929293,
+          "weighted_mean": 144.39126843007728,
+          "n_matches": true,
+          "raw_mean_matches": true,
+          "weighted_mean_matches": true
+        },
+        {
+          "candidate": "A",
+          "variable": "triglycerides_biopro",
+          "hypertension_group": "Yes",
+          "observed_n": 10009,
+          "raw_mean": 164.39962004196224,
+          "weighted_mean": 169.6318120793986,
+          "n_matches": true,
+          "raw_mean_matches": true,
+          "weighted_mean_matches": true
+        },
+        {
+          "candidate": "B",
+          "variable": "creatinine",
+          "hypertension_group": "All",
+          "observed_n": 18934,
+          "raw_mean": 0.91284001267560999,
+          "weighted_mean": 0.89195057054337323,
+          "n_matches": true,
+          "raw_mean_matches": true,
+          "weighted_mean_matches": true
+        },
+        {
+          "candidate": "B",
+          "variable": "creatinine",
+          "hypertension_group": "No",
+          "observed_n": 9557,
+          "raw_mean": 0.84058684942973738,
+          "weighted_mean": 0.84665437538291721,
+          "n_matches": true,
+          "raw_mean_matches": true,
+          "weighted_mean_matches": true
+        },
+        {
+          "candidate": "B",
+          "variable": "creatinine",
+          "hypertension_group": "Yes",
+          "observed_n": 9377,
+          "raw_mean": 0.98648014076996904,
+          "weighted_mean": 0.94752109850172972,
+          "n_matches": true,
+          "raw_mean_matches": true,
+          "weighted_mean_matches": true
+        },
+        {
+          "candidate": "B",
+          "variable": "triglycerides_biopro",
+          "hypertension_group": "All",
+          "observed_n": 18920,
+          "raw_mean": 156.22042492071881,
+          "weighted_mean": 157.83272892124594,
+          "n_matches": true,
+          "raw_mean_matches": true,
+          "weighted_mean_matches": true
+        },
+        {
+          "candidate": "B",
+          "variable": "triglycerides_biopro",
+          "hypertension_group": "No",
+          "observed_n": 9551,
+          "raw_mean": 148.17274322060518,
+          "weighted_mean": 146.82327627778884,
+          "n_matches": true,
+          "raw_mean_matches": true,
+          "weighted_mean_matches": true
+        },
+        {
+          "candidate": "B",
+          "variable": "triglycerides_biopro",
+          "hypertension_group": "Yes",
+          "observed_n": 9369,
+          "raw_mean": 164.4244390009606,
+          "weighted_mean": 171.34414952468288,
+          "n_matches": true,
+          "raw_mean_matches": true,
+          "weighted_mean_matches": true
+        }
+      ]
+    },
+    {
+      "id": "Table1_every_row_provenance",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "Table1_original_source_hash_tables/A_table1_continuous.csv",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "Table1_original_source_hash_tables/A_table1_continuous_tests.csv",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "Table1_original_source_hash_tables/B_table1_continuous.csv",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "Table1_original_source_hash_tables/B_table1_continuous_tests.csv",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "artifact_hash_derived/master.rds",
+      "passed": true,
+      "evidence": "ed831aa35c25da5b032d5a1dc846268326a1ba6cede793a295b67ffa99fe4b60"
+    },
+    {
+      "id": "artifact_hash_report.json",
+      "passed": true,
+      "evidence": "1d0ac88a02fd05bd0d1d72b8c877e1fe72bb8f9d8750ea102fc28b2fd6aa4cc2"
+    },
+    {
+      "id": "artifact_hash_definitions.json",
+      "passed": true,
+      "evidence": "845a189bb8a2f9ca79e489329edef36eed4eb867090fda98f80c7b0241d97400"
+    },
+    {
+      "id": "artifact_hash_executed_script.R",
+      "passed": true,
+      "evidence": "38ac14542f2147f096d0035b3397964b66a255868811d6215d2eef08f2a09ab3"
+    },
+    {
+      "id": "artifact_hash_core_script_snapshot.R",
+      "passed": true,
+      "evidence": "f14840f51eabaa442b5273d11fce825e59fdfde61b79f0e20a99fd21079083f3"
+    },
+    {
+      "id": "artifact_hash_extended_script_snapshot.R",
+      "passed": true,
+      "evidence": "fdb959e433e61ed6363d64c5aef46a213f45b068368e780a35a50938b0812d3d"
+    },
+    {
+      "id": "artifact_hash_sources_manifest.csv",
+      "passed": true,
+      "evidence": "31e782d0993afa3f79ed68102382f8ce26d7f746855e13601bc696721e49dac4"
+    },
+    {
+      "id": "artifact_hash_upstream_input.json",
+      "passed": true,
+      "evidence": "1c532d30e81cdeff06ec1e76b174cd84ce3f385db8315f50f90845ccca331253"
+    },
+    {
+      "id": "artifact_hash_artifact_dependencies.csv",
+      "passed": true,
+      "evidence": "b5536a50547d51eb51d96cbb8d0b304c1405e875996de195e4eba132074986e5"
+    },
+    {
+      "id": "artifact_hash_plan-v1.5.json",
+      "passed": true,
+      "evidence": "aaeae78f63d4aff3d094858659c1f0c45230467d9b66f637df421426ddc083b5"
+    },
+    {
+      "id": "artifact_hash_tables/model_row_provenance.csv",
+      "passed": true,
+      "evidence": "4f0e29396a4acf25f7c04887e6c8ce6920fe02f9f5f771c67118ad67f06ca633"
+    },
+    {
+      "id": "artifact_hash_tables/table1_row_provenance.csv",
+      "passed": true,
+      "evidence": "5dc5f31810324546129655965465a106832e2dace4620cda09ef00e33fe4651a"
+    },
+    {
+      "id": "repair_current_matches_execution_snapshot",
+      "passed": true,
+      "evidence": null
+    }
+  ],
+  "independent_imputation": [
+    {
+      "variable": "creatinine",
+      "raw_variable": "LBXSCR",
+      "median_value": 0.84999999999999998,
+      "observed_primary_n": 20220,
+      "missing_primary_n": 1238,
+      "E1_median": 0.85999999999999999
+    },
+    {
+      "variable": "triglycerides_biopro",
+      "raw_variable": "LBXSTR",
+      "median_value": 122.35700000000001,
+      "observed_primary_n": 20206,
+      "missing_primary_n": 1252,
+      "E1_median": 125
+    }
+  ],
+  "independent_harmonization": [
+    {
+      "variable": "creatinine",
+      "cycle": "2009-2010",
+      "all_n": 10537,
+      "observed_n": 6860,
+      "changed_n": 0,
+      "primary_changed_n": 0,
+      "mean_before": 0.87714139941690961,
+      "mean_after": 0.87714139941690961,
+      "median_before": 0.81999999999999995,
+      "median_after": 0.81999999999999995,
+      "min_after": 0.14000000000000001,
+      "max_after": 15.66
+    },
+    {
+      "variable": "creatinine",
+      "cycle": "2011-2012",
+      "all_n": 9756,
+      "observed_n": 5976,
+      "changed_n": 0,
+      "primary_changed_n": 0,
+      "mean_before": 0.87611111111111106,
+      "mean_after": 0.87611111111111106,
+      "median_before": 0.81999999999999995,
+      "median_after": 0.81999999999999995,
+      "min_after": 0.16,
+      "max_after": 9.5099999999999998
+    },
+    {
+      "variable": "creatinine",
+      "cycle": "2013-2014",
+      "all_n": 10175,
+      "observed_n": 6553,
+      "changed_n": 0,
+      "primary_changed_n": 0,
+      "mean_before": 0.88017244010376927,
+      "mean_after": 0.88017244010376927,
+      "median_before": 0.81999999999999995,
+      "median_after": 0.81999999999999995,
+      "min_after": 0.28999999999999998,
+      "max_after": 17.41
+    },
+    {
+      "variable": "creatinine",
+      "cycle": "2015-2016",
+      "all_n": 9971,
+      "observed_n": 6255,
+      "changed_n": 0,
+      "primary_changed_n": 0,
+      "mean_before": 0.84810071942446041,
+      "mean_after": 0.84810071942446041,
+      "median_before": 0.80000000000000004,
+      "median_after": 0.80000000000000004,
+      "min_after": 0.29999999999999999,
+      "max_after": 10.710000000000001
+    },
+    {
+      "variable": "creatinine",
+      "cycle": "2017-2018",
+      "all_n": 9254,
+      "observed_n": 5903,
+      "changed_n": 5903,
+      "primary_changed_n": 3941,
+      "mean_before": 0.87523123835337968,
+      "mean_after": 0.85041803150940198,
+      "median_before": 0.81999999999999995,
+      "median_after": 0.79236999999999991,
+      "min_after": 0.19329999999999997,
+      "max_after": 13.32029
+    },
+    {
+      "variable": "triglycerides_biopro",
+      "cycle": "2009-2010",
+      "all_n": 10537,
+      "observed_n": 6856,
+      "changed_n": 0,
+      "primary_changed_n": 0,
+      "mean_before": 142.68771878646442,
+      "mean_after": 142.68771878646442,
+      "median_before": 113,
+      "median_after": 113,
+      "min_after": 9,
+      "max_after": 2693
+    },
+    {
+      "variable": "triglycerides_biopro",
+      "cycle": "2011-2012",
+      "all_n": 9756,
+      "observed_n": 5969,
+      "changed_n": 0,
+      "primary_changed_n": 0,
+      "mean_before": 139.68738482157815,
+      "mean_after": 139.68738482157815,
+      "median_before": 107,
+      "median_after": 107,
+      "min_after": 12,
+      "max_after": 3187
+    },
+    {
+      "variable": "triglycerides_biopro",
+      "cycle": "2013-2014",
+      "all_n": 10175,
+      "observed_n": 6549,
+      "changed_n": 0,
+      "primary_changed_n": 0,
+      "mean_before": 143.08428767750803,
+      "mean_after": 143.08428767750803,
+      "median_before": 111,
+      "median_after": 111,
+      "min_after": 19,
+      "max_after": 6057
+    },
+    {
+      "variable": "triglycerides_biopro",
+      "cycle": "2015-2016",
+      "all_n": 9971,
+      "observed_n": 6254,
+      "changed_n": 0,
+      "primary_changed_n": 0,
+      "mean_before": 147.04157339302847,
+      "mean_after": 147.04157339302847,
+      "median_before": 113,
+      "median_after": 113,
+      "min_after": 13,
+      "max_after": 3061
+    },
+    {
+      "variable": "triglycerides_biopro",
+      "cycle": "2017-2018",
+      "all_n": 9254,
+      "observed_n": 5901,
+      "changed_n": 5901,
+      "primary_changed_n": 3940,
+      "mean_before": 137.43755295712592,
+      "mean_after": 125.67595738010507,
+      "median_before": 111,
+      "median_after": 100.15050000000001,
+      "min_after": 17.1175,
+      "max_after": 2815.1365000000001
+    }
+  ],
+  "limitations": ["주기 간 BIOPRO 척도 조화는 권고된 부분 보정이며, 비공복 LBXSTR가 참조법 공복 LBXTR가 되는 것은 아님.", "저자의 실제 당뇨·음주·흡연·결측·보충표 구현 및 원문 숫자의 정확한 재현은 여전히 미확인.", "E1에서 복사한 범주형 검정의 희소 셀 경고가 해결된 것은 아님. E2 warnings_n은 이번 repair에서 발생한 경고 수.", "채움 중앙값/결측 지시자는 명시된 분석자 가정이며 선택·교란·측정 편향을 모두 제거하지 않음."]
+}

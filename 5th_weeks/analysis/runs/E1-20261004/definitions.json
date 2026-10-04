@@ -1,0 +1,35 @@
+{
+  "task": "R-EXT-002",
+  "revision": "1.4",
+  "status": "candidate reconstruction",
+  "core": "Definitions are frozen from accepted rev1.1 successful input run.",
+  "candidates": {
+    "A": "WTMEC2YR/5; Table1/2/3 and supplements on approved domains",
+    "B": "Dietary-weight sensitivity for Table1/2 only: WTDRD1/5 full dietary design, then core domain AND DR1DRSTZ==1 AND observed sodium/fat."
+  },
+  "interpretation_B": "Dietary-weight sensitivity does not resolve every selection, confounding, or measurement bias.",
+  "triglycerides": "BIOPRO LBXSTR biochemical-profile triglyceride candidate without fasting restriction. This differs from CDC-recommended reference LBXTR fasting triglycerides; not a claim of lab equivalence.",
+  "bmi": "BMXBMI categories <18.5 / 18.5 to <25 / 25 to <30 / >=30; Missing indicator level",
+  "sleep": "F-H SLD010H; I-J SLD012 continuous 0-24 valid range incl half hours; <7 / 7-9 / >9; Missing",
+  "alcohol": {
+    "early": "F-I: ALQ120Q frequency * ALQ130 amount; ALQ120U 1 week,2 month,3 year. Weekly denominator 365/7; monthly frequency *12/(365/7); yearly /(365/7).",
+    "late": "J: ALQ121 1:10 mapped to annual frequency 365,260,182,104,52,30,12,9,4.5,1.5; divide by 365/7 and multiply ALQ130.",
+    "zeros": "Reported frequency0 is No drinks regardless of missing unit/amount; J ALQ111==2 is No drinks.",
+    "proxy": "F-I ALQ101==2 AND ALQ110==2 treated as No drinks: incomplete <12 lifetime drinks proxy, analyst assumption.",
+    "amount": "ALQ130 F-H 1:95; I-J 1:15 (upper category 15 or more); refused/unknown Missing.",
+    "ambiguity": "Category midpoint choices, nearly-every-day 260, and lifetime proxy are analyst assumptions; paper mapping unavailable."
+  },
+  "activity": "Any PAQ605/620/635/650/665==1 Active; all==2 Inactive; otherwise Missing",
+  "cvd": "Any MCQ160B/C/D/E/F==1 Yes; all==2 No; otherwise Missing",
+  "diabetes": "DIQ010 1 Yes,2 No; borderline3/refused7/unknown9 Missing",
+  "continuous": "Sodium DR1TSODI mg, fat DR1TTFAT g, TC LBXTC mg/dL, creatinine LBXSCR mg/dL, TG LBXSTR mg/dL, HbA1c LBXGH %, HDL LBDHDD mg/dL",
+  "missing": "Categorical Missing indicator levels. Continuous missing: primary-domain median plus indicator; explicit analyst assumption.",
+  "table2": "M1 age/sex/race/education; M2 adds BMI/sleep/alcohol/activity/CVD/diabetes/sodium/fat (no smoking); M3 adds five laboratory variables. The interaction model includes smoking main effects explicitly.",
+  "table3": "A only; strata age30-44 and45+ (no additional overall column). M1 sex/race/education, no age; M2 adds BMI/sleep/alcohol/activity/smoking, no CVD/diabetes/diet; M3 adds five laboratory variables.",
+  "supplements": "A MEC weights only. SupI domain core AND diagnosed_or_treated==0, outcome measured_htn. SupII domain core AND (diagnosed_or_treated==1 OR core hypertension==0), outcome diagnosed_or_treated. Both retain the same primary nonhypertensive controls. Domain rules inferred from supplement counts are candidate reconstruction rules, not proved author implementation. Overall only, without supplemental smoking strata. M1 age/sex/race/education; M2 adds only BMI/sleep/alcohol/activity; M3 adds five laboratories.",
+  "trend": "Oral categories assigned ordinal scores0,1,2,3; separate adjusted survey Wald t trend model.",
+  "interaction": "Joint survey Wald F on M3 exposure-by-smoking and exposure-by-age-group terms, not product term p alone.",
+  "inference": "Primary t CI/p uses model residual survey df. Normal z CI/p reported separately for comparison, without selecting by article match.",
+  "complete_case": "Optional common Model3 complete-case sensitivity changes the sample; both exposures use exactly the same subset.",
+  "fit_storage": "Lean RDS artifacts contain coefficients, vcov, formula text, family/link, n, rank, degrees of freedom, contrasts/xlevels, convergence and source data version. Full survey fit objects are not serialized. Use raw/derived master, source code and survey design metadata to reconstruct complete fits."
+}

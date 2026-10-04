@@ -1,0 +1,17 @@
+﻿variable,hypertension_group,published_mean,published_SE,calculated_mean,calculated_SE,raw_n,mean_delta,source_unit_note,population_status
+age,No,47.95,0.24,47.8976510310688,0.233482722144641,10769,-0.052348968931205775,same reported scale,different primary sample; descriptive comparison only
+age,Yes,59.04,0.21,59.1175000757836,0.206849618994688,10689,0.07750007578360396,same reported scale,different primary sample; descriptive comparison only
+total_cholesterol,No,197.71,0.67,197.768183054322,0.68312823881534,10230,0.05818305432200077,same reported scale,different primary sample; descriptive comparison only
+total_cholesterol,Yes,195.03,0.8,195.058995134391,0.813343664249943,10055,0.028995134391010424,same reported scale,different primary sample; descriptive comparison only
+triglycerides_biopro,No,146.27,1.85,144.391268430077,1.8917156304243,10197,-1.8787315699230192,same reported scale,different primary sample; descriptive comparison only
+triglycerides_biopro,Yes,172.62,1.9,169.631812079399,1.97750377665694,10009,-2.988187920601007,same reported scale,different primary sample; descriptive comparison only
+creatinine,No,0.85,0.0,0.845104963373417,0.00316186247727244,10203,-0.0048950366265829715,same reported scale,different primary sample; descriptive comparison only
+creatinine,Yes,0.95,0.01,0.949149965244572,0.00612000044808167,10017,-0.0008500347554279974,same reported scale,different primary sample; descriptive comparison only
+hdl,No,55.11,0.31,55.0395062047904,0.307616330447298,10230,-0.07049379520960031,same reported scale,different primary sample; descriptive comparison only
+hdl,Yes,52.64,0.29,52.6913620177787,0.299612701764413,10055,0.05136201777870042,same reported scale,different primary sample; descriptive comparison only
+hba1c,No,5.55,0.01,5.55304785353228,0.0115683827307893,10336,0.003047853532279987,HbA1c LBXGH is percent; article mg/dl label differs,different primary sample; descriptive comparison only
+hba1c,Yes,5.98,0.01,5.98069636978947,0.0145817121360834,10221,0.0006963697894697418,HbA1c LBXGH is percent; article mg/dl label differs,different primary sample; descriptive comparison only
+sodium,No,3575.03,25.86,3578.59884435416,25.9654231251428,10002,3.5688443541598645,same reported scale,different primary sample; descriptive comparison only
+sodium,Yes,3476.48,25.77,3475.58479704389,25.0783864051134,9923,-0.8952029561100971,same reported scale,different primary sample; descriptive comparison only
+fat,No,85.55,0.66,85.6127505438062,0.656798164311318,10002,0.06275054380620304,same reported scale,different primary sample; descriptive comparison only
+fat,Yes,81.87,0.63,81.8455709482649,0.629241842228369,9923,-0.024429051735097573,same reported scale,different primary sample; descriptive comparison only

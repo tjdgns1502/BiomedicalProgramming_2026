@@ -1,0 +1,41 @@
+{
+  "run_id": "E1-20261004",
+  "created_at": "2026-10-04T07:37:00.983636+00:00",
+  "core_data_version": "nhanes-2009-2018-7ad570c1e84a460b267c",
+  "extended_data_version": "nhanes-2009-2018-full-b21b4e903b63d715068c",
+  "source_hashes": {
+    "table_1.tsv": "4668b637d83ec30d47997171c6529e4c3182e9997b42a4f7c625300c1e09e3d3",
+    "table_2.tsv": "f2ff037df7309fdc9acd8628575cb5f60ed83e2925d20dca7d6599a0ef6ee762",
+    "table_3.tsv": "90ea89ee890e9878ff2157120a34e9e5682c5d28adf0639f5ea1506294976d37",
+    "12889_2023_16012_MOESM1_ESM.txt": "90bb2c3f2e5e33add2808007410750a230ccbcf0f1609c8c19bda35020e00361"
+  },
+  "comparisons_sha256": "9ecac78c2c9f76a411cda5edf54a9173ad618e265687a3374026c0ec142bc299",
+  "OR_rows": 84,
+  "review_records": [
+    {
+      "path": "reviews\\E1-data-review.json",
+      "sha256": "51c9554f0369a8773156427e1122f8a7db0ef547a380459558e454e7f95108f2",
+      "decision": "accept",
+      "reviewer": null
+    },
+    {
+      "path": "reviews\\R2-20261004-q-review.json",
+      "sha256": "e2336b63af67a54d9bea3d5a6a8504832ce87150d571d74a3a9bc7d70994eb7a",
+      "decision": "accept",
+      "reviewer": "plan_review"
+    },
+    {
+      "path": "reviews\\R2-data-review.json",
+      "sha256": "74fd2969ca0efe2608580aab2b5936177d39b32b8d49ddb1c258d3ade750d2ea",
+      "decision": "accept",
+      "reviewer": null
+    },
+    {
+      "path": "reviews\\V1-20261004-q-review.json",
+      "sha256": "7f2fc4957e3e1aed302d5f2cc6c5bbcefba1785d2c056dc6528bbc9aa9ed3922",
+      "decision": "accept",
+      "reviewer": "plan_review"
+    }
+  ],
+  "not_blinded": "Published results visible during source review; no numeric tuning performed."
+}

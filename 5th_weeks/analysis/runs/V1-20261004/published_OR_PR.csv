@@ -1,0 +1,2 @@
+"source","n","p_exposed","p_unexposed","crude_OR","OR_low","OR_high","crude_PR","PR_low","PR_high","OR_relative_overstatement_pct","fisher_conditional_MLE_OR","interpretation"
+"published_Table1_unweighted",21800,0.533431300514328,0.498899362194502,1.14835165911988,1.07267390871792,1.22936851757636,1.0692162406621,1.03527399526171,1.10427130839562,7.40125481154048,1.1483428785671,"SRS educational calculation from published counts; not survey inference or adjusted OR"

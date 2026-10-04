@@ -1,0 +1,24 @@
+{
+  "Model1_periodontal": {
+    "formula": "hypertension_code ~ periodontal + age + sex + race + education",
+    "outcome": "hypertension_code",
+    "independent_variable": "periodontal",
+    "n": 21458,
+    "converged": true,
+    "design_df": 78,
+    "residual_df": 68,
+    "rank": 11,
+    "aliased_terms": null
+  },
+  "Model1_oral_health": {
+    "formula": "hypertension_code ~ oral_health + age + sex + race + education",
+    "outcome": "hypertension_code",
+    "independent_variable": "oral_health",
+    "n": 21458,
+    "converged": true,
+    "design_df": 78,
+    "residual_df": 66,
+    "rank": 13,
+    "aliased_terms": null
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task": "R-REPAIR-003",
+  "revision": "1.5",
+  "status": "primary candidate with partial recomputation",
+  "inherited": "All accepted1.4 population, outcome, categorical, weights, Model1/2 and inference definitions retained.",
+  "source": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/BIOPRO_J.htm",
+  "purpose": "CDC-recommended backward assay harmonization when pooling2017-2018 with earlier cycles.",
+  "equations": {
+    "creatinine": "2017-2018 only:1.051*LBXSCR-0.06945 mg/dL",
+    "triglycerides": "2017-2018 only:0.9655*LBXSTR-7.020 mg/dL"
+  },
+  "raw_preservation": "Original LBXSCR/LBXSTR and separate assay_raw/before_harmonization columns are preserved. Cache never changes.",
+  "imputation": "Apply equations before primary-domain median imputation; retain missing indicators. Recompute medians for the two changed labs.",
+  "nonfasting": "BIOPRO LBXSTR biochemical-profile candidate remains distinct from CDC reference fasting LBXTR.",
+  "candidate_A": "Same MEC/5 weights and core domain; harmonization revises A, not a third candidate.",
+  "candidate_B": "Same dietary-weight sensitivity domain/weights; harmonization also revises B. Table1/2 only.",
+  "mandatory_recomputed": ["All Model3 oral/perio/trend fits in A Table2/Table3/SupI/SupII and B Table2", "A smoking/age and B smoking Model3 joint interactions", "Changed laboratory continuous Table1 rows/tests and all Model1-3 forest figures"],
+  "permitted_reuse": "E1 Model1/2, their trends, sample counts/formulas and unaffected descriptive rows; explicit source-run/hash/row provenance.",
+  "stale_policy": "No unharmonized E1 Model3 coefficient/trend/interaction/forest is copied into current primary outputs.",
+  "complete_case": "Optional flag recomputes A-only common Model3 complete-case sensitivity; default false.",
+  "upstream_data_version": "nhanes-2009-2018-full-b21b4e903b63d715068c",
+  "upstream_master_sha256": "4ad1870f3f98a75921e1e3b433d645183b657b322327874698a02ae53ec329be",
+  "plan_file": "plan-v1.5.json",
+  "plan_sha256": "aaeae78f63d4aff3d094858659c1f0c45230467d9b66f637df421426ddc083b5",
+  "exposure_audit": "Published results visible during source review; this repair follows CDC assay documentation, without target matching."
+}

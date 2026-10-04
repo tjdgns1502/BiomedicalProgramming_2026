@@ -1,0 +1,213 @@
+{
+  "version": "1.5",
+  "approved_by": "plan_review",
+  "approval_scope": [
+    "Table1 full candidate",
+    "Table2 overall/smoke strata M1-M3",
+    "Table3 age strata M1-M3",
+    "SupplementI/II candidates",
+    "trend and interaction candidates",
+    "dietary-weight sensitivity"
+  ],
+  "approval_timestamp": "Pending independent plan/code acceptance; inherited timestamp in 1.4 was historical.",
+  "age_min": 30,
+  "cycles": [
+    2009,
+    2011,
+    2013,
+    2015,
+    2017
+  ],
+  "primary_weights": "WTMEC2YR/5",
+  "selection": "valid SBP and DBP, oral/perio/SMQ020 observed; HTN true if positive evidence, unknown if contradictory incomplete negative evidence",
+  "bp_mean": "all measurements1:4; SBP>0,DBP>=0; each >=1 valid",
+  "education": "1/2 lessHS,3HS,4/5moreHS; specialNA missing factor",
+  "missing": "categorical missing category; continuous expanded models separately fixed imputation+indicator assumption",
+  "CI": "survey t design df, also Wald z candidate comparator explicitly",
+  "replication_tolerance": {
+    "integer_counts": 0,
+    "rounded_OR": 0.005,
+    "rounded_CI": 0.005,
+    "weighted_pct_percentage_points": 0.005
+  },
+  "comparison_policy": "Published values visible during source review; independent agents, not blinded; no optimization for publication matching.",
+  "fisher": {
+    "two_sided": "R probability-ordering",
+    "alpha": 0.05,
+    "reject": "p<alpha",
+    "no_information_tables": "non-rejection",
+    "seed": 20261004,
+    "B": 10000,
+    "n_per_group": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "null_p": [
+      0.05,
+      0.2,
+      0.5
+    ],
+    "alternative": [
+      0.2,
+      0.35
+    ]
+  },
+  "paired_demo": [
+    [
+      40,
+      25
+    ],
+    [
+      5,
+      30
+    ]
+  ],
+  "effect_comparison": "crossproduct crudeOR vs prevalenceRatio, adjustedOR conversion prohibited",
+  "downstream_dependencies": {
+    "data": [
+      "Table1",
+      "Table2",
+      "Table3",
+      "SupplementI",
+      "SupplementII",
+      "figures",
+      "all-paper-notes"
+    ],
+    "model_plan": [
+      "models",
+      "forest",
+      "interpretation"
+    ]
+  },
+  "unapproved": null,
+  "candidates": {
+    "A": {
+      "label": "MEC biochemical-profile reproduction candidate",
+      "weight": "WTMEC2YR/5",
+      "population": "reviewed core primary sample",
+      "TG": "LBXSTR, nonfasting biochemical profile; CDC reference LBXTR distinction",
+      "diet": "day1 DR1TSODI,DR1TTFAT; WTMEC is a replication candidate and inappropriate for dietary nonresponse inference",
+      "continuous_missing": "primary sample unweighted median imputation + missing indicator (author choice unknown)"
+    },
+    "B": {
+      "label": "dietary-weight sensitivity",
+      "weight": "WTDRD1/5",
+      "population": "all positive WTDRD1 design then core primary + DR1DRSTZ==1 + observed sodium and fat domain",
+      "TG": "same LBXSTR candidate",
+      "interpretation": "sample and weight changes; does not solve missing-indicator bias"
+    }
+  },
+  "extended_covariates": {
+    "bmi": "BMXBMI cuts 18.5/25/30",
+    "sleep": "F-H SLD010H; I-J SLD012; continuous 0 <= hours <= 24 incl fractional values. Current data have no zero values. <7, 7-9, >9 and Missing.",
+    "alcohol": "F-I ALQ120Q/U frequency*ALQ130; annual365/7 weeks. currentfrequency0 priority; ALQ101==2 ANDALQ110==2 no-drink proxy (<12drinks/lifetime). J1210or1112 no; J1211:10 yearlyfreq[365,260,182,104,52,30,12,9,4.5,1.5] midpoint assumptions; unknown special values missing",
+    "physical_activity": "any605/620/635/650/665 yes; allno inactive elsemissing",
+    "CVD": "any MCQ160B/C/D/E/F yes; allno no elsemissing",
+    "diabetes": "DIQ010 1Yes2No3borderline analyticallyMissing; original borderline separately audited",
+    "labs": [
+      "LBXTC",
+      "LBXSCR",
+      "LBXSTR",
+      "LBXGH",
+      "LBDHDD"
+    ]
+  },
+  "table3": {
+    "M1": [
+      "sex",
+      "race",
+      "education"
+    ],
+    "M2": [
+      "BMI",
+      "sleep",
+      "alcohol",
+      "physical_activity",
+      "smoking"
+    ],
+    "M3": [
+      "TC",
+      "creatinine",
+      "TG",
+      "HbA1c",
+      "HDL"
+    ],
+    "age_groups": [
+      "30-44",
+      "45+"
+    ],
+    "weight": "WTMEC2YR/5",
+    "limitation": "age not adjusted continuously per author footnote; within-group residual age confounding possible"
+  },
+  "supplemental": {
+    "I": {
+      "population": "primary and diagnosed_or_treated_htn==0",
+      "outcome": "measured_htn",
+      "estimand": "undiagnosed measured hypertension vs normotensive",
+      "reported_case_n": 1628,
+      "reported_total_n": 12411
+    },
+    "II": {
+      "population": "primary and (diagnosed_or_treated_htn==1 OR hypertension_code==0)",
+      "outcome": "diagnosed_or_treated_htn",
+      "estimand": "diagnosed/treated hypertension vs normotensive",
+      "reported_case_n": 9389,
+      "reported_total_n": 20172
+    },
+    "selection_evidence_type": "analyst_inference supported by supplemental counts; explicit author implementation unreported",
+    "M1": [
+      "age",
+      "sex",
+      "race",
+      "education"
+    ],
+    "M2": [
+      "BMI",
+      "sleep",
+      "alcohol",
+      "physical_activity"
+    ],
+    "M3": [
+      "TC",
+      "creatinine",
+      "TG",
+      "HbA1c",
+      "HDL"
+    ],
+    "weights": "WTMEC2YR/5, no dietary candidate B because no diet covariates",
+    "source": "official EuropePMC PMC10262359 supplementary PDF; MD5 matches fullTextXML",
+    "comparison_exposure": "published counts used to infer supplemental populations before execution; not blind or tuning of calculated values"
+  },
+  "interactions": "joint survey Wald exposure*smoke or exposure*age-group + both main effects; covariance fixed for relevant table; ordinal trend score0:3 is analyst candidate",
+  "revision": "1.5",
+  "parent_plan_sha256": "c1b301dd460bee5bf1868ce03bc46a776db906a2354b435e2926ddd936884495",
+  "amendment": {
+    "reason": "Independent review found CDC-recommended BIOPRO_J measurement harmonization for pooled cycles. This change follows source evidence, not numeric matching.",
+    "primary_run": "E2-20261004",
+    "prior_raw_diagnostic_run": "E1-20261004",
+    "source": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/BIOPRO_J.htm",
+    "direction": "2017-2018 Roche Cobas values to prior Beckman scale using CDC backward equations",
+    "creatinine": "For cycle J only: 1.051 * raw LBXSCR - 0.06945",
+    "triglycerides": "For cycle J only: 0.9655 * raw LBXSTR - 7.020",
+    "implementation": "Retain raw and harmonized fields. Apply before primary-domain median and missing-indicator construction. Preserve missingness, population, design and all other definitions.",
+    "affected": [
+      "Table1 lab mean/SE/tests",
+      "All A/B Model3 exposure fits",
+      "All Model3 oral trend fits",
+      "All joint interaction fits",
+      "Table3 Model3",
+      "Supplement I/II Model3",
+      "Model3 forest plots",
+      "Source comparisons",
+      "Original learning notes"
+    ],
+    "unaffected_reuse": "M1/M2, categorical tables and non-lab descriptive rows may be reused from E1 with per-artifact provenance and dependency checks. R2 core and V1 validation are unchanged.",
+    "candidate_limit": "Only A/B; E2 is their corrected definition revision, not a third numerical-search candidate.",
+    "claims": "CDC-harmonized partial reconstruction; author harmonization choice is unknown; TG remains BIOPRO LBXSTR rather than reference fasting LBXTR.",
+    "review": "Independent Q plan/code acceptance required before execution; independent data/numerical acceptance before note integration."
+  },
+  "blinding_clarification": "Publication values visible during source review. Independent agents, not blinded. No numerical tuning.",
+  "created_at": "2026-10-04T07:27:17.925400+00:00"
+}

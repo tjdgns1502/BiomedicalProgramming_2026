@@ -1,0 +1,60 @@
+
+Call:
+svyglm(formula = formula, design = design, family = stats::quasibinomial())
+
+Survey design:
+subset(full, candidate_domain)
+
+Coefficients: (3 not defined because of singularities)
+                                       Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                          -5.561e+00  2.725e-01 -20.408  < 2e-16 ***
+oral_healthGood                       1.316e-01  6.745e-02   1.950 0.059168 .  
+oral_healthFair                       4.544e-01  7.646e-02   5.943 9.19e-07 ***
+oral_healthPoor                       5.605e-01  1.307e-01   4.288 0.000135 ***
+smokingYes                            1.933e-01  8.279e-02   2.335 0.025407 *  
+age                                   6.041e-02  2.134e-03  28.313  < 2e-16 ***
+sexFemale                             6.764e-02  5.760e-02   1.174 0.248149    
+raceMexican American                 -3.033e-01  9.121e-02  -3.326 0.002079 ** 
+raceOther Hispanic                    3.194e-03  7.887e-02   0.041 0.967923    
+raceNon-Hispanic Black                6.338e-01  6.342e-02   9.993 8.63e-12 ***
+raceOther race including multiracial  2.284e-01  8.116e-02   2.814 0.007977 ** 
+educationHigh school                  1.204e-01  6.102e-02   1.974 0.056328 .  
+educationLess than high school        1.329e-01  6.904e-02   1.925 0.062354 .  
+educationMissing                      1.223e+00  9.530e-01   1.283 0.207750    
+bmi_category<18.5                     1.260e-01  2.816e-01   0.447 0.657336    
+bmi_category25-29.9                   5.341e-01  5.348e-02   9.986 8.79e-12 ***
+bmi_category>=30                      1.091e+00  6.759e-02  16.135  < 2e-16 ***
+bmi_categoryMissing                   1.085e+00  2.452e-01   4.427 8.94e-05 ***
+sleep_category<7 hours                2.256e-01  5.292e-02   4.263 0.000145 ***
+sleep_category>9 hours                3.135e-01  1.046e-01   2.997 0.004984 ** 
+sleep_categoryMissing                 4.846e-01  2.868e-01   1.689 0.100039    
+alcohol_category<=1 drink/week        1.003e-02  6.706e-02   0.150 0.882006    
+alcohol_category>1 drink/week         2.862e-01  7.305e-02   3.918 0.000396 ***
+alcohol_categoryMissing              -3.068e-02  1.204e-01  -0.255 0.800383    
+activity_categoryActive              -1.644e-01  5.363e-02  -3.066 0.004167 ** 
+activity_categoryMissing             -2.375e+00  1.019e+00  -2.330 0.025685 *  
+cvd_categoryYes                       6.085e-01  8.876e-02   6.855 5.88e-08 ***
+cvd_categoryMissing                   1.000e+00  4.508e-01   2.218 0.033129 *  
+diabetes_categoryYes                  7.245e-01  8.476e-02   8.549 4.34e-10 ***
+diabetes_categoryMissing              4.248e-01  1.383e-01   3.072 0.004102 ** 
+sodium_filled                         7.935e-05  1.825e-05   4.347 0.000113 ***
+fat_filled                           -2.298e-03  6.990e-04  -3.287 0.002308 ** 
+total_cholesterol_filled             -5.961e-04  6.919e-04  -0.862 0.394818    
+total_cholesterol_missing            -9.686e-01  4.160e-01  -2.329 0.025778 *  
+creatinine_filled                     4.787e-01  9.726e-02   4.922 2.03e-05 ***
+creatinine_missing                   -1.150e-02  9.013e-01  -0.013 0.989895    
+triglycerides_biopro_filled           1.216e-03  3.298e-04   3.688 0.000761 ***
+triglycerides_biopro_missing          7.505e-01  8.300e-01   0.904 0.372110    
+hba1c_filled                          4.172e-02  2.774e-02   1.504 0.141533    
+hba1c_missing                         3.338e-01  2.558e-01   1.305 0.200483    
+hdl_filled                            1.780e-03  2.209e-03   0.806 0.425783    
+oral_healthGood:smokingYes           -6.063e-02  1.064e-01  -0.570 0.572419    
+oral_healthFair:smokingYes           -4.387e-01  1.262e-01  -3.476 0.001378 ** 
+oral_healthPoor:smokingYes           -3.119e-01  1.944e-01  -1.605 0.117584    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for quasibinomial family taken to be 1.076047)
+
+Number of Fisher Scoring iterations: 5
+

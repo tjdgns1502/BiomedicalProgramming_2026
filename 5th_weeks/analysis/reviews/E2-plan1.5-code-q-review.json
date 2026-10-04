@@ -1,0 +1,29 @@
+{
+  "reviewer": "plan_review",
+  "decision": "accept",
+  "review_stage": "before execution: static plan and code",
+  "run_id": "E2-20261004",
+  "approved_arguments": "--input-extended-run=E1-20261004 --candidate=both --complete-case=false",
+  "code_path": "C:/Users/doyun/Desktop/2026-2/의생명프로그래밍/4주차/.week5-staging/r_implementation/repair_harmonization.R",
+  "code_sha256": "38ac14542f2147f096d0035b3397964b66a255868811d6215d2eef08f2a09ab3",
+  "plan_path": "C:/Users/doyun/Desktop/2026-2/의생명프로그래밍/5주차/analysis/config/plan-v1.5.json",
+  "plan_sha256": "aaeae78f63d4aff3d094858659c1f0c45230467d9b66f637df421426ddc083b5",
+  "source": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/BIOPRO_J.htm",
+  "accepted_contract": [
+    "New immutable run verifies all E1 artifact and raw-cache hashes and sources frozen helper scripts without triggering their automatic main functions",
+    "Retains original LBXSCR/LBXSTR and separate raw fields; applies CDC linear backward equations only to cycle2017: creatinine1.051*x-0.06945 and triglycerides0.9655*x-7.020",
+    "Harmonization occurs before recalculating the fixed primary-domain median and filled values; missingness, weights, populations and other original fields are invariant-checked",
+    "A25 and B11 mandatory M3/trend/interaction fits are recomputed; supplemental scopes are Overall only, Table2 includes smoking strata, Table3 includes both age strata",
+    "Laboratory-dependent Table1 means/SE/tests and primary forests are regenerated; unchanged M1/M2 numeric rows, lean objects and non-laboratory descriptions are reused with explicit source hashes and row provenance",
+    "Coverage and no-stale-M3 guards protect merged primary CSVs; all original primary schemas are retained",
+    "Same fixed A/B candidates are corrected rather than introducing a third candidate; publication values are acknowledged as visible and no numerical target tuning is permitted"
+  ],
+  "followup_conditions": [
+    "Successful computation is not numerical acceptance. Exact executed-code, copied-plan, derived-data and result hashes must be audited after the run.",
+    "Independent omitted-model-matrix-column sidecar must document constant and collinear exclusions because inherited svyglm alias metadata is not populated correctly.",
+    "Copied M1/M2 lean objects retain their E1 data version; artifact dependencies and row sidecars are authoritative for their unchanged-input reuse in E2.",
+    "The optional common-complete-case flag is outside the approved default execution; there is no current result requiring its calculation."
+  ],
+  "scientific_label": "CDC-harmonized partial reconstruction. The original authors' assay harmonization and missing-value choices are unknown; biochemical-profile LBXSTR remains distinct from reference fasting LBXTR.",
+  "exposure_record": "Independent reviewers are not blinded; published values were visible during earlier source review. This plan amendment follows official assay documentation and numerical identities."
+}

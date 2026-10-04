@@ -1,0 +1,31 @@
+﻿family,subgroup,exposure,term,published_level_cases,published_level_n,calculated_level_cases,calculated_level_n,delta_cases,delta_n
+table2,Overall,oral_health,oral_healthExcellent/Very good,3185,6769,3096,6673,-89,-96
+table2,Overall,oral_health,oral_healthGood,3757,7536,3637,7414,-120,-122
+table2,Overall,oral_health,oral_healthFair,2620,4994,2540,4914,-80,-80
+table2,Overall,oral_health,oral_healthPoor,1455,2501,1416,2457,-39,-44
+table2,Non-Smoking,oral_health,oral_healthExcellent/Very good,1801,4151,1751,4096,-50,-55
+table2,Non-Smoking,oral_health,oral_healthGood,2004,4320,1940,4254,-64,-66
+table2,Non-Smoking,oral_health,oral_healthFair,1293,2529,1246,2479,-47,-50
+table2,Non-Smoking,oral_health,oral_healthPoor,521,882,513,868,-8,-14
+table2,Smoking,oral_health,oral_healthExcellent/Very good,1384,2618,1345,2577,-39,-41
+table2,Smoking,oral_health,oral_healthGood,1753,3216,1697,3160,-56,-56
+table2,Smoking,oral_health,oral_healthFair,1327,2465,1294,2435,-33,-30
+table2,Smoking,oral_health,oral_healthPoor,934,1619,903,1589,-31,-30
+table2,Overall,periodontal,periodontalNo,8839,17717,8574,17435,-265,-282
+table2,Overall,periodontal,periodontalYes,2178,4083,2115,4023,-63,-60
+table2,Non-Smoking,periodontal,periodontalNo,4664,10018,4521,9859,-143,-159
+table2,Non-Smoking,periodontal,periodontalYes,955,1864,929,1838,-26,-26
+table2,Smoking,periodontal,periodontalNo,4175,7699,4053,7576,-122,-123
+table2,Smoking,periodontal,periodontalYes,1223,2219,1186,2185,-37,-34
+table3,30-44,oral_health,oral_healthExcellent/Very good,415,2053,398,2038,-17,-15
+table3,30-44,oral_health,oral_healthGood,552,2298,527,2280,-25,-18
+table3,30-44,oral_health,oral_healthFair,438,1598,424,1589,-14,-9
+table3,30-44,oral_health,oral_healthPoor,218,640,210,635,-8,-5
+table3,45+,oral_health,oral_healthExcellent/Very good,2770,4716,2698,4635,-72,-81
+table3,45+,oral_health,oral_healthGood,3205,5238,3110,5134,-95,-104
+table3,45+,oral_health,oral_healthFair,2182,3396,2116,3325,-66,-71
+table3,45+,oral_health,oral_healthPoor,1237,1861,1206,1822,-31,-39
+table3,30-44,periodontal,periodontalNo,1243,5381,1193,5343,-50,-38
+table3,30-44,periodontal,periodontalYes,380,1208,366,1199,-14,-9
+table3,45+,periodontal,periodontalNo,7596,12336,7381,12092,-215,-244
+table3,45+,periodontal,periodontalYes,1798,2875,1749,2824,-49,-51

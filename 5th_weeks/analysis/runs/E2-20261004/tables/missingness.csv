@@ -1,0 +1,14 @@
+"variable","all_n","missing_n","missing_percent","included_missing_n","missing_category_n"
+"age",49693,0,0,0,
+"periodontal_code",49693,26369,53.0638118044795,0,
+"oral_health",49693,7303,14.6962348821766,0,0
+"smoking_code",49693,19974,40.1947960477331,0,
+"mean_sbp",49693,13209,26.5812086209325,0,
+"mean_dbp",49693,13209,26.5812086209325,0,
+"diagnosis_htn",49693,17721,35.6609582838629,11,
+"medication_htn",49693,17732,35.683094198378,20,
+"hypertension_code",49693,19397,39.0336667136216,0,
+"education",49693,0,0,0,20903
+"mec_weight",49693,0,0,0,
+"SDMVPSU",49693,0,0,0,
+"SDMVSTRA",49693,0,0,0,

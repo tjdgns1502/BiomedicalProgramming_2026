@@ -1,0 +1,39 @@
+{
+  "task": "R-CAT-001",
+  "revision": "1.1",
+  "status": "candidate reconstruction",
+  "paper": "https://link.springer.com/article/10.1186/s12889-023-16012-z",
+  "purpose": "Transparent reconstruction from public data; observed targets are withheld.",
+  "cycles": ["2009-2010", "2011-2012", "2013-2014", "2015-2016", "2017-2018"],
+  "bp_average": {
+    "readings": "all available 1:4",
+    "sbp": "finite > 0",
+    "dbp": "finite >= 0, including valid auscultatory zero",
+    "minimum": "at least one valid SBP AND at least one valid DBP",
+    "pairing": "means computed independently; paired readings are not required",
+    "ambiguity": "Paper does not specify zero, unpaired, or first-reading rules."
+  },
+  "periodontal": "OHQ835: 1 Yes, 2 No, every other code Missing; self-reported gum disease",
+  "oral_health": "OHQ845: 1/2 Excellent/Very good; 3 Good; 4 Fair; 5 Poor; else Missing",
+  "smoking": "SMQ020: 1 Yes (ever smoked >=100 cigarettes), 2 No; else Missing",
+  "medication": "BPQ050A 1 Yes, 2 No. If 050A unavailable, BPQ020==2 OR BPQ040A==2 implies structural No. Refused/unknown alone never implies No.",
+  "hypertension": "Yes evidence: mean SBP>=140 OR mean DBP>=90 OR BPQ020==1 OR BPQ050A==1. No: normal complete measured BP AND diagnosis No AND medication No. Remaining cases Missing. Yes evidence wins.",
+  "sample": "Age>=30; measured SBP and DBP each observed; periodontal, oral health, smoking and hypertension observed; positive MEC weight and valid design IDs.",
+  "education": "DMDEDUC2 1/2 Less than HS, 3 HS, 4/5 More than HS; else Missing factor indicator",
+  "covariate_missing": "Sex, race and education retain Missing levels. Age is observed by domain.",
+  "design": "Build design on ALL positive-weight valid-ID MEC records, then subset analysis domain.",
+  "weighting": "WTMEC2YR / 5; SDMVPSU; SDMVSTRA; nest=TRUE; lonely PSU policy=fail",
+  "model1": "Separate exposure models: HTN ~ periodontal OR oral health + age + sex + race + education",
+  "model_references": {
+    "periodontal": "No",
+    "oral": "Excellent/Very good",
+    "sex": "Male",
+    "race": "Non-Hispanic White",
+    "education": "More than high school"
+  },
+  "inference": "quasibinomial svyglm; Wald t confidence intervals and p values use fit df.residual = survey design df + 1 - model rank. This may differ from SAS normal-Wald inference in the paper.",
+  "descriptive": "Raw n and column percentages; survey weighted column percentages; means and SE.",
+  "tests": "Naive Pearson; 2x2 Yates/Fisher only; survey svychisq statistic=F (Rao-Scott).",
+  "fisher": "fisher.test estimate is conditional MLE, distinct from raw cross-product ad/bc.",
+  "future_extension": "Model registry and fit functions accept additional covariate vectors and outcomes."
+}

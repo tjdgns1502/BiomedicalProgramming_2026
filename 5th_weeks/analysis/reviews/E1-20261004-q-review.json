@@ -1,0 +1,88 @@
+{
+  "reviewer": "plan_review",
+  "decision": "accept",
+  "run_id": "E1-20261004",
+  "accepted_scope": "Numerical implementation of the fixed raw-laboratory candidate. All M1/M2 fits and non-laboratory tables are eligible for provenance-preserving reuse. Raw M3 results are diagnostic only; CDC-harmonized E2 is required for the primary pooled-laboratory reconstruction.",
+  "run_path": "C:/Users/doyun/Desktop/2026-2/의생명프로그래밍/5주차/analysis/runs/E1-20261004",
+  "pinned_hashes": {
+    "executed_script.R": "fdb959e433e61ed6363d64c5aef46a213f45b068368e780a35a50938b0812d3d",
+    "definitions.json": "1a7f02624002181bcd269a6b5706511294efedccbf7db866de46f27a7c2635df",
+    "report.json": "e6a9cf964d0b7cb7552063f5ef4116698ad72df7591b50153d269e090db87ccf",
+    "artifact_hashes.csv": "cd2dcc56955e9e64076c8416e22d8bdcb1ad08ac1deb69788744bc92a030b894",
+    "derived/master.rds": "4ad1870f3f98a75921e1e3b433d645183b657b322327874698a02ae53ec329be"
+  },
+  "independent_checks": {
+    "lean_models": 96,
+    "checks": 733,
+    "passed": 733,
+    "audit_extension.R_sha256": "6dcbdd028826281a1adf7621ecaa4cc10ff1d1f50781a603ae0acda9851ae4b1",
+    "E1_independent_checks.csv_sha256": "40a970acba46425180db2c6cba8baa9fdb2b783a020dfbbd9ad1737f406e04d4",
+    "E1_model_check_details.json_sha256": "cf9a8a0bb63b62d9cedfe8ab56edc40a34e38259bf10cf9afc5b3777450c29a7",
+    "methods": [
+      "Every model formula checked against fixed Table2, Table3 or supplemental covariate specifications",
+      "Every selected domain, sample size, case/control count, model-matrix rank, design df and residual df independently reconstructed",
+      "Every coefficient and SE matched to its lean covariance, with OR, residual-df t CI/p and separately labelled normal-z comparator identities",
+      "Every ordinal trend coefficient verified for the fixed 0:3 category score",
+      "Every interaction includes main effects; joint Wald F independently calculated as beta-prime inverse-covariance beta divided by tested rank, with F tail probability",
+      "Seven selected models independently refitted using ordinary GLM score equations, then independent stratum-centered PSU sandwich covariance without a survey regression fitting call",
+      "Every continuous Table1 weighted mean and design SE independently calculated on its observed domain",
+      "Fixed primary-domain medians, filled values and missing indicators checked for all seven continuous covariates"
+    ],
+    "independent_refit_max_beta_error": 1.2434497875801753e-13,
+    "independent_refit_max_covariance_error": 2.2631896356983816e-13
+  },
+  "omitted_columns_sidecar": {
+    "path": "C:/Users/doyun/Desktop/2026-2/의생명프로그래밍/4주차/.week5-staging/q_review/E1_omitted_model_matrix_columns.csv",
+    "sha256": "bc4d5635bf960544c532fb80f1f6041daf4b7da2ce83d26f3accb19eeaead9ad",
+    "audit_aliases.R_sha256": "8ddd11b5d93ff0c5ec08aa4d90fa33dc4558d3c47037863bb2527022f2a6dcd1",
+    "omitted_columns": 96,
+    "affected_models": 54,
+    "all_nonestimability_verified": true,
+    "explanation": "B sodium_missing and fat_missing are constant zero (20 model occurrences each). A fat_missing is linearly dependent on retained columns (20 occurrences). hdl_missing is linearly dependent on retained columns (36 occurrences). All such exclusions are already reflected in saved rank, covariance and residual df. The original lean alias metadata is not populated correctly; this sidecar documents the actual model-matrix exclusions without altering immutable E1 artifacts."
+  },
+  "domain_findings": {
+    "A_primary_n": 21458,
+    "B_primary_n": 19925,
+    "A_full_design_n": 47652,
+    "B_full_design_n": 43081,
+    "both_design_df": 78,
+    "sleep_zero_all_n": 0,
+    "sleep_zero_primary_n": 0,
+    "sleep_fractional_primary_n": 2744,
+    "supplemental_scope": "Overall only, matching the final source-supported plan; earlier proposed supplemental smoking strata were withdrawn before execution. Table2 retains smoking strata."
+  },
+  "reporting_notes": [
+    "All results remain partial reconstruction under explicit analytic assumptions and sample n=21458 rather than the published n=21800.",
+    "Candidate A uses MEC weights with dietary covariates as a reproduction assumption, not recommended dietary nonresponse inference. Candidate B changes the sample and weighting estimand; it does not repair missing-indicator or selection bias.",
+    "Rao-Scott and ordinary chi-square output is asymptotic. Five captured warnings concern sparse expected cells in the categorical comparisons; no fit convergence warning was recorded. Retain these warnings and the approximation limitation.",
+    "The sleep implementation and executed definitions use 0:24. The earlier plan 1:24 string had no numerical impact because no zero-hour observation exists. Preserve fractional hours and correct the plan text to the official range.",
+    "Model1/Model2 and ordinal trend fits, categorical tables and non-laboratory descriptive rows may be reused in E2 only with exact provenance. Every laboratory-dependent Model3 fit, interaction, trend, laboratory summary/test and forest plot must be recomputed after harmonization.",
+    "Supplemental inferred domains estimate undiagnosed measured hypertension versus normotensive and diagnosed/treated hypertension versus normotensive. Their populations and odds-ratio estimands differ from the full-primary model.",
+    "Cross-sectional odds ratios and subgroup interaction tests describe associations. An ordinal score trend is an analyst candidate and is not proof of a linear biological relationship."
+  ],
+  "visual_review": {
+    "files": ["A_model1_3_forest.png", "B_model1_3_forest.png"],
+    "readable": true,
+    "axis_and_CI_labels_correct": true,
+    "limitation": "The red Model3 rows are raw-laboratory diagnostics and will be replaced in the primary E2 figures."
+  },
+  "harmonization_judgment": {
+    "source": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/BIOPRO_J.htm",
+    "reason": "CDC explicitly recommends regression-equation adjustments when combining 2017-2018 biochemical-profile results with previous cycles after an instrument change.",
+    "required_J_backward_equations": {
+      "creatinine": "1.051 * raw LBXSCR - 0.06945",
+      "triglycerides": "0.9655 * raw LBXSTR - 7.020"
+    },
+    "policy": "E1 raw diagnostics remain immutable; E2 revises the same fixed A/B candidates before imputation, without a third candidate or numerical target search. The author calibration choice is unknown; reference fasting LBXTR ambiguity remains."
+  },
+  "exposure_record": {
+    "blinded_review": false,
+    "record": "Published numbers appeared in prior Springer Methods/footnote responses and V code. E1 code, derived data and model outputs were inspected for this audit. Initial learning notes have not been read.",
+    "tuning": "None. The changes follow official measurement documentation; audit calculations use fixed formulas and identities."
+  },
+  "scope_limits": [
+    "Source extraction, every artifact manifest row, raw-variable recoding and raw tabulations are covered by the separate data reviewer; they are not duplicated in this numerical audit.",
+    "The optional common-complete-case suite was not run (report list empty) and has no result to accept.",
+    "E2 harmonized artifacts need a separate exact-hash plan/code and numerical audit before primary-note integration."
+  ]
+}

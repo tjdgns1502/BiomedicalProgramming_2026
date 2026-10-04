@@ -1,0 +1,54 @@
+{
+  "task_id": "R-EXT-002",
+  "revision": "1.4",
+  "stage_ids": [
+    "S03",
+    "S05"
+  ],
+  "issue_id": "ISSUE-07",
+  "type": "replication_config",
+  "question": "R-EXT-002",
+  "estimand": "survey adjusted prevalence odds ratio",
+  "owner_role": "I",
+  "worker_id": "r_implementation",
+  "reviewer_id": "plan_review",
+  "required_or_optional": "required",
+  "dependencies": [
+    "R-CAT-001"
+  ],
+  "allowed_inputs": [
+    "official paper methods/tables",
+    "CDC codebooks",
+    "reviewed plan"
+  ],
+  "assumptions": "in versioned plan",
+  "exposure_history": "root/P/Q/I source article web responses included publication results. Source targets were not delivered in original I packet but visible during I source review. Supplemental n sent to I as selection evidence. No claim of blinding; no numerical tuning.",
+  "plan_version": "1.4",
+  "plan_review": "accept: plan_review, supplemental domain/covariate revision",
+  "methods": "config/plan-v1.4.json",
+  "acceptance_criteria": [
+    "definitions match plan",
+    "runs immutable",
+    "counts/hashes/denominators explicit",
+    "independent output review"
+  ],
+  "limits": {
+    "download_retries": 2,
+    "author_config_candidates": 2
+  },
+  "outputs": [
+    "result.json",
+    "tables",
+    "figures"
+  ],
+  "write_scope": "task-local work only; common memory and notes root-owned",
+  "state": "ready",
+  "freshness": "current",
+  "attempts": [],
+  "result_path": null,
+  "review_path": null,
+  "document_anchors": [
+    "S03",
+    "S05"
+  ]
+}

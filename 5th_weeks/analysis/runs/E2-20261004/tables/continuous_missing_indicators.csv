@@ -1,0 +1,8 @@
+"variable","raw_variable","median_value","observed_primary_n","missing_primary_n","strategy"
+"sodium","DR1TSODI",3094,19925,1533,"Primary-domain observed median plus missing indicator; analyst assumption"
+"fat","DR1TTFAT",71.26,19925,1533,"Primary-domain observed median plus missing indicator; analyst assumption"
+"total_cholesterol","LBXTC",192,20285,1173,"Primary-domain observed median plus missing indicator; analyst assumption"
+"hba1c","LBXGH",5.6,20557,901,"Primary-domain observed median plus missing indicator; analyst assumption"
+"hdl","LBDHDD",50,20285,1173,"Primary-domain observed median plus missing indicator; analyst assumption"
+"creatinine","LBXSCR",0.85,20220,1238,"Primary-domain median after CDC J backward harmonization plus missing indicator"
+"triglycerides_biopro","LBXSTR",122.357,20206,1252,"Primary-domain median after CDC J backward harmonization plus missing indicator"

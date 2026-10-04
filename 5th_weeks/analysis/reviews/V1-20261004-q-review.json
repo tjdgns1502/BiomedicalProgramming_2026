@@ -1,0 +1,67 @@
+{
+  "reviewer": "plan_review",
+  "decision": "accept",
+  "run_id": "V1-20261004",
+  "plan_version": "1.1",
+  "reviewed_code": {
+    "path": "C:/Users/doyun/Desktop/2026-2/의생명프로그래밍/5주차/analysis/src/assignment_validation.R",
+    "sha256": "0edbdd5d7e60c95a0f804476c091ef2d97bb8c9afd444a7b25f17005f73f716b"
+  },
+  "reviewed_plan": {
+    "path": "C:/Users/doyun/Desktop/2026-2/의생명프로그래밍/5주차/analysis/config/plan-v1.1.json",
+    "sha256": "b0a1754b75051f6bfd25fcf8718c7c76a10d6a50194fd69fc9a7e8dda202c2ed"
+  },
+  "reviewed_manifest": {
+    "path": "C:/Users/doyun/Desktop/2026-2/의생명프로그래밍/5주차/analysis/runs/V1-20261004/manifest.json",
+    "sha256": "eeeeb2fce5592ce9635d8f816ab76688bd9824d0467f7465a16d791a81662903",
+    "entries": 15,
+    "all_hashes_match": true,
+    "code_and_plan_hashes_match_result_metadata": true
+  },
+  "independent_checks": {
+    "script_path": "C:/Users/doyun/Desktop/2026-2/의생명프로그래밍/4주차/.week5-staging/q_review/audit_validation.R",
+    "script_sha256": "b0950187aafccb54de73df8c393949adc41c4756e98389a367e741540e018e11",
+    "results_path": "C:/Users/doyun/Desktop/2026-2/의생명프로그래밍/4주차/.week5-staging/q_review/V1_independent_checks.csv",
+    "results_sha256": "6a1ebd630f3bf958bc4ddc7de81c42d39d0b567c6166c32eecf07d11c90b6639",
+    "checks": 81,
+    "passed": 81,
+    "max_pvalue_absolute_error": 1.23234755733392e-14,
+    "methods": [
+      "Independent combinatorial hypergeometric probability-ordering Fisher calculation for every enumeration state",
+      "Independent closed-form 2x2 Pearson and Yates statistics and chi-square tail probabilities",
+      "Binomial probability masses sum to one for every null and alternative scenario",
+      "Every pointwise Type-I error and power matches independent weighted rejection sums using p < 0.05",
+      "Seeded Monte Carlo counts match lookup results for all scenarios without rerunning the production script",
+      "Independent Wilson interval and MCSE algebra matches all CSV rows",
+      "Conditional fixed-margin Fisher probability mass and rejection event match",
+      "Paired exact p-value from 2*sum(Binomial(30,0.5) probabilities for 0:5) and continuity-corrected McNemar statistic match",
+      "Crude prevalence ratio, cross-product odds ratio, their SRS confidence intervals and baseline curve identities match"
+    ]
+  },
+  "figure_review": {
+    "files": ["test_size_curve.png", "power_curve.png", "OR_PR_baseline_curve.png"],
+    "readable": true,
+    "axis_units_and_groups_correct": true,
+    "numerical_curves_agree_with_csv": true
+  },
+  "reporting_notes": [
+    "Caption test_size_curve.png explicitly: lines/points are exact enumeration; error bars are 95% Wilson intervals around Monte Carlo rejection rates. Exact enumeration itself has no Monte Carlo uncertainty.",
+    "warnings_seen is initialized but no handler populates it. An empty result.json warnings array is therefore not evidence of a warning-free execution. Keep this limitation or use the actual process log; the independent audit process emitted startup LC_* locale warnings, then passed after the script set its UTF-8 locale.",
+    "result.json rounds conditional_fisher_typeI to 0.023 because of JSON serialization defaults; the CSV supports the more precise value 0.02301413756522116. Treat the CSV as the numerical authority.",
+    "OR_relative_overstatement_pct is a numerical discrepancy if OR is interpreted as PR, not an error in the OR estimand.",
+    "The baseline CSV omits infeasible PR*p0>=1 grid points rather than retaining NA rows. All exported points satisfy the feasible prevalence domain.",
+    "All inference in these expansions is SRS educational inference or synthetic paired inference. It does not validate the NHANES complex-sampling inference."
+  ],
+  "exposure_record": {
+    "blinded_review": false,
+    "prior_exposure": "During plan review, official Springer HTML/PDF responses opened for Methods and model footnotes also displayed published counts and effect estimates. No claim of withheld publication targets is made.",
+    "current_exposure": "The production extension code explicitly contains published 2x2 counts. Calculations were verified mathematically against those declared inputs.",
+    "not_read": ["initial learning notes", "raw-data core analysis results"],
+    "result_tuning": "None. Audit checks fixed definitions and identities; no alternative methods or fit-to-target candidates were introduced."
+  },
+  "scope_limitations": [
+    "This decision covers the pinned V1 extension code and its 15 manifest-listed artifacts only.",
+    "The teaching examples are checked against their declared code inputs; their extraction from the course PDFs is outside this audit.",
+    "No NHANES source data, core model results or model-selection decisions were audited in this V1 review."
+  ]
+}

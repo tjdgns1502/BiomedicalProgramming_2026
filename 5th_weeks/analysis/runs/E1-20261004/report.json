@@ -1,0 +1,103 @@
+{
+  "task": "R-EXT-002",
+  "revision": "1.4",
+  "data_version": "nhanes-2009-2018-full-b21b4e903b63d715068c",
+  "run_id": "E1-20261004",
+  "stage": "model",
+  "started_utc": "2026-10-04T07:05:09Z",
+  "completed_utc": "2026-10-04T07:26:50Z",
+  "input_run": "R2-20261004",
+  "upstream_input": {
+    "run_id": "R2-20261004",
+    "master_sha256": "1c4abc2816600342d812911efa21bb5e530667a6b7db6807ddfe0b72e1075e7d",
+    "artifact_manifest_sha256": "e7059f9a4b477bb69c2a3eecf88b16f812516d0a002dde4a7b897c50580305d2",
+    "report_sha256": "c90f6046da60101dafa8695b5bbde9a2b39a57d0b08fb6437fb62f2d28ef3331",
+    "data_version": "nhanes-2009-2018-7ad570c1e84a460b267c",
+    "master_manifest_verified": true
+  },
+  "candidates": {
+    "A": {
+      "candidate": "A",
+      "label": "MEC-weight candidate",
+      "full_n": 47652,
+      "domain_n": 21458,
+      "full_df": 78,
+      "domain_df": 78
+    },
+    "B": {
+      "candidate": "B",
+      "label": "Dietary-weight sensitivity",
+      "full_n": 43081,
+      "domain_n": 19925,
+      "full_df": 78,
+      "domain_df": 78
+    }
+  },
+  "qa_core": {
+    "flow": [
+      {
+        "stage": "all_demo",
+        "n": 49693,
+        "excluded_since_previous": null
+      },
+      {
+        "stage": "age30",
+        "n": 24042,
+        "excluded_since_previous": 25651
+      },
+      {
+        "stage": "valid_measured_sbp_dbp",
+        "n": 22163,
+        "excluded_since_previous": 1879
+      },
+      {
+        "stage": "observed_periodontal",
+        "n": 21515,
+        "excluded_since_previous": 648
+      },
+      {
+        "stage": "observed_oral_health",
+        "n": 21488,
+        "excluded_since_previous": 27
+      },
+      {
+        "stage": "observed_smoking",
+        "n": 21476,
+        "excluded_since_previous": 12
+      },
+      {
+        "stage": "observed_hypertension",
+        "n": 21458,
+        "excluded_since_previous": 18
+      },
+      {
+        "stage": "positive_mec_weight_valid_design",
+        "n": 21458,
+        "excluded_since_previous": 0
+      }
+    ],
+    "analysis_n": 21458,
+    "htn_raw_n": 10689,
+    "no_htn_raw_n": 10769,
+    "htn_raw_percent": 49.813589337310091,
+    "mec_design_n": 47652,
+    "zero_dbp_people_all": 983,
+    "zero_dbp_people_included": 271,
+    "medication_structural_no_n": 22673,
+    "medication_conflict_n": 0
+  },
+  "qa_extension": {
+    "core_n": 21458,
+    "A_n": 21458,
+    "B_n": 19925,
+    "B_excluded_from_A": 1533,
+    "lab_candidate": "BIOPRO LBXSTR; no fasting restriction",
+    "dietary_week_denominator": 52.142857142857146,
+    "alcohol_lifetime_proxy_n": 2342
+  },
+  "common_complete_case": [],
+  "warnings_n": 5,
+  "invariants_passed": 439,
+  "target_comparison": "Published results visible during source review; no target-based optimization; discrepancies must be reported.",
+  "inference": "Primary t residual-df CI/p; separately labelled normal z sensitivity CI/p."
+}

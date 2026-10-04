@@ -1,0 +1,45 @@
+{
+  "time": "2026-10-04T08:06:46.722630+00:00",
+  "checked_documents": 18,
+  "links": 67,
+  "asset_hashes": 10,
+  "OR_comparison_rows": 84,
+  "reviews": [
+    {
+      "name": "R2-20261004-q-review.json",
+      "decision": "accept",
+      "sha256": "e2336b63af67a54d9bea3d5a6a8504832ce87150d571d74a3a9bc7d70994eb7a"
+    },
+    {
+      "name": "R2-data-review.json",
+      "decision": "accept",
+      "sha256": "74fd2969ca0efe2608580aab2b5936177d39b32b8d49ddb1c258d3ade750d2ea"
+    },
+    {
+      "name": "E1-20261004-q-review.json",
+      "decision": "accept",
+      "sha256": "cab140030972447f3559e73b6ddd213917cef6502752d26cd9b584112cf84f90"
+    },
+    {
+      "name": "E1-data-review.json",
+      "decision": "accept",
+      "sha256": "51c9554f0369a8773156427e1122f8a7db0ef547a380459558e454e7f95108f2"
+    },
+    {
+      "name": "E2-20261004-q-review.json",
+      "decision": "accept",
+      "sha256": "cf2095a869d7048e4d57e80a2d148b3c72114d00182e436ae603a836a564e1cf"
+    },
+    {
+      "name": "E2-20261004-data-review.json",
+      "decision": "accept",
+      "sha256": "4295b25581cb19c83a986e56fb394d14bcc4b82c208dbdc3fb3cc7df76bf2799"
+    },
+    {
+      "name": "V1-20261004-q-review.json",
+      "decision": "accept",
+      "sha256": "7f2fc4957e3e1aed302d5f2cc6c5bbcefba1785d2c056dc6528bbc9aa9ed3922"
+    }
+  ],
+  "issues": []
+}

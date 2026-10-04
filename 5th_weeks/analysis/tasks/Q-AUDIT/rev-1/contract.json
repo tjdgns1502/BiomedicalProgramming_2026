@@ -1,0 +1,66 @@
+{
+  "task_id": "Q-AUDIT",
+  "revision": "1",
+  "stage_ids": [
+    "S02",
+    "S03",
+    "S04",
+    "S05",
+    "S06",
+    "S07"
+  ],
+  "issue_id": "ISSUE-12",
+  "type": "statistical_validity",
+  "question": "Q-AUDIT",
+  "estimand": "not_applicable: source/review/education",
+  "owner_role": "Q",
+  "worker_id": "plan_review",
+  "reviewer_id": "paper_audit",
+  "required_or_optional": "required",
+  "dependencies": [
+    "R-CAT-001",
+    "R-EXT-002",
+    "V-FISHER",
+    "V-EFFECT",
+    "V-PAIRED"
+  ],
+  "allowed_inputs": [
+    "official paper methods/tables",
+    "CDC codebooks",
+    "reviewed plan"
+  ],
+  "assumptions": "in versioned plan",
+  "exposure_history": "P/root saw publication values; R implementer did not receive publication target values; Q saw methods only and no numeric targets",
+  "plan_version": "1.1",
+  "plan_review": "accepted: plan_review, limited R1/R2/M1/V1/V2/V3; expanded M2/M3 pending revision",
+  "methods": "in config/plan-v1.1.json",
+  "acceptance_criteria": [
+    "definitions match plan",
+    "runs immutable",
+    "counts/hashes/denominators explicit",
+    "independent output review"
+  ],
+  "limits": {
+    "download_retries": 2,
+    "author_config_candidates": 2
+  },
+  "outputs": [
+    "result.json",
+    "tables",
+    "figures"
+  ],
+  "write_scope": "task-local work only; common memory and notes root-owned",
+  "state": "ready",
+  "freshness": "current",
+  "attempts": [],
+  "result_path": null,
+  "review_path": null,
+  "document_anchors": [
+    "S02",
+    "S03",
+    "S04",
+    "S05",
+    "S06",
+    "S07"
+  ]
+}

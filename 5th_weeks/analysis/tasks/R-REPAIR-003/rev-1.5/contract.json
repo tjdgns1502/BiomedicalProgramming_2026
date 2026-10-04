@@ -1,0 +1,53 @@
+{
+  "task_id": "R-REPAIR-003",
+  "revision": "1.5",
+  "stage_ids": [
+    "S03",
+    "S04",
+    "S05",
+    "S07"
+  ],
+  "issue_id": "ISSUE-12",
+  "type": "implementation",
+  "question": "CDC BIOPRO_J harmonization and coherent downstream recalculation",
+  "owner_role": "I",
+  "worker_id": "r_implementation",
+  "reviewer_id": "plan_review + paper_audit",
+  "required_or_optional": "required",
+  "dependencies": [
+    "R-EXT-002"
+  ],
+  "allowed_inputs": [
+    "E1 frozen master/source/manifests",
+    "CDC BIOPRO_J backward equations",
+    "plan-v1.5.json"
+  ],
+  "assumptions": "TG remains BIOPRO, author lab harmonization unreported",
+  "exposure_history": "Published values visible during source review; no numerical tuning",
+  "plan_version": "1.5",
+  "plan_sha256": "aaeae78f63d4aff3d094858659c1f0c45230467d9b66f637df421426ddc083b5",
+  "plan_review": "Q accepts amendment; exact code acceptance pending",
+  "methods": "config/plan-v1.5.json",
+  "acceptance_criteria": [
+    "raw columns preserved",
+    "J transformed before imputation",
+    "other fields unchanged",
+    "all affected M3/trend/interaction/figures refreshed",
+    "M1/M2 provenance preserved",
+    "independent numerical and data acceptance"
+  ],
+  "outputs": [
+    "report.json",
+    "tables",
+    "figures",
+    "artifact_hashes.csv",
+    "lineage records"
+  ],
+  "state": "ready",
+  "freshness": "pending E2",
+  "attempts": [],
+  "limits": {
+    "author_config_candidates": 2
+  },
+  "write_scope": "task-local only; root promotes records and integrates notes"
+}

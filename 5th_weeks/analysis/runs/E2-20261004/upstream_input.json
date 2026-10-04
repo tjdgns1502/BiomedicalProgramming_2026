@@ -1,0 +1,11 @@
+{
+  "input_extended_run": "E1-20261004",
+  "data_version": "nhanes-2009-2018-full-b21b4e903b63d715068c",
+  "master_sha256": "4ad1870f3f98a75921e1e3b433d645183b657b322327874698a02ae53ec329be",
+  "artifact_manifest_sha256": "cd2dcc56955e9e64076c8416e22d8bdcb1ad08ac1deb69788744bc92a030b894",
+  "report_sha256": "e6a9cf964d0b7cb7552063f5ef4116698ad72df7591b50153d269e090db87ccf",
+  "all_input_artifact_hashes_verified": true,
+  "all_raw_cache_hashes_verified": true,
+  "inherited_core_run": "R2-20261004",
+  "plan_sha256": "aaeae78f63d4aff3d094858659c1f0c45230467d9b66f637df421426ddc083b5"
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "path": "analysis/runs/V1-20261004/baseline_OR_PR_curve.csv",
+    "sha256": "8511a6f80731a4fdbfac3d8af47d4e92ceba98d176087cc5dc0645ccc88a6611"
+  },
+  {
+    "path": "analysis/runs/V1-20261004/conditional_fisher.csv",
+    "sha256": "f379afa5adfe04b3c78801e3a762093bb5c7307c1e38368098367fda69df8947"
+  },
+  {
+    "path": "analysis/runs/V1-20261004/course_examples.csv",
+    "sha256": "c2fac009a1b7fe05cf829aac1157efe8081b6f239fdc688f099d96df69e5327a"
+  },
+  {
+    "path": "analysis/runs/V1-20261004/enumeration_n10.csv",
+    "sha256": "51ce4378583606f227fe9e6892594157e9d8288a0cde6b9c612279a8c54c8e1b"
+  },
+  {
+    "path": "analysis/runs/V1-20261004/enumeration_n20.csv",
+    "sha256": "3105e100f316e815d0ac209550a17da38c723547716dd1c19f33a100423226cd"
+  },
+  {
+    "path": "analysis/runs/V1-20261004/enumeration_n5.csv",
+    "sha256": "b822ee69ee02cdd54de9adc91070f58d134239ef37752a7a1c8085749c7a988b"
+  },
+  {
+    "path": "analysis/runs/V1-20261004/enumeration_n50.csv",
+    "sha256": "2c2ddf1fef11d00edaa1ba60615be517edb83c791d6c5b9216bb80212ca5ac01"
+  },
+  {
+    "path": "analysis/runs/V1-20261004/figures/OR_PR_baseline_curve.png",
+    "sha256": "9b2abf53d318a670c5e14c4360421cf4e48e06be77a7ae3648b91c34bf582215"
+  },
+  {
+    "path": "analysis/runs/V1-20261004/figures/power_curve.png",
+    "sha256": "2676daa25572d8cfd1ca966bbef7fcf631d8b536b24c9e858228dcf6c4e20c29"
+  },
+  {
+    "path": "analysis/runs/V1-20261004/figures/test_size_curve.png",
+    "sha256": "cbe6c4295bf1471de8030d3c2d1d293fce151c747b9547e2fa5536638dbed915"
+  },
+  {
+    "path": "analysis/runs/V1-20261004/power.csv",
+    "sha256": "0cb49ae0e89285466c439640ecde939b4cdb2c90c2831a595760a81ed9543d62"
+  },
+  {
+    "path": "analysis/runs/V1-20261004/published_OR_PR.csv",
+    "sha256": "7a52b5463d770c2fe1974be018964db6cd5293af16ebeebfe826f33e3486a50c"
+  },
+  {
+    "path": "analysis/runs/V1-20261004/result.json",
+    "sha256": "ba78d95ed0f6e6a5845e256eca5740fee8cf2b4ba9826b456cd43eb2162a4b2e"
+  },
+  {
+    "path": "analysis/runs/V1-20261004/sessionInfo.txt",
+    "sha256": "e225f61870bc7011ca36df5a055ee85f940e97b29d979d57e325e8a0b8091a6b"
+  },
+  {
+    "path": "analysis/runs/V1-20261004/typeI_error.csv",
+    "sha256": "3d92bb760887281cd715ef6cf8b73c09a3eccdf2e3d02185083e036dfcc8f1db"
+  }
+]

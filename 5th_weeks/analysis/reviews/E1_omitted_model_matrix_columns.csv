@@ -1,0 +1,97 @@
+"model","omitted_column","reason","relative_residual","documented_in_lean_alias_fields","nonestimability_verified"
+"A_interaction_oral_health_age_group","hdl_missing","linear dependence on retained model-matrix columns",9.8287499367498e-14,FALSE,TRUE
+"A_interaction_oral_health_smoking","fat_missing","linear dependence on retained model-matrix columns",1.55040000656796e-13,FALSE,TRUE
+"A_interaction_oral_health_smoking","hdl_missing","linear dependence on retained model-matrix columns",3.48056818511358e-13,FALSE,TRUE
+"A_interaction_periodontal_age_group","hdl_missing","linear dependence on retained model-matrix columns",3.4281952264928e-14,FALSE,TRUE
+"A_interaction_periodontal_smoking","fat_missing","linear dependence on retained model-matrix columns",5.61881377289888e-14,FALSE,TRUE
+"A_interaction_periodontal_smoking","hdl_missing","linear dependence on retained model-matrix columns",9.91688583200021e-14,FALSE,TRUE
+"A_supplement_diagnosed_treated_Overall_Model3_oral_health_diagnosed_or_treated_htn","hdl_missing","linear dependence on retained model-matrix columns",6.44030606426999e-14,FALSE,TRUE
+"A_supplement_diagnosed_treated_Overall_Model3_oral_score_diagnosed_or_treated_htn","hdl_missing","linear dependence on retained model-matrix columns",1.71097948233516e-13,FALSE,TRUE
+"A_supplement_diagnosed_treated_Overall_Model3_periodontal_diagnosed_or_treated_htn","hdl_missing","linear dependence on retained model-matrix columns",2.98773985965468e-16,FALSE,TRUE
+"A_supplement_measured_Overall_Model3_oral_health_measured_htn","hdl_missing","linear dependence on retained model-matrix columns",2.00472549328002e-13,FALSE,TRUE
+"A_supplement_measured_Overall_Model3_oral_score_measured_htn","hdl_missing","linear dependence on retained model-matrix columns",5.09414134114474e-14,FALSE,TRUE
+"A_supplement_measured_Overall_Model3_periodontal_measured_htn","hdl_missing","linear dependence on retained model-matrix columns",2.31573537679427e-15,FALSE,TRUE
+"A_table2_No_Model2_oral_health_hypertension_code","fat_missing","linear dependence on retained model-matrix columns",7.71585460577399e-14,FALSE,TRUE
+"A_table2_No_Model2_oral_score_hypertension_code","fat_missing","linear dependence on retained model-matrix columns",1.8609141735452e-13,FALSE,TRUE
+"A_table2_No_Model2_periodontal_hypertension_code","fat_missing","linear dependence on retained model-matrix columns",8.00845502882336e-14,FALSE,TRUE
+"A_table2_No_Model3_oral_health_hypertension_code","fat_missing","linear dependence on retained model-matrix columns",7.71510354973613e-14,FALSE,TRUE
+"A_table2_No_Model3_oral_health_hypertension_code","hdl_missing","linear dependence on retained model-matrix columns",7.67919280683142e-15,FALSE,TRUE
+"A_table2_No_Model3_oral_score_hypertension_code","fat_missing","linear dependence on retained model-matrix columns",1.86086246624945e-13,FALSE,TRUE
+"A_table2_No_Model3_oral_score_hypertension_code","hdl_missing","linear dependence on retained model-matrix columns",1.08653336448705e-14,FALSE,TRUE
+"A_table2_No_Model3_periodontal_hypertension_code","fat_missing","linear dependence on retained model-matrix columns",8.00825938000842e-14,FALSE,TRUE
+"A_table2_No_Model3_periodontal_hypertension_code","hdl_missing","linear dependence on retained model-matrix columns",1.61665406327438e-14,FALSE,TRUE
+"A_table2_Overall_Model2_oral_health_hypertension_code","fat_missing","linear dependence on retained model-matrix columns",7.1867162978027e-14,FALSE,TRUE
+"A_table2_Overall_Model2_oral_score_hypertension_code","fat_missing","linear dependence on retained model-matrix columns",1.70863816616913e-13,FALSE,TRUE
+"A_table2_Overall_Model2_periodontal_hypertension_code","fat_missing","linear dependence on retained model-matrix columns",3.43357992937927e-14,FALSE,TRUE
+"A_table2_Overall_Model3_oral_health_hypertension_code","fat_missing","linear dependence on retained model-matrix columns",7.18475245806966e-14,FALSE,TRUE
+"A_table2_Overall_Model3_oral_health_hypertension_code","hdl_missing","linear dependence on retained model-matrix columns",6.40300905601337e-14,FALSE,TRUE
+"A_table2_Overall_Model3_oral_score_hypertension_code","fat_missing","linear dependence on retained model-matrix columns",1.7062811862614e-13,FALSE,TRUE
+"A_table2_Overall_Model3_oral_score_hypertension_code","hdl_missing","linear dependence on retained model-matrix columns",5.54344036125624e-14,FALSE,TRUE
+"A_table2_Overall_Model3_periodontal_hypertension_code","fat_missing","linear dependence on retained model-matrix columns",3.42874975362399e-14,FALSE,TRUE
+"A_table2_Overall_Model3_periodontal_hypertension_code","hdl_missing","linear dependence on retained model-matrix columns",1.35069632777787e-13,FALSE,TRUE
+"A_table2_Yes_Model2_oral_health_hypertension_code","fat_missing","linear dependence on retained model-matrix columns",7.79666059171307e-14,FALSE,TRUE
+"A_table2_Yes_Model2_oral_score_hypertension_code","fat_missing","linear dependence on retained model-matrix columns",8.8266892079558e-14,FALSE,TRUE
+"A_table2_Yes_Model2_periodontal_hypertension_code","fat_missing","linear dependence on retained model-matrix columns",1.01910405639058e-13,FALSE,TRUE
+"A_table2_Yes_Model3_oral_health_hypertension_code","fat_missing","linear dependence on retained model-matrix columns",7.79432551222927e-14,FALSE,TRUE
+"A_table2_Yes_Model3_oral_health_hypertension_code","hdl_missing","linear dependence on retained model-matrix columns",1.18533177556924e-14,FALSE,TRUE
+"A_table2_Yes_Model3_oral_score_hypertension_code","fat_missing","linear dependence on retained model-matrix columns",8.82326366647678e-14,FALSE,TRUE
+"A_table2_Yes_Model3_oral_score_hypertension_code","hdl_missing","linear dependence on retained model-matrix columns",1.28137898887799e-13,FALSE,TRUE
+"A_table2_Yes_Model3_periodontal_hypertension_code","fat_missing","linear dependence on retained model-matrix columns",1.01870408963379e-13,FALSE,TRUE
+"A_table2_Yes_Model3_periodontal_hypertension_code","hdl_missing","linear dependence on retained model-matrix columns",5.05836655004616e-14,FALSE,TRUE
+"A_table3_30-44_Model3_oral_health_hypertension_code","hdl_missing","linear dependence on retained model-matrix columns",2.40525827907103e-14,FALSE,TRUE
+"A_table3_30-44_Model3_oral_score_hypertension_code","hdl_missing","linear dependence on retained model-matrix columns",3.28387292235568e-14,FALSE,TRUE
+"A_table3_30-44_Model3_periodontal_hypertension_code","hdl_missing","linear dependence on retained model-matrix columns",5.63967784037608e-14,FALSE,TRUE
+"A_table3_45__Model3_oral_health_hypertension_code","hdl_missing","linear dependence on retained model-matrix columns",1.77556572298704e-13,FALSE,TRUE
+"A_table3_45__Model3_oral_score_hypertension_code","hdl_missing","linear dependence on retained model-matrix columns",1.19867754533559e-14,FALSE,TRUE
+"A_table3_45__Model3_periodontal_hypertension_code","hdl_missing","linear dependence on retained model-matrix columns",3.03013599317982e-13,FALSE,TRUE
+"B_interaction_oral_health_smoking","sodium_missing","constant zero in this domain",0,FALSE,TRUE
+"B_interaction_oral_health_smoking","fat_missing","constant zero in this domain",0,FALSE,TRUE
+"B_interaction_oral_health_smoking","hdl_missing","linear dependence on retained model-matrix columns",1.54916326818325e-15,FALSE,TRUE
+"B_interaction_periodontal_smoking","sodium_missing","constant zero in this domain",0,FALSE,TRUE
+"B_interaction_periodontal_smoking","fat_missing","constant zero in this domain",0,FALSE,TRUE
+"B_interaction_periodontal_smoking","hdl_missing","linear dependence on retained model-matrix columns",2.57427602869307e-14,FALSE,TRUE
+"B_table2_No_Model2_oral_health_hypertension_code","sodium_missing","constant zero in this domain",0,FALSE,TRUE
+"B_table2_No_Model2_oral_health_hypertension_code","fat_missing","constant zero in this domain",0,FALSE,TRUE
+"B_table2_No_Model2_oral_score_hypertension_code","sodium_missing","constant zero in this domain",0,FALSE,TRUE
+"B_table2_No_Model2_oral_score_hypertension_code","fat_missing","constant zero in this domain",0,FALSE,TRUE
+"B_table2_No_Model2_periodontal_hypertension_code","sodium_missing","constant zero in this domain",0,FALSE,TRUE
+"B_table2_No_Model2_periodontal_hypertension_code","fat_missing","constant zero in this domain",0,FALSE,TRUE
+"B_table2_No_Model3_oral_health_hypertension_code","sodium_missing","constant zero in this domain",0,FALSE,TRUE
+"B_table2_No_Model3_oral_health_hypertension_code","fat_missing","constant zero in this domain",0,FALSE,TRUE
+"B_table2_No_Model3_oral_health_hypertension_code","hdl_missing","linear dependence on retained model-matrix columns",2.39664735873763e-14,FALSE,TRUE
+"B_table2_No_Model3_oral_score_hypertension_code","sodium_missing","constant zero in this domain",0,FALSE,TRUE
+"B_table2_No_Model3_oral_score_hypertension_code","fat_missing","constant zero in this domain",0,FALSE,TRUE
+"B_table2_No_Model3_oral_score_hypertension_code","hdl_missing","linear dependence on retained model-matrix columns",1.31492183300648e-14,FALSE,TRUE
+"B_table2_No_Model3_periodontal_hypertension_code","sodium_missing","constant zero in this domain",0,FALSE,TRUE
+"B_table2_No_Model3_periodontal_hypertension_code","fat_missing","constant zero in this domain",0,FALSE,TRUE
+"B_table2_No_Model3_periodontal_hypertension_code","hdl_missing","linear dependence on retained model-matrix columns",1.77116271644776e-13,FALSE,TRUE
+"B_table2_Overall_Model2_oral_health_hypertension_code","sodium_missing","constant zero in this domain",0,FALSE,TRUE
+"B_table2_Overall_Model2_oral_health_hypertension_code","fat_missing","constant zero in this domain",0,FALSE,TRUE
+"B_table2_Overall_Model2_oral_score_hypertension_code","sodium_missing","constant zero in this domain",0,FALSE,TRUE
+"B_table2_Overall_Model2_oral_score_hypertension_code","fat_missing","constant zero in this domain",0,FALSE,TRUE
+"B_table2_Overall_Model2_periodontal_hypertension_code","sodium_missing","constant zero in this domain",0,FALSE,TRUE
+"B_table2_Overall_Model2_periodontal_hypertension_code","fat_missing","constant zero in this domain",0,FALSE,TRUE
+"B_table2_Overall_Model3_oral_health_hypertension_code","sodium_missing","constant zero in this domain",0,FALSE,TRUE
+"B_table2_Overall_Model3_oral_health_hypertension_code","fat_missing","constant zero in this domain",0,FALSE,TRUE
+"B_table2_Overall_Model3_oral_health_hypertension_code","hdl_missing","linear dependence on retained model-matrix columns",5.9176244484341e-14,FALSE,TRUE
+"B_table2_Overall_Model3_oral_score_hypertension_code","sodium_missing","constant zero in this domain",0,FALSE,TRUE
+"B_table2_Overall_Model3_oral_score_hypertension_code","fat_missing","constant zero in this domain",0,FALSE,TRUE
+"B_table2_Overall_Model3_oral_score_hypertension_code","hdl_missing","linear dependence on retained model-matrix columns",1.45340742121643e-13,FALSE,TRUE
+"B_table2_Overall_Model3_periodontal_hypertension_code","sodium_missing","constant zero in this domain",0,FALSE,TRUE
+"B_table2_Overall_Model3_periodontal_hypertension_code","fat_missing","constant zero in this domain",0,FALSE,TRUE
+"B_table2_Overall_Model3_periodontal_hypertension_code","hdl_missing","linear dependence on retained model-matrix columns",1.83845329384188e-13,FALSE,TRUE
+"B_table2_Yes_Model2_oral_health_hypertension_code","sodium_missing","constant zero in this domain",0,FALSE,TRUE
+"B_table2_Yes_Model2_oral_health_hypertension_code","fat_missing","constant zero in this domain",0,FALSE,TRUE
+"B_table2_Yes_Model2_oral_score_hypertension_code","sodium_missing","constant zero in this domain",0,FALSE,TRUE
+"B_table2_Yes_Model2_oral_score_hypertension_code","fat_missing","constant zero in this domain",0,FALSE,TRUE
+"B_table2_Yes_Model2_periodontal_hypertension_code","sodium_missing","constant zero in this domain",0,FALSE,TRUE
+"B_table2_Yes_Model2_periodontal_hypertension_code","fat_missing","constant zero in this domain",0,FALSE,TRUE
+"B_table2_Yes_Model3_oral_health_hypertension_code","sodium_missing","constant zero in this domain",0,FALSE,TRUE
+"B_table2_Yes_Model3_oral_health_hypertension_code","fat_missing","constant zero in this domain",0,FALSE,TRUE
+"B_table2_Yes_Model3_oral_health_hypertension_code","hdl_missing","linear dependence on retained model-matrix columns",3.54416133530327e-14,FALSE,TRUE
+"B_table2_Yes_Model3_oral_score_hypertension_code","sodium_missing","constant zero in this domain",0,FALSE,TRUE
+"B_table2_Yes_Model3_oral_score_hypertension_code","fat_missing","constant zero in this domain",0,FALSE,TRUE
+"B_table2_Yes_Model3_oral_score_hypertension_code","hdl_missing","linear dependence on retained model-matrix columns",3.33455988902874e-14,FALSE,TRUE
+"B_table2_Yes_Model3_periodontal_hypertension_code","sodium_missing","constant zero in this domain",0,FALSE,TRUE
+"B_table2_Yes_Model3_periodontal_hypertension_code","fat_missing","constant zero in this domain",0,FALSE,TRUE
+"B_table2_Yes_Model3_periodontal_hypertension_code","hdl_missing","linear dependence on retained model-matrix columns",7.80608482422268e-14,FALSE,TRUE

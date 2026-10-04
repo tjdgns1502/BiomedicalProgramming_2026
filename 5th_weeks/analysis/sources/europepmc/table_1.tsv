@@ -1,0 +1,62 @@
+Variables	Non-hypertension	Hypertension	p-value
+No. of participants	10,783(49.46)	11,017(50.54)	
+Age, y, mean (SE)	47.95(0.24)	59.04(0.21)	< 0.001
+Sex, N (%)			0.015
+Male	5140(46.74)	5412(48.93)	
+Female	5643(53.26)	5606(51.07)	
+Race/ethnicity, N(%)			< 0.001
+Mexican American	1753(9.21)	1283(5.90)	
+Other Hispanic	1193(6.14)	1060(4.90)	
+Non-Hispanic White	4363(67.38)	4469(68.23)	
+Non-Hispanic Black	1742(8.35)	2964(13.68)	
+Other Race-IncludingMulti-Racial	1732(8.91)	1241(7.29)	
+Smoking, N(%)			< 0.001
+Yes	4520(42.01)	5398(49.76)	
+No	6263(57.99)	5619(50.24)	
+Periodontal disease, N(%)			< 0.001
+Yes	1905(16.47)	2178(19.92)	
+No	8878(83.53)	8839(80.08)	
+Oral Health, N(%)			< 0.001
+Excellent/Very good	3584(40.87)	3185(34.83)	
+Good	3779(34.00)	3757(34.00)	
+Fair	2374(17.53)	2620(19.91)	
+Poor	1046(7.60)	1455(11.27)	
+Education, N(%)			< 0.001
+<High school	2374(13.77)	2923(17.13)	
+High school	2147(19.45)	2669(25.11)	
+>High school	6252(66.74)	5407(57.66)	
+Missing	10(0.01)	18(0.11)	
+BMI, N(%)			< 0.001
+< 18.5	232(1.83)	312(2.41)	
+18.5 ~ 24.9	3330(31.28)	1949(16.17)	
+25 ~ 29.9	3757(35.15)	3450(31.41)	
+≥ 30	3440(31.51)	5286(49.83)	
+Missing	24(0.23)	20(0.18)	
+Sleep duration, N(%)			< 0.001
+< 7	7679(68.23)	7672(67.52)	
+7 ~ 9	2737(28.93)	2747(27.53)	
+> 9	367(2.84)	598(4.95)	
+Alcohol consumption, N(%)			< 0.001
+No drinks	337(3.07)	615(4.87)	
+≤ 1 drink/week	4745(45.21)	4039(39.46)	
+> 1 drink/week	2145(25.24)	2072(23.82)	
+Missing	3556(26.48)	4291(31.84)	
+Physical activity, N(%)			< 0.001
+Inactive	4390(44.76)	3976(41.37)	
+Active	6384(55.20)	7037(58.62)	
+Missing	9(0.05)	4(0.01)	
+Total cholesterol, mg/dl, mean (SE)	197.71(0.67)	195.03(0.80)	< 0.001
+Triglyceride, mg/dl, mean (SE)	146.27(1.85)	172.62(1.90)	< 0.001
+Creatinine, mg/dl, mean (SE)	0.85(0.00)	0.95(0.01)	< 0.001
+HDL, mg/dl, mean (SE)	55.11(0.31)	52.64(0.29)	< 0.001
+HbA1c, mg/dl, mean (SE)	5.55(0.01)	5.98(0.01)	< 0.001
+Sodium, mg, mean (SE)	3575.03(25.86)	3476.48(25.77)	< 0.001
+Fat, g, mean (SE)	85.55(0.66)	81.87(0.63)	< 0.001
+History of CVD, N(%)			< 0.001
+Yes	537(4.31)	2257(17.90)	
+No	10,218(95.53)	8681(81.54)	
+Missing	28(0.16)	79(0.55)	
+Diabetes, N(%)			< 0.001
+Yes	874(5.79)	2872(21.86)	
+No	732(6.93)	1232(12.00)	
+Missing	9177(87.28)	6913(66.14)	

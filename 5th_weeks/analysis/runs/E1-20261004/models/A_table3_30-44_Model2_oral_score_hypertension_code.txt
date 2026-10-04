@@ -1,0 +1,39 @@
+
+Call:
+svyglm(formula = formula, design = design, family = stats::quasibinomial())
+
+Survey design:
+subset(full, candidate_domain)
+
+Coefficients:
+                                      Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                          -2.490513   0.161144 -15.455  < 2e-16 ***
+oral_score                            0.167525   0.043209   3.877  0.00028 ***
+sexFemale                            -0.419275   0.078237  -5.359 1.63e-06 ***
+raceMexican American                 -0.364476   0.130146  -2.801  0.00699 ** 
+raceOther Hispanic                   -0.182271   0.141744  -1.286  0.20377    
+raceNon-Hispanic Black                0.463536   0.096670   4.795 1.24e-05 ***
+raceOther race including multiracial  0.068749   0.119959   0.573  0.56887    
+educationHigh school                  0.182284   0.089713   2.032  0.04692 *  
+educationLess than high school        0.100485   0.112582   0.893  0.37592    
+educationMissing                      1.671322   1.254258   1.333  0.18809    
+bmi_category<18.5                    -0.358733   0.737297  -0.487  0.62847    
+bmi_category25-29.9                   0.679274   0.115739   5.869 2.48e-07 ***
+bmi_category>=30                      1.515311   0.110707  13.688  < 2e-16 ***
+bmi_categoryMissing                   2.055992   0.395320   5.201 2.90e-06 ***
+sleep_category<7 hours                0.250052   0.074814   3.342  0.00149 ** 
+sleep_category>9 hours                0.348533   0.177922   1.959  0.05511 .  
+sleep_categoryMissing                 0.710337   0.538829   1.318  0.19277    
+alcohol_category<=1 drink/week       -0.047450   0.118565  -0.400  0.69053    
+alcohol_category>1 drink/week         0.164644   0.112298   1.466  0.14820    
+alcohol_categoryMissing               0.044046   0.147614   0.298  0.76651    
+activity_categoryActive              -0.001675   0.083774  -0.020  0.98412    
+activity_categoryMissing             -9.106341   1.038271  -8.771 4.24e-12 ***
+smokingYes                            0.291821   0.090736   3.216  0.00216 ** 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for quasibinomial family taken to be 1.000863)
+
+Number of Fisher Scoring iterations: 9
+

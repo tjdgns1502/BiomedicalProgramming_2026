@@ -1,0 +1,8 @@
+{
+  "run_id": "R2-20261004",
+  "master_sha256": "1c4abc2816600342d812911efa21bb5e530667a6b7db6807ddfe0b72e1075e7d",
+  "artifact_manifest_sha256": "e7059f9a4b477bb69c2a3eecf88b16f812516d0a002dde4a7b897c50580305d2",
+  "report_sha256": "c90f6046da60101dafa8695b5bbde9a2b39a57d0b08fb6437fb62f2d28ef3331",
+  "data_version": "nhanes-2009-2018-7ad570c1e84a460b267c",
+  "master_manifest_verified": true
+}

@@ -1,0 +1,182 @@
+{
+  "task": "R-CAT-001",
+  "revision": "1.1",
+  "run_id": "R2-20261004",
+  "stage": "all",
+  "started_utc": "2026-10-04T06:50:28Z",
+  "completed_utc": "2026-10-04T06:58:59Z",
+  "data_version": "nhanes-2009-2018-7ad570c1e84a460b267c",
+  "source_input_run": null,
+  "source_cache_policy": "Existing valid files are read only; corruption is a hard failure.",
+  "qa": {
+    "flow": [
+      {
+        "stage": "all_demo",
+        "n": 49693,
+        "excluded_since_previous": null
+      },
+      {
+        "stage": "age30",
+        "n": 24042,
+        "excluded_since_previous": 25651
+      },
+      {
+        "stage": "valid_measured_sbp_dbp",
+        "n": 22163,
+        "excluded_since_previous": 1879
+      },
+      {
+        "stage": "observed_periodontal",
+        "n": 21515,
+        "excluded_since_previous": 648
+      },
+      {
+        "stage": "observed_oral_health",
+        "n": 21488,
+        "excluded_since_previous": 27
+      },
+      {
+        "stage": "observed_smoking",
+        "n": 21476,
+        "excluded_since_previous": 12
+      },
+      {
+        "stage": "observed_hypertension",
+        "n": 21458,
+        "excluded_since_previous": 18
+      },
+      {
+        "stage": "positive_mec_weight_valid_design",
+        "n": 21458,
+        "excluded_since_previous": 0
+      }
+    ],
+    "analysis_n": 21458,
+    "htn_raw_n": 10689,
+    "no_htn_raw_n": 10769,
+    "htn_raw_percent": 49.813589337310091,
+    "mec_design_n": 47652,
+    "zero_dbp_people_all": 983,
+    "zero_dbp_people_included": 271,
+    "medication_structural_no_n": 22673,
+    "medication_conflict_n": 0
+  },
+  "survey_design": {
+    "full_mec_n": 47652,
+    "domain_n": 21458,
+    "full_design_df": 78,
+    "domain_design_df": 78,
+    "strata_n": 74,
+    "lonely_psu_policy": "fail"
+  },
+  "htn_weighted_percent": 44.91788572859339,
+  "htn_weighted_percent_se": 0.68313519849182691,
+  "warnings_n": 0,
+  "invariants_passed": 105,
+  "models": {
+    "metadata": {
+      "Model1_periodontal": {
+        "formula": "hypertension_code ~ periodontal + age + sex + race + education",
+        "outcome": "hypertension_code",
+        "independent_variable": "periodontal",
+        "n": 21458,
+        "converged": true,
+        "design_df": 78,
+        "residual_df": 68,
+        "rank": 11,
+        "aliased_terms": null
+      },
+      "Model1_oral_health": {
+        "formula": "hypertension_code ~ oral_health + age + sex + race + education",
+        "outcome": "hypertension_code",
+        "independent_variable": "oral_health",
+        "n": 21458,
+        "converged": true,
+        "design_df": 78,
+        "residual_df": 66,
+        "rank": 13,
+        "aliased_terms": null
+      }
+    },
+    "exposure_results": [
+      {
+        "term": "periodontalYes",
+        "log_odds": 0.29512753734010805,
+        "se": 0.049077334264864166,
+        "odds_ratio": 1.3432976683734512,
+        "ci_low": 1.2179818181842801,
+        "ci_high": 1.4815070298401931,
+        "t_statistic": 6.0135201261613362,
+        "p_value": 8.0529008729950808e-08,
+        "design_df": 78,
+        "model_residual_df": 68,
+        "ci_method": "Wald t with survey model residual degrees of freedom",
+        "is_exposure": true,
+        "model": "Model1",
+        "exposure": "periodontal",
+        "outcome": "hypertension_code",
+        "subgroup": "Overall",
+        "_row": "periodontalYes"
+      },
+      {
+        "term": "oral_healthGood",
+        "log_odds": 0.19707401809977382,
+        "se": 0.04672761284166662,
+        "odds_ratio": 1.2178341791417091,
+        "ci_low": 1.1093556251964927,
+        "ci_high": 1.3369203294237277,
+        "t_statistic": 4.217506654310502,
+        "p_value": 7.6903873660636774e-05,
+        "design_df": 78,
+        "model_residual_df": 66,
+        "ci_method": "Wald t with survey model residual degrees of freedom",
+        "is_exposure": true,
+        "model": "Model1",
+        "exposure": "oral_health",
+        "outcome": "hypertension_code",
+        "subgroup": "Overall",
+        "_row": "oral_healthGood"
+      },
+      {
+        "term": "oral_healthFair",
+        "log_odds": 0.38050133430924982,
+        "se": 0.058941588200308252,
+        "odds_ratio": 1.4630178666619531,
+        "ci_low": 1.3005934450693324,
+        "ci_high": 1.64572663831778,
+        "t_statistic": 6.4555663654013973,
+        "p_value": 1.4869368679188631e-08,
+        "design_df": 78,
+        "model_residual_df": 66,
+        "ci_method": "Wald t with survey model residual degrees of freedom",
+        "is_exposure": true,
+        "model": "Model1",
+        "exposure": "oral_health",
+        "outcome": "hypertension_code",
+        "subgroup": "Overall",
+        "_row": "oral_healthFair"
+      },
+      {
+        "term": "oral_healthPoor",
+        "log_odds": 0.59592190133903389,
+        "se": 0.078855237349240367,
+        "odds_ratio": 1.8147031513022238,
+        "ci_low": 1.5503525244480802,
+        "ci_high": 2.124128206595187,
+        "t_statistic": 7.5571632445891632,
+        "p_value": 1.6420990169510764e-10,
+        "design_df": 78,
+        "model_residual_df": 66,
+        "ci_method": "Wald t with survey model residual degrees of freedom",
+        "is_exposure": true,
+        "model": "Model1",
+        "exposure": "oral_health",
+        "outcome": "hypertension_code",
+        "subgroup": "Overall",
+        "_row": "oral_healthPoor"
+      }
+    ]
+  },
+  "target_comparison": "Published results visible during source review; no tuning against counts/ORs.",
+  "scope": "Core Table1 and separate Model1 candidate models; Model2/3 and strata require extension."
+}

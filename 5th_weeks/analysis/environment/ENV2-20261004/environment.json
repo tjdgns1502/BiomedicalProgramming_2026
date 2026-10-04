@@ -1,0 +1,54 @@
+{
+  "snapshot_id": "ENV2-20261004",
+  "captured_utc": "2026-10-04T07:34:07Z",
+  "project_root": "C:/Users/doyun/Desktop/2026-2/의생명프로그래밍/5주차",
+  "R": {
+    "platform": "x86_64-w64-mingw32",
+    "arch": "x86_64",
+    "os": "mingw32",
+    "crt": "ucrt",
+    "system": "x86_64, mingw32",
+    "status": "",
+    "major": "4",
+    "minor": "6.1",
+    "year": "2026",
+    "month": "06",
+    "day": "24",
+    "svn rev": "90187",
+    "language": "R",
+    "version.string": "R version 4.6.1 (2026-06-24 ucrt)",
+    "nickname": "Happy Hop"
+  },
+  "R_home": "C:/PROGRA~1/R/R-46~1.1",
+  "locale": "LC_COLLATE=English_United States.utf8;LC_CTYPE=English_United States.utf8;LC_MONETARY=English_United States.utf8;LC_NUMERIC=C;LC_TIME=English_United States.utf8",
+  "library_paths": ["C:/Users/doyun/Desktop/2026-2/의생명프로그래밍/5주차/analysis/r-library", "C:/Users/doyun/AppData/Local/R/win-library/4.6", "C:/Program Files/R/R-4.6.1/library"],
+  "sys_info": {
+    "sysname": "Windows",
+    "release": "10 x64",
+    "version": "build 26200",
+    "nodename": "DESKTOP-Q7DH32E",
+    "machine": "x86-64",
+    "login": "doyun",
+    "user": "doyun",
+    "effective_user": "doyun",
+    "udomain": "DESKTOP-Q7DH32E"
+  },
+  "project_package_n": 31,
+  "visible_package_n": 183,
+  "package_policy": "Inspection only: no installation, update, lock, or library modification.",
+  "session_scope": "Collector session. Original analysis sessions remain in each run logs/sessionInfo.txt.",
+  "run_check": {
+    "run_id": "R2-20261004",
+    "status": {
+      "status": "success",
+      "started_utc": "2026-10-04T06:50:28Z",
+      "completed_utc": "2026-10-04T06:58:59Z",
+      "run_id": "R2-20261004",
+      "data_version": "nhanes-2009-2018-7ad570c1e84a460b267c"
+    },
+    "scope": "Artifact bytes only; this is not an independent statistical validation.",
+    "artifact_manifest_sha256": "e7059f9a4b477bb69c2a3eecf88b16f812516d0a002dde4a7b897c50580305d2",
+    "checked_n": 35,
+    "all_hashes_match": true
+  }
+}

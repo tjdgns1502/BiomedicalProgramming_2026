@@ -1,0 +1,6 @@
+{
+  "status": "failed",
+  "failed_utc": "2026-10-04T06:47:01Z",
+  "error": "Download failed after initial attempt and two retries: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/DEMO_F.xpt",
+  "run_id": "R1-20261004"
+}

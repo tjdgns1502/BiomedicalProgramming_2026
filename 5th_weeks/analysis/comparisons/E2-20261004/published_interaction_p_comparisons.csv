@@ -1,0 +1,5 @@
+﻿family,candidate,exposure,modifier,published_p_text,calculated_joint_Wald_p,comparison_limit
+table2,A,periodontal,smoking,<0.001,0.702667101451557,Publication does not identify the fitted interaction model and denominator df; analyst M3 joint Wald candidate.
+table2,A,oral_health,smoking,<0.001,0.025043784825528,Publication does not identify the fitted interaction model and denominator df; analyst M3 joint Wald candidate.
+table3,A,periodontal,age_group,<0.001,0.00187615388219518,Publication does not identify the fitted interaction model and denominator df; analyst M3 joint Wald candidate.
+table3,A,oral_health,age_group,<0.001,0.317545260736714,Publication does not identify the fitted interaction model and denominator df; analyst M3 joint Wald candidate.

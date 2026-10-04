@@ -1,0 +1,5 @@
+"example","statistic","p_value","source_type"
+"course_fisher_8_2_2_8",NA,0.0230141375652211,"course_synthetic"
+"course_pearson_germination",33.3333333333333,5.77774851941913e-08,"course_synthetic"
+"synthetic_paired_exact",NA,0.000324914231896401,"course_synthetic_paired"
+"synthetic_paired_McNemar_Yates",12.0333333333333,0.000522575395124247,"course_synthetic_paired"

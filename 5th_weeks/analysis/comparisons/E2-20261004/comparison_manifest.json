@@ -1,0 +1,65 @@
+{
+  "run_id": "E2-20261004",
+  "created_at": "2026-10-04T08:05:56.540689+00:00",
+  "core_data_version": "nhanes-2009-2018-7ad570c1e84a460b267c",
+  "extended_data_version": "nhanes-2009-2018-harmonizedJ-d8f04b7c96c89c31956a",
+  "source_hashes": {
+    "table_1.tsv": "4668b637d83ec30d47997171c6529e4c3182e9997b42a4f7c625300c1e09e3d3",
+    "table_2.tsv": "f2ff037df7309fdc9acd8628575cb5f60ed83e2925d20dca7d6599a0ef6ee762",
+    "table_3.tsv": "90ea89ee890e9878ff2157120a34e9e5682c5d28adf0639f5ea1506294976d37",
+    "12889_2023_16012_MOESM1_ESM.txt": "90bb2c3f2e5e33add2808007410750a230ccbcf0f1609c8c19bda35020e00361"
+  },
+  "comparisons_sha256": "9bae521bdcf48693e5b08cb552e80f1ef7aedff18db9ed0f5ddd367dcf3c1436",
+  "OR_rows": 84,
+  "review_records": [
+    {
+      "path": "reviews/E1-20261004-q-review.json",
+      "sha256": "cab140030972447f3559e73b6ddd213917cef6502752d26cd9b584112cf84f90",
+      "decision": "accept",
+      "reviewer": "plan_review"
+    },
+    {
+      "path": "reviews/E1-data-review.json",
+      "sha256": "51c9554f0369a8773156427e1122f8a7db0ef547a380459558e454e7f95108f2",
+      "decision": "accept",
+      "reviewer": "Q-data"
+    },
+    {
+      "path": "reviews/E2-20261004-data-review.json",
+      "sha256": "4295b25581cb19c83a986e56fb394d14bcc4b82c208dbdc3fb3cc7df76bf2799",
+      "decision": "accept",
+      "reviewer": "Q-data"
+    },
+    {
+      "path": "reviews/E2-20261004-q-review.json",
+      "sha256": "cf2095a869d7048e4d57e80a2d148b3c72114d00182e436ae603a836a564e1cf",
+      "decision": "accept",
+      "reviewer": "plan_review"
+    },
+    {
+      "path": "reviews/E2-plan1.5-code-q-review.json",
+      "sha256": "e1d0fbb7210659c8727fb5c0685133392b2a7ef6b66696acb40ec0707ae98c1b",
+      "decision": "accept",
+      "reviewer": "plan_review"
+    },
+    {
+      "path": "reviews/R2-20261004-q-review.json",
+      "sha256": "e2336b63af67a54d9bea3d5a6a8504832ce87150d571d74a3a9bc7d70994eb7a",
+      "decision": "accept",
+      "reviewer": "plan_review"
+    },
+    {
+      "path": "reviews/R2-data-review.json",
+      "sha256": "74fd2969ca0efe2608580aab2b5936177d39b32b8d49ddb1c258d3ade750d2ea",
+      "decision": "accept",
+      "reviewer": "Q-data"
+    },
+    {
+      "path": "reviews/V1-20261004-q-review.json",
+      "sha256": "7f2fc4957e3e1aed302d5f2cc6c5bbcefba1785d2c056dc6528bbc9aa9ed3922",
+      "decision": "accept",
+      "reviewer": "plan_review"
+    }
+  ],
+  "not_blinded": "Published results visible during source review; no numeric tuning performed."
+}

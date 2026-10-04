@@ -1,0 +1,61 @@
+
+Call:
+svyglm(formula = formula, design = design, family = stats::quasibinomial())
+
+Survey design:
+subset(full, candidate_domain)
+
+Coefficients: (2 not defined because of singularities)
+                                       Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                          -5.420e+00  2.430e-01 -22.303  < 2e-16 ***
+oral_healthGood                       1.142e-01  5.489e-02   2.081 0.045061 *  
+oral_healthFair                       4.046e-01  7.234e-02   5.593 2.91e-06 ***
+oral_healthPoor                       5.557e-01  1.211e-01   4.589 5.82e-05 ***
+smokingYes                            1.917e-01  7.051e-02   2.719 0.010245 *  
+age                                   5.875e-02  1.941e-03  30.266  < 2e-16 ***
+sexFemale                             8.789e-02  5.176e-02   1.698 0.098676 .  
+raceMexican American                 -3.728e-01  7.751e-02  -4.810 3.02e-05 ***
+raceOther Hispanic                   -3.837e-02  7.355e-02  -0.522 0.605279    
+raceNon-Hispanic Black                6.066e-01  5.760e-02  10.532 3.04e-12 ***
+raceOther race including multiracial  1.232e-01  7.052e-02   1.747 0.089581 .  
+educationHigh school                  1.735e-01  5.693e-02   3.047 0.004443 ** 
+educationLess than high school        1.349e-01  5.738e-02   2.351 0.024634 *  
+educationMissing                      8.445e-01  5.725e-01   1.475 0.149410    
+bmi_category<18.5                     6.516e-02  2.288e-01   0.285 0.777504    
+bmi_category25-29.9                   5.016e-01  5.167e-02   9.707 2.48e-11 ***
+bmi_category>=30                      1.069e+00  6.323e-02  16.908  < 2e-16 ***
+bmi_categoryMissing                   1.003e+00  1.899e-01   5.281 7.41e-06 ***
+sleep_category<7 hours                1.829e-01  4.854e-02   3.768 0.000627 ***
+sleep_category>9 hours                3.119e-01  9.799e-02   3.183 0.003112 ** 
+sleep_categoryMissing                 5.398e-01  2.553e-01   2.115 0.041883 *  
+alcohol_category<=1 drink/week       -3.880e-02  6.572e-02  -0.590 0.558850    
+alcohol_category>1 drink/week         2.286e-01  6.342e-02   3.605 0.000988 ***
+alcohol_categoryMissing               2.926e-02  1.010e-01   0.290 0.773834    
+activity_categoryActive              -1.532e-01  4.787e-02  -3.201 0.002963 ** 
+activity_categoryMissing             -1.975e+00  9.790e-01  -2.017 0.051637 .  
+cvd_categoryYes                       6.210e-01  8.326e-02   7.459 1.18e-08 ***
+cvd_categoryMissing                   9.673e-01  3.584e-01   2.699 0.010748 *  
+diabetes_categoryYes                  6.885e-01  7.964e-02   8.645 4.23e-10 ***
+diabetes_categoryMissing              4.270e-01  1.327e-01   3.218 0.002837 ** 
+sodium_filled                         8.016e-05  1.880e-05   4.264 0.000151 ***
+sodium_missing                        6.844e-02  1.019e-01   0.671 0.506577    
+fat_filled                           -2.507e-03  6.438e-04  -3.895 0.000438 ***
+total_cholesterol_filled             -5.908e-04  7.142e-04  -0.827 0.413917    
+total_cholesterol_missing            -6.165e-01  3.486e-01  -1.769 0.085929 .  
+creatinine_filled                     5.161e-01  9.132e-02   5.651 2.45e-06 ***
+creatinine_missing                   -2.314e-01  7.261e-01  -0.319 0.751868    
+triglycerides_biopro_filled           1.212e-03  3.994e-04   3.036 0.004579 ** 
+triglycerides_biopro_missing          7.303e-01  6.751e-01   1.082 0.286917    
+hba1c_filled                          4.685e-02  2.441e-02   1.919 0.063357 .  
+hba1c_missing                         2.761e-01  2.177e-01   1.268 0.213298    
+hdl_filled                            9.359e-04  2.095e-03   0.447 0.657895    
+oral_healthGood:smokingYes           -1.805e-02  9.058e-02  -0.199 0.843241    
+oral_healthFair:smokingYes           -3.197e-01  1.150e-01  -2.780 0.008789 ** 
+oral_healthPoor:smokingYes           -3.204e-01  1.715e-01  -1.868 0.070377 .  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for quasibinomial family taken to be 1.076569)
+
+Number of Fisher Scoring iterations: 5
+

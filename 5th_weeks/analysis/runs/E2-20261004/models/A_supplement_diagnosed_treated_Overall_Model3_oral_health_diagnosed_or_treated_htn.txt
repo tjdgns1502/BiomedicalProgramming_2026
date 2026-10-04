@@ -1,0 +1,50 @@
+
+Call:
+svyglm(formula = formula, design = design, family = stats::quasibinomial())
+
+Survey design:
+subset(full, candidate_domain)
+
+Coefficients: (1 not defined because of singularities)
+                                       Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                          -6.0764974  0.2631567 -23.091  < 2e-16 ***
+oral_healthGood                       0.1410002  0.0536210   2.630 0.011659 *  
+oral_healthFair                       0.3134273  0.0659068   4.756 2.07e-05 ***
+oral_healthPoor                       0.4819716  0.0941256   5.121 6.15e-06 ***
+age                                   0.0624763  0.0019948  31.320  < 2e-16 ***
+sexFemale                             0.1765361  0.0526131   3.355 0.001618 ** 
+raceMexican American                 -0.4817725  0.0754664  -6.384 8.39e-08 ***
+raceOther Hispanic                   -0.0427629  0.0797668  -0.536 0.594530    
+raceNon-Hispanic Black                0.5715758  0.0557439  10.254 2.36e-13 ***
+raceOther race including multiracial  0.1625570  0.0708355   2.295 0.026459 *  
+educationHigh school                  0.1515197  0.0557088   2.720 0.009248 ** 
+educationLess than high school        0.1722053  0.0619643   2.779 0.007926 ** 
+educationMissing                      0.1675115  0.5414321   0.309 0.758456    
+bmi_category<18.5                     0.0820167  0.2343051   0.350 0.727940    
+bmi_category25-29.9                   0.6196561  0.0587439  10.548 9.51e-14 ***
+bmi_category>=30                      1.2456782  0.0622105  20.024  < 2e-16 ***
+bmi_categoryMissing                   1.3170813  0.2192465   6.007 3.05e-07 ***
+sleep_category<7 hours                0.1875727  0.0519032   3.614 0.000757 ***
+sleep_category>9 hours                0.3474094  0.1034163   3.359 0.001599 ** 
+sleep_categoryMissing                 0.6554554  0.2606682   2.515 0.015563 *  
+alcohol_category<=1 drink/week       -0.0250547  0.0662509  -0.378 0.707076    
+alcohol_category>1 drink/week         0.2228402  0.0662618   3.363 0.001582 ** 
+alcohol_categoryMissing              -0.0332907  0.0947310  -0.351 0.726911    
+activity_categoryActive              -0.2038869  0.0511625  -3.985 0.000244 ***
+activity_categoryMissing             -1.7199638  0.8859086  -1.941 0.058479 .  
+total_cholesterol_filled             -0.0034384  0.0007412  -4.639 3.03e-05 ***
+total_cholesterol_missing            -0.5939454  0.3800286  -1.563 0.125083    
+creatinine_filled                     0.6732868  0.0936876   7.187 5.39e-09 ***
+creatinine_missing                   -0.3109124  0.8142211  -0.382 0.704368    
+triglycerides_biopro_filled           0.0013125  0.0003791   3.462 0.001186 ** 
+triglycerides_biopro_missing          0.8293044  0.7653372   1.084 0.284323    
+hba1c_filled                          0.2058031  0.0259472   7.932 4.34e-10 ***
+hba1c_missing                         0.2667945  0.2046656   1.304 0.199013    
+hdl_filled                           -0.0007497  0.0023113  -0.324 0.747177    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for quasibinomial family taken to be 1.044906)
+
+Number of Fisher Scoring iterations: 5
+

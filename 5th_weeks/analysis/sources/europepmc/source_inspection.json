@@ -1,0 +1,26 @@
+[
+  {
+    "file": "supplementary\\12889_2023_16012_MOESM1_ESM.pdf",
+    "bytes": 128533,
+    "md5": "20dca1751450955a6992dccbccd59b8b",
+    "sha256": "3491386e3f09fbf2ebc32f78b15e6d582e6b0f977d036ac2d515dcb5ef330eeb",
+    "pdf_magic": "%PDF-",
+    "pages": 2,
+    "text": "12889_2023_16012_MOESM1_ESM.txt"
+  },
+  {
+    "table": "Table 1",
+    "output": "table_1.tsv",
+    "footnotes": "All N are analytic sample NSE, standard error of meanAll % and mean (SE) are weighted in order to represent the USA populationBMI, body mass index; HbA1c, glycohemoglobin A1c;HDL, high-density lipoprotein"
+  },
+  {
+    "table": "Table 2",
+    "output": "table_2.tsv",
+    "footnotes": "Model 1: adjusted for age, sex, race/ethnicity, educationModel 2: Model 1 plus BMI, sleep duration, alcohol intake, physical activity,history of CVD, diabetes, sodium, fatModel 3: Model 2 plus total cholesterol, creatinine, triglyceride, HbA1c, HDL."
+  },
+  {
+    "table": "Table 3",
+    "output": "table_3.tsv",
+    "footnotes": "Model 1: adjusted for sex, race/ethnicity, educationModel 2: Model 1 plus BMI, sleep duration, alcohol intake, physical activity, smokingModel 3: Model 2 plus total cholesterol, creatinine, triglyceride, HbA1c, HDL."
+  }
+]

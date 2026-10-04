@@ -1,0 +1,480 @@
+{
+  "role": "Q-data",
+  "review_id": "Q-DATA-R2-20261004",
+  "run_id": "R2-20261004",
+  "reviewer_exposure": {
+    "source_author": true,
+    "published_targets_seen": true,
+    "analysis_code_author": false,
+    "statement": "Independent agent instance; source author and target exposure disclosed. This is internal independent data QA, not external validation."
+  },
+  "exact_version": {
+    "data_version": "nhanes-2009-2018-7ad570c1e84a460b267c",
+    "executed_script_sha256": "f14840f51eabaa442b5273d11fce825e59fdfde61b79f0e20a99fd21079083f3",
+    "current_source_sha256": "f14840f51eabaa442b5273d11fce825e59fdfde61b79f0e20a99fd21079083f3",
+    "master_sha256": "1c4abc2816600342d812911efa21bb5e530667a6b7db6807ddfe0b72e1075e7d",
+    "report_sha256": "c90f6046da60101dafa8695b5bbde9a2b39a57d0b08fb6437fb62f2d28ef3331",
+    "reviewer_script_sha256": "113e83d657e3e78fafd6adf7066b5cc927b9b531f1f38ddeab4a50cfea3bfca1"
+  },
+  "status": "accept",
+  "scope": "Core 5-component raw data reconstruction, source hashes, selected sample, BP/skip definitions, Table1 point values, MEC design IDs and degrees of freedom. Model inference and V checks intentionally not duplicated.",
+  "checks": [
+    {
+      "id": "all_source_hashes",
+      "passed": true,
+      "evidence": {
+        "n": 50,
+        "failed": []
+      }
+    },
+    {
+      "id": "25_unique_raw_files",
+      "passed": true,
+      "evidence": 25
+    },
+    {
+      "id": "raw_unique_2009-2010_DEMO",
+      "passed": true,
+      "evidence": 10537
+    },
+    {
+      "id": "raw_unique_2009-2010_OHQ",
+      "passed": true,
+      "evidence": 5177
+    },
+    {
+      "id": "raw_unique_2009-2010_BPQ",
+      "passed": true,
+      "evidence": 6889
+    },
+    {
+      "id": "raw_unique_2009-2010_BPX",
+      "passed": true,
+      "evidence": 10253
+    },
+    {
+      "id": "raw_unique_2009-2010_SMQ",
+      "passed": true,
+      "evidence": 7528
+    },
+    {
+      "id": "raw_unique_2011-2012_DEMO",
+      "passed": true,
+      "evidence": 9756
+    },
+    {
+      "id": "raw_unique_2011-2012_OHQ",
+      "passed": true,
+      "evidence": 9364
+    },
+    {
+      "id": "raw_unique_2011-2012_BPQ",
+      "passed": true,
+      "evidence": 6175
+    },
+    {
+      "id": "raw_unique_2011-2012_BPX",
+      "passed": true,
+      "evidence": 9338
+    },
+    {
+      "id": "raw_unique_2011-2012_SMQ",
+      "passed": true,
+      "evidence": 6790
+    },
+    {
+      "id": "raw_unique_2013-2014_DEMO",
+      "passed": true,
+      "evidence": 10175
+    },
+    {
+      "id": "raw_unique_2013-2014_OHQ",
+      "passed": true,
+      "evidence": 9770
+    },
+    {
+      "id": "raw_unique_2013-2014_BPQ",
+      "passed": true,
+      "evidence": 6464
+    },
+    {
+      "id": "raw_unique_2013-2014_BPX",
+      "passed": true,
+      "evidence": 9813
+    },
+    {
+      "id": "raw_unique_2013-2014_SMQ",
+      "passed": true,
+      "evidence": 7168
+    },
+    {
+      "id": "raw_unique_2015-2016_DEMO",
+      "passed": true,
+      "evidence": 9971
+    },
+    {
+      "id": "raw_unique_2015-2016_OHQ",
+      "passed": true,
+      "evidence": 9575
+    },
+    {
+      "id": "raw_unique_2015-2016_BPQ",
+      "passed": true,
+      "evidence": 6327
+    },
+    {
+      "id": "raw_unique_2015-2016_BPX",
+      "passed": true,
+      "evidence": 9544
+    },
+    {
+      "id": "raw_unique_2015-2016_SMQ",
+      "passed": true,
+      "evidence": 7001
+    },
+    {
+      "id": "raw_unique_2017-2018_DEMO",
+      "passed": true,
+      "evidence": 9254
+    },
+    {
+      "id": "raw_unique_2017-2018_OHQ",
+      "passed": true,
+      "evidence": 8897
+    },
+    {
+      "id": "raw_unique_2017-2018_BPQ",
+      "passed": true,
+      "evidence": 6161
+    },
+    {
+      "id": "raw_unique_2017-2018_BPX",
+      "passed": true,
+      "evidence": 8704
+    },
+    {
+      "id": "raw_unique_2017-2018_SMQ",
+      "passed": true,
+      "evidence": 6724
+    },
+    {
+      "id": "independent_cycle_key_unique",
+      "passed": true,
+      "evidence": 49693
+    },
+    {
+      "id": "flow_matches_independent_raw_reconstruction",
+      "passed": true,
+      "evidence": [
+        {
+          "stage": "all_demo",
+          "n": 49693,
+          "_row": "all_demo"
+        },
+        {
+          "stage": "age30",
+          "n": 24042,
+          "_row": "age30"
+        },
+        {
+          "stage": "valid_measured_sbp_dbp",
+          "n": 22163,
+          "_row": "valid_measured_sbp_dbp"
+        },
+        {
+          "stage": "observed_periodontal",
+          "n": 21515,
+          "_row": "observed_periodontal"
+        },
+        {
+          "stage": "observed_oral_health",
+          "n": 21488,
+          "_row": "observed_oral_health"
+        },
+        {
+          "stage": "observed_smoking",
+          "n": 21476,
+          "_row": "observed_smoking"
+        },
+        {
+          "stage": "observed_hypertension",
+          "n": 21458,
+          "_row": "observed_hypertension"
+        },
+        {
+          "stage": "positive_mec_weight_valid_design",
+          "n": 21458,
+          "_row": "positive_mec_weight_valid_design"
+        }
+      ]
+    },
+    {
+      "id": "master_raw_keys",
+      "passed": true,
+      "evidence": {
+        "raw_n": 49693,
+        "master_n": 49693
+      }
+    },
+    {
+      "id": "master_raw_SEQN",
+      "passed": true,
+      "evidence": "SEQN"
+    },
+    {
+      "id": "master_raw_RIDAGEYR",
+      "passed": true,
+      "evidence": "RIDAGEYR"
+    },
+    {
+      "id": "master_raw_RIAGENDR",
+      "passed": true,
+      "evidence": "RIAGENDR"
+    },
+    {
+      "id": "master_raw_RIDRETH1",
+      "passed": true,
+      "evidence": "RIDRETH1"
+    },
+    {
+      "id": "master_raw_DMDEDUC2",
+      "passed": true,
+      "evidence": "DMDEDUC2"
+    },
+    {
+      "id": "master_raw_WTMEC2YR",
+      "passed": true,
+      "evidence": "WTMEC2YR"
+    },
+    {
+      "id": "master_raw_SDMVPSU",
+      "passed": true,
+      "evidence": "SDMVPSU"
+    },
+    {
+      "id": "master_raw_SDMVSTRA",
+      "passed": true,
+      "evidence": "SDMVSTRA"
+    },
+    {
+      "id": "master_raw_OHQ835",
+      "passed": true,
+      "evidence": "OHQ835"
+    },
+    {
+      "id": "master_raw_OHQ845",
+      "passed": true,
+      "evidence": "OHQ845"
+    },
+    {
+      "id": "master_raw_SMQ020",
+      "passed": true,
+      "evidence": "SMQ020"
+    },
+    {
+      "id": "master_raw_BPQ020",
+      "passed": true,
+      "evidence": "BPQ020"
+    },
+    {
+      "id": "master_raw_BPQ040A",
+      "passed": true,
+      "evidence": "BPQ040A"
+    },
+    {
+      "id": "master_raw_BPQ050A",
+      "passed": true,
+      "evidence": "BPQ050A"
+    },
+    {
+      "id": "master_raw_BPXSY1",
+      "passed": true,
+      "evidence": "BPXSY1"
+    },
+    {
+      "id": "master_raw_BPXSY2",
+      "passed": true,
+      "evidence": "BPXSY2"
+    },
+    {
+      "id": "master_raw_BPXSY3",
+      "passed": true,
+      "evidence": "BPXSY3"
+    },
+    {
+      "id": "master_raw_BPXSY4",
+      "passed": true,
+      "evidence": "BPXSY4"
+    },
+    {
+      "id": "master_raw_BPXDI1",
+      "passed": true,
+      "evidence": "BPXDI1"
+    },
+    {
+      "id": "master_raw_BPXDI2",
+      "passed": true,
+      "evidence": "BPXDI2"
+    },
+    {
+      "id": "master_raw_BPXDI3",
+      "passed": true,
+      "evidence": "BPXDI3"
+    },
+    {
+      "id": "master_raw_BPXDI4",
+      "passed": true,
+      "evidence": "BPXDI4"
+    },
+    {
+      "id": "derived_mean_sbp",
+      "passed": true,
+      "evidence": "mean_sbp"
+    },
+    {
+      "id": "derived_mean_dbp",
+      "passed": true,
+      "evidence": "mean_dbp"
+    },
+    {
+      "id": "derived_n_valid_sbp",
+      "passed": true,
+      "evidence": "n_valid_sbp"
+    },
+    {
+      "id": "derived_n_valid_dbp",
+      "passed": true,
+      "evidence": "n_valid_dbp"
+    },
+    {
+      "id": "derived_periodontal_code",
+      "passed": true,
+      "evidence": "periodontal_code"
+    },
+    {
+      "id": "derived_smoking_code",
+      "passed": true,
+      "evidence": "smoking_code"
+    },
+    {
+      "id": "derived_measured_htn",
+      "passed": true,
+      "evidence": "measured_htn"
+    },
+    {
+      "id": "derived_diagnosis_htn",
+      "passed": true,
+      "evidence": "diagnosis_htn"
+    },
+    {
+      "id": "derived_medication_htn",
+      "passed": true,
+      "evidence": "medication_htn"
+    },
+    {
+      "id": "derived_hypertension_code",
+      "passed": true,
+      "evidence": "hypertension_code"
+    },
+    {
+      "id": "derived_mec_weight",
+      "passed": true,
+      "evidence": "mec_weight"
+    },
+    {
+      "id": "derived_oral",
+      "passed": true,
+      "evidence": ["Excellent/Very good", "Good", "Fair", "Poor"]
+    },
+    {
+      "id": "derived_analysis_domain",
+      "passed": true,
+      "evidence": 21458
+    },
+    {
+      "id": "derived_structural_med_no",
+      "passed": true,
+      "evidence": 22673
+    },
+    {
+      "id": "table1_all_counts_denominators_weighted_points",
+      "passed": true,
+      "evidence": {
+        "rows": 69,
+        "failed": []
+      }
+    },
+    {
+      "id": "htn_weighted_point",
+      "passed": true,
+      "evidence": 44.91788572859339
+    },
+    {
+      "id": "reported_n_and_outcome_counts",
+      "passed": true,
+      "evidence": {
+        "n": 21458,
+        "yes": 10689,
+        "no": 10769
+      }
+    },
+    {
+      "id": "survey_design_counts_and_df",
+      "passed": true,
+      "evidence": {
+        "full_mec_n": 47652,
+        "domain_n": 21458,
+        "full_df": 78,
+        "domain_df": 78,
+        "strata_n": 74,
+        "psu_n": 152
+      }
+    },
+    {
+      "id": "artifact_hash_derived/master.rds",
+      "passed": true,
+      "evidence": "1c4abc2816600342d812911efa21bb5e530667a6b7db6807ddfe0b72e1075e7d"
+    },
+    {
+      "id": "artifact_hash_report.json",
+      "passed": true,
+      "evidence": "c90f6046da60101dafa8695b5bbde9a2b39a57d0b08fb6437fb62f2d28ef3331"
+    },
+    {
+      "id": "artifact_hash_definitions.json",
+      "passed": true,
+      "evidence": "a4e48d904f2df228880e227f9ce1b74a92456f762a0dc2cd356a4cf97bc297ec"
+    },
+    {
+      "id": "artifact_hash_executed_script.R",
+      "passed": true,
+      "evidence": "f14840f51eabaa442b5273d11fce825e59fdfde61b79f0e20a99fd21079083f3"
+    },
+    {
+      "id": "artifact_hash_sources_manifest.csv",
+      "passed": true,
+      "evidence": "7200311d3e432b05009ddfc3fd396bd67fd994facbf7ee0c84f82e99827b14de"
+    },
+    {
+      "id": "source_matches_executed_snapshot",
+      "passed": true,
+      "evidence": {
+        "executed": "f14840f51eabaa442b5273d11fce825e59fdfde61b79f0e20a99fd21079083f3",
+        "current": "f14840f51eabaa442b5273d11fce825e59fdfde61b79f0e20a99fd21079083f3"
+      }
+    }
+  ],
+  "bp_sensitivity": {
+    "zero_dbp_any_all": 983,
+    "zero_dbp_any_domain": 271,
+    "excluding_mixed_zero_measured_changes_in_domain": 0,
+    "excluding_mixed_zero_composite_changes_in_domain": 0,
+    "note": "Alternate excludes zero only when positive DBP exists; does not implement first-reading exclusion."
+  },
+  "limitations": [
+    "BP all-readings/mixed-zero averaging is a disclosed analyst choice; not the CDC reported-to-participant averaging rule.",
+    "Paper smoking variable undocumented; SMQ020 candidate must be described as lifetime >=100 cigarettes.",
+    "Original Table1 diabetes mapping has not been verified because DIQ is outside this core raw set.",
+    "Exact published Table1/2 numerical agreement is not required for this transparent candidate reconstruction."
+  ]
+}

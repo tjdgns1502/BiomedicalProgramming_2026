@@ -1,0 +1,525 @@
+[
+  {
+    "stage_id": "S01",
+    "title": "연구 질문과 자료 구조",
+    "observational_unit": "person (cycle,SEQN)",
+    "concept": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\5주차\\치주질환과 고혈압 - 분석 길잡이\\01-concept 연구 질문과 자료 구조.md",
+    "paper": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\5주차\\치주질환과 고혈압 - 분석 길잡이\\01-paper 연구 질문과 자료 구조.md",
+    "previous": [],
+    "next": [
+      "S02"
+    ],
+    "input": "course,paper",
+    "source_url": "https://link.springer.com/article/10.1186/s12889-023-16012-z",
+    "table_ids": [],
+    "concept_sha256": "d5507510340eae716e737f474ba85eb6d1442f55c9545c308518ed74b11f4087",
+    "paper_sha256": "969a4fcc23562c555efe743edf1407f3005a14b50d006731a571eaf1e20303a2",
+    "freshness": "current",
+    "integrated_runs": [
+      "R2-20261004",
+      "E2-20261004",
+      "V1-20261004"
+    ],
+    "review_records": [
+      {
+        "path": "reviews/E1-20261004-q-review.json",
+        "sha256": "cab140030972447f3559e73b6ddd213917cef6502752d26cd9b584112cf84f90",
+        "decision": "accept",
+        "reviewer": "plan_review"
+      },
+      {
+        "path": "reviews/E1-data-review.json",
+        "sha256": "51c9554f0369a8773156427e1122f8a7db0ef547a380459558e454e7f95108f2",
+        "decision": "accept",
+        "reviewer": "Q-data"
+      },
+      {
+        "path": "reviews/E2-20261004-data-review.json",
+        "sha256": "4295b25581cb19c83a986e56fb394d14bcc4b82c208dbdc3fb3cc7df76bf2799",
+        "decision": "accept",
+        "reviewer": "Q-data"
+      },
+      {
+        "path": "reviews/E2-20261004-q-review.json",
+        "sha256": "cf2095a869d7048e4d57e80a2d148b3c72114d00182e436ae603a836a564e1cf",
+        "decision": "accept",
+        "reviewer": "plan_review"
+      },
+      {
+        "path": "reviews/E2-plan1.5-code-q-review.json",
+        "sha256": "e1d0fbb7210659c8727fb5c0685133392b2a7ef6b66696acb40ec0707ae98c1b",
+        "decision": "accept",
+        "reviewer": "plan_review"
+      },
+      {
+        "path": "reviews/R2-20261004-q-review.json",
+        "sha256": "e2336b63af67a54d9bea3d5a6a8504832ce87150d571d74a3a9bc7d70994eb7a",
+        "decision": "accept",
+        "reviewer": "plan_review"
+      },
+      {
+        "path": "reviews/R2-data-review.json",
+        "sha256": "74fd2969ca0efe2608580aab2b5936177d39b32b8d49ddb1c258d3ade750d2ea",
+        "decision": "accept",
+        "reviewer": "Q-data"
+      },
+      {
+        "path": "reviews/V1-20261004-q-review.json",
+        "sha256": "7f2fc4957e3e1aed302d5f2cc6c5bbcefba1785d2c056dc6528bbc9aa9ed3922",
+        "decision": "accept",
+        "reviewer": "plan_review"
+      }
+    ]
+  },
+  {
+    "stage_id": "S02",
+    "title": "한 사람의 원자료와 코딩",
+    "observational_unit": "person (cycle,SEQN)",
+    "concept": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\5주차\\치주질환과 고혈압 - 분석 길잡이\\02-concept 한 사람의 원자료와 코딩.md",
+    "paper": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\5주차\\치주질환과 고혈압 - 분석 길잡이\\02-paper 한 사람의 원자료와 코딩.md",
+    "previous": [
+      "S01"
+    ],
+    "next": [
+      "S03"
+    ],
+    "input": "raw data,codebook",
+    "source_url": "https://link.springer.com/article/10.1186/s12889-023-16012-z",
+    "table_ids": [],
+    "concept_sha256": "e5edfa8f5ec633895a2a619babfeb372ec03ce03c52ee81208d0ccb5b10dead0",
+    "paper_sha256": "7f1ee731833005163891351a91023a0f0d66fd3adfeee97fe5c06289e19ebfb4",
+    "freshness": "current",
+    "integrated_runs": [
+      "R2-20261004",
+      "E2-20261004",
+      "V1-20261004"
+    ],
+    "review_records": [
+      {
+        "path": "reviews/E1-20261004-q-review.json",
+        "sha256": "cab140030972447f3559e73b6ddd213917cef6502752d26cd9b584112cf84f90",
+        "decision": "accept",
+        "reviewer": "plan_review"
+      },
+      {
+        "path": "reviews/E1-data-review.json",
+        "sha256": "51c9554f0369a8773156427e1122f8a7db0ef547a380459558e454e7f95108f2",
+        "decision": "accept",
+        "reviewer": "Q-data"
+      },
+      {
+        "path": "reviews/E2-20261004-data-review.json",
+        "sha256": "4295b25581cb19c83a986e56fb394d14bcc4b82c208dbdc3fb3cc7df76bf2799",
+        "decision": "accept",
+        "reviewer": "Q-data"
+      },
+      {
+        "path": "reviews/E2-20261004-q-review.json",
+        "sha256": "cf2095a869d7048e4d57e80a2d148b3c72114d00182e436ae603a836a564e1cf",
+        "decision": "accept",
+        "reviewer": "plan_review"
+      },
+      {
+        "path": "reviews/E2-plan1.5-code-q-review.json",
+        "sha256": "e1d0fbb7210659c8727fb5c0685133392b2a7ef6b66696acb40ec0707ae98c1b",
+        "decision": "accept",
+        "reviewer": "plan_review"
+      },
+      {
+        "path": "reviews/R2-20261004-q-review.json",
+        "sha256": "e2336b63af67a54d9bea3d5a6a8504832ce87150d571d74a3a9bc7d70994eb7a",
+        "decision": "accept",
+        "reviewer": "plan_review"
+      },
+      {
+        "path": "reviews/R2-data-review.json",
+        "sha256": "74fd2969ca0efe2608580aab2b5936177d39b32b8d49ddb1c258d3ade750d2ea",
+        "decision": "accept",
+        "reviewer": "Q-data"
+      },
+      {
+        "path": "reviews/V1-20261004-q-review.json",
+        "sha256": "7f2fc4957e3e1aed302d5f2cc6c5bbcefba1785d2c056dc6528bbc9aa9ed3922",
+        "decision": "accept",
+        "reviewer": "plan_review"
+      }
+    ]
+  },
+  {
+    "stage_id": "S03",
+    "title": "선정 결측과 복합표본",
+    "observational_unit": "person (cycle,SEQN)",
+    "concept": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\5주차\\치주질환과 고혈압 - 분석 길잡이\\03-concept 선정 결측과 복합표본.md",
+    "paper": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\5주차\\치주질환과 고혈압 - 분석 길잡이\\03-paper 선정 결측과 복합표본.md",
+    "previous": [
+      "S02"
+    ],
+    "next": [
+      "S04"
+    ],
+    "input": "coded rows,design",
+    "source_url": "https://link.springer.com/article/10.1186/s12889-023-16012-z",
+    "table_ids": [
+      "Table1"
+    ],
+    "concept_sha256": "809a3020a9d05d50e1ab4b82f8700db3a44d3f85ad78d71d0ed72e8a71afdd66",
+    "paper_sha256": "a8248ce7e1ace586b893ddf54e215569735604823819be0939cad58478f9c976",
+    "freshness": "current",
+    "integrated_runs": [
+      "R2-20261004",
+      "E2-20261004",
+      "V1-20261004"
+    ],
+    "review_records": [
+      {
+        "path": "reviews/E1-20261004-q-review.json",
+        "sha256": "cab140030972447f3559e73b6ddd213917cef6502752d26cd9b584112cf84f90",
+        "decision": "accept",
+        "reviewer": "plan_review"
+      },
+      {
+        "path": "reviews/E1-data-review.json",
+        "sha256": "51c9554f0369a8773156427e1122f8a7db0ef547a380459558e454e7f95108f2",
+        "decision": "accept",
+        "reviewer": "Q-data"
+      },
+      {
+        "path": "reviews/E2-20261004-data-review.json",
+        "sha256": "4295b25581cb19c83a986e56fb394d14bcc4b82c208dbdc3fb3cc7df76bf2799",
+        "decision": "accept",
+        "reviewer": "Q-data"
+      },
+      {
+        "path": "reviews/E2-20261004-q-review.json",
+        "sha256": "cf2095a869d7048e4d57e80a2d148b3c72114d00182e436ae603a836a564e1cf",
+        "decision": "accept",
+        "reviewer": "plan_review"
+      },
+      {
+        "path": "reviews/E2-plan1.5-code-q-review.json",
+        "sha256": "e1d0fbb7210659c8727fb5c0685133392b2a7ef6b66696acb40ec0707ae98c1b",
+        "decision": "accept",
+        "reviewer": "plan_review"
+      },
+      {
+        "path": "reviews/R2-20261004-q-review.json",
+        "sha256": "e2336b63af67a54d9bea3d5a6a8504832ce87150d571d74a3a9bc7d70994eb7a",
+        "decision": "accept",
+        "reviewer": "plan_review"
+      },
+      {
+        "path": "reviews/R2-data-review.json",
+        "sha256": "74fd2969ca0efe2608580aab2b5936177d39b32b8d49ddb1c258d3ade750d2ea",
+        "decision": "accept",
+        "reviewer": "Q-data"
+      },
+      {
+        "path": "reviews/V1-20261004-q-review.json",
+        "sha256": "7f2fc4957e3e1aed302d5f2cc6c5bbcefba1785d2c056dc6528bbc9aa9ed3922",
+        "decision": "accept",
+        "reviewer": "plan_review"
+      }
+    ]
+  },
+  {
+    "stage_id": "S04",
+    "title": "분할표와 검정",
+    "observational_unit": "person (cycle,SEQN)",
+    "concept": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\5주차\\치주질환과 고혈압 - 분석 길잡이\\04-concept 분할표와 검정.md",
+    "paper": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\5주차\\치주질환과 고혈압 - 분석 길잡이\\04-paper 분할표와 검정.md",
+    "previous": [
+      "S03"
+    ],
+    "next": [
+      "S05"
+    ],
+    "input": "reviewed analysis population",
+    "source_url": "https://link.springer.com/article/10.1186/s12889-023-16012-z",
+    "table_ids": [
+      "Table1"
+    ],
+    "concept_sha256": "f5ad6488b3ac63c045f93f35ee99fba2e472756f4a722b3421d4e6492ead1367",
+    "paper_sha256": "60c970595d205149554f30086c8b356e7e50fa30be2a85ef5023a028368d11bc",
+    "freshness": "current",
+    "integrated_runs": [
+      "R2-20261004",
+      "E2-20261004",
+      "V1-20261004"
+    ],
+    "review_records": [
+      {
+        "path": "reviews/E1-20261004-q-review.json",
+        "sha256": "cab140030972447f3559e73b6ddd213917cef6502752d26cd9b584112cf84f90",
+        "decision": "accept",
+        "reviewer": "plan_review"
+      },
+      {
+        "path": "reviews/E1-data-review.json",
+        "sha256": "51c9554f0369a8773156427e1122f8a7db0ef547a380459558e454e7f95108f2",
+        "decision": "accept",
+        "reviewer": "Q-data"
+      },
+      {
+        "path": "reviews/E2-20261004-data-review.json",
+        "sha256": "4295b25581cb19c83a986e56fb394d14bcc4b82c208dbdc3fb3cc7df76bf2799",
+        "decision": "accept",
+        "reviewer": "Q-data"
+      },
+      {
+        "path": "reviews/E2-20261004-q-review.json",
+        "sha256": "cf2095a869d7048e4d57e80a2d148b3c72114d00182e436ae603a836a564e1cf",
+        "decision": "accept",
+        "reviewer": "plan_review"
+      },
+      {
+        "path": "reviews/E2-plan1.5-code-q-review.json",
+        "sha256": "e1d0fbb7210659c8727fb5c0685133392b2a7ef6b66696acb40ec0707ae98c1b",
+        "decision": "accept",
+        "reviewer": "plan_review"
+      },
+      {
+        "path": "reviews/R2-20261004-q-review.json",
+        "sha256": "e2336b63af67a54d9bea3d5a6a8504832ce87150d571d74a3a9bc7d70994eb7a",
+        "decision": "accept",
+        "reviewer": "plan_review"
+      },
+      {
+        "path": "reviews/R2-data-review.json",
+        "sha256": "74fd2969ca0efe2608580aab2b5936177d39b32b8d49ddb1c258d3ade750d2ea",
+        "decision": "accept",
+        "reviewer": "Q-data"
+      },
+      {
+        "path": "reviews/V1-20261004-q-review.json",
+        "sha256": "7f2fc4957e3e1aed302d5f2cc6c5bbcefba1785d2c056dc6528bbc9aa9ed3922",
+        "decision": "accept",
+        "reviewer": "plan_review"
+      }
+    ]
+  },
+  {
+    "stage_id": "S05",
+    "title": "오즈비와 보정 모형",
+    "observational_unit": "person (cycle,SEQN)",
+    "concept": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\5주차\\치주질환과 고혈압 - 분석 길잡이\\05-concept 오즈비와 보정 모형.md",
+    "paper": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\5주차\\치주질환과 고혈압 - 분석 길잡이\\05-paper 오즈비와 보정 모형.md",
+    "previous": [
+      "S04"
+    ],
+    "next": [
+      "S06"
+    ],
+    "input": "reviewed data and model config",
+    "source_url": "https://link.springer.com/article/10.1186/s12889-023-16012-z",
+    "table_ids": [
+      "Table2",
+      "Table3",
+      "SupplementI",
+      "SupplementII"
+    ],
+    "concept_sha256": "92db4aca6b9103ee266663aa0900e87f23ca7ce367f39063d812b08c9546eff5",
+    "paper_sha256": "80b8ba3e1678badd437f59c21d01d78bfb0fd2fa832aed02beaa076b29f5d573",
+    "freshness": "current",
+    "integrated_runs": [
+      "R2-20261004",
+      "E2-20261004",
+      "V1-20261004"
+    ],
+    "review_records": [
+      {
+        "path": "reviews/E1-20261004-q-review.json",
+        "sha256": "cab140030972447f3559e73b6ddd213917cef6502752d26cd9b584112cf84f90",
+        "decision": "accept",
+        "reviewer": "plan_review"
+      },
+      {
+        "path": "reviews/E1-data-review.json",
+        "sha256": "51c9554f0369a8773156427e1122f8a7db0ef547a380459558e454e7f95108f2",
+        "decision": "accept",
+        "reviewer": "Q-data"
+      },
+      {
+        "path": "reviews/E2-20261004-data-review.json",
+        "sha256": "4295b25581cb19c83a986e56fb394d14bcc4b82c208dbdc3fb3cc7df76bf2799",
+        "decision": "accept",
+        "reviewer": "Q-data"
+      },
+      {
+        "path": "reviews/E2-20261004-q-review.json",
+        "sha256": "cf2095a869d7048e4d57e80a2d148b3c72114d00182e436ae603a836a564e1cf",
+        "decision": "accept",
+        "reviewer": "plan_review"
+      },
+      {
+        "path": "reviews/E2-plan1.5-code-q-review.json",
+        "sha256": "e1d0fbb7210659c8727fb5c0685133392b2a7ef6b66696acb40ec0707ae98c1b",
+        "decision": "accept",
+        "reviewer": "plan_review"
+      },
+      {
+        "path": "reviews/R2-20261004-q-review.json",
+        "sha256": "e2336b63af67a54d9bea3d5a6a8504832ce87150d571d74a3a9bc7d70994eb7a",
+        "decision": "accept",
+        "reviewer": "plan_review"
+      },
+      {
+        "path": "reviews/R2-data-review.json",
+        "sha256": "74fd2969ca0efe2608580aab2b5936177d39b32b8d49ddb1c258d3ade750d2ea",
+        "decision": "accept",
+        "reviewer": "Q-data"
+      },
+      {
+        "path": "reviews/V1-20261004-q-review.json",
+        "sha256": "7f2fc4957e3e1aed302d5f2cc6c5bbcefba1785d2c056dc6528bbc9aa9ed3922",
+        "decision": "accept",
+        "reviewer": "plan_review"
+      }
+    ]
+  },
+  {
+    "stage_id": "S06",
+    "title": "통계 검증 과제",
+    "observational_unit": "person (cycle,SEQN)",
+    "concept": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\5주차\\치주질환과 고혈압 - 분석 길잡이\\06-concept 통계 검증 과제.md",
+    "paper": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\5주차\\치주질환과 고혈압 - 분석 길잡이\\06-paper 통계 검증 과제.md",
+    "previous": [
+      "S05"
+    ],
+    "next": [
+      "S07"
+    ],
+    "input": "fixed null/alternative generation",
+    "source_url": "https://link.springer.com/article/10.1186/s12889-023-16012-z",
+    "table_ids": [],
+    "concept_sha256": "15d31d4a3b1fa7096b2d9b7e68e102407336401a074342307b23339ba14cb59e",
+    "paper_sha256": "94a79165e206c006df752dae5272479a0e3eee699b2b8e464d8281b137bfbc92",
+    "freshness": "current",
+    "integrated_runs": [
+      "R2-20261004",
+      "E2-20261004",
+      "V1-20261004"
+    ],
+    "review_records": [
+      {
+        "path": "reviews/E1-20261004-q-review.json",
+        "sha256": "cab140030972447f3559e73b6ddd213917cef6502752d26cd9b584112cf84f90",
+        "decision": "accept",
+        "reviewer": "plan_review"
+      },
+      {
+        "path": "reviews/E1-data-review.json",
+        "sha256": "51c9554f0369a8773156427e1122f8a7db0ef547a380459558e454e7f95108f2",
+        "decision": "accept",
+        "reviewer": "Q-data"
+      },
+      {
+        "path": "reviews/E2-20261004-data-review.json",
+        "sha256": "4295b25581cb19c83a986e56fb394d14bcc4b82c208dbdc3fb3cc7df76bf2799",
+        "decision": "accept",
+        "reviewer": "Q-data"
+      },
+      {
+        "path": "reviews/E2-20261004-q-review.json",
+        "sha256": "cf2095a869d7048e4d57e80a2d148b3c72114d00182e436ae603a836a564e1cf",
+        "decision": "accept",
+        "reviewer": "plan_review"
+      },
+      {
+        "path": "reviews/E2-plan1.5-code-q-review.json",
+        "sha256": "e1d0fbb7210659c8727fb5c0685133392b2a7ef6b66696acb40ec0707ae98c1b",
+        "decision": "accept",
+        "reviewer": "plan_review"
+      },
+      {
+        "path": "reviews/R2-20261004-q-review.json",
+        "sha256": "e2336b63af67a54d9bea3d5a6a8504832ce87150d571d74a3a9bc7d70994eb7a",
+        "decision": "accept",
+        "reviewer": "plan_review"
+      },
+      {
+        "path": "reviews/R2-data-review.json",
+        "sha256": "74fd2969ca0efe2608580aab2b5936177d39b32b8d49ddb1c258d3ade750d2ea",
+        "decision": "accept",
+        "reviewer": "Q-data"
+      },
+      {
+        "path": "reviews/V1-20261004-q-review.json",
+        "sha256": "7f2fc4957e3e1aed302d5f2cc6c5bbcefba1785d2c056dc6528bbc9aa9ed3922",
+        "decision": "accept",
+        "reviewer": "plan_review"
+      }
+    ]
+  },
+  {
+    "stage_id": "S07",
+    "title": "결과 해석과 재현 한계",
+    "observational_unit": "person (cycle,SEQN)",
+    "concept": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\5주차\\치주질환과 고혈압 - 분석 길잡이\\07-concept 결과 해석과 재현 한계.md",
+    "paper": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\5주차\\치주질환과 고혈압 - 분석 길잡이\\07-paper 결과 해석과 재현 한계.md",
+    "previous": [
+      "S06"
+    ],
+    "next": [],
+    "input": "reviewed tables,models,extensions",
+    "source_url": "https://link.springer.com/article/10.1186/s12889-023-16012-z",
+    "table_ids": [],
+    "concept_sha256": "0bbe68ce66cb90e8e295036e3be2e8293b2b5d10b4e06069283ab146062ceeba",
+    "paper_sha256": "6929b664d37f67a29a5675904016e83cd1cbdd1e238d7ebdcc4b8e019166e5bf",
+    "freshness": "current",
+    "integrated_runs": [
+      "R2-20261004",
+      "E2-20261004",
+      "V1-20261004"
+    ],
+    "review_records": [
+      {
+        "path": "reviews/E1-20261004-q-review.json",
+        "sha256": "cab140030972447f3559e73b6ddd213917cef6502752d26cd9b584112cf84f90",
+        "decision": "accept",
+        "reviewer": "plan_review"
+      },
+      {
+        "path": "reviews/E1-data-review.json",
+        "sha256": "51c9554f0369a8773156427e1122f8a7db0ef547a380459558e454e7f95108f2",
+        "decision": "accept",
+        "reviewer": "Q-data"
+      },
+      {
+        "path": "reviews/E2-20261004-data-review.json",
+        "sha256": "4295b25581cb19c83a986e56fb394d14bcc4b82c208dbdc3fb3cc7df76bf2799",
+        "decision": "accept",
+        "reviewer": "Q-data"
+      },
+      {
+        "path": "reviews/E2-20261004-q-review.json",
+        "sha256": "cf2095a869d7048e4d57e80a2d148b3c72114d00182e436ae603a836a564e1cf",
+        "decision": "accept",
+        "reviewer": "plan_review"
+      },
+      {
+        "path": "reviews/E2-plan1.5-code-q-review.json",
+        "sha256": "e1d0fbb7210659c8727fb5c0685133392b2a7ef6b66696acb40ec0707ae98c1b",
+        "decision": "accept",
+        "reviewer": "plan_review"
+      },
+      {
+        "path": "reviews/R2-20261004-q-review.json",
+        "sha256": "e2336b63af67a54d9bea3d5a6a8504832ce87150d571d74a3a9bc7d70994eb7a",
+        "decision": "accept",
+        "reviewer": "plan_review"
+      },
+      {
+        "path": "reviews/R2-data-review.json",
+        "sha256": "74fd2969ca0efe2608580aab2b5936177d39b32b8d49ddb1c258d3ade750d2ea",
+        "decision": "accept",
+        "reviewer": "Q-data"
+      },
+      {
+        "path": "reviews/V1-20261004-q-review.json",
+        "sha256": "7f2fc4957e3e1aed302d5f2cc6c5bbcefba1785d2c056dc6528bbc9aa9ed3922",
+        "decision": "accept",
+        "reviewer": "plan_review"
+      }
+    ]
+  }
+]

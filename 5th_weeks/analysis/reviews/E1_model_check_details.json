@@ -1,0 +1,37 @@
+{
+  "A_interaction_oral_health_smoking": {
+    "beta_max_abs_error": 6.9277916736609768e-14,
+    "cov_max_abs_error": 3.2022995366531859e-14,
+    "n": 21458
+  },
+  "A_supplement_measured_Overall_Model2_periodontal_measured_htn": {
+    "beta_max_abs_error": 2.5757174171303632e-14,
+    "cov_max_abs_error": 2.3980817331903381e-14,
+    "n": 12401
+  },
+  "A_table2_Overall_Model2_periodontal_hypertension_code": {
+    "beta_max_abs_error": 2.7533531010703882e-14,
+    "cov_max_abs_error": 4.0412118096355698e-14,
+    "n": 21458
+  },
+  "A_table2_Overall_Model3_oral_health_hypertension_code": {
+    "beta_max_abs_error": 1.7763568394002505e-14,
+    "cov_max_abs_error": 2.2631896356983816e-13,
+    "n": 21458
+  },
+  "A_table3_30-44_Model2_periodontal_hypertension_code": {
+    "beta_max_abs_error": 1.2434497875801753e-13,
+    "cov_max_abs_error": 3.3306690738754696e-15,
+    "n": 6542
+  },
+  "B_table2_Overall_Model1_periodontal_hypertension_code": {
+    "beta_max_abs_error": 1.2434497875801753e-14,
+    "cov_max_abs_error": 5.1555981706030707e-15,
+    "n": 19925
+  },
+  "B_table2_Overall_Model2_oral_health_hypertension_code": {
+    "beta_max_abs_error": 1.9539925233402755e-14,
+    "cov_max_abs_error": 1.6431300764452317e-14,
+    "n": 19925
+  }
+}

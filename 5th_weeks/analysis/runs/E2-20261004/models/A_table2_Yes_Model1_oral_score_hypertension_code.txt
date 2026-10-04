@@ -1,0 +1,27 @@
+
+Call:
+svyglm(formula = formula, design = design, family = stats::quasibinomial())
+
+Survey design:
+subset(full, candidate_domain)
+
+Coefficients:
+                                      Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                          -3.326245   0.151449 -21.963  < 2e-16 ***
+oral_score                            0.108598   0.030546   3.555 0.000693 ***
+age                                   0.057629   0.002439  23.624  < 2e-16 ***
+sexFemale                            -0.103246   0.065033  -1.588 0.117017    
+raceMexican American                 -0.214297   0.101309  -2.115 0.038072 *  
+raceOther Hispanic                   -0.033489   0.101892  -0.329 0.743413    
+raceNon-Hispanic Black                0.659891   0.078805   8.374 4.59e-12 ***
+raceOther race including multiracial -0.040463   0.123131  -0.329 0.743453    
+educationHigh school                  0.093276   0.072572   1.285 0.203051    
+educationLess than high school        0.144033   0.079800   1.805 0.075514 .  
+educationMissing                      0.022139   0.771808   0.029 0.977200    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for quasibinomial family taken to be 1.003849)
+
+Number of Fisher Scoring iterations: 4
+

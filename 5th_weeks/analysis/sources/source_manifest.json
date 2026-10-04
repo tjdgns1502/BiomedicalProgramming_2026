@@ -1,0 +1,332 @@
+[
+  {
+    "path": "sources\\candidate-2.response",
+    "bytes": 1817,
+    "sha256": "c62f51e7b36e998d51074071e64487d0b83caa04b19bc8c8b657c43a335f9339",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\europepmc_metadata.json",
+    "bytes": 1023,
+    "sha256": "4afb8ca34b03186ee14a290979dcafc9615f2b83918e9dd404b299caafc1da48",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\inspect_source_packet.py",
+    "bytes": 1819,
+    "sha256": "653b008584de325212d5fbf19cf8145321dde4808c945029404d77c76d523bc1",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\PMC10262359.fullText.xml",
+    "bytes": 122620,
+    "sha256": "4dd8133d427508c3bb42f2edc1b7de70ba5e483e148bd9fc5986c646e010fdae",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\PMC10262359.supplementary.zip",
+    "bytes": 115882,
+    "sha256": "38247b25fa7bac7a6d6293a19786ec7d1e2ac9c874403ab1b359b8ea51ecd7ad",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\s12889-023-16012-z.download-failed.html",
+    "bytes": 3038,
+    "sha256": "32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\supplement.download-failed.html",
+    "bytes": 3038,
+    "sha256": "32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\의생명과학프로그래밍 6.pdf",
+    "bytes": 3361041,
+    "sha256": "3643575eb570d1b6f54289b40f03ae80359a5afc3a6a3a8c485a3abadd2cdd01",
+    "valid_pdf": true
+  },
+  {
+    "path": "sources\\europepmc\\12889_2023_16012_MOESM1_ESM.txt",
+    "bytes": 1777,
+    "sha256": "90bb2c3f2e5e33add2808007410750a230ccbcf0f1609c8c19bda35020e00361",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\europepmc\\candidate-2.response",
+    "bytes": 1817,
+    "sha256": "c62f51e7b36e998d51074071e64487d0b83caa04b19bc8c8b657c43a335f9339",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\europepmc\\europepmc_metadata.json",
+    "bytes": 1023,
+    "sha256": "4afb8ca34b03186ee14a290979dcafc9615f2b83918e9dd404b299caafc1da48",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\europepmc\\inspect_source_packet.py",
+    "bytes": 1819,
+    "sha256": "653b008584de325212d5fbf19cf8145321dde4808c945029404d77c76d523bc1",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\europepmc\\P-source-packet-report.md",
+    "bytes": 6679,
+    "sha256": "89ed0f7f9e94e79b447fa85eabbc57953e83c470329526d644f2ad637e74cf05",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\europepmc\\PMC10262359.fullText.xml",
+    "bytes": 122620,
+    "sha256": "4dd8133d427508c3bb42f2edc1b7de70ba5e483e148bd9fc5986c646e010fdae",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\europepmc\\PMC10262359.supplementary.zip",
+    "bytes": 115882,
+    "sha256": "38247b25fa7bac7a6d6293a19786ec7d1e2ac9c874403ab1b359b8ea51ecd7ad",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\europepmc\\source_inspection.json",
+    "bytes": 1250,
+    "sha256": "cefcd6349550304565ce1c22add470c8605f696930b8a905c6f3f8b6455e68f0",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\europepmc\\supplement-page-1.png",
+    "bytes": 102282,
+    "sha256": "7f5b0481b3ad76836173019ec00c36b717ea71c881f182946073a85e76516a89",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\europepmc\\supplement-page-2.png",
+    "bytes": 101505,
+    "sha256": "c5cca7f1807c91a55350a66f3a5cc228902dc4e176fc323b96333452f4fdef70",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\europepmc\\supplementary_scope_facts.json",
+    "bytes": 1713,
+    "sha256": "47c58dd322f2621f12d39ab0db0397f1c340cc09168e421848fe94d0553e9b5f",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\europepmc\\table_1.tsv",
+    "bytes": 2344,
+    "sha256": "4668b637d83ec30d47997171c6529e4c3182e9997b42a4f7c625300c1e09e3d3",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\europepmc\\table_2.tsv",
+    "bytes": 1459,
+    "sha256": "f2ff037df7309fdc9acd8628575cb5f60ed83e2925d20dca7d6599a0ef6ee762",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\europepmc\\table_3.tsv",
+    "bytes": 1050,
+    "sha256": "90ea89ee890e9878ff2157120a34e9e5682c5d28adf0639f5ea1506294976d37",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\cache\\codebooks\\BPQ_F.htm",
+    "bytes": 65211,
+    "sha256": "63d879e717dd01de8e4eb24e1b17b5493e9fdaebd05c568f8ea10f81f98ff3de",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\cache\\codebooks\\BPQ_G.htm",
+    "bytes": 46732,
+    "sha256": "d64c7423f9dd7d923e95eda2485181e3f64ec4233b1033ae3f2c0455eef49924",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\cache\\codebooks\\BPQ_H.htm",
+    "bytes": 42938,
+    "sha256": "63caf420228684d751d2fdf8ebcc85b93f1c256e1b5b2dfed53d8b68d969229a",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\cache\\codebooks\\BPQ_I.htm",
+    "bytes": 34489,
+    "sha256": "63ff76dd86850bac2a9b8ce9b3d0418358a0b2d5ebe64384e62bc41b4169e2f8",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\cache\\codebooks\\BPQ_J.htm",
+    "bytes": 34559,
+    "sha256": "1e3a1632530146d45f7fccba1a06da30db0e49e17b58842dca874b713a01021b",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\cache\\codebooks\\BPX_F.htm",
+    "bytes": 65861,
+    "sha256": "d401e9cda3f95ff0fe3856de664212ad9fc073195a03de5c93d6d472bb380076",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\cache\\codebooks\\BPX_G.htm",
+    "bytes": 67210,
+    "sha256": "8e538d287dd2dc82cc6f51f9b70a582b6a9dae26ca14335cca4b10e00b8858cb",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\cache\\codebooks\\BPX_H.htm",
+    "bytes": 58013,
+    "sha256": "ba8e018b46211e52d083b8ada6a64800ab03042e9289451666bac8347d88099c",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\cache\\codebooks\\BPX_I.htm",
+    "bytes": 52009,
+    "sha256": "8e45eccbf040fe42deb60c44f89ab6045b4f01216153ab47427f044b730481e2",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\cache\\codebooks\\BPX_J.htm",
+    "bytes": 52515,
+    "sha256": "a7583578150897efec8748a3bc05ecbc6e54d5a0b5a32cdfda87c883aba56a37",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\cache\\codebooks\\DEMO_F.htm",
+    "bytes": 154401,
+    "sha256": "c3a26469d6f9f53bedf47f9313eba66fead267a6777e5aab43cf4184ec7b2564",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\cache\\codebooks\\DEMO_G.htm",
+    "bytes": 167583,
+    "sha256": "5a8b2bc790f2a70705f035c398a76f7a8bbb5ec92323929cbbf04eb0428f59d7",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\cache\\codebooks\\DEMO_H.htm",
+    "bytes": 170377,
+    "sha256": "686d31f7e0857fd0c16c9a9a4e9878ad1d6e3ec4cba9a904fcce4048c9506b68",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\cache\\codebooks\\DEMO_I.htm",
+    "bytes": 172117,
+    "sha256": "ae488b8a00e7cdbae20f2fb279819dcb180b03373efa13abf784c52a0b82e473",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\cache\\codebooks\\DEMO_J.htm",
+    "bytes": 167262,
+    "sha256": "07f8f1e7f884fab180ccf53c705652de9d663833fdad85b0d759919c8464cde0",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\cache\\codebooks\\OHQ_F.htm",
+    "bytes": 30105,
+    "sha256": "610c173f051447b6d209fb74ca3e8d85ce41c66177b23e33c07e628cc9935751",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\cache\\codebooks\\OHQ_G.htm",
+    "bytes": 100862,
+    "sha256": "144178117d3fa05f7922aad6b4d2efc2dbed7bc6733dca8fd80158f7dfbca886",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\cache\\codebooks\\OHQ_H.htm",
+    "bytes": 162805,
+    "sha256": "04eb3b2729f117742fa4c30d79a61df55362e707e0c880f0bf0cc3780e077ec3",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\cache\\codebooks\\OHQ_I.htm",
+    "bytes": 133787,
+    "sha256": "300e7d96b5aaba4b06e08e37e73ca6414275e3ca1604151598c20497e8e06881",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\cache\\codebooks\\OHQ_J.htm",
+    "bytes": 134010,
+    "sha256": "20eb63d7755251594b846843d584093e32d0a15228d215caab1ca1c3035c8fe0",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\cache\\codebooks\\SMQ_F.htm",
+    "bytes": 130767,
+    "sha256": "86f11ba807abcf898140b11396cafbbc0b95a865ef4a59a66c6a05091f8ab850",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\cache\\codebooks\\SMQ_G.htm",
+    "bytes": 111532,
+    "sha256": "3529807a09e023bc374eaa52641bd152b45d099d5c768d6bdd628c0508257066",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\cache\\codebooks\\SMQ_H.htm",
+    "bytes": 125574,
+    "sha256": "4f63f79bc3f743bde5c443283a222d5f7bfac689e4e1d92374eae9deb964345a",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\cache\\codebooks\\SMQ_I.htm",
+    "bytes": 193205,
+    "sha256": "295c85621a587d4f98a1c2d9bd0ad25730fc80b068ee92018bfb5e2fade947c4",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\cache\\codebooks\\SMQ_J.htm",
+    "bytes": 160977,
+    "sha256": "9859d76717b31135754247d509a1d559cce686f29c473ed96857fa8a64f36255",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\europepmc\\.uv-cache\\.gitignore",
+    "bytes": 1,
+    "sha256": "684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\europepmc\\.uv-cache\\.lock",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\europepmc\\.uv-cache\\CACHEDIR.TAG",
+    "bytes": 43,
+    "sha256": "5953156d7e0c564a427251316eaf26f8870e6483ae2197f916b630e4f93e31ae",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\europepmc\\supplementary\\12889_2023_16012_MOESM1_ESM.pdf",
+    "bytes": 128533,
+    "sha256": "3491386e3f09fbf2ebc32f78b15e6d582e6b0f977d036ac2d515dcb5ef330eeb",
+    "valid_pdf": true
+  },
+  {
+    "path": "sources\\europepmc\\.uv-cache\\sdists-v9\\.git",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\europepmc\\.uv-cache\\sdists-v9\\.gitignore",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\europepmc\\.uv-cache\\interpreter-v4\\0de9bff94b993286\\54059719f5925e88.msgpack",
+    "bytes": 1798,
+    "sha256": "691048bca61ebf1a8c81a3639c599e4e50eba71ffa2d1ca017a6147e7f6774d5",
+    "valid_pdf": null
+  },
+  {
+    "path": "sources\\europepmc\\.uv-cache\\interpreter-v4\\0de9bff94b993286\\56c312ee1de96399.msgpack",
+    "bytes": 1984,
+    "sha256": "a57d41354965571b648998b4ef47d344e2649a712d27648aad251c6772340c18",
+    "valid_pdf": null
+  }
+]

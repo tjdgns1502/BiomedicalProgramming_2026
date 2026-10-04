@@ -1,0 +1,7 @@
+"variable","method","statistic","df","p_value"
+"age","Naive Welch t",-67.9038367565044,21444.8938702291,0
+"age","Survey design t",43.9091318781875,77,2.91044578129639e-56
+"mean_sbp","Naive Welch t",-89.8381764020722,16616.8493365448,0
+"mean_sbp","Survey design t",47.7539151114684,77,5.6919845053923e-59
+"mean_dbp","Naive Welch t",-16.1534881308897,18362.3581453955,2.70734555671823e-58
+"mean_dbp","Survey design t",10.9182313312579,77,2.6443938276376e-17

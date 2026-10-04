@@ -9,6 +9,8 @@
 - [`2nd_weeks/`](2nd_weeks/) — NHANES 자료로 논문 Table 1 재현 (WWI-뇌졸중 연관성 연구)
 - [`3rd_weeks/`](3rd_weeks/) — Fagerland (2012) Welch t·WMW 모의실험 재현, 논문 수치 검증 및 유사도 분석
 
+- [`5th_weeks/`](5th_weeks/) — 치주질환·구강건강과 고혈압: 분할표·복합표본 보정 모형, Fisher 검증, 학습 문서와 plot (doyun)
+
 ## 진행 방식
 
 - [`4th_weeks/`](4th_weeks/) — FI 사분위군별 염증지표의 다군·다중 비교, 모의실험, 논문 후보 재현 및 통계적 검토 (doyun)

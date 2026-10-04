@@ -1,0 +1,465 @@
+2026-10-04T07:05:10Z Start R-EXT-002 plan rev1.4 model both 
+2026-10-04T07:05:23Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/BMX_F.xpt attempt 1 
+2026-10-04T07:05:27Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/BMX_F.htm attempt 1 
+2026-10-04T07:05:28Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/SLQ_F.xpt attempt 1 
+2026-10-04T07:05:29Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/SLQ_F.htm attempt 1 
+2026-10-04T07:05:30Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/ALQ_F.xpt attempt 1 
+2026-10-04T07:05:31Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/ALQ_F.htm attempt 1 
+2026-10-04T07:05:32Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/PAQ_F.xpt attempt 1 
+2026-10-04T07:05:34Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/PAQ_F.htm attempt 1 
+2026-10-04T07:05:35Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/MCQ_F.xpt attempt 1 
+2026-10-04T07:05:40Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/MCQ_F.htm attempt 1 
+2026-10-04T07:05:41Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/DIQ_F.xpt attempt 1 
+2026-10-04T07:05:42Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/DIQ_F.htm attempt 1 
+2026-10-04T07:05:43Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/DR1TOT_F.xpt attempt 1 
+2026-10-04T07:05:50Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/DR1TOT_F.htm attempt 1 
+2026-10-04T07:05:51Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/TCHOL_F.xpt attempt 1 
+2026-10-04T07:05:52Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/TCHOL_F.htm attempt 1 
+2026-10-04T07:05:52Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/HDL_F.xpt attempt 1 
+2026-10-04T07:05:53Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/HDL_F.htm attempt 1 
+2026-10-04T07:05:53Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/GHB_F.xpt attempt 1 
+2026-10-04T07:05:54Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/GHB_F.htm attempt 1 
+2026-10-04T07:05:55Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/BIOPRO_F.xpt attempt 1 
+2026-10-04T07:05:56Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/BIOPRO_F.htm attempt 1 
+2026-10-04T07:05:57Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/BMX_G.xpt attempt 1 
+2026-10-04T07:05:58Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/BMX_G.htm attempt 1 
+2026-10-04T07:05:59Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/SLQ_G.xpt attempt 1 
+2026-10-04T07:06:00Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/SLQ_G.htm attempt 1 
+2026-10-04T07:06:02Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/ALQ_G.xpt attempt 1 
+2026-10-04T07:06:02Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/ALQ_G.htm attempt 1 
+2026-10-04T07:06:03Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/PAQ_G.xpt attempt 1 
+2026-10-04T07:06:05Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/PAQ_G.htm attempt 1 
+2026-10-04T07:06:06Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/MCQ_G.xpt attempt 1 
+2026-10-04T07:06:10Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/MCQ_G.htm attempt 1 
+2026-10-04T07:06:11Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/DIQ_G.xpt attempt 1 
+2026-10-04T07:06:14Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/DIQ_G.htm attempt 1 
+2026-10-04T07:06:15Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/DR1TOT_G.xpt attempt 1 
+2026-10-04T07:06:23Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/DR1TOT_G.htm attempt 1 
+2026-10-04T07:06:24Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/TCHOL_G.xpt attempt 1 
+2026-10-04T07:06:26Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/TCHOL_G.htm attempt 1 
+2026-10-04T07:06:28Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/HDL_G.xpt attempt 1 
+2026-10-04T07:06:30Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/HDL_G.htm attempt 1 
+2026-10-04T07:06:32Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/GHB_G.xpt attempt 1 
+2026-10-04T07:06:34Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/GHB_G.htm attempt 1 
+2026-10-04T07:06:35Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/BIOPRO_G.xpt attempt 1 
+2026-10-04T07:06:40Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/BIOPRO_G.htm attempt 1 
+2026-10-04T07:06:44Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/BMX_H.xpt attempt 1 
+2026-10-04T07:06:47Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/BMX_H.htm attempt 1 
+2026-10-04T07:06:47Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/SLQ_H.xpt attempt 1 
+2026-10-04T07:06:49Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/SLQ_H.htm attempt 1 
+2026-10-04T07:06:49Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/ALQ_H.xpt attempt 1 
+2026-10-04T07:06:51Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/ALQ_H.htm attempt 1 
+2026-10-04T07:06:52Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/PAQ_H.xpt attempt 1 
+2026-10-04T07:06:57Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/PAQ_H.htm attempt 1 
+2026-10-04T07:06:58Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/MCQ_H.xpt attempt 1 
+2026-10-04T07:07:04Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/MCQ_H.htm attempt 1 
+2026-10-04T07:07:06Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/DIQ_H.xpt attempt 1 
+2026-10-04T07:07:10Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/DIQ_H.htm attempt 1 
+2026-10-04T07:07:11Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/DR1TOT_H.xpt attempt 1 
+2026-10-04T07:07:22Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/DR1TOT_H.htm attempt 1 
+2026-10-04T07:07:23Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/TCHOL_H.xpt attempt 1 
+2026-10-04T07:07:25Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/TCHOL_H.htm attempt 1 
+2026-10-04T07:07:27Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/HDL_H.xpt attempt 1 
+2026-10-04T07:07:29Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/HDL_H.htm attempt 1 
+2026-10-04T07:07:30Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/GHB_H.xpt attempt 1 
+2026-10-04T07:07:32Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/GHB_H.htm attempt 1 
+2026-10-04T07:07:34Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/BIOPRO_H.xpt attempt 1 
+2026-10-04T07:07:38Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/BIOPRO_H.htm attempt 1 
+2026-10-04T07:07:39Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/BMX_I.xpt attempt 1 
+2026-10-04T07:07:42Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/BMX_I.htm attempt 1 
+2026-10-04T07:07:43Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/SLQ_I.xpt attempt 1 
+2026-10-04T07:07:44Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/SLQ_I.htm attempt 1 
+2026-10-04T07:07:45Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/ALQ_I.xpt attempt 1 
+2026-10-04T07:07:46Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/ALQ_I.htm attempt 1 
+2026-10-04T07:07:47Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/PAQ_I.xpt attempt 1 
+2026-10-04T07:07:50Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/PAQ_I.htm attempt 1 
+2026-10-04T07:07:51Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/MCQ_I.xpt attempt 1 
+2026-10-04T07:07:54Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/MCQ_I.htm attempt 1 
+2026-10-04T07:07:55Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/DIQ_I.xpt attempt 1 
+2026-10-04T07:07:58Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/DIQ_I.htm attempt 1 
+2026-10-04T07:07:58Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/DR1TOT_I.xpt attempt 1 
+2026-10-04T07:08:04Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/DR1TOT_I.htm attempt 1 
+2026-10-04T07:08:04Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/TCHOL_I.xpt attempt 1 
+2026-10-04T07:08:06Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/TCHOL_I.htm attempt 1 
+2026-10-04T07:08:07Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/HDL_I.xpt attempt 1 
+2026-10-04T07:08:07Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/HDL_I.htm attempt 1 
+2026-10-04T07:08:08Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/GHB_I.xpt attempt 1 
+2026-10-04T07:08:09Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/GHB_I.htm attempt 1 
+2026-10-04T07:08:11Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/BIOPRO_I.xpt attempt 1 
+2026-10-04T07:08:12Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/BIOPRO_I.htm attempt 1 
+2026-10-04T07:08:13Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/BMX_J.xpt attempt 1 
+2026-10-04T07:08:14Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/BMX_J.htm attempt 1 
+2026-10-04T07:08:15Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/SLQ_J.xpt attempt 1 
+2026-10-04T07:08:16Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/SLQ_J.htm attempt 1 
+2026-10-04T07:08:17Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/ALQ_J.xpt attempt 1 
+2026-10-04T07:08:18Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/ALQ_J.htm attempt 1 
+2026-10-04T07:08:19Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/PAQ_J.xpt attempt 1 
+2026-10-04T07:08:19Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/PAQ_J.htm attempt 1 
+2026-10-04T07:08:20Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/MCQ_J.xpt attempt 1 
+2026-10-04T07:08:23Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/MCQ_J.htm attempt 1 
+2026-10-04T07:08:23Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/DIQ_J.xpt attempt 1 
+2026-10-04T07:08:26Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/DIQ_J.htm attempt 1 
+2026-10-04T07:08:27Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/DR1TOT_J.xpt attempt 1 
+2026-10-04T07:08:33Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/DR1TOT_J.htm attempt 1 
+2026-10-04T07:08:34Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/TCHOL_J.xpt attempt 1 
+2026-10-04T07:08:34Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/TCHOL_J.htm attempt 1 
+2026-10-04T07:08:35Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/HDL_J.xpt attempt 1 
+2026-10-04T07:08:36Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/HDL_J.htm attempt 1 
+2026-10-04T07:08:37Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/GHB_J.xpt attempt 1 
+2026-10-04T07:08:38Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/GHB_J.htm attempt 1 
+2026-10-04T07:08:38Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/BIOPRO_J.xpt attempt 1 
+2026-10-04T07:08:40Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/BIOPRO_J.htm attempt 1 
+2026-10-04T07:12:25Z WARNING: Chi-squared approximation may be incorrect 
+2026-10-04T07:12:27Z WARNING: Chi-squared approximation may be incorrect 
+2026-10-04T07:15:29Z WARNING: Chi-squared approximation may be incorrect 
+2026-10-04T07:15:35Z WARNING: Chi-squared approximation may be incorrect 
+2026-10-04T07:15:37Z WARNING: Chi-squared approximation may be incorrect 
+2026-10-04T07:18:41Z Model A table2 Overall Model1 periodontal hypertension_code 
+2026-10-04T07:18:41Z FIT START A_table2_Overall_Model1_periodontal_hypertension_code n 21458 covariates 4 
+2026-10-04T07:18:43Z FIT END A_table2_Overall_Model1_periodontal_hypertension_code elapsed_seconds 1.81 residual_df 68 
+2026-10-04T07:18:48Z MODEL STORED A_table2_Overall_Model1_periodontal_hypertension_code storage lean bytes 1667 elapsed_seconds 4.97 
+2026-10-04T07:18:48Z Model A table2 Overall Model1 oral_health hypertension_code 
+2026-10-04T07:18:48Z FIT START A_table2_Overall_Model1_oral_health_hypertension_code n 21458 covariates 4 
+2026-10-04T07:18:50Z FIT END A_table2_Overall_Model1_oral_health_hypertension_code elapsed_seconds 1.89 residual_df 66 
+2026-10-04T07:18:53Z MODEL STORED A_table2_Overall_Model1_oral_health_hypertension_code storage lean bytes 1977 elapsed_seconds 2.42 
+2026-10-04T07:18:53Z FIT START A_table2_Overall_Model1_oral_score_hypertension_code n 21458 covariates 4 
+2026-10-04T07:18:54Z FIT END A_table2_Overall_Model1_oral_score_hypertension_code elapsed_seconds 1.53 residual_df 68 
+2026-10-04T07:18:57Z MODEL STORED A_table2_Overall_Model1_oral_score_hypertension_code storage lean bytes 1650 elapsed_seconds 2.71 
+2026-10-04T07:18:57Z Model A table2 Overall Model2 periodontal hypertension_code 
+2026-10-04T07:18:57Z FIT START A_table2_Overall_Model2_periodontal_hypertension_code n 21458 covariates 14 
+2026-10-04T07:18:59Z FIT END A_table2_Overall_Model2_periodontal_hypertension_code elapsed_seconds 2.04 residual_df 49 
+2026-10-04T07:19:01Z MODEL STORED A_table2_Overall_Model2_periodontal_hypertension_code storage lean bytes 6254 elapsed_seconds 1.78 
+2026-10-04T07:19:01Z Model A table2 Overall Model2 oral_health hypertension_code 
+2026-10-04T07:19:01Z FIT START A_table2_Overall_Model2_oral_health_hypertension_code n 21458 covariates 14 
+2026-10-04T07:19:04Z FIT END A_table2_Overall_Model2_oral_health_hypertension_code elapsed_seconds 3.56 residual_df 47 
+2026-10-04T07:19:08Z MODEL STORED A_table2_Overall_Model2_oral_health_hypertension_code storage lean bytes 6957 elapsed_seconds 3.53 
+2026-10-04T07:19:08Z FIT START A_table2_Overall_Model2_oral_score_hypertension_code n 21458 covariates 14 
+2026-10-04T07:19:13Z FIT END A_table2_Overall_Model2_oral_score_hypertension_code elapsed_seconds 4.67 residual_df 49 
+2026-10-04T07:19:18Z MODEL STORED A_table2_Overall_Model2_oral_score_hypertension_code storage lean bytes 6242 elapsed_seconds 4.71 
+2026-10-04T07:19:18Z Model A table2 Overall Model3 periodontal hypertension_code 
+2026-10-04T07:19:18Z FIT START A_table2_Overall_Model3_periodontal_hypertension_code n 21458 covariates 24 
+2026-10-04T07:19:24Z FIT END A_table2_Overall_Model3_periodontal_hypertension_code elapsed_seconds 6.78 residual_df 40 
+2026-10-04T07:19:26Z MODEL STORED A_table2_Overall_Model3_periodontal_hypertension_code storage lean bytes 9739 elapsed_seconds 1.95 
+2026-10-04T07:19:26Z Model A table2 Overall Model3 oral_health hypertension_code 
+2026-10-04T07:19:26Z FIT START A_table2_Overall_Model3_oral_health_hypertension_code n 21458 covariates 24 
+2026-10-04T07:19:29Z FIT END A_table2_Overall_Model3_oral_health_hypertension_code elapsed_seconds 2.9 residual_df 38 
+2026-10-04T07:19:33Z MODEL STORED A_table2_Overall_Model3_oral_health_hypertension_code storage lean bytes 10636 elapsed_seconds 3.5 
+2026-10-04T07:19:33Z FIT START A_table2_Overall_Model3_oral_score_hypertension_code n 21458 covariates 24 
+2026-10-04T07:19:39Z FIT END A_table2_Overall_Model3_oral_score_hypertension_code elapsed_seconds 5.63 residual_df 40 
+2026-10-04T07:19:43Z MODEL STORED A_table2_Overall_Model3_oral_score_hypertension_code storage lean bytes 9726 elapsed_seconds 4.22 
+2026-10-04T07:19:47Z Model A table2 No Model1 periodontal hypertension_code 
+2026-10-04T07:19:47Z FIT START A_table2_No_Model1_periodontal_hypertension_code n 11697 covariates 4 
+2026-10-04T07:19:49Z FIT END A_table2_No_Model1_periodontal_hypertension_code elapsed_seconds 1.84 residual_df 68 
+2026-10-04T07:19:52Z MODEL STORED A_table2_No_Model1_periodontal_hypertension_code storage lean bytes 1660 elapsed_seconds 2.92 
+2026-10-04T07:19:52Z Model A table2 No Model1 oral_health hypertension_code 
+2026-10-04T07:19:52Z FIT START A_table2_No_Model1_oral_health_hypertension_code n 11697 covariates 4 
+2026-10-04T07:19:53Z FIT END A_table2_No_Model1_oral_health_hypertension_code elapsed_seconds 0.92 residual_df 66 
+2026-10-04T07:19:55Z MODEL STORED A_table2_No_Model1_oral_health_hypertension_code storage lean bytes 1971 elapsed_seconds 1.58 
+2026-10-04T07:19:55Z FIT START A_table2_No_Model1_oral_score_hypertension_code n 11697 covariates 4 
+2026-10-04T07:19:56Z FIT END A_table2_No_Model1_oral_score_hypertension_code elapsed_seconds 0.92 residual_df 68 
+2026-10-04T07:19:58Z MODEL STORED A_table2_No_Model1_oral_score_hypertension_code storage lean bytes 1646 elapsed_seconds 1.86 
+2026-10-04T07:19:58Z Model A table2 No Model2 periodontal hypertension_code 
+2026-10-04T07:19:58Z FIT START A_table2_No_Model2_periodontal_hypertension_code n 11697 covariates 14 
+2026-10-04T07:19:59Z FIT END A_table2_No_Model2_periodontal_hypertension_code elapsed_seconds 1.5 residual_df 49 
+2026-10-04T07:20:00Z MODEL STORED A_table2_No_Model2_periodontal_hypertension_code storage lean bytes 6242 elapsed_seconds 0.99 
+2026-10-04T07:20:00Z Model A table2 No Model2 oral_health hypertension_code 
+2026-10-04T07:20:00Z FIT START A_table2_No_Model2_oral_health_hypertension_code n 11697 covariates 14 
+2026-10-04T07:20:04Z FIT END A_table2_No_Model2_oral_health_hypertension_code elapsed_seconds 4.28 residual_df 47 
+2026-10-04T07:20:07Z MODEL STORED A_table2_No_Model2_oral_health_hypertension_code storage lean bytes 6955 elapsed_seconds 2.67 
+2026-10-04T07:20:07Z FIT START A_table2_No_Model2_oral_score_hypertension_code n 11697 covariates 14 
+2026-10-04T07:20:10Z FIT END A_table2_No_Model2_oral_score_hypertension_code elapsed_seconds 2.78 residual_df 49 
+2026-10-04T07:20:12Z MODEL STORED A_table2_No_Model2_oral_score_hypertension_code storage lean bytes 6226 elapsed_seconds 2.57 
+2026-10-04T07:20:12Z Model A table2 No Model3 periodontal hypertension_code 
+2026-10-04T07:20:12Z FIT START A_table2_No_Model3_periodontal_hypertension_code n 11697 covariates 24 
+2026-10-04T07:20:15Z FIT END A_table2_No_Model3_periodontal_hypertension_code elapsed_seconds 2.4 residual_df 40 
+2026-10-04T07:20:19Z MODEL STORED A_table2_No_Model3_periodontal_hypertension_code storage lean bytes 9737 elapsed_seconds 3.98 
+2026-10-04T07:20:19Z Model A table2 No Model3 oral_health hypertension_code 
+2026-10-04T07:20:19Z FIT START A_table2_No_Model3_oral_health_hypertension_code n 11697 covariates 24 
+2026-10-04T07:20:21Z FIT END A_table2_No_Model3_oral_health_hypertension_code elapsed_seconds 2.37 residual_df 38 
+2026-10-04T07:20:25Z MODEL STORED A_table2_No_Model3_oral_health_hypertension_code storage lean bytes 10630 elapsed_seconds 3.53 
+2026-10-04T07:20:25Z FIT START A_table2_No_Model3_oral_score_hypertension_code n 11697 covariates 24 
+2026-10-04T07:20:28Z FIT END A_table2_No_Model3_oral_score_hypertension_code elapsed_seconds 3.33 residual_df 40 
+2026-10-04T07:20:33Z MODEL STORED A_table2_No_Model3_oral_score_hypertension_code storage lean bytes 9715 elapsed_seconds 4.23 
+2026-10-04T07:20:34Z Model A table2 Yes Model1 periodontal hypertension_code 
+2026-10-04T07:20:34Z FIT START A_table2_Yes_Model1_periodontal_hypertension_code n 9761 covariates 4 
+2026-10-04T07:20:35Z FIT END A_table2_Yes_Model1_periodontal_hypertension_code elapsed_seconds 0.86 residual_df 68 
+2026-10-04T07:20:36Z MODEL STORED A_table2_Yes_Model1_periodontal_hypertension_code storage lean bytes 1669 elapsed_seconds 1.45 
+2026-10-04T07:20:36Z Model A table2 Yes Model1 oral_health hypertension_code 
+2026-10-04T07:20:36Z FIT START A_table2_Yes_Model1_oral_health_hypertension_code n 9761 covariates 4 
+2026-10-04T07:20:37Z FIT END A_table2_Yes_Model1_oral_health_hypertension_code elapsed_seconds 1.27 residual_df 66 
+2026-10-04T07:20:39Z MODEL STORED A_table2_Yes_Model1_oral_health_hypertension_code storage lean bytes 1976 elapsed_seconds 1.49 
+2026-10-04T07:20:39Z FIT START A_table2_Yes_Model1_oral_score_hypertension_code n 9761 covariates 4 
+2026-10-04T07:20:41Z FIT END A_table2_Yes_Model1_oral_score_hypertension_code elapsed_seconds 2.22 residual_df 68 
+2026-10-04T07:20:43Z MODEL STORED A_table2_Yes_Model1_oral_score_hypertension_code storage lean bytes 1654 elapsed_seconds 1.36 
+2026-10-04T07:20:43Z Model A table2 Yes Model2 periodontal hypertension_code 
+2026-10-04T07:20:43Z FIT START A_table2_Yes_Model2_periodontal_hypertension_code n 9761 covariates 14 
+2026-10-04T07:20:44Z FIT END A_table2_Yes_Model2_periodontal_hypertension_code elapsed_seconds 1.22 residual_df 49 
+2026-10-04T07:20:47Z MODEL STORED A_table2_Yes_Model2_periodontal_hypertension_code storage lean bytes 6250 elapsed_seconds 2.92 
+2026-10-04T07:20:47Z Model A table2 Yes Model2 oral_health hypertension_code 
+2026-10-04T07:20:47Z FIT START A_table2_Yes_Model2_oral_health_hypertension_code n 9761 covariates 14 
+2026-10-04T07:20:50Z FIT END A_table2_Yes_Model2_oral_health_hypertension_code elapsed_seconds 3.6 residual_df 47 
+2026-10-04T07:20:53Z MODEL STORED A_table2_Yes_Model2_oral_health_hypertension_code storage lean bytes 6947 elapsed_seconds 2.11 
+2026-10-04T07:20:53Z FIT START A_table2_Yes_Model2_oral_score_hypertension_code n 9761 covariates 14 
+2026-10-04T07:20:54Z FIT END A_table2_Yes_Model2_oral_score_hypertension_code elapsed_seconds 1.64 residual_df 49 
+2026-10-04T07:20:56Z MODEL STORED A_table2_Yes_Model2_oral_score_hypertension_code storage lean bytes 6239 elapsed_seconds 1.72 
+2026-10-04T07:20:56Z Model A table2 Yes Model3 periodontal hypertension_code 
+2026-10-04T07:20:56Z FIT START A_table2_Yes_Model3_periodontal_hypertension_code n 9761 covariates 24 
+2026-10-04T07:20:59Z FIT END A_table2_Yes_Model3_periodontal_hypertension_code elapsed_seconds 2.65 residual_df 40 
+2026-10-04T07:21:00Z MODEL STORED A_table2_Yes_Model3_periodontal_hypertension_code storage lean bytes 9731 elapsed_seconds 1.04 
+2026-10-04T07:21:00Z Model A table2 Yes Model3 oral_health hypertension_code 
+2026-10-04T07:21:00Z FIT START A_table2_Yes_Model3_oral_health_hypertension_code n 9761 covariates 24 
+2026-10-04T07:21:02Z FIT END A_table2_Yes_Model3_oral_health_hypertension_code elapsed_seconds 1.82 residual_df 38 
+2026-10-04T07:21:03Z MODEL STORED A_table2_Yes_Model3_oral_health_hypertension_code storage lean bytes 10629 elapsed_seconds 0.96 
+2026-10-04T07:21:03Z FIT START A_table2_Yes_Model3_oral_score_hypertension_code n 9761 covariates 24 
+2026-10-04T07:21:04Z FIT END A_table2_Yes_Model3_oral_score_hypertension_code elapsed_seconds 1.31 residual_df 40 
+2026-10-04T07:21:05Z MODEL STORED A_table2_Yes_Model3_oral_score_hypertension_code storage lean bytes 9732 elapsed_seconds 1.26 
+2026-10-04T07:21:06Z Model A table3 30-44 Model1 periodontal hypertension_code 
+2026-10-04T07:21:06Z FIT START A_table3_30-44_Model1_periodontal_hypertension_code n 6542 covariates 3 
+2026-10-04T07:21:07Z FIT END A_table3_30-44_Model1_periodontal_hypertension_code elapsed_seconds 0.51 residual_df 69 
+2026-10-04T07:21:08Z MODEL STORED A_table3_30-44_Model1_periodontal_hypertension_code storage lean bytes 1535 elapsed_seconds 1.01 
+2026-10-04T07:21:08Z Model A table3 30-44 Model1 oral_health hypertension_code 
+2026-10-04T07:21:08Z FIT START A_table3_30-44_Model1_oral_health_hypertension_code n 6542 covariates 3 
+2026-10-04T07:21:09Z FIT END A_table3_30-44_Model1_oral_health_hypertension_code elapsed_seconds 0.97 residual_df 67 
+2026-10-04T07:21:10Z MODEL STORED A_table3_30-44_Model1_oral_health_hypertension_code storage lean bytes 1817 elapsed_seconds 0.98 
+2026-10-04T07:21:10Z FIT START A_table3_30-44_Model1_oral_score_hypertension_code n 6542 covariates 3 
+2026-10-04T07:21:11Z FIT END A_table3_30-44_Model1_oral_score_hypertension_code elapsed_seconds 0.89 residual_df 69 
+2026-10-04T07:21:12Z MODEL STORED A_table3_30-44_Model1_oral_score_hypertension_code storage lean bytes 1525 elapsed_seconds 1.37 
+2026-10-04T07:21:12Z Model A table3 30-44 Model2 periodontal hypertension_code 
+2026-10-04T07:21:12Z FIT START A_table3_30-44_Model2_periodontal_hypertension_code n 6542 covariates 8 
+2026-10-04T07:21:13Z FIT END A_table3_30-44_Model2_periodontal_hypertension_code elapsed_seconds 1.03 residual_df 56 
+2026-10-04T07:21:14Z MODEL STORED A_table3_30-44_Model2_periodontal_hypertension_code storage lean bytes 4150 elapsed_seconds 0.73 
+2026-10-04T07:21:14Z Model A table3 30-44 Model2 oral_health hypertension_code 
+2026-10-04T07:21:14Z FIT START A_table3_30-44_Model2_oral_health_hypertension_code n 6542 covariates 8 
+2026-10-04T07:21:16Z FIT END A_table3_30-44_Model2_oral_health_hypertension_code elapsed_seconds 1.84 residual_df 54 
+2026-10-04T07:21:18Z MODEL STORED A_table3_30-44_Model2_oral_health_hypertension_code storage lean bytes 4707 elapsed_seconds 2.07 
+2026-10-04T07:21:18Z FIT START A_table3_30-44_Model2_oral_score_hypertension_code n 6542 covariates 8 
+2026-10-04T07:21:20Z FIT END A_table3_30-44_Model2_oral_score_hypertension_code elapsed_seconds 2.05 residual_df 56 
+2026-10-04T07:21:22Z MODEL STORED A_table3_30-44_Model2_oral_score_hypertension_code storage lean bytes 4140 elapsed_seconds 1.84 
+2026-10-04T07:21:22Z Model A table3 30-44 Model3 periodontal hypertension_code 
+2026-10-04T07:21:22Z FIT START A_table3_30-44_Model3_periodontal_hypertension_code n 6542 covariates 18 
+2026-10-04T07:21:24Z FIT END A_table3_30-44_Model3_periodontal_hypertension_code elapsed_seconds 2.2 residual_df 47 
+2026-10-04T07:21:26Z MODEL STORED A_table3_30-44_Model3_periodontal_hypertension_code storage lean bytes 6974 elapsed_seconds 1.45 
+2026-10-04T07:21:26Z Model A table3 30-44 Model3 oral_health hypertension_code 
+2026-10-04T07:21:26Z FIT START A_table3_30-44_Model3_oral_health_hypertension_code n 6542 covariates 18 
+2026-10-04T07:21:27Z FIT END A_table3_30-44_Model3_oral_health_hypertension_code elapsed_seconds 1.21 residual_df 45 
+2026-10-04T07:21:28Z MODEL STORED A_table3_30-44_Model3_oral_health_hypertension_code storage lean bytes 7733 elapsed_seconds 1.36 
+2026-10-04T07:21:28Z FIT START A_table3_30-44_Model3_oral_score_hypertension_code n 6542 covariates 18 
+2026-10-04T07:21:30Z FIT END A_table3_30-44_Model3_oral_score_hypertension_code elapsed_seconds 1.6 residual_df 47 
+2026-10-04T07:21:31Z MODEL STORED A_table3_30-44_Model3_oral_score_hypertension_code storage lean bytes 6980 elapsed_seconds 1.06 
+2026-10-04T07:21:32Z Model A table3 45+ Model1 periodontal hypertension_code 
+2026-10-04T07:21:32Z FIT START A_table3_45+_Model1_periodontal_hypertension_code n 14916 covariates 3 
+2026-10-04T07:21:33Z FIT END A_table3_45+_Model1_periodontal_hypertension_code elapsed_seconds 1.42 residual_df 69 
+2026-10-04T07:21:35Z MODEL STORED A_table3_45+_Model1_periodontal_hypertension_code storage lean bytes 1535 elapsed_seconds 1.78 
+2026-10-04T07:21:35Z Model A table3 45+ Model1 oral_health hypertension_code 
+2026-10-04T07:21:35Z FIT START A_table3_45+_Model1_oral_health_hypertension_code n 14916 covariates 3 
+2026-10-04T07:21:36Z FIT END A_table3_45+_Model1_oral_health_hypertension_code elapsed_seconds 0.8 residual_df 67 
+2026-10-04T07:21:38Z MODEL STORED A_table3_45+_Model1_oral_health_hypertension_code storage lean bytes 1819 elapsed_seconds 1.98 
+2026-10-04T07:21:38Z FIT START A_table3_45+_Model1_oral_score_hypertension_code n 14916 covariates 3 
+2026-10-04T07:21:39Z FIT END A_table3_45+_Model1_oral_score_hypertension_code elapsed_seconds 0.91 residual_df 69 
+2026-10-04T07:21:40Z MODEL STORED A_table3_45+_Model1_oral_score_hypertension_code storage lean bytes 1524 elapsed_seconds 1.31 
+2026-10-04T07:21:40Z Model A table3 45+ Model2 periodontal hypertension_code 
+2026-10-04T07:21:40Z FIT START A_table3_45+_Model2_periodontal_hypertension_code n 14916 covariates 8 
+2026-10-04T07:21:42Z FIT END A_table3_45+_Model2_periodontal_hypertension_code elapsed_seconds 1.75 residual_df 56 
+2026-10-04T07:21:43Z MODEL STORED A_table3_45+_Model2_periodontal_hypertension_code storage lean bytes 4149 elapsed_seconds 1.01 
+2026-10-04T07:21:43Z Model A table3 45+ Model2 oral_health hypertension_code 
+2026-10-04T07:21:43Z FIT START A_table3_45+_Model2_oral_health_hypertension_code n 14916 covariates 8 
+2026-10-04T07:21:46Z FIT END A_table3_45+_Model2_oral_health_hypertension_code elapsed_seconds 2.58 residual_df 54 
+2026-10-04T07:21:48Z MODEL STORED A_table3_45+_Model2_oral_health_hypertension_code storage lean bytes 4704 elapsed_seconds 2.33 
+2026-10-04T07:21:48Z FIT START A_table3_45+_Model2_oral_score_hypertension_code n 14916 covariates 8 
+2026-10-04T07:21:49Z FIT END A_table3_45+_Model2_oral_score_hypertension_code elapsed_seconds 1.17 residual_df 56 
+2026-10-04T07:21:51Z MODEL STORED A_table3_45+_Model2_oral_score_hypertension_code storage lean bytes 4130 elapsed_seconds 1.83 
+2026-10-04T07:21:51Z Model A table3 45+ Model3 periodontal hypertension_code 
+2026-10-04T07:21:51Z FIT START A_table3_45+_Model3_periodontal_hypertension_code n 14916 covariates 18 
+2026-10-04T07:21:53Z FIT END A_table3_45+_Model3_periodontal_hypertension_code elapsed_seconds 2.35 residual_df 47 
+2026-10-04T07:21:56Z MODEL STORED A_table3_45+_Model3_periodontal_hypertension_code storage lean bytes 6975 elapsed_seconds 2.23 
+2026-10-04T07:21:56Z Model A table3 45+ Model3 oral_health hypertension_code 
+2026-10-04T07:21:56Z FIT START A_table3_45+_Model3_oral_health_hypertension_code n 14916 covariates 18 
+2026-10-04T07:21:59Z FIT END A_table3_45+_Model3_oral_health_hypertension_code elapsed_seconds 3.57 residual_df 45 
+2026-10-04T07:22:03Z MODEL STORED A_table3_45+_Model3_oral_health_hypertension_code storage lean bytes 7729 elapsed_seconds 4.06 
+2026-10-04T07:22:03Z FIT START A_table3_45+_Model3_oral_score_hypertension_code n 14916 covariates 18 
+2026-10-04T07:22:07Z FIT END A_table3_45+_Model3_oral_score_hypertension_code elapsed_seconds 3.97 residual_df 47 
+2026-10-04T07:22:10Z MODEL STORED A_table3_45+_Model3_oral_score_hypertension_code storage lean bytes 6960 elapsed_seconds 2.53 
+2026-10-04T07:22:12Z Model A supplement_measured Overall Model1 periodontal measured_htn 
+2026-10-04T07:22:12Z FIT START A_supplement_measured_Overall_Model1_periodontal_measured_htn n 12401 covariates 4 
+2026-10-04T07:22:13Z FIT END A_supplement_measured_Overall_Model1_periodontal_measured_htn elapsed_seconds 0.84 residual_df 68 
+2026-10-04T07:22:15Z MODEL STORED A_supplement_measured_Overall_Model1_periodontal_measured_htn storage lean bytes 1671 elapsed_seconds 2.12 
+2026-10-04T07:22:15Z Model A supplement_measured Overall Model1 oral_health measured_htn 
+2026-10-04T07:22:15Z FIT START A_supplement_measured_Overall_Model1_oral_health_measured_htn n 12401 covariates 4 
+2026-10-04T07:22:17Z FIT END A_supplement_measured_Overall_Model1_oral_health_measured_htn elapsed_seconds 1.62 residual_df 66 
+2026-10-04T07:22:19Z MODEL STORED A_supplement_measured_Overall_Model1_oral_health_measured_htn storage lean bytes 1975 elapsed_seconds 1.41 
+2026-10-04T07:22:19Z FIT START A_supplement_measured_Overall_Model1_oral_score_measured_htn n 12401 covariates 4 
+2026-10-04T07:22:20Z FIT END A_supplement_measured_Overall_Model1_oral_score_measured_htn elapsed_seconds 1.45 residual_df 68 
+2026-10-04T07:22:24Z MODEL STORED A_supplement_measured_Overall_Model1_oral_score_measured_htn storage lean bytes 1657 elapsed_seconds 3.74 
+2026-10-04T07:22:24Z Model A supplement_measured Overall Model2 periodontal measured_htn 
+2026-10-04T07:22:24Z FIT START A_supplement_measured_Overall_Model2_periodontal_measured_htn n 12401 covariates 8 
+2026-10-04T07:22:26Z FIT END A_supplement_measured_Overall_Model2_periodontal_measured_htn elapsed_seconds 2.47 residual_df 56 
+2026-10-04T07:22:28Z MODEL STORED A_supplement_measured_Overall_Model2_periodontal_measured_htn storage lean bytes 4156 elapsed_seconds 1.31 
+2026-10-04T07:22:28Z Model A supplement_measured Overall Model2 oral_health measured_htn 
+2026-10-04T07:22:28Z FIT START A_supplement_measured_Overall_Model2_oral_health_measured_htn n 12401 covariates 8 
+2026-10-04T07:22:31Z FIT END A_supplement_measured_Overall_Model2_oral_health_measured_htn elapsed_seconds 2.92 residual_df 54 
+2026-10-04T07:22:33Z MODEL STORED A_supplement_measured_Overall_Model2_oral_health_measured_htn storage lean bytes 4694 elapsed_seconds 2.33 
+2026-10-04T07:22:33Z FIT START A_supplement_measured_Overall_Model2_oral_score_measured_htn n 12401 covariates 8 
+2026-10-04T07:22:37Z FIT END A_supplement_measured_Overall_Model2_oral_score_measured_htn elapsed_seconds 3.82 residual_df 56 
+2026-10-04T07:22:39Z MODEL STORED A_supplement_measured_Overall_Model2_oral_score_measured_htn storage lean bytes 4134 elapsed_seconds 2.14 
+2026-10-04T07:22:39Z Model A supplement_measured Overall Model3 periodontal measured_htn 
+2026-10-04T07:22:39Z FIT START A_supplement_measured_Overall_Model3_periodontal_measured_htn n 12401 covariates 18 
+2026-10-04T07:22:42Z FIT END A_supplement_measured_Overall_Model3_periodontal_measured_htn elapsed_seconds 2.67 residual_df 47 
+2026-10-04T07:22:45Z MODEL STORED A_supplement_measured_Overall_Model3_periodontal_measured_htn storage lean bytes 6975 elapsed_seconds 3.71 
+2026-10-04T07:22:46Z Model A supplement_measured Overall Model3 oral_health measured_htn 
+2026-10-04T07:22:46Z FIT START A_supplement_measured_Overall_Model3_oral_health_measured_htn n 12401 covariates 18 
+2026-10-04T07:22:52Z FIT END A_supplement_measured_Overall_Model3_oral_health_measured_htn elapsed_seconds 6.53 residual_df 45 
+2026-10-04T07:22:54Z MODEL STORED A_supplement_measured_Overall_Model3_oral_health_measured_htn storage lean bytes 7714 elapsed_seconds 1.94 
+2026-10-04T07:22:54Z FIT START A_supplement_measured_Overall_Model3_oral_score_measured_htn n 12401 covariates 18 
+2026-10-04T07:22:57Z FIT END A_supplement_measured_Overall_Model3_oral_score_measured_htn elapsed_seconds 3.24 residual_df 47 
+2026-10-04T07:22:59Z MODEL STORED A_supplement_measured_Overall_Model3_oral_score_measured_htn storage lean bytes 6954 elapsed_seconds 1.36 
+2026-10-04T07:23:00Z Model A supplement_diagnosed_treated Overall Model1 periodontal diagnosed_or_treated_htn 
+2026-10-04T07:23:00Z FIT START A_supplement_diagnosed_treated_Overall_Model1_periodontal_diagnosed_or_treated_htn n 19815 covariates 4 
+2026-10-04T07:23:01Z FIT END A_supplement_diagnosed_treated_Overall_Model1_periodontal_diagnosed_or_treated_htn elapsed_seconds 0.96 residual_df 68 
+2026-10-04T07:23:03Z MODEL STORED A_supplement_diagnosed_treated_Overall_Model1_periodontal_diagnosed_or_treated_htn storage lean bytes 1688 elapsed_seconds 1.56 
+2026-10-04T07:23:03Z Model A supplement_diagnosed_treated Overall Model1 oral_health diagnosed_or_treated_htn 
+2026-10-04T07:23:03Z FIT START A_supplement_diagnosed_treated_Overall_Model1_oral_health_diagnosed_or_treated_htn n 19815 covariates 4 
+2026-10-04T07:23:04Z FIT END A_supplement_diagnosed_treated_Overall_Model1_oral_health_diagnosed_or_treated_htn elapsed_seconds 1.2 residual_df 66 
+2026-10-04T07:23:10Z MODEL STORED A_supplement_diagnosed_treated_Overall_Model1_oral_health_diagnosed_or_treated_htn storage lean bytes 1989 elapsed_seconds 5.77 
+2026-10-04T07:23:10Z FIT START A_supplement_diagnosed_treated_Overall_Model1_oral_score_diagnosed_or_treated_htn n 19815 covariates 4 
+2026-10-04T07:23:13Z FIT END A_supplement_diagnosed_treated_Overall_Model1_oral_score_diagnosed_or_treated_htn elapsed_seconds 2.83 residual_df 68 
+2026-10-04T07:23:18Z MODEL STORED A_supplement_diagnosed_treated_Overall_Model1_oral_score_diagnosed_or_treated_htn storage lean bytes 1664 elapsed_seconds 5.19 
+2026-10-04T07:23:18Z Model A supplement_diagnosed_treated Overall Model2 periodontal diagnosed_or_treated_htn 
+2026-10-04T07:23:18Z FIT START A_supplement_diagnosed_treated_Overall_Model2_periodontal_diagnosed_or_treated_htn n 19815 covariates 8 
+2026-10-04T07:23:22Z FIT END A_supplement_diagnosed_treated_Overall_Model2_periodontal_diagnosed_or_treated_htn elapsed_seconds 4.22 residual_df 56 
+2026-10-04T07:23:28Z MODEL STORED A_supplement_diagnosed_treated_Overall_Model2_periodontal_diagnosed_or_treated_htn storage lean bytes 4153 elapsed_seconds 5.61 
+2026-10-04T07:23:28Z Model A supplement_diagnosed_treated Overall Model2 oral_health diagnosed_or_treated_htn 
+2026-10-04T07:23:28Z FIT START A_supplement_diagnosed_treated_Overall_Model2_oral_health_diagnosed_or_treated_htn n 19815 covariates 8 
+2026-10-04T07:23:31Z FIT END A_supplement_diagnosed_treated_Overall_Model2_oral_health_diagnosed_or_treated_htn elapsed_seconds 3.55 residual_df 54 
+2026-10-04T07:23:35Z MODEL STORED A_supplement_diagnosed_treated_Overall_Model2_oral_health_diagnosed_or_treated_htn storage lean bytes 4704 elapsed_seconds 3.1 
+2026-10-04T07:23:35Z FIT START A_supplement_diagnosed_treated_Overall_Model2_oral_score_diagnosed_or_treated_htn n 19815 covariates 8 
+2026-10-04T07:23:40Z FIT END A_supplement_diagnosed_treated_Overall_Model2_oral_score_diagnosed_or_treated_htn elapsed_seconds 4.89 residual_df 56 
+2026-10-04T07:23:43Z MODEL STORED A_supplement_diagnosed_treated_Overall_Model2_oral_score_diagnosed_or_treated_htn storage lean bytes 4141 elapsed_seconds 3.92 
+2026-10-04T07:23:43Z Model A supplement_diagnosed_treated Overall Model3 periodontal diagnosed_or_treated_htn 
+2026-10-04T07:23:43Z FIT START A_supplement_diagnosed_treated_Overall_Model3_periodontal_diagnosed_or_treated_htn n 19815 covariates 18 
+2026-10-04T07:23:51Z FIT END A_supplement_diagnosed_treated_Overall_Model3_periodontal_diagnosed_or_treated_htn elapsed_seconds 7.53 residual_df 47 
+2026-10-04T07:23:56Z MODEL STORED A_supplement_diagnosed_treated_Overall_Model3_periodontal_diagnosed_or_treated_htn storage lean bytes 6975 elapsed_seconds 4.76 
+2026-10-04T07:23:56Z Model A supplement_diagnosed_treated Overall Model3 oral_health diagnosed_or_treated_htn 
+2026-10-04T07:23:56Z FIT START A_supplement_diagnosed_treated_Overall_Model3_oral_health_diagnosed_or_treated_htn n 19815 covariates 18 
+2026-10-04T07:24:06Z FIT END A_supplement_diagnosed_treated_Overall_Model3_oral_health_diagnosed_or_treated_htn elapsed_seconds 10.4 residual_df 45 
+2026-10-04T07:24:11Z MODEL STORED A_supplement_diagnosed_treated_Overall_Model3_oral_health_diagnosed_or_treated_htn storage lean bytes 7727 elapsed_seconds 4.37 
+2026-10-04T07:24:11Z FIT START A_supplement_diagnosed_treated_Overall_Model3_oral_score_diagnosed_or_treated_htn n 19815 covariates 18 
+2026-10-04T07:24:17Z FIT END A_supplement_diagnosed_treated_Overall_Model3_oral_score_diagnosed_or_treated_htn elapsed_seconds 5.83 residual_df 47 
+2026-10-04T07:24:18Z MODEL STORED A_supplement_diagnosed_treated_Overall_Model3_oral_score_diagnosed_or_treated_htn storage lean bytes 6953 elapsed_seconds 1.87 
+2026-10-04T07:24:19Z FIT START A_interaction_periodontal_smoking n 21458 
+2026-10-04T07:24:22Z FIT END A_interaction_periodontal_smoking elapsed_seconds 3.03 
+2026-10-04T07:24:24Z MODEL STORED A_interaction_periodontal_smoking storage lean bytes 10645 elapsed_seconds 1.66 
+2026-10-04T07:24:24Z FIT START A_interaction_oral_health_smoking n 21458 
+2026-10-04T07:24:27Z FIT END A_interaction_oral_health_smoking elapsed_seconds 3.5 
+2026-10-04T07:24:31Z MODEL STORED A_interaction_oral_health_smoking storage lean bytes 12553 elapsed_seconds 2.84 
+2026-10-04T07:24:31Z FIT START A_interaction_periodontal_age_group n 21458 
+2026-10-04T07:24:34Z FIT END A_interaction_periodontal_age_group elapsed_seconds 3.5 
+2026-10-04T07:24:36Z MODEL STORED A_interaction_periodontal_age_group storage lean bytes 7768 elapsed_seconds 1.44 
+2026-10-04T07:24:36Z FIT START A_interaction_oral_health_age_group n 21458 
+2026-10-04T07:24:38Z FIT END A_interaction_oral_health_age_group elapsed_seconds 2.6 
+2026-10-04T07:24:40Z MODEL STORED A_interaction_oral_health_age_group storage lean bytes 9367 elapsed_seconds 1.88 
+2026-10-04T07:24:41Z Model B table2 Overall Model1 periodontal hypertension_code 
+2026-10-04T07:24:41Z FIT START B_table2_Overall_Model1_periodontal_hypertension_code n 19925 covariates 4 
+2026-10-04T07:24:42Z FIT END B_table2_Overall_Model1_periodontal_hypertension_code elapsed_seconds 0.93 residual_df 68 
+2026-10-04T07:24:44Z MODEL STORED B_table2_Overall_Model1_periodontal_hypertension_code storage lean bytes 1670 elapsed_seconds 1.26 
+2026-10-04T07:24:44Z Model B table2 Overall Model1 oral_health hypertension_code 
+2026-10-04T07:24:44Z FIT START B_table2_Overall_Model1_oral_health_hypertension_code n 19925 covariates 4 
+2026-10-04T07:24:45Z FIT END B_table2_Overall_Model1_oral_health_hypertension_code elapsed_seconds 1.05 residual_df 66 
+2026-10-04T07:24:47Z MODEL STORED B_table2_Overall_Model1_oral_health_hypertension_code storage lean bytes 1967 elapsed_seconds 2.35 
+2026-10-04T07:24:47Z FIT START B_table2_Overall_Model1_oral_score_hypertension_code n 19925 covariates 4 
+2026-10-04T07:24:49Z FIT END B_table2_Overall_Model1_oral_score_hypertension_code elapsed_seconds 2.2 residual_df 68 
+2026-10-04T07:24:51Z MODEL STORED B_table2_Overall_Model1_oral_score_hypertension_code storage lean bytes 1652 elapsed_seconds 1.5 
+2026-10-04T07:24:51Z Model B table2 Overall Model2 periodontal hypertension_code 
+2026-10-04T07:24:51Z FIT START B_table2_Overall_Model2_periodontal_hypertension_code n 19925 covariates 14 
+2026-10-04T07:24:53Z FIT END B_table2_Overall_Model2_periodontal_hypertension_code elapsed_seconds 1.69 residual_df 50 
+2026-10-04T07:24:54Z MODEL STORED B_table2_Overall_Model2_periodontal_hypertension_code storage lean bytes 5926 elapsed_seconds 1.45 
+2026-10-04T07:24:54Z Model B table2 Overall Model2 oral_health hypertension_code 
+2026-10-04T07:24:54Z FIT START B_table2_Overall_Model2_oral_health_hypertension_code n 19925 covariates 14 
+2026-10-04T07:24:57Z FIT END B_table2_Overall_Model2_oral_health_hypertension_code elapsed_seconds 2.58 residual_df 48 
+2026-10-04T07:24:58Z MODEL STORED B_table2_Overall_Model2_oral_health_hypertension_code storage lean bytes 6618 elapsed_seconds 1.55 
+2026-10-04T07:24:58Z FIT START B_table2_Overall_Model2_oral_score_hypertension_code n 19925 covariates 14 
+2026-10-04T07:25:00Z FIT END B_table2_Overall_Model2_oral_score_hypertension_code elapsed_seconds 1.76 residual_df 50 
+2026-10-04T07:25:01Z MODEL STORED B_table2_Overall_Model2_oral_score_hypertension_code storage lean bytes 5910 elapsed_seconds 1.27 
+2026-10-04T07:25:01Z Model B table2 Overall Model3 periodontal hypertension_code 
+2026-10-04T07:25:01Z FIT START B_table2_Overall_Model3_periodontal_hypertension_code n 19925 covariates 24 
+2026-10-04T07:25:04Z FIT END B_table2_Overall_Model3_periodontal_hypertension_code elapsed_seconds 2.28 residual_df 41 
+2026-10-04T07:25:06Z MODEL STORED B_table2_Overall_Model3_periodontal_hypertension_code storage lean bytes 9324 elapsed_seconds 2.03 
+2026-10-04T07:25:06Z Model B table2 Overall Model3 oral_health hypertension_code 
+2026-10-04T07:25:06Z FIT START B_table2_Overall_Model3_oral_health_hypertension_code n 19925 covariates 24 
+2026-10-04T07:25:10Z FIT END B_table2_Overall_Model3_oral_health_hypertension_code elapsed_seconds 4.53 residual_df 39 
+2026-10-04T07:25:14Z MODEL STORED B_table2_Overall_Model3_oral_health_hypertension_code storage lean bytes 10195 elapsed_seconds 3.5 
+2026-10-04T07:25:14Z FIT START B_table2_Overall_Model3_oral_score_hypertension_code n 19925 covariates 24 
+2026-10-04T07:25:21Z FIT END B_table2_Overall_Model3_oral_score_hypertension_code elapsed_seconds 7.13 residual_df 41 
+2026-10-04T07:25:28Z MODEL STORED B_table2_Overall_Model3_oral_score_hypertension_code storage lean bytes 9305 elapsed_seconds 6.48 
+2026-10-04T07:25:29Z Model B table2 No Model1 periodontal hypertension_code 
+2026-10-04T07:25:29Z FIT START B_table2_No_Model1_periodontal_hypertension_code n 10809 covariates 4 
+2026-10-04T07:25:31Z FIT END B_table2_No_Model1_periodontal_hypertension_code elapsed_seconds 1.66 residual_df 68 
+2026-10-04T07:25:33Z MODEL STORED B_table2_No_Model1_periodontal_hypertension_code storage lean bytes 1664 elapsed_seconds 2.08 
+2026-10-04T07:25:33Z Model B table2 No Model1 oral_health hypertension_code 
+2026-10-04T07:25:33Z FIT START B_table2_No_Model1_oral_health_hypertension_code n 10809 covariates 4 
+2026-10-04T07:25:34Z FIT END B_table2_No_Model1_oral_health_hypertension_code elapsed_seconds 1 residual_df 66 
+2026-10-04T07:25:35Z MODEL STORED B_table2_No_Model1_oral_health_hypertension_code storage lean bytes 1968 elapsed_seconds 1.16 
+2026-10-04T07:25:35Z FIT START B_table2_No_Model1_oral_score_hypertension_code n 10809 covariates 4 
+2026-10-04T07:25:36Z FIT END B_table2_No_Model1_oral_score_hypertension_code elapsed_seconds 0.78 residual_df 68 
+2026-10-04T07:25:37Z MODEL STORED B_table2_No_Model1_oral_score_hypertension_code storage lean bytes 1654 elapsed_seconds 0.98 
+2026-10-04T07:25:37Z Model B table2 No Model2 periodontal hypertension_code 
+2026-10-04T07:25:37Z FIT START B_table2_No_Model2_periodontal_hypertension_code n 10809 covariates 14 
+2026-10-04T07:25:38Z FIT END B_table2_No_Model2_periodontal_hypertension_code elapsed_seconds 1.21 residual_df 50 
+2026-10-04T07:25:40Z MODEL STORED B_table2_No_Model2_periodontal_hypertension_code storage lean bytes 5925 elapsed_seconds 1.31 
+2026-10-04T07:25:40Z Model B table2 No Model2 oral_health hypertension_code 
+2026-10-04T07:25:40Z FIT START B_table2_No_Model2_oral_health_hypertension_code n 10809 covariates 14 
+2026-10-04T07:25:41Z FIT END B_table2_No_Model2_oral_health_hypertension_code elapsed_seconds 1.22 residual_df 48 
+2026-10-04T07:25:42Z MODEL STORED B_table2_No_Model2_oral_health_hypertension_code storage lean bytes 6616 elapsed_seconds 1.08 
+2026-10-04T07:25:42Z FIT START B_table2_No_Model2_oral_score_hypertension_code n 10809 covariates 14 
+2026-10-04T07:25:44Z FIT END B_table2_No_Model2_oral_score_hypertension_code elapsed_seconds 1.64 residual_df 50 
+2026-10-04T07:25:45Z MODEL STORED B_table2_No_Model2_oral_score_hypertension_code storage lean bytes 5913 elapsed_seconds 1.55 
+2026-10-04T07:25:45Z Model B table2 No Model3 periodontal hypertension_code 
+2026-10-04T07:25:45Z FIT START B_table2_No_Model3_periodontal_hypertension_code n 10809 covariates 24 
+2026-10-04T07:25:49Z FIT END B_table2_No_Model3_periodontal_hypertension_code elapsed_seconds 3.28 residual_df 41 
+2026-10-04T07:25:51Z MODEL STORED B_table2_No_Model3_periodontal_hypertension_code storage lean bytes 9327 elapsed_seconds 2 
+2026-10-04T07:25:51Z Model B table2 No Model3 oral_health hypertension_code 
+2026-10-04T07:25:51Z FIT START B_table2_No_Model3_oral_health_hypertension_code n 10809 covariates 24 
+2026-10-04T07:25:53Z FIT END B_table2_No_Model3_oral_health_hypertension_code elapsed_seconds 2.4 residual_df 39 
+2026-10-04T07:25:54Z MODEL STORED B_table2_No_Model3_oral_health_hypertension_code storage lean bytes 10201 elapsed_seconds 1.08 
+2026-10-04T07:25:54Z FIT START B_table2_No_Model3_oral_score_hypertension_code n 10809 covariates 24 
+2026-10-04T07:25:56Z FIT END B_table2_No_Model3_oral_score_hypertension_code elapsed_seconds 1.99 residual_df 41 
+2026-10-04T07:25:58Z MODEL STORED B_table2_No_Model3_oral_score_hypertension_code storage lean bytes 9316 elapsed_seconds 1.48 
+2026-10-04T07:25:58Z Model B table2 Yes Model1 periodontal hypertension_code 
+2026-10-04T07:25:58Z FIT START B_table2_Yes_Model1_periodontal_hypertension_code n 9116 covariates 4 
+2026-10-04T07:25:59Z FIT END B_table2_Yes_Model1_periodontal_hypertension_code elapsed_seconds 0.67 residual_df 68 
+2026-10-04T07:26:00Z MODEL STORED B_table2_Yes_Model1_periodontal_hypertension_code storage lean bytes 1665 elapsed_seconds 1.04 
+2026-10-04T07:26:00Z Model B table2 Yes Model1 oral_health hypertension_code 
+2026-10-04T07:26:00Z FIT START B_table2_Yes_Model1_oral_health_hypertension_code n 9116 covariates 4 
+2026-10-04T07:26:01Z FIT END B_table2_Yes_Model1_oral_health_hypertension_code elapsed_seconds 0.75 residual_df 66 
+2026-10-04T07:26:04Z MODEL STORED B_table2_Yes_Model1_oral_health_hypertension_code storage lean bytes 1972 elapsed_seconds 3.17 
+2026-10-04T07:26:04Z FIT START B_table2_Yes_Model1_oral_score_hypertension_code n 9116 covariates 4 
+2026-10-04T07:26:05Z FIT END B_table2_Yes_Model1_oral_score_hypertension_code elapsed_seconds 0.76 residual_df 68 
+2026-10-04T07:26:06Z MODEL STORED B_table2_Yes_Model1_oral_score_hypertension_code storage lean bytes 1655 elapsed_seconds 0.76 
+2026-10-04T07:26:06Z Model B table2 Yes Model2 periodontal hypertension_code 
+2026-10-04T07:26:06Z FIT START B_table2_Yes_Model2_periodontal_hypertension_code n 9116 covariates 14 
+2026-10-04T07:26:07Z FIT END B_table2_Yes_Model2_periodontal_hypertension_code elapsed_seconds 1.03 residual_df 50 
+2026-10-04T07:26:08Z MODEL STORED B_table2_Yes_Model2_periodontal_hypertension_code storage lean bytes 5922 elapsed_seconds 1.36 
+2026-10-04T07:26:08Z Model B table2 Yes Model2 oral_health hypertension_code 
+2026-10-04T07:26:08Z FIT START B_table2_Yes_Model2_oral_health_hypertension_code n 9116 covariates 14 
+2026-10-04T07:26:09Z FIT END B_table2_Yes_Model2_oral_health_hypertension_code elapsed_seconds 1.14 residual_df 48 
+2026-10-04T07:26:11Z MODEL STORED B_table2_Yes_Model2_oral_health_hypertension_code storage lean bytes 6618 elapsed_seconds 1.38 
+2026-10-04T07:26:11Z FIT START B_table2_Yes_Model2_oral_score_hypertension_code n 9116 covariates 14 
+2026-10-04T07:26:12Z FIT END B_table2_Yes_Model2_oral_score_hypertension_code elapsed_seconds 1.68 residual_df 50 
+2026-10-04T07:26:14Z MODEL STORED B_table2_Yes_Model2_oral_score_hypertension_code storage lean bytes 5912 elapsed_seconds 1.67 
+2026-10-04T07:26:14Z Model B table2 Yes Model3 periodontal hypertension_code 
+2026-10-04T07:26:14Z FIT START B_table2_Yes_Model3_periodontal_hypertension_code n 9116 covariates 24 
+2026-10-04T07:26:16Z FIT END B_table2_Yes_Model3_periodontal_hypertension_code elapsed_seconds 1.73 residual_df 41 
+2026-10-04T07:26:17Z MODEL STORED B_table2_Yes_Model3_periodontal_hypertension_code storage lean bytes 9329 elapsed_seconds 1.48 
+2026-10-04T07:26:17Z Model B table2 Yes Model3 oral_health hypertension_code 
+2026-10-04T07:26:17Z FIT START B_table2_Yes_Model3_oral_health_hypertension_code n 9116 covariates 24 
+2026-10-04T07:26:20Z FIT END B_table2_Yes_Model3_oral_health_hypertension_code elapsed_seconds 3.16 residual_df 39 
+2026-10-04T07:26:22Z MODEL STORED B_table2_Yes_Model3_oral_health_hypertension_code storage lean bytes 10193 elapsed_seconds 1.17 
+2026-10-04T07:26:22Z FIT START B_table2_Yes_Model3_oral_score_hypertension_code n 9116 covariates 24 
+2026-10-04T07:26:24Z FIT END B_table2_Yes_Model3_oral_score_hypertension_code elapsed_seconds 2.66 residual_df 41 
+2026-10-04T07:26:28Z MODEL STORED B_table2_Yes_Model3_oral_score_hypertension_code storage lean bytes 9317 elapsed_seconds 3.83 
+2026-10-04T07:26:29Z FIT START B_interaction_periodontal_smoking n 19925 
+2026-10-04T07:26:35Z FIT END B_interaction_periodontal_smoking elapsed_seconds 6.27 
+2026-10-04T07:26:38Z MODEL STORED B_interaction_periodontal_smoking storage lean bytes 10214 elapsed_seconds 2.94 
+2026-10-04T07:26:38Z FIT START B_interaction_oral_health_smoking n 19925 
+2026-10-04T07:26:42Z FIT END B_interaction_oral_health_smoking elapsed_seconds 4.28 
+2026-10-04T07:26:45Z MODEL STORED B_interaction_oral_health_smoking storage lean bytes 12088 elapsed_seconds 2.83 
+2026-10-04T07:26:50Z Extension success C:/Users/doyun/Desktop/2026-2/의생명프로그래밍/5주차/analysis/runs/E1-20261004 

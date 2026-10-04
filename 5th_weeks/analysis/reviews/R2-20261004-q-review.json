@@ -1,0 +1,79 @@
+{
+  "reviewer": "plan_review",
+  "decision": "accept",
+  "run_id": "R2-20261004",
+  "scope": "Pinned core Model 1 numerical calculations and core survey table inference; raw-data extraction is covered by a separate data audit.",
+  "reviewed_artifacts": {
+    "executed_script.R": "f14840f51eabaa442b5273d11fce825e59fdfde61b79f0e20a99fd21079083f3",
+    "report.json": "c90f6046da60101dafa8695b5bbde9a2b39a57d0b08fb6437fb62f2d28ef3331",
+    "definitions.json": "a4e48d904f2df228880e227f9ce1b74a92456f762a0dc2cd356a4cf97bc297ec",
+    "artifact_hashes.csv": "e7059f9a4b477bb69c2a3eecf88b16f812516d0a002dde4a7b897c50580305d2",
+    "derived/master.rds": "1c4abc2816600342d812911efa21bb5e530667a6b7db6807ddfe0b72e1075e7d"
+  },
+  "run_path": "C:/Users/doyun/Desktop/2026-2/의생명프로그래밍/5주차/analysis/runs/R2-20261004",
+  "independent_audit": {
+    "checks": 56,
+    "passed": 56,
+    "audit_core.R_sha256": "29fb6eff87a06e25765a0498e15132de2ab3a2b842acc61e19cf340a5f031acd",
+    "audit_design_followup.R_sha256": "3e37fb630ae235b0bfbeb003f721e72aa74fb2120756c22b2e6fd073fd26c096",
+    "R2_verified_checks.csv_sha256": "a22e10f0cbfb1d96293e46cf99e5af03f020b0edfebb7c3ef65a201e20cfde55",
+    "R2_model_check_details.json_sha256": "f4ed422c26d0f6c01f36766ba5a14e0a9f6cbf8bacd3485cf1910dfd63aef06b",
+    "audit_path": "C:/Users/doyun/Desktop/2026-2/의생명프로그래밍/4주차/.week5-staging/q_review",
+    "methods": [
+      "Independent weighted Newton logistic estimates, separate periodontal and oral-health models",
+      "Independent PSU score totals and stratum-centered sandwich covariance, retaining all full-design PSUs for domain variance",
+      "Saved IRLS working-weight and working-residual variance convention verified against installed survey implementation",
+      "Coefficient, SE, residual-df t statistic, two-sided p value, OR and t-based 95% CI identities checked for every coefficient",
+      "Full-design construction followed by domain subset independently reconstructed and numerical cluster, strata, weights and degrees of freedom checked",
+      "Independent weighted means, category percentages and their design SEs from stratum/PSU influence totals",
+      "Independent ordinary Pearson statistic and fresh-design Rao-Scott F, degrees of freedom and p values",
+      "Independent Yes-minus-No mean-contrast survey t statistic, residual df and p values"
+    ]
+  },
+  "design_findings": {
+    "full_MEC_n": 47652,
+    "primary_domain_n": 21458,
+    "PSUs": 152,
+    "strata": 74,
+    "design_df": 78,
+    "periodontal_rank": 11,
+    "periodontal_residual_df": 68,
+    "oral_health_rank": 13,
+    "oral_health_residual_df": 66,
+    "explanation": "Four strata contain three PSUs. The design df is 152 minus 74, not an assumed two-PSU-per-stratum count. Both M1 models use the fixed primary domain and MEC two-year weight divided by five."
+  },
+  "numerical_error": {
+    "periodontal_beta_max_abs_error": 5.9123816953388086e-11,
+    "oral_health_beta_max_abs_error": 5.21303000766693e-11,
+    "periodontal_cov_max_abs_error": 6.6942978937944986e-15,
+    "oral_health_cov_max_abs_error": 2.4424906541753444e-15
+  },
+  "resolved_audit_discrepancies": [
+    "Using independently converged final-mu weights instead of glm's saved IRLS working quantities gave covariance differences below 2e-7. Reconstructing the documented saved-IRLS convention reproduced covariance below 7e-15. This is a numerical iteration convention, not a production error.",
+    "An initial exact R identical() attribute check was false for freshly reconstructed cluster/strata tables. Numeric all.equal(), observation IDs, weights and design df agree. The original 53-check CSV is preserved; R2_verified_checks.csv transparently resolves the attribute-only check and adds three follow-up checks. The currently saved audit_core.R uses the corrected numerical equality check."
+  ],
+  "visual_review": {
+    "files": ["model1_forest.png", "naive_oral_health_mosaic_residual.png"],
+    "result": "Readable forest labels and t-based OR intervals; mosaic and Pearson residual exploration labelled as unweighted. Standardized mosaic residual and Pearson residual panel are different declared diagnostics."
+  },
+  "reporting_notes": [
+    "Primary n=21458 differs from the published n=21800. Present as partial reproduction under fixed declared eligibility, without claiming an exact reproduction or modifying definitions to match.",
+    "Naive Welch t has the No-minus-Yes sign while survey t is Yes-minus-No. Two-sided p values are unaffected. State contrast direction when interpreting signed statistics.",
+    "Rao-Scott F is the complex-survey inferential result. Ordinary Pearson, Yates and Fisher remain educational comparisons; mosaic residuals are descriptive SRS diagnostics.",
+    "Medication skip logic uses binary-code NA under known negative branches. The separate raw-data reviewer reported two raw BPQ050A refusal/dont-know responses overall and one in the R2 domain; zero were classified as medication_structural_no overall or in the domain. This does not affect current results. Restricting structural skips to raw NA would make the future implementation robust to contradictory responses.",
+    "The production core handler records pipeline warnings; an empty warnings log does not cover R process startup locale warnings. Independent scripts emitted locale startup warnings and then set a supported UTF-8 locale.",
+    "Cross-sectional adjusted odds ratios describe association; do not label them risks, prevalence ratios or causal effects."
+  ],
+  "exposure_record": {
+    "blinded_review": false,
+    "prior": "Official Springer Methods/footnote responses also displayed published counts and estimates during plan review. The V extension explicitly includes published counts.",
+    "current": "Core executed code, derived master, tables and saved model fits were read for numerical auditing.",
+    "not_read": ["initial learning notes"],
+    "tuning": "None. Independent checks use fixed plan definitions and mathematical identities."
+  },
+  "limitations": [
+    "The audit checks derived-domain calculations and numerical inference, not source XPT extraction or every manifest row, which are assigned to the data reviewer.",
+    "This acceptance does not cover Model 2/3, age/smoking interactions or supplemental model results. Extension audits are separate.",
+    "This acceptance is not an assertion that the original authors used the same eligibility, smoking variable or missing-value definitions."
+  ]
+}

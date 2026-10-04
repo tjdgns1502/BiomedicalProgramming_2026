@@ -1,0 +1,8 @@
+2026-10-04T06:46:51Z Start task R-CAT-001 rev1.1; stage all 
+2026-10-04T06:46:54Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/DEMO_F.xpt attempt 1 
+2026-10-04T06:46:58Z Download validation failed: embedded nul in string: 'HEADER RECORD*******LIBRARY HEADER RECORD!!!!!!!000000000000000000000000000000  SAS     SAS     SASLIB  9.2     XP_PRO\0\0                        22AUG11:15:47:40' 
+2026-10-04T06:46:58Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/DEMO_F.xpt attempt 2 
+2026-10-04T06:47:00Z Download validation failed: embedded nul in string: 'HEADER RECORD*******LIBRARY HEADER RECORD!!!!!!!000000000000000000000000000000  SAS     SAS     SASLIB  9.2     XP_PRO\0\0                        22AUG11:15:47:40' 
+2026-10-04T06:47:00Z Downloading https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/DEMO_F.xpt attempt 3 
+2026-10-04T06:47:01Z Download validation failed: embedded nul in string: 'HEADER RECORD*******LIBRARY HEADER RECORD!!!!!!!000000000000000000000000000000  SAS     SAS     SASLIB  9.2     XP_PRO\0\0                        22AUG11:15:47:40' 
+2026-10-04T06:47:01Z FAILED: Download failed after initial attempt and two retries: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/DEMO_F.xpt 

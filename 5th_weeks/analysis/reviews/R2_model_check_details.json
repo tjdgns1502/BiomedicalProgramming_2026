@@ -1,0 +1,20 @@
+{
+  "Model1_periodontal": {
+    "beta_max_error": 5.9123816953388086e-11,
+    "saved_IRLS_cov_max_error": 6.6942978937944986e-15,
+    "final_mu_cov_max_error": 1.9273596638114121e-07,
+    "stored_working_weights_relative_difference": 1.3436080335216261e-05,
+    "rank": 11,
+    "residual_df": 68,
+    "score_max": 1.9113599591946695e-11
+  },
+  "Model1_oral_health": {
+    "beta_max_error": 5.21303000766693e-11,
+    "saved_IRLS_cov_max_error": 2.4424906541753444e-15,
+    "final_mu_cov_max_error": 1.5612651380059184e-07,
+    "stored_working_weights_relative_difference": 1.2630754117948229e-05,
+    "rank": 13,
+    "residual_df": 66,
+    "score_max": 5.3002935374024673e-11
+  }
+}

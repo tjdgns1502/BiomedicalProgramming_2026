@@ -1,0 +1,15 @@
+analysis/r-library/
+**/.uv-cache/
+**/__pycache__/
+.venv/
+analysis/data/raw/
+**/derived/
+**/*.rds
+**/*.RDS
+**/*.xpt
+**/*.XPT
+**/master.csv
+**/harmonization_J_records.csv
+analysis/sources/cache/
+.Rhistory
+.RData

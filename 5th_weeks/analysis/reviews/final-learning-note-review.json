@@ -1,0 +1,50 @@
+{
+  "reviewer": "plan_review",
+  "decision": "accept",
+  "review_type": "Independent scientific wording review of final learning notes; no model or numerical recomputation",
+  "packet_path": "C:/Users/doyun/Desktop/2026-2/의생명프로그래밍/5주차/analysis/memory/stage_registry.json",
+  "packet_sha256": "7ca58ae5f7c7796bad6cdeca61b762d20573398ad4ae9596d392a70f5a542a3c",
+  "reviewed_notes": [
+    {
+      "stage": "S05",
+      "path": "C:/Users/doyun/Desktop/2026-2/의생명프로그래밍/5주차/치주질환과 고혈압 - 분석 길잡이/05-paper 오즈비와 보정 모형.md",
+      "sha256": "80b8ba3e1678badd437f59c21d01d78bfb0fd2fa832aed02beaa076b29f5d573",
+      "matches_registry": true
+    },
+    {
+      "stage": "S06",
+      "path": "C:/Users/doyun/Desktop/2026-2/의생명프로그래밍/5주차/치주질환과 고혈압 - 분석 길잡이/06-paper 통계 검증 과제.md",
+      "sha256": "94a79165e206c006df752dae5272479a0e3eee699b2b8e464d8281b137bfbc92",
+      "matches_registry": true
+    },
+    {
+      "stage": "S07",
+      "path": "C:/Users/doyun/Desktop/2026-2/의생명프로그래밍/5주차/치주질환과 고혈압 - 분석 길잡이/07-paper 결과 해석과 재현 한계.md",
+      "sha256": "6929b664d37f67a29a5675904016e83cd1cbdd1e238d7ebdcc4b8e019166e5bf",
+      "matches_registry": true
+    }
+  ],
+  "scientific_findings": [
+    "S05 correctly distinguishes adjusted Model1 from crude OR and the Table2, Table3 and supplemental adjustment specifications.",
+    "S05 identifies E1 as raw-laboratory history and E2 as the CDC-harmonized revision, preserves author-code uncertainty, and separates dietary-weight candidate B from the primary A denominator.",
+    "S05 describes inferred supplemental populations and explicitly reports their distinct denominators and eleven unknown diagnosed/treated statuses rather than treating the cases as an exhaustive partition.",
+    "S05 interprets subgroup differences using joint Wald tests rather than comparing significance labels; it retains confounding, reverse-causation, measurement and missing-indicator limitations.",
+    "S06 distinguishes independent-binomial pointwise null rejection rates from conditional fixed-margin Fisher behavior and from the full null-space supremum size. Exact enumeration and Monte Carlo Wilson uncertainty are correctly separated.",
+    "S06 separates crude OR and prevalence ratio, expresses the 7.40% discrepancy as a relative difference in numerical ratios rather than a disease-risk increase, and prohibits converting adjusted OR to RR.",
+    "S06 labels McNemar as an educational synthetic paired example and marks actual NHANES application not applicable; it preserves the warning-collection limitation.",
+    "S07 reports partial reconstruction rather than exact author-code reproduction, acknowledges publication-value exposure without a blinding claim, and limits conclusions to association and statistical structure.",
+    "The notes distinguish numerical/data review acceptance from identification of the authors' hidden analytic choices and are consistent with the accepted V1, R2 and E2 scope."
+  ],
+  "blocking_findings": [],
+  "nonblocking_precision_notes": [
+    "The phrase survey t degrees of freedom is valid but model residual degrees of freedom would be more specific for the forest caption. The linked formula/df records already provide the exact convention.",
+    "The shared-denominator sentence describes the upstream primary cohort; subsequent B and supplemental paragraphs correctly state their separate denominators. Shared reference cohort would be a less ambiguous phrase if the text is edited later."
+  ],
+  "scope_limits": [
+    "Only the three requested final paper-note interpretations were independently read in this review. Other stages and concept files are outside this wording decision.",
+    "The parent and implementation reviewers separately check document links, asset freshness and structural completeness. This review does not duplicate those checks or revalidate every quoted publication number.",
+    "Any edit to these notes changes their hashes and requires recording the new exact versions; this acceptance binds only the versions listed above."
+  ],
+  "exposure_record": "At this final stage the reviewer first read the current S05/S06/S07 learning-note versions, including their preserved initial explanations. Earlier computational reviews did not read initial note files. The reviewer is independent but not blinded.",
+  "files_modified": "Only this q_review record; the learning notes were read-only."
+}

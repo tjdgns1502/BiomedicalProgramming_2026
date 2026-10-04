@@ -1,0 +1,80 @@
+{
+  "reviewer": "plan_review",
+  "decision": "accept",
+  "run_id": "E2-20261004",
+  "accepted_scope": "CDC-harmonized A/B partial reconstruction: 36 recomputed M3/trend/interaction fits, changed laboratory summaries, and verified unchanged M1/M2 reuse.",
+  "run_path": "C:/Users/doyun/Desktop/2026-2/의생명프로그래밍/5주차/analysis/runs/E2-20261004",
+  "pinned_hashes": {
+    "executed_script.R": "38ac14542f2147f096d0035b3397964b66a255868811d6215d2eef08f2a09ab3",
+    "plan-v1.5.json": "aaeae78f63d4aff3d094858659c1f0c45230467d9b66f637df421426ddc083b5",
+    "derived/master.rds": "ed831aa35c25da5b032d5a1dc846268326a1ba6cede793a295b67ffa99fe4b60",
+    "artifact_hashes.csv": "bce6924dfc5de88353d33846d918df68e76f049d74de869120603bcf9869b9c2",
+    "definitions.json": "845a189bb8a2f9ca79e489329edef36eed4eb867090fda98f80c7b0241d97400",
+    "report.json": "1d0ac88a02fd05bd0d1d72b8c877e1fe72bb8f9d8750ea102fc28b2fd6aa4cc2"
+  },
+  "execution": {
+    "status": "success",
+    "data_version": "nhanes-2009-2018-harmonizedJ-d8f04b7c96c89c31956a",
+    "completed_utc": "2026-10-04T07:56:12Z",
+    "executed_code_and_copied_plan_match_prior_approval": true
+  },
+  "independent_checks": {
+    "new_models": 36,
+    "checks": 371,
+    "passed": 371,
+    "audit_harmonized.R_sha256": "4f7974066e45b6c542cb0de73671b17bbd1a5c51992dc67e8565997588fa81a2",
+    "E2_independent_checks.csv_sha256": "c5b5657120d1bd82a1532960ffae1bf2e27df9c53bb0fa935ccbe58ac292ff7e",
+    "E2_model_check_details.json_sha256": "57231c358cb526b04205655dd45d6f195d2814e11fc621f6ddbc17996b8bc781",
+    "methods": [
+      "Every new M3/trend/interaction formula, domain, sample, case/control count, rank, design df, residual df and current data version checked",
+      "Every new coefficient and SE checked against lean vcov; OR, t-based CI and p, and separately labelled z comparator checked",
+      "Every joint interaction Wald F independently calculated from the interaction coefficient vector and covariance block; numerator rank, denominator df and F-tail p checked",
+      "Five selected harmonized M3/interaction fits independently reproduced using ordinary GLM score equations and independent stratum-centered PSU sandwich covariance",
+      "Changed creatinine and biochemical-profile triglyceride Table1 means and SEs independently reconstructed for both candidates and hypertension groups",
+      "All continuous primary-domain medians, filled values and missing indicators checked",
+      "All 60 reused M1/M2 lean artifacts match E1 byte hashes exactly; merged M1/M2 coefficient/count/trend numeric rows and row provenance agree with E1"
+    ],
+    "independent_refit_max_beta_abs_error": 1.5892842597509116e-13,
+    "independent_refit_max_covariance_abs_error": 5.6621374255882984e-13
+  },
+  "omitted_columns_sidecar": {
+    "path": "C:/Users/doyun/Desktop/2026-2/의생명프로그래밍/4주차/.week5-staging/q_review/E2_omitted_model_matrix_columns.csv",
+    "sha256": "c9fce4833fda2fefefffd6903068cfef3fd946ef2222a41e938c362d07e80acf",
+    "audit_harmonized_aliases.R_sha256": "6d5ac107b80f63331756e70a01e817afe1a4fdeca8fc9d6e70a90b369c3ffe51",
+    "all_models_inspected": 96,
+    "omitted_columns": 96,
+    "affected_models": 54,
+    "all_nonestimability_verified": true,
+    "original_lean_alias_fields_populated": false,
+    "explanation": "Forty B-domain occurrences of sodium_missing/fat_missing are constant zero, twenty A fat_missing occurrences are linearly dependent, and thirty-six hdl_missing occurrences are linearly dependent. Saved rank, covariance and residual df already account for these omitted columns. This independent sidecar supplies the missing documentation."
+  },
+  "visual_review": {
+    "files": ["A_model1_3_forest.png", "B_model1_3_forest.png", "J_backward_harmonization_qc.png"],
+    "readable": true,
+    "forest_axes_and_residual_df_t_CIs_correct": true,
+    "QC_units": "Both original and backward-harmonized creatinine/TG axes are mg/dL; the dashed line is equality."
+  },
+  "reporting_notes": [
+    "Primary A n=21458 and dietary-weight B n=19925 remain distinct. Population, weighting and inclusion differences are part of their estimands; do not describe the comparison as a general superiority test.",
+    "Model1/2 lean objects retain E1 data-version fields because their input columns are unchanged. Exact artifact reuse and effective E2 lineage are documented by dependency and row-provenance sidecars.",
+    "The new repair computation records zero warnings. Historical E1 categorical approximation warnings still apply to reused outputs; do not claim all analyses were warning-free.",
+    "Use the independent omitted-column sidecar with the formula and sample/rank/df tables. Null/empty inherited alias fields do not mean no model-matrix columns were excluded.",
+    "The optional common-complete-case suite was not run and has no current output. No additional method or candidate was introduced by this audit.",
+    "E1 is an immutable raw-laboratory diagnostic; E2 is the primary CDC-harmonized revision of the same A/B candidates. The original authors' calibration, eligibility and missing-data choices remain unreported, so this is partial reconstruction.",
+    "BIOPRO LBXSTR remains distinct from reference fasting LBXTR. The fixed CDC bridging coefficients are treated as known in these regression calculations; the reported survey CIs cover sampling uncertainty under the specified analysis.",
+    "Cross-sectional odds ratios, ordinal trends and subgroup interactions describe associations. Do not label these odds ratios as risk ratios, prevalence ratios or causal effects."
+  ],
+  "prior_reviews": {
+    "E1_numerical_review_sha256": "cab140030972447f3559e73b6ddd213917cef6502752d26cd9b584112cf84f90",
+    "E2_plan_code_review_sha256": "e1d0fbb7210659c8727fb5c0685133392b2a7ef6b66696acb40ec0707ae98c1b"
+  },
+  "exposure_record": {
+    "blinded_review": false,
+    "record": "Published values appeared during earlier source review. Current code and derived/model artifacts were read for fixed-definition numerical auditing. Initial learning notes have not yet been read.",
+    "tuning": "None. The amendment follows official CDC assay documentation and mathematical verification."
+  },
+  "scope_limits": [
+    "The separate data audit covers all raw/source rows, calibration transformations, unchanged columns and every manifest entry; those checks are not duplicated here.",
+    "This decision concerns the exact pinned computational artifacts. Final learning-note text, tables, links and figure references require their own exact-version document QA."
+  ]
+}

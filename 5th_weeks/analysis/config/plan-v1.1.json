@@ -1,0 +1,85 @@
+{
+  "version": "1.1",
+  "approved_by": "plan_review",
+  "approval_scope": [
+    "R1",
+    "R2",
+    "M1",
+    "V1",
+    "V2",
+    "V3"
+  ],
+  "approval_timestamp": "2026-10-04T06:32:57.983227+00:00",
+  "age_min": 30,
+  "cycles": [
+    2009,
+    2011,
+    2013,
+    2015,
+    2017
+  ],
+  "primary_weights": "WTMEC2YR/5",
+  "selection": "valid SBP and DBP, oral/perio/SMQ020 observed; HTN true if positive evidence, unknown if contradictory incomplete negative evidence",
+  "bp_mean": "all measurements1:4; SBP>0,DBP>=0; each >=1 valid",
+  "education": "1/2 lessHS,3HS,4/5moreHS; specialNA missing factor",
+  "missing": "categorical missing category; continuous expanded models separately fixed imputation+indicator assumption",
+  "CI": "survey t design df, also Wald z candidate comparator explicitly",
+  "replication_tolerance": {
+    "integer_counts": 0,
+    "rounded_OR": 0.005,
+    "rounded_CI": 0.005,
+    "weighted_pct_percentage_points": 0.005
+  },
+  "comparison_policy": "target values withheld from implementer; no optimize publication match",
+  "fisher": {
+    "two_sided": "R probability-ordering",
+    "alpha": 0.05,
+    "reject": "p<alpha",
+    "no_information_tables": "non-rejection",
+    "seed": 20261004,
+    "B": 10000,
+    "n_per_group": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "null_p": [
+      0.05,
+      0.2,
+      0.5
+    ],
+    "alternative": [
+      0.2,
+      0.35
+    ]
+  },
+  "paired_demo": [
+    [
+      40,
+      25
+    ],
+    [
+      5,
+      30
+    ]
+  ],
+  "effect_comparison": "crossproduct crudeOR vs prevalenceRatio, adjustedOR conversion prohibited",
+  "downstream_dependencies": {
+    "data": [
+      "Table1",
+      "Table2",
+      "Table3",
+      "SupplementI",
+      "SupplementII",
+      "figures",
+      "all-paper-notes"
+    ],
+    "model_plan": [
+      "models",
+      "forest",
+      "interpretation"
+    ]
+  },
+  "unapproved": "M2/M3 definitions/weights candidate must receive Q revision"
+}

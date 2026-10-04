@@ -1,0 +1,62 @@
+[
+  {
+    "source": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\의생명프로그래밍_발표준비\\5주차\\analysis\\runs\\R2-20261004\\figures\\model1_forest.png",
+    "copy": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\의생명프로그래밍_발표준비\\5주차\\치주질환과 고혈압 - 분석 길잡이\\assets\\R2-20261004\\model1_forest.png",
+    "run_id": "R2-20261004",
+    "sha256": "1043a9f349c3fa7f0e8d52503b1fda984b6aa10392813945b60a1145b8ad2ffd"
+  },
+  {
+    "source": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\의생명프로그래밍_발표준비\\5주차\\analysis\\runs\\R2-20261004\\figures\\naive_oral_health_mosaic_residual.png",
+    "copy": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\의생명프로그래밍_발표준비\\5주차\\치주질환과 고혈압 - 분석 길잡이\\assets\\R2-20261004\\naive_oral_health_mosaic_residual.png",
+    "run_id": "R2-20261004",
+    "sha256": "0507e77067bf60e12e1cfecdc434ead66938733404d1baffa7e9962835e8da6a"
+  },
+  {
+    "source": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\의생명프로그래밍_발표준비\\5주차\\analysis\\runs\\R2-20261004\\figures\\naive_periodontal_mosaic_residual.png",
+    "copy": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\의생명프로그래밍_발표준비\\5주차\\치주질환과 고혈압 - 분석 길잡이\\assets\\R2-20261004\\naive_periodontal_mosaic_residual.png",
+    "run_id": "R2-20261004",
+    "sha256": "9a2283fa83fd21224f6b9e0db91cf37cc5679224f078e4ea79925fe89e63c11a"
+  },
+  {
+    "source": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\의생명프로그래밍_발표준비\\5주차\\analysis\\runs\\R2-20261004\\figures\\naive_smoking_mosaic_residual.png",
+    "copy": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\의생명프로그래밍_발표준비\\5주차\\치주질환과 고혈압 - 분석 길잡이\\assets\\R2-20261004\\naive_smoking_mosaic_residual.png",
+    "run_id": "R2-20261004",
+    "sha256": "bac9be2f4131a55f3f1944b18fcc078d2a6ed22a8f730cd5295a36edca69292d"
+  },
+  {
+    "source": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\의생명프로그래밍_발표준비\\5주차\\analysis\\runs\\E2-20261004\\figures\\A_model1_3_forest.png",
+    "copy": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\의생명프로그래밍_발표준비\\5주차\\치주질환과 고혈압 - 분석 길잡이\\assets\\E2-20261004\\A_model1_3_forest.png",
+    "run_id": "E2-20261004",
+    "sha256": "ee8faf948cac1f43e636bb9959d641d1d84893af0630ad5f8b4ebd8802ba8918"
+  },
+  {
+    "source": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\의생명프로그래밍_발표준비\\5주차\\analysis\\runs\\E2-20261004\\figures\\B_model1_3_forest.png",
+    "copy": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\의생명프로그래밍_발표준비\\5주차\\치주질환과 고혈압 - 분석 길잡이\\assets\\E2-20261004\\B_model1_3_forest.png",
+    "run_id": "E2-20261004",
+    "sha256": "5e0bdacae97966e8e06bd64cc63c12dad53cbb05fc01551f13ec974d23852933"
+  },
+  {
+    "source": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\의생명프로그래밍_발표준비\\5주차\\analysis\\runs\\E2-20261004\\figures\\J_backward_harmonization_qc.png",
+    "copy": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\의생명프로그래밍_발표준비\\5주차\\치주질환과 고혈압 - 분석 길잡이\\assets\\E2-20261004\\J_backward_harmonization_qc.png",
+    "run_id": "E2-20261004",
+    "sha256": "8d4e0425bbd0abb4e83fbfb2557fdec1f62d4b486ba0a6087f07932359893fe8"
+  },
+  {
+    "source": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\의생명프로그래밍_발표준비\\5주차\\analysis\\runs\\V1-20261004\\figures\\OR_PR_baseline_curve.png",
+    "copy": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\의생명프로그래밍_발표준비\\5주차\\치주질환과 고혈압 - 분석 길잡이\\assets\\V1-20261004\\OR_PR_baseline_curve.png",
+    "run_id": "V1-20261004",
+    "sha256": "9b2abf53d318a670c5e14c4360421cf4e48e06be77a7ae3648b91c34bf582215"
+  },
+  {
+    "source": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\의생명프로그래밍_발표준비\\5주차\\analysis\\runs\\V1-20261004\\figures\\power_curve.png",
+    "copy": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\의생명프로그래밍_발표준비\\5주차\\치주질환과 고혈압 - 분석 길잡이\\assets\\V1-20261004\\power_curve.png",
+    "run_id": "V1-20261004",
+    "sha256": "2676daa25572d8cfd1ca966bbef7fcf631d8b536b24c9e858228dcf6c4e20c29"
+  },
+  {
+    "source": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\의생명프로그래밍_발표준비\\5주차\\analysis\\runs\\V1-20261004\\figures\\test_size_curve.png",
+    "copy": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\의생명프로그래밍_발표준비\\5주차\\치주질환과 고혈압 - 분석 길잡이\\assets\\V1-20261004\\test_size_curve.png",
+    "run_id": "V1-20261004",
+    "sha256": "cbe6c4295bf1471de8030d3c2d1d293fce151c747b9547e2fa5536638dbed915"
+  }
+]

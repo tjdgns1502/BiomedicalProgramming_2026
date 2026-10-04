@@ -1,0 +1,54 @@
+{
+  "task_id": "R-EXT-002",
+  "revision": "1.3",
+  "stage_ids": [
+    "S03",
+    "S05"
+  ],
+  "issue_id": "ISSUE-07",
+  "type": "replication_config",
+  "question": "R-EXT-002",
+  "estimand": "survey adjusted prevalence odds ratio",
+  "owner_role": "I",
+  "worker_id": "r_implementation",
+  "reviewer_id": "plan_review",
+  "required_or_optional": "required",
+  "dependencies": [
+    "R-CAT-001"
+  ],
+  "allowed_inputs": [
+    "official paper methods/tables",
+    "CDC codebooks",
+    "reviewed plan"
+  ],
+  "assumptions": "in versioned plan",
+  "exposure_history": "P/root saw publication values; R implementer did not receive publication target values; Q saw methods only and no numeric targets",
+  "plan_version": "1.3",
+  "plan_review": "accept: plan_review; corrected alcohol codes and half-hour sleep rules",
+  "methods": "config/plan-v1.3.json",
+  "acceptance_criteria": [
+    "definitions match plan",
+    "runs immutable",
+    "counts/hashes/denominators explicit",
+    "independent output review"
+  ],
+  "limits": {
+    "download_retries": 2,
+    "author_config_candidates": 2
+  },
+  "outputs": [
+    "result.json",
+    "tables",
+    "figures"
+  ],
+  "write_scope": "task-local work only; common memory and notes root-owned",
+  "state": "ready",
+  "freshness": "current",
+  "attempts": [],
+  "result_path": null,
+  "review_path": null,
+  "document_anchors": [
+    "S03",
+    "S05"
+  ]
+}

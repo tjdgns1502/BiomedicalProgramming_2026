@@ -1,0 +1,43 @@
+﻿family,subgroup,exposure,model,published_p_text,calculated_p,source_method_status
+table2,Overall,oral_health,Model1,< 0.001,1.41893762541654e-12,author trend coding and df not fully specified; candidate comparison
+table2,Overall,oral_health,Model2,< 0.001,1.25221481119354e-06,author trend coding and df not fully specified; candidate comparison
+table2,Overall,oral_health,Model3,< 0.001,2.11862937226207e-06,author trend coding and df not fully specified; candidate comparison
+table2,Non-Smoking,oral_health,Model1,< 0.001,2.49722401248059e-14,author trend coding and df not fully specified; candidate comparison
+table2,Non-Smoking,oral_health,Model2,< 0.001,5.48203525800548e-07,author trend coding and df not fully specified; candidate comparison
+table2,Non-Smoking,oral_health,Model3,0.032,7.8874498045613e-07,author trend coding and df not fully specified; candidate comparison
+table2,Smoking,oral_health,Model1,< 0.001,0.00069267046042447,author trend coding and df not fully specified; candidate comparison
+table2,Smoking,oral_health,Model2,0.03,0.0311839005135848,author trend coding and df not fully specified; candidate comparison
+table2,Smoking,oral_health,Model3,0.013,0.0346885086073939,author trend coding and df not fully specified; candidate comparison
+table2,Overall,periodontal,Model1,< 0.001,8.05290087299508e-08,author trend coding and df not fully specified; candidate comparison
+table2,Overall,periodontal,Model2,< 0.001,0.000412662102140513,author trend coding and df not fully specified; candidate comparison
+table2,Overall,periodontal,Model3,< 0.001,0.000387609738673594,author trend coding and df not fully specified; candidate comparison
+table2,Non-Smoking,periodontal,Model1,< 0.001,7.15929278362508e-05,author trend coding and df not fully specified; candidate comparison
+table2,Non-Smoking,periodontal,Model2,0.066,0.0340944502543468,author trend coding and df not fully specified; candidate comparison
+table2,Non-Smoking,periodontal,Model3,0.041,0.0329371434412048,author trend coding and df not fully specified; candidate comparison
+table2,Smoking,periodontal,Model1,0.006,0.00652338492424173,author trend coding and df not fully specified; candidate comparison
+table2,Smoking,periodontal,Model2,0.097,0.0431576522001242,author trend coding and df not fully specified; candidate comparison
+table2,Smoking,periodontal,Model3,0.080,0.0441321183676266,author trend coding and df not fully specified; candidate comparison
+table3,30-44,oral_health,Model1,< 0.001,6.18847726544651e-07,author trend coding and df not fully specified; candidate comparison
+table3,30-44,oral_health,Model2,< 0.001,0.000280045612833869,author trend coding and df not fully specified; candidate comparison
+table3,30-44,oral_health,Model3,< 0.001,0.00109117367727096,author trend coding and df not fully specified; candidate comparison
+table3,45+,oral_health,Model1,< 0.001,2.79724148411197e-06,author trend coding and df not fully specified; candidate comparison
+table3,45+,oral_health,Model2,< 0.001,0.00341458042436316,author trend coding and df not fully specified; candidate comparison
+table3,45+,oral_health,Model3,0.001,0.00399150377840602,author trend coding and df not fully specified; candidate comparison
+table3,30-44,periodontal,Model1,< 0.001,1.10192835668755e-07,author trend coding and df not fully specified; candidate comparison
+table3,30-44,periodontal,Model2,< 0.001,3.17975653649056e-05,author trend coding and df not fully specified; candidate comparison
+table3,30-44,periodontal,Model3,< 0.001,0.00017267763412091,author trend coding and df not fully specified; candidate comparison
+table3,45+,periodontal,Model1,0.21,0.251619925793521,author trend coding and df not fully specified; candidate comparison
+table3,45+,periodontal,Model2,0.444,0.413683904804449,author trend coding and df not fully specified; candidate comparison
+table3,45+,periodontal,Model3,0.444,0.384043635321493,author trend coding and df not fully specified; candidate comparison
+supplement_measured,Overall,oral_health,Model1,<0.001,0.00307142839605864,author trend coding and df not fully specified; candidate comparison
+supplement_measured,Overall,oral_health,Model2,0.002,0.0095016886646175,author trend coding and df not fully specified; candidate comparison
+supplement_measured,Overall,oral_health,Model3,0.003,0.00690394502956993,author trend coding and df not fully specified; candidate comparison
+supplement_measured,Overall,periodontal,Model1,0.222,0.10983283676649,author trend coding and df not fully specified; candidate comparison
+supplement_measured,Overall,periodontal,Model2,0.135,0.0690824277758463,author trend coding and df not fully specified; candidate comparison
+supplement_measured,Overall,periodontal,Model3,0.159,0.0648201172754023,author trend coding and df not fully specified; candidate comparison
+supplement_diagnosed_treated,Overall,oral_health,Model1,<0.001,1.97122787418457e-12,author trend coding and df not fully specified; candidate comparison
+supplement_diagnosed_treated,Overall,oral_health,Model2,<0.001,8.85639589720325e-09,author trend coding and df not fully specified; candidate comparison
+supplement_diagnosed_treated,Overall,oral_health,Model3,<0.001,3.17375751590338e-07,author trend coding and df not fully specified; candidate comparison
+supplement_diagnosed_treated,Overall,periodontal,Model1,<0.001,1.08636884798489e-10,author trend coding and df not fully specified; candidate comparison
+supplement_diagnosed_treated,Overall,periodontal,Model2,<0.001,5.48409904019237e-09,author trend coding and df not fully specified; candidate comparison
+supplement_diagnosed_treated,Overall,periodontal,Model3,<0.001,1.26868250483823e-07,author trend coding and df not fully specified; candidate comparison

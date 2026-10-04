@@ -1,0 +1,54 @@
+{
+  "task_id": "P-SOURCE",
+  "revision": "1",
+  "stage_ids": [
+    "S01",
+    "S02",
+    "S03"
+  ],
+  "issue_id": "ISSUE-01",
+  "type": "data_quality",
+  "question": "P-SOURCE",
+  "estimand": "not_applicable: source/review/education",
+  "owner_role": "P",
+  "worker_id": "paper_audit",
+  "reviewer_id": "paper_audit",
+  "required_or_optional": "required",
+  "dependencies": [],
+  "allowed_inputs": [
+    "official paper methods/tables",
+    "CDC codebooks",
+    "reviewed plan"
+  ],
+  "assumptions": "in versioned plan",
+  "exposure_history": "P/root saw publication values; R implementer did not receive publication target values; Q saw methods only and no numeric targets",
+  "plan_version": "1.1",
+  "plan_review": "accepted: plan_review, limited R1/R2/M1/V1/V2/V3; expanded M2/M3 pending revision",
+  "methods": "in config/plan-v1.1.json",
+  "acceptance_criteria": [
+    "definitions match plan",
+    "runs immutable",
+    "counts/hashes/denominators explicit",
+    "independent output review"
+  ],
+  "limits": {
+    "download_retries": 2,
+    "author_config_candidates": 2
+  },
+  "outputs": [
+    "result.json",
+    "tables",
+    "figures"
+  ],
+  "write_scope": "task-local work only; common memory and notes root-owned",
+  "state": "accepted",
+  "freshness": "current",
+  "attempts": [],
+  "result_path": null,
+  "review_path": null,
+  "document_anchors": [
+    "S01",
+    "S02",
+    "S03"
+  ]
+}

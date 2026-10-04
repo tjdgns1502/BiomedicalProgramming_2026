@@ -1,0 +1,24 @@
+{
+  "source": "supplementary/12889_2023_16012_MOESM1_ESM.pdf",
+  "visual_review": {"pages": [1, 2], "checked": ["titles", "all_or_and_ci", "cases_total", "model_footnotes"], "passed": true},
+  "reported": {
+    "source_fact_type": "reported",
+    "table_I_title": "Multivariable odds ratios (ORs, 95%CI) of prevalence of undiagnosed hypertension",
+    "table_II_title": "Multivariable odds ratios (ORs, 95%CI) of prevalence of physician diagnosed and treated hypertension",
+    "table_I_PD_no": {"cases": 1344, "total": 10222},
+    "table_I_PD_yes": {"cases": 284, "total": 2189},
+    "table_II_PD_no": {"cases": 7495, "total": 16373},
+    "table_II_PD_yes": {"cases": 1894, "total": 3799},
+    "explicit_supplementary_exclusion_rule": false,
+    "M1": ["age", "sex", "race/ethnicity", "education"],
+    "M2_added": ["BMI", "sleep duration", "alcohol intake", "physical activity"],
+    "M3_added": ["total cholesterol", "creatinine", "triglyceride", "HbA1c", "HDL"]
+  },
+  "inferred": {
+    "source_fact_type": "analyst_inference",
+    "table_I": {"total": 12411, "cases": 1628, "controls": 10783, "proposed_excluded_group": "physician diagnosed or treated hypertension", "excluded_count": 9389},
+    "table_II": {"total": 20172, "cases": 9389, "controls": 10783, "proposed_excluded_group": "measured-only undiagnosed hypertension", "excluded_count": 1628},
+    "reason": "I and II cases sum to the main 11017 cases; both tables' non-cases equal main non-hypertensive 10783; each supplement total equals main 21800 minus the other supplement cases.",
+    "caveat": "Counts constrain sample construction but author code and explicit exclusion rules are unavailable. Title 'and' is not proof of logical AND."
+  }
+}

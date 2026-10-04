@@ -1,0 +1,6 @@
+"time_utc","message","call"
+"2026-10-04T07:12:25Z","Chi-squared approximation may be incorrect","stats::chisq.test(raw_table, correct = FALSE)"
+"2026-10-04T07:12:27Z","Chi-squared approximation may be incorrect","chisq.test(svytable(formula, design, Ntotal = N), correct = FALSE)"
+"2026-10-04T07:15:29Z","Chi-squared approximation may be incorrect","chisq.test(svytable(formula, design, Ntotal = N), correct = FALSE)"
+"2026-10-04T07:15:35Z","Chi-squared approximation may be incorrect","stats::chisq.test(raw_table, correct = FALSE)"
+"2026-10-04T07:15:37Z","Chi-squared approximation may be incorrect","chisq.test(svytable(formula, design, Ntotal = N), correct = FALSE)"

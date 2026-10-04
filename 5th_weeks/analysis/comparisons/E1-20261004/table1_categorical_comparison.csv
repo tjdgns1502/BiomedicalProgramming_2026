@@ -1,0 +1,81 @@
+﻿variable,level,hypertension_group,published_n,calculated_n,published_weighted_pct,calculated_weighted_pct,population_status
+sex,Male,No,5140,5137,46.74,46.8073599890309,different primary sample; descriptive comparison only
+sex,Male,Yes,5412,5290,48.93,49.2312371931712,different primary sample; descriptive comparison only
+sex,Female,No,5643,5632,53.26,53.1926400109691,different primary sample; descriptive comparison only
+sex,Female,Yes,5606,5399,51.07,50.7687628068288,different primary sample; descriptive comparison only
+race,Mexican American,No,1753,1750,9.21,9.21763358110531,different primary sample; descriptive comparison only
+race,Mexican American,Yes,1283,1254,5.9,5.90274299887234,different primary sample; descriptive comparison only
+race,Other Hispanic,No,1193,1190,6.14,6.14385748928307,different primary sample; descriptive comparison only
+race,Other Hispanic,Yes,1060,1034,4.9,4.88284776088047,different primary sample; descriptive comparison only
+race,Non-Hispanic White,No,4363,4366,67.38,67.4549126407642,different primary sample; descriptive comparison only
+race,Non-Hispanic White,Yes,4469,4339,68.23,68.3645585715125,different primary sample; descriptive comparison only
+race,Non-Hispanic Black,No,1742,1732,8.35,8.29972175242649,different primary sample; descriptive comparison only
+race,Non-Hispanic Black,Yes,2964,2877,13.68,13.6699721058686,different primary sample; descriptive comparison only
+race,Other race including multiracial,No,1732,1731,8.91,8.88387453642095,different primary sample; descriptive comparison only
+race,Other race including multiracial,Yes,1241,1185,7.29,7.17987856286611,different primary sample; descriptive comparison only
+smoking,Yes,No,4520,4522,42.01,41.9946938549974,different primary sample; descriptive comparison only
+smoking,Yes,Yes,5398,5239,49.76,49.8350700782515,different primary sample; descriptive comparison only
+smoking,No,No,6263,6247,57.99,58.0053061450026,different primary sample; descriptive comparison only
+smoking,No,Yes,5619,5450,50.24,50.1649299217485,different primary sample; descriptive comparison only
+periodontal,Yes,No,1905,1908,16.47,16.5380464937076,different primary sample; descriptive comparison only
+periodontal,Yes,Yes,2178,2115,19.92,19.9411921037174,different primary sample; descriptive comparison only
+periodontal,No,No,8878,8861,83.53,83.4619535062924,different primary sample; descriptive comparison only
+periodontal,No,Yes,8839,8574,80.08,80.0588078962826,different primary sample; descriptive comparison only
+oral_health,Excellent/Very good,No,3584,3577,40.87,40.825916031346,different primary sample; descriptive comparison only
+oral_health,Excellent/Very good,Yes,3185,3096,34.83,35.0155577982674,different primary sample; descriptive comparison only
+oral_health,Good,No,3779,3777,34.0,33.9736011546449,different primary sample; descriptive comparison only
+oral_health,Good,Yes,3757,3637,34.0,33.8995840550857,different primary sample; descriptive comparison only
+oral_health,Fair,No,2374,2374,17.53,17.5866719501495,different primary sample; descriptive comparison only
+oral_health,Fair,Yes,2620,2540,19.91,19.8810258363251,different primary sample; descriptive comparison only
+oral_health,Poor,No,1046,1041,7.6,7.61381086385955,different primary sample; descriptive comparison only
+oral_health,Poor,Yes,1455,1416,11.27,11.2038323103218,different primary sample; descriptive comparison only
+education,Less than high school,No,2374,2373,13.77,13.7688940041322,different primary sample; descriptive comparison only
+education,Less than high school,Yes,2923,2826,17.13,17.09740781198,different primary sample; descriptive comparison only
+education,High school,No,2147,2147,19.45,19.4042169746039,different primary sample; descriptive comparison only
+education,High school,Yes,2669,2589,25.11,25.1927935155852,different primary sample; descriptive comparison only
+education,More than high school,No,6252,6239,66.74,66.7864551169325,different primary sample; descriptive comparison only
+education,More than high school,Yes,5407,5258,57.66,57.6088572552942,different primary sample; descriptive comparison only
+education,Missing,No,10,10,0.01,0.0404339043313999,different primary sample; descriptive comparison only
+education,Missing,Yes,18,16,0.11,0.100941417140584,different primary sample; descriptive comparison only
+bmi_category,<18.5,No,232,162,1.83,1.30210807745521,different primary sample; descriptive comparison only
+bmi_category,<18.5,Yes,312,91,2.41,0.846544492379517,different primary sample; descriptive comparison only
+bmi_category,18.5-24.9,No,3330,3324,31.28,31.1311828022122,different primary sample; descriptive comparison only
+bmi_category,18.5-24.9,Yes,1949,1911,16.17,16.5103565248918,different primary sample; descriptive comparison only
+bmi_category,25-29.9,No,3757,3752,35.15,35.2513062530133,different primary sample; descriptive comparison only
+bmi_category,25-29.9,Yes,3450,3394,31.41,31.6596500154516,different primary sample; descriptive comparison only
+bmi_category,>=30,No,3440,3458,31.51,31.8069310204878,different primary sample; descriptive comparison only
+bmi_category,>=30,Yes,5286,5115,49.83,49.6141171391516,different primary sample; descriptive comparison only
+bmi_category,Missing,No,24,73,0.23,0.508471846831504,different primary sample; descriptive comparison only
+bmi_category,Missing,Yes,20,178,0.18,1.36933182812547,different primary sample; descriptive comparison only
+sleep_category,<7 hours,No,7679,3509,68.23,29.5712724546006,different primary sample; descriptive comparison only
+sleep_category,<7 hours,Yes,7672,3717,67.52,31.5013992153427,different primary sample; descriptive comparison only
+sleep_category,7-9 hours,No,2737,6745,28.93,66.610418653276,different primary sample; descriptive comparison only
+sleep_category,7-9 hours,Yes,2747,6107,27.53,61.1131987319968,different primary sample; descriptive comparison only
+sleep_category,>9 hours,No,367,489,2.84,3.61604950136425,different primary sample; descriptive comparison only
+sleep_category,>9 hours,Yes,598,810,4.95,6.86007276750513,different primary sample; descriptive comparison only
+alcohol_category,No drinks,No,337,2872,3.07,21.8833761547567,different primary sample; descriptive comparison only
+alcohol_category,No drinks,Yes,615,3886,4.87,29.926723701761,different primary sample; descriptive comparison only
+alcohol_category,<=1 drink/week,No,4745,3536,45.21,33.3703967772849,different primary sample; descriptive comparison only
+alcohol_category,<=1 drink/week,Yes,4039,3120,39.46,30.8716767009251,different primary sample; descriptive comparison only
+alcohol_category,>1 drink/week,No,2145,3338,25.24,37.0073101912931,different primary sample; descriptive comparison only
+alcohol_category,>1 drink/week,Yes,2072,2897,23.82,33.0738479801894,different primary sample; descriptive comparison only
+alcohol_category,Missing,No,3556,1023,26.48,7.73891687666525,different primary sample; descriptive comparison only
+alcohol_category,Missing,Yes,4291,786,31.84,6.12775161712452,different primary sample; descriptive comparison only
+activity_category,Inactive,No,4390,2477,44.76,19.1178717383118,different primary sample; descriptive comparison only
+activity_category,Inactive,Yes,3976,3649,41.37,30.6316514378784,different primary sample; descriptive comparison only
+activity_category,Active,No,6384,8289,55.2,80.8590230929214,different primary sample; descriptive comparison only
+activity_category,Active,Yes,7037,7038,58.62,69.3621082530507,different primary sample; descriptive comparison only
+activity_category,Missing,No,9,3,0.05,0.0231051687668874,different primary sample; descriptive comparison only
+activity_category,Missing,Yes,4,2,0.01,0.00624030907091814,different primary sample; descriptive comparison only
+cvd_category,Yes,No,537,543,4.31,4.34331963840905,different primary sample; descriptive comparison only
+cvd_category,Yes,Yes,2257,2171,17.9,17.8140895207189,different primary sample; descriptive comparison only
+cvd_category,No,No,10218,10199,95.53,95.5023405874322,different primary sample; descriptive comparison only
+cvd_category,No,Yes,8681,8443,81.54,81.6469520375323,different primary sample; descriptive comparison only
+cvd_category,Missing,No,28,27,0.16,0.154339774158768,different primary sample; descriptive comparison only
+cvd_category,Missing,Yes,79,75,0.55,0.538958441748807,different primary sample; descriptive comparison only
+diabetes_category,Yes,No,874,809,5.79,5.30642533261703,different primary sample; descriptive comparison only
+diabetes_category,Yes,Yes,2872,2603,21.86,20.5214541397339,different primary sample; descriptive comparison only
+diabetes_category,No,No,732,9755,6.93,92.8323046942754,different primary sample; descriptive comparison only
+diabetes_category,No,Yes,1232,7656,12.0,75.7958576917532,different primary sample; descriptive comparison only
+diabetes_category,Missing,No,9177,205,87.28,1.86126997310753,different primary sample; descriptive comparison only
+diabetes_category,Missing,Yes,6913,430,66.14,3.6826881685129,different primary sample; descriptive comparison only

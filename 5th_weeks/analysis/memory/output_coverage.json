@@ -1,0 +1,188 @@
+[
+  {
+    "id": "Table1",
+    "required": true,
+    "source_checked": true,
+    "implementation": "candidate executed",
+    "numeric_review": "independent reviewed; partial reproduction",
+    "validity_scope": "conditional support within declared definitions, weights and missing assumptions",
+    "freshness": "current",
+    "run_id": "E2-20261004",
+    "files": [
+      "tables/A_table1_categorical.csv",
+      "tables/A_table1_continuous.csv"
+    ],
+    "document": "04-paper 분할표와 검정.md",
+    "author_configuration": "partly unidentified",
+    "reproduction": "partial, not exact",
+    "continues_possible_required": false
+  },
+  {
+    "id": "Table2",
+    "required": true,
+    "source_checked": true,
+    "implementation": "candidate executed",
+    "numeric_review": "independent reviewed; partial reproduction",
+    "validity_scope": "conditional support within declared definitions, weights and missing assumptions",
+    "freshness": "current",
+    "run_id": "E2-20261004",
+    "files": [
+      "tables/A_table2_exposure_or.csv",
+      "tables/B_table2_exposure_or.csv"
+    ],
+    "document": "05-paper 오즈비와 보정 모형.md",
+    "author_configuration": "partly unidentified",
+    "reproduction": "partial, not exact",
+    "continues_possible_required": false
+  },
+  {
+    "id": "Table3",
+    "required": true,
+    "source_checked": true,
+    "implementation": "candidate executed",
+    "numeric_review": "independent reviewed; partial reproduction",
+    "validity_scope": "conditional support within declared definitions, weights and missing assumptions",
+    "freshness": "current",
+    "run_id": "E2-20261004",
+    "files": [
+      "tables/A_table3_exposure_or.csv"
+    ],
+    "document": "05-paper 오즈비와 보정 모형.md",
+    "author_configuration": "partly unidentified",
+    "reproduction": "partial, not exact",
+    "continues_possible_required": false
+  },
+  {
+    "id": "SupplementI",
+    "required": true,
+    "source_checked": true,
+    "implementation": "candidate executed",
+    "numeric_review": "independent reviewed; partial reproduction",
+    "validity_scope": "conditional support within declared definitions, weights and missing assumptions",
+    "freshness": "current",
+    "run_id": "E2-20261004",
+    "files": [
+      "tables/A_supplement_measured_exposure_or.csv"
+    ],
+    "document": "05-paper 오즈비와 보정 모형.md",
+    "author_configuration": "partly unidentified",
+    "reproduction": "partial, not exact",
+    "continues_possible_required": false
+  },
+  {
+    "id": "SupplementII",
+    "required": true,
+    "source_checked": true,
+    "implementation": "candidate executed",
+    "numeric_review": "independent reviewed; partial reproduction",
+    "validity_scope": "conditional support within declared definitions, weights and missing assumptions",
+    "freshness": "current",
+    "run_id": "E2-20261004",
+    "files": [
+      "tables/A_supplement_diagnosed_treated_exposure_or.csv"
+    ],
+    "document": "05-paper 오즈비와 보정 모형.md",
+    "author_configuration": "partly unidentified",
+    "reproduction": "partial, not exact",
+    "continues_possible_required": false
+  },
+  {
+    "id": "trend",
+    "required": true,
+    "source_checked": true,
+    "implementation": "candidate executed",
+    "numeric_review": "independent reviewed; partial reproduction",
+    "validity_scope": "conditional support within declared definitions, weights and missing assumptions",
+    "freshness": "current",
+    "run_id": "E2-20261004",
+    "files": [
+      "tables/oral_trend_tests.csv"
+    ],
+    "document": "05-paper 오즈비와 보정 모형.md",
+    "author_configuration": "partly unidentified",
+    "reproduction": "partial, not exact",
+    "continues_possible_required": false
+  },
+  {
+    "id": "interaction",
+    "required": true,
+    "source_checked": true,
+    "implementation": "candidate executed",
+    "numeric_review": "independent reviewed; partial reproduction",
+    "validity_scope": "conditional support within declared definitions, weights and missing assumptions",
+    "freshness": "current",
+    "run_id": "E2-20261004",
+    "files": [
+      "tables/interaction_joint_wald.csv"
+    ],
+    "document": "05-paper 오즈비와 보정 모형.md",
+    "author_configuration": "partly unidentified",
+    "reproduction": "partial, not exact",
+    "continues_possible_required": false
+  },
+  {
+    "id": "mosaic",
+    "required": true,
+    "implementation": "executed",
+    "run_id": "R2-20261004",
+    "file": "figures/naive_periodontal_mosaic_residual.png",
+    "numeric_review": "independent reviewed",
+    "document": "04-paper",
+    "continues_possible_required": false
+  },
+  {
+    "id": "PearsonResidual",
+    "required": true,
+    "implementation": "executed",
+    "run_id": "R2-20261004",
+    "file": "figures/naive_oral_health_mosaic_residual.png",
+    "numeric_review": "independent reviewed",
+    "document": "04-paper",
+    "continues_possible_required": false
+  },
+  {
+    "id": "Forest",
+    "required": true,
+    "implementation": "executed",
+    "run_id": "E2-20261004",
+    "file": "figures/A_model1_3_forest.png",
+    "document": "05-paper",
+    "continues_possible_required": false
+  },
+  {
+    "id": "FisherTypeI",
+    "required": true,
+    "implementation": "executed",
+    "numeric_review": "Q accepted81checks",
+    "run_id": "V1-20261004",
+    "file": "typeI_error.csv",
+    "document": "06-paper",
+    "continues_possible_required": false
+  },
+  {
+    "id": "ORvsPR",
+    "required": true,
+    "implementation": "executed",
+    "numeric_review": "Q accepted81checks",
+    "run_id": "V1-20261004",
+    "file": "published_OR_PR.csv",
+    "document": "06-paper",
+    "continues_possible_required": false
+  },
+  {
+    "id": "McNemarDemo",
+    "required": true,
+    "implementation": "executed",
+    "numeric_review": "Q accepted81checks",
+    "run_id": "V1-20261004",
+    "file": "course_examples.csv",
+    "document": "06-paper",
+    "continues_possible_required": false
+  },
+  {
+    "id": "McNemar_actual_NHANES",
+    "required": false,
+    "implementation": "not_applicable",
+    "reason": "no paired before/after observations"
+  }
+]

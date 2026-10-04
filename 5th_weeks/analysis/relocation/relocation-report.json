@@ -1,0 +1,18 @@
+{
+  "at": "2026-10-04T14:15:58.433271+00:00",
+  "from": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\5주차",
+  "to": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\의생명프로그래밍_발표준비\\5주차",
+  "files_moved": 3664,
+  "inventory_paths_and_sizes_verified": true,
+  "prior_bundle_files_sha256_verified": 101,
+  "run_manifests_sha256_verified": 4,
+  "learning_plot_images_verified": 10,
+  "local_links_verified": 31,
+  "updated_live_paths": [
+    "analysis\\README.md",
+    "analysis\\memory\\project.json",
+    "치주질환과 고혈압 - 분석 길잡이\\assets\\manifest.json"
+  ],
+  "historical_execution_and_review_records": "preserved unchanged",
+  "old_folder_exists": false
+}

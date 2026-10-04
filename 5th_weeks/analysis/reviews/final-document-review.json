@@ -1,0 +1,164 @@
+{
+  "review_id": "DOC-FINAL-I-20261004",
+  "reviewer": "r_implementation",
+  "reviewed_at_utc": "2026-10-04T08:14:36Z",
+  "decision": "accept",
+  "scope": "Complete text review of 00-start and seven current paper notes; document lineage, reported values, local links, asset/source/review hash bindings.",
+  "independence": "Independent of document integration author. Reviewer implemented R analysis code; this is not an independent model implementation, blinded review, or external sample validation.",
+  "project_root": "C:/Users/doyun/Desktop/2026-2/의생명프로그래밍/5주차",
+  "note_directory": "치주질환과 고혈압 - 분석 길잡이",
+  "current_run": "E2-20261004",
+  "task_lineage": [
+    "R-CAT-001 / R2-20261004 / plan1.1",
+    "R-EXT-002 / E1-20261004 / plan1.4",
+    "R-REPAIR-003 / E2-20261004 / plan1.5"
+  ],
+  "data_version": "nhanes-2009-2018-harmonizedJ-d8f04b7c96c89c31956a",
+  "core_data_version": "nhanes-2009-2018-7ad570c1e84a460b267c",
+  "reviewed_documents": [
+    {
+      "file": "00-start 처음부터 따라가는 분석 흐름.md",
+      "sha256": "4638f6b249a37859d93e4c41fecef2f0cf5435bce676a4c1f5cdda7233cc754f",
+      "stage_registry_match": null
+    },
+    {
+      "file": "01-paper 연구 질문과 자료 구조.md",
+      "sha256": "969a4fcc23562c555efe743edf1407f3005a14b50d006731a571eaf1e20303a2",
+      "stage_registry_match": true
+    },
+    {
+      "file": "02-paper 한 사람의 원자료와 코딩.md",
+      "sha256": "7f1ee731833005163891351a91023a0f0d66fd3adfeee97fe5c06289e19ebfb4",
+      "stage_registry_match": true
+    },
+    {
+      "file": "03-paper 선정 결측과 복합표본.md",
+      "sha256": "a8248ce7e1ace586b893ddf54e215569735604823819be0939cad58478f9c976",
+      "stage_registry_match": true
+    },
+    {
+      "file": "04-paper 분할표와 검정.md",
+      "sha256": "60c970595d205149554f30086c8b356e7e50fa30be2a85ef5023a028368d11bc",
+      "stage_registry_match": true
+    },
+    {
+      "file": "05-paper 오즈비와 보정 모형.md",
+      "sha256": "80b8ba3e1678badd437f59c21d01d78bfb0fd2fa832aed02beaa076b29f5d573",
+      "stage_registry_match": true
+    },
+    {
+      "file": "06-paper 통계 검증 과제.md",
+      "sha256": "94a79165e206c006df752dae5272479a0e3eee699b2b8e464d8281b137bfbc92",
+      "stage_registry_match": true
+    },
+    {
+      "file": "07-paper 결과 해석과 재현 한계.md",
+      "sha256": "6929b664d37f67a29a5675904016e83cd1cbdd1e238d7ebdcc4b8e019166e5bf",
+      "stage_registry_match": true
+    }
+  ],
+  "checks": {
+    "full_note_texts_read": 8,
+    "paper_registry_hash_matches": 7,
+    "paper_freshness_current": 7,
+    "local_markdown_and_wiki_links_checked": 51,
+    "invalid_local_links": 0,
+    "asset_source_copy_manifest_hash_matches": 10,
+    "review_record_hash_matches": 8,
+    "review_decisions_accept": 8,
+    "displayed_OR_and_t_CI_rows_checked_against_E2_coefficients": 36,
+    "displayed_OR_and_t_CI_rows_matching_F3_rounding": 36,
+    "displayed_joint_Wald_p_values_matching_E2": 6,
+    "periodontal_raw_count_and_weighted_percent_cells_matching": 4,
+    "displayed_periodontal_test_rows_matching_R2": 4,
+    "comparison_OR_manifest_hash_match": true,
+    "source_table_and_supplement_text_hash_matches": 4,
+    "flow_last_excluded_since_previous_is_zero": true,
+    "E2_task_plan_and_version_consistent": true,
+    "M1_M2_reuse_and_all_M3_recomputation_explicit": true,
+    "E1_immutable_unharmonized_provenance_explicit": true,
+    "A_B_different_domains_and_supplement_case_counts_explicit": true,
+    "survey_t_inference_vs_naive_tests_and_V1_education_distinguished": true,
+    "partial_reproduction_noncausal_and_unidentified_author_choices_explicit": true,
+    "publication_exposure_not_blinded_disclosed": true
+  },
+  "visual_inspection": [
+    "assets/E2-20261004/A_model1_3_forest.png",
+    "assets/V1-20261004/test_size_curve.png"
+  ],
+  "supporting_artifact_hashes": [
+    {
+      "path": "analysis/memory/stage_registry.json",
+      "sha256": "7ca58ae5f7c7796bad6cdeca61b762d20573398ad4ae9596d392a70f5a542a3c"
+    },
+    {
+      "path": "analysis/runs/E2-20261004/report.json",
+      "sha256": "1d0ac88a02fd05bd0d1d72b8c877e1fe72bb8f9d8750ea102fc28b2fd6aa4cc2"
+    },
+    {
+      "path": "analysis/config/plan-v1.5.json",
+      "sha256": "aaeae78f63d4aff3d094858659c1f0c45230467d9b66f637df421426ddc083b5"
+    },
+    {
+      "path": "analysis/comparisons/E2-20261004/comparison_manifest.json",
+      "sha256": "f4e02dfa21cb08a55a32502d1a9e44d5f4b1e18084ee9e965377a58d6d65316c"
+    },
+    {
+      "path": "analysis/comparisons/E2-20261004/all_published_OR_comparisons.csv",
+      "sha256": "9bae521bdcf48693e5b08cb552e80f1ef7aedff18db9ed0f5ddd367dcf3c1436"
+    },
+    {
+      "path": "analysis/memory/output_coverage.json",
+      "sha256": "50eb3f724fd96cd5c94dd3f00da155ef8a025f77e9a134f3196070c9029c84be"
+    },
+    {
+      "path": "analysis/runs/E2-20261004/tables/all_model_coefficients.csv",
+      "sha256": "737adca5c816423d8644e7c9242318fc76f2b09428eea47c8579e08759569b40"
+    },
+    {
+      "path": "analysis/runs/E2-20261004/tables/interaction_joint_wald.csv",
+      "sha256": "160f23885e3f3b136386c6c119370211334a091551682f854a909b99b43a00f0"
+    },
+    {
+      "path": "analysis/runs/R2-20261004/tables/categorical_tests.csv",
+      "sha256": "ad8624b7f4b2b81b3b5ef8a25dcc9e6fe09e13c26626e1e35a7fdb95ed8f6403"
+    },
+    {
+      "path": "analysis/runs/E2-20261004/tables/A_table1_categorical.csv",
+      "sha256": "d5768f3e11d856c4fe58aba58647122982bd60e57033062a6cb0b1bf809de73a"
+    }
+  ],
+  "source_hash_bindings": [
+    {
+      "path": "analysis/sources/europepmc/table_1.tsv",
+      "sha256": "4668b637d83ec30d47997171c6529e4c3182e9997b42a4f7c625300c1e09e3d3"
+    },
+    {
+      "path": "analysis/sources/europepmc/table_2.tsv",
+      "sha256": "f2ff037df7309fdc9acd8628575cb5f60ed83e2925d20dca7d6599a0ef6ee762"
+    },
+    {
+      "path": "analysis/sources/europepmc/table_3.tsv",
+      "sha256": "90ea89ee890e9878ff2157120a34e9e5682c5d28adf0639f5ea1506294976d37"
+    },
+    {
+      "path": "analysis/sources/europepmc/12889_2023_16012_MOESM1_ESM.txt",
+      "sha256": "90bb2c3f2e5e33add2808007410750a230ccbcf0f1609c8c19bda35020e00361"
+    },
+    {
+      "path": "analysis/sources/europepmc/PMC10262359.fullText.xml",
+      "sha256": "4dd8133d427508c3bb42f2edc1b7de70ba5e483e148bd9fc5986c646e010fdae"
+    },
+    {
+      "path": "analysis/sources/europepmc/supplementary/12889_2023_16012_MOESM1_ESM.pdf",
+      "sha256": "3491386e3f09fbf2ebc32f78b15e6d582e6b0f977d036ac2d515dcb5ef330eeb"
+    }
+  ],
+  "findings": [],
+  "common_files_modified": false,
+  "limits": [
+    "No new model fit or raw-data reanalysis was performed.",
+    "External links were assessed against previously reviewed primary sources; no new network retrieval in this final document review.",
+    "Other concept notes and all 18 project documents were outside this eight-note text-review scope."
+  ]
+}

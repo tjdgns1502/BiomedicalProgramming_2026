@@ -1,0 +1,2683 @@
+{
+  "role": "Q-data",
+  "review_id": "Q-DATA-E1-20261004",
+  "run_id": "E1-20261004",
+  "status": "accept",
+  "reviewer_exposure": {
+    "source_author": true,
+    "published_targets_seen": true,
+    "analysis_code_author": false,
+    "statement": "내부 독립 자료 QA. 논문 출처 확보 및 목표 수치 노출을 공개하며 외부 검증을 주장하지 않음."
+  },
+  "exact_version": {
+    "data_version": "nhanes-2009-2018-full-b21b4e903b63d715068c",
+    "input_run": "R2-20261004",
+    "executed_script_sha256": "fdb959e433e61ed6363d64c5aef46a213f45b068368e780a35a50938b0812d3d",
+    "current_source_sha256": "fdb959e433e61ed6363d64c5aef46a213f45b068368e780a35a50938b0812d3d",
+    "core_script_sha256": "f14840f51eabaa442b5273d11fce825e59fdfde61b79f0e20a99fd21079083f3",
+    "master_sha256": "4ad1870f3f98a75921e1e3b433d645183b657b322327874698a02ae53ec329be",
+    "report_sha256": "e6a9cf964d0b7cb7552063f5ef4116698ad72df7591b50153d269e090db87ccf",
+    "reviewer_script_sha256": "f6866e01e667f0847065d6cc6f6524d15c65d5fc477fd2326118096484059379"
+  },
+  "scope": "55개 추가 원시 구성요소의 정의·단위·결측·선정·A/B 설계·Table1 점추정·모델별 공변량/분모·상류 불변성 및 해시 검산. 재적합 및 모델 수치 검토는 Q-stat 범위.",
+  "checks": [
+    {
+      "id": "upstream_master_hash",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "upstream_report_hash",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "upstream_manifest_hash",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "record_order_and_keys",
+      "passed": true,
+      "evidence": 49693
+    },
+    {
+      "id": "unchanged_core_SEQN",
+      "passed": true,
+      "evidence": "SEQN"
+    },
+    {
+      "id": "unchanged_core_SDDSRVYR",
+      "passed": true,
+      "evidence": "SDDSRVYR"
+    },
+    {
+      "id": "unchanged_core_RIDSTATR",
+      "passed": true,
+      "evidence": "RIDSTATR"
+    },
+    {
+      "id": "unchanged_core_RIDEXMON",
+      "passed": true,
+      "evidence": "RIDEXMON"
+    },
+    {
+      "id": "unchanged_core_RIAGENDR",
+      "passed": true,
+      "evidence": "RIAGENDR"
+    },
+    {
+      "id": "unchanged_core_RIDAGEYR",
+      "passed": true,
+      "evidence": "RIDAGEYR"
+    },
+    {
+      "id": "unchanged_core_RIDAGEMN",
+      "passed": true,
+      "evidence": "RIDAGEMN"
+    },
+    {
+      "id": "unchanged_core_RIDAGEEX",
+      "passed": true,
+      "evidence": "RIDAGEEX"
+    },
+    {
+      "id": "unchanged_core_RIDRETH1",
+      "passed": true,
+      "evidence": "RIDRETH1"
+    },
+    {
+      "id": "unchanged_core_DMQMILIT",
+      "passed": true,
+      "evidence": "DMQMILIT"
+    },
+    {
+      "id": "unchanged_core_DMDBORN2",
+      "passed": true,
+      "evidence": "DMDBORN2"
+    },
+    {
+      "id": "unchanged_core_DMDCITZN",
+      "passed": true,
+      "evidence": "DMDCITZN"
+    },
+    {
+      "id": "unchanged_core_DMDYRSUS",
+      "passed": true,
+      "evidence": "DMDYRSUS"
+    },
+    {
+      "id": "unchanged_core_DMDEDUC3",
+      "passed": true,
+      "evidence": "DMDEDUC3"
+    },
+    {
+      "id": "unchanged_core_DMDEDUC2",
+      "passed": true,
+      "evidence": "DMDEDUC2"
+    },
+    {
+      "id": "unchanged_core_DMDSCHOL",
+      "passed": true,
+      "evidence": "DMDSCHOL"
+    },
+    {
+      "id": "unchanged_core_DMDMARTL",
+      "passed": true,
+      "evidence": "DMDMARTL"
+    },
+    {
+      "id": "unchanged_core_DMDHHSIZ",
+      "passed": true,
+      "evidence": "DMDHHSIZ"
+    },
+    {
+      "id": "unchanged_core_DMDFMSIZ",
+      "passed": true,
+      "evidence": "DMDFMSIZ"
+    },
+    {
+      "id": "unchanged_core_INDHHIN2",
+      "passed": true,
+      "evidence": "INDHHIN2"
+    },
+    {
+      "id": "unchanged_core_INDFMIN2",
+      "passed": true,
+      "evidence": "INDFMIN2"
+    },
+    {
+      "id": "unchanged_core_INDFMPIR",
+      "passed": true,
+      "evidence": "INDFMPIR"
+    },
+    {
+      "id": "unchanged_core_RIDEXPRG",
+      "passed": true,
+      "evidence": "RIDEXPRG"
+    },
+    {
+      "id": "unchanged_core_DMDHRGND",
+      "passed": true,
+      "evidence": "DMDHRGND"
+    },
+    {
+      "id": "unchanged_core_DMDHRAGE",
+      "passed": true,
+      "evidence": "DMDHRAGE"
+    },
+    {
+      "id": "unchanged_core_DMDHRBR2",
+      "passed": true,
+      "evidence": "DMDHRBR2"
+    },
+    {
+      "id": "unchanged_core_DMDHREDU",
+      "passed": true,
+      "evidence": "DMDHREDU"
+    },
+    {
+      "id": "unchanged_core_DMDHRMAR",
+      "passed": true,
+      "evidence": "DMDHRMAR"
+    },
+    {
+      "id": "unchanged_core_DMDHSEDU",
+      "passed": true,
+      "evidence": "DMDHSEDU"
+    },
+    {
+      "id": "unchanged_core_SIALANG",
+      "passed": true,
+      "evidence": "SIALANG"
+    },
+    {
+      "id": "unchanged_core_SIAPROXY",
+      "passed": true,
+      "evidence": "SIAPROXY"
+    },
+    {
+      "id": "unchanged_core_SIAINTRP",
+      "passed": true,
+      "evidence": "SIAINTRP"
+    },
+    {
+      "id": "unchanged_core_FIALANG",
+      "passed": true,
+      "evidence": "FIALANG"
+    },
+    {
+      "id": "unchanged_core_FIAPROXY",
+      "passed": true,
+      "evidence": "FIAPROXY"
+    },
+    {
+      "id": "unchanged_core_FIAINTRP",
+      "passed": true,
+      "evidence": "FIAINTRP"
+    },
+    {
+      "id": "unchanged_core_MIALANG",
+      "passed": true,
+      "evidence": "MIALANG"
+    },
+    {
+      "id": "unchanged_core_MIAPROXY",
+      "passed": true,
+      "evidence": "MIAPROXY"
+    },
+    {
+      "id": "unchanged_core_MIAINTRP",
+      "passed": true,
+      "evidence": "MIAINTRP"
+    },
+    {
+      "id": "unchanged_core_AIALANG",
+      "passed": true,
+      "evidence": "AIALANG"
+    },
+    {
+      "id": "unchanged_core_WTINT2YR",
+      "passed": true,
+      "evidence": "WTINT2YR"
+    },
+    {
+      "id": "unchanged_core_WTMEC2YR",
+      "passed": true,
+      "evidence": "WTMEC2YR"
+    },
+    {
+      "id": "unchanged_core_SDMVPSU",
+      "passed": true,
+      "evidence": "SDMVPSU"
+    },
+    {
+      "id": "unchanged_core_SDMVSTRA",
+      "passed": true,
+      "evidence": "SDMVSTRA"
+    },
+    {
+      "id": "unchanged_core_OHQ835",
+      "passed": true,
+      "evidence": "OHQ835"
+    },
+    {
+      "id": "unchanged_core_OHQ845",
+      "passed": true,
+      "evidence": "OHQ845"
+    },
+    {
+      "id": "unchanged_core_OHQ850",
+      "passed": true,
+      "evidence": "OHQ850"
+    },
+    {
+      "id": "unchanged_core_OHQ855",
+      "passed": true,
+      "evidence": "OHQ855"
+    },
+    {
+      "id": "unchanged_core_OHQ860",
+      "passed": true,
+      "evidence": "OHQ860"
+    },
+    {
+      "id": "unchanged_core_OHQ865",
+      "passed": true,
+      "evidence": "OHQ865"
+    },
+    {
+      "id": "unchanged_core_OHQ870",
+      "passed": true,
+      "evidence": "OHQ870"
+    },
+    {
+      "id": "unchanged_core_OHQ875",
+      "passed": true,
+      "evidence": "OHQ875"
+    },
+    {
+      "id": "unchanged_core_BPQ020",
+      "passed": true,
+      "evidence": "BPQ020"
+    },
+    {
+      "id": "unchanged_core_BPQ030",
+      "passed": true,
+      "evidence": "BPQ030"
+    },
+    {
+      "id": "unchanged_core_BPD035",
+      "passed": true,
+      "evidence": "BPD035"
+    },
+    {
+      "id": "unchanged_core_BPQ040A",
+      "passed": true,
+      "evidence": "BPQ040A"
+    },
+    {
+      "id": "unchanged_core_BPQ050A",
+      "passed": true,
+      "evidence": "BPQ050A"
+    },
+    {
+      "id": "unchanged_core_BPQ057",
+      "passed": true,
+      "evidence": "BPQ057"
+    },
+    {
+      "id": "unchanged_core_BPQ056",
+      "passed": true,
+      "evidence": "BPQ056"
+    },
+    {
+      "id": "unchanged_core_BPD058",
+      "passed": true,
+      "evidence": "BPD058"
+    },
+    {
+      "id": "unchanged_core_BPQ059",
+      "passed": true,
+      "evidence": "BPQ059"
+    },
+    {
+      "id": "unchanged_core_BPQ060",
+      "passed": true,
+      "evidence": "BPQ060"
+    },
+    {
+      "id": "unchanged_core_BPQ070",
+      "passed": true,
+      "evidence": "BPQ070"
+    },
+    {
+      "id": "unchanged_core_BPQ080",
+      "passed": true,
+      "evidence": "BPQ080"
+    },
+    {
+      "id": "unchanged_core_BPQ090A",
+      "passed": true,
+      "evidence": "BPQ090A"
+    },
+    {
+      "id": "unchanged_core_BPQ090B",
+      "passed": true,
+      "evidence": "BPQ090B"
+    },
+    {
+      "id": "unchanged_core_BPQ090C",
+      "passed": true,
+      "evidence": "BPQ090C"
+    },
+    {
+      "id": "unchanged_core_BPQ090D",
+      "passed": true,
+      "evidence": "BPQ090D"
+    },
+    {
+      "id": "unchanged_core_BPQ100A",
+      "passed": true,
+      "evidence": "BPQ100A"
+    },
+    {
+      "id": "unchanged_core_BPQ100B",
+      "passed": true,
+      "evidence": "BPQ100B"
+    },
+    {
+      "id": "unchanged_core_BPQ100C",
+      "passed": true,
+      "evidence": "BPQ100C"
+    },
+    {
+      "id": "unchanged_core_BPQ100D",
+      "passed": true,
+      "evidence": "BPQ100D"
+    },
+    {
+      "id": "unchanged_core_PEASCST1",
+      "passed": true,
+      "evidence": "PEASCST1"
+    },
+    {
+      "id": "unchanged_core_PEASCTM1",
+      "passed": true,
+      "evidence": "PEASCTM1"
+    },
+    {
+      "id": "unchanged_core_PEASCCT1",
+      "passed": true,
+      "evidence": "PEASCCT1"
+    },
+    {
+      "id": "unchanged_core_BPXCHR",
+      "passed": true,
+      "evidence": "BPXCHR"
+    },
+    {
+      "id": "unchanged_core_BPQ150A",
+      "passed": true,
+      "evidence": "BPQ150A"
+    },
+    {
+      "id": "unchanged_core_BPQ150B",
+      "passed": true,
+      "evidence": "BPQ150B"
+    },
+    {
+      "id": "unchanged_core_BPQ150C",
+      "passed": true,
+      "evidence": "BPQ150C"
+    },
+    {
+      "id": "unchanged_core_BPQ150D",
+      "passed": true,
+      "evidence": "BPQ150D"
+    },
+    {
+      "id": "unchanged_core_BPAARM",
+      "passed": true,
+      "evidence": "BPAARM"
+    },
+    {
+      "id": "unchanged_core_BPACSZ",
+      "passed": true,
+      "evidence": "BPACSZ"
+    },
+    {
+      "id": "unchanged_core_BPXPLS",
+      "passed": true,
+      "evidence": "BPXPLS"
+    },
+    {
+      "id": "unchanged_core_BPXPULS",
+      "passed": true,
+      "evidence": "BPXPULS"
+    },
+    {
+      "id": "unchanged_core_BPXPTY",
+      "passed": true,
+      "evidence": "BPXPTY"
+    },
+    {
+      "id": "unchanged_core_BPXML1",
+      "passed": true,
+      "evidence": "BPXML1"
+    },
+    {
+      "id": "unchanged_core_BPXSY1",
+      "passed": true,
+      "evidence": "BPXSY1"
+    },
+    {
+      "id": "unchanged_core_BPXDI1",
+      "passed": true,
+      "evidence": "BPXDI1"
+    },
+    {
+      "id": "unchanged_core_BPAEN1",
+      "passed": true,
+      "evidence": "BPAEN1"
+    },
+    {
+      "id": "unchanged_core_BPXSY2",
+      "passed": true,
+      "evidence": "BPXSY2"
+    },
+    {
+      "id": "unchanged_core_BPXDI2",
+      "passed": true,
+      "evidence": "BPXDI2"
+    },
+    {
+      "id": "unchanged_core_BPAEN2",
+      "passed": true,
+      "evidence": "BPAEN2"
+    },
+    {
+      "id": "unchanged_core_BPXSY3",
+      "passed": true,
+      "evidence": "BPXSY3"
+    },
+    {
+      "id": "unchanged_core_BPXDI3",
+      "passed": true,
+      "evidence": "BPXDI3"
+    },
+    {
+      "id": "unchanged_core_BPAEN3",
+      "passed": true,
+      "evidence": "BPAEN3"
+    },
+    {
+      "id": "unchanged_core_BPXSY4",
+      "passed": true,
+      "evidence": "BPXSY4"
+    },
+    {
+      "id": "unchanged_core_BPXDI4",
+      "passed": true,
+      "evidence": "BPXDI4"
+    },
+    {
+      "id": "unchanged_core_BPAEN4",
+      "passed": true,
+      "evidence": "BPAEN4"
+    },
+    {
+      "id": "unchanged_core_SMQ020",
+      "passed": true,
+      "evidence": "SMQ020"
+    },
+    {
+      "id": "unchanged_core_SMD030",
+      "passed": true,
+      "evidence": "SMD030"
+    },
+    {
+      "id": "unchanged_core_SMQ040",
+      "passed": true,
+      "evidence": "SMQ040"
+    },
+    {
+      "id": "unchanged_core_SMQ050Q",
+      "passed": true,
+      "evidence": "SMQ050Q"
+    },
+    {
+      "id": "unchanged_core_SMQ050U",
+      "passed": true,
+      "evidence": "SMQ050U"
+    },
+    {
+      "id": "unchanged_core_SMD055",
+      "passed": true,
+      "evidence": "SMD055"
+    },
+    {
+      "id": "unchanged_core_SMD057",
+      "passed": true,
+      "evidence": "SMD057"
+    },
+    {
+      "id": "unchanged_core_SMQ077",
+      "passed": true,
+      "evidence": "SMQ077"
+    },
+    {
+      "id": "unchanged_core_SMD641",
+      "passed": true,
+      "evidence": "SMD641"
+    },
+    {
+      "id": "unchanged_core_SMD650",
+      "passed": true,
+      "evidence": "SMD650"
+    },
+    {
+      "id": "unchanged_core_SMD093",
+      "passed": true,
+      "evidence": "SMD093"
+    },
+    {
+      "id": "unchanged_core_SMDUPCA",
+      "passed": true,
+      "evidence": "SMDUPCA"
+    },
+    {
+      "id": "unchanged_core_SMD100BR",
+      "passed": true,
+      "evidence": "SMD100BR"
+    },
+    {
+      "id": "unchanged_core_SMD100FL",
+      "passed": true,
+      "evidence": "SMD100FL"
+    },
+    {
+      "id": "unchanged_core_SMD100MN",
+      "passed": true,
+      "evidence": "SMD100MN"
+    },
+    {
+      "id": "unchanged_core_SMD100LN",
+      "passed": true,
+      "evidence": "SMD100LN"
+    },
+    {
+      "id": "unchanged_core_SMD100TR",
+      "passed": true,
+      "evidence": "SMD100TR"
+    },
+    {
+      "id": "unchanged_core_SMD100NI",
+      "passed": true,
+      "evidence": "SMD100NI"
+    },
+    {
+      "id": "unchanged_core_SMD100CO",
+      "passed": true,
+      "evidence": "SMD100CO"
+    },
+    {
+      "id": "unchanged_core_SMQ620",
+      "passed": true,
+      "evidence": "SMQ620"
+    },
+    {
+      "id": "unchanged_core_SMD630",
+      "passed": true,
+      "evidence": "SMD630"
+    },
+    {
+      "id": "unchanged_core_SMQ660",
+      "passed": true,
+      "evidence": "SMQ660"
+    },
+    {
+      "id": "unchanged_core_SMQ664M",
+      "passed": true,
+      "evidence": "SMQ664M"
+    },
+    {
+      "id": "unchanged_core_SMQ664C",
+      "passed": true,
+      "evidence": "SMQ664C"
+    },
+    {
+      "id": "unchanged_core_SMQ664W",
+      "passed": true,
+      "evidence": "SMQ664W"
+    },
+    {
+      "id": "unchanged_core_SMQ664B",
+      "passed": true,
+      "evidence": "SMQ664B"
+    },
+    {
+      "id": "unchanged_core_SMQ664O",
+      "passed": true,
+      "evidence": "SMQ664O"
+    },
+    {
+      "id": "unchanged_core_SMQ666M",
+      "passed": true,
+      "evidence": "SMQ666M"
+    },
+    {
+      "id": "unchanged_core_SMQ666C",
+      "passed": true,
+      "evidence": "SMQ666C"
+    },
+    {
+      "id": "unchanged_core_SMQ666K",
+      "passed": true,
+      "evidence": "SMQ666K"
+    },
+    {
+      "id": "unchanged_core_SMQ666W",
+      "passed": true,
+      "evidence": "SMQ666W"
+    },
+    {
+      "id": "unchanged_core_SMQ666B",
+      "passed": true,
+      "evidence": "SMQ666B"
+    },
+    {
+      "id": "unchanged_core_SMQ666S",
+      "passed": true,
+      "evidence": "SMQ666S"
+    },
+    {
+      "id": "unchanged_core_SMQ666O",
+      "passed": true,
+      "evidence": "SMQ666O"
+    },
+    {
+      "id": "unchanged_core_SMQ670",
+      "passed": true,
+      "evidence": "SMQ670"
+    },
+    {
+      "id": "unchanged_core_SMAQUEX2",
+      "passed": true,
+      "evidence": "SMAQUEX2"
+    },
+    {
+      "id": "unchanged_core_cycle",
+      "passed": true,
+      "evidence": "cycle"
+    },
+    {
+      "id": "unchanged_core_cycle_start",
+      "passed": true,
+      "evidence": "cycle_start"
+    },
+    {
+      "id": "unchanged_core_cycle_suffix",
+      "passed": true,
+      "evidence": "cycle_suffix"
+    },
+    {
+      "id": "unchanged_core_RIDRETH3",
+      "passed": true,
+      "evidence": "RIDRETH3"
+    },
+    {
+      "id": "unchanged_core_RIDEXAGY",
+      "passed": true,
+      "evidence": "RIDEXAGY"
+    },
+    {
+      "id": "unchanged_core_RIDEXAGM",
+      "passed": true,
+      "evidence": "RIDEXAGM"
+    },
+    {
+      "id": "unchanged_core_DMQMILIZ",
+      "passed": true,
+      "evidence": "DMQMILIZ"
+    },
+    {
+      "id": "unchanged_core_DMQADFC",
+      "passed": true,
+      "evidence": "DMQADFC"
+    },
+    {
+      "id": "unchanged_core_DMDBORN4",
+      "passed": true,
+      "evidence": "DMDBORN4"
+    },
+    {
+      "id": "unchanged_core_AIALANGA",
+      "passed": true,
+      "evidence": "AIALANGA"
+    },
+    {
+      "id": "unchanged_core_DMDHHSZA",
+      "passed": true,
+      "evidence": "DMDHHSZA"
+    },
+    {
+      "id": "unchanged_core_DMDHHSZB",
+      "passed": true,
+      "evidence": "DMDHHSZB"
+    },
+    {
+      "id": "unchanged_core_DMDHHSZE",
+      "passed": true,
+      "evidence": "DMDHHSZE"
+    },
+    {
+      "id": "unchanged_core_DMDHRBR4",
+      "passed": true,
+      "evidence": "DMDHRBR4"
+    },
+    {
+      "id": "unchanged_core_OHQ030",
+      "passed": true,
+      "evidence": "OHQ030"
+    },
+    {
+      "id": "unchanged_core_OHQ033",
+      "passed": true,
+      "evidence": "OHQ033"
+    },
+    {
+      "id": "unchanged_core_OHQ770",
+      "passed": true,
+      "evidence": "OHQ770"
+    },
+    {
+      "id": "unchanged_core_OHQ780A",
+      "passed": true,
+      "evidence": "OHQ780A"
+    },
+    {
+      "id": "unchanged_core_OHQ780B",
+      "passed": true,
+      "evidence": "OHQ780B"
+    },
+    {
+      "id": "unchanged_core_OHQ780C",
+      "passed": true,
+      "evidence": "OHQ780C"
+    },
+    {
+      "id": "unchanged_core_OHQ780D",
+      "passed": true,
+      "evidence": "OHQ780D"
+    },
+    {
+      "id": "unchanged_core_OHQ780E",
+      "passed": true,
+      "evidence": "OHQ780E"
+    },
+    {
+      "id": "unchanged_core_OHQ780F",
+      "passed": true,
+      "evidence": "OHQ780F"
+    },
+    {
+      "id": "unchanged_core_OHQ780G",
+      "passed": true,
+      "evidence": "OHQ780G"
+    },
+    {
+      "id": "unchanged_core_OHQ780H",
+      "passed": true,
+      "evidence": "OHQ780H"
+    },
+    {
+      "id": "unchanged_core_OHQ780I",
+      "passed": true,
+      "evidence": "OHQ780I"
+    },
+    {
+      "id": "unchanged_core_OHQ780J",
+      "passed": true,
+      "evidence": "OHQ780J"
+    },
+    {
+      "id": "unchanged_core_OHQ780K",
+      "passed": true,
+      "evidence": "OHQ780K"
+    },
+    {
+      "id": "unchanged_core_OHQ610",
+      "passed": true,
+      "evidence": "OHQ610"
+    },
+    {
+      "id": "unchanged_core_OHQ612",
+      "passed": true,
+      "evidence": "OHQ612"
+    },
+    {
+      "id": "unchanged_core_OHQ614",
+      "passed": true,
+      "evidence": "OHQ614"
+    },
+    {
+      "id": "unchanged_core_OHQ620",
+      "passed": true,
+      "evidence": "OHQ620"
+    },
+    {
+      "id": "unchanged_core_OHQ640",
+      "passed": true,
+      "evidence": "OHQ640"
+    },
+    {
+      "id": "unchanged_core_OHQ680",
+      "passed": true,
+      "evidence": "OHQ680"
+    },
+    {
+      "id": "unchanged_core_OHQ880",
+      "passed": true,
+      "evidence": "OHQ880"
+    },
+    {
+      "id": "unchanged_core_OHQ885",
+      "passed": true,
+      "evidence": "OHQ885"
+    },
+    {
+      "id": "unchanged_core_OHQ895",
+      "passed": true,
+      "evidence": "OHQ895"
+    },
+    {
+      "id": "unchanged_core_OHQ900",
+      "passed": true,
+      "evidence": "OHQ900"
+    },
+    {
+      "id": "unchanged_core_SMQ621",
+      "passed": true,
+      "evidence": "SMQ621"
+    },
+    {
+      "id": "unchanged_core_OHQ555G",
+      "passed": true,
+      "evidence": "OHQ555G"
+    },
+    {
+      "id": "unchanged_core_OHQ555Q",
+      "passed": true,
+      "evidence": "OHQ555Q"
+    },
+    {
+      "id": "unchanged_core_OHQ555U",
+      "passed": true,
+      "evidence": "OHQ555U"
+    },
+    {
+      "id": "unchanged_core_OHQ560G",
+      "passed": true,
+      "evidence": "OHQ560G"
+    },
+    {
+      "id": "unchanged_core_OHQ560Q",
+      "passed": true,
+      "evidence": "OHQ560Q"
+    },
+    {
+      "id": "unchanged_core_OHQ560U",
+      "passed": true,
+      "evidence": "OHQ560U"
+    },
+    {
+      "id": "unchanged_core_OHQ565",
+      "passed": true,
+      "evidence": "OHQ565"
+    },
+    {
+      "id": "unchanged_core_OHQ570Q",
+      "passed": true,
+      "evidence": "OHQ570Q"
+    },
+    {
+      "id": "unchanged_core_OHQ570U",
+      "passed": true,
+      "evidence": "OHQ570U"
+    },
+    {
+      "id": "unchanged_core_OHQ575G",
+      "passed": true,
+      "evidence": "OHQ575G"
+    },
+    {
+      "id": "unchanged_core_OHQ575Q",
+      "passed": true,
+      "evidence": "OHQ575Q"
+    },
+    {
+      "id": "unchanged_core_OHQ575U",
+      "passed": true,
+      "evidence": "OHQ575U"
+    },
+    {
+      "id": "unchanged_core_OHQ580",
+      "passed": true,
+      "evidence": "OHQ580"
+    },
+    {
+      "id": "unchanged_core_OHQ585Q",
+      "passed": true,
+      "evidence": "OHQ585Q"
+    },
+    {
+      "id": "unchanged_core_OHQ585U",
+      "passed": true,
+      "evidence": "OHQ585U"
+    },
+    {
+      "id": "unchanged_core_OHQ590G",
+      "passed": true,
+      "evidence": "OHQ590G"
+    },
+    {
+      "id": "unchanged_core_OHQ590Q",
+      "passed": true,
+      "evidence": "OHQ590Q"
+    },
+    {
+      "id": "unchanged_core_OHQ590U",
+      "passed": true,
+      "evidence": "OHQ590U"
+    },
+    {
+      "id": "unchanged_core_OHQ848G",
+      "passed": true,
+      "evidence": "OHQ848G"
+    },
+    {
+      "id": "unchanged_core_OHQ848Q",
+      "passed": true,
+      "evidence": "OHQ848Q"
+    },
+    {
+      "id": "unchanged_core_OHQ849",
+      "passed": true,
+      "evidence": "OHQ849"
+    },
+    {
+      "id": "unchanged_core_SMQ078",
+      "passed": true,
+      "evidence": "SMQ078"
+    },
+    {
+      "id": "unchanged_core_SMQ661",
+      "passed": true,
+      "evidence": "SMQ661"
+    },
+    {
+      "id": "unchanged_core_SMQ665A",
+      "passed": true,
+      "evidence": "SMQ665A"
+    },
+    {
+      "id": "unchanged_core_SMQ665B",
+      "passed": true,
+      "evidence": "SMQ665B"
+    },
+    {
+      "id": "unchanged_core_SMQ665C",
+      "passed": true,
+      "evidence": "SMQ665C"
+    },
+    {
+      "id": "unchanged_core_SMQ665D",
+      "passed": true,
+      "evidence": "SMQ665D"
+    },
+    {
+      "id": "unchanged_core_SMQ848",
+      "passed": true,
+      "evidence": "SMQ848"
+    },
+    {
+      "id": "unchanged_core_SMQ852Q",
+      "passed": true,
+      "evidence": "SMQ852Q"
+    },
+    {
+      "id": "unchanged_core_SMQ852U",
+      "passed": true,
+      "evidence": "SMQ852U"
+    },
+    {
+      "id": "unchanged_core_OHQ566",
+      "passed": true,
+      "evidence": "OHQ566"
+    },
+    {
+      "id": "unchanged_core_OHQ571Q",
+      "passed": true,
+      "evidence": "OHQ571Q"
+    },
+    {
+      "id": "unchanged_core_OHQ571U",
+      "passed": true,
+      "evidence": "OHQ571U"
+    },
+    {
+      "id": "unchanged_core_OHQ576G",
+      "passed": true,
+      "evidence": "OHQ576G"
+    },
+    {
+      "id": "unchanged_core_OHQ576Q",
+      "passed": true,
+      "evidence": "OHQ576Q"
+    },
+    {
+      "id": "unchanged_core_OHQ576U",
+      "passed": true,
+      "evidence": "OHQ576U"
+    },
+    {
+      "id": "unchanged_core_SMQ925",
+      "passed": true,
+      "evidence": "SMQ925"
+    },
+    {
+      "id": "unchanged_core_SMQ930",
+      "passed": true,
+      "evidence": "SMQ930"
+    },
+    {
+      "id": "unchanged_core_SMQ935",
+      "passed": true,
+      "evidence": "SMQ935"
+    },
+    {
+      "id": "unchanged_core_SMQ080",
+      "passed": true,
+      "evidence": "SMQ080"
+    },
+    {
+      "id": "unchanged_core_SMQ890",
+      "passed": true,
+      "evidence": "SMQ890"
+    },
+    {
+      "id": "unchanged_core_SMQ895",
+      "passed": true,
+      "evidence": "SMQ895"
+    },
+    {
+      "id": "unchanged_core_SMQ900",
+      "passed": true,
+      "evidence": "SMQ900"
+    },
+    {
+      "id": "unchanged_core_SMQ905",
+      "passed": true,
+      "evidence": "SMQ905"
+    },
+    {
+      "id": "unchanged_core_SMQ910",
+      "passed": true,
+      "evidence": "SMQ910"
+    },
+    {
+      "id": "unchanged_core_SMQ915",
+      "passed": true,
+      "evidence": "SMQ915"
+    },
+    {
+      "id": "unchanged_core_DMDHRAGZ",
+      "passed": true,
+      "evidence": "DMDHRAGZ"
+    },
+    {
+      "id": "unchanged_core_DMDHREDZ",
+      "passed": true,
+      "evidence": "DMDHREDZ"
+    },
+    {
+      "id": "unchanged_core_DMDHRMAZ",
+      "passed": true,
+      "evidence": "DMDHRMAZ"
+    },
+    {
+      "id": "unchanged_core_DMDHSEDZ",
+      "passed": true,
+      "evidence": "DMDHSEDZ"
+    },
+    {
+      "id": "unchanged_core_age",
+      "passed": true,
+      "evidence": "age"
+    },
+    {
+      "id": "unchanged_core_periodontal_code",
+      "passed": true,
+      "evidence": "periodontal_code"
+    },
+    {
+      "id": "unchanged_core_periodontal",
+      "passed": true,
+      "evidence": "periodontal"
+    },
+    {
+      "id": "unchanged_core_oral_health",
+      "passed": true,
+      "evidence": "oral_health"
+    },
+    {
+      "id": "unchanged_core_oral_score",
+      "passed": true,
+      "evidence": "oral_score"
+    },
+    {
+      "id": "unchanged_core_smoking_code",
+      "passed": true,
+      "evidence": "smoking_code"
+    },
+    {
+      "id": "unchanged_core_smoking",
+      "passed": true,
+      "evidence": "smoking"
+    },
+    {
+      "id": "unchanged_core_sex",
+      "passed": true,
+      "evidence": "sex"
+    },
+    {
+      "id": "unchanged_core_race",
+      "passed": true,
+      "evidence": "race"
+    },
+    {
+      "id": "unchanged_core_education",
+      "passed": true,
+      "evidence": "education"
+    },
+    {
+      "id": "unchanged_core_education_missing",
+      "passed": true,
+      "evidence": "education_missing"
+    },
+    {
+      "id": "unchanged_core_mean_sbp",
+      "passed": true,
+      "evidence": "mean_sbp"
+    },
+    {
+      "id": "unchanged_core_mean_dbp",
+      "passed": true,
+      "evidence": "mean_dbp"
+    },
+    {
+      "id": "unchanged_core_n_valid_sbp",
+      "passed": true,
+      "evidence": "n_valid_sbp"
+    },
+    {
+      "id": "unchanged_core_n_valid_dbp",
+      "passed": true,
+      "evidence": "n_valid_dbp"
+    },
+    {
+      "id": "unchanged_core_n_zero_dbp",
+      "passed": true,
+      "evidence": "n_zero_dbp"
+    },
+    {
+      "id": "unchanged_core_bp_measured_complete",
+      "passed": true,
+      "evidence": "bp_measured_complete"
+    },
+    {
+      "id": "unchanged_core_measured_htn",
+      "passed": true,
+      "evidence": "measured_htn"
+    },
+    {
+      "id": "unchanged_core_diagnosis_htn",
+      "passed": true,
+      "evidence": "diagnosis_htn"
+    },
+    {
+      "id": "unchanged_core_medication_htn",
+      "passed": true,
+      "evidence": "medication_htn"
+    },
+    {
+      "id": "unchanged_core_medication_structural_no",
+      "passed": true,
+      "evidence": "medication_structural_no"
+    },
+    {
+      "id": "unchanged_core_medication_conflict",
+      "passed": true,
+      "evidence": "medication_conflict"
+    },
+    {
+      "id": "unchanged_core_hypertension_code",
+      "passed": true,
+      "evidence": "hypertension_code"
+    },
+    {
+      "id": "unchanged_core_hypertension",
+      "passed": true,
+      "evidence": "hypertension"
+    },
+    {
+      "id": "unchanged_core_diagnosed_or_treated_htn",
+      "passed": true,
+      "evidence": "diagnosed_or_treated_htn"
+    },
+    {
+      "id": "unchanged_core_mec_weight",
+      "passed": true,
+      "evidence": "mec_weight"
+    },
+    {
+      "id": "unchanged_core_mec_design_eligible",
+      "passed": true,
+      "evidence": "mec_design_eligible"
+    },
+    {
+      "id": "unchanged_core_domain_age30",
+      "passed": true,
+      "evidence": "domain_age30"
+    },
+    {
+      "id": "unchanged_core_domain_bp",
+      "passed": true,
+      "evidence": "domain_bp"
+    },
+    {
+      "id": "unchanged_core_domain_periodontal",
+      "passed": true,
+      "evidence": "domain_periodontal"
+    },
+    {
+      "id": "unchanged_core_domain_oral",
+      "passed": true,
+      "evidence": "domain_oral"
+    },
+    {
+      "id": "unchanged_core_domain_smoking",
+      "passed": true,
+      "evidence": "domain_smoking"
+    },
+    {
+      "id": "unchanged_core_domain_htn",
+      "passed": true,
+      "evidence": "domain_htn"
+    },
+    {
+      "id": "unchanged_core_analysis_domain",
+      "passed": true,
+      "evidence": "analysis_domain"
+    },
+    {
+      "id": "unchanged_core_age_group",
+      "passed": true,
+      "evidence": "age_group"
+    },
+    {
+      "id": "no_refused_unknown_medication_reclassified_as_structural_no",
+      "passed": true,
+      "evidence": {
+        "all_n": 0,
+        "domain_n": 0,
+        "future_guard": "구조적 건너뛰기는 raw BPQ050A가 실제 NA인 경우로 제한하면 미래 입력의 7/9 충돌에 강건함."
+      }
+    },
+    {
+      "id": "all160_source_hashes",
+      "passed": true,
+      "evidence": {
+        "n": 160,
+        "failed": []
+      }
+    },
+    {
+      "id": "80_total_raw55_addon",
+      "passed": true,
+      "evidence": 80
+    },
+    {
+      "id": "addon_key_unique_2009-2010_BMX",
+      "passed": true,
+      "evidence": 10253
+    },
+    {
+      "id": "addon_key_unique_2009-2010_SLQ",
+      "passed": true,
+      "evidence": 6889
+    },
+    {
+      "id": "addon_key_unique_2009-2010_ALQ",
+      "passed": true,
+      "evidence": 6059
+    },
+    {
+      "id": "addon_key_unique_2009-2010_PAQ",
+      "passed": true,
+      "evidence": 9771
+    },
+    {
+      "id": "addon_key_unique_2009-2010_MCQ",
+      "passed": true,
+      "evidence": 10109
+    },
+    {
+      "id": "addon_key_unique_2009-2010_DIQ",
+      "passed": true,
+      "evidence": 10109
+    },
+    {
+      "id": "addon_key_unique_2009-2010_DR1TOT",
+      "passed": true,
+      "evidence": 10253
+    },
+    {
+      "id": "addon_key_unique_2009-2010_TCHOL",
+      "passed": true,
+      "evidence": 8591
+    },
+    {
+      "id": "addon_key_unique_2009-2010_HDL",
+      "passed": true,
+      "evidence": 8591
+    },
+    {
+      "id": "addon_key_unique_2009-2010_GHB",
+      "passed": true,
+      "evidence": 7369
+    },
+    {
+      "id": "addon_key_unique_2009-2010_BIOPRO",
+      "passed": true,
+      "evidence": 7369
+    },
+    {
+      "id": "addon_key_unique_2011-2012_BMX",
+      "passed": true,
+      "evidence": 9338
+    },
+    {
+      "id": "addon_key_unique_2011-2012_SLQ",
+      "passed": true,
+      "evidence": 6175
+    },
+    {
+      "id": "addon_key_unique_2011-2012_ALQ",
+      "passed": true,
+      "evidence": 5615
+    },
+    {
+      "id": "addon_key_unique_2011-2012_PAQ",
+      "passed": true,
+      "evidence": 9107
+    },
+    {
+      "id": "addon_key_unique_2011-2012_MCQ",
+      "passed": true,
+      "evidence": 9364
+    },
+    {
+      "id": "addon_key_unique_2011-2012_DIQ",
+      "passed": true,
+      "evidence": 9364
+    },
+    {
+      "id": "addon_key_unique_2011-2012_DR1TOT",
+      "passed": true,
+      "evidence": 9338
+    },
+    {
+      "id": "addon_key_unique_2011-2012_TCHOL",
+      "passed": true,
+      "evidence": 7821
+    },
+    {
+      "id": "addon_key_unique_2011-2012_HDL",
+      "passed": true,
+      "evidence": 7821
+    },
+    {
+      "id": "addon_key_unique_2011-2012_GHB",
+      "passed": true,
+      "evidence": 6549
+    },
+    {
+      "id": "addon_key_unique_2011-2012_BIOPRO",
+      "passed": true,
+      "evidence": 6549
+    },
+    {
+      "id": "addon_key_unique_2013-2014_BMX",
+      "passed": true,
+      "evidence": 9813
+    },
+    {
+      "id": "addon_key_unique_2013-2014_SLQ",
+      "passed": true,
+      "evidence": 6464
+    },
+    {
+      "id": "addon_key_unique_2013-2014_ALQ",
+      "passed": true,
+      "evidence": 5924
+    },
+    {
+      "id": "addon_key_unique_2013-2014_PAQ",
+      "passed": true,
+      "evidence": 9484
+    },
+    {
+      "id": "addon_key_unique_2013-2014_MCQ",
+      "passed": true,
+      "evidence": 9770
+    },
+    {
+      "id": "addon_key_unique_2013-2014_DIQ",
+      "passed": true,
+      "evidence": 9770
+    },
+    {
+      "id": "addon_key_unique_2013-2014_DR1TOT",
+      "passed": true,
+      "evidence": 9813
+    },
+    {
+      "id": "addon_key_unique_2013-2014_TCHOL",
+      "passed": true,
+      "evidence": 8291
+    },
+    {
+      "id": "addon_key_unique_2013-2014_HDL",
+      "passed": true,
+      "evidence": 8291
+    },
+    {
+      "id": "addon_key_unique_2013-2014_GHB",
+      "passed": true,
+      "evidence": 6979
+    },
+    {
+      "id": "addon_key_unique_2013-2014_BIOPRO",
+      "passed": true,
+      "evidence": 6979
+    },
+    {
+      "id": "addon_key_unique_2015-2016_BMX",
+      "passed": true,
+      "evidence": 9544
+    },
+    {
+      "id": "addon_key_unique_2015-2016_SLQ",
+      "passed": true,
+      "evidence": 6327
+    },
+    {
+      "id": "addon_key_unique_2015-2016_ALQ",
+      "passed": true,
+      "evidence": 5735
+    },
+    {
+      "id": "addon_key_unique_2015-2016_PAQ",
+      "passed": true,
+      "evidence": 9255
+    },
+    {
+      "id": "addon_key_unique_2015-2016_MCQ",
+      "passed": true,
+      "evidence": 9575
+    },
+    {
+      "id": "addon_key_unique_2015-2016_DIQ",
+      "passed": true,
+      "evidence": 9575
+    },
+    {
+      "id": "addon_key_unique_2015-2016_DR1TOT",
+      "passed": true,
+      "evidence": 9544
+    },
+    {
+      "id": "addon_key_unique_2015-2016_TCHOL",
+      "passed": true,
+      "evidence": 8021
+    },
+    {
+      "id": "addon_key_unique_2015-2016_HDL",
+      "passed": true,
+      "evidence": 8021
+    },
+    {
+      "id": "addon_key_unique_2015-2016_GHB",
+      "passed": true,
+      "evidence": 6744
+    },
+    {
+      "id": "addon_key_unique_2015-2016_BIOPRO",
+      "passed": true,
+      "evidence": 6744
+    },
+    {
+      "id": "addon_key_unique_2017-2018_BMX",
+      "passed": true,
+      "evidence": 8704
+    },
+    {
+      "id": "addon_key_unique_2017-2018_SLQ",
+      "passed": true,
+      "evidence": 6161
+    },
+    {
+      "id": "addon_key_unique_2017-2018_ALQ",
+      "passed": true,
+      "evidence": 5533
+    },
+    {
+      "id": "addon_key_unique_2017-2018_PAQ",
+      "passed": true,
+      "evidence": 5856
+    },
+    {
+      "id": "addon_key_unique_2017-2018_MCQ",
+      "passed": true,
+      "evidence": 8897
+    },
+    {
+      "id": "addon_key_unique_2017-2018_DIQ",
+      "passed": true,
+      "evidence": 8897
+    },
+    {
+      "id": "addon_key_unique_2017-2018_DR1TOT",
+      "passed": true,
+      "evidence": 8704
+    },
+    {
+      "id": "addon_key_unique_2017-2018_TCHOL",
+      "passed": true,
+      "evidence": 7435
+    },
+    {
+      "id": "addon_key_unique_2017-2018_HDL",
+      "passed": true,
+      "evidence": 7435
+    },
+    {
+      "id": "addon_key_unique_2017-2018_GHB",
+      "passed": true,
+      "evidence": 6401
+    },
+    {
+      "id": "addon_key_unique_2017-2018_BIOPRO",
+      "passed": true,
+      "evidence": 6401
+    },
+    {
+      "id": "all55_component_counts_match",
+      "passed": true,
+      "evidence": [
+        {
+          "cycle": "2009-2010",
+          "component": "BMX",
+          "source_n": 10253,
+          "demo_n": 10537,
+          "demo_matched_n": 10253,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2009-2010",
+          "component": "SLQ",
+          "source_n": 6889,
+          "demo_n": 10537,
+          "demo_matched_n": 6889,
+          "absent_fields": "SLD012"
+        },
+        {
+          "cycle": "2009-2010",
+          "component": "ALQ",
+          "source_n": 6059,
+          "demo_n": 10537,
+          "demo_matched_n": 6059,
+          "absent_fields": "ALQ111|ALQ121"
+        },
+        {
+          "cycle": "2009-2010",
+          "component": "PAQ",
+          "source_n": 9771,
+          "demo_n": 10537,
+          "demo_matched_n": 9771,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2009-2010",
+          "component": "MCQ",
+          "source_n": 10109,
+          "demo_n": 10537,
+          "demo_matched_n": 10109,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2009-2010",
+          "component": "DIQ",
+          "source_n": 10109,
+          "demo_n": 10537,
+          "demo_matched_n": 10109,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2009-2010",
+          "component": "DR1TOT",
+          "source_n": 10253,
+          "demo_n": 10537,
+          "demo_matched_n": 10253,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2009-2010",
+          "component": "TCHOL",
+          "source_n": 8591,
+          "demo_n": 10537,
+          "demo_matched_n": 8591,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2009-2010",
+          "component": "HDL",
+          "source_n": 8591,
+          "demo_n": 10537,
+          "demo_matched_n": 8591,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2009-2010",
+          "component": "GHB",
+          "source_n": 7369,
+          "demo_n": 10537,
+          "demo_matched_n": 7369,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2009-2010",
+          "component": "BIOPRO",
+          "source_n": 7369,
+          "demo_n": 10537,
+          "demo_matched_n": 7369,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2011-2012",
+          "component": "BMX",
+          "source_n": 9338,
+          "demo_n": 9756,
+          "demo_matched_n": 9338,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2011-2012",
+          "component": "SLQ",
+          "source_n": 6175,
+          "demo_n": 9756,
+          "demo_matched_n": 6175,
+          "absent_fields": "SLD012"
+        },
+        {
+          "cycle": "2011-2012",
+          "component": "ALQ",
+          "source_n": 5615,
+          "demo_n": 9756,
+          "demo_matched_n": 5615,
+          "absent_fields": "ALQ111|ALQ121"
+        },
+        {
+          "cycle": "2011-2012",
+          "component": "PAQ",
+          "source_n": 9107,
+          "demo_n": 9756,
+          "demo_matched_n": 9107,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2011-2012",
+          "component": "MCQ",
+          "source_n": 9364,
+          "demo_n": 9756,
+          "demo_matched_n": 9364,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2011-2012",
+          "component": "DIQ",
+          "source_n": 9364,
+          "demo_n": 9756,
+          "demo_matched_n": 9364,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2011-2012",
+          "component": "DR1TOT",
+          "source_n": 9338,
+          "demo_n": 9756,
+          "demo_matched_n": 9338,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2011-2012",
+          "component": "TCHOL",
+          "source_n": 7821,
+          "demo_n": 9756,
+          "demo_matched_n": 7821,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2011-2012",
+          "component": "HDL",
+          "source_n": 7821,
+          "demo_n": 9756,
+          "demo_matched_n": 7821,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2011-2012",
+          "component": "GHB",
+          "source_n": 6549,
+          "demo_n": 9756,
+          "demo_matched_n": 6549,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2011-2012",
+          "component": "BIOPRO",
+          "source_n": 6549,
+          "demo_n": 9756,
+          "demo_matched_n": 6549,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2013-2014",
+          "component": "BMX",
+          "source_n": 9813,
+          "demo_n": 10175,
+          "demo_matched_n": 9813,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2013-2014",
+          "component": "SLQ",
+          "source_n": 6464,
+          "demo_n": 10175,
+          "demo_matched_n": 6464,
+          "absent_fields": "SLD012"
+        },
+        {
+          "cycle": "2013-2014",
+          "component": "ALQ",
+          "source_n": 5924,
+          "demo_n": 10175,
+          "demo_matched_n": 5924,
+          "absent_fields": "ALQ111|ALQ121"
+        },
+        {
+          "cycle": "2013-2014",
+          "component": "PAQ",
+          "source_n": 9484,
+          "demo_n": 10175,
+          "demo_matched_n": 9484,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2013-2014",
+          "component": "MCQ",
+          "source_n": 9770,
+          "demo_n": 10175,
+          "demo_matched_n": 9770,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2013-2014",
+          "component": "DIQ",
+          "source_n": 9770,
+          "demo_n": 10175,
+          "demo_matched_n": 9770,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2013-2014",
+          "component": "DR1TOT",
+          "source_n": 9813,
+          "demo_n": 10175,
+          "demo_matched_n": 9813,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2013-2014",
+          "component": "TCHOL",
+          "source_n": 8291,
+          "demo_n": 10175,
+          "demo_matched_n": 8291,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2013-2014",
+          "component": "HDL",
+          "source_n": 8291,
+          "demo_n": 10175,
+          "demo_matched_n": 8291,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2013-2014",
+          "component": "GHB",
+          "source_n": 6979,
+          "demo_n": 10175,
+          "demo_matched_n": 6979,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2013-2014",
+          "component": "BIOPRO",
+          "source_n": 6979,
+          "demo_n": 10175,
+          "demo_matched_n": 6979,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2015-2016",
+          "component": "BMX",
+          "source_n": 9544,
+          "demo_n": 9971,
+          "demo_matched_n": 9544,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2015-2016",
+          "component": "SLQ",
+          "source_n": 6327,
+          "demo_n": 9971,
+          "demo_matched_n": 6327,
+          "absent_fields": "SLD010H"
+        },
+        {
+          "cycle": "2015-2016",
+          "component": "ALQ",
+          "source_n": 5735,
+          "demo_n": 9971,
+          "demo_matched_n": 5735,
+          "absent_fields": "ALQ111|ALQ121"
+        },
+        {
+          "cycle": "2015-2016",
+          "component": "PAQ",
+          "source_n": 9255,
+          "demo_n": 9971,
+          "demo_matched_n": 9255,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2015-2016",
+          "component": "MCQ",
+          "source_n": 9575,
+          "demo_n": 9971,
+          "demo_matched_n": 9575,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2015-2016",
+          "component": "DIQ",
+          "source_n": 9575,
+          "demo_n": 9971,
+          "demo_matched_n": 9575,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2015-2016",
+          "component": "DR1TOT",
+          "source_n": 9544,
+          "demo_n": 9971,
+          "demo_matched_n": 9544,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2015-2016",
+          "component": "TCHOL",
+          "source_n": 8021,
+          "demo_n": 9971,
+          "demo_matched_n": 8021,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2015-2016",
+          "component": "HDL",
+          "source_n": 8021,
+          "demo_n": 9971,
+          "demo_matched_n": 8021,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2015-2016",
+          "component": "GHB",
+          "source_n": 6744,
+          "demo_n": 9971,
+          "demo_matched_n": 6744,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2015-2016",
+          "component": "BIOPRO",
+          "source_n": 6744,
+          "demo_n": 9971,
+          "demo_matched_n": 6744,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2017-2018",
+          "component": "BMX",
+          "source_n": 8704,
+          "demo_n": 9254,
+          "demo_matched_n": 8704,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2017-2018",
+          "component": "SLQ",
+          "source_n": 6161,
+          "demo_n": 9254,
+          "demo_matched_n": 6161,
+          "absent_fields": "SLD010H"
+        },
+        {
+          "cycle": "2017-2018",
+          "component": "ALQ",
+          "source_n": 5533,
+          "demo_n": 9254,
+          "demo_matched_n": 5533,
+          "absent_fields": "ALQ101|ALQ110|ALQ120Q|ALQ120U"
+        },
+        {
+          "cycle": "2017-2018",
+          "component": "PAQ",
+          "source_n": 5856,
+          "demo_n": 9254,
+          "demo_matched_n": 5856,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2017-2018",
+          "component": "MCQ",
+          "source_n": 8897,
+          "demo_n": 9254,
+          "demo_matched_n": 8897,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2017-2018",
+          "component": "DIQ",
+          "source_n": 8897,
+          "demo_n": 9254,
+          "demo_matched_n": 8897,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2017-2018",
+          "component": "DR1TOT",
+          "source_n": 8704,
+          "demo_n": 9254,
+          "demo_matched_n": 8704,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2017-2018",
+          "component": "TCHOL",
+          "source_n": 7435,
+          "demo_n": 9254,
+          "demo_matched_n": 7435,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2017-2018",
+          "component": "HDL",
+          "source_n": 7435,
+          "demo_n": 9254,
+          "demo_matched_n": 7435,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2017-2018",
+          "component": "GHB",
+          "source_n": 6401,
+          "demo_n": 9254,
+          "demo_matched_n": 6401,
+          "absent_fields": ""
+        },
+        {
+          "cycle": "2017-2018",
+          "component": "BIOPRO",
+          "source_n": 6401,
+          "demo_n": 9254,
+          "demo_matched_n": 6401,
+          "absent_fields": ""
+        }
+      ]
+    },
+    {
+      "id": "addon_raw_BMXBMI",
+      "passed": true,
+      "evidence": "BMXBMI"
+    },
+    {
+      "id": "addon_raw_SLD010H",
+      "passed": true,
+      "evidence": "SLD010H"
+    },
+    {
+      "id": "addon_raw_SLD012",
+      "passed": true,
+      "evidence": "SLD012"
+    },
+    {
+      "id": "addon_raw_ALQ101",
+      "passed": true,
+      "evidence": "ALQ101"
+    },
+    {
+      "id": "addon_raw_ALQ110",
+      "passed": true,
+      "evidence": "ALQ110"
+    },
+    {
+      "id": "addon_raw_ALQ120Q",
+      "passed": true,
+      "evidence": "ALQ120Q"
+    },
+    {
+      "id": "addon_raw_ALQ120U",
+      "passed": true,
+      "evidence": "ALQ120U"
+    },
+    {
+      "id": "addon_raw_ALQ111",
+      "passed": true,
+      "evidence": "ALQ111"
+    },
+    {
+      "id": "addon_raw_ALQ121",
+      "passed": true,
+      "evidence": "ALQ121"
+    },
+    {
+      "id": "addon_raw_ALQ130",
+      "passed": true,
+      "evidence": "ALQ130"
+    },
+    {
+      "id": "addon_raw_PAQ605",
+      "passed": true,
+      "evidence": "PAQ605"
+    },
+    {
+      "id": "addon_raw_PAQ620",
+      "passed": true,
+      "evidence": "PAQ620"
+    },
+    {
+      "id": "addon_raw_PAQ635",
+      "passed": true,
+      "evidence": "PAQ635"
+    },
+    {
+      "id": "addon_raw_PAQ650",
+      "passed": true,
+      "evidence": "PAQ650"
+    },
+    {
+      "id": "addon_raw_PAQ665",
+      "passed": true,
+      "evidence": "PAQ665"
+    },
+    {
+      "id": "addon_raw_MCQ160B",
+      "passed": true,
+      "evidence": "MCQ160B"
+    },
+    {
+      "id": "addon_raw_MCQ160C",
+      "passed": true,
+      "evidence": "MCQ160C"
+    },
+    {
+      "id": "addon_raw_MCQ160D",
+      "passed": true,
+      "evidence": "MCQ160D"
+    },
+    {
+      "id": "addon_raw_MCQ160E",
+      "passed": true,
+      "evidence": "MCQ160E"
+    },
+    {
+      "id": "addon_raw_MCQ160F",
+      "passed": true,
+      "evidence": "MCQ160F"
+    },
+    {
+      "id": "addon_raw_DIQ010",
+      "passed": true,
+      "evidence": "DIQ010"
+    },
+    {
+      "id": "addon_raw_WTDRD1",
+      "passed": true,
+      "evidence": "WTDRD1"
+    },
+    {
+      "id": "addon_raw_DR1DRSTZ",
+      "passed": true,
+      "evidence": "DR1DRSTZ"
+    },
+    {
+      "id": "addon_raw_DR1TSODI",
+      "passed": true,
+      "evidence": "DR1TSODI"
+    },
+    {
+      "id": "addon_raw_DR1TTFAT",
+      "passed": true,
+      "evidence": "DR1TTFAT"
+    },
+    {
+      "id": "addon_raw_LBXTC",
+      "passed": true,
+      "evidence": "LBXTC"
+    },
+    {
+      "id": "addon_raw_LBDHDD",
+      "passed": true,
+      "evidence": "LBDHDD"
+    },
+    {
+      "id": "addon_raw_LBXGH",
+      "passed": true,
+      "evidence": "LBXGH"
+    },
+    {
+      "id": "addon_raw_LBXSCR",
+      "passed": true,
+      "evidence": "LBXSCR"
+    },
+    {
+      "id": "addon_raw_LBXSTR",
+      "passed": true,
+      "evidence": "LBXSTR"
+    },
+    {
+      "id": "bmi_raw",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "bmi_categories",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "sleep_hours_fractional",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "sleep_category",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "alcohol_weekly_frequency",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "alcohol_weekly_drinks",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "alcohol_category",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "alcohol_proxy_flag",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "activity_category",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "cvd_category",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "diabetes_category",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "diabetes_status_counts",
+      "passed": true,
+      "evidence": [
+        {
+          "population": "All DEMO",
+          "status": "Yes",
+          "n": 3933
+        },
+        {
+          "population": "All DEMO",
+          "status": "No",
+          "n": 42979
+        },
+        {
+          "population": "All DEMO",
+          "status": "Borderline3",
+          "n": 775
+        },
+        {
+          "population": "All DEMO",
+          "status": "Refused7",
+          "n": 3
+        },
+        {
+          "population": "All DEMO",
+          "status": "Unknown9",
+          "n": 23
+        },
+        {
+          "population": "All DEMO",
+          "status": "Absent",
+          "n": 1980
+        },
+        {
+          "population": "All DEMO",
+          "status": "Other",
+          "n": 0
+        },
+        {
+          "population": "Primary A",
+          "status": "Yes",
+          "n": 3412
+        },
+        {
+          "population": "Primary A",
+          "status": "No",
+          "n": 17411
+        },
+        {
+          "population": "Primary A",
+          "status": "Borderline3",
+          "n": 622
+        },
+        {
+          "population": "Primary A",
+          "status": "Refused7",
+          "n": 0
+        },
+        {
+          "population": "Primary A",
+          "status": "Unknown9",
+          "n": 13
+        },
+        {
+          "population": "Primary A",
+          "status": "Absent",
+          "n": 0
+        },
+        {
+          "population": "Primary A",
+          "status": "Other",
+          "n": 0
+        }
+      ]
+    },
+    {
+      "id": "sodium_raw",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "sodium_filled",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "sodium_missing_flag",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "fat_raw",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "fat_filled",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "fat_missing_flag",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "total_cholesterol_raw",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "total_cholesterol_filled",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "total_cholesterol_missing_flag",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "creatinine_raw",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "creatinine_filled",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "creatinine_missing_flag",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "triglycerides_biopro_raw",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "triglycerides_biopro_filled",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "triglycerides_biopro_missing_flag",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "hba1c_raw",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "hba1c_filled",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "hba1c_missing_flag",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "hdl_raw",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "hdl_filled",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "hdl_missing_flag",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "median_missing_summary",
+      "passed": true,
+      "evidence": [
+        {
+          "variable": "sodium",
+          "raw_variable": "DR1TSODI",
+          "median_value": 3094,
+          "observed_primary_n": 19925,
+          "missing_primary_n": 1533
+        },
+        {
+          "variable": "fat",
+          "raw_variable": "DR1TTFAT",
+          "median_value": 71.259999999999977,
+          "observed_primary_n": 19925,
+          "missing_primary_n": 1533
+        },
+        {
+          "variable": "total_cholesterol",
+          "raw_variable": "LBXTC",
+          "median_value": 192,
+          "observed_primary_n": 20285,
+          "missing_primary_n": 1173
+        },
+        {
+          "variable": "creatinine",
+          "raw_variable": "LBXSCR",
+          "median_value": 0.85999999999999999,
+          "observed_primary_n": 20220,
+          "missing_primary_n": 1238
+        },
+        {
+          "variable": "triglycerides_biopro",
+          "raw_variable": "LBXSTR",
+          "median_value": 125,
+          "observed_primary_n": 20206,
+          "missing_primary_n": 1252
+        },
+        {
+          "variable": "hba1c",
+          "raw_variable": "LBXGH",
+          "median_value": 5.5999999999999996,
+          "observed_primary_n": 20557,
+          "missing_primary_n": 901
+        },
+        {
+          "variable": "hdl",
+          "raw_variable": "LBDHDD",
+          "median_value": 50,
+          "observed_primary_n": 20285,
+          "missing_primary_n": 1173
+        }
+      ]
+    },
+    {
+      "id": "diet_weight",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "diet_eligible",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "diet_domain",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "A_design_n_df",
+      "passed": true,
+      "evidence": {
+        "full_n": 47652,
+        "domain_n": 21458,
+        "full_df": 78,
+        "domain_df": 78,
+        "strata_n": 74,
+        "psu_n": 152
+      }
+    },
+    {
+      "id": "B_design_n_df",
+      "passed": true,
+      "evidence": {
+        "full_n": 43081,
+        "domain_n": 19925,
+        "full_df": 78,
+        "domain_df": 78,
+        "strata_n": 74,
+        "psu_n": 152
+      }
+    },
+    {
+      "id": "diagnosed_or_treated_outcome",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "all_model_domains_covariates",
+      "passed": true,
+      "evidence": {
+        "rows": 60,
+        "failed": []
+      }
+    },
+    {
+      "id": "supplements_common_controls",
+      "passed": true,
+      "evidence": [
+        {
+          "candidate": "A",
+          "family": "supplement_measured",
+          "subgroup": "Overall",
+          "n": 12401,
+          "cases_n": 1632,
+          "controls_n": 10769
+        },
+        {
+          "candidate": "A",
+          "family": "supplement_diagnosed_treated",
+          "subgroup": "Overall",
+          "n": 19815,
+          "cases_n": 9046,
+          "controls_n": 10769
+        }
+      ]
+    },
+    {
+      "id": "addon_table1_count_denominator_weighted_point",
+      "passed": true,
+      "evidence": {
+        "rows": 132,
+        "failed": []
+      }
+    },
+    {
+      "id": "artifact_hash_definitions.json",
+      "passed": true,
+      "evidence": "1a7f02624002181bcd269a6b5706511294efedccbf7db866de46f27a7c2635df"
+    },
+    {
+      "id": "artifact_hash_derived/master.rds",
+      "passed": true,
+      "evidence": "4ad1870f3f98a75921e1e3b433d645183b657b322327874698a02ae53ec329be"
+    },
+    {
+      "id": "artifact_hash_report.json",
+      "passed": true,
+      "evidence": "e6a9cf964d0b7cb7552063f5ef4116698ad72df7591b50153d269e090db87ccf"
+    },
+    {
+      "id": "artifact_hash_executed_script.R",
+      "passed": true,
+      "evidence": "fdb959e433e61ed6363d64c5aef46a213f45b068368e780a35a50938b0812d3d"
+    },
+    {
+      "id": "artifact_hash_core_script_snapshot.R",
+      "passed": true,
+      "evidence": "f14840f51eabaa442b5273d11fce825e59fdfde61b79f0e20a99fd21079083f3"
+    },
+    {
+      "id": "artifact_hash_sources_manifest.csv",
+      "passed": true,
+      "evidence": "31e782d0993afa3f79ed68102382f8ce26d7f746855e13601bc696721e49dac4"
+    },
+    {
+      "id": "artifact_hash_upstream_input.json",
+      "passed": true,
+      "evidence": "0607e4772fd1ff06e04205787733c1b0a888e2ee510593bb7ba3a713a241c74b"
+    },
+    {
+      "id": "artifact_hash_tables/model_sample_counts_formulas.csv",
+      "passed": true,
+      "evidence": "ed25c96375a6e7c57b558ce494a9a144c1458cbb729d6ae062c37ba172d88bd9"
+    },
+    {
+      "id": "extension_current_matches_snapshot",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "core_snapshot_matches_R2",
+      "passed": true,
+      "evidence": null
+    }
+  ],
+  "designs": {
+    "A": {
+      "full_n": 47652,
+      "domain_n": 21458,
+      "full_df": 78,
+      "domain_df": 78,
+      "strata_n": 74,
+      "psu_n": 152
+    },
+    "B": {
+      "full_n": 43081,
+      "domain_n": 19925,
+      "full_df": 78,
+      "domain_df": 78,
+      "strata_n": 74,
+      "psu_n": 152
+    }
+  },
+  "supplement_domains": [
+    {
+      "candidate": "A",
+      "family": "supplement_measured",
+      "subgroup": "Overall",
+      "n": 12401,
+      "cases_n": 1632,
+      "controls_n": 10769
+    },
+    {
+      "candidate": "A",
+      "family": "supplement_diagnosed_treated",
+      "subgroup": "Overall",
+      "n": 19815,
+      "cases_n": 9046,
+      "controls_n": 10769
+    }
+  ],
+  "limitations": ["BIOPRO LBXSTR는 권고 참조법 LBXTR와 다르며 공복 제한 없는 후보임.", "BIOPRO_J의 이전 주기 통합 권고 보정식을 LBXSCR/LBXSTR에 적용하지 않은 원시값 후보임.", "ALQ_J 범주 대표값과 F-I 평생12잔미만을 No drinks로 간주하는 것은 명시된 분석자 가정임.", "SLD010H와 SLD012의 질문·산출 방식이 달라 통합 sleep을 완전히 동일한 측정으로 해석할 수 없음.", "중앙값+결측 지시자는 저자 구현 미상인 분석자 가정이며 편향 해결을 보장하지 않음.", "원 논문 Table1 diabetes 대규모 Missing의 변수 정의는 미확인. DIQ050/070 대조 요약은 탐색적 출처 단서이며 매핑 증명이 아님.", "보충표 domain은 발표된 수에서 추론한 후보 규칙. 저자 구현을 입증하지 않음.", "B WTDRD1 민감도는 일일 영양자료에 적합한 가중치를 사용하지만 모든 선택/측정/교란 편향을 해결하지 않음."]
+}
