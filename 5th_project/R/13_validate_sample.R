@@ -10,10 +10,12 @@
 ##
 ## Hard rules (each traces to the plan / plan_revision.md item):
 ##   SEQN unique; age >= 30; cycle in the 5 cycles 2009-2018
-##   sbp, dbp > 0 and not NA (DBP 0 must have been set to NA before the
-##     mean; revision item 5)
+##   sbp > 0 and not NA; dbp > 0 where present (DBP 0 must have been set to
+##     NA before the mean, so a 0 here is an error; NA is allowed: people
+##     whose DBP readings were all 0 keep their SBP - revision item 5,
+##     plan step B "NA 허용"; v1 of this rule required DBP, see CHANGES_v2.md)
 ##   no BPXO* columns (oscillometric never mixed in; item 6)
-##   htn_measured == (sbp >= 140 | dbp >= 90)
+##   htn_measured == (sbp >= 140 | dbp >= 90), a missing DBP counting as < 90
 ##   htn == (htn_measured | htn_diagnosed) where htn is not NA
 ##   skip pattern: BPQ020 == 2 and BP below cut-offs -> htn == 0, never NA
 ##     (BPQ050A is asked only after BPQ040A == 1; item 4)
@@ -40,25 +42,28 @@ PROJ <- tryCatch({
   if (length(f)) normalizePath(file.path(dirname(f), "..")) else normalizePath(".")
 }, error = function(e) normalizePath("."))
 
-d <- readRDS(file.path(PROJ, "data", "processed", "oral_htn_analytic.rds"))
+d <- readRDS(file.path(PROJ, "data", "processed", "oral_htn_analytic_v2.rds"))
 
 CYCLES <- c("2009-2010", "2011-2012", "2013-2014", "2015-2016", "2017-2018")
 hard <- action_levels(stop_at = 1)
 soft <- action_levels(warn_at = 1)
 
-agent <- create_agent(tbl = d, tbl_name = "oral_htn_analytic",
-                      label = "Week 5 analytic sample (R/11)") |>
+agent <- create_agent(tbl = d, tbl_name = "oral_htn_analytic_v2",
+                      label = "Week 5 analytic sample (R/11_v2)") |>
   ## identity and scope
   rows_distinct(columns = vars(SEQN), actions = hard, label = "hard: SEQN unique") |>
   col_vals_gte(columns = vars(age), value = 30, actions = hard, label = "hard: age >= 30") |>
   col_vals_in_set(columns = vars(cycle), set = CYCLES, actions = hard,
                   label = "hard: cycle 2009-2018") |>
   ## blood pressure
-  col_vals_gt(columns = vars(sbp, dbp), value = 0, na_pass = FALSE, actions = hard,
-              label = "hard: mean SBP/DBP > 0, not NA") |>
+  col_vals_gt(columns = vars(sbp), value = 0, na_pass = FALSE, actions = hard,
+              label = "hard: mean SBP > 0, not NA") |>
+  col_vals_gt(columns = vars(dbp), value = 0, na_pass = TRUE, actions = hard,
+              label = "hard: mean DBP > 0 where present (NA allowed)") |>
   specially(fn = function(x) !any(grepl("^BPXO", names(x))), actions = hard,
             label = "hard: no oscillometric BPXO columns") |>
-  col_vals_expr(expr = ~ htn_measured == (sbp >= 140 | dbp >= 90), actions = hard,
+  col_vals_expr(expr = ~ htn_measured == (sbp >= 140 | (!is.na(dbp) & dbp >= 90)),
+                actions = hard,
                 label = "hard: htn_measured = SBP>=140 or DBP>=90") |>
   col_vals_expr(expr = ~ htn == as.numeric(htn_measured | htn_diagnosed),
                 preconditions = ~ . %>% dplyr::filter(!is.na(htn)), actions = hard,

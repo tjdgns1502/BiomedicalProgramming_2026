@@ -13,8 +13,11 @@
 ##   fit_exposure()  svyglm on a (sub)design for one exposure and one
 ##                   covariate set; returns one row per non-reference level:
 ##                   estimate on the link scale exponentiated (OR for logit,
-##                   RR for log link), Wald CI (normal, as confint.svyglm),
-##                   p from the coefficient table (t on design df).
+##                   RR for log link), Wald CI from confint.svyglm, which
+##                   (survey 4.5) uses t on df.residual = design df + 1 -
+##                   rank (e.g. 39 for Table 2 Model 3), the same df as the
+##                   p in the coefficient table. SAS would use the design df
+##                   (78); the difference is ~0.005 on a CI bound (audit).
 ##                   Indicators that are constant or duplicate another
 ##                   column inside the subset are dropped (they would be
 ##                   aliased); dropped terms are returned in `dropped`.

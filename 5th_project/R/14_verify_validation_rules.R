@@ -9,14 +9,19 @@
 ## step (5, 9, 16, 1, 6, 2, 20); baseline NO STOP. The first run showed
 ## step 16 erroring in every run: its expression used a global lookup vector
 ## that pointblank could not see; R/13 now writes the vector inline.
+## Rerun on the v2 sample (CHANGES_v2.md; 59 rows with DBP NA): baseline
+## NO STOP, so the NA-allowed DBP rule accepts them; the 7 mutations stop on
+## the same steps, and the added sbp_missing stops on steps 4 (SBP) and 7
+## (htn_measured).
 ##
 ## Rscript R/14_verify_validation_rules.R   (from the 5th_project folder)
 ## ------------------------------------------------------------------------
 src <- readLines("R/13_validate_sample.R")
-d0 <- readRDS("data/processed/oral_htn_analytic.rds")
+d0 <- readRDS("data/processed/oral_htn_analytic_v2.rds")
 tmp <- file.path(tempdir(), "p13"); dir.create(file.path(tmp, "output", "tables"), recursive = TRUE, showWarnings = FALSE)
 muts <- list(
   dbp_zero      = function(d) { d$dbp[1] <- 0; d },
+  sbp_missing   = function(d) { d$sbp[1] <- NA; d },
   skip_as_na    = function(d) { i <- which(d$BPQ020 == 2 & !d$htn_measured)[1]; d$htn[i] <- NA; d },
   oral_wrong    = function(d) { i <- which(d$ohq845_raw == 2)[1]; d$oral4[i] <- "Good"; d },
   dup_seqn      = function(d) rbind(d, d[1, ]),

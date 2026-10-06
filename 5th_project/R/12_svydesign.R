@@ -1,14 +1,15 @@
 ## 12_svydesign.R ---------------------------------------------------------
 ## Survey design for all weighted analyses (Table 1, Tables 2/3, OR vs RR).
 ##
-## Built on the FULL 2009-2018 file (all 49,693 DEMO participants, R/11),
+## Built on the FULL 2009-2018 file (all 49,693 DEMO participants, R/11_v2),
 ## then subset() to the analytic domain; filtering rows before svydesign()
 ## would give wrong standard errors (nhanes-survey-data skill).
 ##   weights  wt_mec10 = WTMEC2YR / 5 (5 pooled cycles; MEC weight because
 ##            BP is an exam measure). Participants with WTMEC2YR = 0
 ##            (interview only) stay in the design with weight 0.
-##   domain   in_sample & !is.na(htn): the 21,417 analytic participants minus
-##            the 18 whose HTN status is unknown (R/13 soft warning) = 21,399
+##   domain   in_sample & !is.na(htn): the 21,476 analytic participants minus
+##            the 18 whose HTN status is unknown (R/13 soft warning) = 21,458
+##            (v1 data: 21,417 / 21,399; input switched to v2, CHANGES_v2.md)
 ##
 ## Missing-category factors (paper: "missing values for these covariates were
 ## treated as additional missing categories", plan A8), suffix _m, level
@@ -32,7 +33,7 @@ PROJ <- tryCatch({
   if (length(f)) normalizePath(file.path(dirname(f), "..")) else normalizePath(".")
 }, error = function(e) normalizePath("."))
 
-full <- readRDS(file.path(PROJ, "data", "processed", "oral_htn_full.rds"))
+full <- readRDS(file.path(PROJ, "data", "processed", "oral_htn_full_v2.rds"))
 full$domain <- full$in_sample & !is.na(full$htn)
 
 ## Non-fasting serum triglyceride from the biochemistry profile (BIOPRO

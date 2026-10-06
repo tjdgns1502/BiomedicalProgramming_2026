@@ -1,427 +1,427 @@
-source,table,row,col,target,digits_shown,ours,abs_diff,tolerance,status,cause,evidence
-paper,Table 1,No. of participants,Non-hypertension N,"10,783",0,,,,,,
-paper,Table 1,No. of participants,Non-hypertension %,49.46,2,,,,,,
-paper,Table 1,No. of participants,Hypertension N,"11,017",0,,,,,,
-paper,Table 1,No. of participants,Hypertension %,50.54,2,,,,,,
-paper,Table 1,Age y,Non-hypertension mean,47.95,2,,,,,,
-paper,Table 1,Age y,Non-hypertension SE,0.24,2,,,,,,
-paper,Table 1,Age y,Hypertension mean,59.04,2,,,,,,
-paper,Table 1,Age y,Hypertension SE,0.21,2,,,,,,
-paper,Table 1,Age y,p-value,< 0.001,3,,,,,,
-paper,Table 1,Sex,p-value,0.015,3,,,,,,
-paper,Table 1,Sex: Male,Non-hypertension N,5140,0,,,,,,
-paper,Table 1,Sex: Male,Non-hypertension %,46.74,2,,,,,,
-paper,Table 1,Sex: Male,Hypertension N,5412,0,,,,,,
-paper,Table 1,Sex: Male,Hypertension %,48.93,2,,,,,,
-paper,Table 1,Sex: Female,Non-hypertension N,5643,0,,,,,,
-paper,Table 1,Sex: Female,Non-hypertension %,53.26,2,,,,,,
-paper,Table 1,Sex: Female,Hypertension N,5606,0,,,,,,
-paper,Table 1,Sex: Female,Hypertension %,51.07,2,,,,,,
-paper,Table 1,Race/ethnicity,p-value,< 0.001,3,,,,,,
-paper,Table 1,Race: Mexican American,Non-hypertension N,1753,0,,,,,,
-paper,Table 1,Race: Mexican American,Non-hypertension %,9.21,2,,,,,,
-paper,Table 1,Race: Mexican American,Hypertension N,1283,0,,,,,,
-paper,Table 1,Race: Mexican American,Hypertension %,5.90,2,,,,,,
-paper,Table 1,Race: Other Hispanic,Non-hypertension N,1193,0,,,,,,
-paper,Table 1,Race: Other Hispanic,Non-hypertension %,6.14,2,,,,,,
-paper,Table 1,Race: Other Hispanic,Hypertension N,1060,0,,,,,,
-paper,Table 1,Race: Other Hispanic,Hypertension %,4.90,2,,,,,,
-paper,Table 1,Race: Non-Hispanic White,Non-hypertension N,4363,0,,,,,,
-paper,Table 1,Race: Non-Hispanic White,Non-hypertension %,67.38,2,,,,,,
-paper,Table 1,Race: Non-Hispanic White,Hypertension N,4469,0,,,,,,
-paper,Table 1,Race: Non-Hispanic White,Hypertension %,68.23,2,,,,,,
-paper,Table 1,Race: Non-Hispanic Black,Non-hypertension N,1742,0,,,,,,
-paper,Table 1,Race: Non-Hispanic Black,Non-hypertension %,8.35,2,,,,,,
-paper,Table 1,Race: Non-Hispanic Black,Hypertension N,2964,0,,,,,,
-paper,Table 1,Race: Non-Hispanic Black,Hypertension %,13.68,2,,,,,,
-paper,Table 1,Race: Other Race-Including Multi-Racial,Non-hypertension N,1732,0,,,,,,
-paper,Table 1,Race: Other Race-Including Multi-Racial,Non-hypertension %,8.91,2,,,,,,
-paper,Table 1,Race: Other Race-Including Multi-Racial,Hypertension N,1241,0,,,,,,
-paper,Table 1,Race: Other Race-Including Multi-Racial,Hypertension %,7.29,2,,,,,,
-paper,Table 1,Smoking,p-value,< 0.001,3,,,,,,
-paper,Table 1,Smoking: Yes,Non-hypertension N,4520,0,,,,,,
-paper,Table 1,Smoking: Yes,Non-hypertension %,42.01,2,,,,,,
-paper,Table 1,Smoking: Yes,Hypertension N,5398,0,,,,,,
-paper,Table 1,Smoking: Yes,Hypertension %,49.76,2,,,,,,
-paper,Table 1,Smoking: No,Non-hypertension N,6263,0,,,,,,
-paper,Table 1,Smoking: No,Non-hypertension %,57.99,2,,,,,,
-paper,Table 1,Smoking: No,Hypertension N,5619,0,,,,,,
-paper,Table 1,Smoking: No,Hypertension %,50.24,2,,,,,,
-paper,Table 1,Periodontal disease,p-value,< 0.001,3,,,,,,
-paper,Table 1,Periodontal disease: Yes,Non-hypertension N,1905,0,,,,,,
-paper,Table 1,Periodontal disease: Yes,Non-hypertension %,16.47,2,,,,,,
-paper,Table 1,Periodontal disease: Yes,Hypertension N,2178,0,,,,,,
-paper,Table 1,Periodontal disease: Yes,Hypertension %,19.92,2,,,,,,
-paper,Table 1,Periodontal disease: No,Non-hypertension N,8878,0,,,,,,
-paper,Table 1,Periodontal disease: No,Non-hypertension %,83.53,2,,,,,,
-paper,Table 1,Periodontal disease: No,Hypertension N,8839,0,,,,,,
-paper,Table 1,Periodontal disease: No,Hypertension %,80.08,2,,,,,,
-paper,Table 1,Oral Health,p-value,< 0.001,3,,,,,,
-paper,Table 1,Oral Health: Excellent/Very good,Non-hypertension N,3584,0,,,,,,
-paper,Table 1,Oral Health: Excellent/Very good,Non-hypertension %,40.87,2,,,,,,
-paper,Table 1,Oral Health: Excellent/Very good,Hypertension N,3185,0,,,,,,
-paper,Table 1,Oral Health: Excellent/Very good,Hypertension %,34.83,2,,,,,,
-paper,Table 1,Oral Health: Good,Non-hypertension N,3779,0,,,,,,
-paper,Table 1,Oral Health: Good,Non-hypertension %,34.00,2,,,,,,
-paper,Table 1,Oral Health: Good,Hypertension N,3757,0,,,,,,
-paper,Table 1,Oral Health: Good,Hypertension %,34.00,2,,,,,,
-paper,Table 1,Oral Health: Fair,Non-hypertension N,2374,0,,,,,,
-paper,Table 1,Oral Health: Fair,Non-hypertension %,17.53,2,,,,,,
-paper,Table 1,Oral Health: Fair,Hypertension N,2620,0,,,,,,
-paper,Table 1,Oral Health: Fair,Hypertension %,19.91,2,,,,,,
-paper,Table 1,Oral Health: Poor,Non-hypertension N,1046,0,,,,,,
-paper,Table 1,Oral Health: Poor,Non-hypertension %,7.60,2,,,,,,
-paper,Table 1,Oral Health: Poor,Hypertension N,1455,0,,,,,,
-paper,Table 1,Oral Health: Poor,Hypertension %,11.27,2,,,,,,
-paper,Table 1,Education,p-value,< 0.001,3,,,,,,
-paper,Table 1,Education: <High school,Non-hypertension N,2374,0,,,,,,
-paper,Table 1,Education: <High school,Non-hypertension %,13.77,2,,,,,,
-paper,Table 1,Education: <High school,Hypertension N,2923,0,,,,,,
-paper,Table 1,Education: <High school,Hypertension %,17.13,2,,,,,,
-paper,Table 1,Education: High school,Non-hypertension N,2147,0,,,,,,
-paper,Table 1,Education: High school,Non-hypertension %,19.45,2,,,,,,
-paper,Table 1,Education: High school,Hypertension N,2669,0,,,,,,
-paper,Table 1,Education: High school,Hypertension %,25.11,2,,,,,,
-paper,Table 1,Education: >High school,Non-hypertension N,6252,0,,,,,,
-paper,Table 1,Education: >High school,Non-hypertension %,66.74,2,,,,,,
-paper,Table 1,Education: >High school,Hypertension N,5407,0,,,,,,
-paper,Table 1,Education: >High school,Hypertension %,57.66,2,,,,,,
-paper,Table 1,Education: Missing,Non-hypertension N,10,0,,,,,,
-paper,Table 1,Education: Missing,Non-hypertension %,0.01,2,,,,,,
-paper,Table 1,Education: Missing,Hypertension N,18,0,,,,,,
-paper,Table 1,Education: Missing,Hypertension %,0.11,2,,,,,,
-paper,Table 1,BMI,p-value,< 0.001,3,,,,,,
-paper,Table 1,BMI: < 18.5,Non-hypertension N,232,0,,,,,,
-paper,Table 1,BMI: < 18.5,Non-hypertension %,1.83,2,,,,,,
-paper,Table 1,BMI: < 18.5,Hypertension N,312,0,,,,,,
-paper,Table 1,BMI: < 18.5,Hypertension %,2.41,2,,,,,,
-paper,Table 1,BMI: 18.5 ~ 24.9,Non-hypertension N,3330,0,,,,,,
-paper,Table 1,BMI: 18.5 ~ 24.9,Non-hypertension %,31.28,2,,,,,,
-paper,Table 1,BMI: 18.5 ~ 24.9,Hypertension N,1949,0,,,,,,
-paper,Table 1,BMI: 18.5 ~ 24.9,Hypertension %,16.17,2,,,,,,
-paper,Table 1,BMI: 25 ~ 29.9,Non-hypertension N,3757,0,,,,,,
-paper,Table 1,BMI: 25 ~ 29.9,Non-hypertension %,35.15,2,,,,,,
-paper,Table 1,BMI: 25 ~ 29.9,Hypertension N,3450,0,,,,,,
-paper,Table 1,BMI: 25 ~ 29.9,Hypertension %,31.41,2,,,,,,
-paper,Table 1,BMI: ≥ 30,Non-hypertension N,3440,0,,,,,,
-paper,Table 1,BMI: ≥ 30,Non-hypertension %,31.51,2,,,,,,
-paper,Table 1,BMI: ≥ 30,Hypertension N,5286,0,,,,,,
-paper,Table 1,BMI: ≥ 30,Hypertension %,49.83,2,,,,,,
-paper,Table 1,BMI: Missing,Non-hypertension N,24,0,,,,,,
-paper,Table 1,BMI: Missing,Non-hypertension %,0.23,2,,,,,,
-paper,Table 1,BMI: Missing,Hypertension N,20,0,,,,,,
-paper,Table 1,BMI: Missing,Hypertension %,0.18,2,,,,,,
-paper,Table 1,Sleep duration,p-value,< 0.001,3,,,,,,
-paper,Table 1,Sleep duration: < 7,Non-hypertension N,7679,0,,,,,,
-paper,Table 1,Sleep duration: < 7,Non-hypertension %,68.23,2,,,,,,
-paper,Table 1,Sleep duration: < 7,Hypertension N,7672,0,,,,,,
-paper,Table 1,Sleep duration: < 7,Hypertension %,67.52,2,,,,,,
-paper,Table 1,Sleep duration: 7 ~ 9,Non-hypertension N,2737,0,,,,,,
-paper,Table 1,Sleep duration: 7 ~ 9,Non-hypertension %,28.93,2,,,,,,
-paper,Table 1,Sleep duration: 7 ~ 9,Hypertension N,2747,0,,,,,,
-paper,Table 1,Sleep duration: 7 ~ 9,Hypertension %,27.53,2,,,,,,
-paper,Table 1,Sleep duration: > 9,Non-hypertension N,367,0,,,,,,
-paper,Table 1,Sleep duration: > 9,Non-hypertension %,2.84,2,,,,,,
-paper,Table 1,Sleep duration: > 9,Hypertension N,598,0,,,,,,
-paper,Table 1,Sleep duration: > 9,Hypertension %,4.95,2,,,,,,
-paper,Table 1,Alcohol consumption,p-value,< 0.001,3,,,,,,
-paper,Table 1,Alcohol: No drinks,Non-hypertension N,337,0,,,,,,
-paper,Table 1,Alcohol: No drinks,Non-hypertension %,3.07,2,,,,,,
-paper,Table 1,Alcohol: No drinks,Hypertension N,615,0,,,,,,
-paper,Table 1,Alcohol: No drinks,Hypertension %,4.87,2,,,,,,
-paper,Table 1,Alcohol: ≤ 1 drink/week,Non-hypertension N,4745,0,,,,,,
-paper,Table 1,Alcohol: ≤ 1 drink/week,Non-hypertension %,45.21,2,,,,,,
-paper,Table 1,Alcohol: ≤ 1 drink/week,Hypertension N,4039,0,,,,,,
-paper,Table 1,Alcohol: ≤ 1 drink/week,Hypertension %,39.46,2,,,,,,
-paper,Table 1,Alcohol: > 1 drink/week,Non-hypertension N,2145,0,,,,,,
-paper,Table 1,Alcohol: > 1 drink/week,Non-hypertension %,25.24,2,,,,,,
-paper,Table 1,Alcohol: > 1 drink/week,Hypertension N,2072,0,,,,,,
-paper,Table 1,Alcohol: > 1 drink/week,Hypertension %,23.82,2,,,,,,
-paper,Table 1,Alcohol: Missing,Non-hypertension N,3556,0,,,,,,
-paper,Table 1,Alcohol: Missing,Non-hypertension %,26.48,2,,,,,,
-paper,Table 1,Alcohol: Missing,Hypertension N,4291,0,,,,,,
-paper,Table 1,Alcohol: Missing,Hypertension %,31.84,2,,,,,,
-paper,Table 1,Physical activity,p-value,< 0.001,3,,,,,,
-paper,Table 1,Physical activity: Inactive,Non-hypertension N,4390,0,,,,,,
-paper,Table 1,Physical activity: Inactive,Non-hypertension %,44.76,2,,,,,,
-paper,Table 1,Physical activity: Inactive,Hypertension N,3976,0,,,,,,
-paper,Table 1,Physical activity: Inactive,Hypertension %,41.37,2,,,,,,
-paper,Table 1,Physical activity: Active,Non-hypertension N,6384,0,,,,,,
-paper,Table 1,Physical activity: Active,Non-hypertension %,55.20,2,,,,,,
-paper,Table 1,Physical activity: Active,Hypertension N,7037,0,,,,,,
-paper,Table 1,Physical activity: Active,Hypertension %,58.62,2,,,,,,
-paper,Table 1,Physical activity: Missing,Non-hypertension N,9,0,,,,,,
-paper,Table 1,Physical activity: Missing,Non-hypertension %,0.05,2,,,,,,
-paper,Table 1,Physical activity: Missing,Hypertension N,4,0,,,,,,
-paper,Table 1,Physical activity: Missing,Hypertension %,0.01,2,,,,,,
-paper,Table 1,Total cholesterol mg/dl,Non-hypertension mean,197.71,2,,,,,,
-paper,Table 1,Total cholesterol mg/dl,Non-hypertension SE,0.67,2,,,,,,
-paper,Table 1,Total cholesterol mg/dl,Hypertension mean,195.03,2,,,,,,
-paper,Table 1,Total cholesterol mg/dl,Hypertension SE,0.80,2,,,,,,
-paper,Table 1,Total cholesterol mg/dl,p-value,< 0.001,3,,,,,,
-paper,Table 1,Triglyceride mg/dl,Non-hypertension mean,146.27,2,,,,,,
-paper,Table 1,Triglyceride mg/dl,Non-hypertension SE,1.85,2,,,,,,
-paper,Table 1,Triglyceride mg/dl,Hypertension mean,172.62,2,,,,,,
-paper,Table 1,Triglyceride mg/dl,Hypertension SE,1.90,2,,,,,,
-paper,Table 1,Triglyceride mg/dl,p-value,< 0.001,3,,,,,,
-paper,Table 1,Creatinine mg/dl,Non-hypertension mean,0.85,2,,,,,,
-paper,Table 1,Creatinine mg/dl,Non-hypertension SE,0.00,2,,,,,,
-paper,Table 1,Creatinine mg/dl,Hypertension mean,0.95,2,,,,,,
-paper,Table 1,Creatinine mg/dl,Hypertension SE,0.01,2,,,,,,
-paper,Table 1,Creatinine mg/dl,p-value,< 0.001,3,,,,,,
-paper,Table 1,HDL mg/dl,Non-hypertension mean,55.11,2,,,,,,
-paper,Table 1,HDL mg/dl,Non-hypertension SE,0.31,2,,,,,,
-paper,Table 1,HDL mg/dl,Hypertension mean,52.64,2,,,,,,
-paper,Table 1,HDL mg/dl,Hypertension SE,0.29,2,,,,,,
-paper,Table 1,HDL mg/dl,p-value,< 0.001,3,,,,,,
-paper,Table 1,HbA1c (unit printed as mg/dl),Non-hypertension mean,5.55,2,,,,,,
-paper,Table 1,HbA1c (unit printed as mg/dl),Non-hypertension SE,0.01,2,,,,,,
-paper,Table 1,HbA1c (unit printed as mg/dl),Hypertension mean,5.98,2,,,,,,
-paper,Table 1,HbA1c (unit printed as mg/dl),Hypertension SE,0.01,2,,,,,,
-paper,Table 1,HbA1c (unit printed as mg/dl),p-value,< 0.001,3,,,,,,
-paper,Table 1,Sodium mg,Non-hypertension mean,3575.03,2,,,,,,
-paper,Table 1,Sodium mg,Non-hypertension SE,25.86,2,,,,,,
-paper,Table 1,Sodium mg,Hypertension mean,3476.48,2,,,,,,
-paper,Table 1,Sodium mg,Hypertension SE,25.77,2,,,,,,
-paper,Table 1,Sodium mg,p-value,< 0.001,3,,,,,,
-paper,Table 1 (continued),Fat g,Non-hypertension mean,85.55,2,,,,,,
-paper,Table 1 (continued),Fat g,Non-hypertension SE,0.66,2,,,,,,
-paper,Table 1 (continued),Fat g,Hypertension mean,81.87,2,,,,,,
-paper,Table 1 (continued),Fat g,Hypertension SE,0.63,2,,,,,,
-paper,Table 1 (continued),Fat g,p-value,< 0.001,3,,,,,,
-paper,Table 1 (continued),History of CVD,p-value,< 0.001,3,,,,,,
-paper,Table 1 (continued),History of CVD: Yes,Non-hypertension N,537,0,,,,,,
-paper,Table 1 (continued),History of CVD: Yes,Non-hypertension %,4.31,2,,,,,,
-paper,Table 1 (continued),History of CVD: Yes,Hypertension N,2257,0,,,,,,
-paper,Table 1 (continued),History of CVD: Yes,Hypertension %,17.90,2,,,,,,
-paper,Table 1 (continued),History of CVD: No,Non-hypertension N,"10,218",0,,,,,,
-paper,Table 1 (continued),History of CVD: No,Non-hypertension %,95.53,2,,,,,,
-paper,Table 1 (continued),History of CVD: No,Hypertension N,8681,0,,,,,,
-paper,Table 1 (continued),History of CVD: No,Hypertension %,81.54,2,,,,,,
-paper,Table 1 (continued),History of CVD: Missing,Non-hypertension N,28,0,,,,,,
-paper,Table 1 (continued),History of CVD: Missing,Non-hypertension %,0.16,2,,,,,,
-paper,Table 1 (continued),History of CVD: Missing,Hypertension N,79,0,,,,,,
-paper,Table 1 (continued),History of CVD: Missing,Hypertension %,0.55,2,,,,,,
-paper,Table 1 (continued),Diabetes,p-value,< 0.001,3,,,,,,
-paper,Table 1 (continued),Diabetes: Yes,Non-hypertension N,874,0,,,,,,
-paper,Table 1 (continued),Diabetes: Yes,Non-hypertension %,5.79,2,,,,,,
-paper,Table 1 (continued),Diabetes: Yes,Hypertension N,2872,0,,,,,,
-paper,Table 1 (continued),Diabetes: Yes,Hypertension %,21.86,2,,,,,,
-paper,Table 1 (continued),Diabetes: No (as printed; likely mislabeled),Non-hypertension N,732,0,,,,,,
-paper,Table 1 (continued),Diabetes: No (as printed; likely mislabeled),Non-hypertension %,6.93,2,,,,,,
-paper,Table 1 (continued),Diabetes: No (as printed; likely mislabeled),Hypertension N,"1232",0,,,,,,
-paper,Table 1 (continued),Diabetes: No (as printed; likely mislabeled),Hypertension %,12.00,2,,,,,,
-paper,Table 1 (continued),Diabetes: Missing (as printed; likely mislabeled),Non-hypertension N,9177,0,,,,,,
-paper,Table 1 (continued),Diabetes: Missing (as printed; likely mislabeled),Non-hypertension %,87.28,2,,,,,,
-paper,Table 1 (continued),Diabetes: Missing (as printed; likely mislabeled),Hypertension N,6913,0,,,,,,
-paper,Table 1 (continued),Diabetes: Missing (as printed; likely mislabeled),Hypertension %,66.14,2,,,,,,
-paper,Table 2,Overall Oral health: Excellent/Very good,Cases/total,3185/6769,0,,,,,,
-paper,Table 2,Overall Oral health: Excellent/Very good,Model 1,1.00,2,,,,,,
-paper,Table 2,Overall Oral health: Excellent/Very good,Model 2,1.00,2,,,,,,
-paper,Table 2,Overall Oral health: Excellent/Very good,Model 3,1.00,2,,,,,,
-paper,Table 2,Overall Oral health: Good,Cases/total,3757/7536,0,,,,,,
-paper,Table 2,Overall Oral health: Good,Model 1,1.23(1.12–1.35),2,,,,,,
-paper,Table 2,Overall Oral health: Good,Model 2,1.14(1.03–1.26),2,,,,,,
-paper,Table 2,Overall Oral health: Good,Model 3,1.13(1.02–1.27),2,,,,,,
-paper,Table 2,Overall Oral health: Fair,Cases/total,2620/4994,0,,,,,,
-paper,Table 2,Overall Oral health: Fair,Model 1,1.48(1.32–1.65),2,,,,,,
-paper,Table 2,Overall Oral health: Fair,Model 2,1.32(1.17–1.49),2,,,,,,
-paper,Table 2,Overall Oral health: Fair,Model 3,1.30(1.15–1.47),2,,,,,,
-paper,Table 2,Overall Oral health: Poor,Cases/total,1455/2501,0,,,,,,
-paper,Table 2,Overall Oral health: Poor,Model 1,1.84(1.58–2.15),2,,,,,,
-paper,Table 2,Overall Oral health: Poor,Model 2,1.49(1.24–1.79),2,,,,,,
-paper,Table 2,Overall Oral health: Poor,Model 3,1.48(1.22–1.79),2,,,,,,
-paper,Table 2,Overall Oral health: P-trend,Model 1,< 0.001,3,,,,,,
-paper,Table 2,Overall Oral health: P-trend,Model 2,< 0.001,3,,,,,,
-paper,Table 2,Overall Oral health: P-trend,Model 3,< 0.001,3,,,,,,
-paper,Table 2,Non-Smoking Oral health: Excellent/Very good,Cases/total,1801/4151,0,,,,,,
-paper,Table 2,Non-Smoking Oral health: Excellent/Very good,Model 1,1.00,2,,,,,,
-paper,Table 2,Non-Smoking Oral health: Excellent/Very good,Model 2,1.00,2,,,,,,
-paper,Table 2,Non-Smoking Oral health: Excellent/Very good,Model 3,1.00,2,,,,,,
-paper,Table 2,Non-Smoking Oral health: Good,Cases/total,2004/4320,0,,,,,,
-paper,Table 2,Non-Smoking Oral health: Good,Model 1,1.19(1.03–1.38),2,,,,,,
-paper,Table 2,Non-Smoking Oral health: Good,Model 2,1.12(0.99–1.27),2,,,,,,
-paper,Table 2,Non-Smoking Oral health: Good,Model 3,1.12(0.98–1.27),2,,,,,,
-paper,Table 2,Non-Smoking Oral health: Fair,Cases/total,1293/2529,0,,,,,,
-paper,Table 2,Non-Smoking Oral health: Fair,Model 1,1.20(1.02–1.42),2,,,,,,
-paper,Table 2,Non-Smoking Oral health: Fair,Model 2,1.51(1.27–1.79),2,,,,,,
-paper,Table 2,Non-Smoking Oral health: Fair,Model 3,1.49(1.26–1.77),2,,,,,,
-paper,Table 2,Non-Smoking Oral health: Poor,Cases/total,521/882,0,,,,,,
-paper,Table 2,Non-Smoking Oral health: Poor,Model 1,1.49(1.22–1.82),2,,,,,,
-paper,Table 2,Non-Smoking Oral health: Poor,Model 2,1.67(1.29–2.16),2,,,,,,
-paper,Table 2,Non-Smoking Oral health: Poor,Model 3,1.62(1.24–2.12),2,,,,,,
-paper,Table 2,Non-Smoking Oral health: P-trend,Model 1,< 0.001,3,,,,,,
-paper,Table 2,Non-Smoking Oral health: P-trend,Model 2,< 0.001,3,,,,,,
-paper,Table 2,Non-Smoking Oral health: P-trend,Model 3,0.032,3,,,,,,
-paper,Table 2,Smoking Oral health: Excellent/Very good,Cases/total,1384/2618,0,,,,,,
-paper,Table 2,Smoking Oral health: Excellent/Very good,Model 1,1.00,2,,,,,,
-paper,Table 2,Smoking Oral health: Excellent/Very good,Model 2,1.00,2,,,,,,
-paper,Table 2,Smoking Oral health: Excellent/Very good,Model 3,1.00,2,,,,,,
-paper,Table 2,Smoking Oral health: Good,Cases/total,1753/3216,0,,,,,,
-paper,Table 2,Smoking Oral health: Good,Model 1,1.22(1.07–1.38),2,,,,,,
-paper,Table 2,Smoking Oral health: Good,Model 2,1.12(0.96–1.31),2,,,,,,
-paper,Table 2,Smoking Oral health: Good,Model 3,1.13(0.96–1.33),2,,,,,,
-paper,Table 2,Smoking Oral health: Fair,Cases/total,1327/2465,0,,,,,,
-paper,Table 2,Smoking Oral health: Fair,Model 1,1.73(1.49–2.02),2,,,,,,
-paper,Table 2,Smoking Oral health: Fair,Model 2,1.11(0.94–1.30),2,,,,,,
-paper,Table 2,Smoking Oral health: Fair,Model 3,1.11(0.93–1.32),2,,,,,,
-paper,Table 2,Smoking Oral health: Poor,Cases/total,934/1619,0,,,,,,
-paper,Table 2,Smoking Oral health: Poor,Model 1,2.33(1.88–2.89),2,,,,,,
-paper,Table 2,Smoking Oral health: Poor,Model 2,1.29(1.02–1.63),2,,,,,,
-paper,Table 2,Smoking Oral health: Poor,Model 3,1.31(1.03–1.67),2,,,,,,
-paper,Table 2,Smoking Oral health: P-trend,Model 1,< 0.001,3,,,,,,
-paper,Table 2,Smoking Oral health: P-trend,Model 2,0.03,2,,,,,,
-paper,Table 2,Smoking Oral health: P-trend,Model 3,0.013,3,,,,,,
-paper,Table 2,Oral health x smoking,P-interation (spelled as printed),< 0.001,3,,,,,,
-paper,Table 2,Overall Periodontal disease: No,Cases/total,"8839/17,717",0,,,,,,
-paper,Table 2,Overall Periodontal disease: No,Model 1,1.00,2,,,,,,
-paper,Table 2,Overall Periodontal disease: No,Model 2,1.00,2,,,,,,
-paper,Table 2,Overall Periodontal disease: No,Model 3,1.00,2,,,,,,
-paper,Table 2,Overall Periodontal disease: Yes,Cases/total,2178/4083,0,,,,,,
-paper,Table 2,Overall Periodontal disease: Yes,Model 1,1.35(1.22–1.49),2,,,,,,
-paper,Table 2,Overall Periodontal disease: Yes,Model 2,1.20(1.08–1.34),2,,,,,,
-paper,Table 2,Overall Periodontal disease: Yes,Model 3,1.21(1.09–1.35),2,,,,,,
-paper,Table 2,Overall Periodontal disease: P-trend,Model 1,< 0.001,3,,,,,,
-paper,Table 2,Overall Periodontal disease: P-trend,Model 2,< 0.001,3,,,,,,
-paper,Table 2,Overall Periodontal disease: P-trend,Model 3,< 0.001,3,,,,,,
-paper,Table 2,Non-Smoking Periodontal disease: No,Cases/total,"4664/10,018",0,,,,,,
-paper,Table 2,Non-Smoking Periodontal disease: No,Model 1,1.00,2,,,,,,
-paper,Table 2,Non-Smoking Periodontal disease: No,Model 2,1.00,2,,,,,,
-paper,Table 2,Non-Smoking Periodontal disease: No,Model 3,1.00,2,,,,,,
-paper,Table 2,Non-Smoking Periodontal disease: Yes,Cases/total,955/1864,0,,,,,,
-paper,Table 2,Non-Smoking Periodontal disease: Yes,Model 1,1.41(1.20–1.66),2,,,,,,
-paper,Table 2,Non-Smoking Periodontal disease: Yes,Model 2,1.19(0.99–1.44),2,,,,,,
-paper,Table 2,Non-Smoking Periodontal disease: Yes,Model 3,1.22(1.01–1.47),2,,,,,,
-paper,Table 2,Non-Smoking Periodontal disease: P-trend,Model 1,< 0.001,3,,,,,,
-paper,Table 2,Non-Smoking Periodontal disease: P-trend,Model 2,0.066,3,,,,,,
-paper,Table 2,Non-Smoking Periodontal disease: P-trend,Model 3,0.041,3,,,,,,
-paper,Table 2,Smoking Periodontal disease: No,Cases/total,4175/7699,0,,,,,,
-paper,Table 2,Smoking Periodontal disease: No,Model 1,1.00,2,,,,,,
-paper,Table 2,Smoking Periodontal disease: No,Model 2,1.00,2,,,,,,
-paper,Table 2,Smoking Periodontal disease: No,Model 3,1.00,2,,,,,,
-paper,Table 2,Smoking Periodontal disease: Yes,Cases/total,1223/2219,0,,,,,,
-paper,Table 2,Smoking Periodontal disease: Yes,Model 1,1.24(1.06–1.44),2,,,,,,
-paper,Table 2,Smoking Periodontal disease: Yes,Model 2,1.14(0.98–1.34),2,,,,,,
-paper,Table 2,Smoking Periodontal disease: Yes,Model 3,1.16(0.98–1.37),2,,,,,,
-paper,Table 2,Smoking Periodontal disease: P-trend,Model 1,0.006,3,,,,,,
-paper,Table 2,Smoking Periodontal disease: P-trend,Model 2,0.097,3,,,,,,
-paper,Table 2,Smoking Periodontal disease: P-trend,Model 3,0.080,3,,,,,,
-paper,Table 2,Periodontal disease x smoking,P-interation (spelled as printed),< 0.001,3,,,,,,
-paper,Table 3,Oral health Age < 45: Excellent/Very good,Cases/total,415/2053,0,,,,,,
-paper,Table 3,Oral health Age < 45: Excellent/Very good,Model 1,1.00,2,,,,,,
-paper,Table 3,Oral health Age < 45: Excellent/Very good,Model 2,1.00,2,,,,,,
-paper,Table 3,Oral health Age < 45: Excellent/Very good,Model 3,1.00,2,,,,,,
-paper,Table 3,Oral health Age < 45: Good,Cases/total,552/2298,0,,,,,,
-paper,Table 3,Oral health Age < 45: Good,Model 1,1.23(1.04–1.46),2,,,,,,
-paper,Table 3,Oral health Age < 45: Good,Model 2,1.12(0.94–1.34),2,,,,,,
-paper,Table 3,Oral health Age < 45: Good,Model 3,1.11(0.93–1.33),2,,,,,,
-paper,Table 3,Oral health Age < 45: Fair,Cases/total,438/1598,0,,,,,,
-paper,Table 3,Oral health Age < 45: Fair,Model 1,1.50(1.25–1.80),2,,,,,,
-paper,Table 3,Oral health Age < 45: Fair,Model 2,1.32(1.11–1.58),2,,,,,,
-paper,Table 3,Oral health Age < 45: Fair,Model 3,1.27(1.05–1.53),2,,,,,,
-paper,Table 3,Oral health Age < 45: Poor,Cases/total,218/640,0,,,,,,
-paper,Table 3,Oral health Age < 45: Poor,Model 1,2.14(1.60–2.86),2,,,,,,
-paper,Table 3,Oral health Age < 45: Poor,Model 2,1.81(1.35–2.41),2,,,,,,
-paper,Table 3,Oral health Age < 45: Poor,Model 3,1.71(1.29–2.28),2,,,,,,
-paper,Table 3,Oral health Age < 45: P-trend,Model 1,< 0.001,3,,,,,,
-paper,Table 3,Oral health Age < 45: P-trend,Model 2,< 0.001,3,,,,,,
-paper,Table 3,Oral health Age < 45: P-trend,Model 3,< 0.001,3,,,,,,
-paper,Table 3,Oral health Age > = 45: Excellent/Very good,Cases/total,2770/4716,0,,,,,,
-paper,Table 3,Oral health Age > = 45: Excellent/Very good,Model 1,1.00,2,,,,,,
-paper,Table 3,Oral health Age > = 45: Excellent/Very good,Model 2,1.00,2,,,,,,
-paper,Table 3,Oral health Age > = 45: Excellent/Very good,Model 3,1.00,2,,,,,,
-paper,Table 3,Oral health Age > = 45: Good,Cases/total,3205/5238,0,,,,,,
-paper,Table 3,Oral health Age > = 45: Good,Model 1,1.16(1.05–1.29),2,,,,,,
-paper,Table 3,Oral health Age > = 45: Good,Model 2,1.11(0.99–1.24),2,,,,,,
-paper,Table 3,Oral health Age > = 45: Good,Model 3,1.10(0.98–1.24),2,,,,,,
-paper,Table 3,Oral health Age > = 45: Fair,Cases/total,2182/3396,0,,,,,,
-paper,Table 3,Oral health Age > = 45: Fair,Model 1,1.33(1.15–1.53),2,,,,,,
-paper,Table 3,Oral health Age > = 45: Fair,Model 2,1.26(1.08–1.45),2,,,,,,
-paper,Table 3,Oral health Age > = 45: Fair,Model 3,1.25(1.07–1.46),2,,,,,,
-paper,Table 3,Oral health Age > = 45: Poor,Cases/total,1237/1861,0,,,,,,
-paper,Table 3,Oral health Age > = 45: Poor,Model 1,1.45(1.25–1.68),2,,,,,,
-paper,Table 3,Oral health Age > = 45: Poor,Model 2,1.31(1.11–1.54),2,,,,,,
-paper,Table 3,Oral health Age > = 45: Poor,Model 3,1.29(1.07–1.55),2,,,,,,
-paper,Table 3,Oral health Age > = 45: P-trend,Model 1,< 0.001,3,,,,,,
-paper,Table 3,Oral health Age > = 45: P-trend,Model 2,< 0.001,3,,,,,,
-paper,Table 3,Oral health Age > = 45: P-trend,Model 3,0.001,3,,,,,,
-paper,Table 3,Oral health x age,P-interation (spelled as printed),<0.001,3,,,,,,
-paper,Table 3,Periodontal disease Age < 45: No,Cases/total,1243/5381,0,,,,,,
-paper,Table 3,Periodontal disease Age < 45: No,Model 1,1.00,2,,,,,,
-paper,Table 3,Periodontal disease Age < 45: No,Model 2,1.00,2,,,,,,
-paper,Table 3,Periodontal disease Age < 45: No,Model 3,1.00,2,,,,,,
-paper,Table 3,Periodontal disease Age < 45: Yes,Cases/total,380/1208,0,,,,,,
-paper,Table 3,Periodontal disease Age < 45: Yes,Model 1,1.71(1.43–2.04),2,,,,,,
-paper,Table 3,Periodontal disease Age < 45: Yes,Model 2,1.52(1.29–1.81),2,,,,,,
-paper,Table 3,Periodontal disease Age < 45: Yes,Model 3,1.51(1.27–1.79),2,,,,,,
-paper,Table 3,Periodontal disease Age < 45: P-trend,Model 1,< 0.001,3,,,,,,
-paper,Table 3,Periodontal disease Age < 45: P-trend,Model 2,< 0.001,3,,,,,,
-paper,Table 3,Periodontal disease Age < 45: P-trend,Model 3,< 0.001,3,,,,,,
-paper,Table 3,Periodontal disease Age > = 45: No,Cases/total,"7596/12,336",0,,,,,,
-paper,Table 3,Periodontal disease Age > = 45: No,Model 1,1.00,2,,,,,,
-paper,Table 3,Periodontal disease Age > = 45: No,Model 2,1.00,2,,,,,,
-paper,Table 3,Periodontal disease Age > = 45: No,Model 3,1.00,2,,,,,,
-paper,Table 3,Periodontal disease Age > = 45: Yes,Cases/total,1798/2875,0,,,,,,
-paper,Table 3,Periodontal disease Age > = 45: Yes,Model 1,1.08(0.96–1.21),2,,,,,,
-paper,Table 3,Periodontal disease Age > = 45: Yes,Model 2,1.05(0.93–1.18),2,,,,,,
-paper,Table 3,Periodontal disease Age > = 45: Yes,Model 3,1.05(0.92–1.20),2,,,,,,
-paper,Table 3,Periodontal disease Age > = 45: P-trend,Model 1,0.21,2,,,,,,
-paper,Table 3,Periodontal disease Age > = 45: P-trend,Model 2,0.444,3,,,,,,
-paper,Table 3,Periodontal disease Age > = 45: P-trend,Model 3,0.444,3,,,,,,
-paper,Table 3,Periodontal disease x age,P-interation (spelled as printed),<0.001,3,,,,,,
-paper,Abstract,Participants,N analysed,"21,800",0,,,,,,
-paper,Abstract,Participants,Age restriction,≧ 30 years,0,,,,,,
-paper,Abstract,Hypertensive group,N (%),"11,017 (50.54%)",2,,,,,,
-paper,Abstract,Non-hypertensive group,N (%),"10,783 (49.46%)",2,,,,,,
-paper,Abstract,Oral health Good vs Excellent/very good,OR (95% CI),1.13 (95% CI, 1.02–1.27),2,,,,,,
-paper,Abstract,Oral health Fair vs Excellent/very good,OR (95% CI),1.30 (95% CI, 1.15–1.47),2,,,,,,
-paper,Abstract,Oral health Poor vs Excellent/very good,OR (95% CI),1.48 (95% CI, 1.22–1.79),2,,,,,,
-paper,Abstract,Oral health,p for trend,< 0.001,3,,,,,,
-paper,Abstract,Periodontal disease vs none,OR (95% CI),1.21 (95% CI ,1.09–1.35),2,,,,,,
-paper,Abstract,Periodontal disease,p for trend,< 0.001,3,,,,,,
-paper,Abstract,Interaction periodontal disease x smoking,p,< 0.001,3,,,,,,
-paper,Abstract,Interaction oral health x smoking,p,< 0.001,3,,,,,,
-paper,Abstract,Interaction periodontal disease x age,p,< 0.001,3,,,,,,
-paper,Abstract,Interaction oral health x age,p,< 0.001,3,,,,,,
-paper,text p.2,Exclusion: no blood pressure,n,"19,398",0,,,,,,
-paper,text p.2,Exclusion: missing smoking/oral health/periodontal disease,n,"1,090",0,,,,,,
-paper,text p.2,Final sample,N,"21,800",0,,,,,,
-paper,text p.3,Results Table 1 description,Total participants,"21,800",0,,,,,,
-paper,text p.3,Results Table 1 description,Male %,48.40%,2,,,,,,
-paper,text p.3,Results Table 1 description,Female %,51.60%,2,,,,,,
-paper,text p.3,Results Table 1 description,Hypertension N (%),"11,017 (50.54%)",2,,,,,,
-paper,text p.3,Results Table 1 description,Non-hypertension N (%),"10,783 (49.46%)",2,,,,,,
-paper,text p.3,Overall oral health Good,OR (95% CI),1.13 (95% CI, 1.02–1.27),2,,,,,,
-paper,text p.3,Overall oral health Fair,OR (95% CI),1.30 (95% CI, 1.15–1.47),2,,,,,,
-paper,text p.3,Overall oral health Poor,OR (95% CI),1.48 (95% CI, 1.22–1.79),2,,,,,,
-paper,text p.3-5,Overall oral health,p for trend,< 0.001,3,,,,,,
-paper,text p.5,Overall periodontal disease,OR (95% CI),1.21 (95% CI ,1.09–1.35),2,,,,,,
-paper,text p.5,Overall periodontal disease,p for trend,< 0.001,3,,,,,,
-paper,text p.5,Smoking group oral health Good,OR (95% CI),1.13 (95% CI, 0.96–1.33),2,,,,,,
-paper,text p.5,Smoking group oral health Fair,OR (95% CI),1.11 (95% CI, 0.93–1.32),2,,,,,,
-paper,text p.5,Smoking group oral health Poor,OR (95% CI),1.31 (95% CI, 1.03–1.67),2,,,,,,
-paper,text p.5,Smoking group oral health,p for trend,= 0.013,3,,,,,,
-paper,text p.5,Smoking group periodontal disease,OR (95% CI),1.16 (95% CI, 0.98–1.37),2,,,,,,
-paper,text p.5,Smoking group periodontal disease,p for trend,= 0.080,3,,,,,,
-paper,text p.5,Non-smoking group oral health Good,OR (95% CI),1.12 (95% CI, 0.98–1.27),2,,,,,,
-paper,text p.5,Non-smoking group oral health Fair,OR (95% CI),1.49 (95% CI, 1.26–1.77),2,,,,,,
-paper,text p.5,Non-smoking group oral health Poor,OR (95% CI),1.62 (95% CI, 1.24–2.12),2,,,,,,
-paper,text p.5,Non-smoking group oral health,p for trend,= 0.032,3,,,,,,
-paper,text p.5,Non-smoking group periodontal disease,OR (95% CI),1.22 (95% CI, 1.01–1.47),2,,,,,,
-paper,text p.5,Non-smoking group periodontal disease,p for trend,= 0.041,3,,,,,,
-paper,text p.5,Interaction periodontal disease x smoking,p,< 0.001,3,,,,,,
-paper,text p.5,Interaction oral health x smoking,p,< 0.001,3,,,,,,
-paper,text p.5,Age < 45 oral health Good,OR (95% CI),1.11 (95% CI, 0.93–1.33),2,,,,,,
-paper,text p.5,Age < 45 oral health Fair,OR (95% CI),1.27 (95% CI, 1.05–1.53),2,,,,,,
-paper,text p.5,Age < 45 oral health Poor,OR (95% CI),1.71 (95% CI, 1.29–2.28),2,,,,,,
-paper,text p.5,Age < 45 oral health,p for trend,< 0.001,3,,,,,,
-paper,text p.5,Age < 45 periodontal disease,OR (95% CI),1.51 (95% CI, 1.27–1.79),2,,,,,,
-paper,text p.5,Age < 45 periodontal disease,p for trend,< 0.001,3,,,,,,
-paper,text p.5,Age > 45 (text says older than 45) oral health Good,OR (95% CI),1.10 (95% CI, 0.98–1.24),2,,,,,,
-paper,text p.5,Age > 45 (text says older than 45) oral health Fair,OR (95% CI),1.25 (95% CI, 1.07–1.46),2,,,,,,
-paper,text p.5,Age > 45 (text says older than 45) oral health Poor,OR (95% CI),1.29 (95% CI, 1.07–1.55),2,,,,,,
-paper,text p.5,Age > 45 (text says older than 45) oral health,p for trend,= 0.001,3,,,,,,
-paper,text p.5,Age > 45 (text says older than 45) periodontal disease,OR (95% CI),1.05 (95% CI, 0.92–1.20),2,,,,,,
-paper,text p.5,Age > 45 (text says older than 45) periodontal disease,p for trend,= 0.444,3,,,,,,
-paper,text p.5,Interaction oral health x age,p,< 0.001,3,,,,,,
-paper,text p.5,Interaction periodontal disease x age,p,< 0.001,3,,,,,,
+"source","table","row","col","target","digits_shown","ours","abs_diff","tolerance","status","cause","evidence"
+"paper","Table 1","No. of participants","Non-hypertension N","10,783","0","10769","14","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | "
+"paper","Table 1","No. of participants","Non-hypertension %","49.46","2","50.18641066","0.7264106627","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | "
+"paper","Table 1","No. of participants","Hypertension N","11,017","0","10689","328","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | "
+"paper","Table 1","No. of participants","Hypertension %","50.54","2","49.81358934","0.7264106627","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | "
+"paper","Table 1","Age y","Non-hypertension mean","47.95","2","47.89765103","0.05234896893","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | "
+"paper","Table 1","Age y","Non-hypertension SE","0.24","2","0.2334827221","0.006517277855","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | "
+"paper","Table 1","Age y","Hypertension mean","59.04","2","59.11750008","0.07750007578","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | "
+"paper","Table 1","Age y","Hypertension SE","0.21","2","0.206849619","0.003150381005","0.005","match","",""
+"paper","Table 1","Age y","p-value","< 0.001","3","2.910445781e-56","","","match","","svyttest, MEC weight"
+"paper","Table 1","Sex","p-value","0.015","3","0.004941125944","0.01005887406","5e-04","open","","ours = rao_scott_1 (SAS default); naive_weighted p=0; rao_scott_1 p=0.00494; rao_scott_2 p=0.00625; unweighted p=0.00877"
+"paper","Table 1","Sex: Male","Non-hypertension N","5140","0","5137","3","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Sex Male"
+"paper","Table 1","Sex: Male","Non-hypertension %","46.74","2","46.80735999","0.06735998903","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Sex Male"
+"paper","Table 1","Sex: Male","Hypertension N","5412","0","5290","122","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Sex Male"
+"paper","Table 1","Sex: Male","Hypertension %","48.93","2","49.23123719","0.3012371932","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Sex Male"
+"paper","Table 1","Sex: Female","Non-hypertension N","5643","0","5632","11","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Sex Female"
+"paper","Table 1","Sex: Female","Non-hypertension %","53.26","2","53.19264001","0.06735998903","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Sex Female"
+"paper","Table 1","Sex: Female","Hypertension N","5606","0","5399","207","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Sex Female"
+"paper","Table 1","Sex: Female","Hypertension %","51.07","2","50.76876281","0.3012371932","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Sex Female"
+"paper","Table 1","Race/ethnicity","p-value","< 0.001","3","1.663509099e-42","","","match","","ours = rao_scott_1 (SAS default); naive_weighted p=0; rao_scott_1 p=1.66e-42; rao_scott_2 p=6.85e-31; unweighted p=1.99e-102"
+"paper","Table 1","Race: Mexican American","Non-hypertension N","1753","0","1750","3","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Race Mexican American"
+"paper","Table 1","Race: Mexican American","Non-hypertension %","9.21","2","9.217633581","0.007633581105","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Race Mexican American"
+"paper","Table 1","Race: Mexican American","Hypertension N","1283","0","1254","29","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Race Mexican American"
+"paper","Table 1","Race: Mexican American","Hypertension %","5.90","2","5.902742999","0.002742998872","0.005","match","","R/20: Race Mexican American"
+"paper","Table 1","Race: Other Hispanic","Non-hypertension N","1193","0","1190","3","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Race Other Hispanic"
+"paper","Table 1","Race: Other Hispanic","Non-hypertension %","6.14","2","6.143857489","0.003857489283","0.005","match","","R/20: Race Other Hispanic"
+"paper","Table 1","Race: Other Hispanic","Hypertension N","1060","0","1034","26","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Race Other Hispanic"
+"paper","Table 1","Race: Other Hispanic","Hypertension %","4.90","2","4.882847761","0.01715223912","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Race Other Hispanic"
+"paper","Table 1","Race: Non-Hispanic White","Non-hypertension N","4363","0","4366","3","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Race Non-Hispanic White"
+"paper","Table 1","Race: Non-Hispanic White","Non-hypertension %","67.38","2","67.45491264","0.07491264076","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Race Non-Hispanic White"
+"paper","Table 1","Race: Non-Hispanic White","Hypertension N","4469","0","4339","130","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Race Non-Hispanic White"
+"paper","Table 1","Race: Non-Hispanic White","Hypertension %","68.23","2","68.36455857","0.1345585715","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Race Non-Hispanic White"
+"paper","Table 1","Race: Non-Hispanic Black","Non-hypertension N","1742","0","1732","10","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Race Non-Hispanic Black"
+"paper","Table 1","Race: Non-Hispanic Black","Non-hypertension %","8.35","2","8.299721752","0.05027824757","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Race Non-Hispanic Black"
+"paper","Table 1","Race: Non-Hispanic Black","Hypertension N","2964","0","2877","87","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Race Non-Hispanic Black"
+"paper","Table 1","Race: Non-Hispanic Black","Hypertension %","13.68","2","13.66997211","0.01002789413","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Race Non-Hispanic Black"
+"paper","Table 1","Race: Other Race-Including Multi-Racial","Non-hypertension N","1732","0","1731","1","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Race Other/Multi-racial"
+"paper","Table 1","Race: Other Race-Including Multi-Racial","Non-hypertension %","8.91","2","8.883874536","0.02612546358","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Race Other/Multi-racial"
+"paper","Table 1","Race: Other Race-Including Multi-Racial","Hypertension N","1241","0","1185","56","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Race Other/Multi-racial"
+"paper","Table 1","Race: Other Race-Including Multi-Racial","Hypertension %","7.29","2","7.179878563","0.1101214371","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Race Other/Multi-racial"
+"paper","Table 1","Smoking","p-value","< 0.001","3","2.489238206e-17","","","match","","ours = rao_scott_1 (SAS default); naive_weighted p=0; rao_scott_1 p=2.49e-17; rao_scott_2 p=1.16e-12; unweighted p=5.24e-25"
+"paper","Table 1","Smoking: Yes","Non-hypertension N","4520","0","4522","2","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Smoking Yes"
+"paper","Table 1","Smoking: Yes","Non-hypertension %","42.01","2","41.99469385","0.015306145","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Smoking Yes"
+"paper","Table 1","Smoking: Yes","Hypertension N","5398","0","5239","159","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Smoking Yes"
+"paper","Table 1","Smoking: Yes","Hypertension %","49.76","2","49.83507008","0.07507007825","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Smoking Yes"
+"paper","Table 1","Smoking: No","Non-hypertension N","6263","0","6247","16","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Smoking No"
+"paper","Table 1","Smoking: No","Non-hypertension %","57.99","2","58.00530615","0.015306145","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Smoking No"
+"paper","Table 1","Smoking: No","Hypertension N","5619","0","5450","169","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Smoking No"
+"paper","Table 1","Smoking: No","Hypertension %","50.24","2","50.16492992","0.07507007825","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Smoking No"
+"paper","Table 1","Periodontal disease","p-value","< 0.001","3","2.158936818e-07","","","match","","ours = rao_scott_1 (SAS default); naive_weighted p=0; rao_scott_1 p=2.16e-07; rao_scott_2 p=1.66e-06; unweighted p=0.000103"
+"paper","Table 1","Periodontal disease: Yes","Non-hypertension N","1905","0","1908","3","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Periodontal Yes"
+"paper","Table 1","Periodontal disease: Yes","Non-hypertension %","16.47","2","16.53804649","0.06804649371","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Periodontal Yes"
+"paper","Table 1","Periodontal disease: Yes","Hypertension N","2178","0","2115","63","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Periodontal Yes"
+"paper","Table 1","Periodontal disease: Yes","Hypertension %","19.92","2","19.9411921","0.02119210372","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Periodontal Yes"
+"paper","Table 1","Periodontal disease: No","Non-hypertension N","8878","0","8861","17","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Periodontal No"
+"paper","Table 1","Periodontal disease: No","Non-hypertension %","83.53","2","83.46195351","0.06804649371","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Periodontal No"
+"paper","Table 1","Periodontal disease: No","Hypertension N","8839","0","8574","265","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Periodontal No"
+"paper","Table 1","Periodontal disease: No","Hypertension %","80.08","2","80.0588079","0.02119210372","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Periodontal No"
+"paper","Table 1","Oral Health","p-value","< 0.001","3","1.068431532e-17","","","match","","ours = rao_scott_1 (SAS default); naive_weighted p=0; rao_scott_1 p=1.07e-17; rao_scott_2 p=7.35e-15; unweighted p=1.67e-21"
+"paper","Table 1","Oral Health: Excellent/Very good","Non-hypertension N","3584","0","3577","7","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Oral Excellent/Very good"
+"paper","Table 1","Oral Health: Excellent/Very good","Non-hypertension %","40.87","2","40.82591603","0.04408396865","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Oral Excellent/Very good"
+"paper","Table 1","Oral Health: Excellent/Very good","Hypertension N","3185","0","3096","89","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Oral Excellent/Very good"
+"paper","Table 1","Oral Health: Excellent/Very good","Hypertension %","34.83","2","35.0155578","0.1855577983","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Oral Excellent/Very good"
+"paper","Table 1","Oral Health: Good","Non-hypertension N","3779","0","3777","2","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Oral Good"
+"paper","Table 1","Oral Health: Good","Non-hypertension %","34.00","2","33.97360115","0.02639884536","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Oral Good"
+"paper","Table 1","Oral Health: Good","Hypertension N","3757","0","3637","120","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Oral Good"
+"paper","Table 1","Oral Health: Good","Hypertension %","34.00","2","33.89958406","0.1004159449","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Oral Good"
+"paper","Table 1","Oral Health: Fair","Non-hypertension N","2374","0","2374","0","0.5","match","","R/20: Oral Fair"
+"paper","Table 1","Oral Health: Fair","Non-hypertension %","17.53","2","17.58667195","0.05667195015","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Oral Fair"
+"paper","Table 1","Oral Health: Fair","Hypertension N","2620","0","2540","80","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Oral Fair"
+"paper","Table 1","Oral Health: Fair","Hypertension %","19.91","2","19.88102584","0.02897416367","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Oral Fair"
+"paper","Table 1","Oral Health: Poor","Non-hypertension N","1046","0","1041","5","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Oral Poor"
+"paper","Table 1","Oral Health: Poor","Non-hypertension %","7.60","2","7.613810864","0.01381086386","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Oral Poor"
+"paper","Table 1","Oral Health: Poor","Hypertension N","1455","0","1416","39","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Oral Poor"
+"paper","Table 1","Oral Health: Poor","Hypertension %","11.27","2","11.20383231","0.06616768968","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Oral Poor"
+"paper","Table 1","Education","p-value","< 0.001","3","1.13860714e-28","","","match","","ours = rao_scott_1 (SAS default); naive_weighted p=0; rao_scott_1 p=1.14e-28; rao_scott_2 p=3.06e-18; unweighted p=1.18e-35"
+"paper","Table 1","Education: <High school","Non-hypertension N","2374","0","2373","1","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Education <High school"
+"paper","Table 1","Education: <High school","Non-hypertension %","13.77","2","13.768894","0.001105995868","0.005","match","","R/20: Education <High school"
+"paper","Table 1","Education: <High school","Hypertension N","2923","0","2826","97","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Education <High school"
+"paper","Table 1","Education: <High school","Hypertension %","17.13","2","17.09740781","0.03259218802","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Education <High school"
+"paper","Table 1","Education: High school","Non-hypertension N","2147","0","2147","0","0.5","match","","R/20: Education High school"
+"paper","Table 1","Education: High school","Non-hypertension %","19.45","2","19.40421697","0.0457830254","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Education High school"
+"paper","Table 1","Education: High school","Hypertension N","2669","0","2589","80","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Education High school"
+"paper","Table 1","Education: High school","Hypertension %","25.11","2","25.19279352","0.08279351559","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Education High school"
+"paper","Table 1","Education: >High school","Non-hypertension N","6252","0","6239","13","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Education >High school"
+"paper","Table 1","Education: >High school","Non-hypertension %","66.74","2","66.78645512","0.04645511693","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Education >High school"
+"paper","Table 1","Education: >High school","Hypertension N","5407","0","5258","149","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Education >High school"
+"paper","Table 1","Education: >High school","Hypertension %","57.66","2","57.60885726","0.05114274471","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Education >High school"
+"paper","Table 1","Education: Missing","Non-hypertension N","10","0","10","0","0.5","match","","R/20: Education Missing"
+"paper","Table 1","Education: Missing","Non-hypertension %","0.01","2","0.04043390433","0.03043390433","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Education Missing"
+"paper","Table 1","Education: Missing","Hypertension N","18","0","16","2","0.5","open","","R/20: Education Missing"
+"paper","Table 1","Education: Missing","Hypertension %","0.11","2","0.1009414171","0.009058582859","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Education Missing"
+"paper","Table 1","BMI","p-value","< 0.001","3","6.158505749e-125","","","match","","ours = rao_scott_1 (SAS default); naive_weighted p=0; rao_scott_1 p=6.16e-125; rao_scott_2 p=7.62e-60; unweighted p=3.42e-168"
+"paper","Table 1","BMI: < 18.5","Non-hypertension N","232","0","162","70","0.5","open","","R/20: BMI <18.5"
+"paper","Table 1","BMI: < 18.5","Non-hypertension %","1.83","2","1.302108077","0.5278919225","0.005","open","","R/20: BMI <18.5"
+"paper","Table 1","BMI: < 18.5","Hypertension N","312","0","91","221","0.5","open","","R/20: BMI <18.5"
+"paper","Table 1","BMI: < 18.5","Hypertension %","2.41","2","0.8465444924","1.563455508","0.005","open","","R/20: BMI <18.5"
+"paper","Table 1","BMI: 18.5 ~ 24.9","Non-hypertension N","3330","0","3324","6","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: BMI 18.5-24.9"
+"paper","Table 1","BMI: 18.5 ~ 24.9","Non-hypertension %","31.28","2","31.1311828","0.1488171978","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: BMI 18.5-24.9"
+"paper","Table 1","BMI: 18.5 ~ 24.9","Hypertension N","1949","0","1911","38","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: BMI 18.5-24.9"
+"paper","Table 1","BMI: 18.5 ~ 24.9","Hypertension %","16.17","2","16.51035652","0.3403565249","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: BMI 18.5-24.9"
+"paper","Table 1","BMI: 25 ~ 29.9","Non-hypertension N","3757","0","3752","5","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: BMI 25-29.9"
+"paper","Table 1","BMI: 25 ~ 29.9","Non-hypertension %","35.15","2","35.25130625","0.101306253","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: BMI 25-29.9"
+"paper","Table 1","BMI: 25 ~ 29.9","Hypertension N","3450","0","3394","56","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: BMI 25-29.9"
+"paper","Table 1","BMI: 25 ~ 29.9","Hypertension %","31.41","2","31.65965002","0.2496500155","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: BMI 25-29.9"
+"paper","Table 1","BMI: ≥ 30","Non-hypertension N","3440","0","3458","18","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: BMI >=30"
+"paper","Table 1","BMI: ≥ 30","Non-hypertension %","31.51","2","31.80693102","0.2969310205","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: BMI >=30"
+"paper","Table 1","BMI: ≥ 30","Hypertension N","5286","0","5115","171","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: BMI >=30"
+"paper","Table 1","BMI: ≥ 30","Hypertension %","49.83","2","49.61411714","0.2158828608","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: BMI >=30"
+"paper","Table 1","BMI: Missing","Non-hypertension N","24","0","73","49","0.5","open","","R/20: BMI Missing"
+"paper","Table 1","BMI: Missing","Non-hypertension %","0.23","2","0.5084718468","0.2784718468","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: BMI Missing"
+"paper","Table 1","BMI: Missing","Hypertension N","20","0","178","158","0.5","open","","R/20: BMI Missing"
+"paper","Table 1","BMI: Missing","Hypertension %","0.18","2","1.369331828","1.189331828","0.005","open","","R/20: BMI Missing"
+"paper","Table 1","Sleep duration","p-value","< 0.001","3","8.586014699e-24","","","match","","ours = rao_scott_1 (SAS default); naive_weighted p=0; rao_scott_1 p=8.59e-24; rao_scott_2 p=5e-18; unweighted p=2.32e-27"
+"paper","Table 1","Sleep duration: < 7","Non-hypertension N","7679","0","3509","4170","0.5","open","","R/20: Sleep <7"
+"paper","Table 1","Sleep duration: < 7","Non-hypertension %","68.23","2","29.57127245","38.65872755","0.005","open","","R/20: Sleep <7"
+"paper","Table 1","Sleep duration: < 7","Hypertension N","7672","0","3717","3955","0.5","open","","R/20: Sleep <7"
+"paper","Table 1","Sleep duration: < 7","Hypertension %","67.52","2","31.50139922","36.01860078","0.005","open","","R/20: Sleep <7"
+"paper","Table 1","Sleep duration: 7 ~ 9","Non-hypertension N","2737","0","6745","4008","0.5","open","","R/20: Sleep 7-9"
+"paper","Table 1","Sleep duration: 7 ~ 9","Non-hypertension %","28.93","2","66.61041865","37.68041865","0.005","open","","R/20: Sleep 7-9"
+"paper","Table 1","Sleep duration: 7 ~ 9","Hypertension N","2747","0","6107","3360","0.5","open","","R/20: Sleep 7-9"
+"paper","Table 1","Sleep duration: 7 ~ 9","Hypertension %","27.53","2","61.11319873","33.58319873","0.005","open","","R/20: Sleep 7-9"
+"paper","Table 1","Sleep duration: > 9","Non-hypertension N","367","0","489","122","0.5","open","","R/20: Sleep >9"
+"paper","Table 1","Sleep duration: > 9","Non-hypertension %","2.84","2","3.616049501","0.7760495014","0.005","open","","R/20: Sleep >9"
+"paper","Table 1","Sleep duration: > 9","Hypertension N","598","0","810","212","0.5","open","","R/20: Sleep >9"
+"paper","Table 1","Sleep duration: > 9","Hypertension %","4.95","2","6.860072768","1.910072768","0.005","open","","R/20: Sleep >9"
+"paper","Table 1","Alcohol consumption","p-value","< 0.001","3","9.927410279e-21","","","match","","ours = rao_scott_1 (SAS default); naive_weighted p=0; rao_scott_1 p=9.93e-21; rao_scott_2 p=8.28e-17; unweighted p=1.64e-54"
+"paper","Table 1","Alcohol: No drinks","Non-hypertension N","337","0","2872","2535","0.5","mismatch","variable definition","paper's Missing holds lifetime abstainers (skip-pattern NA): No drinks + Missing = 29.55% in the paper and in ours (non-HTN) (20_table1_categorical.csv) | R/20: Alcohol No drinks"
+"paper","Table 1","Alcohol: No drinks","Non-hypertension %","3.07","2","21.88337615","18.81337615","0.005","mismatch","variable definition","paper's Missing holds lifetime abstainers (skip-pattern NA): No drinks + Missing = 29.55% in the paper and in ours (non-HTN) (20_table1_categorical.csv) | R/20: Alcohol No drinks"
+"paper","Table 1","Alcohol: No drinks","Hypertension N","615","0","3886","3271","0.5","mismatch","variable definition","paper's Missing holds lifetime abstainers (skip-pattern NA): No drinks + Missing = 29.55% in the paper and in ours (non-HTN) (20_table1_categorical.csv) | R/20: Alcohol No drinks"
+"paper","Table 1","Alcohol: No drinks","Hypertension %","4.87","2","29.9267237","25.0567237","0.005","mismatch","variable definition","paper's Missing holds lifetime abstainers (skip-pattern NA): No drinks + Missing = 29.55% in the paper and in ours (non-HTN) (20_table1_categorical.csv) | R/20: Alcohol No drinks"
+"paper","Table 1","Alcohol: ≤ 1 drink/week","Non-hypertension N","4745","0","4741","4","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Alcohol <=1 drink/week"
+"paper","Table 1","Alcohol: ≤ 1 drink/week","Non-hypertension %","45.21","2","45.24904714","0.03904713689","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Alcohol <=1 drink/week"
+"paper","Table 1","Alcohol: ≤ 1 drink/week","Hypertension N","4039","0","3975","64","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Alcohol <=1 drink/week"
+"paper","Table 1","Alcohol: ≤ 1 drink/week","Hypertension %","39.46","2","39.77491512","0.3149151196","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Alcohol <=1 drink/week"
+"paper","Table 1","Alcohol: > 1 drink/week","Non-hypertension N","2145","0","2136","9","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Alcohol >1 drink/week"
+"paper","Table 1","Alcohol: > 1 drink/week","Non-hypertension %","25.24","2","25.16161097","0.07838903379","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Alcohol >1 drink/week"
+"paper","Table 1","Alcohol: > 1 drink/week","Hypertension N","2072","0","2047","25","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Alcohol >1 drink/week"
+"paper","Table 1","Alcohol: > 1 drink/week","Hypertension %","23.82","2","24.20072963","0.3807296296","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Alcohol >1 drink/week"
+"paper","Table 1","Alcohol: Missing","Non-hypertension N","3556","0","1020","2536","0.5","mismatch","variable definition","paper's Missing holds lifetime abstainers (skip-pattern NA): No drinks + Missing = 29.55% in the paper and in ours (non-HTN) (20_table1_categorical.csv) | R/20: Alcohol Missing"
+"paper","Table 1","Alcohol: Missing","Non-hypertension %","26.48","2","7.705965742","18.77403426","0.005","mismatch","variable definition","paper's Missing holds lifetime abstainers (skip-pattern NA): No drinks + Missing = 29.55% in the paper and in ours (non-HTN) (20_table1_categorical.csv) | R/20: Alcohol Missing"
+"paper","Table 1","Alcohol: Missing","Hypertension N","4291","0","781","3510","0.5","mismatch","variable definition","paper's Missing holds lifetime abstainers (skip-pattern NA): No drinks + Missing = 29.55% in the paper and in ours (non-HTN) (20_table1_categorical.csv) | R/20: Alcohol Missing"
+"paper","Table 1","Alcohol: Missing","Hypertension %","31.84","2","6.097631549","25.74236845","0.005","mismatch","variable definition","paper's Missing holds lifetime abstainers (skip-pattern NA): No drinks + Missing = 29.55% in the paper and in ours (non-HTN) (20_table1_categorical.csv) | R/20: Alcohol Missing"
+"paper","Table 1","Physical activity","p-value","< 0.001","3","7.668781829e-43","","","match","","ours = rao_scott_1 (SAS default); naive_weighted p=0; rao_scott_1 p=7.67e-43; rao_scott_2 p=1.71e-22; unweighted p=4.53e-62"
+"paper","Table 1","Physical activity: Inactive","Non-hypertension N","4390","0","3289","1101","0.5","open","","R/20: Physical activity Inactive"
+"paper","Table 1","Physical activity: Inactive","Non-hypertension %","44.76","2","24.68806754","20.07193246","0.005","open","","R/20: Physical activity Inactive"
+"paper","Table 1","Physical activity: Inactive","Hypertension N","3976","0","4429","453","0.5","open","","R/20: Physical activity Inactive"
+"paper","Table 1","Physical activity: Inactive","Hypertension %","41.37","2","35.82317328","5.54682672","0.005","open","","R/20: Physical activity Inactive"
+"paper","Table 1","Physical activity: Active","Non-hypertension N","6384","0","7480","1096","0.5","open","","R/20: Physical activity Active"
+"paper","Table 1","Physical activity: Active","Non-hypertension %","55.20","2","75.31193246","20.11193246","0.005","open","","R/20: Physical activity Active"
+"paper","Table 1","Physical activity: Active","Hypertension N","7037","0","6260","777","0.5","open","","R/20: Physical activity Active"
+"paper","Table 1","Physical activity: Active","Hypertension %","58.62","2","64.17682672","5.55682672","0.005","open","","R/20: Physical activity Active"
+"paper","Table 1","Physical activity: Missing","Non-hypertension N","9","0","0","9","0.5","open","","R/20: Physical activity Missing"
+"paper","Table 1","Physical activity: Missing","Non-hypertension %","0.05","2","0","0.05","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Physical activity Missing"
+"paper","Table 1","Physical activity: Missing","Hypertension N","4","0","0","4","0.5","open","","R/20: Physical activity Missing"
+"paper","Table 1","Physical activity: Missing","Hypertension %","0.01","2","0","0.01","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Physical activity Missing"
+"paper","Table 1","Total cholesterol mg/dl","Non-hypertension mean","197.71","2","197.7681831","0.05818305432","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | "
+"paper","Table 1","Total cholesterol mg/dl","Non-hypertension SE","0.67","2","0.6831282388","0.01312823882","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | "
+"paper","Table 1","Total cholesterol mg/dl","Hypertension mean","195.03","2","195.0589951","0.02899513439","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | "
+"paper","Table 1","Total cholesterol mg/dl","Hypertension SE","0.80","2","0.8133436642","0.01334366425","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | "
+"paper","Table 1","Total cholesterol mg/dl","p-value","< 0.001","3","0.002307480586","","","open","","svyttest, MEC weight"
+"paper","Table 1","Triglyceride mg/dl","Non-hypertension mean","146.27","2","146.7228054","0.4528054328","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | non-fasting LBXSTR (fasting LBXTR gives 115.4 / 139.1, see 20_table1_continuous.csv)"
+"paper","Table 1","Triglyceride mg/dl","Non-hypertension SE","1.85","2","1.877201999","0.02720199909","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | non-fasting LBXSTR (fasting LBXTR gives 115.4 / 139.1, see 20_table1_continuous.csv)"
+"paper","Table 1","Triglyceride mg/dl","Hypertension mean","172.62","2","172.4655174","0.1544826188","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | non-fasting LBXSTR (fasting LBXTR gives 115.4 / 139.1, see 20_table1_continuous.csv)"
+"paper","Table 1","Triglyceride mg/dl","Hypertension SE","1.90","2","1.978978422","0.07897842229","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | non-fasting LBXSTR (fasting LBXTR gives 115.4 / 139.1, see 20_table1_continuous.csv)"
+"paper","Table 1","Triglyceride mg/dl","p-value","< 0.001","3","1.695231595e-15","","","match","","svyttest, MEC weight"
+"paper","Table 1","Creatinine mg/dl","Non-hypertension mean","0.85","2","0.8503125937","0.000312593699","0.005","match","",""
+"paper","Table 1","Creatinine mg/dl","Non-hypertension SE","0.00","2","0.003143354016","0.003143354016","0.005","match","",""
+"paper","Table 1","Creatinine mg/dl","Hypertension mean","0.95","2","0.9538380624","0.003838062353","0.005","match","",""
+"paper","Table 1","Creatinine mg/dl","Hypertension SE","0.01","2","0.006043336735","0.003956663265","0.005","match","",""
+"paper","Table 1","Creatinine mg/dl","p-value","< 0.001","3","1.589942302e-25","","","match","","svyttest, MEC weight"
+"paper","Table 1","HDL mg/dl","Non-hypertension mean","55.11","2","55.0395062","0.07049379521","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | "
+"paper","Table 1","HDL mg/dl","Non-hypertension SE","0.31","2","0.3076163304","0.002383669553","0.005","match","",""
+"paper","Table 1","HDL mg/dl","Hypertension mean","52.64","2","52.69136202","0.05136201778","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | "
+"paper","Table 1","HDL mg/dl","Hypertension SE","0.29","2","0.2996127018","0.009612701764","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | "
+"paper","Table 1","HDL mg/dl","p-value","< 0.001","3","5.329591774e-09","","","match","","svyttest, MEC weight"
+"paper","Table 1","HbA1c (unit printed as mg/dl)","Non-hypertension mean","5.55","2","5.553047854","0.003047853532","0.005","match","",""
+"paper","Table 1","HbA1c (unit printed as mg/dl)","Non-hypertension SE","0.01","2","0.01156838273","0.001568382731","0.005","match","",""
+"paper","Table 1","HbA1c (unit printed as mg/dl)","Hypertension mean","5.98","2","5.98069637","0.0006963697895","0.005","match","",""
+"paper","Table 1","HbA1c (unit printed as mg/dl)","Hypertension SE","0.01","2","0.01458171214","0.004581712136","0.005","match","",""
+"paper","Table 1","HbA1c (unit printed as mg/dl)","p-value","< 0.001","3","1.15151375e-41","","","match","","svyttest, MEC weight"
+"paper","Table 1","Sodium mg","Non-hypertension mean","3575.03","2","3578.598844","3.568844354","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | "
+"paper","Table 1","Sodium mg","Non-hypertension SE","25.86","2","25.96542313","0.1054231251","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | "
+"paper","Table 1","Sodium mg","Hypertension mean","3476.48","2","3475.584797","0.8952029561","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | "
+"paper","Table 1","Sodium mg","Hypertension SE","25.77","2","25.07838641","0.6916135949","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | "
+"paper","Table 1","Sodium mg","p-value","< 0.001","3","0.005633437778","","","open","","svyttest, MEC weight"
+"paper","Table 1 (continued)","Fat g","Non-hypertension mean","85.55","2","85.61275054","0.06275054381","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | "
+"paper","Table 1 (continued)","Fat g","Non-hypertension SE","0.66","2","0.6567981643","0.003201835689","0.005","match","",""
+"paper","Table 1 (continued)","Fat g","Hypertension mean","81.87","2","81.84557095","0.02442905174","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | "
+"paper","Table 1 (continued)","Fat g","Hypertension SE","0.63","2","0.6292418422","0.0007581577716","0.005","match","",""
+"paper","Table 1 (continued)","Fat g","p-value","< 0.001","3","2.802042216e-05","","","match","","svyttest, MEC weight"
+"paper","Table 1 (continued)","History of CVD","p-value","< 0.001","3","4.269648381e-189","","","match","","ours = rao_scott_1 (SAS default); naive_weighted p=0; rao_scott_1 p=4.27e-189; rao_scott_2 p=1.57e-49; unweighted p=2.7e-247"
+"paper","Table 1 (continued)","History of CVD: Yes","Non-hypertension N","537","0","543","6","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: History of CVD Yes"
+"paper","Table 1 (continued)","History of CVD: Yes","Non-hypertension %","4.31","2","4.343319638","0.03331963841","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: History of CVD Yes"
+"paper","Table 1 (continued)","History of CVD: Yes","Hypertension N","2257","0","2171","86","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: History of CVD Yes"
+"paper","Table 1 (continued)","History of CVD: Yes","Hypertension %","17.90","2","17.81408952","0.08591047928","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: History of CVD Yes"
+"paper","Table 1 (continued)","History of CVD: No","Non-hypertension N","10,218","0","10226","8","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: History of CVD No"
+"paper","Table 1 (continued)","History of CVD: No","Non-hypertension %","95.53","2","95.65668036","0.1266803616","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: History of CVD No"
+"paper","Table 1 (continued)","History of CVD: No","Hypertension N","8681","0","8515","166","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: History of CVD No"
+"paper","Table 1 (continued)","History of CVD: No","Hypertension %","81.54","2","82.17135566","0.6313556574","0.005","open","","R/20: History of CVD No"
+"paper","Table 1 (continued)","History of CVD: Missing","Non-hypertension N","28","0","0","28","0.5","open","","R/20: History of CVD Missing"
+"paper","Table 1 (continued)","History of CVD: Missing","Non-hypertension %","0.16","2","0","0.16","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: History of CVD Missing"
+"paper","Table 1 (continued)","History of CVD: Missing","Hypertension N","79","0","3","76","0.5","open","","R/20: History of CVD Missing"
+"paper","Table 1 (continued)","History of CVD: Missing","Hypertension %","0.55","2","0.01455482185","0.5354451782","0.005","open","","R/20: History of CVD Missing"
+"paper","Table 1 (continued)","Diabetes","p-value","< 0.001","3","2.685537101e-186","","","match","","ours = rao_scott_1 (SAS default); naive_weighted p=0; rao_scott_1 p=2.69e-186; rao_scott_2 p=1.22e-56; unweighted p=9.39e-248"
+"paper","Table 1 (continued)","Diabetes: Yes","Non-hypertension N","874","0","809","65","0.5","open","","R/20: Diabetes Yes"
+"paper","Table 1 (continued)","Diabetes: Yes","Non-hypertension %","5.79","2","5.306425333","0.4835746674","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | R/20: Diabetes Yes"
+"paper","Table 1 (continued)","Diabetes: Yes","Hypertension N","2872","0","2603","269","0.5","open","","R/20: Diabetes Yes"
+"paper","Table 1 (continued)","Diabetes: Yes","Hypertension %","21.86","2","20.52145414","1.33854586","0.005","open","","R/20: Diabetes Yes"
+"paper","Table 1 (continued)","Diabetes: No (as printed; likely mislabeled)","Non-hypertension N","732","0","9953","9221","0.5","open","","R/20: Diabetes No"
+"paper","Table 1 (continued)","Diabetes: No (as printed; likely mislabeled)","Non-hypertension %","6.93","2","94.66002468","87.73002468","0.005","open","","R/20: Diabetes No"
+"paper","Table 1 (continued)","Diabetes: No (as printed; likely mislabeled)","Hypertension N","1232","0","8080","6848","0.5","open","","R/20: Diabetes No"
+"paper","Table 1 (continued)","Diabetes: No (as printed; likely mislabeled)","Hypertension %","12.00","2","79.43210019","67.43210019","0.005","open","","R/20: Diabetes No"
+"paper","Table 1 (continued)","Diabetes: Missing (as printed; likely mislabeled)","Non-hypertension N","9177","0","7","9170","0.5","open","","R/20: Diabetes Missing"
+"paper","Table 1 (continued)","Diabetes: Missing (as printed; likely mislabeled)","Non-hypertension %","87.28","2","0.03354998368","87.24645002","0.005","open","","R/20: Diabetes Missing"
+"paper","Table 1 (continued)","Diabetes: Missing (as printed; likely mislabeled)","Hypertension N","6913","0","6","6907","0.5","open","","R/20: Diabetes Missing"
+"paper","Table 1 (continued)","Diabetes: Missing (as printed; likely mislabeled)","Hypertension %","66.14","2","0.04644567368","66.09355433","0.005","open","","R/20: Diabetes Missing"
+"paper","Table 2","Overall Oral health: Excellent/Very good","Cases/total","3185/6769","0","6673","96","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 3096/6673 (cases/total), compared on the total"
+"paper","Table 2","Overall Oral health: Excellent/Very good","Model 1","1.00","2","1","0","0.005","match","","reference"
+"paper","Table 2","Overall Oral health: Excellent/Very good","Model 2","1.00","2","1","0","0.005","match","","reference"
+"paper","Table 2","Overall Oral health: Excellent/Very good","Model 3","1.00","2","1","0","0.005","match","","reference"
+"paper","Table 2","Overall Oral health: Good","Cases/total","3757/7536","0","7414","122","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 3637/7414 (cases/total), compared on the total"
+"paper","Table 2","Overall Oral health: Good","Model 1","1.23(1.12–1.35)","2","1.217834179","0.01216582086","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1.218 (1.109-1.337) | within PLAN section 4 (OR +/- 0.03)"
+"paper","Table 2","Overall Oral health: Good","Model 2","1.14(1.03–1.26)","2","1.129000895","0.01099910463","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1.129 (1.024-1.244) | within PLAN section 4 (OR +/- 0.03)"
+"paper","Table 2","Overall Oral health: Good","Model 3","1.13(1.02–1.27)","2","1.133718848","0.003718848395","0.005","match","","ours 1.134 (1.026-1.252)"
+"paper","Table 2","Overall Oral health: Fair","Cases/total","2620/4994","0","4914","80","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 2540/4914 (cases/total), compared on the total"
+"paper","Table 2","Overall Oral health: Fair","Model 1","1.48(1.32–1.65)","2","1.463017867","0.01698213334","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1.463 (1.301-1.646) | within PLAN section 4 (OR +/- 0.03)"
+"paper","Table 2","Overall Oral health: Fair","Model 2","1.32(1.17–1.49)","2","1.315853502","0.00414649845","0.005","match","","ours 1.316 (1.169-1.481)"
+"paper","Table 2","Overall Oral health: Fair","Model 3","1.30(1.15–1.47)","2","1.315905832","0.01590583189","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1.316 (1.172-1.477) | within PLAN section 4 (OR +/- 0.03)"
+"paper","Table 2","Overall Oral health: Poor","Cases/total","1455/2501","0","2457","44","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1416/2457 (cases/total), compared on the total"
+"paper","Table 2","Overall Oral health: Poor","Model 1","1.84(1.58–2.15)","2","1.814703151","0.0252968487","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1.815 (1.550-2.124) | within PLAN section 4 (OR +/- 0.03)"
+"paper","Table 2","Overall Oral health: Poor","Model 2","1.49(1.24–1.79)","2","1.486873754","0.00312624599","0.005","match","","ours 1.487 (1.254-1.763)"
+"paper","Table 2","Overall Oral health: Poor","Model 3","1.48(1.22–1.79)","2","1.480128173","0.0001281731013","0.005","match","","ours 1.480 (1.241-1.765)"
+"paper","Table 2","Overall Oral health: P-trend","Model 1","< 0.001","3","1.418937625e-12","","","match","","30_ptrend.csv"
+"paper","Table 2","Overall Oral health: P-trend","Model 2","< 0.001","3","5.969371527e-07","","","match","","30_ptrend.csv"
+"paper","Table 2","Overall Oral health: P-trend","Model 3","< 0.001","3","1.117214898e-06","","","match","","30_ptrend.csv"
+"paper","Table 2","Non-Smoking Oral health: Excellent/Very good","Cases/total","1801/4151","0","4096","55","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1751/4096 (cases/total), compared on the total"
+"paper","Table 2","Non-Smoking Oral health: Excellent/Very good","Model 1","1.00","2","1","0","0.005","match","","reference"
+"paper","Table 2","Non-Smoking Oral health: Excellent/Very good","Model 2","1.00","2","1","0","0.005","match","","reference"
+"paper","Table 2","Non-Smoking Oral health: Excellent/Very good","Model 3","1.00","2","1","0","0.005","match","","reference"
+"paper","Table 2","Non-Smoking Oral health: Good","Cases/total","2004/4320","0","4254","66","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1940/4254 (cases/total), compared on the total"
+"paper","Table 2","Non-Smoking Oral health: Good","Model 1","1.19(1.03–1.38)","2","1.198853304","0.008853304069","0.005","mismatch","paper typo","Model 1 oral-health cells printed under the other smoking stratum: swapped they match ours within 0.04 (34_swap_test.csv); the paper's own Cases/total give crude ORs ranking the strata the other way (02_crude_tests.csv) | ours 1.199 (1.069-1.345) | within PLAN section 4 (OR +/- 0.03)"
+"paper","Table 2","Non-Smoking Oral health: Good","Model 2","1.12(0.99–1.27)","2","1.102509456","0.01749054388","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1.103 (0.984-1.235) | within PLAN section 4 (OR +/- 0.03)"
+"paper","Table 2","Non-Smoking Oral health: Good","Model 3","1.12(0.98–1.27)","2","1.110671049","0.009328950576","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1.111 (0.988-1.248) | within PLAN section 4 (OR +/- 0.03)"
+"paper","Table 2","Non-Smoking Oral health: Fair","Cases/total","1293/2529","0","2479","50","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1246/2479 (cases/total), compared on the total"
+"paper","Table 2","Non-Smoking Oral health: Fair","Model 1","1.20(1.02–1.42)","2","1.714559459","0.5145594595","0.005","mismatch","paper typo","Model 1 oral-health cells printed under the other smoking stratum: swapped they match ours within 0.04 (34_swap_test.csv); the paper's own Cases/total give crude ORs ranking the strata the other way (02_crude_tests.csv) | ours 1.715 (1.483-1.982)"
+"paper","Table 2","Non-Smoking Oral health: Fair","Model 2","1.51(1.27–1.79)","2","1.479638454","0.03036154566","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1.480 (1.272-1.721)"
+"paper","Table 2","Non-Smoking Oral health: Fair","Model 3","1.49(1.26–1.77)","2","1.489759066","0.0002409344933","0.005","match","","ours 1.490 (1.284-1.729)"
+"paper","Table 2","Non-Smoking Oral health: Poor","Cases/total","521/882","0","868","14","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 513/868 (cases/total), compared on the total"
+"paper","Table 2","Non-Smoking Oral health: Poor","Model 1","1.49(1.22–1.82)","2","2.356747186","0.8667471864","0.005","mismatch","paper typo","Model 1 oral-health cells printed under the other smoking stratum: swapped they match ours within 0.04 (34_swap_test.csv); the paper's own Cases/total give crude ORs ranking the strata the other way (02_crude_tests.csv) | ours 2.357 (1.908-2.910)"
+"paper","Table 2","Non-Smoking Oral health: Poor","Model 2","1.67(1.29–2.16)","2","1.721364366","0.05136436575","0.005","open","","ours 1.721 (1.350-2.195)"
+"paper","Table 2","Non-Smoking Oral health: Poor","Model 3","1.62(1.24–2.12)","2","1.684898975","0.06489897506","0.005","open","","ours 1.685 (1.318-2.154)"
+"paper","Table 2","Non-Smoking Oral health: P-trend","Model 1","< 0.001","3","2.497224012e-14","","","match","","30_ptrend.csv"
+"paper","Table 2","Non-Smoking Oral health: P-trend","Model 2","< 0.001","3","2.25139323e-07","","","match","","30_ptrend.csv"
+"paper","Table 2","Non-Smoking Oral health: P-trend","Model 3","0.032","3","3.262764257e-07","0.03199967372","5e-04","mismatch","paper typo","the paper's own CIs imply Wald p 4e-6 (Fair 1.49, 1.26-1.77) and 4e-4 (Poor 1.62, 1.24-2.12) with monotone ORs; a trend p of 0.032 is incompatible (00_paper_consistency.csv) | 30_ptrend.csv"
+"paper","Table 2","Smoking Oral health: Excellent/Very good","Cases/total","1384/2618","0","2577","41","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1345/2577 (cases/total), compared on the total"
+"paper","Table 2","Smoking Oral health: Excellent/Very good","Model 1","1.00","2","1","0","0.005","match","","reference"
+"paper","Table 2","Smoking Oral health: Excellent/Very good","Model 2","1.00","2","1","0","0.005","match","","reference"
+"paper","Table 2","Smoking Oral health: Excellent/Very good","Model 3","1.00","2","1","0","0.005","match","","reference"
+"paper","Table 2","Smoking Oral health: Good","Cases/total","1753/3216","0","3160","56","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1697/3160 (cases/total), compared on the total"
+"paper","Table 2","Smoking Oral health: Good","Model 1","1.22(1.07–1.38)","2","1.186409841","0.0335901588","0.005","mismatch","paper typo","Model 1 oral-health cells printed under the other smoking stratum: swapped they match ours within 0.04 (34_swap_test.csv); the paper's own Cases/total give crude ORs ranking the strata the other way (02_crude_tests.csv) | ours 1.186 (1.021-1.378)"
+"paper","Table 2","Smoking Oral health: Good","Model 2","1.12(0.96–1.31)","2","1.119119867","0.0008801331832","0.005","match","","ours 1.119 (0.963-1.300)"
+"paper","Table 2","Smoking Oral health: Good","Model 3","1.13(0.96–1.33)","2","1.129896175","0.0001038254118","0.005","match","","ours 1.130 (0.968-1.319)"
+"paper","Table 2","Smoking Oral health: Fair","Cases/total","1327/2465","0","2435","30","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1294/2435 (cases/total), compared on the total"
+"paper","Table 2","Smoking Oral health: Fair","Model 1","1.73(1.49–2.02)","2","1.191519293","0.5384807069","0.005","mismatch","paper typo","Model 1 oral-health cells printed under the other smoking stratum: swapped they match ours within 0.04 (34_swap_test.csv); the paper's own Cases/total give crude ORs ranking the strata the other way (02_crude_tests.csv) | ours 1.192 (0.994-1.429)"
+"paper","Table 2","Smoking Oral health: Fair","Model 2","1.11(0.94–1.30)","2","1.11474814","0.004748139759","0.005","match","","ours 1.115 (0.936-1.327)"
+"paper","Table 2","Smoking Oral health: Fair","Model 3","1.11(0.93–1.32)","2","1.112986513","0.00298651253","0.005","match","","ours 1.113 (0.933-1.328)"
+"paper","Table 2","Smoking Oral health: Poor","Cases/total","934/1619","0","1589","30","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 903/1589 (cases/total), compared on the total"
+"paper","Table 2","Smoking Oral health: Poor","Model 1","2.33(1.88–2.89)","2","1.446093396","0.8839066036","0.005","mismatch","paper typo","Model 1 oral-health cells printed under the other smoking stratum: swapped they match ours within 0.04 (34_swap_test.csv); the paper's own Cases/total give crude ORs ranking the strata the other way (02_crude_tests.csv) | ours 1.446 (1.179-1.774)"
+"paper","Table 2","Smoking Oral health: Poor","Model 2","1.29(1.02–1.63)","2","1.274875959","0.01512404119","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1.275 (1.027-1.583) | within PLAN section 4 (OR +/- 0.03)"
+"paper","Table 2","Smoking Oral health: Poor","Model 3","1.31(1.03–1.67)","2","1.274955905","0.03504409506","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1.275 (1.022-1.591)"
+"paper","Table 2","Smoking Oral health: P-trend","Model 1","< 0.001","3","0.0006926704604","","","match","","30_ptrend.csv"
+"paper","Table 2","Smoking Oral health: P-trend","Model 2","0.03","2","0.02651703849","0.003482961508","5e-04","open","","30_ptrend.csv"
+"paper","Table 2","Smoking Oral health: P-trend","Model 3","0.013","3","0.0313868481","0.0183868481","5e-04","open","","30_ptrend.csv"
+"paper","Table 2","Oral health x smoking","P-interation (spelled as printed)","< 0.001","3","0.02514120741","","","open","","regTermTest of the product terms; M1 p=0.000251; M2 p=0.0275; M3 p=0.0251 (30_pinteraction.csv)"
+"paper","Table 2","Overall Periodontal disease: No","Cases/total","8839/17,717","0","17435","282","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 8574/17435 (cases/total), compared on the total"
+"paper","Table 2","Overall Periodontal disease: No","Model 1","1.00","2","1","0","0.005","match","","reference"
+"paper","Table 2","Overall Periodontal disease: No","Model 2","1.00","2","1","0","0.005","match","","reference"
+"paper","Table 2","Overall Periodontal disease: No","Model 3","1.00","2","1","0","0.005","match","","reference"
+"paper","Table 2","Overall Periodontal disease: Yes","Cases/total","2178/4083","0","4023","60","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 2115/4023 (cases/total), compared on the total"
+"paper","Table 2","Overall Periodontal disease: Yes","Model 1","1.35(1.22–1.49)","2","1.343297668","0.006702331627","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1.343 (1.218-1.482) | within PLAN section 4 (OR +/- 0.03)"
+"paper","Table 2","Overall Periodontal disease: Yes","Model 2","1.20(1.08–1.34)","2","1.225349023","0.02534902333","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1.225 (1.103-1.361) | within PLAN section 4 (OR +/- 0.03)"
+"paper","Table 2","Overall Periodontal disease: Yes","Model 3","1.21(1.09–1.35)","2","1.227466324","0.0174663237","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1.227 (1.105-1.363) | within PLAN section 4 (OR +/- 0.03)"
+"paper","Table 2","Overall Periodontal disease: P-trend","Model 1","< 0.001","3","8.052900873e-08","","","match","","30_ptrend.csv"
+"paper","Table 2","Overall Periodontal disease: P-trend","Model 2","< 0.001","3","0.0003088165543","","","match","","30_ptrend.csv"
+"paper","Table 2","Overall Periodontal disease: P-trend","Model 3","< 0.001","3","0.0003069208186","","","match","","30_ptrend.csv"
+"paper","Table 2","Non-Smoking Periodontal disease: No","Cases/total","4664/10,018","0","9859","159","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 4521/9859 (cases/total), compared on the total"
+"paper","Table 2","Non-Smoking Periodontal disease: No","Model 1","1.00","2","1","0","0.005","match","","reference"
+"paper","Table 2","Non-Smoking Periodontal disease: No","Model 2","1.00","2","1","0","0.005","match","","reference"
+"paper","Table 2","Non-Smoking Periodontal disease: No","Model 3","1.00","2","1","0","0.005","match","","reference"
+"paper","Table 2","Non-Smoking Periodontal disease: Yes","Cases/total","955/1864","0","1838","26","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 929/1838 (cases/total), compared on the total"
+"paper","Table 2","Non-Smoking Periodontal disease: Yes","Model 1","1.41(1.20–1.66)","2","1.409783656","0.0002163440437","0.005","match","","ours 1.410 (1.199-1.658)"
+"paper","Table 2","Non-Smoking Periodontal disease: Yes","Model 2","1.19(0.99–1.44)","2","1.216100999","0.02610099942","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1.216 (1.019-1.452) | within PLAN section 4 (OR +/- 0.03)"
+"paper","Table 2","Non-Smoking Periodontal disease: Yes","Model 3","1.22(1.01–1.47)","2","1.219722653","0.0002773468555","0.005","match","","ours 1.220 (1.020-1.458)"
+"paper","Table 2","Non-Smoking Periodontal disease: P-trend","Model 1","< 0.001","3","7.159292784e-05","","","match","","30_ptrend.csv"
+"paper","Table 2","Non-Smoking Periodontal disease: P-trend","Model 2","0.066","3","0.03112893548","0.03487106452","5e-04","open","","30_ptrend.csv"
+"paper","Table 2","Non-Smoking Periodontal disease: P-trend","Model 3","0.041","3","0.03023124617","0.01076875383","5e-04","open","","30_ptrend.csv"
+"paper","Table 2","Smoking Periodontal disease: No","Cases/total","4175/7699","0","7576","123","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 4053/7576 (cases/total), compared on the total"
+"paper","Table 2","Smoking Periodontal disease: No","Model 1","1.00","2","1","0","0.005","match","","reference"
+"paper","Table 2","Smoking Periodontal disease: No","Model 2","1.00","2","1","0","0.005","match","","reference"
+"paper","Table 2","Smoking Periodontal disease: No","Model 3","1.00","2","1","0","0.005","match","","reference"
+"paper","Table 2","Smoking Periodontal disease: Yes","Cases/total","1223/2219","0","2185","34","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1186/2185 (cases/total), compared on the total"
+"paper","Table 2","Smoking Periodontal disease: Yes","Model 1","1.24(1.06–1.44)","2","1.233294413","0.006705586685","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1.233 (1.062-1.432) | within PLAN section 4 (OR +/- 0.03)"
+"paper","Table 2","Smoking Periodontal disease: Yes","Model 2","1.14(0.98–1.34)","2","1.172173695","0.03217369494","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1.172 (1.005-1.367)"
+"paper","Table 2","Smoking Periodontal disease: Yes","Model 3","1.16(0.98–1.37)","2","1.175535183","0.01553518308","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1.176 (1.003-1.378) | within PLAN section 4 (OR +/- 0.03)"
+"paper","Table 2","Smoking Periodontal disease: P-trend","Model 1","0.006","3","0.006523384924","0.0005233849242","5e-04","open","","30_ptrend.csv"
+"paper","Table 2","Smoking Periodontal disease: P-trend","Model 2","0.097","3","0.04317731922","0.05382268078","5e-04","open","","30_ptrend.csv"
+"paper","Table 2","Smoking Periodontal disease: P-trend","Model 3","0.080","3","0.04580300698","0.03419699302","5e-04","open","","30_ptrend.csv"
+"paper","Table 2","Periodontal disease x smoking","P-interation (spelled as printed)","< 0.001","3","0.6905890255","","","open","","regTermTest of the product terms; M1 p=0.27; M2 p=0.716; M3 p=0.691 (30_pinteraction.csv)"
+"paper","Table 3","Oral health Age < 45: Excellent/Very good","Cases/total","415/2053","0","2038","15","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 398/2038 (cases/total), compared on the total"
+"paper","Table 3","Oral health Age < 45: Excellent/Very good","Model 1","1.00","2","1","0","0.005","match","","reference"
+"paper","Table 3","Oral health Age < 45: Excellent/Very good","Model 2","1.00","2","1","0","0.005","match","","reference"
+"paper","Table 3","Oral health Age < 45: Excellent/Very good","Model 3","1.00","2","1","0","0.005","match","","reference"
+"paper","Table 3","Oral health Age < 45: Good","Cases/total","552/2298","0","2280","18","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 527/2280 (cases/total), compared on the total"
+"paper","Table 3","Oral health Age < 45: Good","Model 1","1.23(1.04–1.46)","2","1.224382217","0.005617782979","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1.224 (1.035-1.448) | within PLAN section 4 (OR +/- 0.03)"
+"paper","Table 3","Oral health Age < 45: Good","Model 2","1.12(0.94–1.34)","2","1.105908854","0.01409114616","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1.106 (0.926-1.321) | within PLAN section 4 (OR +/- 0.03)"
+"paper","Table 3","Oral health Age < 45: Good","Model 3","1.11(0.93–1.33)","2","1.096442837","0.01355716311","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1.096 (0.919-1.308) | within PLAN section 4 (OR +/- 0.03)"
+"paper","Table 3","Oral health Age < 45: Fair","Cases/total","438/1598","0","1589","9","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 424/1589 (cases/total), compared on the total"
+"paper","Table 3","Oral health Age < 45: Fair","Model 1","1.50(1.25–1.80)","2","1.531724863","0.03172486271","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1.532 (1.276-1.838)"
+"paper","Table 3","Oral health Age < 45: Fair","Model 2","1.32(1.11–1.58)","2","1.338514324","0.01851432398","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1.339 (1.125-1.593) | within PLAN section 4 (OR +/- 0.03)"
+"paper","Table 3","Oral health Age < 45: Fair","Model 3","1.27(1.05–1.53)","2","1.294589913","0.02458991273","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1.295 (1.082-1.548) | within PLAN section 4 (OR +/- 0.03)"
+"paper","Table 3","Oral health Age < 45: Poor","Cases/total","218/640","0","635","5","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 210/635 (cases/total), compared on the total"
+"paper","Table 3","Oral health Age < 45: Poor","Model 1","2.14(1.60–2.86)","2","2.094897869","0.0451021313","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 2.095 (1.559-2.815)"
+"paper","Table 3","Oral health Age < 45: Poor","Model 2","1.81(1.35–2.41)","2","1.713337218","0.09666278175","0.005","open","","ours 1.713 (1.276-2.301)"
+"paper","Table 3","Oral health Age < 45: Poor","Model 3","1.71(1.29–2.28)","2","1.607239639","0.1027603614","0.005","open","","ours 1.607 (1.201-2.151)"
+"paper","Table 3","Oral health Age < 45: P-trend","Model 1","< 0.001","3","6.188477265e-07","","","match","","30_ptrend.csv"
+"paper","Table 3","Oral health Age < 45: P-trend","Model 2","< 0.001","3","0.0002294133865","","","match","","30_ptrend.csv"
+"paper","Table 3","Oral health Age < 45: P-trend","Model 3","< 0.001","3","0.0009413923038","","","match","","30_ptrend.csv"
+"paper","Table 3","Oral health Age > = 45: Excellent/Very good","Cases/total","2770/4716","0","4635","81","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 2698/4635 (cases/total), compared on the total"
+"paper","Table 3","Oral health Age > = 45: Excellent/Very good","Model 1","1.00","2","1","0","0.005","match","","reference"
+"paper","Table 3","Oral health Age > = 45: Excellent/Very good","Model 2","1.00","2","1","0","0.005","match","","reference"
+"paper","Table 3","Oral health Age > = 45: Excellent/Very good","Model 3","1.00","2","1","0","0.005","match","","reference"
+"paper","Table 3","Oral health Age > = 45: Good","Cases/total","3205/5238","0","5134","104","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 3110/5134 (cases/total), compared on the total"
+"paper","Table 3","Oral health Age > = 45: Good","Model 1","1.16(1.05–1.29)","2","1.149873454","0.0101265457","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1.150 (1.036-1.276) | within PLAN section 4 (OR +/- 0.03)"
+"paper","Table 3","Oral health Age > = 45: Good","Model 2","1.11(0.99–1.24)","2","1.073808695","0.03619130541","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1.074 (0.964-1.196)"
+"paper","Table 3","Oral health Age > = 45: Good","Model 3","1.10(0.98–1.24)","2","1.089387852","0.01061214839","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1.089 (0.974-1.218) | within PLAN section 4 (OR +/- 0.03)"
+"paper","Table 3","Oral health Age > = 45: Fair","Cases/total","2182/3396","0","3325","71","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 2116/3325 (cases/total), compared on the total"
+"paper","Table 3","Oral health Age > = 45: Fair","Model 1","1.33(1.15–1.53)","2","1.296782795","0.03321720503","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1.297 (1.118-1.505)"
+"paper","Table 3","Oral health Age > = 45: Fair","Model 2","1.26(1.08–1.45)","2","1.198748595","0.06125140494","0.005","open","","ours 1.199 (1.028-1.398)"
+"paper","Table 3","Oral health Age > = 45: Fair","Model 3","1.25(1.07–1.46)","2","1.217090521","0.0329094791","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1.217 (1.045-1.418)"
+"paper","Table 3","Oral health Age > = 45: Poor","Cases/total","1237/1861","0","1822","39","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1206/1822 (cases/total), compared on the total"
+"paper","Table 3","Oral health Age > = 45: Poor","Model 1","1.45(1.25–1.68)","2","1.436214661","0.01378533916","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1.436 (1.236-1.669) | within PLAN section 4 (OR +/- 0.03)"
+"paper","Table 3","Oral health Age > = 45: Poor","Model 2","1.31(1.11–1.54)","2","1.238365057","0.07163494293","0.005","open","","ours 1.238 (1.046-1.466)"
+"paper","Table 3","Oral health Age > = 45: Poor","Model 3","1.29(1.07–1.55)","2","1.248743887","0.0412561128","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1.249 (1.035-1.507)"
+"paper","Table 3","Oral health Age > = 45: P-trend","Model 1","< 0.001","3","2.797241484e-06","","","match","","30_ptrend.csv"
+"paper","Table 3","Oral health Age > = 45: P-trend","Model 2","< 0.001","3","0.004064635787","","","open","","30_ptrend.csv"
+"paper","Table 3","Oral health Age > = 45: P-trend","Model 3","0.001","3","0.004164579622","0.003164579622","5e-04","open","","30_ptrend.csv"
+"paper","Table 3","Oral health x age","P-interation (spelled as printed)","<0.001","3","0.3239316924","","","open","","regTermTest of the product terms; M1 p=0.209; M2 p=0.186; M3 p=0.324 (30_pinteraction.csv)"
+"paper","Table 3","Periodontal disease Age < 45: No","Cases/total","1243/5381","0","5343","38","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1193/5343 (cases/total), compared on the total"
+"paper","Table 3","Periodontal disease Age < 45: No","Model 1","1.00","2","1","0","0.005","match","","reference"
+"paper","Table 3","Periodontal disease Age < 45: No","Model 2","1.00","2","1","0","0.005","match","","reference"
+"paper","Table 3","Periodontal disease Age < 45: No","Model 3","1.00","2","1","0","0.005","match","","reference"
+"paper","Table 3","Periodontal disease Age < 45: Yes","Cases/total","380/1208","0","1199","9","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 366/1199 (cases/total), compared on the total"
+"paper","Table 3","Periodontal disease Age < 45: Yes","Model 1","1.71(1.43–2.04)","2","1.723275773","0.01327577267","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1.723 (1.435-2.070) | within PLAN section 4 (OR +/- 0.03)"
+"paper","Table 3","Periodontal disease Age < 45: Yes","Model 2","1.52(1.29–1.81)","2","1.506779106","0.01322089394","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1.507 (1.255-1.809) | within PLAN section 4 (OR +/- 0.03)"
+"paper","Table 3","Periodontal disease Age < 45: Yes","Model 3","1.51(1.27–1.79)","2","1.45923637","0.05076362961","0.005","open","","ours 1.459 (1.210-1.760)"
+"paper","Table 3","Periodontal disease Age < 45: P-trend","Model 1","< 0.001","3","1.101928357e-07","","","match","","30_ptrend.csv"
+"paper","Table 3","Periodontal disease Age < 45: P-trend","Model 2","< 0.001","3","3.57711047e-05","","","match","","30_ptrend.csv"
+"paper","Table 3","Periodontal disease Age < 45: P-trend","Model 3","< 0.001","3","0.0001827615781","","","match","","30_ptrend.csv"
+"paper","Table 3","Periodontal disease Age > = 45: No","Cases/total","7596/12,336","0","12092","244","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 7381/12092 (cases/total), compared on the total"
+"paper","Table 3","Periodontal disease Age > = 45: No","Model 1","1.00","2","1","0","0.005","match","","reference"
+"paper","Table 3","Periodontal disease Age > = 45: No","Model 2","1.00","2","1","0","0.005","match","","reference"
+"paper","Table 3","Periodontal disease Age > = 45: No","Model 3","1.00","2","1","0","0.005","match","","reference"
+"paper","Table 3","Periodontal disease Age > = 45: Yes","Cases/total","1798/2875","0","2824","51","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1749/2824 (cases/total), compared on the total"
+"paper","Table 3","Periodontal disease Age > = 45: Yes","Model 1","1.08(0.96–1.21)","2","1.070976338","0.009023661801","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 1.071 (0.951-1.205) | within PLAN section 4 (OR +/- 0.03)"
+"paper","Table 3","Periodontal disease Age > = 45: Yes","Model 2","1.05(0.93–1.18)","2","1.045149432","0.004850568142","0.005","match","","ours 1.045 (0.927-1.179)"
+"paper","Table 3","Periodontal disease Age > = 45: Yes","Model 3","1.05(0.92–1.20)","2","1.052724118","0.002724117503","0.005","match","","ours 1.053 (0.926-1.197)"
+"paper","Table 3","Periodontal disease Age > = 45: P-trend","Model 1","0.21","2","0.2516199258","0.04161992579","5e-04","open","","30_ptrend.csv"
+"paper","Table 3","Periodontal disease Age > = 45: P-trend","Model 2","0.444","3","0.4654748512","0.02147485115","5e-04","open","","30_ptrend.csv"
+"paper","Table 3","Periodontal disease Age > = 45: P-trend","Model 3","0.444","3","0.4252873608","0.01871263924","5e-04","open","","30_ptrend.csv"
+"paper","Table 3","Periodontal disease x age","P-interation (spelled as printed)","<0.001","3","0.001819562603","","","open","","regTermTest of the product terms; M1 p=6.31e-05; M2 p=0.000481; M3 p=0.00182 (30_pinteraction.csv)"
+"paper","Abstract","Participants","N analysed","21,800","0","21476","324","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | "
+"paper","Abstract","Participants","Age restriction","≧ 30 years","0","30","0","0","match","","age >= 30 applied (R/11)"
+"paper","Abstract","Hypertensive group","N (%)","11,017 (50.54%)","2","10689","328","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 10689 (49.81%)"
+"paper","Abstract","Non-hypertensive group","N (%)","10,783 (49.46%)","2","10769","14","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 10769 (50.19%)"
+"paper","Abstract","Oral health Good vs Excellent/very good","OR (95% CI)","1.13 (95% CI, 1.02–1.27)","2","1.133718848","0.003718848395","0.005","match","","Model 3 of Table 2 all; ours 1.134 (1.026-1.252) | CSV row repaired: unquoted comma in the target had split it (R/60)"
+"paper","Abstract","Oral health Fair vs Excellent/very good","OR (95% CI)","1.30 (95% CI, 1.15–1.47)","2","1.315905832","0.01590583189","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | Model 3 of Table 2 all; ours 1.316 (1.172-1.477) | CSV row repaired: unquoted comma in the target had split it (R/60) | within PLAN section 4 (OR +/- 0.03)"
+"paper","Abstract","Oral health Poor vs Excellent/very good","OR (95% CI)","1.48 (95% CI, 1.22–1.79)","2","1.480128173","0.0001281731013","0.005","match","","Model 3 of Table 2 all; ours 1.480 (1.241-1.765) | CSV row repaired: unquoted comma in the target had split it (R/60)"
+"paper","Abstract","Oral health","p for trend","< 0.001","3","1.117214898e-06","","","match","","Model 3, 30_ptrend.csv"
+"paper","Abstract","Periodontal disease vs none","OR (95% CI)","1.21 (95% CI ,1.09–1.35)","2","1.227466324","0.0174663237","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | Model 3 of Table 2 all; ours 1.227 (1.105-1.363) | CSV row repaired: unquoted comma in the target had split it (R/60) | within PLAN section 4 (OR +/- 0.03)"
+"paper","Abstract","Periodontal disease","p for trend","< 0.001","3","0.0003069208186","","","match","","Model 3, 30_ptrend.csv"
+"paper","Abstract","Interaction periodontal disease x smoking","p","< 0.001","3","0.6905890255","","","open","","M1 p=0.27; M2 p=0.716; M3 p=0.691"
+"paper","Abstract","Interaction oral health x smoking","p","< 0.001","3","0.02514120741","","","open","","M1 p=0.000251; M2 p=0.0275; M3 p=0.0251"
+"paper","Abstract","Interaction periodontal disease x age","p","< 0.001","3","0.001819562603","","","open","","M1 p=6.31e-05; M2 p=0.000481; M3 p=0.00182"
+"paper","Abstract","Interaction oral health x age","p","< 0.001","3","0.3239316924","","","open","","M1 p=0.209; M2 p=0.186; M3 p=0.324"
+"paper","text p.2","Exclusion: no blood pressure","n","19,398","0","1879","17519","0.5","mismatch","sample exclusion","A1: the paper's steps sum to 42,288; our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | "
+"paper","text p.2","Exclusion: missing smoking/oral health/periodontal disease","n","1,090","0","687","403","0.5","mismatch","sample exclusion","A1: the paper's steps sum to 42,288; our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | "
+"paper","text p.2","Final sample","N","21,800","0","21476","324","0.5","mismatch","sample exclusion","A1: the paper's steps sum to 42,288; our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | "
+"paper","text p.3","Results Table 1 description","Total participants","21,800","0","21476","324","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | "
+"paper","text p.3","Results Table 1 description","Male %","48.40%","2","48.5925995","0.1925994967","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | unweighted, as the paper's 48.40"
+"paper","text p.3","Results Table 1 description","Female %","51.60%","2","51.4074005","0.1925994967","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | unweighted, as the paper's 48.40"
+"paper","text p.3","Results Table 1 description","Hypertension N (%)","11,017 (50.54%)","2","10689","328","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 10689 (49.81%)"
+"paper","text p.3","Results Table 1 description","Non-hypertension N (%)","10,783 (49.46%)","2","10769","14","0.5","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | ours 10769 (50.19%)"
+"paper","text p.3","Overall oral health Good","OR (95% CI)","1.13 (95% CI, 1.02–1.27)","2","1.133718848","0.003718848395","0.005","match","","Model 3 of Table 2 all; ours 1.134 (1.026-1.252) | CSV row repaired: unquoted comma in the target had split it (R/60)"
+"paper","text p.3","Overall oral health Fair","OR (95% CI)","1.30 (95% CI, 1.15–1.47)","2","1.315905832","0.01590583189","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | Model 3 of Table 2 all; ours 1.316 (1.172-1.477) | CSV row repaired: unquoted comma in the target had split it (R/60) | within PLAN section 4 (OR +/- 0.03)"
+"paper","text p.3","Overall oral health Poor","OR (95% CI)","1.48 (95% CI, 1.22–1.79)","2","1.480128173","0.0001281731013","0.005","match","","Model 3 of Table 2 all; ours 1.480 (1.241-1.765) | CSV row repaired: unquoted comma in the target had split it (R/60)"
+"paper","text p.3-5","Overall oral health","p for trend","< 0.001","3","1.117214898e-06","","","match","","Model 3, 30_ptrend.csv"
+"paper","text p.5","Overall periodontal disease","OR (95% CI)","1.21 (95% CI ,1.09–1.35)","2","1.227466324","0.0174663237","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | Model 3 of Table 2 all; ours 1.227 (1.105-1.363) | CSV row repaired: unquoted comma in the target had split it (R/60) | within PLAN section 4 (OR +/- 0.03)"
+"paper","text p.5","Overall periodontal disease","p for trend","< 0.001","3","0.0003069208186","","","match","","Model 3, 30_ptrend.csv"
+"paper","text p.5","Smoking group oral health Good","OR (95% CI)","1.13 (95% CI, 0.96–1.33)","2","1.129896175","0.0001038254118","0.005","match","","Model 3 of Table 2 smoking; ours 1.130 (0.968-1.319) | CSV row repaired: unquoted comma in the target had split it (R/60)"
+"paper","text p.5","Smoking group oral health Fair","OR (95% CI)","1.11 (95% CI, 0.93–1.32)","2","1.112986513","0.00298651253","0.005","match","","Model 3 of Table 2 smoking; ours 1.113 (0.933-1.328) | CSV row repaired: unquoted comma in the target had split it (R/60)"
+"paper","text p.5","Smoking group oral health Poor","OR (95% CI)","1.31 (95% CI, 1.03–1.67)","2","1.274955905","0.03504409506","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | Model 3 of Table 2 smoking; ours 1.275 (1.022-1.591) | CSV row repaired: unquoted comma in the target had split it (R/60)"
+"paper","text p.5","Smoking group oral health","p for trend","= 0.013","3","0.0313868481","0.0183868481","5e-04","open","","Model 3, 30_ptrend.csv"
+"paper","text p.5","Smoking group periodontal disease","OR (95% CI)","1.16 (95% CI, 0.98–1.37)","2","1.175535183","0.01553518308","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | Model 3 of Table 2 smoking; ours 1.176 (1.003-1.378) | CSV row repaired: unquoted comma in the target had split it (R/60) | within PLAN section 4 (OR +/- 0.03)"
+"paper","text p.5","Smoking group periodontal disease","p for trend","= 0.080","3","0.04580300698","0.03419699302","5e-04","open","","Model 3, 30_ptrend.csv"
+"paper","text p.5","Non-smoking group oral health Good","OR (95% CI)","1.12 (95% CI, 0.98–1.27)","2","1.110671049","0.009328950576","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | Model 3 of Table 2 nonsmoking; ours 1.111 (0.988-1.248) | CSV row repaired: unquoted comma in the target had split it (R/60) | within PLAN section 4 (OR +/- 0.03)"
+"paper","text p.5","Non-smoking group oral health Fair","OR (95% CI)","1.49 (95% CI, 1.26–1.77)","2","1.489759066","0.0002409344933","0.005","match","","Model 3 of Table 2 nonsmoking; ours 1.490 (1.284-1.729) | CSV row repaired: unquoted comma in the target had split it (R/60)"
+"paper","text p.5","Non-smoking group oral health Poor","OR (95% CI)","1.62 (95% CI, 1.24–2.12)","2","1.684898975","0.06489897506","0.005","open","","Model 3 of Table 2 nonsmoking; ours 1.685 (1.318-2.154) | CSV row repaired: unquoted comma in the target had split it (R/60)"
+"paper","text p.5","Non-smoking group oral health","p for trend","= 0.032","3","3.262764257e-07","0.03199967372","5e-04","mismatch","paper typo","the paper's own CIs imply Wald p 4e-6 (Fair 1.49, 1.26-1.77) and 4e-4 (Poor 1.62, 1.24-2.12) with monotone ORs; a trend p of 0.032 is incompatible (00_paper_consistency.csv) | Model 3, 30_ptrend.csv"
+"paper","text p.5","Non-smoking group periodontal disease","OR (95% CI)","1.22 (95% CI, 1.01–1.47)","2","1.219722653","0.0002773468555","0.005","match","","Model 3 of Table 2 nonsmoking; ours 1.220 (1.020-1.458) | CSV row repaired: unquoted comma in the target had split it (R/60)"
+"paper","text p.5","Non-smoking group periodontal disease","p for trend","= 0.041","3","0.03023124617","0.01076875383","5e-04","open","","Model 3, 30_ptrend.csv"
+"paper","text p.5","Interaction periodontal disease x smoking","p","< 0.001","3","0.6905890255","","","open","","M1 p=0.27; M2 p=0.716; M3 p=0.691"
+"paper","text p.5","Interaction oral health x smoking","p","< 0.001","3","0.02514120741","","","open","","M1 p=0.000251; M2 p=0.0275; M3 p=0.0251"
+"paper","text p.5","Age < 45 oral health Good","OR (95% CI)","1.11 (95% CI, 0.93–1.33)","2","1.096442837","0.01355716311","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | Model 3 of Table 3 age<45; ours 1.096 (0.919-1.308) | CSV row repaired: unquoted comma in the target had split it (R/60) | within PLAN section 4 (OR +/- 0.03)"
+"paper","text p.5","Age < 45 oral health Fair","OR (95% CI)","1.27 (95% CI, 1.05–1.53)","2","1.294589913","0.02458991273","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | Model 3 of Table 3 age<45; ours 1.295 (1.082-1.548) | CSV row repaired: unquoted comma in the target had split it (R/60) | within PLAN section 4 (OR +/- 0.03)"
+"paper","text p.5","Age < 45 oral health Poor","OR (95% CI)","1.71 (95% CI, 1.29–2.28)","2","1.607239639","0.1027603614","0.005","open","","Model 3 of Table 3 age<45; ours 1.607 (1.201-2.151) | CSV row repaired: unquoted comma in the target had split it (R/60)"
+"paper","text p.5","Age < 45 oral health","p for trend","< 0.001","3","0.0009413923038","","","match","","Model 3, 30_ptrend.csv"
+"paper","text p.5","Age < 45 periodontal disease","OR (95% CI)","1.51 (95% CI, 1.27–1.79)","2","1.45923637","0.05076362961","0.005","open","","Model 3 of Table 3 age<45; ours 1.459 (1.210-1.760) | CSV row repaired: unquoted comma in the target had split it (R/60)"
+"paper","text p.5","Age < 45 periodontal disease","p for trend","< 0.001","3","0.0001827615781","","","match","","Model 3, 30_ptrend.csv"
+"paper","text p.5","Age > 45 (text says older than 45) oral health Good","OR (95% CI)","1.10 (95% CI, 0.98–1.24)","2","1.089387852","0.01061214839","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | Model 3 of Table 3 age>=45; ours 1.089 (0.974-1.218) | CSV row repaired: unquoted comma in the target had split it (R/60) | within PLAN section 4 (OR +/- 0.03)"
+"paper","text p.5","Age > 45 (text says older than 45) oral health Fair","OR (95% CI)","1.25 (95% CI, 1.07–1.46)","2","1.217090521","0.0329094791","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | Model 3 of Table 3 age>=45; ours 1.217 (1.045-1.418) | CSV row repaired: unquoted comma in the target had split it (R/60)"
+"paper","text p.5","Age > 45 (text says older than 45) oral health Poor","OR (95% CI)","1.29 (95% CI, 1.07–1.55)","2","1.248743887","0.0412561128","0.005","mismatch","sample exclusion","our N 21,476 (21,458 with HTN known) vs 21,800; 403 fewer removed at the missing-data step, 328 fewer cases (exclusion_flow_v2.csv) | Model 3 of Table 3 age>=45; ours 1.249 (1.035-1.507) | CSV row repaired: unquoted comma in the target had split it (R/60)"
+"paper","text p.5","Age > 45 (text says older than 45) oral health","p for trend","= 0.001","3","0.004164579622","0.003164579622","5e-04","open","","Model 3, 30_ptrend.csv"
+"paper","text p.5","Age > 45 (text says older than 45) periodontal disease","OR (95% CI)","1.05 (95% CI, 0.92–1.20)","2","1.052724118","0.002724117503","0.005","match","","Model 3 of Table 3 age>=45; ours 1.053 (0.926-1.197) | CSV row repaired: unquoted comma in the target had split it (R/60)"
+"paper","text p.5","Age > 45 (text says older than 45) periodontal disease","p for trend","= 0.444","3","0.4252873608","0.01871263924","5e-04","open","","Model 3, 30_ptrend.csv"
+"paper","text p.5","Interaction oral health x age","p","< 0.001","3","0.3239316924","","","open","","M1 p=0.209; M2 p=0.186; M3 p=0.324"
+"paper","text p.5","Interaction periodontal disease x age","p","< 0.001","3","0.001819562603","","","open","","M1 p=6.31e-05; M2 p=0.000481; M3 p=0.00182"
