@@ -86,6 +86,7 @@
 
 | 스크립트 | 내용 | 산출물 |
 |---|---|---|
+| `00_paper_consistency.R` | 데이터 없이 논문 숫자끼리 맞는지 먼저 확인한다(scienceclaw-verification의 점검 항목을 R로 옮긴 것). ① OR ≈ √(CI 하한 × 상한) ② CI에서 SE = (ln 상한 − ln 하한)/3.92를 구해 Wald p를 역산하고, 이분형 치주질환의 P-trend와 비교(A7) ③ 표 1·2·3의 합계와 교차합(성별 합, 층별 합 = 전체, 증례 합). 불일치는 A 목록에 추가 | `00_paper_consistency.csv` |
 | `01_tables_from_paper.R` | 표 2·3 증례/전체 수로 `table`/`xtabs` 객체 생성: 구강건강(4) × HTN, 치주(2) × HTN, 각각 × 흡연, × 연령의 3원표. `addmargins`, `prop.table(margin = 1)`로 조건부 확률 P(HTN \| 노출)와 P(노출 \| HTN)을 나열 | `01_contingency_from_paper.csv` |
 | `02_tests_from_paper.R` | 각 표에 `chisq.test(correct = FALSE/TRUE)`, `fisher.test`, 조 OR(Woolf CI)·RR(log CI)·RD. 3원표에 `mantelhaen.test`(CMH OR)와 Breslow-Day 동질성 검정(`DescTools::BreslowDayTest`). 이것이 교호작용 p(A9)에 대한 비가중 기준선이 된다 | `02_crude_tests.csv` |
 
@@ -98,6 +99,7 @@
 | `10_download_data.R` | 위 파일 × 5주기 → `data/raw/*.rds` |
 | `11_build_analytic_sample.R` | 30세 이상 → 혈압 있음 → 흡연·OHQ835·OHQ845 있음. HTN = 평균 SBP ≥ 140 또는 DBP ≥ 90 또는 BPQ020 = 1 또는 BPQ050A = 1. 구강건강은 Excellent + VG를 합쳐 4단계. `exclusion_flow.csv`, `build_decisions.csv` 작성. 목표 N = 21,800, 증례 11,017 |
 | | **혈압 정리 규칙.** ① BPXDI1–4 = 0은 측정 불가이므로 평균 내기 **전에** NA로 바꾼다. ② BPQ050A(현재 혈압약 복용)는 BPQ040A = 1(BPQ040A는 다시 BPQ020 = 1)인 사람에게만 묻는다. 건너뛰기로 생긴 NA는 결측이 아니라 "복용 안 함"으로 처리하고, 결측 제외 대상에도 넣지 않는다. 진짜 결측은 77/99뿐이다. ③ 2017–18도 BPX_J만 쓴다 |
+| `13_validate_sample.R` | **pointblank**로 분석 표본을 규칙 검사한다. 하나라도 실패하면 멈춘다(`stop_on_fail`). 규칙: SEQN 중복 없음(`rows_distinct`), 나이 ≥ 30, 주기 ∈ F–J, 평균 DBP > 0(NA 허용), BPQ040A ≠ 1이면 복용 = 0(`preconditions`), BPXO 열 없음, 구강건강 ∈ 1–4, 치주·흡연 ∈ {0, 1}, 가중치 > 0, 행 수와 HTN 증례 수(논문 21,800 / 11,017과의 차이는 실패가 아니라 경고로 둔다). 데이터프레임 단계에서 검사하고(`svydesign`은 검사 불가), 리포트는 `output/report/13_validation.html` |
 | `12_svydesign.R` | `svydesign(ids = ~SDMVPSU, strata = ~SDMVSTRA, weights = ~WTMEC2YR/5, nest = TRUE)`. 30세 이상 표본은 `subset()`으로 잡는다(행을 먼저 지우지 않는다) |
 
 ### 단계 C: 표 1 재현 (분할표 + Rao-Scott)
@@ -190,3 +192,4 @@ Rao-Scott 보정이 무엇을 바꾸는지가 이번 주 학습 포인트다. �
 |---|---|---|
 | 2026-10-07 | 초안 | — |
 | 2026-10-07 | `plan_revision.md` 1–10 | 1 → A11 (표 1 성별 합 11,018). 2 → A12 + 층별 조 OR 표 + `34_stratum_or_decomposition.R`. 3 → A13 + `33_smoking_adjusted.R`. 4–6 → `11_build_analytic_sample.R` 혈압 정리 규칙(BPQ050A 건너뛰기, DBP 0 → NA, BPX_J만). 7 → A10과 `20_table1.R`의 χ² 설명 정정(SAS 기본 = 1차 Rao-Scott = `svychisq("Chisq")`). 8 → `40_fisher_size.R` 기각역 1회 계산. 9 → `41_or_vs_rr.R` 비붕괴성 추가. 10 → 대비별 P₀ 표, 0.62는 치주질환 기준군 값이었음을 정정 |
+| 2026-10-07 | 외부 스킬 검토 | pointblank → `13_validate_sample.R`. scienceclaw-verification의 점검 항목 → `00_paper_consistency.R`(스킬은 설치하지 않음). review-paper-code와 paper-review-skills는 사용하지 않음 |
