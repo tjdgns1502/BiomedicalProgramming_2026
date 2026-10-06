@@ -10,6 +10,8 @@
 ##         Table 2 strata: all / nonsmoking / smoking. Table 3: age<45 / age>=45.
 ## ptrend  P-trend as printed, per table x exposure x stratum x model.
 ## t1cat   Table 1 categorical rows: n and weighted % per group.
+## t1cont  Table 1 continuous rows: weighted mean (SE) per group, p.
+## t1p     Table 1 p-value per categorical variable.
 ##
 ## source("R/paper_tables.R")
 ## ------------------------------------------------------------------------
@@ -125,6 +127,36 @@ History of CVD,Missing,28,0.16,79,0.55
 Diabetes,Yes,874,5.79,2872,21.86
 Diabetes,No,732,6.93,1232,12.00
 Diabetes,Missing,9177,87.28,6913,66.14
+")
+
+## Table 1, continuous rows: weighted mean (SE) per group, as printed.
+t1cont <- read.csv(strip.white = TRUE, text = "
+variable,mean_non,se_non,mean_htn,se_htn,p_text
+Age,47.95,0.24,59.04,0.21,<0.001
+Total cholesterol,197.71,0.67,195.03,0.80,<0.001
+Triglyceride,146.27,1.85,172.62,1.90,<0.001
+Creatinine,0.85,0.00,0.95,0.01,<0.001
+HDL,55.11,0.31,52.64,0.29,<0.001
+HbA1c,5.55,0.01,5.98,0.01,<0.001
+Sodium,3575.03,25.86,3476.48,25.77,<0.001
+Fat,85.55,0.66,81.87,0.63,<0.001
+")
+
+## Table 1, p-value per categorical variable, as printed.
+t1p <- read.csv(strip.white = TRUE, text = "
+variable,p_text
+Sex,0.015
+Race,<0.001
+Smoking,<0.001
+Periodontal,<0.001
+Oral,<0.001
+Education,<0.001
+BMI,<0.001
+Sleep,<0.001
+Alcohol,<0.001
+Physical activity,<0.001
+History of CVD,<0.001
+Diabetes,<0.001
 ")
 
 N_NON <- 10783L   # Table 1 header, non-hypertension
