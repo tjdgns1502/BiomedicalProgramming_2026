@@ -1,0 +1,206 @@
+---
+title: "5주차: 범주형 자료와 분할표"
+subtitle: "Li et al., BMC Public Health 2023;23:1122 재현 (NHANES 2009-2018)"
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+    self_contained: true
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+TAB <- function(x) file.path("..", "tables", x)
+FIG <- function(x) file.path("..", "figures", x)
+rd  <- function(x) read.csv(TAB(x), check.names = FALSE, stringsAsFactors = FALSE)
+kt  <- function(x, ...) knitr::kable(x, format = "html", row.names = FALSE, ...)
+f2  <- function(x, d = 2) formatC(x, format = "f", digits = d)
+pv  <- function(p) ifelse(is.na(p), "", ifelse(p < 0.001, formatC(p, format = "e", digits = 1),
+                                               formatC(p, format = "f", digits = 3)))
+ci  <- function(o, l, u) ifelse(is.na(l), f2(o), sprintf("%.2f (%.2f-%.2f)", o, l, u))
+big <- function(x) format(x, big.mark = ",")
+
+ledger <- read.csv(TAB("ledger.csv"), colClasses = "character")
+st   <- table(factor(ledger$status, levels = c("match", "mismatch", "not reproduced", "open")))
+cz   <- table(ledger$cause[ledger$status == "mismatch"])
+flow1 <- rd("exclusion_flow.csv"); flow2 <- rd("exclusion_flow_v2.csv")
+cons <- rd("00_paper_consistency.csv")
+crude <- rd("02_crude_tests.csv")
+t1c  <- rd("20_table1_categorical.csv"); t1t <- rd("20_table1_tests.csv")
+t1n  <- rd("20_table1_continuous.csv")
+mod  <- rd("30_models.csv"); trd <- rd("30_ptrend.csv"); itr <- rd("30_pinteraction.csv")
+sens <- rd("31_sensitivity_htn_def.csv"); mcn <- rd("32_mcnemar.csv")
+smk  <- rd("33_smoking_adjusted.csv"); swp <- rd("34_swap_test.csv")
+fsz  <- rd("40_fisher_size_summary.csv"); fmc <- rd("40_fisher_size_mc.csv")
+orr  <- rd("41_or_vs_rr.csv"); ncs <- rd("41_noncollapsibility.csv")
+val  <- rd("13_validation_steps.csv")
+
+sex  <- t1c[t1c$variable == "Sex", ]
+n_dom <- sum(sex$n_non + sex$n_htn); n_htn <- sum(sex$n_htn)
+n_an <- tail(flow2$n_remaining, 1)
+nonref <- mod[!is.na(mod$lo), ]
+swapped <- nonref$table == "Table 2" & nonref$model == 1 & nonref$exposure == "oral" &
+           nonref$stratum %in% c("nonsmoking", "smoking")
+d_or <- abs(nonref$or - nonref$paper_or)
+m3 <- orr[orr$model == 3, ]
+fis <- fsz[fsz$test == "fisher", ]; pea <- fsz[fsz$test == "pearson", ]
+g <- function(d, ...) { a <- list(...); for (k in names(a)) d <- d[d[[k]] == a[[k]], ]; d }
+STR_KO <- c(all = "전체", nonsmoking = "비흡연", smoking = "흡연", "age<45" = "연령 < 45",
+            "age>=45" = "연령 ≥ 45")
+```
+
+<style>
+table { border-collapse: collapse; margin: 0.5em 0 1.2em; font-size: 0.9em; }
+th, td { border-bottom: 1px solid #ddd; padding: 3px 8px; text-align: right; }
+th { background: #f3f3f3; }
+td:first-child, th:first-child { text-align: left; }
+</style>
+
+## 1. 요약
+
+- **재현 정도.** 논문의 보고 수치 `r nrow(ledger)`개 가운데 `r st[["match"]]`개가 반올림 범위 안에서 일치했다. `r st[["mismatch"]]`개는 원인이 밝혀진 불일치(분석 표본 차이 `r cz[["sample exclusion"]]`, 변수 정의 `r cz[["variable definition"]]`, 논문 오기 `r cz[["paper typo"]]`)이고, `r st[["open"]]`개는 원인을 증명하지 못한 불일치다.
+- **표본.** 분석 표본은 N = `r big(n_an)`명이고 논문은 21,800명이다. 표 2·3의 OR `r nrow(nonref)`개에서 뒤바뀐 6칸을 뺀 `r sum(!swapped)`개 중 `r sum(d_or[!swapped] <= 0.03 + 1e-9)`개가 ±0.03 안에서 일치했다(차이 중앙값 `r f2(median(d_or[!swapped]), 3)`, 최대 `r f2(max(d_or[!swapped]), 2)`).
+- **논문 오류 1: 표 2 구강건강 Model 1 열의 층 뒤바뀜.** 흡연층과 비흡연층 값이 서로 바뀌어 인쇄됐다. 층을 바꿔 비교하면 |차이| 합이 Fair `r f2(swp$absdiff_same[swp$level == "Fair"])` → `r f2(swp$absdiff_swapped[swp$level == "Fair"])`, Poor `r f2(swp$absdiff_same[swp$level == "Poor"])` → `r f2(swp$absdiff_swapped[swp$level == "Poor"])`로 줄어든다.
+- **논문 오류 2: 비흡연 Model 3의 P-trend = 0.032.** 논문 자신의 신뢰구간과 모순된다.
+- **변수 정의 확인.** 중성지방은 공복 표본(LBXTR)이 아니라 비공복 생화학 패널(LBXSTR) 값이었다. 음주의 "Missing"에는 평생 비음주자가 들어가 있었다.
+- **재현되지 않은 주장.** "교호작용 4개 모두 p < 0.001"은 치주질환 × 연령에서만 재현됐다.
+- **검증 과제 ①.** Fisher 정확검정의 실제 크기는 모든 π와 n에서 0.05 이하였다(최대 `r f2(max(fis$max_size), 3)`).
+- **검증 과제 ②.** 같은 모형에서 OR은 RR보다 최대 `r f2(max(m3$or_over_rr))`배, 중앙값 `r f2(median(m3$or_over_rr), 3)`배 컸다. 1을 넘는 초과분으로 보면 OR이 RR의 중앙값 `r f2(median(m3$excess_ratio))`배다.
+
+## 2. 검증 과제
+
+### ① Fisher 정확검정의 실제 유의수준
+
+두 독립 이항(그룹당 n, 공통 확률 π)에서 귀무가설이 참일 때 기각 확률을 계산했다. Fisher p 값은 π와 무관하게 (x₁, x₂)만으로 정해진다. 그래서 n마다 기각역을 한 번 구한 뒤, π마다 이항 확률을 더해 **정확한** 크기를 얻었다. 몬테카를로(B = 10,000, 99% 구간)는 이 계산을 교차 확인하는 용도로만 썼고, `r sum(fmc$pass)` / `r nrow(fmc)` 조건이 통과했다(거짓 실패 기대치 `r f2(0.01 * nrow(fmc))`).
+
+![](`r FIG("40_fisher_size_curve.png")`)
+
+```{r}
+w <- reshape(fsz[, c("n", "test", "max_size")], idvar = "n", timevar = "test", direction = "wide")
+names(w) <- sub("max_size.", "", names(w))
+kt(data.frame(`그룹당 n` = w$n, `Fisher` = f2(w$fisher, 4), `Fisher mid-p` = f2(w$midp, 4),
+              `Pearson` = f2(w$pearson, 4), `Yates` = f2(w$yates, 4), check.names = FALSE),
+   caption = "π 격자(0.01-0.99)에서의 최대 실제 크기 (명목 0.05)")
+```
+
+Fisher와 Yates는 모든 조건에서 0.05 아래였고, 대체로 크게 아래였다. Pearson은 작은 n에서 0.05를 넘었다(n = 5에서 최대 `r f2(pea$max_size[pea$n == 5], 3)`). mid-p는 명목 수준에 가장 가까웠다. 검정통계량이 이산적이어서 명목 α를 정확히 맞출 수 없기 때문이며, 보수적인 쪽(Fisher)과 자유로운 쪽(Pearson)으로 갈린다. 이 논문처럼 칸 빈도가 수백~수천이면 차이가 사라지므로, 논문이 χ² 검정을 쓴 것 자체는 문제가 아니다.
+
+### ② 유병률이 높을 때 OR이 RR을 과장하는 정도
+
+표 2·3의 모든 대비에 대해, 같은 공변량으로 로지스틱 OR과 수정 포아송(log link) RR을 추정했다. 기준군 유병률 P₀는 대비마다 그 기준군에서 따로 구했다.
+
+![](`r FIG("41_or_rr_curve.png")`)
+
+```{r}
+x <- m3[m3$level %in% c("Poor", "Yes"), ]
+kt(data.frame(`층` = STR_KO[x$stratum], `노출` = ifelse(x$exposure == "oral", "구강건강 Poor", "치주질환"),
+              `P0` = f2(x$p0, 3), `OR` = ci(x$or, x$or_lo, x$or_hi), `RR` = ci(x$rr, x$rr_lo, x$rr_hi),
+              `OR/RR` = f2(x$or_over_rr, 3), `Zhang-Yu RR` = f2(x$rr_zhang_yu, 3), check.names = FALSE),
+   caption = "Model 3, 가장 강한 대비 (가중, 95% CI)")
+```
+
+과장 정도는 P₀가 클수록 커진다. 다만 P₀만으로 정해지지는 않고 효과 크기와 함께 결정된다. 예를 들어 연령 ≥ 45 Poor(P₀ = `r f2(g(m3, stratum = "age>=45", level = "Poor")$p0)`)보다 비흡연 Poor(P₀ = `r f2(g(m3, stratum = "nonsmoking", level = "Poor")$p0)`)의 OR/RR이 더 크다. 보정된 OR을 Zhang-Yu 공식으로 RR로 바꾸면 직접 추정한 RR보다 대개 크게 나온다. 이 공식은 보정(조건부) OR을 주변 OR처럼 다루기 때문이다.
+
+![](`r FIG("41_forest_or_rr.png")`)
+
+**비붕괴성.** 노출과 독립인 공변량, 즉 교란이 아닌 변수도 결과를 강하게 예측하면 OR을 움직인다. 정확 계산에서 조건부 OR이 2일 때, 그 공변량을 무시한 주변 OR은 효과가 커질수록 `r f2(min(ncs$logistic_or_marginal))`까지 내려갔다. 반면 log-linear 모형의 주변 RR은 모든 경우에 정확히 1.5였다. 따라서 "보정 후 OR이 변했다 = 교란이 있었다"는 해석은 OR에서는 성립하지 않을 수 있다. 실제로 이 자료에서 Model 1 → 3으로 갈 때 OR의 변화는 RR의 변화보다 일관되게 컸다(전체 Poor: OR `r f2(g(m3, stratum = "all", level = "Poor")$or_change_m1_m3, 3)`, RR `r f2(g(m3, stratum = "all", level = "Poor")$rr_change_m1_m3, 3)`).
+
+![](`r FIG("41_noncollapsibility.png")`)
+
+## 3. 자료
+
+NHANES 2009-2018(F-J 5주기), 30세 이상이다. 혈압은 청진식 BPX만 썼고(2017-18의 오실로메트릭 BPXO는 쓰지 않음), 확장기 혈압 0은 평균을 내기 전에 결측으로 바꿨다. 가중치는 WTMEC2YR/5이며, 설계 객체는 전체 49,693명으로 만든 뒤 `subset()`으로 분석 영역을 잡았다.
+
+```{r}
+kt(data.frame(`단계` = c("30세 이상", "혈압 없음 제외", "흡연·구강건강·치주 결측 제외", "최종"),
+  `v1 제외` = c(big(flow1$n_removed[2]), big(flow1$n_removed[3]), big(flow1$n_removed[4]), ""),
+  `v2 제외` = c(big(flow2$n_removed[2]), big(flow2$n_removed[3]), big(flow2$n_removed[4]), ""),
+  `v2 남음` = big(c(flow2$n_remaining[2:4], n_an)),
+  `논문` = c("", "19,398", "1,090", "21,800"), check.names = FALSE),
+  caption = "제외 과정 (v2 = 감사 후 수정, 6절)")
+```
+
+논문의 제외 인원 19,398 + 1,090에 최종 21,800을 더하면 42,288인데, 2009-2018년의 30세 이상 인원과 맞지 않는다(A1). 분석 전에 pointblank로 표본 규칙을 검사했다. 필수 규칙 `r sum(val$type == "hard")`개가 모두 통과했고, 경고 `r sum(val$warn)`개는 예상된 것이었다(N, 증례 수, 고혈압 미상 18명). 데이터를 일부러 망가뜨린 변이 8종도 모두 해당 규칙에서 멈춰, 규칙이 실제로 작동함을 확인했다.
+
+## 4. 표 1: 분할표와 Rao-Scott 보정
+
+```{r}
+sel <- t1c$variable %in% c("Oral", "Periodontal", "Smoking", "Alcohol", "Sleep")
+x <- t1c[sel, ]
+kt(data.frame(`변수` = x$variable, `수준` = x$level,
+  `우리 % (비고혈압 / 고혈압)` = sprintf("%.2f / %.2f", x$pct_non, x$pct_htn),
+  `논문 %` = ifelse(is.na(x$paper_pct_non), "", sprintf("%.2f / %.2f", x$paper_pct_non, x$paper_pct_htn)),
+  check.names = FALSE), caption = "가중 열 % (일부 변수)")
+```
+
+- **노출·흡연.** 구강건강, 치주질환, 흡연의 가중 %는 0.3%p 안에서 일치했다.
+- **음주.** "No drinks"와 "Missing"은 각각 20%p 넘게 달랐지만, 둘을 합하면 비고혈압군이 `r f2(sum(g(t1c, variable = "Alcohol", level = "No drinks")$pct_non, g(t1c, variable = "Alcohol", level = "Missing")$pct_non))`%로 논문(3.07 + 26.48 = 29.55%)과 거의 같다. 논문은 평생 비음주자(질문을 건너뛰어 생긴 NA)를 결측으로 분류한 것으로 보인다.
+- **수면.** 논문의 "< 7시간" 68%는 우리의 "7-9시간"과 비슷하고, 논문의 "7-9시간"은 우리의 "< 7시간"과 비슷하다. 범주 이름이 뒤바뀐 것으로 의심되지만 증명하지는 못했다.
+- **신체활동·당뇨.** 정의를 알 수 없어 open으로 남겼다.
+
+```{r}
+x <- t1n[t1n$variable %in% c("Age", "Triglyceride", "HbA1c"), ]
+kt(data.frame(`변수` = x$variable, `가중치·변수` = x$weight,
+  `우리 평균 (SE)` = sprintf("%.2f (%.2f) / %.2f (%.2f)", x$mean_non, x$se_non, x$mean_htn, x$se_htn),
+  `논문` = sprintf("%.2f (%.2f) / %.2f (%.2f)", x$paper_mean_non, x$paper_se_non, x$paper_mean_htn, x$paper_se_htn),
+  check.names = FALSE), caption = "연속형 (비고혈압 / 고혈압). 중성지방은 LBXSTR이 논문 값과 맞는다")
+```
+
+```{r}
+x <- t1t[t1t$variable %in% c("Sex", "Periodontal", "Oral"), ]
+kt(data.frame(`변수` = x$variable, `방법` = x$method, `통계량` = f2(x$statistic),
+  `자유도` = x$df, `p` = pv(x$p), `논문 p` = x$paper_p, check.names = FALSE),
+  caption = "χ² 검정 네 가지")
+```
+
+가중 빈도를 그대로 `chisq.test`에 넣으면 표본 크기가 모집단 크기(약 1억 7,500만 명)로 계산되어, 통계량이 수십만이 되고 p는 0이 된다. Rao-Scott 보정은 이 통계량을 설계효과로 나눠 표본 설계에 맞는 크기로 되돌린다. 1차 보정은 SAS `PROC SURVEYFREQ`의 기본값이고 R `svychisq(statistic = "Chisq")`에 해당한다. 논문에서 유일하게 0.001보다 큰 성별 p(0.015)는 어느 방법으로도 재현되지 않았다(1차 보정 `r pv(g(t1t, variable = "Sex", method = "rao_scott_1")$p)`). 표본 자체가 달라서 어느 방법을 썼는지 판별할 수 없다.
+
+![](`r FIG("50_mosaic_oral_htn.png")`)
+
+![](`r FIG("50_pearson_residuals.png")`)
+
+Pearson 잔차를 보면 Poor × 고혈압 칸이 비흡연층에서는 +`r f2(g(rd("50_pearson_residuals.csv"), stratum = "Non-smoking", oral = "Poor", htn = "HTN")$resid, 1)`, 흡연층에서는 +`r f2(g(rd("50_pearson_residuals.csv"), stratum = "Smoking", oral = "Poor", htn = "HTN")$resid, 1)`다. 연관은 비흡연층에서 더 강하고, 이는 5절의 열 뒤바뀜 결론과 같은 방향이다.
+
+## 5. 표 2·3: 보정 오즈비
+
+`svyglm(quasibinomial)`로 표 각주의 Model 1-3을 그대로 적합했다. 표 2 Model 2·3에는 CVD, 당뇨, 나트륨, 지방, 검사값이 들어가고, 표 3 Model 1에는 나이가 없다. 결측 공변량은 범주형이면 Missing 범주로, 연속형이면 평균 대치와 지시변수로 처리했다.
+
+![](`r FIG("50_forest_paper_vs_ours.png")`)
+
+```{r}
+kt(data.frame(`수준` = swp$level,
+  `우리 비흡연` = f2(swp$ours_nonsmoking), `우리 흡연` = f2(swp$ours_smoking),
+  `논문 비흡연` = f2(swp$paper_nonsmoking), `논문 흡연` = f2(swp$paper_smoking),
+  `|차이| 합, 같은 층` = f2(swp$absdiff_same), `|차이| 합, 층 바꿈` = f2(swp$absdiff_swapped),
+  check.names = FALSE), caption = "표 2 구강건강 Model 1: 층 뒤바뀜 검정")
+```
+
+이 패턴은 논문 자체에서도 확인된다. 논문의 증례/전체 수로 계산한 조 OR은 비흡연층(Poor `r f2(g(crude, exposure = "oral", stratum = "nonsmoking", contrast = "Poor vs Excellent/Very good", method = "or_woolf")$estimate)`)이 흡연층(`r f2(g(crude, exposure = "oral", stratum = "smoking", contrast = "Poor vs Excellent/Very good", method = "or_woolf")$estimate)`)보다 크다. 그런데 인쇄된 Model 1에서는 반대다. 반면 같은 표의 Model 2·3, 치주질환, 증례/전체 수는 뒤바뀌지 않았다.
+
+**P-trend.** 비흡연층 구강건강 Model 3의 논문 값 0.032는, 논문 자신의 CI로부터 역산한 Fair p(4×10⁻⁶)·Poor p(4×10⁻⁴)와 양립하지 않는다(A14). 우리 값은 `r pv(g(trd, table = "Table 2", exposure = "oral", stratum = "nonsmoking", model = 3)$p_trend)`다. 치주질환의 P-trend 12개는 모두 CI에서 역산한 Wald p와 일치했으므로, 논문의 이분형 P-trend는 Wald p다(A7).
+
+```{r}
+kt(data.frame(`표` = itr$table, `교호작용` = paste(itr$exposure, "×", itr$stratifier),
+  `모형` = itr$model, `F` = f2(itr$F), `자유도` = itr$df, `p` = pv(itr$p), `논문` = itr$paper_p,
+  check.names = FALSE), caption = "P-interaction (곱셈항 Wald 검정)")
+```
+
+**흡연 보정(A13).** 방법 절에는 흡연이 보정 변수로 나오지만 표 2 각주에는 없다. 흡연을 추가하면 Model 3 Poor가 `r f2(g(smk, exposure = "oral", model = 3, level = "Poor")$or_footnote, 3)`에서 `r f2(g(smk, exposure = "oral", model = 3, level = "Poor")$or_plus_smoking, 3)`로 줄어든다. 논문 값 1.48은 흡연을 뺀 각주 그대로의 모형과 맞는다.
+
+**고혈압 정의 민감도.** 논문 주장대로, 구강건강 Poor는 측정 기준(`r ci(g(sens, definition = "measured", stratum = "all", model = 3, level = "Poor")$or, g(sens, definition = "measured", stratum = "all", model = 3, level = "Poor")$lo, g(sens, definition = "measured", stratum = "all", model = 3, level = "Poor")$hi)`)과 진단 기준(`r ci(g(sens, definition = "diagnosed", stratum = "all", model = 3, level = "Poor")$or, g(sens, definition = "diagnosed", stratum = "all", model = 3, level = "Poor")$lo, g(sens, definition = "diagnosed", stratum = "all", model = 3, level = "Poor")$hi)`) 모두에서 연관이 있었다. 치주질환은 진단 기준에서만 연관이 있었다(측정 `r f2(g(sens, definition = "measured", stratum = "all", model = 3, level = "Yes")$or)`, 진단 `r f2(g(sens, definition = "diagnosed", stratum = "all", model = 3, level = "Yes")$or)`).
+
+**McNemar.** 같은 사람을 두 정의로 판정한 짝지은 표에서 불일치 칸은 b = `r big(mcn$b[1])`(혈압은 높지만 진단받은 적 없음), c = `r big(mcn$c[1])`(진단·치료받았고 현재 혈압은 정상)이다. 비가중 McNemar χ² = `r f2(g(mcn, group = "all", method = "mcnemar")$statistic, 1)`이지만, 설계 기반 짝 차이 검정의 t² 는 `r f2(g(mcn, group = "all", method = "survey_paired")$statistic^2, 1)`이다. 표 1의 Rao-Scott와 같은 설계효과가 여기서도 나타난다.
+
+## 6. 감사로 바뀐 것
+
+결과를 ledger에 넣기 전에 ai-error-auditor가 코드를 독립 감사했다. DBP 측정값이 전부 0인 59명이 SBP가 있는데도 "혈압 없음"으로 빠진 것을 찾아냈고, `R/11_build_analytic_sample_v2.R`로 고쳤다(`CHANGES_v2.md`). 그 결과 N은 21,417에서 `r big(n_an)`으로, OR은 최대 0.006 바뀌었고 결론은 바뀌지 않았다. ledger의 허용 오차는 스킬 규칙(표시 자릿수의 반 단위)을 유지했다. 계획서 기준 ±0.03에 드는 OR 행은 evidence에 따로 표시했다.
+
+## 7. ledger 현황
+
+```{r}
+kt(data.frame(`상태` = names(st), `행 수` = as.integer(st), check.names = FALSE))
+op <- ledger[ledger$status == "open", ]
+kt(setNames(as.data.frame(table(op$table)), c("표", "행 수")), caption = "open 행의 위치")
+```
+
+open 행은 주로 정의를 알 수 없는 표 1 변수(수면, 신체활동, 당뇨, BMI 극단 범주, CVD 결측)와 P-interaction, 일부 P-trend다. 원인을 증명하지 못한 행은 고쳐 맞추거나 지우지 않고 그대로 남겼다.

@@ -34,7 +34,8 @@
 ##      with monotone ORs (R/00, A14).
 ##   3. Alcohol "No drinks" / "Missing" -> variable definition: the paper put
 ##      lifetime abstainers (skip-pattern NA) under Missing; No drinks +
-##      Missing is 29.55% in both (R/20).
+##      Missing agrees with the paper's (29.55% non-HTN) within 0.1 point
+##      while each part differs by 20+ points (R/20).
 ##   4. ORs within 0.05 of the paper, Table 1 % within 0.5 percentage point,
 ##      counts within 5%, means within 2 SE -> sample exclusion: our sample
 ##      is 383 smaller (exclusion_flow.csv), everything else per the methods.
@@ -55,7 +56,8 @@ rd <- function(f) read.csv(file.path(TAB, f), stringsAsFactors = FALSE, check.na
 
 ## --- read the ledger, repairing split rows --------------------------------
 lines <- readLines(file.path(TAB, "ledger.csv"), encoding = "UTF-8")
-hdr <- strsplit(lines[1], ",")[[1]]
+## header via read.csv: after a first run write.csv has quoted it
+hdr <- names(read.csv(text = lines[1], check.names = FALSE))
 parse_line <- function(s) {
   x <- read.csv(text = s, header = FALSE, colClasses = "character",
                 na.strings = character(0), quote = "\"")
@@ -69,7 +71,7 @@ parse_line <- function(s) {
   x[is.na(x)] <- ""
   ## a row repaired on an earlier run is already quoted: still flag it, so
   ## reruns give the same evidence text
-  if (grepl("\\(95% CI, ", x[5])) repaired <- TRUE
+  if (grepl("\\(95% CI\\s*,", x[5])) repaired <- TRUE    # paper prints "CI ," twice
   c(x, repaired = repaired)
 }
 L <- as.data.frame(do.call(rbind, lapply(lines[-1], parse_line)), stringsAsFactors = FALSE)
@@ -185,9 +187,12 @@ SWAP <- list(cause = "paper typo", evidence = paste(
 A14 <- list(cause = "paper typo", evidence = paste(
   "the paper's own CIs imply Wald p 4e-6 (Fair 1.49, 1.26-1.77) and 4e-4 (Poor 1.62,",
   "1.24-2.12) with monotone ORs; a trend p of 0.032 is incompatible (00_paper_consistency.csv)"))
-ALC <- list(cause = "variable definition", evidence = paste(
+alc <- t1c[t1c$variable == "Alcohol" & t1c$level %in% c("No drinks", "Missing"), ]
+ALC <- list(cause = "variable definition", evidence = sprintf(paste(
   "paper's Missing holds lifetime abstainers (skip-pattern NA): No drinks + Missing =",
-  "29.55% in the paper and in ours (non-HTN) (20_table1_categorical.csv)"))
+  "%.2f%% / %.2f%% ours vs 29.55%% / 36.71%% paper (non-HTN / HTN), while each part",
+  "differs by 20+ points (20_table1_categorical.csv)"),
+  sum(alc$pct_non), sum(alc$pct_htn)))
 
 for (i in seq_len(nrow(L))) {
   tb <- L$table[i]; rw <- L$row[i]; cl <- L$col[i]; tg <- L$target[i]
