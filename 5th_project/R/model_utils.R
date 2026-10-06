@@ -87,11 +87,11 @@ drop_empty_levels <- function(design, covs) {
 }
 
 fit_exposure <- function(design, exposure, covs, outcome = "htn",
-                         family = quasibinomial()) {
+                         family = quasibinomial(), ...) {
   covs_u <- usable_covs(design, covs)
   design <- drop_empty_levels(design, c(exposure, covs_u))
   f <- reformulate(c(exposure, covs_u), response = outcome)
-  m <- svyglm(f, design = design, family = family)
+  m <- svyglm(f, design = design, family = family, ...)   # ... e.g. start, maxit
   cf <- summary(m)$coefficients
   rows <- grep(paste0("^", exposure), rownames(cf))
   ci <- confint(m, parm = rownames(cf)[rows])
