@@ -168,6 +168,41 @@
       "changed_for_publication": false
     },
     {
+      "file": "analysis/documentation/html-explainer-20261006/browser-review.json",
+      "bytes": 716,
+      "sha256": "6c56ae1f25b692830023176141be615cafdc03dbd50a2e6f29cf6537ccb44034",
+      "source_sha256": "6c56ae1f25b692830023176141be615cafdc03dbd50a2e6f29cf6537ccb44034",
+      "changed_for_publication": false
+    },
+    {
+      "file": "analysis/documentation/html-explainer-20261006/document-record.json",
+      "bytes": 671,
+      "sha256": "b7ca71cfd90d660b81ca9abcaa89aebb06da9c8223f78788a767c7655bce4d9f",
+      "source_sha256": "b7ca71cfd90d660b81ca9abcaa89aebb06da9c8223f78788a767c7655bce4d9f",
+      "changed_for_publication": false
+    },
+    {
+      "file": "analysis/documentation/html-explainer-20261006/prompt-review.json",
+      "bytes": 5095,
+      "sha256": "a511e75abe7ccd8bdb92240708f191a50e538323d13a788ceb42449184ceff27",
+      "source_sha256": "a511e75abe7ccd8bdb92240708f191a50e538323d13a788ceb42449184ceff27",
+      "changed_for_publication": false
+    },
+    {
+      "file": "analysis/documentation/html-explainer-20261006/result-review.json",
+      "bytes": 13671,
+      "sha256": "ab66110702f49f71189335f02636c590e19f90da10d07b5674fa2b8dc9e37935",
+      "source_sha256": "ab66110702f49f71189335f02636c590e19f90da10d07b5674fa2b8dc9e37935",
+      "changed_for_publication": false
+    },
+    {
+      "file": "analysis/documentation/html-explainer-20261006/sources_manifest.json",
+      "bytes": 10147,
+      "sha256": "1290c35b14de324797bd1de1cd550f944025d822aeaad4d25b1008e4dcbc6eb0",
+      "source_sha256": "1290c35b14de324797bd1de1cd550f944025d822aeaad4d25b1008e4dcbc6eb0",
+      "changed_for_publication": false
+    },
+    {
       "file": "analysis/environment/ENV-20261004/checked_run_artifacts.csv",
       "bytes": 6353,
       "sha256": "3222e2456d44d12cdf6fda2497e9508063528ca6a3de99d47f2b2f466d120840",
@@ -304,8 +339,8 @@
       "file": "analysis/final_bundle_manifest.json",
       "bytes": 21361,
       "sha256": "4fdb59580b21e7b5328a339666a202fa17163ec0b96efebcc4084edfd3bcfcb4",
-      "source_sha256": "4fdb59580b21e7b5328a339666a202fa17163ec0b96efebcc4084edfd3bcfcb4",
-      "changed_for_publication": false
+      "source_sha256": "4ce7a5bfc9f2757e40ec1d6a0b4340a288d79bffdefade4dfddd45f273f14155",
+      "changed_for_publication": true
     },
     {
       "file": "analysis/memory/decisions.md",
@@ -344,9 +379,9 @@
     },
     {
       "file": "analysis/memory/requirements.md",
-      "bytes": 262,
-      "sha256": "df99c0558db33239ce537c24c68e5c21bd4e37f9904b490e5099f5a03ba6e229",
-      "source_sha256": "df99c0558db33239ce537c24c68e5c21bd4e37f9904b490e5099f5a03ba6e229",
+      "bytes": 621,
+      "sha256": "7e405bbe02e014e83072f5e6f43edb66258e22f011e6b13756e490d5e34a0d79",
+      "source_sha256": "7e405bbe02e014e83072f5e6f43edb66258e22f011e6b13756e490d5e34a0d79",
       "changed_for_publication": false
     },
     {
@@ -3157,6 +3192,13 @@
       "changed_for_publication": false
     },
     {
+      "file": "analysis/sources/europepmc/PMC10262359.fullText.xml",
+      "bytes": 122620,
+      "sha256": "4dd8133d427508c3bb42f2edc1b7de70ba5e483e148bd9fc5986c646e010fdae",
+      "source_sha256": "4dd8133d427508c3bb42f2edc1b7de70ba5e483e148bd9fc5986c646e010fdae",
+      "changed_for_publication": false
+    },
+    {
       "file": "analysis/sources/europepmc/PMC10262359.supplementary.zip",
       "bytes": 115882,
       "sha256": "38247b25fa7bac7a6d6293a19786ec7d1e2ac9c874403ab1b359b8ea51ecd7ad",
@@ -3168,6 +3210,13 @@
       "bytes": 1250,
       "sha256": "cefcd6349550304565ce1c22add470c8605f696930b8a905c6f3f8b6455e68f0",
       "source_sha256": "cefcd6349550304565ce1c22add470c8605f696930b8a905c6f3f8b6455e68f0",
+      "changed_for_publication": false
+    },
+    {
+      "file": "analysis/sources/europepmc/supplementary/12889_2023_16012_MOESM1_ESM.pdf",
+      "bytes": 128533,
+      "sha256": "3491386e3f09fbf2ebc32f78b15e6d582e6b0f977d036ac2d515dcb5ef330eeb",
+      "source_sha256": "3491386e3f09fbf2ebc32f78b15e6d582e6b0f977d036ac2d515dcb5ef330eeb",
       "changed_for_publication": false
     },
     {
@@ -3231,6 +3280,13 @@
       "bytes": 8322,
       "sha256": "0edbdd5d7e60c95a0f804476c091ef2d97bb8c9afd444a7b25f17005f73f716b",
       "source_sha256": "0edbdd5d7e60c95a0f804476c091ef2d97bb8c9afd444a7b25f17005f73f716b",
+      "changed_for_publication": false
+    },
+    {
+      "file": "analysis/src/build_analysis_process_html.py",
+      "bytes": 53432,
+      "sha256": "824f1813a0a610d720d4afa29b0891a1d2a1d1558e9ba40fff4b83e9e58d28d7",
+      "source_sha256": "824f1813a0a610d720d4afa29b0891a1d2a1d1558e9ba40fff4b83e9e58d28d7",
       "changed_for_publication": false
     },
     {
@@ -3458,10 +3514,17 @@
       "changed_for_publication": false
     },
     {
+      "file": "analysis-process.html",
+      "bytes": 333481,
+      "sha256": "1b226348472d70260d0125c39abe4f9aa08db32f328d488e65f8df15fa83f1ca",
+      "source_sha256": "1b226348472d70260d0125c39abe4f9aa08db32f328d488e65f8df15fa83f1ca",
+      "changed_for_publication": false
+    },
+    {
       "file": "README.md",
-      "bytes": 3925,
-      "sha256": "d3d4e6e76e1642ac6907106de2af55d0b2bc7dae1188c4f35d02c8e903af7bbe",
-      "source_sha256": "89947a866e2c4bd89a1fb210ba413689bd74b13c5f5ff2f942390eb293add928",
+      "bytes": 4458,
+      "sha256": "fe94993a4d34636582e4d61d4252d85539ebefdf2d2b8a54e4857b0f3afe9a0a",
+      "source_sha256": "dc15d9b1ab0d15c37cfa382ccaccb5c91d14577a3f33678ccdbdd339b2d91bc2",
       "changed_for_publication": true
     },
     {
@@ -3658,20 +3721,6 @@
       "bytes": 13511,
       "sha256": "cbe6c4295bf1471de8030d3c2d1d293fce151c747b9547e2fa5536638dbed915",
       "source_sha256": "cbe6c4295bf1471de8030d3c2d1d293fce151c747b9547e2fa5536638dbed915",
-      "changed_for_publication": false
-    },
-    {
-      "file": "analysis/sources/europepmc/PMC10262359.fullText.xml",
-      "bytes": 122620,
-      "sha256": "4dd8133d427508c3bb42f2edc1b7de70ba5e483e148bd9fc5986c646e010fdae",
-      "source_sha256": "4dd8133d427508c3bb42f2edc1b7de70ba5e483e148bd9fc5986c646e010fdae",
-      "changed_for_publication": false
-    },
-    {
-      "file": "analysis/sources/europepmc/supplementary/12889_2023_16012_MOESM1_ESM.pdf",
-      "bytes": 128533,
-      "sha256": "3491386e3f09fbf2ebc32f78b15e6d582e6b0f977d036ac2d515dcb5ef330eeb",
-      "source_sha256": "3491386e3f09fbf2ebc32f78b15e6d582e6b0f977d036ac2d515dcb5ef330eeb",
       "changed_for_publication": false
     },
     {
@@ -19401,5 +19450,22 @@
   ],
   "plot_images_in_learning_notes": 10,
   "scope": "shared snapshot; original local run and review manifests preserved; publication_manifest excludes itself",
-  "git_checkout_bytes": "5th_weeks/.gitattributes disables newline conversion to preserve artifact hashes"
+  "git_checkout_bytes": "5th_weeks/.gitattributes disables newline conversion to preserve artifact hashes",
+  "documentation_amendment": {
+    "date_kst": "2026-10-06",
+    "artifact": "analysis-process.html",
+    "sha256": "1b226348472d70260d0125c39abe4f9aa08db32f328d488e65f8df15fa83f1ca",
+    "scope": "documentation only; no new statistical run",
+    "source_manifest": "sources_manifest.json",
+    "reviews": [
+      "prompt-review.json",
+      "result-review.json",
+      "browser-review.json"
+    ],
+    "visual_inspection": "desktop overview, issue register and mobile overview inspected; readable without page overflow",
+    "generator": "analysis/src/build_analysis_process_html.py",
+    "regeneration_command": "uv run analysis/src/build_analysis_process_html.py .",
+    "original_analysis_note_and_run_files": "unchanged"
+  },
+  "updated_at": "2026-10-06T03:36:44.895598+00:00"
 }

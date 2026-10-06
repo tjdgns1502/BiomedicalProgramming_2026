@@ -1,0 +1,16 @@
+{
+  "date_kst": "2026-10-06",
+  "artifact": "analysis-process.html",
+  "sha256": "1b226348472d70260d0125c39abe4f9aa08db32f328d488e65f8df15fa83f1ca",
+  "scope": "documentation only; no new statistical run",
+  "source_manifest": "sources_manifest.json",
+  "reviews": [
+    "prompt-review.json",
+    "result-review.json",
+    "browser-review.json"
+  ],
+  "visual_inspection": "desktop overview, issue register and mobile overview inspected; readable without page overflow",
+  "generator": "analysis/src/build_analysis_process_html.py",
+  "regeneration_command": "uv run analysis/src/build_analysis_process_html.py .",
+  "original_analysis_note_and_run_files": "unchanged"
+}

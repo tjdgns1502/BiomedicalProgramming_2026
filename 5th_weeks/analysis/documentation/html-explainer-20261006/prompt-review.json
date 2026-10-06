@@ -1,0 +1,78 @@
+{
+  "reviewer": "html_prompt_audit",
+  "review_date": "2026-10-06",
+  "decision": "accept",
+  "artifact": {
+    "path": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\의생명프로그래밍_발표준비\\5주차\\analysis-process.html",
+    "sha256": "1b226348472d70260d0125c39abe4f9aa08db32f328d488e65f8df15fa83f1ca"
+  },
+  "scope": [
+    "원본 프롬프트 [1]~[9] 역할과 실제 기록 연결",
+    "계획과 실제 수행의 차이: 출판 수치 노출, 비맹검, 독립 인스턴스 검토",
+    "E1 이후 plan1.5/E2 개정과 사전등록 미주장",
+    "ISSUE-01~12 과학적 해결 상태와 남은 의문",
+    "사용자 후속 HTML 요청과 기존 stage-paper 통합 원칙의 구분",
+    "계산 검토와 저자 설정 확인·인과성·외부검증의 경계"
+  ],
+  "evidence_files": [
+    "실행 설계/05-prompts-v2.0-original.md",
+    "실행 설계/05-prompts-week5.md",
+    "analysis/memory/project.json",
+    "analysis/memory/decisions.md",
+    "analysis/memory/progress.md",
+    "analysis/memory/task_registry.json",
+    "analysis/memory/stage_registry.json",
+    "analysis/memory/output_coverage.json",
+    "analysis/config/plan-v1.5.json",
+    "analysis/reviews/source-definition-audit.md",
+    "analysis/reviews/E2-20261004-q-review.json",
+    "치주질환과 고혈압 - 분석 길잡이/01-paper 연구 질문과 자료 구조.md",
+    "치주질환과 고혈압 - 분석 길잡이/02-paper 한 사람의 원자료와 코딩.md",
+    "치주질환과 고혈압 - 분석 길잡이/03-paper 선정 결측과 복합표본.md",
+    "치주질환과 고혈압 - 분석 길잡이/04-paper 분할표와 검정.md",
+    "치주질환과 고혈압 - 분석 길잡이/05-paper 오즈비와 보정 모형.md",
+    "치주질환과 고혈압 - 분석 길잡이/06-paper 통계 검증 과제.md",
+    "치주질환과 고혈압 - 분석 길잡이/07-paper 결과 해석과 재현 한계.md"
+  ],
+  "checks": {
+    "prompt_sections_1_to_9_present_and_roles_accurate": true,
+    "planned_blinding_and_actual_nonblinded_execution_distinguished": true,
+    "independent_agents_not_external_sample": true,
+    "prior_results_and_post_result_plan_revision_disclosed": true,
+    "HTML_is_explicit_user_requested_followup": true,
+    "issue_states_distinguish_accepted_work_from_scientific_resolution": true,
+    "missing_data_bias_not_claimed_resolved": true,
+    "A_B_different_population_and_weights_disclosed": true,
+    "Fisher_scope_not_NHANES_design_or_all_null_space": true,
+    "OR_PR_not_causal_OR_or_incidence_RR": true,
+    "unrun_complete_case_and_old_absolute_paths_disclosed": true,
+    "upstream_E2_changes_and_M1_M2_reuse_disclosed": true
+  },
+  "blocking_issues": [],
+  "nonblocking_notes": [
+    "ISSUE-07 사용자의 설명 자료에서는 부분 해결로 표기됐으나 바로 아래 미공개 핵심 설정이 확정되지 않았음을 명시하므로 원문 학습노트의 미해결/부분 재현 의미와 충돌하지 않음.",
+    "일부 source 기록은 이동 전 절대 경로를 보존하며 HTML은 해당 제약을 정확히 설명함."
+  ],
+  "limits": [
+    "HTML 본문 및 근거 설명의 감사. base64 이미지 데이터는 읽기에서 제외했으며 시각적 렌더링/이미지 원본 검증은 이 검토 범위 밖.",
+    "수치를 다시 계산하거나 원자료를 재처리하지 않았음. 기존 출처 및 검토된 결과 기록을 대조했으며 별도 수치 감사가 필요.",
+    "검토 중 HTML 또는 원본 분석 파일을 수정하지 않았음."
+  ],
+  "re_review_required": false,
+  "re_review_if_changed": "프롬프트 매핑, ISSUE 상태, 맹검/독립성/사전등록 또는 한계 설명의 의미가 바뀌면 새 HTML SHA256으로 재검토.",
+  "re_review_amendment": {
+    "previous_html_sha256": "5225a0c114308b28f0e26c543eb31a199aa07b05e3358f050776c9bfc8e56401",
+    "change": "보충표의 11명을 고혈압 자체 판정 불명이 아닌 진단·복약 상태 미확인인 측정 고혈압으로 명확히 설명",
+    "verified_new_wording": "기본 HTN 중 진단·복약 상태 미확인인 측정 고혈압 11명",
+    "decision": "accept",
+    "evidence": "기본 HTN은 측정 혈압의 양성 근거로 확정되지만 진단/복약 분기 상태가 미확인인 11명은 두 보충 domain에서 빠짐. 분석계획 보충 domain 정의 및 기존 E2 분모 감사와 일치."
+  },
+  "css_only_amendment": {
+    "previous_html_sha256": "ab7e43c35a551179016098f90ce1fa218424050b7e18ce93f43f2c63f0526354",
+    "change": "h1{word-break:keep-all} 한 줄 및 주변 줄바꿈 추가",
+    "verification": "추가 CSS와 주변 새 줄바꿈을 메모리에서 제거한 UTF-8 SHA256이 이전 승인 HTML SHA256과 정확히 일치함. 본문·수치·이미지·링크·프롬프트 설명은 동일.",
+    "previous_bytes_recovered_sha256": "ab7e43c35a551179016098f90ce1fa218424050b7e18ce93f43f2c63f0526354",
+    "decision": "accept",
+    "scientific_re_review_required": false
+  }
+}

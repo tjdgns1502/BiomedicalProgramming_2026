@@ -1,0 +1,187 @@
+{
+  "review_id": "HTML-RESULT-REVIEW-20261006",
+  "reviewer": "html_result_audit",
+  "decision": "accept",
+  "reviewed_artifact": {
+    "path": "C:/Users/doyun/Desktop/2026-2/의생명프로그래밍/의생명프로그래밍_발표준비/5주차/analysis-process.html",
+    "sha256": "1b226348472d70260d0125c39abe4f9aa08db32f328d488e65f8df15fa83f1ca",
+    "bytes": 333481
+  },
+  "evidence_base": "C:/Users/doyun/Desktop/2026-2/의생명프로그래밍/의생명프로그래밍_발표준비/5주차",
+  "review_scope": [
+    "HTML 본문에 표시한 표본수, 선정 흐름, 가중/비가중 비율, 검정 p값, Fisher 교육 검증 및 crude OR/PR 수치를 저장된 결과와 대조",
+    "A/B 후보의 표본·가중치·추정 대상 차이 및 Table2/Table3/보충표 각주 구분 확인",
+    "E1에서 E2로의 CDC 검사법 변환, M1/M2 재사용과 M3·추세·상호작용 재계산 범위 확인",
+    "교량 회귀 계수의 고정값 처리와 추가 불확실성 미전파, 원문 오류 후보, 미실행 분석 및 재현 한계 설명 확인",
+    "내부 독립 검토와 맹검·외부 검증·저자 설정 확인을 구별하는 해석 확인"
+  ],
+  "excluded_scope": [
+    "base64 이미지의 픽셀·시각 레이아웃·이미지 해시 검토",
+    "브라우저 반응형·인쇄·버튼 동작 검토",
+    "HTML 모든 링크의 접근 가능성 확인",
+    "원자료 전체 추출 및 회귀모형 신규 재적합",
+    "원본 프롬프트 절별 정확한 문구의 독립 감사",
+    "GitHub 공유본의 파일 선택·해시·실제 push 상태"
+  ],
+  "exposure_record": {
+    "published_results_seen": true,
+    "stored_analysis_results_seen": true,
+    "html_author": false,
+    "analysis_code_author": false,
+    "statement": "저장된 분석 기록을 확인한 별도 인스턴스의 내부 검토이며, 맹검 또는 외부 표본 검증이 아니다."
+  },
+  "checks": [
+    {
+      "id": "partial_reconstruction_sample",
+      "passed": true,
+      "verified_values": {"paper_n": 21800, "A_n": 21458, "difference": -342, "A_htn_n": 10689, "A_no_htn_n": 10769},
+      "evidence": ["analysis/runs/R2-20261004/report.json", "analysis/runs/E2-20261004/report.json", "치주질환과 고혈압 - 분석 길잡이/03-paper 선정 결측과 복합표본.md"],
+      "finding": "HTML은 표본 차이와 저자 선택 미확인을 부분 재현으로 설명한다."
+    },
+    {
+      "id": "sample_flow",
+      "passed": true,
+      "verified_values": [49693, 24042, 22163, 21515, 21488, 21476, 21458, 21458],
+      "evidence": ["analysis/runs/R2-20261004/tables/sample_flow.csv"],
+      "finding": "후보 선정 순서 및 최종 추가 제외 0명을 원문 흐름 복원으로 주장하지 않는다."
+    },
+    {
+      "id": "weighted_unweighted_prevalence",
+      "passed": true,
+      "verified_values": {"raw_percent": 49.81358933731009, "weighted_percent": 44.91788572859339},
+      "evidence": ["analysis/runs/R2-20261004/report.json"],
+      "finding": "표의 비가중 n과 설계가중 백분율·평균·SE를 구별한다."
+    },
+    {
+      "id": "candidate_A_B_boundary",
+      "passed": true,
+      "verified_values": {"A_domain_n": 21458, "B_domain_n": 19925, "B_excluded_from_A": 1533, "both_design_df": 78},
+      "evidence": ["analysis/runs/E2-20261004/report.json", "analysis/runs/E1-20261004/definitions.json", "analysis/reviews/source-definition-audit.md"],
+      "finding": "A=MEC/5와 B=WTDRD1/5 식이 domain을 구분하며 표본과 가중치 동시 변경을 방법의 우열로 판단하지 않는다."
+    },
+    {
+      "id": "contingency_test_pvalues_scope",
+      "passed": true,
+      "verified_values": {"pearson_p": 0.000103196, "yates_p": 0.000110880, "fisher_p": 0.000110530, "rao_scott_F_p": 0.00000165716},
+      "evidence": ["치주질환과 고혈압 - 분석 길잡이/04-paper 분할표와 검정.md", "analysis/reviews/R2-20261004-q-review.json"],
+      "finding": "일반 독립표집 비교와 NHANES 설계 기반 추론을 구분하고 모자이크 색을 survey 유의성으로 해석하지 않는다."
+    },
+    {
+      "id": "paper_footnotes_model_adjustment",
+      "passed": true,
+      "evidence": ["analysis/runs/E1-20261004/definitions.json", "analysis/sources/europepmc/supplementary_scope_facts.json", "치주질환과 고혈압 - 분석 길잡이/05-paper 오즈비와 보정 모형.md"],
+      "finding": "Table2 M1은 이미 age/sex/race/education 보정이고 crude가 아니다. Table2 M2에는 smoking이 없으며 Table3 M1에는 연속 age가 없고 M2에는 smoking이 있지만 CVD/diabetes/diet가 없다. 보충 M2는 별도 설정임을 표시한다."
+    },
+    {
+      "id": "CDC_J_harmonization",
+      "passed": true,
+      "verified_values": {"creatinine_equation": "1.051*raw-0.06945", "TG_equation": "0.9655*raw-7.020", "cycle": "2017-2018 only"},
+      "evidence": ["analysis/runs/E2-20261004/definitions.json", "analysis/runs/E2-20261004/tables/harmonization_cycle_summary.csv", "analysis/reviews/source-definition-audit.md"],
+      "finding": "원시값 보존·결측 대체 전 변환·CDC 공식 근거·저자 보정 여부 미확인을 설명한다. 비공복 LBXSTR가 공복 참조법 LBXTR가 된 것으로 주장하지 않는다."
+    },
+    {
+      "id": "reuse_recompute_lineage",
+      "passed": true,
+      "verified_values": {"reused_lean_M1_M2": 60, "new_M3_trend_interaction_fits": 36},
+      "evidence": ["analysis/runs/E2-20261004/report.json", "analysis/runs/E2-20261004/definitions.json", "analysis/reviews/E2-20261004-q-review.json"],
+      "finding": "E1은 보정 전 불변 진단 기록, E2는 같은 A/B의 현재 수정판으로 설명한다. 영향 있는 검사 기술표·forest 갱신과 불변 M1/M2 재사용 출처를 구별한다."
+    },
+    {
+      "id": "independent_check_counts",
+      "passed": true,
+      "verified_values": {"R2_numeric": 56, "E1_numeric": 733, "E2_numeric": 371, "V1_numeric": 81, "E2_data": 380},
+      "evidence": ["analysis/reviews/R2-20261004-q-review.json", "analysis/reviews/E1-20261004-q-review.json", "analysis/reviews/E2-20261004-q-review.json", "analysis/reviews/V1-20261004-q-review.json", "analysis/reviews/E2-20261004-data-review.json"],
+      "finding": "점검 개수를 서로 다른 감사 범위로 구분하며 모형 수나 독립 표본 수로 부르지 않는다. 계산 accept를 정확 복제 승인으로 승격하지 않는다."
+    },
+    {
+      "id": "Fisher_exact_and_MC",
+      "passed": true,
+      "verified_values": {"n_per_group": [5, 10, 20, 50], "null_p": [0.05, 0.2, 0.5], "B": 10000, "seed": 20261004, "n5_p05_exact_typeI": 0.021484375, "fixed_margin_exact_typeI": 0.0230141375652211},
+      "evidence": ["analysis/runs/V1-20261004/typeI_error.csv", "analysis/runs/V1-20261004/conditional_fisher.csv", "analysis/runs/V1-20261004/result.json", "analysis/reviews/V1-20261004-q-review.json"],
+      "finding": "R 양측 probability ordering·p<.05·정보없는 표 비기각·정한 시나리오의 점별 오류율·정확값과 MC Wilson 불확실성의 구분을 올바르게 설명한다. 전체 귀무공간 최대 size 또는 NHANES 복합표집 검증이라고 부르지 않는다."
+    },
+    {
+      "id": "power_caption_scope",
+      "passed": true,
+      "verified_values": {"p0": 0.20, "p1": 0.35},
+      "evidence": ["치주질환과 고혈압 - 분석 길잡이/06-paper 통계 검증 과제.md", "analysis/reviews/V1-20261004-q-review.json"],
+      "finding": "검정력 선·점을 정확 열거로, MC/Wilson을 별도 CSV로 표시하며 논문 표본의 사후 검정력으로 주장하지 않는다."
+    },
+    {
+      "id": "crude_OR_PR_interpretation",
+      "passed": true,
+      "verified_values": {"p_exposed": 0.533431300514328, "p_unexposed": 0.498899362194502, "crude_OR": 1.14835165911988, "crude_PR": 1.0692162406621, "relative_difference_percent": 7.40125481154048},
+      "evidence": ["analysis/runs/V1-20261004/published_OR_PR.csv", "analysis/reviews/V1-20261004-q-review.json"],
+      "finding": "출판 비가중 표의 교육용 crude 비교이며 유병률비와 발생 위험비를 구분한다. 7.40%를 위험 증가율이나 보정 OR의 RR 변환으로 설명하지 않는다."
+    },
+    {
+      "id": "synthetic_McNemar_only",
+      "passed": true,
+      "verified_values": {"table": [[40, 25], [5, 30]], "discordant_pairs": [25, 5], "exact_p": 0.000324914231896401},
+      "evidence": ["analysis/runs/V1-20261004/course_examples.csv", "analysis/reviews/V1-20261004-q-review.json"],
+      "finding": "같은 사람 전후 쌍 자료가 없는 NHANES 실제 분석에는 해당 없음으로 표시하고 강의 가상 예제 결과와 논문 연관 p를 구별한다."
+    },
+    {
+      "id": "publication_OR_tolerance",
+      "passed": true,
+      "verified_values": {"OR_rows": 84, "within_raw_OR_tolerance": 7, "OR_tolerance": 0.005},
+      "evidence": ["analysis/comparisons/E2-20261004/all_published_OR_comparisons.csv"],
+      "finding": "CSV의 원시 OR 기준 판정을 직접 집계해 7/84를 확인했다. HTML은 CI·n까지 일치한다는 뜻이 아니라고 명시한다."
+    },
+    {
+      "id": "supplement_unknown_component_cases",
+      "passed": true,
+      "verified_values": {"primary_HTN": 10689, "supplement_I_cases": 1632, "supplement_II_cases": 9046, "unknown_component_measured_HTN": 11},
+      "evidence": ["치주질환과 고혈압 - 분석 길잡이/05-paper 오즈비와 보정 모형.md", "analysis/sources/europepmc/supplementary_scope_facts.json"],
+      "finding": "주 분석 양성 중 진단·복약 상태 미확인인 측정 HTN11명이 두 보충 domain에서 제외됨을 설명한다. 보충 선정은 저자 코드 확인이 아닌 counts-supported inference다."
+    },
+    {
+      "id": "original_table_arithmetic_units_mapping",
+      "passed": true,
+      "verified_values": {"HTN_male": 5412, "HTN_female": 5606, "sum": 11018, "reported_total": 11017, "LBXGH_unit": "%"},
+      "evidence": ["analysis/reviews/source-definition-audit.md", "치주질환과 고혈압 - 분석 길잡이/04-paper 분할표와 검정.md"],
+      "finding": "성별 산술 불일치와 HbA1c 표기를 기록하며 임의 정정 또는 실제 분석값 오류로 단정하지 않는다. 당뇨 분포 차이는 author 매핑 미확인으로 유지한다."
+    },
+    {
+      "id": "omitted_model_matrix_columns",
+      "passed": true,
+      "verified_values": {"all_models": 96, "models_with_omissions": 54, "omitted_columns_total": 96},
+      "evidence": ["analysis/reviews/E2_omitted_model_matrix_columns.csv", "analysis/reviews/E2-20261004-q-review.json"],
+      "finding": "CSV 행96개·고유 model54개를 직접 집계했다. B 식이 missing 지시변수의 상수와 공식/실제계수 차이를 설명하며 빈 alias metadata를 무생략 증거로 쓰지 않는다."
+    },
+    {
+      "id": "warnings_and_unrun_analysis",
+      "passed": true,
+      "evidence": ["analysis/reviews/E1-20261004-q-review.json", "analysis/reviews/E2-20261004-q-review.json", "analysis/reviews/V1-20261004-q-review.json"],
+      "finding": "E2 신규 경고0과 E1 재사용 경고·LC startup 경고·V1 미수집 배열을 구별한다. 선택적 common-complete-case suite를 미실행으로 표시한다."
+    },
+    {
+      "id": "bridge_uncertainty_and_scientific_limits",
+      "passed": true,
+      "evidence": ["analysis/reviews/E2-20261004-q-review.json", "analysis/reviews/source-definition-audit.md", "치주질환과 고혈압 - 분석 길잡이/07-paper 결과 해석과 재현 한계.md"],
+      "finding": "CDC 계수를 고정값으로 취급해 추가 추정 불확실성을 CI에 전파하지 않았음을 명시한다. 자가보고·횡단면·잔여교란·역인과·선정·결측·측정 편향과 author 설정 미확인을 유지하며 인과효과·외부 일반화를 입증했다고 하지 않는다."
+    },
+    {
+      "id": "medication_special_code_robustness",
+      "passed": true,
+      "verified_values": {"raw_7_9_to_structural_no_current": 0},
+      "evidence": ["analysis/reviews/source-definition-audit.md", "analysis/reviews/R2-20261004-q-review.json"],
+      "finding": "현재 결과 영향 없음과 향후 다른 입력의 분기 강건성을 구별한다."
+    }
+  ],
+  "resolved_review_comment": {
+    "prior_html_sha256": "5225a0c114308b28f0e26c543eb31a199aa07b05e3358f050776c9bfc8e56401",
+    "original_wording": "기본 HTN 중 판정 불명확 11명",
+    "corrected_wording": "기본 HTN 중 진단·복약 상태 미확인인 측정 고혈압 11명",
+    "reason": "11명은 주 분석 고혈압 자체가 불명확한 사람이 아니라 양성 측정혈압을 갖고 진단·복약 성분 상태가 미확인인 사람이다.",
+    "final_artifact_correction_confirmed": true
+  },
+  "final_css_only_change": {
+    "previous_body_reviewed_sha256": "ab7e43c35a551179016098f90ce1fa218424050b7e18ce93f43f2c63f0526354",
+    "added_css": "h1{word-break:keep-all}",
+    "verification": "최종 UTF-8 파일에서 줄바꿈을 포함한 CSS 한 줄을 제거한 SHA256이 이전 본문 검토 SHA256과 정확히 일치함을 확인했다. 본문·수치·그림·링크의 동일성을 해시로 확인했다.",
+    "review_decision_carried_forward": true
+  },
+  "blocking_findings": [],
+  "final_statement": "검토한 최종 HTML의 수치·표본·검정 범위·버전 갱신·문제 상태·미실행 및 과학적 한계 설명은 저장된 분석 근거와 일치한다. 이 accept는 HTML 설명의 근거 일치에 한정하며 저자 구현의 정확 복제 또는 외부 검증의 승인이 아니다."
+}

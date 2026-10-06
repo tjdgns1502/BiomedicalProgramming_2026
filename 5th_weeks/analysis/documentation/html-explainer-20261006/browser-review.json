@@ -1,0 +1,30 @@
+{
+  "artifact": "analysis-process.html",
+  "sha256": "1b226348472d70260d0125c39abe4f9aa08db32f328d488e65f8df15fa83f1ca",
+  "decision": "accept",
+  "desktop": {
+    "width": 1440,
+    "documentWidth": 1440,
+    "sections": 8,
+    "issues": 12,
+    "images": 10,
+    "decodedImages": 10,
+    "title": "5주차 분석 과정과 한계 — 프롬프트에서 검토까지"
+  },
+  "mobile": {
+    "width": 390,
+    "documentWidth": 390
+  },
+  "localLinks": 93,
+  "anchors": 9,
+  "buttons": "expand/collapse passed",
+  "printDetailsOpen": 13,
+  "pageErrors": [],
+  "screenshots": [
+    "desktop-overview.png",
+    "desktop-revisions.png",
+    "desktop-issues.png",
+    "mobile-overview.png",
+    "mobile-issues.png"
+  ]
+}

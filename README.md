@@ -11,6 +11,8 @@
 
 - [`5th_weeks/`](5th_weeks/) — 치주질환·구강건강과 고혈압: 분할표·복합표본 보정 모형, Fisher 검증, 학습 문서와 plot (doyun)
 
+[5주차 분석 과정·프롬프트·한계 HTML 자료](5th_weeks/analysis-process.html)도 포함합니다.
+
 ## 진행 방식
 
 - [`4th_weeks/`](4th_weeks/) — FI 사분위군별 염증지표의 다군·다중 비교, 모의실험, 논문 후보 재현 및 통계적 검토 (doyun)
