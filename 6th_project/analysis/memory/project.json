@@ -1,0 +1,13 @@
+{
+  "project": "6주차: Wallen et al. (2016) Accuracy of Heart Rate Watches — 심박수 정확도",
+  "protocol_version": "PROMPT21-20261025 (전체실행프롬프트-v2.1 + 실행프롬프트-6주차)",
+  "paper": {"citation": "Wallen MP et al. PLoS ONE 2016;11(5):e0154420", "doi": "10.1371/journal.pone.0154420", "local": "6th_project/paper/6주차(Accuracy of Heart Rate Watches; Implications for Weight Management).pdf"},
+  "assignment": {"source": "https://slides.pnucolab.com/9eGiQnmVQB7D (6주차 슬라이드, 2026-10-25 열람)", "required": ["readxl로 XLSX 불러와 대상자·측정 조건별 정리", "Pearson 상관", "단순 선형회귀 (cor, lm)", "측정오차 = 시계 − 기준의 평균과 분포", "산점도 + 회귀선 + y=x", "측정오차 히스토그램", "기기별 상관과 평균오차 비교, 상관이 높아도 일치하지 않을 수 있음을 설명"]},
+  "work_root": "6th_project (프롬프트의 C:/Users/doyun/... 경로 대신 이 저장소 위치)",
+  "learning_docs_root": "6th_project/docs/learning",
+  "final_report": "6th_project/최종분석보고서.html",
+  "data_access": "공개 보충자료 S1 (CC BY). 원자료 불변 보존.",
+  "scope_out": ["energy expenditure", "step count", "ICC", "skin-type subgroups", "Mio 가변 LoA 재현", "기기 간 검정"],
+  "constraints": {"R": "R 4.6.1 (repo bin/Rscript.exe)", "python": "uv 미설치 → Python 보조 작업 보류", "network": "슬라이드 열람만; 자료 재다운로드 안 함"},
+  "completion_criteria": "필수 항목 구현·검토, 7단계 concept/paper MD, 자기완결 HTML 1개, 브라우저 확인, 커밋"
+}

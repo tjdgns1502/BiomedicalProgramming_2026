@@ -1,0 +1,23 @@
+"candidate","device","metric","rule","candidate_value","paper_value","diff","tolerance","verdict","evidence","post_result"
+"C1","Apple Watch","corr_lo","Fisher z on r rounded = 0.95",0.881428281468175,0.88,0.00142828146817497,0.005,"반올림 일치","reproduction_candidate",TRUE
+"C1","Apple Watch","corr_hi","Fisher z on r rounded = 0.95",0.979350946821467,0.98,-0.000649053178533365,0.005,"반올림 일치","reproduction_candidate",TRUE
+"C2","Apple Watch","bias","100.7 - 102.0",-1.3,-1.3,2.88657986402541e-15,0.05,"반올림 일치","reproduction_candidate",TRUE
+"C3","Apple Watch","bias","-1.2605 -> -1.26 -> -1.3",-1.3,-1.3,0,0.05,"반올림 일치","reproduction_candidate",TRUE
+"C4","Apple Watch","loa_upper","-1.3 +/- 1.96 x 4.4",7.324,7.3,0.0240000000000036,0.05,"반올림 일치","reproduction_candidate",TRUE
+"C4","Apple Watch","loa_lower","-1.3 +/- 1.96 x 4.4",-9.924,-9.9,-0.0239999999999974,0.05,"반올림 일치","reproduction_candidate",TRUE
+"C1","Fitbit Charge HR","corr_lo","Fisher z on r rounded = 0.81",0.589815078759967,0.59,-0.000184921240033442,0.005,"반올림 일치","reproduction_candidate",TRUE
+"C1","Fitbit Charge HR","corr_hi","Fisher z on r rounded = 0.81",0.918081131357383,0.92,-0.00191886864261737,0.005,"반올림 일치","reproduction_candidate",TRUE
+"C2","Fitbit Charge HR","bias","92.7 - 102.0",-9.3,-9.3,3.5527136788005e-15,0.05,"반올림 일치","reproduction_candidate",TRUE
+"C3","Fitbit Charge HR","bias","-9.3177 -> -9.32 -> -9.3",-9.3,-9.3,0,0.05,"반올림 일치","reproduction_candidate",TRUE
+"C4","Fitbit Charge HR","loa_upper","-9.3 +/- 1.96 x 8.5",7.36,7.4,-0.0399999999999974,0.05,"반올림 일치","reproduction_candidate",TRUE
+"C4","Fitbit Charge HR","loa_lower","-9.3 +/- 1.96 x 8.5",-25.96,-26,0.0400000000000027,0.05,"반올림 일치","reproduction_candidate",TRUE
+"C1","Samsung Gear S","corr_lo","Fisher z on r rounded = 0.67",0.3461795390552,0.35,-0.00382046094479949,0.005,"반올림 일치","reproduction_candidate",TRUE
+"C1","Samsung Gear S","corr_hi","Fisher z on r rounded = 0.67",0.851171510760192,0.85,0.00117151076019162,0.005,"반올림 일치","reproduction_candidate",TRUE
+"C2","Samsung Gear S","bias","93.4 - 100.5",-7.09999999999999,-7.1,5.32907051820075e-15,0.05,"반올림 일치","reproduction_candidate",TRUE
+"C3","Samsung Gear S","bias","-7.0482 -> -7.05 -> -7.1",-7.1,-7.1,0,0.05,"반올림 일치","reproduction_candidate",TRUE
+"C4","Samsung Gear S","loa_upper","-7.1 +/- 1.96 x 10.3",13.088,13.1,-0.0119999999999916,0.05,"반올림 일치","reproduction_candidate",TRUE
+"C4","Samsung Gear S","loa_lower","-7.1 +/- 1.96 x 10.3",-27.288,-27.3,0.012000000000004,0.05,"반올림 일치","reproduction_candidate",TRUE
+"C1","Mio Alpha","corr_lo","Fisher z on r rounded = 0.87",0.708135015754858,0.71,-0.00186498424514192,0.005,"반올림 일치","reproduction_candidate",TRUE
+"C1","Mio Alpha","corr_hi","Fisher z on r rounded = 0.87",0.944987607746434,0.94,0.00498760774643403,0.005,"반올림 일치","reproduction_candidate",TRUE
+"C2","Mio Alpha","bias","97.7 - 102.0",-4.3,-4.3,2.66453525910038e-15,0.05,"반올림 일치","reproduction_candidate",TRUE
+"C3","Mio Alpha","bias","-4.3405 -> -4.34 -> -4.3",-4.3,-4.3,0,0.05,"반올림 일치","reproduction_candidate",TRUE

@@ -1,0 +1,53 @@
+device,metric,paper_value,paper_text,decimals,evidence,source
+Apple Watch,n,22,22,0,paper_reported,Table 1 Heart rate N
+Fitbit Charge HR,n,22,22,0,paper_reported,Table 1 Heart rate N
+Samsung Gear S,n,22,22,0,paper_reported,Table 1 Heart rate N
+Mio Alpha,n,22,22,0,paper_reported,Table 1 Heart rate N
+Apple Watch,device_mean,100.7,100.7 ±14.0,1,paper_reported,Table 1 Device mean ± SD
+Fitbit Charge HR,device_mean,92.7,92.7 ± 11.5,1,paper_reported,Table 1 Device mean ± SD
+Samsung Gear S,device_mean,93.4,93.4 ± 13.9,1,paper_reported,Table 1 Device mean ± SD
+Mio Alpha,device_mean,97.7,97.7 ± 14.6,1,paper_reported,Table 1 Device mean ± SD
+Apple Watch,device_sd,14.0,100.7 ±14.0,1,paper_reported,Table 1 Device mean ± SD
+Fitbit Charge HR,device_sd,11.5,92.7 ± 11.5,1,paper_reported,Table 1 Device mean ± SD
+Samsung Gear S,device_sd,13.9,93.4 ± 13.9,1,paper_reported,Table 1 Device mean ± SD
+Mio Alpha,device_sd,14.6,97.7 ± 14.6,1,paper_reported,Table 1 Device mean ± SD
+Apple Watch,ecg_mean,102.0,102.0 ± 14.4,1,paper_reported,Table 1 ECG mean ± SD
+Fitbit Charge HR,ecg_mean,102.0,102.0 ± 14.5,1,paper_reported,Table 1 ECG mean ± SD
+Samsung Gear S,ecg_mean,100.5,100.5 ± 14.6,1,paper_reported,Table 1 ECG mean ± SD
+Mio Alpha,ecg_mean,102.0,102.0 ± 13.4,1,paper_reported,Table 1 ECG mean ± SD
+Apple Watch,ecg_sd,14.4,102.0 ± 14.4,1,paper_reported,Table 1 ECG mean ± SD
+Fitbit Charge HR,ecg_sd,14.5,102.0 ± 14.5,1,paper_reported,Table 1 ECG mean ± SD
+Samsung Gear S,ecg_sd,14.6,100.5 ± 14.6,1,paper_reported,Table 1 ECG mean ± SD
+Mio Alpha,ecg_sd,13.4,102.0 ± 13.4,1,paper_reported,Table 1 ECG mean ± SD
+Apple Watch,corr,0.95,0.95 (0.88 to 0.98),2,paper_reported,Table 1 r/Rho (Pearson)
+Fitbit Charge HR,corr,0.81,0.81 (0.59 to 0.92),2,paper_reported,Table 1 r/Rho (Pearson)
+Samsung Gear S,corr,0.67,0.67* (0.35 to 0.85),2,paper_reported,Table 1 r/Rho (* = Spearman rho)
+Mio Alpha,corr,0.87,0.87 (0.71 to 0.94),2,paper_reported,Table 1 r/Rho (Pearson)
+Apple Watch,corr_lo,0.88,0.95 (0.88 to 0.98),2,paper_reported,Table 1 r/Rho 95% CI
+Fitbit Charge HR,corr_lo,0.59,0.81 (0.59 to 0.92),2,paper_reported,Table 1 r/Rho 95% CI
+Samsung Gear S,corr_lo,0.35,0.67* (0.35 to 0.85),2,paper_reported,Table 1 r/Rho 95% CI
+Mio Alpha,corr_lo,0.71,0.87 (0.71 to 0.94),2,paper_reported,Table 1 r/Rho 95% CI
+Apple Watch,corr_hi,0.98,0.95 (0.88 to 0.98),2,paper_reported,Table 1 r/Rho 95% CI
+Fitbit Charge HR,corr_hi,0.92,0.81 (0.59 to 0.92),2,paper_reported,Table 1 r/Rho 95% CI
+Samsung Gear S,corr_hi,0.85,0.67* (0.35 to 0.85),2,paper_reported,Table 1 r/Rho 95% CI
+Mio Alpha,corr_hi,0.94,0.87 (0.71 to 0.94),2,paper_reported,Table 1 r/Rho 95% CI
+Apple Watch,bias,-1.3,-1.3 ± 4.4,1,paper_reported,Table 1 Mean difference ± SD
+Fitbit Charge HR,bias,-9.3,-9.3 ± 8.5,1,paper_reported,Table 1 Mean difference ± SD
+Samsung Gear S,bias,-7.1,-7.1 ± 10.3,1,paper_reported,Table 1 Mean difference ± SD
+Mio Alpha,bias,-4.3,-4.3 ± 7.2,1,paper_reported,Table 1 Mean difference ± SD
+Apple Watch,bias_sd,4.4,-1.3 ± 4.4,1,paper_reported,Table 1 Mean difference ± SD
+Fitbit Charge HR,bias_sd,8.5,-9.3 ± 8.5,1,paper_reported,Table 1 Mean difference ± SD
+Samsung Gear S,bias_sd,10.3,-7.1 ± 10.3,1,paper_reported,Table 1 Mean difference ± SD
+Mio Alpha,bias_sd,7.2,-4.3 ± 7.2,1,paper_reported,Table 1 Mean difference ± SD
+Apple Watch,loa_upper,7.3,7.3,1,paper_reported,Table 1 Upper LoA
+Fitbit Charge HR,loa_upper,7.4,7.4,1,paper_reported,Table 1 Upper LoA
+Samsung Gear S,loa_upper,13.1,13.1,1,paper_reported,Table 1 Upper LoA
+Mio Alpha,loa_upper,NA,-0.44.avg + 52.69†,NA,paper_reported,Table 1 Upper LoA (regression equation)
+Apple Watch,loa_lower,-9.9,-9.9,1,paper_reported,Table 1 Lower LoA
+Fitbit Charge HR,loa_lower,-26.0,-26.0,1,paper_reported,Table 1 Lower LoA
+Samsung Gear S,loa_lower,-27.3,-27.3,1,paper_reported,Table 1 Lower LoA
+Mio Alpha,loa_lower,NA,0.4.avg—61.2†,NA,paper_reported,Table 1 Lower LoA (regression equation)
+Apple Watch,icc,0.98,0.98 (0.94 to 0.99),2,paper_reported,Table 1 ICC (out of scope)
+Fitbit Charge HR,icc,0.78,0.78 (-0.02 to 0.93),2,paper_reported,Table 1 ICC (out of scope)
+Samsung Gear S,icc,0.80,0.80 (0.40 to 0.93),2,paper_reported,Table 1 ICC (out of scope)
+Mio Alpha,icc,0.91,0.91 (0.72 to 0.97),2,paper_reported,Table 1 ICC (out of scope)
