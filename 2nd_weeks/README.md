@@ -28,3 +28,10 @@ source("scripts/11_qqplot_theory.R")   # WWI Q-Q plot + 이론분위수 공식 �
 ## 데이터
 
 `data/` 안의 NHANES 원자료(XPT)와 병합 결과(`analytic_sample.rds`)는 용량 문제로 git에 포함하지 않았습니다(`.gitignore` 처리). `01_download_data.R` → `02_build_table1.R`을 실행하면 누구나 동일하게 재현할 수 있습니다. `output/table1.csv`, `output/qqplot_wwi.png`는 용량이 작아 결과 확인용으로 git에 포함했습니다.
+
+## v2 업데이트 (거의 완전 재현)
+
+teammate의 독립 재현(`Teammate_analysis/`)과 대조해 3가지를 더 고쳐 132개 셀 대부분이 논문과 완전히 일치하는 버전을 추가했습니다. 위 v1 스크립트/결과는 그대로 두고, 새 파일로 분리했습니다:
+
+- `scripts/12_build_table1_v2.R`, `scripts/13_table1_stats_v2.R` → `output/table1_v2.csv`
+- 무엇이, 왜 바뀌었는지는 [`CHANGES_v2.md`](CHANGES_v2.md) 참고.

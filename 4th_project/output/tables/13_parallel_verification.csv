@@ -1,0 +1,5 @@
+"script","check","lines","identical","differing_lines","sec_a","sec_b"
+"11_multiplicity_inflation_v2.R","legacy w7 vs committed v1 01_multiplicity_inflation.csv",145,TRUE,0,57,NA
+"11_multiplicity_inflation_v2.R","streams w1 vs streams w7",145,TRUE,0,175,58
+"12_pvalue_uniformity_v2.R","legacy w7 vs committed v1 02_pvalue_uniformity.csv",17,TRUE,0,13,NA
+"12_pvalue_uniformity_v2.R","streams w1 vs streams w7",17,TRUE,0,32,39

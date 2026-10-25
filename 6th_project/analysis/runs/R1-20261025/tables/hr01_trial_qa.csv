@@ -1,0 +1,45 @@
+"id","trial","devices","n_devices","ecg_values","n_distinct_ecg","consistent"
+1,1,"Apple Watch + Fitbit Charge HR",2,"118.29",1,TRUE
+1,2,"Samsung Gear S + Mio Alpha",2,"107.37",1,TRUE
+2,1,"Apple Watch + Mio Alpha",2,"109.62",1,TRUE
+2,2,"Fitbit Charge HR + Samsung Gear S",2,"105.13",1,TRUE
+3,1,"Apple Watch + Samsung Gear S",2,"93.80",1,TRUE
+3,2,"Fitbit Charge HR + Mio Alpha",2,"98.83",1,TRUE
+4,1,"Apple Watch + Samsung Gear S",2,"121.03",1,TRUE
+4,2,"Fitbit Charge HR + Mio Alpha",2,"117.88",1,TRUE
+5,1,"Fitbit Charge HR + Samsung Gear S",2,"123.78",1,TRUE
+5,2,"Apple Watch + Mio Alpha",2,"118.28",1,TRUE
+6,1,"Fitbit Charge HR + Mio Alpha",2,"87.77",1,TRUE
+6,2,"Apple Watch + Samsung Gear S",2,"86.20",1,TRUE
+7,1,"Samsung Gear S + Mio Alpha",2,"102.97",1,TRUE
+7,2,"Apple Watch + Fitbit Charge HR",2,"102.59",1,TRUE
+8,1,"Fitbit Charge HR + Mio Alpha",2,"103.02",1,TRUE
+8,2,"Apple Watch + Samsung Gear S",2,"95.00",1,TRUE
+9,1,"Fitbit Charge HR + Mio Alpha",2,"91.55",1,TRUE
+9,2,"Apple Watch + Samsung Gear S",2,"88.42",1,TRUE
+10,1,"Apple Watch + Mio Alpha",2,"100.29",1,TRUE
+10,2,"Fitbit Charge HR + Samsung Gear S",2,"92.22",1,TRUE
+11,1,"Apple Watch + Mio Alpha",2,"105.23",1,TRUE
+11,2,"Fitbit Charge HR + Samsung Gear S",2,"106.49",1,TRUE
+12,1,"Fitbit Charge HR + Mio Alpha",2,"124.18",1,TRUE
+12,2,"Apple Watch + Samsung Gear S",2,"125.52",1,TRUE
+13,1,"Apple Watch + Mio Alpha",2,"112.63",1,TRUE
+13,2,"Fitbit Charge HR + Samsung Gear S",2,"113.33",1,TRUE
+14,1,"Fitbit Charge HR + Samsung Gear S",2,"82.27",1,TRUE
+14,2,"Apple Watch + Mio Alpha",2,"99.46",1,TRUE
+15,1,"Fitbit Charge HR + Samsung Gear S",2,"81.52",1,TRUE
+15,2,"Apple Watch + Mio Alpha",2,"76.40",1,TRUE
+16,1,"Apple Watch + Samsung Gear S",2,"89.57",1,TRUE
+16,2,"Fitbit Charge HR + Mio Alpha",2,"93.38",1,TRUE
+17,1,"Apple Watch + Mio Alpha",2,"105.19",1,TRUE
+17,2,"Fitbit Charge HR + Samsung Gear S",2,"105.68",1,TRUE
+18,1,"Fitbit Charge HR + Mio Alpha",2,"123.00",1,TRUE
+18,2,"Apple Watch + Samsung Gear S",2,"120.15",1,TRUE
+19,1,"Fitbit Charge HR + Mio Alpha",2,"100.16",1,TRUE
+19,2,"Apple Watch + Samsung Gear S",2,"100.08",1,TRUE
+20,1,"Apple Watch + Mio Alpha",2,"70.36",1,TRUE
+20,2,"Fitbit Charge HR + Samsung Gear S",2,"70.65",1,TRUE
+21,1,"Apple Watch + Fitbit Charge HR",2,"105.37",1,TRUE
+21,2,"Samsung Gear S + Mio Alpha",2,"99.91",1,TRUE
+22,1,"Apple Watch + Samsung Gear S",2,"99.71",1,TRUE
+22,2,"Fitbit Charge HR + Mio Alpha",2,"96.36",1,TRUE
