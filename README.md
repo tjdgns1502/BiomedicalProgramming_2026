@@ -13,9 +13,13 @@
 
 [5주차 분석 과정·프롬프트·한계 HTML 자료](5th_weeks/analysis-process.html)도 포함합니다.
 
+- [`6th_weeks/`](6th_weeks/) — Wallen et al. (2016) 심박수 시계: Pearson 상관·단순회귀·측정오차, concept/paper 학습 문서와 단일 HTML 보고서 (doyun)
+
+[6주차 최종 분석 보고서 HTML](6th_weeks/최종분석보고서.html)과 [학습 읽기 지도](6th_weeks/docs/learning/00-학습문서읽기지도.md)를 포함합니다.
+
 ## 진행 방식
 
 - [`4th_weeks/`](4th_weeks/) — FI 사분위군별 염증지표의 다군·다중 비교, 모의실험, 논문 후보 재현 및 통계적 검토 (doyun)
 
 - 매 주차 과제가 나오면 `N_weeks/` 폴더를 새로 만들어 추가합니다.
-- 원자료(raw data)는 용량 문제로 git에 올리지 않고, 주차별 다운로드 스크립트로 각자 재현합니다.
+- 대용량 원자료는 주차별 다운로드 스크립트로 재현합니다. 6주차는 출처가 명시된 소용량 공개 S1 XLSX를 재현 입력 고정을 위해 함께 보관합니다.

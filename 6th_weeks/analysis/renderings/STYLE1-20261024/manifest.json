@@ -1,0 +1,11 @@
+{
+  "style_revision": "STYLE1-20261024",
+  "run_id": "R1-20261024",
+  "source": "tables/observation_diagnostics.csv",
+  "source_sha256": "248f0cec1e036a80b615d65e8e1f4ef1e8d8b8c99d9894aa32f481c651393d15",
+  "scope": "Presentation only: restore QQ device labels and numeric y-axis; avoid clipping residual ID labels; no statistical refit or data change",
+  "overrides": {
+    "04_regression_residuals.png": "analysis/renderings/STYLE1-20261024/04_regression_residuals.png",
+    "05_residual_qq.png": "analysis/renderings/STYLE1-20261024/05_residual_qq.png"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "R": "R version 4.6.1 (2026-06-24 ucrt)",
+  "library_paths": ["C:/Users/doyun/Desktop/2026-2/의생명프로그래밍/6주차/analysis/r-library", "C:/Users/doyun/AppData/Local/R/win-library/4.6", "C:/Program Files/R/R-4.6.1/library"],
+  "readxl": "1.6.0",
+  "jsonlite": "2.0.0",
+  "digest": "0.6.39",
+  "locale": "LC_COLLATE=English_United States.utf8;LC_CTYPE=English_United States.utf8;LC_MONETARY=English_United States.utf8;LC_NUMERIC=C;LC_TIME=English_United States.utf8"
+}

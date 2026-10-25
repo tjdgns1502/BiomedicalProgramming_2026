@@ -1,0 +1,10 @@
+suppressWarnings(invisible(Sys.setlocale('LC_ALL','English_United States.utf8')))
+args<-commandArgs(TRUE)
+root<-normalizePath(if(length(args))args[1] else '.',winslash='/',mustWork=TRUE)
+lib<-file.path(root,'analysis/r-library');dir.create(lib,recursive=TRUE,showWarnings=FALSE)
+.libPaths(c(lib,.libPaths()))
+required<-c('readxl','jsonlite','digest')
+missing<-required[!vapply(required,requireNamespace,logical(1),quietly=TRUE)]
+if(length(missing))install.packages(missing,lib=lib,repos='https://cloud.r-project.org')
+stopifnot(all(vapply(required,requireNamespace,logical(1),quietly=TRUE)))
+cat('R requirements available:',paste(required,collapse=', '),'\n')

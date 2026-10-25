@@ -1,0 +1,13 @@
+{
+  "created_utc": "2026-10-24T12:13:19.035678+00:00",
+  "source": "sources/paper.manuscript.xml",
+  "source_sha256": "4c1a871251ccb792e4058c001e51b1c720e1a06307e971df91e1f180f4ec6d28",
+  "scope": "HR Table1 count, means, SD, method-labelled r and constant LoA; not full ICC/EE/steps reproduction",
+  "comparisons": 38,
+  "correlations_match": 4,
+  "Mio_regression_LoA": "not directly comparable to fixed limits",
+  "raw_statistics_unchanged": true,
+  "rounded_input_diagnostic": "post-result explanatory check; not primary analysis or proven author procedure",
+  "within_stated_rounding": 33,
+  "tolerances_origin": "n,r,mean fixed in plan before statistics; SD/LoA0.05 is a one-decimal comparison criterion applied after Table1 extraction; not all comparison criteria preregistered."
+}

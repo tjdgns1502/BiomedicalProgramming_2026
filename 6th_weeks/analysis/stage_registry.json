@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "documentation_revision": "PAIR1-20261024",
+  "run_id": "R1-20261024",
+  "reading_order_is_not_execution_order": true,
+  "paired_stages": 7,
+  "stages": [
+    {
+      "stage_id": "HR01",
+      "html_anchor": "data",
+      "title": "자료·변수·관측 단위",
+      "observation_unit": "participant-level protocol mean per device; n=22",
+      "input": "공개 XLSX의 Heart_Rate·Key·논문 Methods",
+      "output": "전체 88쌍 long 자료, 원본 셀·ID·trial 매핑",
+      "reading_previous": null,
+      "reading_next": "HR02",
+      "execution_dependencies": [],
+      "concept": "docs/learning/01-concept 자료·변수·관측 단위.md",
+      "paper": "docs/learning/01-paper 자료·변수·관측 단위.md",
+      "source_locations": "S1 Dataset: Heart_Rate A1:M23, Key Worksheet_4; paper Methods / Experimental protocol",
+      "figures": [],
+      "issue_ids": [
+        "D01",
+        "D02",
+        "D03",
+        "D04",
+        "D05",
+        "S01"
+      ]
+    },
+    {
+      "stage_id": "HR02",
+      "html_anchor": "association",
+      "title": "산점도·Pearson 상관",
+      "observation_unit": "participant-level protocol mean per device; n=22",
+      "input": "기기별 동일 참가자의 ECG·시계 평균 22쌍",
+      "output": "산점도, Pearson r·95%CI; 원문 대조용 Spearman 별도",
+      "reading_previous": "HR01",
+      "reading_next": "HR03",
+      "execution_dependencies": [
+        "HR01"
+      ],
+      "concept": "docs/learning/02-concept 산점도·Pearson 상관.md",
+      "paper": "docs/learning/02-paper 산점도·Pearson 상관.md",
+      "source_locations": "paper Statistical analysis and Table 1 footnote; S1 Heart_Rate",
+      "figures": [
+        "01_scatter_regression.png"
+      ],
+      "issue_ids": [
+        "S01",
+        "S02",
+        "C01"
+      ]
+    },
+    {
+      "stage_id": "HR03",
+      "html_anchor": "regression",
+      "title": "단순 선형회귀",
+      "observation_unit": "participant-level protocol mean per device; n=22",
+      "input": "기기별 ECG x·시계 y의 22쌍",
+      "output": "시계~ECG 절편·기울기·CI·R²·잔차",
+      "reading_previous": "HR02",
+      "reading_next": "HR04",
+      "execution_dependencies": [
+        "HR01"
+      ],
+      "concept": "docs/learning/03-concept 단순 선형회귀.md",
+      "paper": "docs/learning/03-paper 단순 선형회귀.md",
+      "source_locations": "course extension: device~ECG OLS; distinguish paper Statistical analysis / Bland–Altman regression",
+      "figures": [
+        "01_scatter_regression.png"
+      ],
+      "issue_ids": [
+        "S02",
+        "S05"
+      ]
+    },
+    {
+      "stage_id": "HR04",
+      "html_anchor": "error",
+      "title": "측정오차·일치도",
+      "observation_unit": "participant-level protocol mean per device; n=22",
+      "input": "동일 대상의 시계 y·ECG x; 차이 e=y−x",
+      "output": "bias·MAE·RMSE·SD·평균오차 CI·고정 LoA와 그림",
+      "reading_previous": "HR03",
+      "reading_next": "HR05",
+      "execution_dependencies": [
+        "HR01"
+      ],
+      "concept": "docs/learning/04-concept 측정오차·일치도.md",
+      "paper": "docs/learning/04-paper 측정오차·일치도.md",
+      "source_locations": "paper Statistical analysis, Table 1, Figure 2; S1 Heart_Rate",
+      "figures": [
+        "02_error_histograms.png",
+        "07_bias_and_mae.png",
+        "03_bland_altman.png"
+      ],
+      "issue_ids": [
+        "S02",
+        "S03",
+        "C03"
+      ]
+    },
+    {
+      "stage_id": "HR05",
+      "html_anchor": "diagnostics",
+      "title": "진단·영향점·민감도",
+      "observation_unit": "participant-level protocol mean per device; n=22",
+      "input": "전체 자료의 OLS·저장된 잔차·한 명씩 제외한 별도 시나리오",
+      "output": "잔차·Q–Q·Cook 진단, LOO 범위와 전체 결과의 비교",
+      "reading_previous": "HR04",
+      "reading_next": "HR06",
+      "execution_dependencies": [
+        "HR01",
+        "HR03",
+        "HR04"
+      ],
+      "concept": "docs/learning/05-concept 진단·영향점·민감도.md",
+      "paper": "docs/learning/05-paper 진단·영향점·민감도.md",
+      "source_locations": "analyst supplemental diagnostics; frozen R1 tables and STYLE1 rendering manifest",
+      "figures": [
+        "04_regression_residuals.png",
+        "05_residual_qq.png",
+        "06_leave_one_out.png"
+      ],
+      "issue_ids": [
+        "S03",
+        "S04",
+        "S05"
+      ]
+    },
+    {
+      "stage_id": "HR06",
+      "html_anchor": "publication",
+      "title": "논문 수치 대조·해석",
+      "observation_unit": "participant-level protocol mean per device; n=22",
+      "input": "원문 Table 1·각주·Figure 2와 같은 정의의 계산 결과",
+      "output": "같은 종류 상관 4개 일치, 일부 요약치 차이·미확인 사유",
+      "reading_previous": "HR05",
+      "reading_next": "HR07",
+      "execution_dependencies": [
+        "HR01",
+        "HR02",
+        "HR03",
+        "HR04"
+      ],
+      "concept": "docs/learning/06-concept 논문 수치 대조·해석.md",
+      "paper": "docs/learning/06-paper 논문 수치 대조·해석.md",
+      "source_locations": "paper Table 1, Figure 2, Statistical analysis; sources/published_tables.json",
+      "figures": [],
+      "issue_ids": [
+        "C01",
+        "C02",
+        "C03"
+      ]
+    },
+    {
+      "stage_id": "HR07",
+      "html_anchor": "problems",
+      "title": "문제·검증·보고의 한계",
+      "observation_unit": "participant-level protocol mean per device; n=22",
+      "input": "단계별 문제 ID·실행·검산·출처·결과·변경 기록",
+      "output": "해결한 문제와 미확인 한계, 통합 설명 및 추적 기록",
+      "reading_previous": "HR06",
+      "reading_next": null,
+      "execution_dependencies": [
+        "HR01",
+        "HR02",
+        "HR03",
+        "HR04",
+        "HR05",
+        "HR06"
+      ],
+      "concept": "docs/learning/07-concept 문제·검증·보고의 한계.md",
+      "paper": "docs/learning/07-paper 문제·검증·보고의 한계.md",
+      "source_locations": "analysis/memory/issues.json; run/status.json and cross-check outputs; user correction 2026-10-24",
+      "figures": [],
+      "issue_ids": [
+        "D01",
+        "D02",
+        "D03",
+        "D04",
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "D05",
+        "C01",
+        "C02",
+        "C03"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+"stage","people","pairs","excluded","meaning"
+"Heart_Rate participant rows",22,88,0,"Four device/reference blocks per person"
+"Expected participant-device slots",22,88,0,"Wide to long; no averaging"
+"Finite positive pairs with trial1/2",22,88,0,"All original HR pairs valid"
+"Final primary pairs",22,88,0,"No downsampling, outlier deletion or imputation"

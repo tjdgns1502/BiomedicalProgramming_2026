@@ -1,0 +1,11 @@
+# Installed libraries and generated caches; statistical artifacts remain included.
+analysis/r-library/
+**/__pycache__/
+**/.uv-cache/
+**/.venv/
+**/node_modules/
+.Rhistory
+.RData
+.env
+.env.*
+!.env.example

@@ -1,0 +1,2 @@
+# Preserve original source, numeric, image and report bytes across Git checkouts.
+* -text

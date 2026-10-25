@@ -1,0 +1,19 @@
+{
+  "date_utc": "2026-10-24T13:15:31.380653+00:00",
+  "revision": "PAIR1-20261024",
+  "reviewer": "/root/paired_content_review",
+  "decision": "accept",
+  "html_sha256": "4fdf6816963ffc0846835ea7d0c414217d58378a4ba2cfdfffaacd64ec8c5f23",
+  "paired_learning_source_sha256": "975f0a67c7822dce86fa994a82d18232b80c992d62340033b0829ae87cc5f614",
+  "scope": "New documentation content and static HTML structure only; no numerical reanalysis or independent validation of original statistics",
+  "checks": [
+    "7 visible concept/paper pairs",
+    "hypothetical examples separate from actual data",
+    "paper BA regression distinct from course device~ECG OLS and supplemental diagnostics",
+    "input/question/method/reason/output/remaining questions",
+    "OLS normality wording clarified",
+    "plot wording acknowledges STYLE1 display changes",
+    "Pearson point/r/CI/p definitions"
+  ],
+  "remaining_actions": []
+}

@@ -1,0 +1,89 @@
+"participant_id","device","device_code","trial","reference_bpm","device_bpm","source_sheet","source_row","device_cell","reference_cell","trial_cell","raw_reference_header","pair_id","error_bpm","pair_mean_bpm","relative_error_percent","absolute_error_bpm"
+1,"Apple Watch","Apple",1,118.29,116.34,"Heart_Rate",2,"B2","C2","D2","Apple_ECG","1:Apple",-1.95,117.315,-1.64849099670302,1.95
+2,"Apple Watch","Apple",1,109.62,104.93,"Heart_Rate",3,"B3","C3","D3","Apple_ECG","2:Apple",-4.69,107.275,-4.27841634738186,4.69
+3,"Apple Watch","Apple",1,93.8,98.05,"Heart_Rate",4,"B4","C4","D4","Apple_ECG","3:Apple",4.25,95.925,4.53091684434968,4.25
+4,"Apple Watch","Apple",1,121.03,120.57,"Heart_Rate",5,"B5","C5","D5","Apple_ECG","4:Apple",-0.460000000000008,120.8,-0.380071056762793,0.460000000000008
+5,"Apple Watch","Apple",2,118.28,116.86,"Heart_Rate",6,"B6","C6","D6","Apple_ECG","5:Apple",-1.42,117.57,-1.2005410889415,1.42
+6,"Apple Watch","Apple",2,86.2,87.62,"Heart_Rate",7,"B7","C7","D7","Apple_ECG","6:Apple",1.42,86.91,1.64733178654293,1.42
+7,"Apple Watch","Apple",2,102.59,102.02,"Heart_Rate",8,"B8","C8","D8","Apple_ECG","7:Apple",-0.570000000000007,102.305,-0.555609708548599,0.570000000000007
+8,"Apple Watch","Apple",2,95,94.28,"Heart_Rate",9,"B9","C9","D9","Apple_ECG","8:Apple",-0.719999999999999,94.64,-0.757894736842104,0.719999999999999
+9,"Apple Watch","Apple",2,88.42,84.87,"Heart_Rate",10,"B10","C10","D10","Apple_ECG","9:Apple",-3.55,86.645,-4.01492874915177,3.55
+10,"Apple Watch","Apple",1,100.29,100.31,"Heart_Rate",11,"B11","C11","D11","Apple_ECG","10:Apple",0.019999999999996,100.3,0.0199421677136265,0.019999999999996
+11,"Apple Watch","Apple",1,105.23,104.71,"Heart_Rate",12,"B12","C12","D12","Apple_ECG","11:Apple",-0.52000000000001,104.97,-0.494155659032605,0.52000000000001
+12,"Apple Watch","Apple",2,125.52,124.69,"Heart_Rate",13,"B13","C13","D13","Apple_ECG","12:Apple",-0.829999999999998,125.105,-0.661249203314212,0.829999999999998
+13,"Apple Watch","Apple",1,112.63,111.18,"Heart_Rate",14,"B14","C14","D14","Apple_ECG","13:Apple",-1.44999999999999,111.905,-1.28740122525081,1.44999999999999
+14,"Apple Watch","Apple",2,99.46,82.57,"Heart_Rate",15,"B15","C15","D15","Apple_ECG","14:Apple",-16.89,91.015,-16.9817011864066,16.89
+15,"Apple Watch","Apple",2,76.4,75.52,"Heart_Rate",16,"B16","C16","D16","Apple_ECG","15:Apple",-0.88000000000001,75.96,-1.151832460733,0.88000000000001
+16,"Apple Watch","Apple",1,89.57,86.23,"Heart_Rate",17,"B17","C17","D17","Apple_ECG","16:Apple",-3.33999999999999,87.9,-3.72892709612592,3.33999999999999
+17,"Apple Watch","Apple",1,105.19,103.18,"Heart_Rate",18,"B18","C18","D18","Apple_ECG","17:Apple",-2.00999999999999,104.185,-1.9108280254777,2.00999999999999
+18,"Apple Watch","Apple",2,120.15,119.13,"Heart_Rate",19,"B19","C19","D19","Apple_ECG","18:Apple",-1.02000000000001,119.64,-0.848938826466925,1.02000000000001
+19,"Apple Watch","Apple",2,100.08,100.06,"Heart_Rate",20,"B20","C20","D20","Apple_ECG","19:Apple",-0.019999999999996,100.07,-0.0199840127897642,0.019999999999996
+20,"Apple Watch","Apple",1,70.36,78.67,"Heart_Rate",21,"B21","C21","D21","Apple_ECG","20:Apple",8.31,74.515,11.8106878908471,8.31
+21,"Apple Watch","Apple",1,105.37,104.45,"Heart_Rate",22,"B22","C22","D22","Apple_ECG","21:Apple",-0.920000000000002,104.91,-0.873113789503655,0.920000000000002
+22,"Apple Watch","Apple",1,99.71,99.22,"Heart_Rate",23,"B23","C23","D23","Apple_ECG","22:Apple",-0.489999999999995,99.465,-0.491425132885362,0.489999999999995
+1,"Fitbit Charge HR","Fitbit",1,118.29,92.43,"Heart_Rate",2,"E2","F2","G2","Fitbit_metamax","1:Fitbit",-25.86,105.36,-21.8615267562769,25.86
+2,"Fitbit Charge HR","Fitbit",2,105.13,83.84,"Heart_Rate",3,"E3","F3","G3","Fitbit_metamax","2:Fitbit",-21.29,94.485,-20.2511176638448,21.29
+3,"Fitbit Charge HR","Fitbit",2,98.83,91.16,"Heart_Rate",4,"E4","F4","G4","Fitbit_metamax","3:Fitbit",-7.67,94.995,-7.76080137610038,7.67
+4,"Fitbit Charge HR","Fitbit",2,117.88,104.2,"Heart_Rate",5,"E5","F5","G5","Fitbit_metamax","4:Fitbit",-13.68,111.04,-11.6050220563285,13.68
+5,"Fitbit Charge HR","Fitbit",1,123.78,117.01,"Heart_Rate",6,"E6","F6","G6","Fitbit_metamax","5:Fitbit",-6.77,120.395,-5.46938116012279,6.77
+6,"Fitbit Charge HR","Fitbit",1,87.77,84.91,"Heart_Rate",7,"E7","F7","G7","Fitbit_metamax","6:Fitbit",-2.86,86.34,-3.25851657741825,2.86
+7,"Fitbit Charge HR","Fitbit",2,102.59,83.64,"Heart_Rate",8,"E8","F8","G8","Fitbit_metamax","7:Fitbit",-18.95,93.115,-18.4715859245541,18.95
+8,"Fitbit Charge HR","Fitbit",1,103.02,93.71,"Heart_Rate",9,"E9","F9","G9","Fitbit_metamax","8:Fitbit",-9.31,98.365,-9.0370801786061,9.31
+9,"Fitbit Charge HR","Fitbit",1,91.55,82.12,"Heart_Rate",10,"E10","F10","G10","Fitbit_metamax","9:Fitbit",-9.42999999999999,86.835,-10.3003823047515,9.42999999999999
+10,"Fitbit Charge HR","Fitbit",2,92.22,86.22,"Heart_Rate",11,"E11","F11","G11","Fitbit_metamax","10:Fitbit",-6,89.22,-6.50618087182824,6
+11,"Fitbit Charge HR","Fitbit",2,106.49,101.72,"Heart_Rate",12,"E12","F12","G12","Fitbit_metamax","11:Fitbit",-4.77,104.105,-4.47929383040661,4.77
+12,"Fitbit Charge HR","Fitbit",1,124.18,113.06,"Heart_Rate",13,"E13","F13","G13","Fitbit_metamax","12:Fitbit",-11.12,118.62,-8.95474311483331,11.12
+13,"Fitbit Charge HR","Fitbit",2,113.33,93.92,"Heart_Rate",14,"E14","F14","G14","Fitbit_metamax","13:Fitbit",-19.41,103.625,-17.1269743227742,19.41
+14,"Fitbit Charge HR","Fitbit",1,82.27,95.86,"Heart_Rate",15,"E15","F15","G15","Fitbit_metamax","14:Fitbit",13.59,89.065,16.518779628054,13.59
+15,"Fitbit Charge HR","Fitbit",1,81.52,80.05,"Heart_Rate",16,"E16","F16","G16","Fitbit_metamax","15:Fitbit",-1.47,80.785,-1.80323846908734,1.47
+16,"Fitbit Charge HR","Fitbit",2,93.38,91.05,"Heart_Rate",17,"E17","F17","G17","Fitbit_metamax","16:Fitbit",-2.33,92.215,-2.4951809809381,2.33
+17,"Fitbit Charge HR","Fitbit",2,105.68,95.98,"Heart_Rate",18,"E18","F18","G18","Fitbit_metamax","17:Fitbit",-9.7,100.83,-9.17865253595761,9.7
+18,"Fitbit Charge HR","Fitbit",1,123,103.79,"Heart_Rate",19,"E19","F19","G19","Fitbit_metamax","18:Fitbit",-19.21,113.395,-15.6178861788618,19.21
+19,"Fitbit Charge HR","Fitbit",1,100.16,97.74,"Heart_Rate",20,"E20","F20","G20","Fitbit_metamax","19:Fitbit",-2.42,98.95,-2.41613418530352,2.42
+20,"Fitbit Charge HR","Fitbit",2,70.65,63.88,"Heart_Rate",21,"E21","F21","G21","Fitbit_metamax","20:Fitbit",-6.77,67.265,-9.58244869072895,6.77
+21,"Fitbit Charge HR","Fitbit",1,105.37,93.93,"Heart_Rate",22,"E22","F22","G22","Fitbit_metamax","21:Fitbit",-11.44,99.65,-10.8569801651324,11.44
+22,"Fitbit Charge HR","Fitbit",2,96.36,88.24,"Heart_Rate",23,"E23","F23","G23","Fitbit_metamax","22:Fitbit",-8.12,92.3,-8.42673308426733,8.12
+1,"Samsung Gear S","Samsung",2,107.37,78.07,"Heart_Rate",2,"H2","I2","J2","Samsung_ECG","1:Samsung",-29.3,92.72,-27.2888143801807,29.3
+2,"Samsung Gear S","Samsung",2,105.13,92.48,"Heart_Rate",3,"H3","I3","J3","Samsung_ECG","2:Samsung",-12.65,98.805,-12.0327213925616,12.65
+3,"Samsung Gear S","Samsung",1,93.8,97.98,"Heart_Rate",4,"H4","I4","J4","Samsung_ECG","3:Samsung",4.18000000000001,95.89,4.45628997867805,4.18000000000001
+4,"Samsung Gear S","Samsung",1,121.03,116.03,"Heart_Rate",5,"H5","I5","J5","Samsung_ECG","4:Samsung",-5,118.53,-4.13120713872594,5
+5,"Samsung Gear S","Samsung",1,123.78,120.86,"Heart_Rate",6,"H6","I6","J6","Samsung_ECG","5:Samsung",-2.92,122.32,-2.35902407497173,2.92
+6,"Samsung Gear S","Samsung",2,86.2,84.71,"Heart_Rate",7,"H7","I7","J7","Samsung_ECG","6:Samsung",-1.49000000000001,85.455,-1.72853828306266,1.49000000000001
+7,"Samsung Gear S","Samsung",1,102.97,99.87,"Heart_Rate",8,"H8","I8","J8","Samsung_ECG","7:Samsung",-3.09999999999999,101.42,-3.01058560745848,3.09999999999999
+8,"Samsung Gear S","Samsung",2,95,103.34,"Heart_Rate",9,"H9","I9","J9","Samsung_ECG","8:Samsung",8.34,99.17,8.77894736842106,8.34
+9,"Samsung Gear S","Samsung",2,88.42,77.73,"Heart_Rate",10,"H10","I10","J10","Samsung_ECG","9:Samsung",-10.69,83.075,-12.0900248812486,10.69
+10,"Samsung Gear S","Samsung",2,92.22,100.84,"Heart_Rate",11,"H11","I11","J11","Samsung_ECG","10:Samsung",8.62,96.53,9.34721318585991,8.62
+11,"Samsung Gear S","Samsung",2,106.49,99.1,"Heart_Rate",12,"H12","I12","J12","Samsung_ECG","11:Samsung",-7.39,102.795,-6.93961874354399,7.39
+12,"Samsung Gear S","Samsung",2,125.52,118.07,"Heart_Rate",13,"H13","I13","J13","Samsung_ECG","12:Samsung",-7.45,121.795,-5.93530911408541,7.45
+13,"Samsung Gear S","Samsung",2,113.33,87.37,"Heart_Rate",14,"H14","I14","J14","Samsung_ECG","13:Samsung",-25.96,100.35,-22.9065560751787,25.96
+14,"Samsung Gear S","Samsung",1,82.27,80.38,"Heart_Rate",15,"H15","I15","J15","Samsung_ECG","14:Samsung",-1.89,81.325,-2.29731372310684,1.89
+15,"Samsung Gear S","Samsung",1,81.52,77.27,"Heart_Rate",16,"H16","I16","J16","Samsung_ECG","15:Samsung",-4.25,79.395,-5.21344455348381,4.25
+16,"Samsung Gear S","Samsung",1,89.57,81.34,"Heart_Rate",17,"H17","I17","J17","Samsung_ECG","16:Samsung",-8.22999999999999,85.455,-9.1883443117115,8.22999999999999
+17,"Samsung Gear S","Samsung",2,105.68,102.07,"Heart_Rate",18,"H18","I18","J18","Samsung_ECG","17:Samsung",-3.61000000000001,103.875,-3.41597274791826,3.61000000000001
+18,"Samsung Gear S","Samsung",2,120.15,106.74,"Heart_Rate",19,"H19","I19","J19","Samsung_ECG","18:Samsung",-13.41,113.445,-11.1610486891386,13.41
+19,"Samsung Gear S","Samsung",2,100.08,77.93,"Heart_Rate",20,"H20","I20","J20","Samsung_ECG","19:Samsung",-22.15,89.005,-22.1322941646683,22.15
+20,"Samsung Gear S","Samsung",2,70.65,79.17,"Heart_Rate",21,"H21","I21","J21","Samsung_ECG","20:Samsung",8.52,74.91,12.0594479830149,8.52
+21,"Samsung Gear S","Samsung",2,99.91,90.04,"Heart_Rate",22,"H22","I22","J22","Samsung_ECG","21:Samsung",-9.86999999999999,94.975,-9.8788910019017,9.86999999999999
+22,"Samsung Gear S","Samsung",1,99.71,84.35,"Heart_Rate",23,"H23","I23","J23","Samsung_ECG","22:Samsung",-15.36,92.03,-15.4046735533046,15.36
+1,"Mio Alpha","Mio",2,107.37,104.09,"Heart_Rate",2,"K2","L2","M2","Alpha_ECG","1:Mio",-3.28,105.73,-3.05485703641613,3.28
+2,"Mio Alpha","Mio",1,109.62,106.6,"Heart_Rate",3,"K3","L3","M3","Alpha_ECG","2:Mio",-3.02000000000001,108.11,-2.75497172048897,3.02000000000001
+3,"Mio Alpha","Mio",2,98.83,98.59,"Heart_Rate",4,"K4","L4","M4","Alpha_ECG","3:Mio",-0.239999999999995,98.71,-0.242841242537686,0.239999999999995
+4,"Mio Alpha","Mio",2,117.88,114.34,"Heart_Rate",5,"K5","L5","M5","Alpha_ECG","4:Mio",-3.53999999999999,116.11,-3.00305395317271,3.53999999999999
+5,"Mio Alpha","Mio",2,118.28,108.86,"Heart_Rate",6,"K6","L6","M6","Alpha_ECG","5:Mio",-9.42,113.57,-7.96415285762597,9.42
+6,"Mio Alpha","Mio",1,87.77,84.24,"Heart_Rate",7,"K7","L7","M7","Alpha_ECG","6:Mio",-3.53,86.005,-4.02187535604421,3.53
+7,"Mio Alpha","Mio",1,102.97,101.42,"Heart_Rate",8,"K8","L8","M8","Alpha_ECG","7:Mio",-1.55,102.195,-1.50529280372924,1.55
+8,"Mio Alpha","Mio",1,103.02,83.49,"Heart_Rate",9,"K9","L9","M9","Alpha_ECG","8:Mio",-19.53,93.255,-18.9574839836925,19.53
+9,"Mio Alpha","Mio",1,91.55,92.21,"Heart_Rate",10,"K10","L10","M10","Alpha_ECG","9:Mio",0.659999999999997,91.88,0.720917531403601,0.659999999999997
+10,"Mio Alpha","Mio",1,100.29,75.49,"Heart_Rate",11,"K11","L11","M11","Alpha_ECG","10:Mio",-24.8,87.89,-24.7282879649018,24.8
+11,"Mio Alpha","Mio",1,105.23,104.03,"Heart_Rate",12,"K12","L12","M12","Alpha_ECG","11:Mio",-1.2,104.63,-1.14035921315215,1.2
+12,"Mio Alpha","Mio",1,124.18,123.95,"Heart_Rate",13,"K13","L13","M13","Alpha_ECG","12:Mio",-0.230000000000004,124.065,-0.185215010468678,0.230000000000004
+13,"Mio Alpha","Mio",1,112.63,113.42,"Heart_Rate",14,"K14","L14","M14","Alpha_ECG","13:Mio",0.790000000000006,113.025,0.701411702033212,0.790000000000006
+14,"Mio Alpha","Mio",2,99.46,81.3,"Heart_Rate",15,"K15","L15","M15","Alpha_ECG","14:Mio",-18.16,90.38,-18.2585964206716,18.16
+15,"Mio Alpha","Mio",2,76.4,76.21,"Heart_Rate",16,"K16","L16","M16","Alpha_ECG","15:Mio",-0.190000000000012,76.305,-0.248691099476455,0.190000000000012
+16,"Mio Alpha","Mio",2,93.38,95.32,"Heart_Rate",17,"K17","L17","M17","Alpha_ECG","16:Mio",1.94,94.35,2.07753266224031,1.94
+17,"Mio Alpha","Mio",1,105.19,103.27,"Heart_Rate",18,"K18","L18","M18","Alpha_ECG","17:Mio",-1.92,104.23,-1.82526856165035,1.92
+18,"Mio Alpha","Mio",1,123,122.07,"Heart_Rate",19,"K19","L19","M19","Alpha_ECG","18:Mio",-0.930000000000007,122.535,-0.756097560975615,0.930000000000007
+19,"Mio Alpha","Mio",1,100.16,98.62,"Heart_Rate",20,"K20","L20","M20","Alpha_ECG","19:Mio",-1.53999999999999,99.39,-1.53753993610223,1.53999999999999
+20,"Mio Alpha","Mio",1,70.36,72.14,"Heart_Rate",21,"K21","L21","M21","Alpha_ECG","20:Mio",1.78,71.25,2.52984650369528,1.78
+21,"Mio Alpha","Mio",2,99.91,95.54,"Heart_Rate",22,"K22","L22","M22","Alpha_ECG","21:Mio",-4.36999999999999,97.725,-4.37393654288859,4.36999999999999
+22,"Mio Alpha","Mio",2,96.36,93.15,"Heart_Rate",23,"K23","L23","M23","Alpha_ECG","22:Mio",-3.20999999999999,94.755,-3.33125778331257,3.20999999999999

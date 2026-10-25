@@ -1,0 +1,189 @@
+{
+  "html": "최종분석보고서.html",
+  "html_sha256": "4fdf6816963ffc0846835ea7d0c414217d58378a4ba2cfdfffaacd64ec8c5f23",
+  "documentation_revision": "PAIR1-20261024",
+  "paired_stages": 7,
+  "stage_registry": "analysis/stage_registry.json",
+  "run_id": "R1-20261024",
+  "data_version": "wallen-hr-355eb8cf25fa3f49fd17",
+  "raw_sha256": "50cae0d20ded94e43b956fc9f86a286cdf227eafe549906442fe21445570fcff",
+  "images": [
+    {
+      "file": "analysis/runs/R1-20261024/figures/01_scatter_regression.png",
+      "sha256": "7fc78ea29ba26655247a02657a47eb254920b2f42377904e9262aa9e9d2130be"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/figures/02_error_histograms.png",
+      "sha256": "2367e94ed096b5eaa0e833ba544f9810e033e8a5b8b0ef75275482934bd93c99"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/figures/03_bland_altman.png",
+      "sha256": "82224a505664edf21f36e41498b56ee213b9e0ddb3fc57b0904c08ac89e300ee"
+    },
+    {
+      "file": "analysis/renderings/STYLE1-20261024/04_regression_residuals.png",
+      "sha256": "1abc24b60aa6fad81b094aad778bb33e10e0d3a7fe704a806044302a38147f68"
+    },
+    {
+      "file": "analysis/renderings/STYLE1-20261024/05_residual_qq.png",
+      "sha256": "87f811482092f004572b693ab1be06392820f8dce84e2622c73a6ed770a0097d"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/figures/06_leave_one_out.png",
+      "sha256": "753149e073713654a39859b720cf2d43cbf326e2f89f3565364814fafe6fbcc8"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/figures/07_bias_and_mae.png",
+      "sha256": "0f524e5e1a44640bb6e7f472c884f8abec634a3cb9c50cbd71d18e8c07bb065d"
+    }
+  ],
+  "markdown": [
+    {
+      "file": "docs/00-요청과실행기준.md",
+      "sha256": "b2149f8f5c3e838a59bdb1b26ba5a4f76a197a76a7a30b9d6b37dd484cd75a34"
+    },
+    {
+      "file": "docs/01-출처와수정슬라이드.md",
+      "sha256": "03545513b4f98dc4b49ee7fe2c1a362941f104b87e92f7f6a5887249794ee42b"
+    },
+    {
+      "file": "docs/02-원자료구조와정리.md",
+      "sha256": "9411120050186425dcf08f2170a0a224952dddb2d3e4739fbb239ff8146f2e9d"
+    },
+    {
+      "file": "docs/03-품질검사와자료흐름.md",
+      "sha256": "192e0a5d766e64d93154cb0dbbc56791c203eeb67ff95bb5d4eceaf8c1b76628"
+    },
+    {
+      "file": "docs/04-산점도와상관.md",
+      "sha256": "550eda693eba4ec6a70ca9d1d9f751fddd5f20161104b4e984c2676a82a6e194"
+    },
+    {
+      "file": "docs/05-단순선형회귀.md",
+      "sha256": "25be400ecb5c2250ec8bc8dd7c3dfdda98a93ba3fbca75ca2b85c63dfa5e9beb"
+    },
+    {
+      "file": "docs/06-측정오차와일치도.md",
+      "sha256": "e240a603d2d1f39191ef45eaec56da7595ec62942bde4b2d188f9dc1c5fbd80b"
+    },
+    {
+      "file": "docs/07-진단과민감도.md",
+      "sha256": "b256091803f95474b93fcc32ea64abfeafce9784d2e7674d708d7b1489d3c596"
+    },
+    {
+      "file": "docs/08-논문비교와최종해석.md",
+      "sha256": "84cb89f2fb6e8d980072bc3d3db35e21dd918aa54b51fbbacf57fdd913b00bf1"
+    },
+    {
+      "file": "docs/09-문제와수정내역.md",
+      "sha256": "57350b4b7a9bed913a42287d339047b9ce632d9fd074024719bf75bf78205680"
+    },
+    {
+      "file": "docs/devices/Apple.md",
+      "sha256": "e9803f750174f68adb25467ba8f7c1cc15f573e67caedffa53fae9d156155c61"
+    },
+    {
+      "file": "docs/devices/Fitbit.md",
+      "sha256": "4da8bb94e272666e42cb6c98fa5ab3a7b3902fb6ced3dca6df66428baa3002ea"
+    },
+    {
+      "file": "docs/devices/Samsung.md",
+      "sha256": "8e4108f49851d1d24fbb2052e4433b8bd326c89ba97008da094fdf071ffe56ef"
+    },
+    {
+      "file": "docs/devices/Mio.md",
+      "sha256": "070638596a7caa2e5b8e9b12482810b080d857b57680b7839fb4b42d896882e3"
+    },
+    {
+      "file": "docs/learning/01-concept 자료·변수·관측 단위.md",
+      "sha256": "1690bb65331f696ff03a18f05729f0e3c4babf6e446a1727f23735fb4bf7d7ee"
+    },
+    {
+      "file": "docs/learning/01-paper 자료·변수·관측 단위.md",
+      "sha256": "e053494d8445ccba51231601a48577c649831d3d3e495c966b8fa7234c839604"
+    },
+    {
+      "file": "docs/learning/02-concept 산점도·Pearson 상관.md",
+      "sha256": "51fcc2819cbb02e50342ed01a66998dea0381c2437f07adf1dcf9c0aff77e69d"
+    },
+    {
+      "file": "docs/learning/02-paper 산점도·Pearson 상관.md",
+      "sha256": "53be4f0f01c6dcdbdad4674737d346284b931a8542fe2ee2e36bc5a44929e760"
+    },
+    {
+      "file": "docs/learning/03-concept 단순 선형회귀.md",
+      "sha256": "36ad521041e02ca55cb06fc2e7249039c2b044517662a566e729bdb4785f7567"
+    },
+    {
+      "file": "docs/learning/03-paper 단순 선형회귀.md",
+      "sha256": "33bdcb70693d216731b9d430d89c96624f3e7ec233fc41546b19c09291d1efff"
+    },
+    {
+      "file": "docs/learning/04-concept 측정오차·일치도.md",
+      "sha256": "80ec7b6198f9a3ad5c921c5a5eb5687c5fb092081cadb994bb09ef4023efc722"
+    },
+    {
+      "file": "docs/learning/04-paper 측정오차·일치도.md",
+      "sha256": "655c89657e7a87d26d2fb154b7ac0af6ae097e2b334f2fa7e582036dcab0e87e"
+    },
+    {
+      "file": "docs/learning/05-concept 진단·영향점·민감도.md",
+      "sha256": "48fb541fe2b1b80d90294dec276a856611eeacab977bbbb1769ba504a2ebc910"
+    },
+    {
+      "file": "docs/learning/05-paper 진단·영향점·민감도.md",
+      "sha256": "c3c6d3e1a92272929ac5faf0def851c364e4a83fc8c2f4cbca806927958a95fe"
+    },
+    {
+      "file": "docs/learning/06-concept 논문 수치 대조·해석.md",
+      "sha256": "10e1b920f6cb89ad3b5ff2a56012c73081e591129bc0d30950f3ef0f8d3026a0"
+    },
+    {
+      "file": "docs/learning/06-paper 논문 수치 대조·해석.md",
+      "sha256": "24d9dfd9390054cd012ba55873aac8d539ede9a9c5220abe099804725e3d6b57"
+    },
+    {
+      "file": "docs/learning/07-concept 문제·검증·보고의 한계.md",
+      "sha256": "80a06dcc98373ef72cd763b7943a0ec5663e4fc1f6d98e88db8d60e8b0b04f3f"
+    },
+    {
+      "file": "docs/learning/07-paper 문제·검증·보고의 한계.md",
+      "sha256": "b7918eb09c268aa8b6a40eebc2f9c16a2013c4b9216d09177f1925e85771caac"
+    },
+    {
+      "file": "docs/learning/00-학습문서읽기지도.md",
+      "sha256": "ebb42165dadd64c9b93297b12903b97223e7362e5634096f34bf1d7d8d16a002"
+    }
+  ],
+  "n_pairs": 88,
+  "n_people": 22,
+  "primary_exclusions": 0,
+  "review_scope": "same-agent formula and cross-language comparison",
+  "paper_comparison": {
+    "created_utc": "2026-10-24T12:13:19.035678+00:00",
+    "source": "sources/paper.manuscript.xml",
+    "source_sha256": "4c1a871251ccb792e4058c001e51b1c720e1a06307e971df91e1f180f4ec6d28",
+    "scope": "HR Table1 count, means, SD, method-labelled r and constant LoA; not full ICC/EE/steps reproduction",
+    "comparisons": 38,
+    "correlations_match": 4,
+    "Mio_regression_LoA": "not directly comparable to fixed limits",
+    "raw_statistics_unchanged": true,
+    "rounded_input_diagnostic": "post-result explanatory check; not primary analysis or proven author procedure",
+    "within_stated_rounding": 33,
+    "tolerances_origin": "n,r,mean fixed in plan before statistics; SD/LoA0.05 is a one-decimal comparison criterion applied after Table1 extraction; not all comparison criteria preregistered."
+  },
+  "browser_review": "analysis/reviews/browser_review.json",
+  "documentation_content_review": "analysis/reviews/documentation_content_review.json",
+  "verification_summary": "analysis/reviews/verification_summary.json",
+  "source_code": [
+    {
+      "file": "analysis/src/build_report.py",
+      "sha256": "d70ac36b13c8a6ff30b2f9ef2d06f007f3e8d950baa322bc8c6e6276cff08623"
+    },
+    {
+      "file": "analysis/src/paired_learning.py",
+      "sha256": "975f0a67c7822dce86fa994a82d18232b80c992d62340033b0829ae87cc5f614"
+    }
+  ],
+  "stage_registry_sha256": "14369d81e19c22395b67d9421fc2918c81ddfdb1410332e0ccc2c29b18c937a7"
+}

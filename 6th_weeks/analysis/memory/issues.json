@@ -1,0 +1,138 @@
+[
+  {
+    "id": "D01",
+    "type": "source limitation",
+    "question": "Can 15-second or activity-specific HR be reconstructed?",
+    "finding": "No: public HR sheet contains 22 protocol-average participant rows and four devices; activity columns exist only in other outcomes.",
+    "action": "Analyse all available average HR pairs; no fabricated expansion or arbitrary downsampling.",
+    "status": "limitation retained"
+  },
+  {
+    "id": "D02",
+    "type": "metadata discrepancy",
+    "question": "Is Heart_Rate F1 Fitbit_metamax calorimetry?",
+    "finding": "Key Worksheet_4 defines it as ECG heart rate; unit bpm.",
+    "action": "Map F to reference_bpm with raw header/cell retained; do not modify workbook.",
+    "status": "resolved for analysis"
+  },
+  {
+    "id": "D03",
+    "type": "import risk",
+    "question": "Repeated Trial_number headers may be auto-renamed.",
+    "finding": "D/G/J/M headers identical.",
+    "action": "Read header as first text row and use verified device/reference/trial positions.",
+    "status": "controlled"
+  },
+  {
+    "id": "D04",
+    "type": "out of scope metadata discrepancy",
+    "question": "Gender code in sheet vs Key differs.",
+    "finding": "Demographics header says1/2; Key says0/1.",
+    "action": "Do not use gender or silently recode; HR analysis unaffected.",
+    "status": "outside assignment; unresolved"
+  },
+  {
+    "id": "S01",
+    "type": "statistical interpretation",
+    "question": "Are 88 rows 88 independent people?",
+    "finding": "22 people each appear for four watches.",
+    "action": "Per-device analyses n22; retain trial assignment; no pooled independent inference.",
+    "status": "controlled"
+  },
+  {
+    "id": "S02",
+    "type": "statistical interpretation",
+    "question": "Does high r establish agreement?",
+    "finding": "Correlation ignores fixed offset and scale distortion.",
+    "action": "Report identity line, signed/absolute errors and Bland-Altman in addition to r.",
+    "status": "analysed in outputs"
+  },
+  {
+    "id": "S03",
+    "type": "method limitation",
+    "question": "Does classical LoA exactly reproduce paper adjustment?",
+    "finding": "Paper considers regression-dependent bias/LoA.",
+    "action": "Classical LoA labelled descriptive; inspect error~mean and residuals; no exact LoA reproduction claim.",
+    "status": "limitation retained"
+  },
+  {
+    "id": "S04",
+    "type": "selection risk",
+    "question": "Should large-error or influential participants be removed?",
+    "finding": "No source-supported exclusion rule for valid HR averages.",
+    "action": "Keep all primary rows; LOO sensitivity labelled separately.",
+    "status": "controlled"
+  },
+  {
+    "id": "S05",
+    "type": "model limitation",
+    "question": "Does the fitted line prove calibration or future prediction performance?",
+    "finding": "OLS minimises vertical errors; reference may contain error; no external data.",
+    "action": "Interpret as association description; LOO is sensitivity, not held-out predictive validation.",
+    "status": "limitation retained"
+  },
+  {
+    "id": "E01",
+    "type": "environment",
+    "question": "readxl unavailable initially.",
+    "finding": "Preflight R4.6.1 readxl=FALSE; installed project-local readxl1.6.0.",
+    "action": "Record library versions; no global package alteration.",
+    "status": "resolved"
+  },
+  {
+    "id": "E02",
+    "type": "acquisition",
+    "question": "DOI and slide browsing initially failed.",
+    "finding": "Web tool could not fetch initial links.",
+    "action": "Official publisher endpoint and direct public slide download succeeded; SHA256 retained.",
+    "status": "resolved"
+  },
+  {
+    "id": "E03",
+    "type": "read-only warning",
+    "question": "OpenPyXL unknown extension warning during inspection.",
+    "finding": "Workbook reader warns it would not preserve an extension when saved.",
+    "action": "Read only; never export/overwrite raw XLSX; verify unchanged SHA.",
+    "status": "controlled"
+  },
+  {
+    "id": "E04",
+    "type": "inspection failure",
+    "question": "Directory suffix search selected another programming folder.",
+    "finding": "A read-only preliminary stdin command raised FileNotFoundError.",
+    "action": "Replaced suffix search with explicit requested absolute root; primary import not affected.",
+    "status": "resolved"
+  },
+  {
+    "id": "D05",
+    "type": "metadata precision",
+    "question": "Key labels HR values Integer although spreadsheet contains decimals.",
+    "finding": "Observed HR values have decimals.",
+    "action": "Retain numeric decimals; no integer coercion or rounding before statistics.",
+    "status": "controlled"
+  },
+  {
+    "id": "C01",
+    "type": "publication-method mismatch",
+    "question": "Why is Samsung primary Pearson about0.743 while paper reports0.67?",
+    "finding": "Table1 footnote * marks Samsung HR as Spearman. Observed Spearman is0.6702428.",
+    "action": "Keep Pearson as assignment primary for all watches; compare paper using its stated statistic.",
+    "status": "resolved without tuning"
+  },
+  {
+    "id": "C02",
+    "type": "small reporting discrepancy",
+    "question": "Some raw-data bias/LoA differ slightly from printed1-decimal figures.",
+    "finding": "Samsung raw bias=-7.04818 vs table-7.1; several directly computed LoA differ. Substituting printed rounded bias/SD yields all six constant published bounds within0.05.",
+    "action": "Report raw results and differences; show rounded-input compatibility diagnostic separately; do not claim author method identified or alter raw values.",
+    "status": "partial; original precision/rounding procedure unknown"
+  },
+  {
+    "id": "C03",
+    "type": "non-comparable agreement specification",
+    "question": "Can Mio reported regression-varying LoA be reproduced by constants?",
+    "finding": "Paper upper=-0.44*average+52.69; lower=0.4*average-61.2.",
+    "action": "Do not compare fixed descriptive LoA as exact reproduction; preserve equations in comparison notes.",
+    "status": "not directly comparable; limitation retained"
+  }
+]

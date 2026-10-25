@@ -1,0 +1,90 @@
+{
+  "plan_version": "1.0",
+  "created_at_utc": "2026-10-24T12:04:26.794204+00:00",
+  "run_id": "R1-20261024",
+  "question": "How strongly do each watch participant-level average heart rate and its concurrent ECG reference co-vary, and how far do they disagree in bpm?",
+  "assignment_source": "https://slides.pnucolab.com/9eGiQnmVQB7D",
+  "paper": "https://doi.org/10.1371/journal.pone.0154420",
+  "raw_file": "data/raw/pone.0154420.s001.xlsx",
+  "raw_sha256": "50cae0d20ded94e43b956fc9f86a286cdf227eafe549906442fe21445570fcff",
+  "sheet": "Heart_Rate",
+  "unit": "bpm",
+  "observation_unit": "one participant-device protocol-average pair",
+  "participants_expected": 22,
+  "pairs_expected": 88,
+  "unit_evidence": "Workbook has 22 participant rows, no HR activity or timestamp columns; article Fig3 calls these average heart rate.",
+  "import": "readxl; A1:M23 as text to preserve original duplicate header names; parse by explicit column map after header validation",
+  "columns": {
+    "id": 1,
+    "Apple Watch": [
+      2,
+      3,
+      4
+    ],
+    "Fitbit Charge HR": [
+      5,
+      6,
+      7
+    ],
+    "Samsung Gear S": [
+      8,
+      9,
+      10
+    ],
+    "Mio Alpha": [
+      11,
+      12,
+      13
+    ]
+  },
+  "reference_header_exception": {
+    "cell": "F1",
+    "raw": "Fitbit_metamax",
+    "interpretation": "ECG heart rate",
+    "evidence": "Key Worksheet_4 explicitly defines this column as electrocardiography heart rate; article reference methods agrees"
+  },
+  "selection": "Keep every finite participant-watch reference/device pair; report and retain invalid entries separately; stop if observed counts differ from 22 per device for investigation.",
+  "transformations": [
+    "wide to long without averaging",
+    "error=device-reference",
+    "pair_mean=(device+reference)/2",
+    "relative_error_percent=100*error/reference"
+  ],
+  "forbidden": [
+    "downsampling",
+    "outlier deletion from primary analysis",
+    "imputation",
+    "fabricating 15-second records",
+    "joining HR to unrelated activity rows",
+    "optimizing definitions to published numbers"
+  ],
+  "primary": [
+    "per-device scatter with OLS and identity y=x",
+    "Pearson r and Fisher-z 95%CI",
+    "OLS device=intercept+slope*ECG with coefficient t CI and R2",
+    "signed error mean/SD/median/IQR",
+    "MAE/RMSE/MPE/MAPE",
+    "signed-error histogram using common breaks"
+  ],
+  "bounded_diagnostics": [
+    "Spearman rank correlation as labelled secondary",
+    "OLS residual-vs-fitted and Q-Q",
+    "classical descriptive Bland-Altman mean +/-1.96SD; no claim to reproduce regression-adjusted paper LoA",
+    "error~pair_mean proportional-bias diagnostic",
+    "leave-one-participant-out sensitivity: 22 deletions per device; does not change primary sample"
+  ],
+  "comparison_policy": "Published results visible during source reading; not blinded. Compare after fit; never tune to targets. Original paper contains Pearson/Spearman and regression-dependent LoA, so metric differences need interpretation.",
+  "inference": "Each per-device analysis uses 22 people. Devices share participants; no pooled n=88 independent-person p-value and no unpaired device superiority test.",
+  "validation": "same-agent formula checks and R vs Python numpy/OpenPyXL cross-check; not external or independent-agent review",
+  "tolerances": {
+    "numeric_crosscheck_absolute": 1e-09,
+    "raw_count": 0,
+    "published_r_rounding": 0.005,
+    "published_mean_rounding": 0.05
+  },
+  "scope_limit": "Heart_Rate assignment only. No energy expenditure, steps, ICC replication, subgroup search or nonexistent HR activity/time series.",
+  "completion": "all four devices analysed on complete available HR data; each stage MD + four device MD; one final self-contained HTML with all plots, all 88 rows, issues and limitations",
+  "review_policy": "data/code changes rerun dependent statistics; narrative-only changes review affected wording; style-only changes visual check; immutable run IDs",
+  "progress_cost_policy": "log wall time, artifact sizes and failures; use short summaries; token/dollar telemetry unavailable; source checks stop after official paper, workbook Key and slides.",
+  "data_version": "wallen-hr-355eb8cf25fa3f49fd17"
+}

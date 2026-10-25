@@ -1,0 +1,23 @@
+{
+  "root": "C:\\Users\\doyun\\Desktop\\2026-2\\의생명프로그래밍\\6주차",
+  "date_kst": "2026-10-24",
+  "run_id": "R1-20261024",
+  "plan": "analysis/config/plan-v1.0.json",
+  "data_version": "wallen-hr-355eb8cf25fa3f49fd17",
+  "status": "completed",
+  "html": "최종분석보고서.html",
+  "canonical_state": "this file plus per-run report; docs generated from outputs",
+  "scope": "Heart_Rate assignment only. No energy expenditure, steps, ICC replication, subgroup search or nonexistent HR activity/time series.",
+  "raw_sha256": "50cae0d20ded94e43b956fc9f86a286cdf227eafe549906442fe21445570fcff",
+  "current_run": "R1-20261024",
+  "docs_count": 29,
+  "updated_utc": "2026-10-24T13:15:31.380653+00:00",
+  "review_scope": "same-agent R/Python mathematical cross-check; no external independent review",
+  "completed_utc": "2026-10-24T12:34:29.769418+00:00",
+  "html_sha256": "4fdf6816963ffc0846835ea7d0c414217d58378a4ba2cfdfffaacd64ec8c5f23",
+  "verification": "analysis/reviews/verification_summary.json",
+  "rendering_revision": "STYLE1-20261024",
+  "documentation_revision": "PAIR1-20261024",
+  "paired_learning_stages": 7,
+  "documentation_review": "accept; content and browser only, not independent numerical review"
+}

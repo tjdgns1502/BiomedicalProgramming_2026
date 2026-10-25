@@ -1,0 +1,100 @@
+{
+  "artifact": "최종분석보고서.html",
+  "documentation_revision": "PAIR1-20261024",
+  "sha256": "4fdf6816963ffc0846835ea7d0c414217d58378a4ba2cfdfffaacd64ec8c5f23",
+  "decision": "pass",
+  "desktop": {
+    "width": 1440,
+    "documentWidth": 1440,
+    "sections": 9,
+    "images": 7,
+    "decodedImages": 7,
+    "rawRows": 88,
+    "issues": 17,
+    "mdRecords": 29
+  },
+  "mobile": {
+    "width": 390,
+    "documentWidth": 390
+  },
+  "pairing": [
+    {
+      "id": "data",
+      "concept": 1,
+      "paper": 1,
+      "conceptVisible": true,
+      "paperVisible": true,
+      "hasMDLinks": true
+    },
+    {
+      "id": "association",
+      "concept": 1,
+      "paper": 1,
+      "conceptVisible": true,
+      "paperVisible": true,
+      "hasMDLinks": true
+    },
+    {
+      "id": "regression",
+      "concept": 1,
+      "paper": 1,
+      "conceptVisible": true,
+      "paperVisible": true,
+      "hasMDLinks": true
+    },
+    {
+      "id": "error",
+      "concept": 1,
+      "paper": 1,
+      "conceptVisible": true,
+      "paperVisible": true,
+      "hasMDLinks": true
+    },
+    {
+      "id": "diagnostics",
+      "concept": 1,
+      "paper": 1,
+      "conceptVisible": true,
+      "paperVisible": true,
+      "hasMDLinks": true
+    },
+    {
+      "id": "publication",
+      "concept": 1,
+      "paper": 1,
+      "conceptVisible": true,
+      "paperVisible": true,
+      "hasMDLinks": true
+    },
+    {
+      "id": "problems",
+      "concept": 1,
+      "paper": 1,
+      "conceptVisible": true,
+      "paperVisible": true,
+      "hasMDLinks": true
+    }
+  ],
+  "localLinks": 18,
+  "anchors": 11,
+  "csv_download_all88": "all text content matches after BOM and LF/CRLF normalization",
+  "issue_controls": "passed",
+  "device_filter": "22 per device and88 restored",
+  "synthetic_correlation_demo": "offset and identity cases passed; demo displayed only in concept panel",
+  "print": {
+    "openDetails": 46,
+    "visibleRows": 88,
+    "concepts": 7,
+    "papers": 7
+  },
+  "pageErrors": [],
+  "screenshots": [
+    "desktop-overview.png",
+    "desktop-concept.png",
+    "desktop-paper.png",
+    "desktop-publication.png",
+    "mobile-overview.png",
+    "mobile-concept.png",
+    "mobile-paper.png"
+  ]
+}

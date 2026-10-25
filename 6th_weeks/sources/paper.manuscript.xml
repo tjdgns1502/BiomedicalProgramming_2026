@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1d3 20150301//EN" "http://jats.nlm.nih.gov/publishing/1.1d3/JATS-journalpublishing1.dtd">
+<article article-type="research-article" dtd-version="1.1d3" xml:lang="en" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink">
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS ONE</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosone</journal-id>
+<journal-title-group>
+<journal-title>PLOS ONE</journal-title>
+</journal-title-group>
+<issn pub-type="epub">1932-6203</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, CA USA</publisher-loc>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="doi">10.1371/journal.pone.0154420</article-id>
+<article-id pub-id-type="publisher-id">PONE-D-15-55600</article-id>
+<article-categories>
+<subj-group subj-group-type="heading">
+<subject>Research Article</subject>
+</subj-group>
+<subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Biochemistry</subject><subj-group><subject>Bioenergetics</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Medicine and health sciences</subject><subj-group><subject>Cardiology</subject><subj-group><subject>Heart rate</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Engineering and technology</subject><subj-group><subject>Equipment</subject><subj-group><subject>Measurement equipment</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Research and analysis methods</subject><subj-group><subject>Bioassays and physiological analysis</subject><subj-group><subject>Electrophysiological techniques</subject><subj-group><subject>Cardiac electrophysiology</subject><subj-group><subject>Electrocardiography</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Medicine and health sciences</subject><subj-group><subject>Public and occupational health</subject><subj-group><subject>Physical activity</subject><subj-group><subject>Physical fitness</subject><subj-group><subject>Exercise</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Medicine and health sciences</subject><subj-group><subject>Sports and exercise medicine</subject><subj-group><subject>Exercise</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Sports science</subject><subj-group><subject>Sports and exercise medicine</subject><subj-group><subject>Exercise</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Medicine and health sciences</subject><subj-group><subject>Public and occupational health</subject><subj-group><subject>Physical activity</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Biomechanics</subject><subj-group><subject>Biological locomotion</subject><subj-group><subject>Walking</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Physiology</subject><subj-group><subject>Biological locomotion</subject><subj-group><subject>Walking</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Medicine and health sciences</subject><subj-group><subject>Physiology</subject><subj-group><subject>Biological locomotion</subject><subj-group><subject>Walking</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Research and analysis methods</subject><subj-group><subject>Chemical characterization</subject><subj-group><subject>Calorimetry</subject><subj-group><subject>Indirect calorimetry</subject></subj-group></subj-group></subj-group></subj-group></article-categories>
+<title-group>
+<article-title>Accuracy of Heart Rate Watches: Implications for Weight Management</article-title>
+<alt-title alt-title-type="running-head">Accuracy of Heart Rate Watches</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" equal-contrib="yes" xlink:type="simple">
+<name name-style="western">
+<surname>Wallen</surname>
+<given-names>Matthew P.</given-names>
+</name>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+</contrib>
+<contrib contrib-type="author" equal-contrib="yes" xlink:type="simple">
+<name name-style="western">
+<surname>Gomersall</surname>
+<given-names>Sjaan R.</given-names>
+</name>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+</contrib>
+<contrib contrib-type="author" equal-contrib="yes" xlink:type="simple">
+<name name-style="western">
+<surname>Keating</surname>
+<given-names>Shelley E.</given-names>
+</name>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+</contrib>
+<contrib contrib-type="author" equal-contrib="yes" xlink:type="simple">
+<name name-style="western">
+<surname>Wisløff</surname>
+<given-names>Ulrik</given-names>
+</name>
+<xref ref-type="aff" rid="aff002"><sup>2</sup></xref>
+</contrib>
+<contrib contrib-type="author" corresp="yes" equal-contrib="yes" xlink:type="simple">
+<name name-style="western">
+<surname>Coombes</surname>
+<given-names>Jeff S.</given-names>
+</name>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+<xref ref-type="corresp" rid="cor001">*</xref>
+</contrib>
+</contrib-group>
+<aff id="aff001"><label>1</label> <addr-line>Centre for Research on Exercise, Physical Activity and Health (CRExPAH), School of Human Movement and Nutrition Sciences, The University of Queensland, Brisbane, Queensland, Australia</addr-line></aff>
+<aff id="aff002"><label>2</label> <addr-line>K.G. Jebsen Center of Exercise in Medicine, Department of Circulation and Medical Imaging, Norwegian University of Science and Technology, Trondheim, Norway</addr-line></aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple">
+<name name-style="western">
+<surname>Calbet</surname>
+<given-names>Jose A. L.</given-names>
+</name>
+<role>Editor</role>
+<xref ref-type="aff" rid="edit1"/>
+</contrib>
+</contrib-group>
+<aff id="edit1"><addr-line>University of Las Palmas de Gran Canaria, SPAIN</addr-line></aff>
+<author-notes>
+<fn fn-type="conflict" id="coi001">
+<p>The principal investigator on the study (Coombes) received an unrestricted grant from Coca Cola that was used to partially fund this study. The purpose of the financial support was to support research investigating the effects of high intensity exercise on energy balance in participants with the metabolic syndrome. To assess energy expenditure we first wanted to conduct a sub-study to investigate the accuracy of wrist worn devices to collect these data – leading to the submitted manuscript. As an unrestricted grant, Coca Cola had no input or control over any aspect of the study. Our only obligation/communication to Coca Cola regarding this study is to notify them of what we had done. This does not alter the authors’ adherence to PLOS ONE policies on sharing data and materials. Professor Wisløff (co-investigator on the study) is Director of a company (Beatstack) that has developed and patented a smart phone application called the ‘Personal Activity Intelligence, PAI’. Beatstack is now partially owned by Mio Global. This has led to the PAI app only being able to utilise heart rate data from Mio devices. Mio are developing more wrist worn heart rate devices (as would be most similar companies) and Professor Wisløff is working with the company to develop these products as part of his involvement in the Beatstack company and his interests in the PAI app. None of the Beatstack products or the Mio company had any involvement in the study. This does not alter the authors’ adherence to PLOS ONE policies on sharing data and materials.</p>
+</fn>
+<fn fn-type="con" id="contrib001">
+<p>Conceived and designed the experiments: MW SG JC UW. Performed the experiments: MW. Analyzed the data: MW JC SG SK. Wrote the paper: MW SG SK UW JC.</p>
+</fn>
+<corresp id="cor001">* E-mail: <email xlink:type="simple">jcoombes@uq.edu.au</email></corresp>
+</author-notes>
+<pub-date pub-type="epub">
+<day>27</day>
+<month>5</month>
+<year>2016</year>
+</pub-date>
+<pub-date pub-type="collection">
+<year>2016</year>
+</pub-date>
+<volume>11</volume>
+<issue>5</issue>
+<elocation-id>e0154420</elocation-id>
+<history>
+<date date-type="received">
+<day>22</day>
+<month>12</month>
+<year>2015</year>
+</date>
+<date date-type="accepted">
+<day>13</day>
+<month>4</month>
+<year>2016</year>
+</date>
+</history>
+<permissions>
+<copyright-year>2016</copyright-year>
+<copyright-holder>Wallen et al</copyright-holder>
+<license xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">
+<license-p>This is an open access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p>
+</license>
+</permissions>
+<self-uri content-type="pdf" xlink:href="info:doi/10.1371/journal.pone.0154420"/>
+<abstract>
+<sec id="sec001">
+<title>Background</title>
+<p>Wrist-worn monitors claim to provide accurate measures of heart rate and energy expenditure. People wishing to lose weight use these devices to monitor energy balance, however the accuracy of these devices to measure such parameters has not been established.</p>
+</sec>
+<sec id="sec002">
+<title>Aim</title>
+<p>To determine the accuracy of four wrist-worn devices (Apple Watch, Fitbit Charge HR, Samsung Gear S and Mio Alpha) to measure heart rate and energy expenditure at rest and during exercise.</p>
+</sec>
+<sec id="sec003">
+<title>Methods</title>
+<p>Twenty-two healthy volunteers (50% female; aged 24 ± 5.6 years) completed ~1-hr protocols involving supine and seated rest, walking and running on a treadmill and cycling on an ergometer. Data from the devices collected during the protocol were compared with reference methods: electrocardiography (heart rate) and indirect calorimetry (energy expenditure).</p>
+</sec>
+<sec id="sec004">
+<title>Results</title>
+<p>None of the devices performed significantly better overall, however heart rate was consistently more accurate than energy expenditure across all four devices. Correlations between the devices and reference methods were moderate to strong for heart rate (0.67–0.95 [0.35 to 0.98]) and weak to strong for energy expenditure (0.16–0.86 [-0.25 to 0.95]). All devices underestimated both outcomes compared to reference methods. The percentage error for heart rate was small across the devices (range: 1–9%) but greater for energy expenditure (9–43%). Similarly, limits of agreement were considerably narrower for heart rate (ranging from -27.3 to 13.1 bpm) than energy expenditure (ranging from -266.7 to 65.7 kcals) across devices.</p>
+</sec>
+<sec id="sec005">
+<title>Conclusion</title>
+<p>These devices accurately measure heart rate. However, estimates of energy expenditure are poor and would have implications for people using these devices for weight loss.</p>
+</sec>
+</abstract>
+<funding-group>
+<award-group id="award001">
+<funding-source>
+<institution-wrap>
+<institution-id institution-id-type="funder-id">http://dx.doi.org/10.13039/100004367</institution-id>
+<institution>Coca-Cola</institution>
+</institution-wrap>
+</funding-source>
+<principal-award-recipient>
+<name name-style="western">
+<surname>Coombes</surname>
+<given-names>Jeff S.</given-names>
+</name>
+</principal-award-recipient>
+</award-group>
+<funding-statement>The principal investigator on the study (Coombes) received an unrestricted grant from Coca Cola that was used to partially fund this study (Research Master Number 2014002786, <ext-link ext-link-type="uri" xlink:href="http://transparency.coca-colajourney.com.au" xlink:type="simple">http://transparency.coca-colajourney.com.au</ext-link>). The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript. There was no additional external funding received for this study.</funding-statement>
+</funding-group>
+<counts>
+<fig-count count="5"/>
+<table-count count="1"/>
+<page-count count="11"/>
+</counts>
+<custom-meta-group>
+<custom-meta id="data-availability">
+<meta-name>Data Availability</meta-name>
+<meta-value>All relevant data are within the paper and its Supporting Information files.</meta-value>
+</custom-meta>
+</custom-meta-group>
+</article-meta>
+</front>
+<body>
+<sec id="sec006" sec-type="intro">
+<title>Introduction</title>
+<p>The benefits of participating in regular physical activity are well documented [<xref ref-type="bibr" rid="pone.0154420.ref001">1</xref>], yet physical inactivity remains the largest risk factor for the development of cardiometabolic disease worldwide [<xref ref-type="bibr" rid="pone.0154420.ref002">2</xref>]. Wearable devices have become a popular method of measuring activity-based outcomes and facilitating behavior change to effectuate weight loss [<xref ref-type="bibr" rid="pone.0154420.ref003">3</xref>]. It was estimated that approximately 25 million of these devices would be sold in 2015 and worldwide sales are expected to increase to approximately 12.6 billion U.S. dollars by 2018 [<xref ref-type="bibr" rid="pone.0154420.ref004">4</xref>]. Notably, wrist-worn monitors are predicted to account for 87% of wearable devices shipped in 2018 [<xref ref-type="bibr" rid="pone.0154420.ref005">5</xref>]. These devices claim to provide accurate measures of energy expenditure and, more recently, heart rate via photoplethysmography.</p>
+<p>Previous studies investigating the validity of energy expenditure estimates have been limited to devices that do not include a measure of heart rate. These studies have demonstrated moderate validity, typically underestimating total energy expenditure compared to reference methods by approximately 10–30% depending on the device measured [<xref ref-type="bibr" rid="pone.0154420.ref006">6</xref>–<xref ref-type="bibr" rid="pone.0154420.ref009">9</xref>].</p>
+<p>With the inclusion of sophisticated photoplethysmography technology, new-generation devices such as the Apple Watch and Fitbit Charge HR have the potential to use heart rate-derived algorithms to contribute to estimates of energy expenditure based on activity intensity [<xref ref-type="bibr" rid="pone.0154420.ref010">10</xref>,<xref ref-type="bibr" rid="pone.0154420.ref011">11</xref>]. Recent evidence suggests this method has acceptable validity, however there is inherent variability, demonstrating that the accuracy of these devices is dependent on the device used, the type and intensity of activity, and skin photosensitivity [<xref ref-type="bibr" rid="pone.0154420.ref012">12</xref>,<xref ref-type="bibr" rid="pone.0154420.ref013">13</xref>]., Melanin concentration and skin pigmentation can attenuate the light wavelength emitted from these devices, thereby reducing pulse rate detection [<xref ref-type="bibr" rid="pone.0154420.ref014">14</xref>]. It is important to recognize, however, that the devices that have previously been evaluated were typically designed for sports performance, and contemporary activity trackers (e.g. Apple Watch, Fitbit Charge HR) have not yet been evaluated.</p>
+<p>Given the rapid consumer uptake of these devices, it is critical to determine their accuracy to measure these variables across a variety of modes and intensities given their potential to have a major influence on lifestyle behavior and weight management. The aim of this study was to therefore determine the ability of four popular wrist-worn devices (Apple Watch, Fitbit Charge HR, Samsung Gear S and Mio Alpha) to accurately measure heart rate and energy expenditure during approximately one hour of rest, cycling and treadmill walking.</p>
+</sec>
+<sec id="sec007" sec-type="materials|methods">
+<title>Methods</title>
+<sec id="sec008">
+<title>Participants</title>
+<p>Healthy male and female volunteers aged between 18–70 were invited to participate. All participants were recruited from a large metropolitan university. The study received ethical clearance from the University of Queensland (HMS15/2403). Research staff screened all participants for any medical indications that may exclude them from exercise testing and obtained written informed consent. Prior to each visit, participants were advised to refrain from ingesting caffeine and alcohol, and to avoid vigorous physical activity for 24 hours, and from consuming a large meal four hours, prior. A standardised meal replacement beverage (Up &amp; Go, Sanitarium, Australia) was provided to participants two hours before all testing sessions. A 24-hour physical activity and dietary diary was completed prior to the second testing session and participants were asked to replicate these behaviors before the final trial.</p>
+</sec>
+<sec id="sec009">
+<title>Experimental Protocols</title>
+<p>Participants attended the research laboratory on three separate occasions, separated by between 48 hours and 7 days. Visit one included measures of height, weight and skin type assessment via Fitzpatrick Skin Type scale [<xref ref-type="bibr" rid="pone.0154420.ref015">15</xref>]. Maximal oxygen uptake (<inline-formula id="pone.0154420.e001"><alternatives><graphic id="pone.0154420.e001g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0154420.e001" xlink:type="simple"/><mml:math display="inline" id="M1"><mml:mrow><mml:msub><mml:mrow><mml:mover accent="true"><mml:mtext>V</mml:mtext><mml:mo>˙</mml:mo></mml:mover><mml:mtext>O</mml:mtext></mml:mrow><mml:mrow><mml:mn>2</mml:mn><mml:mtext>max</mml:mtext></mml:mrow></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>) via indirect calorimetry (MetaMax 3B, Cortex, Germany) was also assessed using a Bruce treadmill protocol. Standard calibration of gas analysers (two point calibration against room air and known gas concentration of 4.07% CO<sub>2</sub>/15.95% O<sub>2</sub>) and volume (3L Hans Rudolph calibration syringe, Kansas, United States) was performed prior to each assessment as per manufacturers instructions. Measurements of oxygen consumption, carbon dioxide production and minute ventilation were obtained at rest and during exercise.</p>
+<p>Visits two and three were testing sessions, with two devices tested per session (one on each arm), using a randomized and counterbalanced method. Each visit involved the simultaneous recordings of heart rate and energy expenditure from the devices during a range of activities for comparison with reference methods. As three of the devices also measured steps, total steps for the duration of the testing session was also recorded for these devices (Apple Watch, Fitbit Charge HR, Samsung Gear S). To ensure participants were adequately hydrated, urine osmolality was assessed on arrival (Osmocheck Pocket Refractometer, Vitech Scientific Ltd, Tokyo). Activities at rest (lying, sitting, standing) and exercise (walking, cycling) were chosen for the 58-minute protocol (<xref ref-type="fig" rid="pone.0154420.g001">Fig 1</xref>). Participants initially performed five-minute periods of supine, sitting and standing, respectively. Three stages of a Bruce graded treadmill exercise protocol were then undertaken followed by five minutes of seated rest. Participants then completed six, three-minute stages of a 25-watt step test (commencing at 25 W) on a cycle ergometer followed by a final five minutes of seated rest.</p>
+<fig id="pone.0154420.g001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0154420.g001</object-id>
+<label>Fig 1</label>
+<caption>
+<title>Study protocol (58 mins in total).</title>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0154420.g001" xlink:type="simple"/>
+</fig>
+<p>The devices tested were the Apple Watch (Apple Inc., California, United States), Fitbit Charge HR (Fitbit Inc., San Francisco, United States), Samsung Gear S (Samsung Electronics Co., Ltd., Suwon, South Korea) and Mio Alpha (Mio Global, Canada). As per manufacturer instructions, the devices were individualized for age, gender and anthropometrical data. Devices with compatible smartphone software were synchronized via Bluetooth to an appropriate smartphone to assist with data collection (ease of visualization).</p>
+</sec>
+<sec id="sec010">
+<title>Reference Methods</title>
+<p>Electrocardiography (ECG) electrodes (3-lead, CASE exercise testing system, GE Healthcare, UK) were fitted at each visit and heart rate from the ECG and devices was manually recorded every 15-seconds during the protocol. Energy expenditure was measured using indirect calorimetry with a portable gas-analysis system (MetaMax 3B, Cortex, Germany). Participants were video recorded while walking on the treadmill and step count was determined from the recording retrospectively via visual inspection at half-speed playback.</p>
+</sec>
+<sec id="sec011">
+<title>Statistical analysis</title>
+<p>Pearson (r) or Spearman rank correlation coefficients (rho), for normal- and non-normally distributed data, respectively, intraclass correlation coefficients and Bland-Altman plots with mean bias and upper and lower limits of agreement (LoA) were used to assess criterion validity and agreement between the device and the reference. After visual examination of the plots, systematic bias was assessed using linear regression to determine whether mean difference and/or limits of agreement varied across average values of the device and the reference [<xref ref-type="bibr" rid="pone.0154420.ref016">16</xref>]. Where mean difference and/or limits of agreement varied with average values, estimates were calculated for the mean of the average values. All statistical analyses were conducted using SPSS (Version 22, SPSS Inc.) and data presented as mean ± SD. The strength of correlation coefficients was interpreted based on the following definitions: weak (r = &lt;0.5), moderate (0.5–0.7) and strong (r≥0.7).</p>
+</sec>
+</sec>
+<sec id="sec012" sec-type="results">
+<title>Results</title>
+<p>Twenty-two individuals (11 women) volunteered to participate [age: 24.9 ± 5.6 years; height: 173.1 ± 9.9 cm; weight: 72.7 ± 11.8 kg; <inline-formula id="pone.0154420.e002"><alternatives><graphic id="pone.0154420.e002g" mimetype="image" position="anchor" xlink:href="info:doi/10.1371/journal.pone.0154420.e002" xlink:type="simple"/><mml:math display="inline" id="M2"><mml:mrow><mml:msub><mml:mrow><mml:mover accent="true"><mml:mtext>V</mml:mtext><mml:mo>˙</mml:mo></mml:mover><mml:mtext>O</mml:mtext></mml:mrow><mml:mrow><mml:mn>2</mml:mn><mml:mtext>peak</mml:mtext></mml:mrow></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>: 50.1 ± 7.8 mL.kg<sup>-1</sup>.min<sup>-1</sup>; maximum heart rate: 189.6 ± 6.9 beats per minute; Fitzpatrick Skin Type scale &lt;IV (n = 15) and &gt;IV (n = 7)]. Participants were euhydrated prior to testing sessions (&lt;700 mOsmol). All participants wore each device once however energy expenditure data were missing for three participants and step count data were missing for two due to a data recording error. Both trials increased heart rate to ~70–80% of maximum with mean oxygen consumption 13.8 ± 1.4 mL.kg<sup>-1</sup>.min<sup>-1</sup> and 14.3 ± 2.0 mL.kg<sup>-1</sup>.min<sup>-1</sup> for trial one and two respectively. The mean±SD relative oxygen consumption (mL.kg<sup>-1</sup>.min<sup>-1</sup>) for individual stages of both trials were as follows: supine (5.0 ± 0.7), quiet sitting 1 (4.5 ± 0.8), standing (4.9 ± 1.1), treadmill stage 1 (14.3 ± 1.6), treadmill stage 2 (22.4 ± 2.2), treadmill stage 3 (32.6 ± 3.0), quiet sitting 2 (8.4 ± 2.1), cycling stage 1 (12.2 ± 1.8), cycling stage 2 (14.8 ± 2.3), cycling stage 3 (17.7 ± 2.8), cycling stage 4 (21.5 ± 3.7), cycling stage 5 (25.3 ± 4.5), cycling stage 6 (29.2 ± 5.6), and quiet sitting 3 (7.2 ± 1.3).</p>
+<p>Correlations and Bland-Altman findings (mean difference and limits of agreement) are presented in <xref ref-type="table" rid="pone.0154420.t001">Table 1</xref>. No one device performed better overall, however, the outcome of heart rate was consistently more accurate than energy expenditure across all four devices. Correlations between device measures and reference methods varied depending upon the outcome and the device used, ranging from moderate to strong for heart rate (0.67–0.95 [0.35 to 0.98]), and from weak to strong for energy expenditure (0.16–0.86 [-0.25 to 0.95]) (<xref ref-type="table" rid="pone.0154420.t001">Table 1</xref>).</p>
+<table-wrap id="pone.0154420.t001" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0154420.t001</object-id>
+<label>Table 1</label> <caption><title>Sample size, mean, correlation, agreement between device and reference methods and Bland-Altman outcomes for heart rate (bpm) and energy expenditure (kcal).</title></caption>
+<alternatives>
+<graphic id="pone.0154420.t001g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0154420.t001" xlink:type="simple"/>
+<table>
+<colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left"/>
+<th align="left"/>
+<th align="left">Apple Watch</th>
+<th align="left">Fitbit Charge HR</th>
+<th align="left">Samsung Gear S</th>
+<th align="left">Mio ALPHA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><bold>Heart rate</bold></td>
+<td align="left">N</td>
+<td align="left">22</td>
+<td align="left">22</td>
+<td align="left">22</td>
+<td align="left">22</td>
+</tr>
+<tr>
+<td align="left"><bold>(bpm)</bold></td>
+<td align="left">Device mean ± SD</td>
+<td align="left">100.7 ±14.0</td>
+<td align="left">92.7 ± 11.5</td>
+<td align="left">93.4 ± 13.9</td>
+<td align="left">97.7 ± 14.6</td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">ECG mean ± SD</td>
+<td align="left">102.0 ± 14.4</td>
+<td align="left">102.0 ± 14.5</td>
+<td align="left">100.5 ± 14.6</td>
+<td align="left">102.0 ± 13.4</td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">r/Rho (95% CI)</td>
+<td align="left">0.95 (0.88 to 0.98)</td>
+<td align="left">0.81 (0.59 to 0.92)</td>
+<td align="left">0.67* (0.35 to 0.85)</td>
+<td align="left">0.87 (0.71 to 0.94)</td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">ICC (95% CI)</td>
+<td align="left">0.98 (0.94 to 0.99)</td>
+<td align="left">0.78 (-0.02 to 0.93)</td>
+<td align="left">0.80 (0.40 to 0.93)</td>
+<td align="left">0.91 (0.72 to 0.97)</td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">Mean difference ± SD</td>
+<td align="left">-1.3 ± 4.4</td>
+<td align="left">-9.3 ± 8.5</td>
+<td align="left">-7.1 ± 10.3</td>
+<td align="left">-4.3 ± 7.2</td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">Upper LoA</td>
+<td align="left">7.3</td>
+<td align="left">7.4</td>
+<td align="left">13.1</td>
+<td align="left">-0.44.avg + 52.69<xref ref-type="table-fn" rid="t001fn002"><sup>†</sup></xref></td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">Lower LoA</td>
+<td align="left">-9.9</td>
+<td align="left">-26.0</td>
+<td align="left">-27.3</td>
+<td align="left">0.4.avg—61.2<xref ref-type="table-fn" rid="t001fn002"><sup>†</sup></xref></td>
+</tr>
+<tr>
+<td align="left"><bold>Energy Expenditure</bold></td>
+<td align="left">N</td>
+<td align="left">22</td>
+<td align="left">22</td>
+<td align="left">19<xref ref-type="table-fn" rid="t001fn003"><sup>⌃</sup></xref></td>
+<td align="left">22</td>
+</tr>
+<tr>
+<td align="left"><bold>(kcal)</bold></td>
+<td align="left">Device mean ± SD</td>
+<td align="left">162.6 ± 33.0</td>
+<td align="left">236.8 ± 77.0</td>
+<td align="left">261.4 ± 47.5</td>
+<td align="left">189.5 ± 95.3</td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">Indirect calorimetry mean ± SD</td>
+<td align="left">285.7 ± 50.2</td>
+<td align="left">299.1 ± 46.0</td>
+<td align="left">287.5 ± 45.1</td>
+<td align="left">290.3 ± 46.3</td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">r/Rho (95% CI)</td>
+<td align="left">0.16 (-0.28 to 0.54)</td>
+<td align="left">0.64 (0.30 to 0.84)</td>
+<td align="left">0.86 (0.67 to 0.95)</td>
+<td align="left">0.46* (0.05 to 0.74)</td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">ICC (95% CI)</td>
+<td align="left">0.05 (-0.05 to 0.17)</td>
+<td align="left">0.56 (-0.18 to 0.83)</td>
+<td align="left">0.86 (0.15 to 0.96)</td>
+<td align="left">0.32 (-0.24 to 0.68)</td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">Mean difference ± SD</td>
+<td align="left">-123.1 ± 55.6</td>
+<td align="left">0.61.avg–224.6 ± 59.1<xref ref-type="table-fn" rid="t001fn002"><sup>†</sup></xref></td>
+<td align="left">-26.1 ± 24.2</td>
+<td align="left">0.91.avg -318.77 ± 84.8<xref ref-type="table-fn" rid="t001fn002"><sup>†</sup></xref></td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">Upper LoA</td>
+<td align="left">-14.1</td>
+<td align="left">1.3.avg–334.28<xref ref-type="table-fn" rid="t001fn002"><sup>†</sup></xref></td>
+<td align="left">21.3</td>
+<td align="left">0.91.avg -318.77 + 166.2<xref ref-type="table-fn" rid="t001fn002"><sup>†</sup></xref></td>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">Lower LoA</td>
+<td align="left">-232.1</td>
+<td align="left">-0.11.avg–114.92<xref ref-type="table-fn" rid="t001fn002"><sup>†</sup></xref></td>
+<td align="left">-73.5</td>
+<td align="left">0.91.avg -318.77–166.2<xref ref-type="table-fn" rid="t001fn002"><sup>†</sup></xref></td>
+</tr>
+</tbody>
+</table>
+</alternatives>
+<table-wrap-foot>
+<fn id="t001fn001"><p><italic>Notes</italic>: ICC = intraclass correlation coefficient, CI = confidence interval, kcal = kilocalories, ECG = electrocardiography, bpm = beats per minute, SD = standard deviation, avg = average. Correlations r/Rho are Pearson’s correlation coefficient (r) except where indicated by * where they are Spearman rank correlation coefficients (Rho) due to non-normally distributed data.</p></fn>
+<fn id="t001fn002"><p><sup>†</sup> Where Bland-Altman parameters were systematically biased (mean difference/limits of agreement), values are presented as linear equations rather than point estimates.</p></fn>
+<fn id="t001fn003"><p><sup>⌃</sup> Missing values (n = 3) due to a data recording error.</p></fn>
+</table-wrap-foot>
+</table-wrap>
+<p>Bland-Altman plots indicated that all devices underestimated all outcome measures compared to the reference method (<xref ref-type="fig" rid="pone.0154420.g002">Fig 2</xref>). The average underestimation for devices compared to reference methods ranged from 1–9% for heart rate and 9–43% for energy expenditure. The Samsung Gear S demonstrated the greatest variability for heart rate (Lower LoA–Upper LoA; -27.3 to 13.1 bpm) (<xref ref-type="fig" rid="pone.0154420.g003">Fig 3</xref>). Furthermore, the Mio ALPHA demonstrated the greatest variability for estimated energy expenditure (-266.7 to 65.7 kcal) (<xref ref-type="fig" rid="pone.0154420.g004">Fig 4</xref>). Systematic bias was identified for energy expenditure and heart rate outcomes for the Fitbit Charge HR and Mio ALPHA devices. There were no statistical differences between correlations for heart rate based on skin color (Fitzpatrick Skin Type scale &lt;IV (n = 15) and &gt;IV (n = 7)], except for the Apple Watch, where the correlation for Fitzpatrick Skin Type Scale &gt;IV (r = 1.00) was statistically different to &lt;IV (r = 0.94) (p&lt;0.05).</p>
+<fig id="pone.0154420.g002" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0154420.g002</object-id>
+<label>Fig 2</label>
+<caption>
+<title/>
+<p>Bland-Altman analyses comparing devices with reference method for (A) heart rate and (B) energy expenditure. Mean difference is indicated by the solid dot, with the lines indicating the 95% limits of agreement. <italic>Notes</italic>: HR = heart rate, kcal = kilocalories, bpm = beat per minute. Where mean difference or limits of agreement were systematically biased, point estimates were calculated using the mean value for the average of the two measures (device and reference).</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0154420.g002" xlink:type="simple"/>
+</fig>
+<fig id="pone.0154420.g003" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0154420.g003</object-id>
+<label>Fig 3</label>
+<caption>
+<title/>
+<p>Bland-Altman plots for device [(A) Apple Watch; N = 22, (B) Fitbit Charge HR; N = 22, (C) Samsung Gear S; N = 22, (D) Mio ALPHA; N = 22] and electrocardiography (reference) average heart rate (bpm). The solid line represents the mean difference (bpm) between the two measures and the dashed lines are the 95% limits of agreement (bpm). <italic>Notes</italic>: bpm = beats per minute, LoA = limits of agreement, MD = mean difference.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0154420.g003" xlink:type="simple"/>
+</fig>
+<fig id="pone.0154420.g004" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0154420.g004</object-id>
+<label>Fig 4</label>
+<caption>
+<title/>
+<p>Bland-Altman plots for device [(A) Apple Watch; N = 22, (B) Fitbit Charge HR; N = 22, (C) Samsung Gear S; N = 19, (D) Mio ALPHA; N = 22] and METAMAX (reference) total energy expenditure (kcal). The solid line represents the mean difference (kcal) between the two measures and the dashed lines are the 95% limits of agreement (kcal). <italic>Notes</italic>: kcal = kilocalories, LoA = limits of agreement, MD = mean difference.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0154420.g004" xlink:type="simple"/>
+</fig>
+<p>Three of the devices measured step count. Correlations between measured steps and the reference method for the Apple Watch (0.70 [0.38 to 0.87]), Fitbit Charge HR (0.67 [0.34 to 0.85] and Samsung Gear S (0.88 [0.72 to 0.95]) were considered moderate to strong. However, the Fitbit Charge HR demonstrated the greatest variability for step count (-353 to 235 steps) (<xref ref-type="fig" rid="pone.0154420.g005">Fig 5</xref>). The average error of underestimation for these devices ranged from 4–6%.</p>
+<fig id="pone.0154420.g005" position="float">
+<object-id pub-id-type="doi">10.1371/journal.pone.0154420.g005</object-id>
+<label>Fig 5</label>
+<caption>
+<title/>
+<p>Bland-Altman plots for device [(A) Apple Watch; N = 21, (B) Fitbit Charge HR; N = 21, (C) Samsung Gear S; N = 20] and direct observation (reference) steps. The solid line represents the mean difference (steps) between the two measures and the dashed lines are the 95% limits of agreement (steps). <italic>Notes</italic>: LoA = limits of agreement, MD = mean difference.</p>
+</caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pone.0154420.g005" xlink:type="simple"/>
+</fig>
+</sec>
+<sec id="sec013" sec-type="conclusions">
+<title>Discussion</title>
+<p>This is the first study to examine the accuracy of four popular wrist-worn devices: the Apple Watch, Fitbit Charge HR, Samsung Gear S and Mio Alpha, to measure heart rate and energy expenditure during rest, cycling and treadmill walking. Our findings demonstrate that all devices underestimated heart rate and energy expenditure. No single device demonstrated consistently greater accuracy across these measures and the magnitude of error varied depending on the outcome of interest.</p>
+<p>Device estimates of heart rate via photoplethysmography were within 1–9% of reference estimates. Heart rate is commonly used to monitor and prescribe cardiovascular-based exercise intensity [<xref ref-type="bibr" rid="pone.0154420.ref017">17</xref>] and therefore accurate measures are important for precise exercise prescription. Our findings indicate that wrist-worn devices utilizing photoplethysmography offer consumers a convenient and satisfactory method to monitor heart rate while exercising. This is consistent with a recent investigation examining the accuracy of the wrist-based Mio ALPHA, and the forearm-worn Scosche myRhythm, to measure heart rate during rest, exercise and hand-based activities compared to electrocardiography [<xref ref-type="bibr" rid="pone.0154420.ref012">12</xref>]. Overall, the devices had a mean error of &lt;2%, however this varied between the devices for the type of activity. The Mio ALPHA demonstrated the largest mean error during cycling (-4.8%), whilst the largest mean error for the Scosche myRhythm was during walking (-3.13%) [<xref ref-type="bibr" rid="pone.0154420.ref012">12</xref>]. Similarly, Spierer and colleagues (2015) also assessed the accuracy of the Mio ALPHA, and the Omron HR500U during rest, and aerobic and resistance exercise [<xref ref-type="bibr" rid="pone.0154420.ref013">13</xref>]. All devices assessed demonstrated measurement error compared to the reference method, of which was significant during resistance exercise for the Mio ALPHA (mean ± standard error: 23.3 ± 31.94 bpm; p&lt;0.01) [<xref ref-type="bibr" rid="pone.0154420.ref013">13</xref>].</p>
+<p>The addition of heart rate measures to traditional accelerometery-based devices that measure physical activity would be expected to improve the accuracy of energy expenditure predictions [<xref ref-type="bibr" rid="pone.0154420.ref010">10</xref>]. However, our findings demonstrate significant variability in the accuracy of energy expenditure estimation, with up to 43% difference between the device and the reference method. As increased energy expenditure through physical activity is recommended as a part of a weight management strategy [<xref ref-type="bibr" rid="pone.0154420.ref018">18</xref>], the inability to accurately estimate energy expenditure is a limitation across these devices. It is difficult to speculate what contributed to errors of this magnitude. It is assumed that each device has a specific algorithm for the determination of energy expenditure. Technical assistance was sought from each company to ascertain information regarding the algorithms used to determine energy expenditure, however this information was not disclosed.</p>
+<p>The accuracy of several commercially available activity trackers to measure a variety of physical-activity related outcomes during free-living conditions, which included two wrist-worn devices (Jawbone UP and Misfit Shine) was recently evaluated [<xref ref-type="bibr" rid="pone.0154420.ref007">7</xref>]. Although these devices were not designed to measure photoplethysmography-derived heart rate, the results highlighted that, consistent with our findings, all devices significantly underestimated energy expenditure (Jawbone = -898 kcal; Misfit Shine = -479 kcal), with only a modest association with reference methods (r = 0.74–0.79). Similarly, Sasaki and co-workers (2015) recently validated a hip-worn Fitbit Classic device against indirect calorimetry during a variety of lab-based activities including walking, running and simulated free-living conditions [<xref ref-type="bibr" rid="pone.0154420.ref009">9</xref>]. This study was the first to validate activity-specific estimates of energy expenditure compared to continuous estimates as previous described [<xref ref-type="bibr" rid="pone.0154420.ref006">6</xref>,<xref ref-type="bibr" rid="pone.0154420.ref008">8</xref>]. The Fitbit Classic underestimated energy expenditure for a variety of activities of daily living [-3.1 ± 4.2 kcal/6 min (95% limits of agreement (LoA): -11 to 5.2 kcal/6 min)], locomotion [-5.6 ± 12 kcal/6 min (95% LoA: -29 to 18 kcal/6 min)] and sports [-2.1 ± 12 kcal/6 min (95% LoA -26 to 22 kcal/6 min)]. As increased energy expenditure through physical activity is recommended as a part of a weight management strategy [<xref ref-type="bibr" rid="pone.0154420.ref018">18</xref>], the inability to accurately estimate energy expenditure is a limitation across these devices.</p>
+<p>Of interest was the observation that that the Samsung Gear S does not incorporate heart rate into estimations of energy expenditure, whereas the others do. Instead, the Samsung Gear S appears to use an accelerometery-based algorithm during walking/running and predictive equations during cycling. Consistent with previous research [<xref ref-type="bibr" rid="pone.0154420.ref007">7</xref>,<xref ref-type="bibr" rid="pone.0154420.ref019">19</xref>], step count estimates for the Apple Watch, Fitbit Charge HR and Samsung Gear S were acceptable (within 4–6% of the reference).</p>
+<p>Limitations of this study included the relatively young and apparently healthy sample of participants (mean: 24.9 ± 5.6 years, range: 19–41 years), and therefore results may not be generalizable to a broader consumer market. Furthermore, the findings associated with laboratory-based protocol cannot be generalized to the free-living context. Finally, it is suggested that the accuracy of these devices may be reduced during higher intensity or resistance-based exercise as a result of movement artefact [<xref ref-type="bibr" rid="pone.0154420.ref013">13</xref>], which was not addressed in this investigation.</p>
+</sec>
+<sec id="sec014" sec-type="conclusions">
+<title>Conclusion</title>
+<p>The four devices accurately measure heart rate however estimates of energy expenditure are poor. This limits their use for monitoring energy balance, and therefore as a weight loss aid.</p>
+</sec>
+<sec id="sec015">
+<title>Supporting Information</title>
+<supplementary-material id="pone.0154420.s001" mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" position="float" xlink:href="info:doi/10.1371/journal.pone.0154420.s001" xlink:type="simple">
+<label>S1 Dataset</label>
+<caption>
+<title>Study data.</title>
+<p>(XLSX)</p>
+</caption>
+</supplementary-material>
+</sec>
+</body>
+<back>
+<ref-list>
+<title>References</title>
+<ref id="pone.0154420.ref001"><label>1</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Warburton</surname> <given-names>DE</given-names></name>, <name name-style="western"><surname>Nicol</surname> <given-names>CW</given-names></name>, <name name-style="western"><surname>Bredin</surname> <given-names>SS</given-names></name>. <article-title>Health benefits of physical activity: the evidence</article-title>. <source>CMAJ</source>. <year>2006</year>;<volume>174</volume>: <fpage>801</fpage>–<lpage>809</lpage>. <object-id pub-id-type="pmid">16534088</object-id></mixed-citation></ref>
+<ref id="pone.0154420.ref002"><label>2</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Haskell</surname> <given-names>WL</given-names></name>, <name name-style="western"><surname>Lee</surname> <given-names>I-M</given-names></name>, <name name-style="western"><surname>Pate</surname> <given-names>RR</given-names></name>, <name name-style="western"><surname>Powell</surname> <given-names>KE</given-names></name>, <name name-style="western"><surname>Blair</surname> <given-names>SN</given-names></name>, <name name-style="western"><surname>Franklin</surname> <given-names>BA</given-names></name>, <etal>et al</etal>. <article-title>Physical activity and public health: updated recommendation for adults from the American College of Sports Medicine and the American Heart Association</article-title>. <source>Med Sci Sport Exerc</source>. <year>2007</year>;<volume>39</volume>: <fpage>1423</fpage>–<lpage>1434</lpage>.</mixed-citation></ref>
+<ref id="pone.0154420.ref003"><label>3</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Patel</surname> <given-names>MS</given-names></name>, <name name-style="western"><surname>Asch</surname> <given-names>DA</given-names></name>, <name name-style="western"><surname>Volpp</surname> <given-names>KG</given-names></name>. <article-title>Wearable devices as facilitators, not drivers, of health behavior change</article-title>. <source>JAMA</source>. <year>2015</year>;<volume>313</volume>: <fpage>459</fpage>–<lpage>460</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1001/jama.2014.14781" xlink:type="simple">10.1001/jama.2014.14781</ext-link></comment> <object-id pub-id-type="pmid">25569175</object-id></mixed-citation></ref>
+<ref id="pone.0154420.ref004"><label>4</label><mixed-citation publication-type="other" xlink:type="simple">Forecast unit sales of health and fitness trackers worldwide from 2014 to 2015 (in millions), by region. Statista. 2015. Available: <ext-link ext-link-type="uri" xlink:href="http://www.statista.com/statistics/413265/health-and-fitness-tracker-worldwide-unit-sales-region/" xlink:type="simple">http://www.statista.com/statistics/413265/health-and-fitness-tracker-worldwide-unit-sales-region/</ext-link>.</mixed-citation></ref>
+<ref id="pone.0154420.ref005"><label>5</label><mixed-citation publication-type="other" xlink:type="simple">Smart watches and Smart Bands Dominate Fast-Growing Wearables Market. CCS Insight. 2014. Available: <ext-link ext-link-type="uri" xlink:href="http://www.ccsinsight.com/press/company-news/1944-smartwatchesand-smart-bands-dominate-fast-growing-wearables-market" xlink:type="simple">http://www.ccsinsight.com/press/company-news/1944-smartwatchesand-smart-bands-dominate-fast-growing-wearables-market</ext-link>.</mixed-citation></ref>
+<ref id="pone.0154420.ref006"><label>6</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Dannecker</surname> <given-names>KL</given-names></name>, <name name-style="western"><surname>Sazonova</surname> <given-names>NA</given-names></name>, <name name-style="western"><surname>Melanson</surname> <given-names>EL</given-names></name>, <name name-style="western"><surname>Sazonov</surname> <given-names>ES</given-names></name>, <name name-style="western"><surname>Browning</surname> <given-names>RC</given-names></name>. <article-title>A comparison of energy expenditure estimation of several physical activity monitors</article-title>. <source>Med Sci Sport Exerc</source>. <year>2013</year>;<volume>45</volume>: <fpage>2105</fpage>–<lpage>2112</lpage>.</mixed-citation></ref>
+<ref id="pone.0154420.ref007"><label>7</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Ferguson</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Rowlands</surname> <given-names>AV</given-names></name>, <name name-style="western"><surname>Olds</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Maher</surname> <given-names>C</given-names></name>. <article-title>The validity of consumer-level, activity monitors in healthy adults worn in free-living conditions: a cross-sectional study</article-title>. <source>Int J Behav Nutr Phys Act</source>. <year>2015</year>;<volume>12</volume>: <fpage>42</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1186/s12966-015-0201-9" xlink:type="simple">10.1186/s12966-015-0201-9</ext-link></comment> <object-id pub-id-type="pmid">25890168</object-id></mixed-citation></ref>
+<ref id="pone.0154420.ref008"><label>8</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lee</surname> <given-names>J-M</given-names></name>, <name name-style="western"><surname>Kim</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Welk</surname> <given-names>GJ</given-names></name>. <article-title>Validity of consumer-based physical activity monitors</article-title>. <source>Med Sci Sport Exerc</source>. <year>2014</year>;<volume>46</volume>: <fpage>1840</fpage>–<lpage>1848</lpage>.</mixed-citation></ref>
+<ref id="pone.0154420.ref009"><label>9</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sasaki</surname> <given-names>JE</given-names></name>, <name name-style="western"><surname>Hickey</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Mavilia</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Tedesco</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>John</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Kozey</surname> <given-names>Keadle S</given-names></name>, <etal>et al</etal>. <article-title>Validation of the Fitbit wireless activity tracker for prediction of energy expenditure</article-title>. <source>J Phys Act Health</source>. <year>2015</year>;<volume>12</volume>: <fpage>149</fpage>–<lpage>154</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1123/jpah.2012-0495" xlink:type="simple">10.1123/jpah.2012-0495</ext-link></comment> <object-id pub-id-type="pmid">24770438</object-id></mixed-citation></ref>
+<ref id="pone.0154420.ref010"><label>10</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Keytel</surname> <given-names>LR</given-names></name>, <name name-style="western"><surname>Goedecke</surname> <given-names>JH</given-names></name>, <name name-style="western"><surname>Noakes</surname> <given-names>TD</given-names></name>, <name name-style="western"><surname>Hiiloskorpi</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Laukkanen</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>van der Merwe</surname> <given-names>L</given-names></name>, <etal>et al</etal>. <article-title>Prediction of energy expenditure from heart rate monitoring during submaximal exercise</article-title>. <source>J Sport Sci</source>. <year>2007</year>;<volume>23</volume>: <fpage>289</fpage>–<lpage>297</lpage>.</mixed-citation></ref>
+<ref id="pone.0154420.ref011"><label>11</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Luke</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Maki</surname> <given-names>KC</given-names></name>, <name name-style="western"><surname>Barkey</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Cooper</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>McGee</surname> <given-names>D</given-names></name>. <article-title>Simultaneous monitoring of heart rate and motion to assess energy expenditure</article-title>. <source>Med Sci Sport Exerc</source>. <year>1997</year>;<volume>29</volume>: <fpage>144</fpage>–<lpage>148</lpage>.</mixed-citation></ref>
+<ref id="pone.0154420.ref012"><label>12</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Parak</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Korhonen</surname> <given-names>I</given-names></name>. <article-title>Evaluation of wearable consumer heart rate monitors based on photoplethysmography</article-title>. <source>IEEE</source>. <year>2014</year>: <fpage>3670</fpage>–<lpage>3673</lpage>.</mixed-citation></ref>
+<ref id="pone.0154420.ref013"><label>13</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Spierer</surname> <given-names>DK</given-names></name>, <name name-style="western"><surname>Rosen</surname> <given-names>Z</given-names></name>, <name name-style="western"><surname>Litman</surname> <given-names>LL</given-names></name>, <name name-style="western"><surname>Fujii</surname> <given-names>K</given-names></name>. <article-title>Validation of photoplethysmography as a method to detect heart rate during rest and exercise</article-title>. <source>J Med Eng Technol</source>. <year>2015</year>;<volume>39</volume>: <fpage>264</fpage>–<lpage>271</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.3109/03091902.2015.1047536" xlink:type="simple">10.3109/03091902.2015.1047536</ext-link></comment> <object-id pub-id-type="pmid">26112379</object-id></mixed-citation></ref>
+<ref id="pone.0154420.ref014"><label>14</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Fallow</surname> <given-names>BA</given-names></name>, <name name-style="western"><surname>Tarumi</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Tanaka</surname> <given-names>H</given-names></name>. <article-title>Influence of skin type and wavelength on light wave reflectance</article-title>. <source>J Clin Monit Comput</source>. <year>2013</year>;<volume>27</volume>: <fpage>313</fpage>–<lpage>317</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1007/s10877-013-9436-7" xlink:type="simple">10.1007/s10877-013-9436-7</ext-link></comment> <object-id pub-id-type="pmid">23397431</object-id></mixed-citation></ref>
+<ref id="pone.0154420.ref015"><label>15</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Fitzpatrick</surname> <given-names>TB</given-names></name>. <article-title>The validity and practicality of sun-reactive skin types I through VI</article-title>. <source>Arch Dermatol</source>. <year>1988</year>;<volume>124</volume>: <fpage>869</fpage>–<lpage>871</lpage>. <object-id pub-id-type="pmid">3377516</object-id></mixed-citation></ref>
+<ref id="pone.0154420.ref016"><label>16</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Brown</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Richmond</surname> <given-names>S</given-names></name>. <article-title>An update on the analysis of agreement for orthodontic indices</article-title>. <source>Eur J Orthod</source>. <year>2005</year>;<volume>27</volume>: <fpage>286</fpage>–<lpage>291</lpage>. <object-id pub-id-type="pmid">15947229</object-id></mixed-citation></ref>
+<ref id="pone.0154420.ref017"><label>17</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Mann</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Lamberts</surname> <given-names>RP</given-names></name>, <name name-style="western"><surname>Lambert</surname> <given-names>MI</given-names></name>. <article-title>Methods of prescribing relative exercise intensity: physiological and practical considerations</article-title>. <source>Sports Med</source>. <year>2013</year>;<volume>43</volume>: <fpage>613</fpage>–<lpage>625</lpage> <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1007/s40279-013-0045-x" xlink:type="simple">10.1007/s40279-013-0045-x</ext-link></comment> <object-id pub-id-type="pmid">23620244</object-id></mixed-citation></ref>
+<ref id="pone.0154420.ref018"><label>18</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Donnelly</surname> <given-names>JE</given-names></name>, <name name-style="western"><surname>Blair</surname> <given-names>SN</given-names></name>, <name name-style="western"><surname>Jakicic</surname> <given-names>JM</given-names></name>, <name name-style="western"><surname>Manore</surname> <given-names>MM</given-names></name>, <name name-style="western"><surname>Rankin</surname> <given-names>JW</given-names></name>, <name name-style="western"><surname>Smith</surname> <given-names>BK</given-names></name>, <etal>et al</etal>. <article-title>American College of Sports Medicine Position Stand. Appropriate physical activity intervention strategies for weight loss and prevention of weight regain for adults</article-title>. <source>Med Sci Sport Exerc</source>. <year>2009</year>;<volume>41</volume>: <fpage>459</fpage>–<lpage>471</lpage>.</mixed-citation></ref>
+<ref id="pone.0154420.ref019"><label>19</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Case</surname> <given-names>MA</given-names></name>, <name name-style="western"><surname>Burwick</surname> <given-names>HA</given-names></name>, <name name-style="western"><surname>Volpp</surname> <given-names>KG</given-names></name>, <name name-style="western"><surname>Patel</surname> <given-names>MS</given-names></name>. <article-title>Accuracy of smartphone applications and wearable devices for tracking physical activity data</article-title>. <source>JAMA</source>. <year>2015</year>;<volume>313</volume>: <fpage>625</fpage>–<lpage>626</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1001/jama.2014.17841" xlink:type="simple">10.1001/jama.2014.17841</ext-link></comment> <object-id pub-id-type="pmid">25668268</object-id></mixed-citation></ref>
+</ref-list>
+</back>
+</article>

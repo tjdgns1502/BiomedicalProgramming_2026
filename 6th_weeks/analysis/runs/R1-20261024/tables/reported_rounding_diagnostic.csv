@@ -1,0 +1,7 @@
+﻿device,bound,reported_bias,reported_SD,reported_LoA,LoA_using_rounded_reported_inputs,difference,interpretation
+Apple Watch,upper,-1.3,4.4,7.3,7.324000000000001,0.02400000000000091,Compatibility diagnostic only; author calculation procedure not established; primary outputs unchanged
+Apple Watch,lower,-1.3,4.4,-9.9,-9.924000000000001,-0.02400000000000091,Compatibility diagnostic only; author calculation procedure not established; primary outputs unchanged
+Fitbit Charge HR,upper,-9.3,8.5,7.4,7.359999999999999,-0.040000000000000924,Compatibility diagnostic only; author calculation procedure not established; primary outputs unchanged
+Fitbit Charge HR,lower,-9.3,8.5,-26.0,-25.96,0.03999999999999915,Compatibility diagnostic only; author calculation procedure not established; primary outputs unchanged
+Samsung Gear S,upper,-7.1,10.3,13.1,13.088000000000003,-0.011999999999996902,Compatibility diagnostic only; author calculation procedure not established; primary outputs unchanged
+Samsung Gear S,lower,-7.1,10.3,-27.3,-27.288000000000004,0.011999999999996902,Compatibility diagnostic only; author calculation procedure not established; primary outputs unchanged

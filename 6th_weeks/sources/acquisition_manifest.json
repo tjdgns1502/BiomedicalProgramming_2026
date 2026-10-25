@@ -1,0 +1,42 @@
+{
+  "time_utc": "2026-10-24T11:57:13.610781+00:00",
+  "sources": [
+    {
+      "role": "paper",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0154420",
+      "final_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0154420",
+      "path": "sources/paper.source.txt",
+      "bytes": 156885,
+      "sha256": "064795dba61dae52a53f74ad7ef9533d2796c093def247a3274f4898bf53f5d3",
+      "content_type": "text/html;charset=UTF-8",
+      "attempts": 1,
+      "status": "success",
+      "prior_errors": []
+    },
+    {
+      "role": "data",
+      "url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0154420.s001&type=supplementary",
+      "final_url": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pone.0154420/1/pone.0154420.s001.xlsx",
+      "path": "data/raw/pone.0154420.s001.xlsx",
+      "bytes": 59512,
+      "sha256": "50cae0d20ded94e43b956fc9f86a286cdf227eafe549906442fe21445570fcff",
+      "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "attempts": 1,
+      "status": "success",
+      "prior_errors": [],
+      "redirect_query_omitted": true
+    },
+    {
+      "role": "slides",
+      "url": "https://slides.pnucolab.com/9eGiQnmVQB7D",
+      "final_url": "https://slides.pnucolab.com/9eGiQnmVQB7D",
+      "path": "sources/lecture.source.txt",
+      "bytes": 95960,
+      "sha256": "c005d4e618b4d916fcfcf2a061bb736304d1d1fa2e432aa7524bff43a94dfdb0",
+      "content_type": "text/html",
+      "attempts": 1,
+      "status": "success",
+      "prior_errors": []
+    }
+  ]
+}

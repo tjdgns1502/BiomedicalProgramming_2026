@@ -1,0 +1,9 @@
+{"time_utc": "2026-10-24T12:04:26.811289+00:00", "stage": "preflight", "status": "definitions fixed before statistical outputs", "plan": "1.0"}
+{"time_utc": "2026-10-24T12:20:50.448882+00:00", "stage": "report-build", "run_id": "R1-20261024", "md_files": 14, "html": "최종분석보고서.html"}
+{"time_utc": "2026-10-24T12:22:49.063777+00:00", "stage": "report-build", "run_id": "R1-20261024", "md_files": 14, "html": "최종분석보고서.html"}
+{"time_utc": "2026-10-24T12:27:37.427132+00:00", "stage": "report-build", "run_id": "R1-20261024", "md_files": 14, "html": "최종분석보고서.html"}
+{"time_utc": "2026-10-24T12:32:09.288639+00:00", "stage": "report-build", "run_id": "R1-20261024", "md_files": 14, "html": "최종분석보고서.html"}
+{"time_utc": "2026-10-24T12:34:29.771426+00:00", "stage": "completed", "html": "최종분석보고서.html", "html_sha256": "ac131fd8cbaabeeeb3ba81b57b083a2b04df6ec79466d74f11664e84dbf5d2a2", "run": "R1-20261024", "style_only_revision": "STYLE1-20261024", "statistical_reruns_for_style": 0}
+{"time_utc": "2026-10-24T13:11:19.639069+00:00", "stage": "report-build", "run_id": "R1-20261024", "md_files": 29, "html": "최종분석보고서.html"}
+{"time_utc": "2026-10-24T13:13:41.839235+00:00", "stage": "report-build", "run_id": "R1-20261024", "md_files": 29, "html": "최종분석보고서.html"}
+{"time_utc": "2026-10-24T13:15:31.380653+00:00", "stage": "documentation-pairing-revision", "revision": "PAIR1-20261024", "run_id": "R1-20261024", "stats_refits": 0, "preserved_artifacts_verified": 36, "paired_stages": 7, "MD_files": 29, "html_sha256": "4fdf6816963ffc0846835ea7d0c414217d58378a4ba2cfdfffaacd64ec8c5f23", "browser": "pass", "documentation_content_review": "accept"}

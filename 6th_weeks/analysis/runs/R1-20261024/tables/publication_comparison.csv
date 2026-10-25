@@ -1,0 +1,39 @@
+﻿device,metric,published,calculated,delta,tolerance,within_rounding,method
+Apple Watch,n,22.0,22.0,0.0,0,True,same statistic
+Apple Watch,mean_device,100.7,100.702727272727,0.0027272727270002406,0.05,True,same statistic
+Apple Watch,mean_reference,102.0,101.963181818182,-0.036818181818006224,0.05,True,same statistic
+Apple Watch,bias,-1.3,-1.26045454545455,0.03954545454545011,0.05,True,same statistic
+Apple Watch,sd_device,14.0,13.9925371884336,-0.007462811566400163,0.05,True,sample SD n-1
+Apple Watch,sd_reference,14.4,14.4057840190482,0.005784019048199696,0.05,True,sample SD n-1
+Apple Watch,error_sd,4.4,4.37572685365934,-0.024273146340660468,0.05,True,sample SD n-1
+Apple Watch,paper_method_correlation,0.95,0.952929786134058,0.0029297861340580322,0.005,True,Pearson
+Fitbit Charge HR,n,22.0,22.0,0.0,0,True,same statistic
+Fitbit Charge HR,mean_device,92.7,92.6572727272727,-0.04272727272730492,0.05,True,same statistic
+Fitbit Charge HR,mean_reference,102.0,101.975,-0.025000000000005684,0.05,True,same statistic
+Fitbit Charge HR,bias,-9.3,-9.31772727272727,-0.01772727272726904,0.05,True,same statistic
+Fitbit Charge HR,sd_device,11.5,11.5121026095803,0.012102609580299628,0.05,True,sample SD n-1
+Fitbit Charge HR,sd_reference,14.5,14.520719761119,0.020719761119000424,0.05,True,sample SD n-1
+Fitbit Charge HR,error_sd,8.5,8.47881052519031,-0.021189474809689912,0.05,True,sample SD n-1
+Fitbit Charge HR,paper_method_correlation,0.81,0.812045521770469,0.0020455217704689055,0.005,True,Pearson
+Samsung Gear S,n,22.0,22.0,0.0,0,True,same statistic
+Samsung Gear S,mean_device,93.4,93.4427272727273,0.04272727272729071,0.05,True,same statistic
+Samsung Gear S,mean_reference,100.5,100.490909090909,-0.009090909091000299,0.05,True,same statistic
+Samsung Gear S,bias,-7.1,-7.04818181818182,0.05181818181817999,0.05,False,same statistic
+Samsung Gear S,sd_device,13.9,13.9399635108555,0.03996351085550032,0.05,True,sample SD n-1
+Samsung Gear S,sd_reference,14.6,14.5993160012936,-0.000683998706399791,0.05,True,sample SD n-1
+Samsung Gear S,error_sd,10.3,10.2571919652986,-0.04280803470139993,0.05,True,sample SD n-1
+Samsung Gear S,paper_method_correlation,0.67,0.670242800677583,0.0002428006775829772,0.005,True,Spearman
+Mio Alpha,n,22.0,22.0,0.0,0,True,same statistic
+Mio Alpha,mean_device,97.7,97.6522727272727,-0.047727272727300374,0.05,True,same statistic
+Mio Alpha,mean_reference,102.0,101.992727272727,-0.007272727273004875,0.05,True,same statistic
+Mio Alpha,bias,-4.3,-4.34045454545455,-0.040454545454550406,0.05,True,same statistic
+Mio Alpha,sd_device,14.6,14.5728413191304,-0.02715868086959894,0.05,True,sample SD n-1
+Mio Alpha,sd_reference,13.4,13.4059152479927,0.005915247992700046,0.05,True,sample SD n-1
+Mio Alpha,error_sd,7.2,7.21667676933598,0.01667676933598017,0.05,True,sample SD n-1
+Mio Alpha,paper_method_correlation,0.87,0.870193191163242,0.00019319116324201246,0.005,True,Pearson
+Apple Watch,classical_loa_high,7.3,7.31597008771777,0.0159700877177702,0.05,True,direct unrounded sample bias +/-1.96 sample SD; paper intermediate rounding unknown
+Apple Watch,classical_loa_low,-9.9,-9.83687917862686,0.06312082137313979,0.05,False,direct unrounded sample bias +/-1.96 sample SD; paper intermediate rounding unknown
+Fitbit Charge HR,classical_loa_high,7.4,7.30074135664573,-0.09925864335427015,0.05,False,direct unrounded sample bias +/-1.96 sample SD; paper intermediate rounding unknown
+Fitbit Charge HR,classical_loa_low,-26.0,-25.9361959021003,0.06380409789969832,0.05,False,direct unrounded sample bias +/-1.96 sample SD; paper intermediate rounding unknown
+Samsung Gear S,classical_loa_high,13.1,13.0559144338035,-0.04408556619650028,0.05,True,direct unrounded sample bias +/-1.96 sample SD; paper intermediate rounding unknown
+Samsung Gear S,classical_loa_low,-27.3,-27.1522780701672,0.14772192983280164,0.05,False,direct unrounded sample bias +/-1.96 sample SD; paper intermediate rounding unknown

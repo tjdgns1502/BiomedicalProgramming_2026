@@ -1,0 +1,145 @@
+[
+  {
+    "id": "pone.0154420.t001",
+    "label": "Table 1",
+    "rows": [
+      [
+        "",
+        "",
+        "Apple Watch",
+        "Fitbit Charge HR",
+        "Samsung Gear S",
+        "Mio ALPHA"
+      ],
+      [
+        "Heart rate",
+        "N",
+        "22",
+        "22",
+        "22",
+        "22"
+      ],
+      [
+        "(bpm)",
+        "Device mean ± SD",
+        "100.7 ±14.0",
+        "92.7 ± 11.5",
+        "93.4 ± 13.9",
+        "97.7 ± 14.6"
+      ],
+      [
+        "",
+        "ECG mean ± SD",
+        "102.0 ± 14.4",
+        "102.0 ± 14.5",
+        "100.5 ± 14.6",
+        "102.0 ± 13.4"
+      ],
+      [
+        "",
+        "r/Rho (95% CI)",
+        "0.95 (0.88 to 0.98)",
+        "0.81 (0.59 to 0.92)",
+        "0.67* (0.35 to 0.85)",
+        "0.87 (0.71 to 0.94)"
+      ],
+      [
+        "",
+        "ICC (95% CI)",
+        "0.98 (0.94 to 0.99)",
+        "0.78 (-0.02 to 0.93)",
+        "0.80 (0.40 to 0.93)",
+        "0.91 (0.72 to 0.97)"
+      ],
+      [
+        "",
+        "Mean difference ± SD",
+        "-1.3 ± 4.4",
+        "-9.3 ± 8.5",
+        "-7.1 ± 10.3",
+        "-4.3 ± 7.2"
+      ],
+      [
+        "",
+        "Upper LoA",
+        "7.3",
+        "7.4",
+        "13.1",
+        "-0.44.avg + 52.69†"
+      ],
+      [
+        "",
+        "Lower LoA",
+        "-9.9",
+        "-26.0",
+        "-27.3",
+        "0.4.avg—61.2†"
+      ],
+      [
+        "Energy Expenditure",
+        "N",
+        "22",
+        "22",
+        "19⌃",
+        "22"
+      ],
+      [
+        "(kcal)",
+        "Device mean ± SD",
+        "162.6 ± 33.0",
+        "236.8 ± 77.0",
+        "261.4 ± 47.5",
+        "189.5 ± 95.3"
+      ],
+      [
+        "",
+        "Indirect calorimetry mean ± SD",
+        "285.7 ± 50.2",
+        "299.1 ± 46.0",
+        "287.5 ± 45.1",
+        "290.3 ± 46.3"
+      ],
+      [
+        "",
+        "r/Rho (95% CI)",
+        "0.16 (-0.28 to 0.54)",
+        "0.64 (0.30 to 0.84)",
+        "0.86 (0.67 to 0.95)",
+        "0.46* (0.05 to 0.74)"
+      ],
+      [
+        "",
+        "ICC (95% CI)",
+        "0.05 (-0.05 to 0.17)",
+        "0.56 (-0.18 to 0.83)",
+        "0.86 (0.15 to 0.96)",
+        "0.32 (-0.24 to 0.68)"
+      ],
+      [
+        "",
+        "Mean difference ± SD",
+        "-123.1 ± 55.6",
+        "0.61.avg–224.6 ± 59.1†",
+        "-26.1 ± 24.2",
+        "0.91.avg -318.77 ± 84.8†"
+      ],
+      [
+        "",
+        "Upper LoA",
+        "-14.1",
+        "1.3.avg–334.28†",
+        "21.3",
+        "0.91.avg -318.77 + 166.2†"
+      ],
+      [
+        "",
+        "Lower LoA",
+        "-232.1",
+        "-0.11.avg–114.92†",
+        "-73.5",
+        "0.91.avg -318.77–166.2†"
+      ]
+    ],
+    "text": "10.1371/journal.pone.0154420.t001 Table 1 Sample size, mean, correlation, agreement between device and reference methods and Bland-Altman outcomes for heart rate (bpm) and energy expenditure (kcal). Apple Watch Fitbit Charge HR Samsung Gear S Mio ALPHA Heart rate N 22 22 22 22 (bpm) Device mean ± SD 100.7 ±14.0 92.7 ± 11.5 93.4 ± 13.9 97.7 ± 14.6 ECG mean ± SD 102.0 ± 14.4 102.0 ± 14.5 100.5 ± 14.6 102.0 ± 13.4 r/Rho (95% CI) 0.95 (0.88 to 0.98) 0.81 (0.59 to 0.92) 0.67* (0.35 to 0.85) 0.87 (0.71 to 0.94) ICC (95% CI) 0.98 (0.94 to 0.99) 0.78 (-0.02 to 0.93) 0.80 (0.40 to 0.93) 0.91 (0.72 to 0.97) Mean difference ± SD -1.3 ± 4.4 -9.3 ± 8.5 -7.1 ± 10.3 -4.3 ± 7.2 Upper LoA 7.3 7.4 13.1 -0.44.avg + 52.69† Lower LoA -9.9 -26.0 -27.3 0.4.avg—61.2† Energy Expenditure N 22 22 19⌃ 22 (kcal) Device mean ± SD 162.6 ± 33.0 236.8 ± 77.0 261.4 ± 47.5 189.5 ± 95.3 Indirect calorimetry mean ± SD 285.7 ± 50.2 299.1 ± 46.0 287.5 ± 45.1 290.3 ± 46.3 r/Rho (95% CI) 0.16 (-0.28 to 0.54) 0.64 (0.30 to 0.84) 0.86 (0.67 to 0.95) 0.46* (0.05 to 0.74) ICC (95% CI) 0.05 (-0.05 to 0.17) 0.56 (-0.18 to 0.83) 0.86 (0.15 to 0.96) 0.32 (-0.24 to 0.68) Mean difference ± SD -123.1 ± 55.6 0.61.avg–224.6 ± 59.1† -26.1 ± 24.2 0.91.avg -318.77 ± 84.8† Upper LoA -14.1 1.3.avg–334.28† 21.3 0.91.avg -318.77 + 166.2† Lower LoA -232.1 -0.11.avg–114.92† -73.5 0.91.avg -318.77–166.2† Notes: ICC = intraclass correlation coefficient, CI = confidence interval, kcal = kilocalories, ECG = electrocardiography, bpm = beats per minute, SD = standard deviation, avg = average. Correlations r/Rho are Pearson’s correlation coefficient (r) except where indicated by * where they are Spearman rank correlation coefficients (Rho) due to non-normally distributed data. † Where Bland-Altman parameters were systematically biased (mean difference/limits of agreement), values are presented as linear equations rather than point estimates. ⌃ Missing values (n = 3) due to a data recording error."
+  }
+]

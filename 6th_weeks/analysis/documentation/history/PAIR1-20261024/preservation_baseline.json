@@ -1,0 +1,186 @@
+{
+  "revision": "PAIR1-20261024",
+  "before_revision": [
+    {
+      "source": "최종분석보고서.html",
+      "archive": "analysis/documentation/history/PAIR1-20261024/previous-report.source.txt",
+      "sha256": "ac131fd8cbaabeeeb3ba81b57b083a2b04df6ec79466d74f11664e84dbf5d2a2"
+    },
+    {
+      "source": "analysis/src/build_report.py",
+      "archive": "analysis/documentation/history/PAIR1-20261024/previous-build_report.py",
+      "sha256": "e75e5839807a2402c8e76c4193b8a714c0578ed84c4d9ab7148aa57dff082b19"
+    },
+    {
+      "source": "analysis/config/실행프롬프트-6주차.md",
+      "archive": "analysis/documentation/history/PAIR1-20261024/previous-execution-prompt.md",
+      "sha256": "306cfd90c9a05b7f924c7cc269e72b0abe44c135f4a9e5d051bacf931d9ef600"
+    },
+    {
+      "source": "analysis/report_manifest.json",
+      "archive": "analysis/documentation/history/PAIR1-20261024/previous-report_manifest.json",
+      "sha256": "ab2a8758d18ad41617f8bc2499fe1884151895d2bfced0118b05ee853bfd20d7"
+    },
+    {
+      "source": "analysis/reviews/browser_review.json",
+      "archive": "analysis/documentation/history/PAIR1-20261024/previous-browser_review.json",
+      "sha256": "ce8976a59beebad07a9577c53e42f17e58754ba8495862ca45e4d5a2c7bbf787"
+    },
+    {
+      "source": "analysis/reviews/verification_summary.json",
+      "archive": "analysis/documentation/history/PAIR1-20261024/previous-verification_summary.json",
+      "sha256": "d3f91d3fb4bf0488d07cccf440acad49740628526144765f2140360b6f70f073"
+    },
+    {
+      "source": "README.md",
+      "archive": "analysis/documentation/history/PAIR1-20261024/previous-README.md",
+      "sha256": "0a06f89e678d8a0fe64f890df8f77fae2fbb817fb5bc6c7139e1d46348724f28"
+    }
+  ],
+  "preserved_artifacts": [
+    {
+      "file": "data/raw/pone.0154420.s001.xlsx",
+      "sha256": "50cae0d20ded94e43b956fc9f86a286cdf227eafe549906442fe21445570fcff"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/artifact_hashes.csv",
+      "sha256": "33d7a66126065022bdf2fab1ced594c22fc77fe15d1812fa668f6462e5e0058d"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/environment.json",
+      "sha256": "c5198d26176b5b49e522d332c95541d2d4f1c14366d7d6d1afb771dfd4fb65d7"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/executed_script.R",
+      "sha256": "7b3fbebe5e0efafba0503880c7f4bf7f1380526aaa2a5f7d84a21a0b842d5985"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/plan-v1.0.json",
+      "sha256": "1d78ed063d8d103b80f2e26919b6e546a49c7e0bf22598f461f32dd9a5287f29"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/publication_comparison_manifest.json",
+      "sha256": "b5be84b204ad377038db40cf329853eee73421debe8419ac9e875186bea8a82b"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/python_crosscheck.json",
+      "sha256": "cae6fd98927a73613276f0db67523bb5446a9d845bccc11c771ae26cf0fdc2d9"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/report.json",
+      "sha256": "aa1fabffc9277e348358780da60c03c5678970af792337d87caee4a60e4da3ce"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/status.json",
+      "sha256": "21557ce76620b7f1b40323c9769f27365f2a17413816b5346064da0ad2f5060a"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/figures/01_scatter_regression.png",
+      "sha256": "7fc78ea29ba26655247a02657a47eb254920b2f42377904e9262aa9e9d2130be"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/figures/02_error_histograms.png",
+      "sha256": "2367e94ed096b5eaa0e833ba544f9810e033e8a5b8b0ef75275482934bd93c99"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/figures/03_bland_altman.png",
+      "sha256": "82224a505664edf21f36e41498b56ee213b9e0ddb3fc57b0904c08ac89e300ee"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/figures/04_regression_residuals.png",
+      "sha256": "9417338dd9dbc299dffacdffd1e90beef6f6ed2a046125c0a3f5affcfce6525c"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/figures/05_residual_qq.png",
+      "sha256": "8c28e456991c125cba1965c9a0a83a3201d218def0c841df57ee80506c876b71"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/figures/06_leave_one_out.png",
+      "sha256": "753149e073713654a39859b720cf2d43cbf326e2f89f3565364814fafe6fbcc8"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/figures/07_bias_and_mae.png",
+      "sha256": "0f524e5e1a44640bb6e7f472c884f8abec634a3cb9c50cbd71d18e8c07bb065d"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/logs/sessionInfo.txt",
+      "sha256": "22e41c822cc63ef8746287ad3cb6d8875efa75670dd0ddafa9aef27fea098c97"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/logs/warnings.csv",
+      "sha256": "2370557e69a86d61ebe3535c7a8f41384a99c3986613d255bb8e99bf0314f09a"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/models/per_device_ols.rds",
+      "sha256": "c528fc0efbf3f7f77773b4862d38a096dc3d01442ef7c776ec5b3675f07f8d69"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/tables/analysis_counts.csv",
+      "sha256": "aaddd63f3e9f76d51f4c31702570685b8de7580a5ff93023249db5e7a6f63246"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/tables/data_flow.csv",
+      "sha256": "c9659f0eb56a24a4774ab83c7f3f5bef5b5367923ca270662494a52c2ccde669"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/tables/device_summary.csv",
+      "sha256": "78c3a4a4b84661f2cadab49634357132a30031a07e494cd0e983e09651d32a27"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/tables/device_trial_counts.csv",
+      "sha256": "62dc54fcc65964423a4839b83127d75b4e795a07ecbba78929ef7fc06c9df2c5"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/tables/excluded_pairs.csv",
+      "sha256": "ab572b993d8040f9be0b8a14183590f7f57a59bbfac9672c6f51065b0a3d5f17"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/tables/heart_rate_pairs.csv",
+      "sha256": "a0c3bcd7a1992c8fc4e67c5574d769e2f8c982cc76732cf3be5f86853488004c"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/tables/leave_one_participant_out.csv",
+      "sha256": "3a730118de6ba2c8c537e938d61a38943704350a14a857b413e8e6ee215f1f91"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/tables/observation_diagnostics.csv",
+      "sha256": "248f0cec1e036a80b615d65e8e1f4ef1e8d8b8c99d9894aa32f481c651393d15"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/tables/publication_comparison.csv",
+      "sha256": "746a50f3c3629c4cd1b0b9be3042fbe4d2c0ccbcf9d61d89f1804242fe3dbc24"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/tables/regression_coefficients.csv",
+      "sha256": "1631f57f1464d62df8eb2d13ba08ba67b6cffdb0baca927cce0b132ca94bd8c5"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/tables/regression_mean_response_ci.csv",
+      "sha256": "b7489528bbcf1ad628217d359239360925ab80867ff3e83952c8bf773a4acc6d"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/tables/reported_rounding_diagnostic.csv",
+      "sha256": "281b83ea12f269b23ed729a93c09314118b7d24317a8a37b1f63aadfd1310731"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/tables/sensitivity_summary.csv",
+      "sha256": "f54539a837a7cbae853e8a556c0d61388b4de70b1565715db945e3d620a09a86"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/tables/validation_checks.csv",
+      "sha256": "04ca2f7e1ec9d8e4cf2f2bca3bb1432ce73953dd539ab1735c867ffaa585300c"
+    },
+    {
+      "file": "analysis/renderings/STYLE1-20261024/04_regression_residuals.png",
+      "sha256": "1abc24b60aa6fad81b094aad778bb33e10e0d3a7fe704a806044302a38147f68"
+    },
+    {
+      "file": "analysis/renderings/STYLE1-20261024/05_residual_qq.png",
+      "sha256": "87f811482092f004572b693ab1be06392820f8dce84e2622c73a6ed770a0097d"
+    },
+    {
+      "file": "analysis/renderings/STYLE1-20261024/manifest.json",
+      "sha256": "6ea0637f29a9ce9a571ec936327b424ff26a3b3b4cc5afb8b78c72a97060a30c"
+    }
+  ]
+}

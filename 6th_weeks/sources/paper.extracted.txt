@@ -1,0 +1,356 @@
+Accuracy of Heart Rate Watches: Implications for Weight Management | PLOS One 
+Skip to main content 
+Advertisement 
+PLOS One 
+Publish 
+Submissions 
+Getting Started 
+Submission Guidelines 
+Figures 
+Tables 
+Supporting Information 
+LaTeX 
+What We Publish 
+Preprints 
+Revising Your Manuscript 
+Submit Now 
+Calls for Papers 
+Policies 
+Best Practices in Research Reporting 
+Human Subjects Research 
+Animal Research 
+Competing Interests 
+Disclosure of Funding Sources 
+Licenses and Copyright 
+Data Availability 
+Complementary Research 
+Materials, Software and Code Sharing 
+Ethical Publishing Practice 
+Authorship 
+Corrections, Expressions of Concern, and Retractions 
+Manuscript Review and Publication 
+Criteria for Publication 
+Editorial and Peer Review Process 
+Editor Center 
+Guidelines for Reviewers 
+Accepted Manuscripts 
+Comments 
+Submit Your Manuscript 
+Discover a faster, simpler path to publishing in a high-quality journal. PLOS ONE promises fair, rigorous peer review,
+  broad scope, and wide readership – a perfect fit for your research every time. 
+Learn More Submit Now 
+About 
+Why Publish with PLOS ONE 
+Journal Information 
+Staff Editors 
+Editorial Board 
+Section Editors 
+Advisory Groups 
+Find and Read Articles 
+Publishing Information 
+Publication Fees 
+Press and Media 
+Contact 
+Browse 
+Search Search 
+advanced search 
+Browse Subject Areas 
+? 
+Click through the PLOS taxonomy to find articles in your field. 
+For more information about PLOS Subject Areas, click here . 
+Loading metrics 
+Open Access 
+Peer-reviewed 
+Research Article 
+Accuracy of Heart Rate Watches: Implications for Weight Management 
+Matthew P. Wallen , 
+Contributed equally to this work with:
+    Matthew P. Wallen,
+    Sjaan R. Gomersall,
+    Shelley E. Keating,
+    Ulrik Wisløff,
+    Jeff S. Coombes 
+Affiliation Centre for Research on Exercise, Physical Activity and Health (CRExPAH), School of Human Movement and Nutrition Sciences, The University of Queensland, Brisbane, Queensland, Australia ⨯ 
+Sjaan R. Gomersall , 
+Contributed equally to this work with:
+    Matthew P. Wallen,
+    Sjaan R. Gomersall,
+    Shelley E. Keating,
+    Ulrik Wisløff,
+    Jeff S. Coombes 
+Affiliation Centre for Research on Exercise, Physical Activity and Health (CRExPAH), School of Human Movement and Nutrition Sciences, The University of Queensland, Brisbane, Queensland, Australia ⨯ 
+Shelley E. Keating , 
+Contributed equally to this work with:
+    Matthew P. Wallen,
+    Sjaan R. Gomersall,
+    Shelley E. Keating,
+    Ulrik Wisløff,
+    Jeff S. Coombes 
+Affiliation Centre for Research on Exercise, Physical Activity and Health (CRExPAH), School of Human Movement and Nutrition Sciences, The University of Queensland, Brisbane, Queensland, Australia ⨯ 
+Ulrik Wisløff , 
+Contributed equally to this work with:
+    Matthew P. Wallen,
+    Sjaan R. Gomersall,
+    Shelley E. Keating,
+    Ulrik Wisløff,
+    Jeff S. Coombes 
+Affiliation K.G. Jebsen Center of Exercise in Medicine, Department of Circulation and Medical Imaging, Norwegian University of Science and Technology, Trondheim, Norway ⨯ 
+Jeff S. Coombes 
+Contributed equally to this work with:
+    Matthew P. Wallen,
+    Sjaan R. Gomersall,
+    Shelley E. Keating,
+    Ulrik Wisløff,
+    Jeff S. Coombes 
+* E-mail: jcoombes@uq.edu.au 
+Affiliation Centre for Research on Exercise, Physical Activity and Health (CRExPAH), School of Human Movement and Nutrition Sciences, The University of Queensland, Brisbane, Queensland, Australia ⨯ 
+Accuracy of Heart Rate Watches: Implications for Weight Management 
+Matthew P. Wallen, 
+Sjaan R. Gomersall, 
+Shelley E. Keating, 
+Ulrik Wisløff, 
+Jeff S. Coombes 
+x 
+Published: May 27, 2016 
+https://doi.org/10.1371/journal.pone.0154420 
+Article 
+Authors 
+Metrics 
+Comments 
+Media Coverage 
+Reader Comments 
+Figures 
+Figures 
+Abstract 
+Background 
+Wrist-worn monitors claim to provide accurate measures of heart rate and energy expenditure. People wishing to lose weight use these devices to monitor energy balance, however the accuracy of these devices to measure such parameters has not been established. 
+Aim 
+To determine the accuracy of four wrist-worn devices (Apple Watch, Fitbit Charge HR, Samsung Gear S and Mio Alpha) to measure heart rate and energy expenditure at rest and during exercise. 
+Methods 
+Twenty-two healthy volunteers (50% female; aged 24 ± 5.6 years) completed ~1-hr protocols involving supine and seated rest, walking and running on a treadmill and cycling on an ergometer. Data from the devices collected during the protocol were compared with reference methods: electrocardiography (heart rate) and indirect calorimetry (energy expenditure). 
+Results 
+None of the devices performed significantly better overall, however heart rate was consistently more accurate than energy expenditure across all four devices. Correlations between the devices and reference methods were moderate to strong for heart rate (0.67–0.95 [0.35 to 0.98]) and weak to strong for energy expenditure (0.16–0.86 [-0.25 to 0.95]). All devices underestimated both outcomes compared to reference methods. The percentage error for heart rate was small across the devices (range: 1–9%) but greater for energy expenditure (9–43%). Similarly, limits of agreement were considerably narrower for heart rate (ranging from -27.3 to 13.1 bpm) than energy expenditure (ranging from -266.7 to 65.7 kcals) across devices. 
+Conclusion 
+These devices accurately measure heart rate. However, estimates of energy expenditure are poor and would have implications for people using these devices for weight loss. 
+Citation: Wallen MP, Gomersall SR, Keating SE, Wisløff U, Coombes JS (2016) Accuracy of Heart Rate Watches: Implications for Weight Management. PLoS ONE 11(5):
+           e0154420.
+        https://doi.org/10.1371/journal.pone.0154420 
+Editor: Jose A. L. Calbet, University of Las Palmas de Gran Canaria, SPAIN 
+Received: December 22, 2015; Accepted: April 13, 2016; Published: May 27, 2016 
+Copyright: © 2016 Wallen et al. This is an open access article distributed under the terms of the Creative Commons Attribution License , which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited. 
+Data Availability: All relevant data are within the paper and its Supporting Information files. 
+Funding: The principal investigator on the study (Coombes) received an unrestricted grant from Coca Cola that was used to partially fund this study (Research Master Number 2014002786, http://transparency.coca-colajourney.com.au ). The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript. There was no additional external funding received for this study. 
+Competing interests: The principal investigator on the study (Coombes) received an unrestricted grant from Coca Cola that was used to partially fund this study. The purpose of the financial support was to support research investigating the effects of high intensity exercise on energy balance in participants with the metabolic syndrome. To assess energy expenditure we first wanted to conduct a sub-study to investigate the accuracy of wrist worn devices to collect these data – leading to the submitted manuscript. As an unrestricted grant, Coca Cola had no input or control over any aspect of the study. Our only obligation/communication to Coca Cola regarding this study is to notify them of what we had done. This does not alter the authors’ adherence to PLOS ONE policies on sharing data and materials. Professor Wisløff (co-investigator on the study) is Director of a company (Beatstack) that has developed and patented a smart phone application called the ‘Personal Activity Intelligence, PAI’. Beatstack is now partially owned by Mio Global. This has led to the PAI app only being able to utilise heart rate data from Mio devices. Mio are developing more wrist worn heart rate devices (as would be most similar companies) and Professor Wisløff is working with the company to develop these products as part of his involvement in the Beatstack company and his interests in the PAI app. None of the Beatstack products or the Mio company had any involvement in the study. This does not alter the authors’ adherence to PLOS ONE policies on sharing data and materials. 
+Introduction 
+The benefits of participating in regular physical activity are well documented [ 1 ], yet physical inactivity remains the largest risk factor for the development of cardiometabolic disease worldwide [ 2 ]. Wearable devices have become a popular method of measuring activity-based outcomes and facilitating behavior change to effectuate weight loss [ 3 ]. It was estimated that approximately 25 million of these devices would be sold in 2015 and worldwide sales are expected to increase to approximately 12.6 billion U.S. dollars by 2018 [ 4 ]. Notably, wrist-worn monitors are predicted to account for 87% of wearable devices shipped in 2018 [ 5 ]. These devices claim to provide accurate measures of energy expenditure and, more recently, heart rate via photoplethysmography. 
+Previous studies investigating the validity of energy expenditure estimates have been limited to devices that do not include a measure of heart rate. These studies have demonstrated moderate validity, typically underestimating total energy expenditure compared to reference methods by approximately 10–30% depending on the device measured [ 6 – 9 ]. 
+With the inclusion of sophisticated photoplethysmography technology, new-generation devices such as the Apple Watch and Fitbit Charge HR have the potential to use heart rate-derived algorithms to contribute to estimates of energy expenditure based on activity intensity [ 10 , 11 ]. Recent evidence suggests this method has acceptable validity, however there is inherent variability, demonstrating that the accuracy of these devices is dependent on the device used, the type and intensity of activity, and skin photosensitivity [ 12 , 13 ]., Melanin concentration and skin pigmentation can attenuate the light wavelength emitted from these devices, thereby reducing pulse rate detection [ 14 ]. It is important to recognize, however, that the devices that have previously been evaluated were typically designed for sports performance, and contemporary activity trackers (e.g. Apple Watch, Fitbit Charge HR) have not yet been evaluated. 
+Given the rapid consumer uptake of these devices, it is critical to determine their accuracy to measure these variables across a variety of modes and intensities given their potential to have a major influence on lifestyle behavior and weight management. The aim of this study was to therefore determine the ability of four popular wrist-worn devices (Apple Watch, Fitbit Charge HR, Samsung Gear S and Mio Alpha) to accurately measure heart rate and energy expenditure during approximately one hour of rest, cycling and treadmill walking. 
+Methods 
+Participants 
+Healthy male and female volunteers aged between 18–70 were invited to participate. All participants were recruited from a large metropolitan university. The study received ethical clearance from the University of Queensland (HMS15/2403). Research staff screened all participants for any medical indications that may exclude them from exercise testing and obtained written informed consent. Prior to each visit, participants were advised to refrain from ingesting caffeine and alcohol, and to avoid vigorous physical activity for 24 hours, and from consuming a large meal four hours, prior. A standardised meal replacement beverage (Up & Go, Sanitarium, Australia) was provided to participants two hours before all testing sessions. A 24-hour physical activity and dietary diary was completed prior to the second testing session and participants were asked to replicate these behaviors before the final trial. 
+Experimental Protocols 
+Participants attended the research laboratory on three separate occasions, separated by between 48 hours and 7 days. Visit one included measures of height, weight and skin type assessment via Fitzpatrick Skin Type scale [ 15 ]. Maximal oxygen uptake ( ) via indirect calorimetry (MetaMax 3B, Cortex, Germany) was also assessed using a Bruce treadmill protocol. Standard calibration of gas analysers (two point calibration against room air and known gas concentration of 4.07% CO 2 /15.95% O 2 ) and volume (3L Hans Rudolph calibration syringe, Kansas, United States) was performed prior to each assessment as per manufacturers instructions. Measurements of oxygen consumption, carbon dioxide production and minute ventilation were obtained at rest and during exercise. 
+Visits two and three were testing sessions, with two devices tested per session (one on each arm), using a randomized and counterbalanced method. Each visit involved the simultaneous recordings of heart rate and energy expenditure from the devices during a range of activities for comparison with reference methods. As three of the devices also measured steps, total steps for the duration of the testing session was also recorded for these devices (Apple Watch, Fitbit Charge HR, Samsung Gear S). To ensure participants were adequately hydrated, urine osmolality was assessed on arrival (Osmocheck Pocket Refractometer, Vitech Scientific Ltd, Tokyo). Activities at rest (lying, sitting, standing) and exercise (walking, cycling) were chosen for the 58-minute protocol ( Fig 1 ). Participants initially performed five-minute periods of supine, sitting and standing, respectively. Three stages of a Bruce graded treadmill exercise protocol were then undertaken followed by five minutes of seated rest. Participants then completed six, three-minute stages of a 25-watt step test (commencing at 25 W) on a cycle ergometer followed by a final five minutes of seated rest. 
+Download: 
+PNG 
+larger image 
+TIFF 
+original image 
+Fig 1. Study protocol (58 mins in total). 
+https://doi.org/10.1371/journal.pone.0154420.g001 
+The devices tested were the Apple Watch (Apple Inc., California, United States), Fitbit Charge HR (Fitbit Inc., San Francisco, United States), Samsung Gear S (Samsung Electronics Co., Ltd., Suwon, South Korea) and Mio Alpha (Mio Global, Canada). As per manufacturer instructions, the devices were individualized for age, gender and anthropometrical data. Devices with compatible smartphone software were synchronized via Bluetooth to an appropriate smartphone to assist with data collection (ease of visualization). 
+Reference Methods 
+Electrocardiography (ECG) electrodes (3-lead, CASE exercise testing system, GE Healthcare, UK) were fitted at each visit and heart rate from the ECG and devices was manually recorded every 15-seconds during the protocol. Energy expenditure was measured using indirect calorimetry with a portable gas-analysis system (MetaMax 3B, Cortex, Germany). Participants were video recorded while walking on the treadmill and step count was determined from the recording retrospectively via visual inspection at half-speed playback. 
+Statistical analysis 
+Pearson (r) or Spearman rank correlation coefficients (rho), for normal- and non-normally distributed data, respectively, intraclass correlation coefficients and Bland-Altman plots with mean bias and upper and lower limits of agreement (LoA) were used to assess criterion validity and agreement between the device and the reference. After visual examination of the plots, systematic bias was assessed using linear regression to determine whether mean difference and/or limits of agreement varied across average values of the device and the reference [ 16 ]. Where mean difference and/or limits of agreement varied with average values, estimates were calculated for the mean of the average values. All statistical analyses were conducted using SPSS (Version 22, SPSS Inc.) and data presented as mean ± SD. The strength of correlation coefficients was interpreted based on the following definitions: weak (r = <0.5), moderate (0.5–0.7) and strong (r≥0.7). 
+Results 
+Twenty-two individuals (11 women) volunteered to participate [age: 24.9 ± 5.6 years; height: 173.1 ± 9.9 cm; weight: 72.7 ± 11.8 kg; : 50.1 ± 7.8 mL.kg -1 .min -1 ; maximum heart rate: 189.6 ± 6.9 beats per minute; Fitzpatrick Skin Type scale <IV (n = 15) and >IV (n = 7)]. Participants were euhydrated prior to testing sessions (<700 mOsmol). All participants wore each device once however energy expenditure data were missing for three participants and step count data were missing for two due to a data recording error. Both trials increased heart rate to ~70–80% of maximum with mean oxygen consumption 13.8 ± 1.4 mL.kg -1 .min -1 and 14.3 ± 2.0 mL.kg -1 .min -1 for trial one and two respectively. The mean±SD relative oxygen consumption (mL.kg -1 .min -1 ) for individual stages of both trials were as follows: supine (5.0 ± 0.7), quiet sitting 1 (4.5 ± 0.8), standing (4.9 ± 1.1), treadmill stage 1 (14.3 ± 1.6), treadmill stage 2 (22.4 ± 2.2), treadmill stage 3 (32.6 ± 3.0), quiet sitting 2 (8.4 ± 2.1), cycling stage 1 (12.2 ± 1.8), cycling stage 2 (14.8 ± 2.3), cycling stage 3 (17.7 ± 2.8), cycling stage 4 (21.5 ± 3.7), cycling stage 5 (25.3 ± 4.5), cycling stage 6 (29.2 ± 5.6), and quiet sitting 3 (7.2 ± 1.3). 
+Correlations and Bland-Altman findings (mean difference and limits of agreement) are presented in Table 1 . No one device performed better overall, however, the outcome of heart rate was consistently more accurate than energy expenditure across all four devices. Correlations between device measures and reference methods varied depending upon the outcome and the device used, ranging from moderate to strong for heart rate (0.67–0.95 [0.35 to 0.98]), and from weak to strong for energy expenditure (0.16–0.86 [-0.25 to 0.95]) ( Table 1 ). 
+Download: 
+PNG 
+larger image 
+TIFF 
+original image 
+Table 1. Sample size, mean, correlation, agreement between device and reference methods and Bland-Altman outcomes for heart rate (bpm) and energy expenditure (kcal). 
+https://doi.org/10.1371/journal.pone.0154420.t001 
+Bland-Altman plots indicated that all devices underestimated all outcome measures compared to the reference method ( Fig 2 ). The average underestimation for devices compared to reference methods ranged from 1–9% for heart rate and 9–43% for energy expenditure. The Samsung Gear S demonstrated the greatest variability for heart rate (Lower LoA–Upper LoA; -27.3 to 13.1 bpm) ( Fig 3 ). Furthermore, the Mio ALPHA demonstrated the greatest variability for estimated energy expenditure (-266.7 to 65.7 kcal) ( Fig 4 ). Systematic bias was identified for energy expenditure and heart rate outcomes for the Fitbit Charge HR and Mio ALPHA devices. There were no statistical differences between correlations for heart rate based on skin color (Fitzpatrick Skin Type scale <IV (n = 15) and >IV (n = 7)], except for the Apple Watch, where the correlation for Fitzpatrick Skin Type Scale >IV (r = 1.00) was statistically different to <IV (r = 0.94) (p<0.05). 
+Download: 
+PNG 
+larger image 
+TIFF 
+original image 
+Fig 2. 
+Bland-Altman analyses comparing devices with reference method for (A) heart rate and (B) energy expenditure. Mean difference is indicated by the solid dot, with the lines indicating the 95% limits of agreement. Notes : HR = heart rate, kcal = kilocalories, bpm = beat per minute. Where mean difference or limits of agreement were systematically biased, point estimates were calculated using the mean value for the average of the two measures (device and reference). 
+https://doi.org/10.1371/journal.pone.0154420.g002 
+Download: 
+PNG 
+larger image 
+TIFF 
+original image 
+Fig 3. 
+Bland-Altman plots for device [(A) Apple Watch; N = 22, (B) Fitbit Charge HR; N = 22, (C) Samsung Gear S; N = 22, (D) Mio ALPHA; N = 22] and electrocardiography (reference) average heart rate (bpm). The solid line represents the mean difference (bpm) between the two measures and the dashed lines are the 95% limits of agreement (bpm). Notes : bpm = beats per minute, LoA = limits of agreement, MD = mean difference. 
+https://doi.org/10.1371/journal.pone.0154420.g003 
+Download: 
+PNG 
+larger image 
+TIFF 
+original image 
+Fig 4. 
+Bland-Altman plots for device [(A) Apple Watch; N = 22, (B) Fitbit Charge HR; N = 22, (C) Samsung Gear S; N = 19, (D) Mio ALPHA; N = 22] and METAMAX (reference) total energy expenditure (kcal). The solid line represents the mean difference (kcal) between the two measures and the dashed lines are the 95% limits of agreement (kcal). Notes : kcal = kilocalories, LoA = limits of agreement, MD = mean difference. 
+https://doi.org/10.1371/journal.pone.0154420.g004 
+Three of the devices measured step count. Correlations between measured steps and the reference method for the Apple Watch (0.70 [0.38 to 0.87]), Fitbit Charge HR (0.67 [0.34 to 0.85] and Samsung Gear S (0.88 [0.72 to 0.95]) were considered moderate to strong. However, the Fitbit Charge HR demonstrated the greatest variability for step count (-353 to 235 steps) ( Fig 5 ). The average error of underestimation for these devices ranged from 4–6%. 
+Download: 
+PNG 
+larger image 
+TIFF 
+original image 
+Fig 5. 
+Bland-Altman plots for device [(A) Apple Watch; N = 21, (B) Fitbit Charge HR; N = 21, (C) Samsung Gear S; N = 20] and direct observation (reference) steps. The solid line represents the mean difference (steps) between the two measures and the dashed lines are the 95% limits of agreement (steps). Notes : LoA = limits of agreement, MD = mean difference. 
+https://doi.org/10.1371/journal.pone.0154420.g005 
+Discussion 
+This is the first study to examine the accuracy of four popular wrist-worn devices: the Apple Watch, Fitbit Charge HR, Samsung Gear S and Mio Alpha, to measure heart rate and energy expenditure during rest, cycling and treadmill walking. Our findings demonstrate that all devices underestimated heart rate and energy expenditure. No single device demonstrated consistently greater accuracy across these measures and the magnitude of error varied depending on the outcome of interest. 
+Device estimates of heart rate via photoplethysmography were within 1–9% of reference estimates. Heart rate is commonly used to monitor and prescribe cardiovascular-based exercise intensity [ 17 ] and therefore accurate measures are important for precise exercise prescription. Our findings indicate that wrist-worn devices utilizing photoplethysmography offer consumers a convenient and satisfactory method to monitor heart rate while exercising. This is consistent with a recent investigation examining the accuracy of the wrist-based Mio ALPHA, and the forearm-worn Scosche myRhythm, to measure heart rate during rest, exercise and hand-based activities compared to electrocardiography [ 12 ]. Overall, the devices had a mean error of <2%, however this varied between the devices for the type of activity. The Mio ALPHA demonstrated the largest mean error during cycling (-4.8%), whilst the largest mean error for the Scosche myRhythm was during walking (-3.13%) [ 12 ]. Similarly, Spierer and colleagues (2015) also assessed the accuracy of the Mio ALPHA, and the Omron HR500U during rest, and aerobic and resistance exercise [ 13 ]. All devices assessed demonstrated measurement error compared to the reference method, of which was significant during resistance exercise for the Mio ALPHA (mean ± standard error: 23.3 ± 31.94 bpm; p<0.01) [ 13 ]. 
+The addition of heart rate measures to traditional accelerometery-based devices that measure physical activity would be expected to improve the accuracy of energy expenditure predictions [ 10 ]. However, our findings demonstrate significant variability in the accuracy of energy expenditure estimation, with up to 43% difference between the device and the reference method. As increased energy expenditure through physical activity is recommended as a part of a weight management strategy [ 18 ], the inability to accurately estimate energy expenditure is a limitation across these devices. It is difficult to speculate what contributed to errors of this magnitude. It is assumed that each device has a specific algorithm for the determination of energy expenditure. Technical assistance was sought from each company to ascertain information regarding the algorithms used to determine energy expenditure, however this information was not disclosed. 
+The accuracy of several commercially available activity trackers to measure a variety of physical-activity related outcomes during free-living conditions, which included two wrist-worn devices (Jawbone UP and Misfit Shine) was recently evaluated [ 7 ]. Although these devices were not designed to measure photoplethysmography-derived heart rate, the results highlighted that, consistent with our findings, all devices significantly underestimated energy expenditure (Jawbone = -898 kcal; Misfit Shine = -479 kcal), with only a modest association with reference methods (r = 0.74–0.79). Similarly, Sasaki and co-workers (2015) recently validated a hip-worn Fitbit Classic device against indirect calorimetry during a variety of lab-based activities including walking, running and simulated free-living conditions [ 9 ]. This study was the first to validate activity-specific estimates of energy expenditure compared to continuous estimates as previous described [ 6 , 8 ]. The Fitbit Classic underestimated energy expenditure for a variety of activities of daily living [-3.1 ± 4.2 kcal/6 min (95% limits of agreement (LoA): -11 to 5.2 kcal/6 min)], locomotion [-5.6 ± 12 kcal/6 min (95% LoA: -29 to 18 kcal/6 min)] and sports [-2.1 ± 12 kcal/6 min (95% LoA -26 to 22 kcal/6 min)]. As increased energy expenditure through physical activity is recommended as a part of a weight management strategy [ 18 ], the inability to accurately estimate energy expenditure is a limitation across these devices. 
+Of interest was the observation that that the Samsung Gear S does not incorporate heart rate into estimations of energy expenditure, whereas the others do. Instead, the Samsung Gear S appears to use an accelerometery-based algorithm during walking/running and predictive equations during cycling. Consistent with previous research [ 7 , 19 ], step count estimates for the Apple Watch, Fitbit Charge HR and Samsung Gear S were acceptable (within 4–6% of the reference). 
+Limitations of this study included the relatively young and apparently healthy sample of participants (mean: 24.9 ± 5.6 years, range: 19–41 years), and therefore results may not be generalizable to a broader consumer market. Furthermore, the findings associated with laboratory-based protocol cannot be generalized to the free-living context. Finally, it is suggested that the accuracy of these devices may be reduced during higher intensity or resistance-based exercise as a result of movement artefact [ 13 ], which was not addressed in this investigation. 
+Conclusion 
+The four devices accurately measure heart rate however estimates of energy expenditure are poor. This limits their use for monitoring energy balance, and therefore as a weight loss aid. 
+Supporting Information 
+S1 Dataset. Study data. 
+https://doi.org/10.1371/journal.pone.0154420.s001 
+(XLSX) 
+Author Contributions 
+Conceived and designed the experiments: MW SG JC UW. Performed the experiments: MW. Analyzed the data: MW JC SG SK. Wrote the paper: MW SG SK UW JC. 
+References 
+1. Warburton DE, Nicol CW, Bredin SS. Health benefits of physical activity: the evidence. CMAJ. 2006;174: 801–809. pmid:16534088 
+View Article 
+PubMed/NCBI 
+Google Scholar 
+2. Haskell WL, Lee I-M, Pate RR, Powell KE, Blair SN, Franklin BA, et al. Physical activity and public health: updated recommendation for adults from the American College of Sports Medicine and the American Heart Association. Med Sci Sport Exerc. 2007;39: 1423–1434. 
+View Article 
+Google Scholar 
+3. Patel MS, Asch DA, Volpp KG. Wearable devices as facilitators, not drivers, of health behavior change. JAMA. 2015;313: 459–460.  pmid:25569175 
+View Article 
+PubMed/NCBI 
+Google Scholar 
+4. Forecast unit sales of health and fitness trackers worldwide from 2014 to 2015 (in millions), by region. Statista. 2015. Available: http://www.statista.com/statistics/413265/health-and-fitness-tracker-worldwide-unit-sales-region/ . 
+5. Smart watches and Smart Bands Dominate Fast-Growing Wearables Market. CCS Insight. 2014. Available: http://www.ccsinsight.com/press/company-news/1944-smartwatchesand-smart-bands-dominate-fast-growing-wearables-market . 
+6. Dannecker KL, Sazonova NA, Melanson EL, Sazonov ES, Browning RC. A comparison of energy expenditure estimation of several physical activity monitors. Med Sci Sport Exerc. 2013;45: 2105–2112. 
+View Article 
+Google Scholar 
+7. Ferguson T, Rowlands AV, Olds T, Maher C. The validity of consumer-level, activity monitors in healthy adults worn in free-living conditions: a cross-sectional study. Int J Behav Nutr Phys Act. 2015;12: 42.  pmid:25890168 
+View Article 
+PubMed/NCBI 
+Google Scholar 
+8. Lee J-M, Kim Y, Welk GJ. Validity of consumer-based physical activity monitors. Med Sci Sport Exerc. 2014;46: 1840–1848. 
+View Article 
+Google Scholar 
+9. Sasaki JE, Hickey A, Mavilia M, Tedesco J, John D, Kozey Keadle S, et al. Validation of the Fitbit wireless activity tracker for prediction of energy expenditure. J Phys Act Health. 2015;12: 149–154.  pmid:24770438 
+View Article 
+PubMed/NCBI 
+Google Scholar 
+10. Keytel LR, Goedecke JH, Noakes TD, Hiiloskorpi H, Laukkanen R, van der Merwe L, et al. Prediction of energy expenditure from heart rate monitoring during submaximal exercise. J Sport Sci. 2007;23: 289–297. 
+View Article 
+Google Scholar 
+11. Luke A, Maki KC, Barkey N, Cooper R, McGee D. Simultaneous monitoring of heart rate and motion to assess energy expenditure. Med Sci Sport Exerc. 1997;29: 144–148. 
+View Article 
+Google Scholar 
+12. Parak J, Korhonen I. Evaluation of wearable consumer heart rate monitors based on photoplethysmography. IEEE. 2014: 3670–3673. 
+View Article 
+Google Scholar 
+13. Spierer DK, Rosen Z, Litman LL, Fujii K. Validation of photoplethysmography as a method to detect heart rate during rest and exercise. J Med Eng Technol. 2015;39: 264–271.  pmid:26112379 
+View Article 
+PubMed/NCBI 
+Google Scholar 
+14. Fallow BA, Tarumi T, Tanaka H. Influence of skin type and wavelength on light wave reflectance. J Clin Monit Comput. 2013;27: 313–317.  pmid:23397431 
+View Article 
+PubMed/NCBI 
+Google Scholar 
+15. Fitzpatrick TB. The validity and practicality of sun-reactive skin types I through VI. Arch Dermatol. 1988;124: 869–871. pmid:3377516 
+View Article 
+PubMed/NCBI 
+Google Scholar 
+16. Brown R, Richmond S. An update on the analysis of agreement for orthodontic indices. Eur J Orthod. 2005;27: 286–291. pmid:15947229 
+View Article 
+PubMed/NCBI 
+Google Scholar 
+17. Mann T, Lamberts RP, Lambert MI. Methods of prescribing relative exercise intensity: physiological and practical considerations. Sports Med. 2013;43: 613–625  pmid:23620244 
+View Article 
+PubMed/NCBI 
+Google Scholar 
+18. Donnelly JE, Blair SN, Jakicic JM, Manore MM, Rankin JW, Smith BK, et al. American College of Sports Medicine Position Stand. Appropriate physical activity intervention strategies for weight loss and prevention of weight regain for adults. Med Sci Sport Exerc. 2009;41: 459–471. 
+View Article 
+Google Scholar 
+19. Case MA, Burwick HA, Volpp KG, Patel MS. Accuracy of smartphone applications and wearable devices for tracking physical activity data. JAMA. 2015;313: 625–626.  pmid:25668268 
+View Article 
+PubMed/NCBI 
+Google Scholar 
+Download PDF 
+Citation 
+XML 
+Print 
+Share 
+Reddit 
+Facebook 
+LinkedIn 
+Mendeley 
+Bluesky 
+Email 
+Advertisement 
+Subject Areas 
+? 
+For more information about PLOS Subject Areas, click here . We want your feedback. Do these Subject Areas make sense for this article? Click the target next to the incorrect Subject Area and let us know. Thanks for your help! 
+Bioenergetics 
+Is the Subject Area "Bioenergetics" applicable to this article? Yes No 
+Thanks for your feedback. 
+Heart rate 
+Is the Subject Area "Heart rate" applicable to this article? Yes No 
+Thanks for your feedback. 
+Measurement equipment 
+Is the Subject Area "Measurement equipment" applicable to this article? Yes No 
+Thanks for your feedback. 
+Electrocardiography 
+Is the Subject Area "Electrocardiography" applicable to this article? Yes No 
+Thanks for your feedback. 
+Body weight 
+Is the Subject Area "Body weight" applicable to this article? Yes No 
+Thanks for your feedback. 
+Exercise 
+Is the Subject Area "Exercise" applicable to this article? Yes No 
+Thanks for your feedback. 
+Physical activity 
+Is the Subject Area "Physical activity" applicable to this article? Yes No 
+Thanks for your feedback. 
+Walking 
+Is the Subject Area "Walking" applicable to this article? Yes No 
+Thanks for your feedback. 
+Publications 
+PLOS Aging and Health 
+PLOS Biology 
+PLOS Climate 
+PLOS Complex Systems 
+PLOS Computational Biology 
+PLOS Digital Health 
+PLOS Ecosystems 
+PLOS Genetics 
+PLOS Global Public Health 
+PLOS Medicine 
+PLOS Mental Health 
+PLOS Neglected Tropical Diseases 
+PLOS One 
+PLOS Pathogens 
+PLOS Sustainability and Transformation 
+PLOS Water 
+Home 
+Blogs 
+Collections 
+Give feedback 
+LOCKSS 
+Privacy Policy 
+Terms of Use 
+Advertise 
+Media Inquiries 
+Contact 
+PLOS is a nonprofit 501(c)(3) corporation, #C2354500, based in California, US 

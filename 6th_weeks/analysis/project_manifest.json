@@ -1,0 +1,572 @@
+{
+  "created_utc": "2026-10-24T13:15:31.380653+00:00",
+  "documentation_revision": "PAIR1-20261024",
+  "excludes": [
+    "analysis/r-library runtime",
+    "__pycache__",
+    ".uv-cache",
+    "this manifest"
+  ],
+  "files": [
+    {
+      "file": "analysis/config/plan-v1.0.json",
+      "bytes": 4323,
+      "sha256": "1d78ed063d8d103b80f2e26919b6e546a49c7e0bf22598f461f32dd9a5287f29"
+    },
+    {
+      "file": "analysis/config/실행프롬프트-6주차.md",
+      "bytes": 3084,
+      "sha256": "5c838c25885c2967d375b9a4183f238149ab3ba0f90ecf5401893f1c30d8f8b1"
+    },
+    {
+      "file": "analysis/documentation/history/PAIR1-20261024/preservation_baseline.json",
+      "bytes": 7935,
+      "sha256": "b104e8e3f3b303b18d5bfcd665599d95fc1d3b85f420957e80e45722c63242e9"
+    },
+    {
+      "file": "analysis/documentation/history/PAIR1-20261024/previous-browser_review.json",
+      "bytes": 1038,
+      "sha256": "ce8976a59beebad07a9577c53e42f17e58754ba8495862ca45e4d5a2c7bbf787"
+    },
+    {
+      "file": "analysis/documentation/history/PAIR1-20261024/previous-build_report.py",
+      "bytes": 61575,
+      "sha256": "e75e5839807a2402c8e76c4193b8a714c0578ed84c4d9ab7148aa57dff082b19"
+    },
+    {
+      "file": "analysis/documentation/history/PAIR1-20261024/previous-execution-prompt.md",
+      "bytes": 2016,
+      "sha256": "306cfd90c9a05b7f924c7cc269e72b0abe44c135f4a9e5d051bacf931d9ef600"
+    },
+    {
+      "file": "analysis/documentation/history/PAIR1-20261024/previous-README.md",
+      "bytes": 2420,
+      "sha256": "0a06f89e678d8a0fe64f890df8f77fae2fbb817fb5bc6c7139e1d46348724f28"
+    },
+    {
+      "file": "analysis/documentation/history/PAIR1-20261024/previous-report.source.txt",
+      "bytes": 909719,
+      "sha256": "ac131fd8cbaabeeeb3ba81b57b083a2b04df6ec79466d74f11664e84dbf5d2a2"
+    },
+    {
+      "file": "analysis/documentation/history/PAIR1-20261024/previous-report_manifest.json",
+      "bytes": 4503,
+      "sha256": "ab2a8758d18ad41617f8bc2499fe1884151895d2bfced0118b05ee853bfd20d7"
+    },
+    {
+      "file": "analysis/documentation/history/PAIR1-20261024/previous-verification_summary.json",
+      "bytes": 1456,
+      "sha256": "d3f91d3fb4bf0488d07cccf440acad49740628526144765f2140360b6f70f073"
+    },
+    {
+      "file": "analysis/memory/events.jsonl",
+      "bytes": 1744,
+      "sha256": "3819acaa85d80586a92898706d36f331b6c23ff40a9b1e13197af16083cf3fce"
+    },
+    {
+      "file": "analysis/memory/issues.json",
+      "bytes": 6202,
+      "sha256": "773e851a5d33c4a8e1d4dbd9e679e4ad3d0ec633bea3e6998ac3aa8fdb92a875"
+    },
+    {
+      "file": "analysis/memory/project.json",
+      "bytes": 1259,
+      "sha256": "54893631df19f9baac03029d206e89c94903e652310c2c566f4aaf05c6e46510"
+    },
+    {
+      "file": "analysis/memory/requirements.md",
+      "bytes": 1002,
+      "sha256": "75f6549010e9eddc207c85578541f647742b1189ee8b2c1cf7c5cb31e9430b5e"
+    },
+    {
+      "file": "analysis/renderings/STYLE1-20261024/04_regression_residuals.png",
+      "bytes": 92387,
+      "sha256": "1abc24b60aa6fad81b094aad778bb33e10e0d3a7fe704a806044302a38147f68"
+    },
+    {
+      "file": "analysis/renderings/STYLE1-20261024/05_residual_qq.png",
+      "bytes": 110389,
+      "sha256": "87f811482092f004572b693ab1be06392820f8dce84e2622c73a6ed770a0097d"
+    },
+    {
+      "file": "analysis/renderings/STYLE1-20261024/manifest.json",
+      "bytes": 573,
+      "sha256": "6ea0637f29a9ce9a571ec936327b424ff26a3b3b4cc5afb8b78c72a97060a30c"
+    },
+    {
+      "file": "analysis/report_manifest.json",
+      "bytes": 7937,
+      "sha256": "1b71c5c9ab92f9c6b7e200b8d0652d15dc4f72534b8c405784596eddd3e163f8"
+    },
+    {
+      "file": "analysis/reviews/browser_review.json",
+      "bytes": 2211,
+      "sha256": "2d0f5b55f619ee7a733f3a74dd4a9c253f95b1bbe6873d55ee63d6312ade5fde"
+    },
+    {
+      "file": "analysis/reviews/comparison_metadata_before_clarification.json",
+      "bytes": 600,
+      "sha256": "a9777501a3ac1872a1775fa10cc49b8423a29f079cd3db3f83d3f5c64460eb2b"
+    },
+    {
+      "file": "analysis/reviews/documentation_content_review.json",
+      "bytes": 933,
+      "sha256": "f20574b851a15801d8891a82ffef6bb6f893380f09252d32ffd226687f5f6e4e"
+    },
+    {
+      "file": "analysis/reviews/PAIR1-20261024/browser_review.json",
+      "bytes": 2211,
+      "sha256": "2d0f5b55f619ee7a733f3a74dd4a9c253f95b1bbe6873d55ee63d6312ade5fde"
+    },
+    {
+      "file": "analysis/reviews/PAIR1-20261024/desktop-concept.png",
+      "bytes": 88685,
+      "sha256": "7a06f6529903e8b8d7130dd2d0e72612d3b9b84e1be174dbc7e88df292080ab5"
+    },
+    {
+      "file": "analysis/reviews/PAIR1-20261024/desktop-overview.png",
+      "bytes": 86989,
+      "sha256": "477e8ee3eb5a3b1ae235b0061d20b297971267258cb4e9ddc5cea0436d98a7e5"
+    },
+    {
+      "file": "analysis/reviews/PAIR1-20261024/desktop-paper.png",
+      "bytes": 103324,
+      "sha256": "9047bbd0317b0f556b6e1b81d8c6e09339ed9cdbf3810918776b5b5ef63e4879"
+    },
+    {
+      "file": "analysis/reviews/PAIR1-20261024/desktop-publication.png",
+      "bytes": 87789,
+      "sha256": "c3385124ce9dee77eed75a4320a2fae1ea6729422edd2626deb2c4ab36d7599c"
+    },
+    {
+      "file": "analysis/reviews/PAIR1-20261024/mobile-concept.png",
+      "bytes": 37834,
+      "sha256": "91350492239a284bb5a63f6f8aa89ff659c8e38713376a4636a81ceb26376e11"
+    },
+    {
+      "file": "analysis/reviews/PAIR1-20261024/mobile-overview.png",
+      "bytes": 44036,
+      "sha256": "d0bbd97cc3fd66614dae3b406904fd8c2c9a3a1fc1b20982a52f03bf85cc8090"
+    },
+    {
+      "file": "analysis/reviews/PAIR1-20261024/mobile-paper.png",
+      "bytes": 35586,
+      "sha256": "efd2b2f7c9b2d19bc5e4272fdeb9e514263c7a14089dbf2247fb679fe09a47f3"
+    },
+    {
+      "file": "analysis/reviews/qa_pair_revision.cjs",
+      "bytes": 7854,
+      "sha256": "09a85486a0e4df0ed16e059e063c323bb3ce16374fdb9c5b9e9324be4c6ba4fc"
+    },
+    {
+      "file": "analysis/reviews/verification_summary.json",
+      "bytes": 2018,
+      "sha256": "16fa00656a1b33ba2ecf9de4f5b47b46271885c4b3fbc464c92f26df98f858ce"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/artifact_hashes.csv",
+      "bytes": 2773,
+      "sha256": "33d7a66126065022bdf2fab1ced594c22fc77fe15d1812fa668f6462e5e0058d"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/environment.json",
+      "bytes": 491,
+      "sha256": "c5198d26176b5b49e522d332c95541d2d4f1c14366d7d6d1afb771dfd4fb65d7"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/executed_script.R",
+      "bytes": 18122,
+      "sha256": "7b3fbebe5e0efafba0503880c7f4bf7f1380526aaa2a5f7d84a21a0b842d5985"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/figures/01_scatter_regression.png",
+      "bytes": 144704,
+      "sha256": "7fc78ea29ba26655247a02657a47eb254920b2f42377904e9262aa9e9d2130be"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/figures/02_error_histograms.png",
+      "bytes": 56274,
+      "sha256": "2367e94ed096b5eaa0e833ba544f9810e033e8a5b8b0ef75275482934bd93c99"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/figures/03_bland_altman.png",
+      "bytes": 114728,
+      "sha256": "82224a505664edf21f36e41498b56ee213b9e0ddb3fc57b0904c08ac89e300ee"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/figures/04_regression_residuals.png",
+      "bytes": 91086,
+      "sha256": "9417338dd9dbc299dffacdffd1e90beef6f6ed2a046125c0a3f5affcfce6525c"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/figures/05_residual_qq.png",
+      "bytes": 111584,
+      "sha256": "8c28e456991c125cba1965c9a0a83a3201d218def0c841df57ee80506c876b71"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/figures/06_leave_one_out.png",
+      "bytes": 31101,
+      "sha256": "753149e073713654a39859b720cf2d43cbf326e2f89f3565364814fafe6fbcc8"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/figures/07_bias_and_mae.png",
+      "bytes": 33057,
+      "sha256": "0f524e5e1a44640bb6e7f472c884f8abec634a3cb9c50cbd71d18e8c07bb065d"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/logs/sessionInfo.txt",
+      "bytes": 892,
+      "sha256": "22e41c822cc63ef8746287ad3cb6d8875efa75670dd0ddafa9aef27fea098c97"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/logs/warnings.csv",
+      "bytes": 11,
+      "sha256": "2370557e69a86d61ebe3535c7a8f41384a99c3986613d255bb8e99bf0314f09a"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/models/per_device_ols.rds",
+      "bytes": 72364,
+      "sha256": "c528fc0efbf3f7f77773b4862d38a096dc3d01442ef7c776ec5b3675f07f8d69"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/plan-v1.0.json",
+      "bytes": 4323,
+      "sha256": "1d78ed063d8d103b80f2e26919b6e546a49c7e0bf22598f461f32dd9a5287f29"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/publication_comparison_manifest.json",
+      "bytes": 788,
+      "sha256": "b5be84b204ad377038db40cf329853eee73421debe8419ac9e875186bea8a82b"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/python_crosscheck.json",
+      "bytes": 46519,
+      "sha256": "cae6fd98927a73613276f0db67523bb5446a9d845bccc11c771ae26cf0fdc2d9"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/report.json",
+      "bytes": 10557,
+      "sha256": "aa1fabffc9277e348358780da60c03c5678970af792337d87caee4a60e4da3ce"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/status.json",
+      "bytes": 239,
+      "sha256": "21557ce76620b7f1b40323c9769f27365f2a17413816b5346064da0ad2f5060a"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/tables/analysis_counts.csv",
+      "bytes": 261,
+      "sha256": "aaddd63f3e9f76d51f4c31702570685b8de7580a5ff93023249db5e7a6f63246"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/tables/data_flow.csv",
+      "bytes": 360,
+      "sha256": "c9659f0eb56a24a4774ab83c7f3f5bef5b5367923ca270662494a52c2ccde669"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/tables/device_summary.csv",
+      "bytes": 3866,
+      "sha256": "78c3a4a4b84661f2cadab49634357132a30031a07e494cd0e983e09651d32a27"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/tables/device_trial_counts.csv",
+      "bytes": 211,
+      "sha256": "62dc54fcc65964423a4839b83127d75b4e795a07ecbba78929ef7fc06c9df2c5"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/tables/excluded_pairs.csv",
+      "bytes": 192,
+      "sha256": "ab572b993d8040f9be0b8a14183590f7f57a59bbfac9672c6f51065b0a3d5f17"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/tables/heart_rate_pairs.csv",
+      "bytes": 12945,
+      "sha256": "a0c3bcd7a1992c8fc4e67c5574d769e2f8c982cc76732cf3be5f86853488004c"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/tables/leave_one_participant_out.csv",
+      "bytes": 9656,
+      "sha256": "3a730118de6ba2c8c537e938d61a38943704350a14a857b413e8e6ee215f1f91"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/tables/observation_diagnostics.csv",
+      "bytes": 10721,
+      "sha256": "248f0cec1e036a80b615d65e8e1f4ef1e8d8b8c99d9894aa32f481c651393d15"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/tables/publication_comparison.csv",
+      "bytes": 3960,
+      "sha256": "746a50f3c3629c4cd1b0b9be3042fbe4d2c0ccbcf9d61d89f1804242fe3dbc24"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/tables/regression_coefficients.csv",
+      "bytes": 1168,
+      "sha256": "1631f57f1464d62df8eb2d13ba08ba67b6cffdb0baca927cce0b132ca94bd8c5"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/tables/regression_mean_response_ci.csv",
+      "bytes": 33537,
+      "sha256": "b7489528bbcf1ad628217d359239360925ab80867ff3e83952c8bf773a4acc6d"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/tables/reported_rounding_diagnostic.csv",
+      "bytes": 1177,
+      "sha256": "281b83ea12f269b23ed729a93c09314118b7d24317a8a37b1f63aadfd1310731"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/tables/sensitivity_summary.csv",
+      "bytes": 777,
+      "sha256": "f54539a837a7cbae853e8a556c0d61388b4de70b1565715db945e3d620a09a86"
+    },
+    {
+      "file": "analysis/runs/R1-20261024/tables/validation_checks.csv",
+      "bytes": 896,
+      "sha256": "04ca2f7e1ec9d8e4cf2f2bca3bb1432ce73953dd539ab1735c867ffaa585300c"
+    },
+    {
+      "file": "analysis/src/analyse_heart_rate.R",
+      "bytes": 18334,
+      "sha256": "5b6586860d44460c51d5e441c63dd122cc69e5ad371c043f671f58561e773b6d"
+    },
+    {
+      "file": "analysis/src/build_report.py",
+      "bytes": 64334,
+      "sha256": "d70ac36b13c8a6ff30b2f9ef2d06f007f3e8d950baa322bc8c6e6276cff08623"
+    },
+    {
+      "file": "analysis/src/compare_publication.py",
+      "bytes": 6084,
+      "sha256": "153d94ea065517867a1cd648343d85a457e29333971af4a241a8113ac4af9f8a"
+    },
+    {
+      "file": "analysis/src/crosscheck_and_source.py",
+      "bytes": 4409,
+      "sha256": "a454697340f4197fded206133c694f3b2c3f3cff3a48c8e0903ee7ab3c754494"
+    },
+    {
+      "file": "analysis/src/finalize_pair_revision.py",
+      "bytes": 6152,
+      "sha256": "1333d54c349293c986e46084482d91f0cca60e30acb72f725a88f41226dc157e"
+    },
+    {
+      "file": "analysis/src/paired_learning.py",
+      "bytes": 36466,
+      "sha256": "975f0a67c7822dce86fa994a82d18232b80c992d62340033b0829ae87cc5f614"
+    },
+    {
+      "file": "analysis/src/render_diagnostics.R",
+      "bytes": 2514,
+      "sha256": "5de8e0995c6cf2fa9ba1c139c5d148c9a5180cc5c1ee3adea80469be499c9d12"
+    },
+    {
+      "file": "analysis/src/setup_environment.R",
+      "bytes": 670,
+      "sha256": "b6b68d23d0eec19bdd3568f7335f275b869f163fb82ceaa5d1355641611277eb"
+    },
+    {
+      "file": "analysis/stage_registry.json",
+      "bytes": 6629,
+      "sha256": "14369d81e19c22395b67d9421fc2918c81ddfdb1410332e0ccc2c29b18c937a7"
+    },
+    {
+      "file": "data/raw/pone.0154420.s001.xlsx",
+      "bytes": 59512,
+      "sha256": "50cae0d20ded94e43b956fc9f86a286cdf227eafe549906442fe21445570fcff"
+    },
+    {
+      "file": "docs/00-요청과실행기준.md",
+      "bytes": 1845,
+      "sha256": "b2149f8f5c3e838a59bdb1b26ba5a4f76a197a76a7a30b9d6b37dd484cd75a34"
+    },
+    {
+      "file": "docs/01-출처와수정슬라이드.md",
+      "bytes": 1635,
+      "sha256": "03545513b4f98dc4b49ee7fe2c1a362941f104b87e92f7f6a5887249794ee42b"
+    },
+    {
+      "file": "docs/02-원자료구조와정리.md",
+      "bytes": 1641,
+      "sha256": "9411120050186425dcf08f2170a0a224952dddb2d3e4739fbb239ff8146f2e9d"
+    },
+    {
+      "file": "docs/03-품질검사와자료흐름.md",
+      "bytes": 1410,
+      "sha256": "192e0a5d766e64d93154cb0dbbc56791c203eeb67ff95bb5d4eceaf8c1b76628"
+    },
+    {
+      "file": "docs/04-산점도와상관.md",
+      "bytes": 1573,
+      "sha256": "550eda693eba4ec6a70ca9d1d9f751fddd5f20161104b4e984c2676a82a6e194"
+    },
+    {
+      "file": "docs/05-단순선형회귀.md",
+      "bytes": 1516,
+      "sha256": "25be400ecb5c2250ec8bc8dd7c3dfdda98a93ba3fbca75ca2b85c63dfa5e9beb"
+    },
+    {
+      "file": "docs/06-측정오차와일치도.md",
+      "bytes": 1812,
+      "sha256": "e240a603d2d1f39191ef45eaec56da7595ec62942bde4b2d188f9dc1c5fbd80b"
+    },
+    {
+      "file": "docs/07-진단과민감도.md",
+      "bytes": 1442,
+      "sha256": "b256091803f95474b93fcc32ea64abfeafce9784d2e7674d708d7b1489d3c596"
+    },
+    {
+      "file": "docs/08-논문비교와최종해석.md",
+      "bytes": 2090,
+      "sha256": "84cb89f2fb6e8d980072bc3d3db35e21dd918aa54b51fbbacf57fdd913b00bf1"
+    },
+    {
+      "file": "docs/09-문제와수정내역.md",
+      "bytes": 5692,
+      "sha256": "57350b4b7a9bed913a42287d339047b9ce632d9fd074024719bf75bf78205680"
+    },
+    {
+      "file": "docs/devices/Apple.md",
+      "bytes": 1319,
+      "sha256": "e9803f750174f68adb25467ba8f7c1cc15f573e67caedffa53fae9d156155c61"
+    },
+    {
+      "file": "docs/devices/Fitbit.md",
+      "bytes": 1333,
+      "sha256": "4da8bb94e272666e42cb6c98fa5ab3a7b3902fb6ced3dca6df66428baa3002ea"
+    },
+    {
+      "file": "docs/devices/Mio.md",
+      "bytes": 1316,
+      "sha256": "070638596a7caa2e5b8e9b12482810b080d857b57680b7839fb4b42d896882e3"
+    },
+    {
+      "file": "docs/devices/Samsung.md",
+      "bytes": 1328,
+      "sha256": "8e4108f49851d1d24fbb2052e4433b8bd326c89ba97008da094fdf071ffe56ef"
+    },
+    {
+      "file": "docs/learning/00-학습문서읽기지도.md",
+      "bytes": 2166,
+      "sha256": "ebb42165dadd64c9b93297b12903b97223e7362e5634096f34bf1d7d8d16a002"
+    },
+    {
+      "file": "docs/learning/01-concept 자료·변수·관측 단위.md",
+      "bytes": 2129,
+      "sha256": "1690bb65331f696ff03a18f05729f0e3c4babf6e446a1727f23735fb4bf7d7ee"
+    },
+    {
+      "file": "docs/learning/01-paper 자료·변수·관측 단위.md",
+      "bytes": 2635,
+      "sha256": "e053494d8445ccba51231601a48577c649831d3d3e495c966b8fa7234c839604"
+    },
+    {
+      "file": "docs/learning/02-concept 산점도·Pearson 상관.md",
+      "bytes": 2449,
+      "sha256": "51fcc2819cbb02e50342ed01a66998dea0381c2437f07adf1dcf9c0aff77e69d"
+    },
+    {
+      "file": "docs/learning/02-paper 산점도·Pearson 상관.md",
+      "bytes": 2453,
+      "sha256": "53be4f0f01c6dcdbdad4674737d346284b931a8542fe2ee2e36bc5a44929e760"
+    },
+    {
+      "file": "docs/learning/03-concept 단순 선형회귀.md",
+      "bytes": 2202,
+      "sha256": "36ad521041e02ca55cb06fc2e7249039c2b044517662a566e729bdb4785f7567"
+    },
+    {
+      "file": "docs/learning/03-paper 단순 선형회귀.md",
+      "bytes": 2729,
+      "sha256": "33bdcb70693d216731b9d430d89c96624f3e7ec233fc41546b19c09291d1efff"
+    },
+    {
+      "file": "docs/learning/04-concept 측정오차·일치도.md",
+      "bytes": 2225,
+      "sha256": "80ec7b6198f9a3ad5c921c5a5eb5687c5fb092081cadb994bb09ef4023efc722"
+    },
+    {
+      "file": "docs/learning/04-paper 측정오차·일치도.md",
+      "bytes": 2887,
+      "sha256": "655c89657e7a87d26d2fb154b7ac0af6ae097e2b334f2fa7e582036dcab0e87e"
+    },
+    {
+      "file": "docs/learning/05-concept 진단·영향점·민감도.md",
+      "bytes": 1859,
+      "sha256": "48fb541fe2b1b80d90294dec276a856611eeacab977bbbb1769ba504a2ebc910"
+    },
+    {
+      "file": "docs/learning/05-paper 진단·영향점·민감도.md",
+      "bytes": 2371,
+      "sha256": "c3c6d3e1a92272929ac5faf0def851c364e4a83fc8c2f4cbca806927958a95fe"
+    },
+    {
+      "file": "docs/learning/06-concept 논문 수치 대조·해석.md",
+      "bytes": 1883,
+      "sha256": "10e1b920f6cb89ad3b5ff2a56012c73081e591129bc0d30950f3ef0f8d3026a0"
+    },
+    {
+      "file": "docs/learning/06-paper 논문 수치 대조·해석.md",
+      "bytes": 2441,
+      "sha256": "24d9dfd9390054cd012ba55873aac8d539ede9a9c5220abe099804725e3d6b57"
+    },
+    {
+      "file": "docs/learning/07-concept 문제·검증·보고의 한계.md",
+      "bytes": 2025,
+      "sha256": "80a06dcc98373ef72cd763b7943a0ec5663e4fc1f6d98e88db8d60e8b0b04f3f"
+    },
+    {
+      "file": "docs/learning/07-paper 문제·검증·보고의 한계.md",
+      "bytes": 7864,
+      "sha256": "b7918eb09c268aa8b6a40eebc2f9c16a2013c4b9216d09177f1925e85771caac"
+    },
+    {
+      "file": "README.md",
+      "bytes": 3039,
+      "sha256": "3fa5935563427b105273ad4bd4d7030df9cd61c747dacfec2bffd5be914d62bf"
+    },
+    {
+      "file": "sources/acquisition_manifest.json",
+      "bytes": 1657,
+      "sha256": "afa05710ccab28843cd384b8e0395460e89fb33ad69cc329d9340fd74c3ee5e1"
+    },
+    {
+      "file": "sources/lecture.extracted.txt",
+      "bytes": 12355,
+      "sha256": "7bd16736ac301db10167829a58d3c560c2ae4eb497818278ee687d9fbfcaef16"
+    },
+    {
+      "file": "sources/lecture.source.txt",
+      "bytes": 95960,
+      "sha256": "c005d4e618b4d916fcfcf2a061bb736304d1d1fa2e432aa7524bff43a94dfdb0"
+    },
+    {
+      "file": "sources/paper.extracted.txt",
+      "bytes": 33855,
+      "sha256": "a8d4e6a95cb3c095c417d8d5f8ec9063fe7980e52203e4d08edc9250dbbc2edb"
+    },
+    {
+      "file": "sources/paper.manuscript.xml",
+      "bytes": 57633,
+      "sha256": "4c1a871251ccb792e4058c001e51b1c720e1a06307e971df91e1f180f4ec6d28"
+    },
+    {
+      "file": "sources/paper.source.txt",
+      "bytes": 156885,
+      "sha256": "064795dba61dae52a53f74ad7ef9533d2796c093def247a3274f4898bf53f5d3"
+    },
+    {
+      "file": "sources/published_tables.json",
+      "bytes": 4903,
+      "sha256": "202903e2ae4b85c095b4bacc13372a2bbac785d2712dddd444ca3a7cdedd08e0"
+    },
+    {
+      "file": "sources/workbook_inspection.json",
+      "bytes": 31622,
+      "sha256": "d7320a0a54b6119623d511e706ea804a2f45138909f87519e39c7a7d1fd47d91"
+    },
+    {
+      "file": "최종분석보고서.html",
+      "bytes": 1041785,
+      "sha256": "4fdf6816963ffc0846835ea7d0c414217d58378a4ba2cfdfffaacd64ec8c5f23"
+    }
+  ]
+}

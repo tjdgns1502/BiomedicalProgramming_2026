@@ -1,0 +1,2167 @@
+{
+  "run_id": "R1-20261024",
+  "scope": "same-agent R-vs-Python/OpenPyXL/numpy independent implementation check; not external review",
+  "raw_sha256": "50cae0d20ded94e43b956fc9f86a286cdf227eafe549906442fe21445570fcff",
+  "checks_passed": 402,
+  "elapsed_seconds": 0.07490210002288222,
+  "reader_warnings": [
+    "Unknown extension is not supported and will be removed"
+  ],
+  "decision": "pass",
+  "checks": [
+    {
+      "check": "raw_still_identical",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "rows_88_no_exclusion",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID1_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID1_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID1_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID1_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID2_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID2_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID2_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID2_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID3_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID3_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID3_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID3_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID4_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID4_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID4_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID4_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID5_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID5_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID5_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID5_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID6_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID6_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID6_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID6_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID7_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID7_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID7_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID7_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID8_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID8_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID8_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID8_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID9_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID9_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID9_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID9_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID10_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID10_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID10_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID10_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID11_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID11_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID11_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID11_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID12_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID12_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID12_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID12_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID13_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID13_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID13_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID13_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID14_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID14_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID14_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID14_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID15_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID15_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID15_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID15_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID16_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID16_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID16_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID16_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID17_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID17_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID17_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID17_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID18_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID18_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID18_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID18_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID19_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID19_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID19_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID19_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID20_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID20_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID20_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID20_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID21_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID21_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID21_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID21_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID22_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID22_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID22_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_ID22_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Apple Watch_n",
+      "passed": true,
+      "detail": {
+        "R": 22.0,
+        "Python": 22.0
+      }
+    },
+    {
+      "check": "Apple Watch_pearson_r",
+      "passed": true,
+      "detail": {
+        "R": 0.952929786134058,
+        "Python": 0.9529297861340579
+      }
+    },
+    {
+      "check": "Apple Watch_intercept",
+      "passed": true,
+      "detail": {
+        "R": 6.32623058001508,
+        "Python": 6.326230580015164
+      }
+    },
+    {
+      "check": "Apple Watch_slope",
+      "passed": true,
+      "detail": {
+        "R": 0.925593876238601,
+        "Python": 0.9255938762386006
+      }
+    },
+    {
+      "check": "Apple Watch_bias",
+      "passed": true,
+      "detail": {
+        "R": -1.26045454545455,
+        "Python": -1.2604545454545457
+      }
+    },
+    {
+      "check": "Apple Watch_error_sd",
+      "passed": true,
+      "detail": {
+        "R": 4.37572685365934,
+        "Python": 4.375726853659343
+      }
+    },
+    {
+      "check": "Apple Watch_mae",
+      "passed": true,
+      "detail": {
+        "R": 2.53318181818182,
+        "Python": 2.533181818181818
+      }
+    },
+    {
+      "check": "Apple Watch_rmse",
+      "passed": true,
+      "detail": {
+        "R": 4.45706334219782,
+        "Python": 4.4570633421978245
+      }
+    },
+    {
+      "check": "Apple Watch_mpe",
+      "passed": true,
+      "detail": {
+        "R": -1.05802866422113,
+        "Python": -1.0580286642211312
+      }
+    },
+    {
+      "check": "Apple Watch_mape",
+      "passed": true,
+      "detail": {
+        "R": 2.69519945417143,
+        "Python": 2.695199454171432
+      }
+    },
+    {
+      "check": "Apple Watch_classical_loa_low",
+      "passed": true,
+      "detail": {
+        "R": -9.83687917862686,
+        "Python": -9.836879178626859
+      }
+    },
+    {
+      "check": "Apple Watch_classical_loa_high",
+      "passed": true,
+      "detail": {
+        "R": 7.31597008771777,
+        "Python": 7.3159700877177665
+      }
+    },
+    {
+      "check": "Fitbit Charge HR_ID1_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID1_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID1_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID1_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID2_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID2_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID2_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID2_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID3_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID3_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID3_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID3_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID4_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID4_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID4_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID4_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID5_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID5_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID5_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID5_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID6_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID6_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID6_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID6_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID7_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID7_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID7_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID7_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID8_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID8_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID8_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID8_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID9_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID9_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID9_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID9_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID10_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID10_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID10_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID10_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID11_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID11_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID11_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID11_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID12_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID12_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID12_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID12_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID13_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID13_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID13_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID13_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID14_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID14_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID14_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID14_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID15_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID15_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID15_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID15_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID16_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID16_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID16_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID16_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID17_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID17_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID17_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID17_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID18_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID18_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID18_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID18_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID19_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID19_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID19_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID19_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID20_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID20_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID20_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID20_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID21_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID21_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID21_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID21_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID22_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID22_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID22_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_ID22_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fitbit Charge HR_n",
+      "passed": true,
+      "detail": {
+        "R": 22.0,
+        "Python": 22.0
+      }
+    },
+    {
+      "check": "Fitbit Charge HR_pearson_r",
+      "passed": true,
+      "detail": {
+        "R": 0.812045521770469,
+        "Python": 0.8120455217704691
+      }
+    },
+    {
+      "check": "Fitbit Charge HR_intercept",
+      "passed": true,
+      "detail": {
+        "R": 27.0063858107686,
+        "Python": 27.006385810768606
+      }
+    },
+    {
+      "check": "Fitbit Charge HR_slope",
+      "passed": true,
+      "detail": {
+        "R": 0.643793938872314,
+        "Python": 0.6437939388723133
+      }
+    },
+    {
+      "check": "Fitbit Charge HR_bias",
+      "passed": true,
+      "detail": {
+        "R": -9.31772727272727,
+        "Python": -9.317727272727272
+      }
+    },
+    {
+      "check": "Fitbit Charge HR_error_sd",
+      "passed": true,
+      "detail": {
+        "R": 8.47881052519031,
+        "Python": 8.478810525190307
+      }
+    },
+    {
+      "check": "Fitbit Charge HR_mae",
+      "passed": true,
+      "detail": {
+        "R": 10.5531818181818,
+        "Python": 10.553181818181818
+      }
+    },
+    {
+      "check": "Fitbit Charge HR_rmse",
+      "passed": true,
+      "detail": {
+        "R": 12.4676594362447,
+        "Python": 12.46765943624471
+      }
+    },
+    {
+      "check": "Fitbit Charge HR_mpe",
+      "passed": true,
+      "detail": {
+        "R": -8.58823094545767,
+        "Python": -8.588230945457665
+      }
+    },
+    {
+      "check": "Fitbit Charge HR_mape",
+      "passed": true,
+      "detail": {
+        "R": 10.0899381843717,
+        "Python": 10.089938184371663
+      }
+    },
+    {
+      "check": "Fitbit Charge HR_classical_loa_low",
+      "passed": true,
+      "detail": {
+        "R": -25.9361959021003,
+        "Python": -25.936195902100273
+      }
+    },
+    {
+      "check": "Fitbit Charge HR_classical_loa_high",
+      "passed": true,
+      "detail": {
+        "R": 7.30074135664573,
+        "Python": 7.30074135664573
+      }
+    },
+    {
+      "check": "Samsung Gear S_ID1_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID1_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID1_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID1_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID2_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID2_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID2_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID2_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID3_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID3_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID3_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID3_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID4_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID4_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID4_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID4_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID5_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID5_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID5_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID5_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID6_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID6_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID6_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID6_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID7_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID7_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID7_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID7_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID8_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID8_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID8_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID8_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID9_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID9_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID9_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID9_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID10_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID10_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID10_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID10_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID11_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID11_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID11_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID11_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID12_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID12_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID12_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID12_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID13_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID13_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID13_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID13_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID14_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID14_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID14_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID14_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID15_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID15_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID15_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID15_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID16_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID16_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID16_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID16_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID17_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID17_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID17_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID17_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID18_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID18_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID18_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID18_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID19_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID19_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID19_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID19_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID20_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID20_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID20_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID20_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID21_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID21_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID21_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID21_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID22_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID22_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID22_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_ID22_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Samsung Gear S_n",
+      "passed": true,
+      "detail": {
+        "R": 22.0,
+        "Python": 22.0
+      }
+    },
+    {
+      "check": "Samsung Gear S_pearson_r",
+      "passed": true,
+      "detail": {
+        "R": 0.742584598260981,
+        "Python": 0.7425845982609812
+      }
+    },
+    {
+      "check": "Samsung Gear S_intercept",
+      "passed": true,
+      "detail": {
+        "R": 22.1899428352148,
+        "Python": 22.189942835214808
+      }
+    },
+    {
+      "check": "Samsung Gear S_slope",
+      "passed": true,
+      "detail": {
+        "R": 0.709047067860175,
+        "Python": 0.7090470678601744
+      }
+    },
+    {
+      "check": "Samsung Gear S_bias",
+      "passed": true,
+      "detail": {
+        "R": -7.04818181818182,
+        "Python": -7.048181818181818
+      }
+    },
+    {
+      "check": "Samsung Gear S_error_sd",
+      "passed": true,
+      "detail": {
+        "R": 10.2571919652986,
+        "Python": 10.257191965298642
+      }
+    },
+    {
+      "check": "Samsung Gear S_mae",
+      "passed": true,
+      "detail": {
+        "R": 9.74454545454545,
+        "Python": 9.744545454545454
+      }
+    },
+    {
+      "check": "Samsung Gear S_rmse",
+      "passed": true,
+      "detail": {
+        "R": 12.251717504831,
+        "Python": 12.251717504830978
+      }
+    },
+    {
+      "check": "Samsung Gear S_mpe",
+      "passed": true,
+      "detail": {
+        "R": -6.47602199637625,
+        "Python": -6.476021996376247
+      }
+    },
+    {
+      "check": "Samsung Gear S_mape",
+      "passed": true,
+      "detail": {
+        "R": 9.62528549782841,
+        "Python": 9.625285497828415
+      }
+    },
+    {
+      "check": "Samsung Gear S_classical_loa_low",
+      "passed": true,
+      "detail": {
+        "R": -27.1522780701672,
+        "Python": -27.152278070167153
+      }
+    },
+    {
+      "check": "Samsung Gear S_classical_loa_high",
+      "passed": true,
+      "detail": {
+        "R": 13.0559144338035,
+        "Python": 13.055914433803519
+      }
+    },
+    {
+      "check": "Mio Alpha_ID1_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID1_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID1_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID1_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID2_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID2_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID2_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID2_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID3_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID3_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID3_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID3_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID4_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID4_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID4_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID4_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID5_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID5_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID5_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID5_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID6_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID6_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID6_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID6_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID7_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID7_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID7_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID7_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID8_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID8_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID8_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID8_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID9_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID9_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID9_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID9_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID10_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID10_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID10_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID10_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID11_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID11_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID11_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID11_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID12_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID12_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID12_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID12_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID13_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID13_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID13_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID13_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID14_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID14_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID14_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID14_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID15_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID15_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID15_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID15_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID16_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID16_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID16_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID16_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID17_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID17_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID17_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID17_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID18_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID18_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID18_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID18_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID19_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID19_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID19_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID19_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID20_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID20_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID20_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID20_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID21_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID21_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID21_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID21_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID22_participant_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID22_device_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID22_reference_bpm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_ID22_trial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mio Alpha_n",
+      "passed": true,
+      "detail": {
+        "R": 22.0,
+        "Python": 22.0
+      }
+    },
+    {
+      "check": "Mio Alpha_pearson_r",
+      "passed": true,
+      "detail": {
+        "R": 0.870193191163242,
+        "Python": 0.8701931911632415
+      }
+    },
+    {
+      "check": "Mio Alpha_intercept",
+      "passed": true,
+      "detail": {
+        "R": 1.17330407635767,
+        "Python": 1.173304076357646
+      }
+    },
+    {
+      "check": "Mio Alpha_slope",
+      "passed": true,
+      "detail": {
+        "R": 0.945939688355734,
+        "Python": 0.945939688355735
+      }
+    },
+    {
+      "check": "Mio Alpha_bias",
+      "passed": true,
+      "detail": {
+        "R": -4.34045454545455,
+        "Python": -4.340454545454546
+      }
+    },
+    {
+      "check": "Mio Alpha_error_sd",
+      "passed": true,
+      "detail": {
+        "R": 7.21667676933598,
+        "Python": 7.21667676933598
+      }
+    },
+    {
+      "check": "Mio Alpha_mae",
+      "passed": true,
+      "detail": {
+        "R": 4.81045454545455,
+        "Python": 4.810454545454546
+      }
+    },
+    {
+      "check": "Mio Alpha_rmse",
+      "passed": true,
+      "detail": {
+        "R": 8.27965441746981,
+        "Python": 8.279654417469807
+      }
+    },
+    {
+      "check": "Mio Alpha_mpe",
+      "passed": true,
+      "detail": {
+        "R": -4.17545775672432,
+        "Python": -4.17545775672432
+      }
+    },
+    {
+      "check": "Mio Alpha_mape",
+      "passed": true,
+      "detail": {
+        "R": 4.72361306575818,
+        "Python": 4.723613065758175
+      }
+    },
+    {
+      "check": "Mio Alpha_classical_loa_low",
+      "passed": true,
+      "detail": {
+        "R": -18.4851410133531,
+        "Python": -18.48514101335307
+      }
+    },
+    {
+      "check": "Mio Alpha_classical_loa_high",
+      "passed": true,
+      "detail": {
+        "R": 9.80423192244398,
+        "Python": 9.804231922443975
+      }
+    }
+  ]
+}
