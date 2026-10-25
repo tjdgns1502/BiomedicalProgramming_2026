@@ -1,0 +1,89 @@
+"pair_id","id","device","device_key","trial","device_hr","ecg_hr","excel_row","cell_device","cell_ecg","cell_trial","header_device","header_ecg","header_trial","xml_text_device","xml_text_ecg","error","mean_device_ecg"
+"P01-Apple",1,"Apple Watch","Apple",1,116.34,118.29,2,"B2","C2","D2","Apple_device","Apple_ECG","Trial_number","116.34","118.29",-1.95,117.315
+"P02-Apple",2,"Apple Watch","Apple",1,104.93,109.62,3,"B3","C3","D3","Apple_device","Apple_ECG","Trial_number","104.93","109.62",-4.69,107.275
+"P03-Apple",3,"Apple Watch","Apple",1,98.05,93.8,4,"B4","C4","D4","Apple_device","Apple_ECG","Trial_number","98.05","93.8",4.25,95.925
+"P04-Apple",4,"Apple Watch","Apple",1,120.57,121.03,5,"B5","C5","D5","Apple_device","Apple_ECG","Trial_number","120.57","121.03",-0.460000000000008,120.8
+"P05-Apple",5,"Apple Watch","Apple",2,116.86,118.28,6,"B6","C6","D6","Apple_device","Apple_ECG","Trial_number","116.86","118.28",-1.42,117.57
+"P06-Apple",6,"Apple Watch","Apple",2,87.62,86.2,7,"B7","C7","D7","Apple_device","Apple_ECG","Trial_number","87.62","86.2",1.42,86.91
+"P07-Apple",7,"Apple Watch","Apple",2,102.02,102.59,8,"B8","C8","D8","Apple_device","Apple_ECG","Trial_number","102.02","102.59",-0.570000000000007,102.305
+"P08-Apple",8,"Apple Watch","Apple",2,94.28,95,9,"B9","C9","D9","Apple_device","Apple_ECG","Trial_number","94.28","95",-0.719999999999999,94.64
+"P09-Apple",9,"Apple Watch","Apple",2,84.87,88.42,10,"B10","C10","D10","Apple_device","Apple_ECG","Trial_number","84.87","88.42",-3.55,86.645
+"P10-Apple",10,"Apple Watch","Apple",1,100.31,100.29,11,"B11","C11","D11","Apple_device","Apple_ECG","Trial_number","100.31","100.29",0.019999999999996,100.3
+"P11-Apple",11,"Apple Watch","Apple",1,104.71,105.23,12,"B12","C12","D12","Apple_device","Apple_ECG","Trial_number","104.71","105.23",-0.52000000000001,104.97
+"P12-Apple",12,"Apple Watch","Apple",2,124.69,125.52,13,"B13","C13","D13","Apple_device","Apple_ECG","Trial_number","124.69","125.52",-0.829999999999998,125.105
+"P13-Apple",13,"Apple Watch","Apple",1,111.18,112.63,14,"B14","C14","D14","Apple_device","Apple_ECG","Trial_number","111.18","112.63",-1.44999999999999,111.905
+"P14-Apple",14,"Apple Watch","Apple",2,82.57,99.46,15,"B15","C15","D15","Apple_device","Apple_ECG","Trial_number","82.57","99.46",-16.89,91.015
+"P15-Apple",15,"Apple Watch","Apple",2,75.52,76.4,16,"B16","C16","D16","Apple_device","Apple_ECG","Trial_number","75.52","76.400000000000006",-0.88000000000001,75.96
+"P16-Apple",16,"Apple Watch","Apple",1,86.23,89.57,17,"B17","C17","D17","Apple_device","Apple_ECG","Trial_number","86.23","89.57",-3.33999999999999,87.9
+"P17-Apple",17,"Apple Watch","Apple",1,103.18,105.19,18,"B18","C18","D18","Apple_device","Apple_ECG","Trial_number","103.18","105.19",-2.00999999999999,104.185
+"P18-Apple",18,"Apple Watch","Apple",2,119.13,120.15,19,"B19","C19","D19","Apple_device","Apple_ECG","Trial_number","119.13","120.15",-1.02000000000001,119.64
+"P19-Apple",19,"Apple Watch","Apple",2,100.06,100.08,20,"B20","C20","D20","Apple_device","Apple_ECG","Trial_number","100.06","100.08",-0.019999999999996,100.07
+"P20-Apple",20,"Apple Watch","Apple",1,78.67,70.36,21,"B21","C21","D21","Apple_device","Apple_ECG","Trial_number","78.67","70.36",8.31,74.515
+"P21-Apple",21,"Apple Watch","Apple",1,104.45,105.37,22,"B22","C22","D22","Apple_device","Apple_ECG","Trial_number","104.45","105.37",-0.920000000000002,104.91
+"P22-Apple",22,"Apple Watch","Apple",1,99.22,99.71,23,"B23","C23","D23","Apple_device","Apple_ECG","Trial_number","99.22","99.71",-0.489999999999995,99.465
+"P01-Fitbit",1,"Fitbit Charge HR","Fitbit",1,92.43,118.29,2,"E2","F2","G2","Fitbit_device","Fitbit_metamax","Trial_number","92.43","118.29",-25.86,105.36
+"P02-Fitbit",2,"Fitbit Charge HR","Fitbit",2,83.84,105.13,3,"E3","F3","G3","Fitbit_device","Fitbit_metamax","Trial_number","83.84","105.13",-21.29,94.485
+"P03-Fitbit",3,"Fitbit Charge HR","Fitbit",2,91.16,98.83,4,"E4","F4","G4","Fitbit_device","Fitbit_metamax","Trial_number","91.16","98.83",-7.67,94.995
+"P04-Fitbit",4,"Fitbit Charge HR","Fitbit",2,104.2,117.88,5,"E5","F5","G5","Fitbit_device","Fitbit_metamax","Trial_number","104.2","117.88",-13.68,111.04
+"P05-Fitbit",5,"Fitbit Charge HR","Fitbit",1,117.01,123.78,6,"E6","F6","G6","Fitbit_device","Fitbit_metamax","Trial_number","117.01","123.78",-6.77,120.395
+"P06-Fitbit",6,"Fitbit Charge HR","Fitbit",1,84.91,87.77,7,"E7","F7","G7","Fitbit_device","Fitbit_metamax","Trial_number","84.91","87.77",-2.86,86.34
+"P07-Fitbit",7,"Fitbit Charge HR","Fitbit",2,83.64,102.59,8,"E8","F8","G8","Fitbit_device","Fitbit_metamax","Trial_number","83.64","102.59",-18.95,93.115
+"P08-Fitbit",8,"Fitbit Charge HR","Fitbit",1,93.71,103.02,9,"E9","F9","G9","Fitbit_device","Fitbit_metamax","Trial_number","93.71","103.02",-9.31,98.365
+"P09-Fitbit",9,"Fitbit Charge HR","Fitbit",1,82.12,91.55,10,"E10","F10","G10","Fitbit_device","Fitbit_metamax","Trial_number","82.12","91.55",-9.42999999999999,86.835
+"P10-Fitbit",10,"Fitbit Charge HR","Fitbit",2,86.22,92.22,11,"E11","F11","G11","Fitbit_device","Fitbit_metamax","Trial_number","86.22","92.22",-6,89.22
+"P11-Fitbit",11,"Fitbit Charge HR","Fitbit",2,101.72,106.49,12,"E12","F12","G12","Fitbit_device","Fitbit_metamax","Trial_number","101.72","106.49",-4.77,104.105
+"P12-Fitbit",12,"Fitbit Charge HR","Fitbit",1,113.06,124.18,13,"E13","F13","G13","Fitbit_device","Fitbit_metamax","Trial_number","113.06","124.18",-11.12,118.62
+"P13-Fitbit",13,"Fitbit Charge HR","Fitbit",2,93.92,113.33,14,"E14","F14","G14","Fitbit_device","Fitbit_metamax","Trial_number","93.92","113.33",-19.41,103.625
+"P14-Fitbit",14,"Fitbit Charge HR","Fitbit",1,95.86,82.27,15,"E15","F15","G15","Fitbit_device","Fitbit_metamax","Trial_number","95.86","82.27",13.59,89.065
+"P15-Fitbit",15,"Fitbit Charge HR","Fitbit",1,80.05,81.52,16,"E16","F16","G16","Fitbit_device","Fitbit_metamax","Trial_number","80.05","81.52",-1.47,80.785
+"P16-Fitbit",16,"Fitbit Charge HR","Fitbit",2,91.05,93.38,17,"E17","F17","G17","Fitbit_device","Fitbit_metamax","Trial_number","91.05","93.38",-2.33,92.215
+"P17-Fitbit",17,"Fitbit Charge HR","Fitbit",2,95.98,105.68,18,"E18","F18","G18","Fitbit_device","Fitbit_metamax","Trial_number","95.98","105.68",-9.7,100.83
+"P18-Fitbit",18,"Fitbit Charge HR","Fitbit",1,103.79,123,19,"E19","F19","G19","Fitbit_device","Fitbit_metamax","Trial_number","103.79","123",-19.21,113.395
+"P19-Fitbit",19,"Fitbit Charge HR","Fitbit",1,97.74,100.16,20,"E20","F20","G20","Fitbit_device","Fitbit_metamax","Trial_number","97.74","100.16",-2.42,98.95
+"P20-Fitbit",20,"Fitbit Charge HR","Fitbit",2,63.88,70.65,21,"E21","F21","G21","Fitbit_device","Fitbit_metamax","Trial_number","63.88","70.650000000000006",-6.77,67.265
+"P21-Fitbit",21,"Fitbit Charge HR","Fitbit",1,93.93,105.37,22,"E22","F22","G22","Fitbit_device","Fitbit_metamax","Trial_number","93.93","105.37",-11.44,99.65
+"P22-Fitbit",22,"Fitbit Charge HR","Fitbit",2,88.24,96.36,23,"E23","F23","G23","Fitbit_device","Fitbit_metamax","Trial_number","88.24","96.36",-8.12,92.3
+"P01-Samsung",1,"Samsung Gear S","Samsung",2,78.07,107.37,2,"H2","I2","J2","Samsung_device","Samsung_ECG","Trial_number","78.069999999999993","107.37",-29.3,92.72
+"P02-Samsung",2,"Samsung Gear S","Samsung",2,92.48,105.13,3,"H3","I3","J3","Samsung_device","Samsung_ECG","Trial_number","92.48","105.13",-12.65,98.805
+"P03-Samsung",3,"Samsung Gear S","Samsung",1,97.98,93.8,4,"H4","I4","J4","Samsung_device","Samsung_ECG","Trial_number","97.98","93.8",4.18000000000001,95.89
+"P04-Samsung",4,"Samsung Gear S","Samsung",1,116.03,121.03,5,"H5","I5","J5","Samsung_device","Samsung_ECG","Trial_number","116.03","121.03",-5,118.53
+"P05-Samsung",5,"Samsung Gear S","Samsung",1,120.86,123.78,6,"H6","I6","J6","Samsung_device","Samsung_ECG","Trial_number","120.86","123.78",-2.92,122.32
+"P06-Samsung",6,"Samsung Gear S","Samsung",2,84.71,86.2,7,"H7","I7","J7","Samsung_device","Samsung_ECG","Trial_number","84.71","86.2",-1.49000000000001,85.455
+"P07-Samsung",7,"Samsung Gear S","Samsung",1,99.87,102.97,8,"H8","I8","J8","Samsung_device","Samsung_ECG","Trial_number","99.87","102.97",-3.09999999999999,101.42
+"P08-Samsung",8,"Samsung Gear S","Samsung",2,103.34,95,9,"H9","I9","J9","Samsung_device","Samsung_ECG","Trial_number","103.34","95",8.34,99.17
+"P09-Samsung",9,"Samsung Gear S","Samsung",2,77.73,88.42,10,"H10","I10","J10","Samsung_device","Samsung_ECG","Trial_number","77.73","88.42",-10.69,83.075
+"P10-Samsung",10,"Samsung Gear S","Samsung",2,100.84,92.22,11,"H11","I11","J11","Samsung_device","Samsung_ECG","Trial_number","100.84","92.22",8.62,96.53
+"P11-Samsung",11,"Samsung Gear S","Samsung",2,99.1,106.49,12,"H12","I12","J12","Samsung_device","Samsung_ECG","Trial_number","99.1","106.49",-7.39,102.795
+"P12-Samsung",12,"Samsung Gear S","Samsung",2,118.07,125.52,13,"H13","I13","J13","Samsung_device","Samsung_ECG","Trial_number","118.07","125.52",-7.45,121.795
+"P13-Samsung",13,"Samsung Gear S","Samsung",2,87.37,113.33,14,"H14","I14","J14","Samsung_device","Samsung_ECG","Trial_number","87.37","113.33",-25.96,100.35
+"P14-Samsung",14,"Samsung Gear S","Samsung",1,80.38,82.27,15,"H15","I15","J15","Samsung_device","Samsung_ECG","Trial_number","80.38","82.27",-1.89,81.325
+"P15-Samsung",15,"Samsung Gear S","Samsung",1,77.27,81.52,16,"H16","I16","J16","Samsung_device","Samsung_ECG","Trial_number","77.27","81.52",-4.25,79.395
+"P16-Samsung",16,"Samsung Gear S","Samsung",1,81.34,89.57,17,"H17","I17","J17","Samsung_device","Samsung_ECG","Trial_number","81.34","89.57",-8.22999999999999,85.455
+"P17-Samsung",17,"Samsung Gear S","Samsung",2,102.07,105.68,18,"H18","I18","J18","Samsung_device","Samsung_ECG","Trial_number","102.07","105.68",-3.61000000000001,103.875
+"P18-Samsung",18,"Samsung Gear S","Samsung",2,106.74,120.15,19,"H19","I19","J19","Samsung_device","Samsung_ECG","Trial_number","106.74","120.15",-13.41,113.445
+"P19-Samsung",19,"Samsung Gear S","Samsung",2,77.93,100.08,20,"H20","I20","J20","Samsung_device","Samsung_ECG","Trial_number","77.930000000000007","100.08",-22.15,89.005
+"P20-Samsung",20,"Samsung Gear S","Samsung",2,79.17,70.65,21,"H21","I21","J21","Samsung_device","Samsung_ECG","Trial_number","79.17","70.650000000000006",8.52,74.91
+"P21-Samsung",21,"Samsung Gear S","Samsung",2,90.04,99.91,22,"H22","I22","J22","Samsung_device","Samsung_ECG","Trial_number","90.04","99.91",-9.86999999999999,94.975
+"P22-Samsung",22,"Samsung Gear S","Samsung",1,84.35,99.71,23,"H23","I23","J23","Samsung_device","Samsung_ECG","Trial_number","84.35","99.71",-15.36,92.03
+"P01-Alpha",1,"Mio Alpha","Alpha",2,104.09,107.37,2,"K2","L2","M2","Alpha_device","Alpha_ECG","Trial_number","104.09","107.37",-3.28,105.73
+"P02-Alpha",2,"Mio Alpha","Alpha",1,106.6,109.62,3,"K3","L3","M3","Alpha_device","Alpha_ECG","Trial_number","106.6","109.62",-3.02000000000001,108.11
+"P03-Alpha",3,"Mio Alpha","Alpha",2,98.59,98.83,4,"K4","L4","M4","Alpha_device","Alpha_ECG","Trial_number","98.59","98.83",-0.239999999999995,98.71
+"P04-Alpha",4,"Mio Alpha","Alpha",2,114.34,117.88,5,"K5","L5","M5","Alpha_device","Alpha_ECG","Trial_number","114.34","117.88",-3.53999999999999,116.11
+"P05-Alpha",5,"Mio Alpha","Alpha",2,108.86,118.28,6,"K6","L6","M6","Alpha_device","Alpha_ECG","Trial_number","108.86","118.28",-9.42,113.57
+"P06-Alpha",6,"Mio Alpha","Alpha",1,84.24,87.77,7,"K7","L7","M7","Alpha_device","Alpha_ECG","Trial_number","84.24","87.77",-3.53,86.005
+"P07-Alpha",7,"Mio Alpha","Alpha",1,101.42,102.97,8,"K8","L8","M8","Alpha_device","Alpha_ECG","Trial_number","101.42","102.97",-1.55,102.195
+"P08-Alpha",8,"Mio Alpha","Alpha",1,83.49,103.02,9,"K9","L9","M9","Alpha_device","Alpha_ECG","Trial_number","83.49","103.02",-19.53,93.255
+"P09-Alpha",9,"Mio Alpha","Alpha",1,92.21,91.55,10,"K10","L10","M10","Alpha_device","Alpha_ECG","Trial_number","92.21","91.55",0.659999999999997,91.88
+"P10-Alpha",10,"Mio Alpha","Alpha",1,75.49,100.29,11,"K11","L11","M11","Alpha_device","Alpha_ECG","Trial_number","75.489999999999995","100.29",-24.8,87.89
+"P11-Alpha",11,"Mio Alpha","Alpha",1,104.03,105.23,12,"K12","L12","M12","Alpha_device","Alpha_ECG","Trial_number","104.03","105.23",-1.2,104.63
+"P12-Alpha",12,"Mio Alpha","Alpha",1,123.95,124.18,13,"K13","L13","M13","Alpha_device","Alpha_ECG","Trial_number","123.95","124.18",-0.230000000000004,124.065
+"P13-Alpha",13,"Mio Alpha","Alpha",1,113.42,112.63,14,"K14","L14","M14","Alpha_device","Alpha_ECG","Trial_number","113.42","112.63",0.790000000000006,113.025
+"P14-Alpha",14,"Mio Alpha","Alpha",2,81.3,99.46,15,"K15","L15","M15","Alpha_device","Alpha_ECG","Trial_number","81.3","99.46",-18.16,90.38
+"P15-Alpha",15,"Mio Alpha","Alpha",2,76.21,76.4,16,"K16","L16","M16","Alpha_device","Alpha_ECG","Trial_number","76.209999999999994","76.400000000000006",-0.190000000000012,76.305
+"P16-Alpha",16,"Mio Alpha","Alpha",2,95.32,93.38,17,"K17","L17","M17","Alpha_device","Alpha_ECG","Trial_number","95.32","93.38",1.94,94.35
+"P17-Alpha",17,"Mio Alpha","Alpha",1,103.27,105.19,18,"K18","L18","M18","Alpha_device","Alpha_ECG","Trial_number","103.27","105.19",-1.92,104.23
+"P18-Alpha",18,"Mio Alpha","Alpha",1,122.07,123,19,"K19","L19","M19","Alpha_device","Alpha_ECG","Trial_number","122.07","123",-0.930000000000007,122.535
+"P19-Alpha",19,"Mio Alpha","Alpha",1,98.62,100.16,20,"K20","L20","M20","Alpha_device","Alpha_ECG","Trial_number","98.62","100.16",-1.53999999999999,99.39
+"P20-Alpha",20,"Mio Alpha","Alpha",1,72.14,70.36,21,"K21","L21","M21","Alpha_device","Alpha_ECG","Trial_number","72.14","70.36",1.78,71.25
+"P21-Alpha",21,"Mio Alpha","Alpha",2,95.54,99.91,22,"K22","L22","M22","Alpha_device","Alpha_ECG","Trial_number","95.54","99.91",-4.36999999999999,97.725
+"P22-Alpha",22,"Mio Alpha","Alpha",2,93.15,96.36,23,"K23","L23","M23","Alpha_device","Alpha_ECG","Trial_number","93.15","96.36",-3.20999999999999,94.755

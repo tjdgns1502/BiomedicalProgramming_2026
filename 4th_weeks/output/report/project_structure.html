@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4주차 프로젝트 구조 보고서 — 스킬·에이전트·파일별 역할</title>
+<style>
+  :root {
+    --bg: #ffffff; --ink: #1c1c1c; --sub: #555;
+    --line: #e2e2e2; --skill: #8a5a12; --skill-bg: #fdf3e2;
+    --agent: #4a3a8a; --agent-bg: #eeeafb; --code: #16594a; --code-bg: #e8f5f0;
+    --warn: #a13a2e; --warn-bg: #fbeae6; --mono: "Consolas", "D2Coding", monospace;
+  }
+  body { background: var(--bg); color: var(--ink); font-family: "Malgun Gothic", "Segoe UI", sans-serif;
+         max-width: 980px; margin: 0 auto; padding: 40px 24px 100px; line-height: 1.65; }
+  h1 { font-size: 1.9rem; margin-bottom: 4px; }
+  .subtitle { color: var(--sub); margin-top: 0; margin-bottom: 32px; font-size: 0.95rem; }
+  h2 { font-size: 1.35rem; margin-top: 56px; padding-bottom: 8px; border-bottom: 2px solid var(--ink); }
+  h3 { font-size: 1.08rem; margin-top: 30px; }
+  p { margin: 10px 0; }
+  code, .mono { font-family: var(--mono); font-size: 0.9em; background: #f4f4f4; padding: 1px 5px; border-radius: 3px; }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0 22px; font-size: 0.92rem; }
+  th, td { border: 1px solid var(--line); padding: 7px 10px; text-align: left; vertical-align: top; }
+  th { background: #f7f7f7; font-weight: 700; }
+  tr:nth-child(even) td { background: #fbfbfb; }
+  .tag { display: inline-block; font-size: 0.75rem; font-weight: 700; padding: 1px 8px; border-radius: 10px; }
+  .tag-skill { color: var(--skill); background: var(--skill-bg); }
+  .tag-agent { color: var(--agent); background: var(--agent-bg); }
+  .card { border: 1px solid var(--line); border-left: 5px solid var(--ink); border-radius: 6px;
+          padding: 14px 18px; margin: 14px 0; background: #fafafa; }
+  .card.skill { border-left-color: var(--skill); background: var(--skill-bg); }
+  .card.agent { border-left-color: var(--agent); background: var(--agent-bg); }
+  .card h4 { margin: 0 0 6px; font-size: 1.02rem; }
+  .card .meta { font-size: 0.82rem; color: var(--sub); margin-bottom: 8px; }
+  .warn { border: 1px solid #e2b8ae; background: var(--warn-bg); color: var(--warn);
+          border-radius: 6px; padding: 10px 16px; margin: 14px 0; font-size: 0.92rem; }
+  .flow { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 20px 0; font-size: 0.86rem; }
+  .flow .box { border: 1px solid var(--ink); border-radius: 6px; padding: 8px 12px; background: #fff;
+               font-family: var(--mono); white-space: nowrap; }
+  .flow .arrow { color: var(--sub); font-size: 1.1rem; }
+  footer { margin-top: 60px; padding-top: 16px; border-top: 1px solid var(--line);
+           font-size: 0.82rem; color: var(--sub); }
+</style>
+</head>
+<body>
+
+<h1>재현 프로젝트 구조 보고서</h1>
+<p class="subtitle">4주차 — Frailty index &amp; CBC-derived inflammatory markers (Han et al., BMC Public Health 2024) 재현 &mdash;
+스킬, 에이전트, R 코드 파일이 각각 무슨 역할을 했는지 정리한 문서</p>
+
+<h2>1. 전체 구도: 스킬 vs 에이전트</h2>
+<p>이 프로젝트는 두 가지 종류의 "도구"를 사용했다. <strong>스킬(Skill)</strong>은 현재 대화 안에서 내가 직접 따라가는
+절차서(체크리스트)이고, <strong>에이전트(Agent)</strong>는 별도의 독립된 맥락에서 작업을 위임받아 처리하는 하위 작업자다.
+스킬은 "무엇을 어떤 순서로, 어떤 규칙으로 채워 넣을지"를 정하고, 에이전트는 "많은 파일을 뒤지거나, 독립성이 필요한 일"을
+맡는다.</p>
+
+<table>
+<tr><th style="width:18%">구분</th><th>스킬 (Skill)</th><th>에이전트 (Agent)</th></tr>
+<tr><td>맥락</td><td>지금 이 대화 안에서 실행됨</td><td>별도의 독립된 대화(컨텍스트)에서 실행됨</td></tr>
+<tr><td>목적</td><td>반복되는 절차를 규칙대로 수행 (표 채우기, 검증 규칙 사전 명시 등)</td><td>맥락을 많이 잡아먹거나, 독립성이 필요한 작업 위임</td></tr>
+<tr><td>이 프로젝트의 예</td><td>목표값 정리, 몬테카를로 검증 설계, NHANES 데이터 규칙</td><td>논문 수치 추출, 데이터 구축, 코드 감사, 독립 재현</td></tr>
+</table>
+
+<h2>2. 스킬 (Skill) 3종</h2>
+
+<div class="card skill">
+<h4><span class="tag tag-skill">SKILL</span> paper-reproduction-ledger</h4>
+<div class="meta">위치: <span class="mono">.claude/skills/paper-reproduction-ledger/SKILL.md</span> (프로젝트 상위 폴더 공용)</div>
+<p>논문에 적힌 목표값과 우리가 계산한 값을 나란히 놓고 비교하는 <span class="mono">output/tables/ledger.csv</span> 원장을
+관리하는 절차. 열 구성(<span class="mono">source, table, row, col, target, ours, abs_diff, tolerance, status, cause, evidence</span>),
+허용오차 판정 규칙, <span class="mono">status</span> 값(match/mismatch/not reproduced/open), 그리고 불일치 원인 어휘
+(data version, variable definition, sample exclusion, survey weights, method difference, paper typo, our error)를 정의한다.
+목표값(target)은 한 번 적어두면 절대 수정하지 않는다는 규칙이 핵심이다.</p>
+<p><strong>이번 프로젝트에서:</strong> 논문의 Methods 절단점, Table 1~3, Fig. 1 수치 238개를 먼저 채우고(에이전트가 추출),
+분석이 끝난 뒤 <span class="mono">R/08_fill_ledger.R</span>이 우리 값을 채워 최종 240행(match 37 / mismatch 56 / open 146 /
+not reproduced 0)을 완성했다.</p>
+</div>
+
+<div class="card skill">
+<h4><span class="tag tag-skill">SKILL</span> monte-carlo-verification</h4>
+<div class="meta">위치: <span class="mono">.claude/skills/monte-carlo-verification/SKILL.md</span></div>
+<p>시뮬레이션으로 통계 방법이 이론대로 작동하는지 확인하는 절차. <strong>실행 전에</strong> 통과 기준을 먼저 못박고
+(99% 몬테카를로 구간 = 추정값 ± 2.576×SE), 반복 횟수는 우선 B=1000으로 빠르게 본 뒤 최종은 B=10000, 시드 고정 방식
+(순차용 legacy seed vs 병렬용 L'Ecuyer-CMRG stream)까지 규정한다.</p>
+<p><strong>이번 프로젝트에서:</strong> <span class="mono">R/01, R/02</span> (그리고 병렬화된 <span class="mono">R/11, R/12</span>)가
+이 절차를 따라 "여러 그룹 비교를 반복하면 1종 오류가 얼마나 부풀려지는지"와 "p-값이 정말 균일분포를 따르는지"를 검증했다.</p>
+</div>
+
+<div class="card skill">
+<h4><span class="tag tag-skill">SKILL</span> nhanes-survey-data</h4>
+<div class="meta">위치: <span class="mono">.claude/skills/nhanes-survey-data/SKILL.md</span></div>
+<p>NHANES(미국 국민건강영양조사) 데이터를 다룰 때 지켜야 할 규칙 모음: 파일 다운로드/캐싱 방법, 가중치 선택
+(가장 작은 하위표본 기준), 주기(cycle)를 합칠 때의 가중치 공식(1999-2002는 <span class="mono">WTMEC4YR×2/9</span>,
+2003-2016은 <span class="mono">WTMEC2YR×1/9</span>), <span class="mono">svydesign()</span>은 반드시 전체 파일로 만든 뒤
+<span class="mono">subset()</span>해야 한다는 규칙, 제외 흐름 기록 방법을 담고 있다.</p>
+<p><strong>이번 프로젝트에서:</strong> <span class="mono">nhanes-data-builder</span> 에이전트가 이 스킬을 미리 불러온 채로
+작업했다.</p>
+</div>
+
+<h2>3. 에이전트 (Agent) 4종</h2>
+
+<div class="card agent">
+<h4><span class="tag tag-agent">AGENT</span> paper-target-extractor</h4>
+<div class="meta">도구: Read, Glob, Write &nbsp;|&nbsp; 모델: Sonnet &nbsp;|&nbsp; 호출 시점: 매주 새 프로젝트 폴더가 만들어진 직후, 1회</div>
+<p>논문 PDF(<span class="mono">paper/</span>)를 읽고 보고된 모든 숫자와 재현에 필요한 방법론적 선택을 파일로 뽑아낸다.
+채팅에서 논문을 요약하지 않는 것이 규칙이다.</p>
+<p><strong>산출물:</strong> <span class="mono">output/tables/ledger.csv</span>(목표값 238행, ours는 공란),
+<span class="mono">output/tables/paper_methods.csv</span>(방법론 68행) &mdash; 이 두 파일이 이후 모든 분석의 기준이 됐다.</p>
+</div>
+
+<div class="card agent">
+<h4><span class="tag tag-agent">AGENT</span> nhanes-data-builder</h4>
+<div class="meta">도구: Read, Write, Edit, Glob, PowerShell &nbsp;|&nbsp; 모델: Sonnet &nbsp;|&nbsp; nhanes-survey-data 스킬을 미리 불러옴</div>
+<p>NHANES 원자료를 내려받아 분석용 데이터셋을 만든다. 1999-2016년 9개 주기, 50세 이상, CBC 지표(NLR/MLR/SIRI/SII),
+Rockwood 방식 36항목 노쇠지수(FI), 논문이 명시한 공변량까지 구축한다. 사용자에게 절대 되묻지 않고 결정을 스스로
+기록(decision log)하는 것이 원칙이다.</p>
+<p><strong>산출물:</strong> <span class="mono">data/processed/frailty_cbc_pooled.rds</span>,
+<span class="mono">frailty_cbc_analytic.rds</span>(N=14054), <span class="mono">frailty_cbc_svydesign.rds</span>,
+<span class="mono">output/tables/exclusion_flow.csv</span>, <span class="mono">build_decisions.csv</span>(33행) 등.</p>
+<div class="warn"><strong>이 단계에서 잡힌 실수:</strong> 1999-2002 가중치 공식을 잘못 지정한 것, "돈 관리 어려움" 항목이
+NHANES에 없다고 잘못 보고한 것(SAS 라벨이 아니라 문항 서두 문장을 읽은 오류), 비음주자 정의를 AND로 묶어 3646명을
+불필요하게 제외한 것 &mdash; 세 건 모두 원자료를 직접 대조해 잡아내고 지시를 정정했다.</div>
+</div>
+
+<div class="card agent">
+<h4><span class="tag tag-agent">AGENT</span> ai-error-auditor</h4>
+<div class="meta">도구: Read, Grep, Glob, PowerShell &nbsp;|&nbsp; 모델: Opus &nbsp;|&nbsp; 호출 시점: 결과를 원장에 넣거나 커밋하기 전, 매번</div>
+<p>다른 에이전트나 내가 짠 분석 코드를 코드 수정 없이 독립적으로 감사한다. 그 주 커리큘럼(<span class="mono">../docs/</span>의
+발표계획)에서 그 주의 "검증 과제" 항목을 체크리스트로 삼아, 실제로 코드를 재실행한 증거를 근거로 지적한다.</p>
+<p><strong>이번 프로젝트에서 잡은 것들:</strong> <span class="mono">R/01, R/02</span>의 통과율 집계 오류(의도적으로 깨지는
+대비 검정이 섞여 있던 것), 시각화가 점을 옆으로 밀어 곡선과의 비교를 왜곡한 것, <span class="mono">R/20</span>의
+의료이용 절단점(<span class="mono">HUQ050</span>)이 1999-2012년 구간에서 절대 채점되지 않던 버그, 2001-2002년
+검사실 변수명 누락, 자가건강/당뇨를 이분형이 아니라 서열형으로 채점한 오류, 이완기혈압 0과 GPAQ 거부/모름 코드가
+결측 처리되지 않은 것, 3단계 제외 인원 수 오기(13507→13659) 등.</p>
+</div>
+
+<div class="card agent">
+<h4><span class="tag tag-agent">AGENT</span> 독립 노쇠지수 재현용 general-purpose 에이전트 (1회성)</h4>
+<div class="meta">도구: 기본 Read/Write만 부여 &nbsp;|&nbsp; 호출 시점: 1회, R/20과 완전히 분리된 상태로</div>
+<p>"제작자와 검증자를 분리한다"는 원칙을 실제로 시험해 본 사례. <span class="mono">nhanes-data-builder</span>가 만든
+코드나 36항목 목록은 <strong>전혀 주지 않고</strong>, 오직 논문의 Methods 원문(노쇠지수 평가 부분), 원자료 파일 목록,
+저장 경로만 주고 완전히 새로 처음부터 노쇠지수를 계산하게 했다. 코드나 항목 목록을 흘리면 이 검증 자체가 무의미해지기
+때문에 격리가 핵심이었다.</p>
+<p><strong>산출물:</strong> <span class="mono">data/processed/fi_independent.csv</span> &rarr;
+<span class="mono">R/21_fi_independent.R</span>(원본 그대로 보존), <span class="mono">R/22_compare_fi.R</span>이
+두 버전을 비교(상관 r=0.999, FI&gt;0.3 일치율 99.7%, kappa=0.991).</p>
+<div class="warn"><strong>이 방법의 한계도 함께 드러났다:</strong> 완전히 독립적으로 만들었는데도 LDH/ALP 검사 변수명을
+똑같이 잘못 붙인 실수가 두 버전 모두에서 나왔다 &mdash; 논문 자체가 모호하게 서술한 부분이라 "독립적으로 다시 만들기"로는
+못 잡는 오류도 있다는 뜻이다.</div>
+</div>
+
+<h2>4. R 코드 파일 전체 역할표</h2>
+<p>번호는 실행 순서를 뜻하지 않고, 작업 단계(검증 시뮬레이션 0번대, 분석 0-9번대, 데이터 구축 20번대)를 나타낸다.
+모든 스크립트는 맨 위에서 <span class="mono">set.seed()</span>로 시드를 고정하고, 반복 작업은 <span class="mono">expand.grid()
++ Map()</span>으로 처리해 for문을 쓰지 않는다.</p>
+
+<table>
+<tr><th style="width:15%">파일</th><th style="width:22%">단계</th><th>역할</th></tr>
+<tr><td class="mono">00_sim_utils.R</td><td>검증 준비</td><td>시뮬레이션 공용 함수: 시드 생성(legacy/streams 두 방식), <span class="mono">future_Map</span> 병렬 그리드 실행기, 손으로 벡터화한 Jonckheere-Terpstra 검정(<span class="mono">jt_p()</span>).</td></tr>
+<tr><td class="mono">01_multiplicity_inflation.R</td><td>검증</td><td>같은 자료에 여러 번 검정을 반복하면 1종 오류율이 얼마나 부풀려지는지 몬테카를로로 확인 (B=1000판, 이후 v2로 대체).</td></tr>
+<tr><td class="mono">02_pvalue_uniformity.R</td><td>검증</td><td>귀무가설이 참일 때 p-값이 균일분포를 따르는지 확인 (히스토그램/QQ/KS 검정, B=1000판).</td></tr>
+<tr><td class="mono">04_quartiles_boxplots.R</td><td>분석</td><td>NLR/MLR/SIRI/SII 사분위 절단점을 논문 절단점과 우리 표본 절단점(type 7) 둘 다 계산, 마커별 FI 상자그림 생성.</td></tr>
+<tr><td class="mono">05_diagnostics.R</td><td>분석</td><td>마커별 <span class="mono">aov(fi_score ~ quartile)</span> 진단(등분산성 Levene/Bartlett, 정규성). 표본이 N≈14000이라 정규성 검정은 항상 기각된다는 점을 주석으로 명시.</td></tr>
+<tr><td class="mono">06_group_comparisons.R</td><td>분석</td><td>마커×검정 그리드로 ANOVA→TukeyHSD, Welch ANOVA→Games-Howell, Kruskal-Wallis→Dunn을 각각 맞춰 실행, Bonferroni/BH 보정까지.</td></tr>
+<tr><td class="mono">07_trend_tests.R</td><td>분석</td><td>선형 추세 + Jonckheere-Terpstra 검정, 논문 Table 2·3에 해당하는 로지스틱 모형(가중/비가중) 재현.</td></tr>
+<tr><td class="mono">08_fill_ledger.R</td><td>원장 완성</td><td>04~07의 결과값을 <span class="mono">ledger.csv</span>의 남은 226개 목표값 칸에 채우고, 불일치마다 원인(사례 제외/논문 오타/미해결)을 근거와 함께 기록.</td></tr>
+<tr><td class="mono">09_ai_error_healthcare.R</td><td>오류 사례</td><td>의료이용 절단점 버그의 전/후 노쇠 유병률 차이를 직접 재계산해 "AI 오류가 결과를 바꾼 사례"로 제시 (17.67% → 18.73%).</td></tr>
+<tr><td class="mono">10_verify_jt_fast.R</td><td>검증</td><td><span class="mono">jt_p()</span>가 <span class="mono">PMCMRplus::jonckheereTest</span>와 1500개 무작위 자료에서 완전히 같은 값을 내는지 증명(약 250배 빠름).</td></tr>
+<tr><td class="mono">11/12_..._v2.R</td><td>검증(최종)</td><td>01/02를 병렬화하고 B=10000으로 늘려 최종 실행한 버전 (<span class="mono">future.apply</span>, L'Ecuyer-CMRG 스트림 시드).</td></tr>
+<tr><td class="mono">13_verify_parallel.R</td><td>검증</td><td>병렬 실행 결과가 기존에 커밋된 순차 실행 결과와 완전히 동일한지 확인 (시드를 문자로 저장해 생긴 버그를 여기서 발견·수정).</td></tr>
+<tr><td class="mono">20_build_analytic_sample.R</td><td>데이터 구축</td><td>NHANES 9개 주기를 합쳐 CBC 지표와 36항목 노쇠지수, 공변량을 계산하고 분석표본(N=14054)을 확정하는 핵심 스크립트.</td></tr>
+<tr><td class="mono">21_fi_independent.R</td><td>독립 검증</td><td>격리된 에이전트가 처음부터 다시 짠 노쇠지수 계산 코드 (원본 그대로 보존, 경로 하드코딩 있음).</td></tr>
+<tr><td class="mono">22_compare_fi.R</td><td>독립 검증</td><td>20번의 노쇠지수와 21번의 노쇠지수를 항목 단위로 대조 — 상관, 일치율, 정의가 다른 항목을 모두 표로 정리.</td></tr>
+</table>
+
+<h2>5. 데이터·출력 파일 파이프라인</h2>
+<div class="flow">
+  <span class="box">data/raw/*.rds<br>(NHANES 원자료)</span><span class="arrow">&rarr;</span>
+  <span class="box">R/20</span><span class="arrow">&rarr;</span>
+  <span class="box">data/processed/<br>frailty_cbc_analytic.rds</span><span class="arrow">&rarr;</span>
+  <span class="box">R/04 ~ R/09</span><span class="arrow">&rarr;</span>
+  <span class="box">output/tables/*.csv<br>output/figures/*.png</span><span class="arrow">&rarr;</span>
+  <span class="box">R/08</span><span class="arrow">&rarr;</span>
+  <span class="box">ledger.csv (완성)</span><span class="arrow">&rarr;</span>
+  <span class="box">output/report/<br>week4_report(_ko).html</span>
+</div>
+
+<table>
+<tr><th style="width:30%">폴더</th><th>내용</th></tr>
+<tr><td class="mono">data/raw/</td><td>NHANES에서 내려받은 원본 <span class="mono">.rds</span> 파일 (git에는 포함하지 않음).</td></tr>
+<tr><td class="mono">data/processed/</td><td>병합·정제된 분석용 데이터셋, 설문설계 객체, 독립 재현 노쇠지수.</td></tr>
+<tr><td class="mono">output/tables/</td><td>모든 중간·최종 수치표. <span class="mono">ledger.csv</span>가 논문 대 재현 비교의 핵심 파일.</td></tr>
+<tr><td class="mono">output/figures/</td><td>상자그림, 진단 플롯 등 R 스크립트가 생성한 그림.</td></tr>
+<tr><td class="mono">output/report/</td><td>최종 HTML 보고서 (영문/국문) 및 이 구조 설명 문서.</td></tr>
+</table>
+
+<h2>6. 요약: 이 프로젝트가 보여준 원칙</h2>
+<p>스킬은 "어떻게 채울지"를 미리 정해 즉흥적인 판단을 줄이고, 에이전트는 "누가 만들고 누가 확인하는지"를 분리해
+같은 사람(같은 모델)이 코드를 짜고 스스로 검사하는 상황을 피했다. 실제로 <span class="mono">ai-error-auditor</span>가
+잡아낸 의료이용 버그처럼, 제작자와 별개인 시선이 있었기에 발견된 오류가 여러 건이었고, 반대로 독립 재현 시험에서는
+"완전히 분리해도 논문 자체가 모호하면 같은 실수를 반복할 수 있다"는 한계도 함께 확인됐다.</p>
+
+<footer>
+4주차 프로젝트 — Han et al., BMC Public Health 2024;24:3408 재현 &middot; 생성일 2026-09-28
+</footer>
+
+</body>
+</html>

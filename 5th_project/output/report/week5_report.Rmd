@@ -1,0 +1,270 @@
+---
+title: "Week 5: Categorical data and contingency tables"
+subtitle: "Reproducing Li et al., BMC Public Health 2023;23:1122 (NHANES 2009-2018)"
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+    self_contained: true
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+TAB <- function(x) file.path("..", "tables", x)
+FIG <- function(x) file.path("..", "figures", x)
+rd  <- function(x) read.csv(TAB(x), check.names = FALSE, stringsAsFactors = FALSE)
+kt  <- function(x, ...) knitr::kable(x, format = "html", row.names = FALSE, ...)
+f2  <- function(x, d = 2) formatC(x, format = "f", digits = d)
+pv  <- function(p) ifelse(is.na(p), "", ifelse(p < 0.001, formatC(p, format = "e", digits = 1),
+                                               formatC(p, format = "f", digits = 3)))
+ci  <- function(o, l, u) ifelse(is.na(l), f2(o), sprintf("%.2f (%.2f-%.2f)", o, l, u))
+big <- function(x) format(x, big.mark = ",")
+
+ledger <- read.csv(TAB("ledger.csv"), colClasses = "character")
+st   <- table(factor(ledger$status, levels = c("match", "mismatch", "not reproduced", "open")))
+cz   <- table(ledger$cause[ledger$status == "mismatch"])
+flow1 <- rd("exclusion_flow.csv"); flow2 <- rd("exclusion_flow_v2.csv")
+crude <- rd("02_crude_tests.csv")
+t1c  <- rd("20_table1_categorical.csv"); t1t <- rd("20_table1_tests.csv")
+t1n  <- rd("20_table1_continuous.csv")
+mod  <- rd("30_models.csv"); trd <- rd("30_ptrend.csv"); itr <- rd("30_pinteraction.csv")
+sens <- rd("31_sensitivity_htn_def.csv"); mcn <- rd("32_mcnemar.csv")
+smk  <- rd("33_smoking_adjusted.csv"); swp <- rd("34_swap_test.csv")
+fsz  <- rd("40_fisher_size_summary.csv"); fmc <- rd("40_fisher_size_mc.csv")
+orr  <- rd("41_or_vs_rr.csv"); ncs <- rd("41_noncollapsibility.csv")
+val  <- rd("13_validation_steps.csv"); res <- rd("50_pearson_residuals.csv")
+
+sex  <- t1c[t1c$variable == "Sex", ]
+n_an <- tail(flow2$n_remaining, 1)
+nonref <- mod[!is.na(mod$lo), ]
+swapped <- nonref$table == "Table 2" & nonref$model == 1 & nonref$exposure == "oral" &
+           nonref$stratum %in% c("nonsmoking", "smoking")
+d_or <- abs(nonref$or - nonref$paper_or)
+m3 <- orr[orr$model == 3, ]
+fis <- fsz[fsz$test == "fisher", ]; pea <- fsz[fsz$test == "pearson", ]
+g <- function(d, ...) { a <- list(...); for (k in names(a)) d <- d[d[[k]] == a[[k]], ]; d }
+STR_EN <- c(all = "All", nonsmoking = "Non-smoking", smoking = "Smoking", "age<45" = "Age < 45",
+            "age>=45" = "Age ≥ 45")
+sens_ci <- function(def, lv) { r <- g(sens, definition = def, stratum = "all", model = 3, level = lv)
+                               ci(r$or, r$lo, r$hi) }
+```
+
+<style>
+table { border-collapse: collapse; margin: 0.5em 0 1.2em; font-size: 0.9em; }
+th, td { border-bottom: 1px solid #ddd; padding: 3px 8px; text-align: right; }
+th { background: #f3f3f3; }
+td:first-child, th:first-child { text-align: left; }
+</style>
+
+## 1. Summary
+
+- **Ledger.** Of the paper's `r nrow(ledger)` reported numbers:
+    - `r st[["match"]]` match within rounding.
+    - `r st[["mismatch"]]` are mismatches with a proven cause: analytic-sample difference `r cz[["sample exclusion"]]`, variable definition `r cz[["variable definition"]]`, paper typo `r cz[["paper typo"]]`.
+    - `r st[["open"]]` are mismatches whose cause is not proven.
+- **Sample.** Our analytic sample has N = `r big(n_an)`; the paper has 21,800.
+- **ORs.** Tables 2/3 have `r nrow(nonref)` ORs. Leaving out the 6 swapped cells, `r sum(d_or[!swapped] <= 0.03 + 1e-9)` of `r sum(!swapped)` are within ±0.03 of the paper (median difference `r f2(median(d_or[!swapped]), 3)`, maximum `r f2(max(d_or[!swapped]), 2)`).
+- **Paper errors.**
+    - In Table 2, the oral-health Model 1 columns of the smoking and non-smoking strata are printed under the wrong stratum. Swapping them cuts the summed |difference| from `r f2(swp$absdiff_same[swp$level == "Poor"])` to `r f2(swp$absdiff_swapped[swp$level == "Poor"])` for Poor.
+    - The non-smoking Model 3 P-trend of 0.032 contradicts the paper's own CIs.
+- **Variable definitions identified.**
+    - Triglyceride is the non-fasting biochemistry-panel value (LBXSTR), not the fasting LBXTR.
+    - Alcohol "Missing" holds the lifetime abstainers.
+- **Not reproduced.** "All four interactions p < 0.001" holds only for periodontal disease × age.
+- **Task 1.** Fisher's exact test has actual size ≤ 0.05 at every π and n (maximum `r f2(max(fis$max_size), 3)`).
+- **Task 2.** In the same model, the OR exceeds the RR by up to `r f2(max(m3$or_over_rr))`× (median `r f2(median(m3$or_over_rr), 3)`×). The OR's excess over 1 is a median `r f2(median(m3$excess_ratio))`× the RR's.
+
+## 2. Verification tasks
+
+### Task 1: actual size of Fisher's exact test
+
+Two independent binomials (n per group, common probability π), H0 true.
+
+- **Exact size.** A Fisher p-value depends only on (x₁, x₂), not on π. So the rejection region is computed once per n, and the size for each π is a sum of binomial probabilities. This gives the **exact** size.
+- **Monte Carlo cross-check** (B = 10,000, 99% interval): `r sum(fmc$pass)` / `r nrow(fmc)` conditions pass (expected false fails `r f2(0.01 * nrow(fmc))`).
+
+![](`r FIG("40_fisher_size_curve.png")`)
+
+```{r}
+w <- reshape(fsz[, c("n", "test", "max_size")], idvar = "n", timevar = "test", direction = "wide")
+names(w) <- sub("max_size.", "", names(w))
+kt(data.frame(`n per group` = w$n, `Fisher` = f2(w$fisher, 4), `Fisher mid-p` = f2(w$midp, 4),
+              `Pearson` = f2(w$pearson, 4), `Yates` = f2(w$yates, 4), check.names = FALSE),
+   caption = "Maximum actual size over the π grid 0.01-0.99 (nominal 0.05)")
+```
+
+- **Fisher and Yates** stay below 0.05 everywhere, usually well below.
+- **Pearson** exceeds 0.05 at small n (`r f2(pea$max_size[pea$n == 5], 3)` at n = 5).
+- **Mid-p** is the closest to the nominal level.
+
+The statistic is discrete, so no test can hit α exactly. Tests split into conservative (Fisher) and liberal (Pearson) ones. With cell counts in the hundreds, as in this paper, the difference disappears, so the paper's use of χ² is not a problem in itself.
+
+### Task 2: how much the OR overstates the RR when the outcome is common
+
+For every contrast in Tables 2/3, I fitted a logistic OR and a modified-Poisson (log-link) RR with the same covariates. The baseline prevalence P₀ comes from each contrast's own reference group.
+
+![](`r FIG("41_or_rr_curve.png")`)
+
+```{r}
+x <- m3[m3$level %in% c("Poor", "Yes"), ]
+kt(data.frame(`Stratum` = STR_EN[x$stratum], `Exposure` = ifelse(x$exposure == "oral", "Oral health Poor", "Periodontal disease"),
+              `P0` = f2(x$p0, 3), `OR` = ci(x$or, x$or_lo, x$or_hi), `RR` = ci(x$rr, x$rr_lo, x$rr_hi),
+              `OR/RR` = f2(x$or_over_rr, 3), `Zhang-Yu RR` = f2(x$rr_zhang_yu, 3), check.names = FALSE),
+   caption = "Model 3, strongest contrasts (weighted, 95% CI)")
+```
+
+- **P₀ and effect size.** The overstatement grows with P₀, but effect size matters too. Non-smoking Poor (P₀ = `r f2(g(m3, stratum = "nonsmoking", level = "Poor")$p0)`) has a larger OR/RR than age ≥ 45 Poor (P₀ = `r f2(g(m3, stratum = "age>=45", level = "Poor")$p0)`).
+- **Zhang-Yu conversion.** Converting an adjusted OR this way usually overshoots the directly estimated RR. The formula treats a conditional OR as if it were marginal.
+
+![](`r FIG("41_forest_or_rr.png")`)
+
+**Non-collapsibility.** A covariate independent of the exposure (no confounding) still moves the OR if it predicts the outcome.
+
+- Exact computation: with a conditional OR of 2, the marginal OR falls to `r f2(min(ncs$logistic_or_marginal))` as the covariate's effect grows.
+- The marginal RR of a log-linear model stays exactly 1.5.
+- So "the OR changed after adjustment, therefore there was confounding" is not a valid inference for ORs.
+- In our data, the change from Model 1 to Model 3 is consistently larger on the OR scale than on the RR scale (all, Poor: OR `r f2(g(m3, stratum = "all", level = "Poor")$or_change_m1_m3, 3)`, RR `r f2(g(m3, stratum = "all", level = "Poor")$rr_change_m1_m3, 3)`).
+
+![](`r FIG("41_noncollapsibility.png")`)
+
+## 3. Data
+
+- **Sample.** NHANES 2009-2018 (cycles F-J), adults ≥ 30.
+- **Blood pressure.** Auscultatory BPX only; the 2017-18 oscillometric BPXO was not used. Diastolic 0 was set to missing before averaging.
+- **Design.** Weights are WTMEC2YR/5. The design was built on all 49,693 participants and then `subset()` to the analytic domain.
+
+```{r}
+kt(data.frame(`Step` = c("Age ≥ 30", "No blood pressure removed", "Missing smoking/oral/perio removed", "Final"),
+  `v1 removed` = c(big(flow1$n_removed[2]), big(flow1$n_removed[3]), big(flow1$n_removed[4]), ""),
+  `v2 removed` = c(big(flow2$n_removed[2]), big(flow2$n_removed[3]), big(flow2$n_removed[4]), ""),
+  `v2 remaining` = big(c(flow2$n_remaining[2:4], n_an)),
+  `Paper` = c("", "19,398", "1,090", "21,800"), check.names = FALSE),
+  caption = "Exclusion flow (v2 = after the audit fix, section 6)")
+```
+
+- **Exclusion counts (A1).** The paper's 19,398 + 1,090 + 21,800 = 42,288, which is not the 2009-2018 population aged ≥ 30.
+- **Pointblank validation.** Before any analysis, pointblank checked the sample:
+    - All `r sum(val$type == "hard")` hard rules pass.
+    - The `r sum(val$warn)` warnings are the expected ones (N, case count, 18 with unknown HTN).
+    - Eight deliberate corruptions of the data each stopped on their own rule.
+
+## 4. Table 1: contingency tables and the Rao-Scott correction
+
+```{r}
+sel <- t1c$variable %in% c("Oral", "Periodontal", "Smoking", "Alcohol", "Sleep")
+x <- t1c[sel, ]
+kt(data.frame(`Variable` = x$variable, `Level` = x$level,
+  `Ours % (non-HTN / HTN)` = sprintf("%.2f / %.2f", x$pct_non, x$pct_htn),
+  `Paper %` = ifelse(is.na(x$paper_pct_non), "", sprintf("%.2f / %.2f", x$paper_pct_non, x$paper_pct_htn)),
+  check.names = FALSE), caption = "Weighted column % (selected variables)")
+```
+
+- **Oral health, periodontal disease and smoking** match within 0.3 percentage points.
+- **Alcohol.** "No drinks" and "Missing" each differ by 20+ points. Their sum in the non-HTN group is `r f2(sum(g(t1c, variable = "Alcohol", level = "No drinks")$pct_non, g(t1c, variable = "Alcohol", level = "Missing")$pct_non))`%, close to the paper's 3.07 + 26.48 = 29.55%. The paper evidently filed lifetime abstainers (a skip-pattern NA) as missing.
+- **Sleep.** The paper's "< 7 h" (68%) resembles our "7-9 h", and vice versa. The labels look swapped, but this is not proven.
+- **Physical activity and diabetes** are left open: their definitions are unknown.
+
+```{r}
+x <- t1n[t1n$variable %in% c("Age", "Triglyceride", "HbA1c"), ]
+kt(data.frame(`Variable` = x$variable, `Weight / variable` = x$weight,
+  `Ours mean (SE)` = sprintf("%.2f (%.2f) / %.2f (%.2f)", x$mean_non, x$se_non, x$mean_htn, x$se_htn),
+  `Paper` = sprintf("%.2f (%.2f) / %.2f (%.2f)", x$paper_mean_non, x$paper_se_non, x$paper_mean_htn, x$paper_se_htn),
+  check.names = FALSE), caption = "Continuous (non-HTN / HTN). Triglyceride matches with LBXSTR")
+```
+
+```{r}
+x <- t1t[t1t$variable %in% c("Sex", "Periodontal", "Oral"), ]
+kt(data.frame(`Variable` = x$variable, `Method` = x$method, `Statistic` = f2(x$statistic),
+  `df` = x$df, `p` = pv(x$p), `Paper p` = x$paper_p, check.names = FALSE),
+  caption = "Four chi-square tests")
+```
+
+**Why the Rao-Scott correction matters.**
+
+- Feeding weighted counts to `chisq.test` treats the population (about 175 million) as the sample size. The statistic runs into the hundreds of thousands and p collapses to 0.
+- Rao-Scott divides the statistic by the design effect, bringing it back to the scale the design supports.
+- The first-order correction is SAS `PROC SURVEYFREQ`'s default and R's `svychisq(statistic = "Chisq")`.
+- The paper's only p above 0.001, sex (0.015), is not reproduced by any variant (first-order `r pv(g(t1t, variable = "Sex", method = "rao_scott_1")$p)`). With different samples, the data cannot tell which test the paper used.
+
+![](`r FIG("50_mosaic_oral_htn.png")`)
+
+![](`r FIG("50_pearson_residuals.png")`)
+
+The Pearson residual of the Poor × HTN cell is +`r f2(g(res, stratum = "Non-smoking", oral = "Poor", htn = "HTN")$resid, 1)` among non-smokers and +`r f2(g(res, stratum = "Smoking", oral = "Poor", htn = "HTN")$resid, 1)` among smokers. The association is stronger in non-smokers, the same direction as the column swap in section 5.
+
+## 5. Tables 2/3: adjusted odds ratios
+
+`svyglm(quasibinomial)` with Models 1-3 exactly as each table's footnote.
+
+- Table 2 Models 2/3 include CVD, diabetes, sodium, fat and the labs.
+- Table 3 Model 1 has no age.
+- Missing covariates: a Missing category for factors, mean imputation plus an indicator for continuous variables.
+
+![](`r FIG("50_forest_paper_vs_ours.png")`)
+
+```{r}
+kt(data.frame(`Level` = swp$level,
+  `Ours non-smoking` = f2(swp$ours_nonsmoking), `Ours smoking` = f2(swp$ours_smoking),
+  `Paper non-smoking` = f2(swp$paper_nonsmoking), `Paper smoking` = f2(swp$paper_smoking),
+  `Σ|diff|, same stratum` = f2(swp$absdiff_same), `Σ|diff|, swapped` = f2(swp$absdiff_swapped),
+  check.names = FALSE), caption = "Table 2 oral health Model 1: swap test")
+```
+
+The paper's own numbers show the swap too.
+
+- Crude ORs from its Cases/total are larger in non-smokers (Poor `r f2(g(crude, exposure = "oral", stratum = "nonsmoking", contrast = "Poor vs Excellent/Very good", method = "or_woolf")$estimate)`) than in smokers (`r f2(g(crude, exposure = "oral", stratum = "smoking", contrast = "Poor vs Excellent/Very good", method = "or_woolf")$estimate)`).
+- The printed Model 1 has the reverse order.
+- Models 2/3, periodontal disease and Cases/total in the same table are not swapped.
+
+**P-trend.**
+
+- The paper's non-smoking Model 3 value of 0.032 is incompatible with the Wald p implied by its own CIs: 4×10⁻⁶ for Fair and 4×10⁻⁴ for Poor (A14). Ours is `r pv(g(trd, table = "Table 2", exposure = "oral", stratum = "nonsmoking", model = 3)$p_trend)`.
+- All 12 periodontal P-trends equal the Wald p implied by the CI, so the paper's binary P-trend is a Wald p (A7).
+
+```{r}
+kt(data.frame(`Table` = itr$table, `Interaction` = paste(itr$exposure, "×", itr$stratifier),
+  `Model` = itr$model, `F` = f2(itr$F), `df` = itr$df, `p` = pv(itr$p), `Paper` = itr$paper_p,
+  check.names = FALSE), caption = "P-interaction (Wald test of the product terms)")
+```
+
+**Smoking adjustment (A13).**
+
+- Smoking is listed among the covariates in the methods but is absent from the Table 2 footnote.
+- Adding it lowers Model 3 Poor from `r f2(g(smk, exposure = "oral", model = 3, level = "Poor")$or_footnote, 3)` to `r f2(g(smk, exposure = "oral", model = 3, level = "Poor")$or_plus_smoking, 3)`.
+- The paper's 1.48 matches the footnote model without smoking.
+
+**Hypertension definitions.** As the paper states:
+
+- Poor oral health is associated with both definitions: measured `r sens_ci("measured", "Poor")`, diagnosed `r sens_ci("diagnosed", "Poor")`.
+- Periodontal disease is associated only with the diagnosed one: measured `r f2(g(sens, definition = "measured", stratum = "all", model = 3, level = "Yes")$or)`, diagnosed `r f2(g(sens, definition = "diagnosed", stratum = "all", model = 3, level = "Yes")$or)`.
+
+**McNemar.** Each person is classified under both definitions, which gives a paired table.
+
+- The discordant cells are b = `r big(mcn$b[1])` (high BP, never diagnosed) and c = `r big(mcn$c[1])` (diagnosed or treated, BP now below 140/90).
+- The unweighted McNemar χ² is `r f2(g(mcn, group = "all", method = "mcnemar")$statistic, 1)`, while the design-based paired test gives t² = `r f2(g(mcn, group = "all", method = "survey_paired")$statistic^2, 1)`.
+- This is the same design effect as Rao-Scott in Table 1.
+
+## 6. What the audit changed
+
+Before results went into the ledger, the ai-error-auditor reviewed the code independently.
+
+- **Finding.** 59 people whose DBP readings were all 0 had been dropped as "no blood pressure" although they have SBP.
+- **Fix.** `R/11_build_analytic_sample_v2.R` (see `CHANGES_v2.md`).
+- **Effect.** N went from 21,417 to `r big(n_an)`. ORs moved by at most 0.006, and no conclusion changed.
+- **Ledger tolerance.** The ledger keeps the skill's tolerance (half a unit of the last digit shown). OR rows within the plan's ±0.03 are flagged in the evidence column.
+
+## 7. Ledger
+
+```{r}
+kt(data.frame(`Status` = names(st), `Rows` = as.integer(st), check.names = FALSE))
+op <- ledger[ledger$status == "open", ]
+kt(setNames(as.data.frame(table(op$table)), c("Table", "Rows")), caption = "Where the open rows are")
+```
+
+The open rows are mostly:
+
+- Table 1 variables with unknown definitions: sleep, physical activity, diabetes, the BMI extremes, CVD missing.
+- The P-interactions.
+- Some P-trends.
+
+Rows without a proven cause are left as they are: not adjusted, relabelled or dropped.

@@ -1,0 +1,1060 @@
+---
+title: "t 검정, 비모수 검정, 그리고 큰 연구 — Fagerland (2012) 재현"
+subtitle: "3주차 과제 · 제1종 오류율 모의실험"
+author: "tjdgns1502"
+date: "`r format(Sys.Date(), '%Y-%m-%d')`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float:
+      collapsed: false
+    number_sections: true
+    theme: flatly
+    highlight: tango
+    df_print: kable
+    self_contained: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE,
+                      fig.align = "center", out.width = "100%")
+library(knitr)
+RES <- "results"; FIG <- "figs"
+rd <- function(f) readRDS(file.path(RES, f))
+d00 <- rd("00_utils_validation.rds")
+d01 <- rd("01_satterthwaite.rds")
+d02 <- rd("02_distributions.rds")
+d03 <- rd("03_hetero_normal.rds")
+d04 <- rd("04_main_grid.rds")
+d04b <- rd("04b_smalln_wmw_variant.rds")
+d04s <- rd("04_main_grid_sensB.rds")
+d05 <- rd("05_counterexamples.rds")
+d06 <- rd("06_permutation_effectsize.rds")
+d07 <- rd("07_nhanes.rds")
+d08 <- rd("08_figures.rds")
+sig <- function(x, d = 3) format(signif(x, d), scientific = TRUE)
+pc  <- function(x, d = 1) sprintf(paste0("%.", d, "f%%"), 100 * x)
+NS <- d04$ns; RATIOS <- d04$ratios; SKEWS <- d04$skews
+se_pp <- 100 * sqrt(0.05 * 0.95 / d04$B)
+```
+
+# 요약 {-}
+
+> **한 문장.** 평균도 같고 중앙값도 같은 두 치우친 분포에서 표본을 뽑아
+> 표준편차만 10% 다르게 두면, Welch t 검정의 기각률은 어떤 표본크기에서도
+> 5%에 머물지만 Wilcoxon 순위합(WMW) 검정의 기각률은 표본이 커질수록
+> 올라가 각 군 1,000명에서 감마 분포 쌍의 경우 **`r sprintf("%.1f%%", 100*d04$results$wmw[d04$results$family=="gamma" & d04$results$n==1000 & d04$results$skew==3 & d04$results$sd_ratio==1.10])`**에
+> 이른다(논문 99%). 이것은 WMW의 오류가 아니라 **자기 귀무가설
+> P(X < Y) = 0.5에 대한 검정력**이며, 틀린 것은 그 p값을 "중앙값이 다르다"로
+> 번역하는 해석이다.
+
+이 보고서에서 **가장 중요한 세 가지 발견**은 다음과 같다.
+
+1. **논문의 분포 구성은 중앙값이 같지 않다.** 논문은 "평균·중앙값·왜도가
+   같고 표준편차만 다르다"고 서술하지만 이는 모수 3개에 제약 4개로 불가능하다.
+   {평균, 왜도, 표준편차비}를 정확히 맞추고 중앙값을 포기한 구성
+   $Y = \mu_X + r(X-\mu_X)$ 이 논문의 표 2·표 4·표 5를 **몬테카를로 오차 범위 안에서
+   전부 재현**한다(§5.3). 중앙값을 맞추는 구성은 재현하지 못한다.
+2. **논문은 `wilcox.test()`의 정확검정 자동 전환을 그대로 썼다.** 과제가
+   강제한 `exact = FALSE, correct = FALSE`는 n = 10에서 기각률을 1.0–1.5%p
+   부풀리며, 정확검정으로 바꾸면 논문 값과 **0.02%p 이내**로 일치한다(§5.4).
+3. **편이 감마족은 왜도 3.75에서 뒤집힌다.** 평균·중앙값을 고정하면 도달
+   가능한 표준편차가 형상모수 $k^{*} = `r round(d02$gamma_kmin,4)`$
+   (왜도 `r round(d02$gamma_boundary_skew,3)`)에서 최소가 되므로, 왜도 4인
+   감마 기준분포는 이 경계를 넘어 있어 Y가 **덜** 치우치는 대신 **더**
+   치우치고 P(X<Y)가 0.5의 반대편으로 넘어간다(§4.2).
+
+---
+
+# 논문이 말하는 역설
+
+Fagerland는 서로 반대 방향으로 간 두 추세를 지적한다. 고영향 의학저널의
+연구 표본크기는 1970년대 30명대에서 2000년대 3,000명대로 약 100배 커졌는데,
+같은 기간 t 검정 사용 비율은 44% → 26%로 줄고 비모수 검정은 11% → 27%로
+늘었다.
+
+이것이 역설인 이유는 두 검정이 표본크기에 정반대로 반응하기 때문이다.
+
+- **t 검정**은 중심극한정리 덕분에 표본이 커질수록 정규성 위반에 **강해진다**.
+- **WMW 검정**은 표본이 커질수록 위치 이외의 분포 차이(퍼짐, 모양)를
+  잡아내는 능력이 **커진다**.
+
+연구가 커질수록 비모수 검정의 비율은 줄어야 맞는데 실제로는 늘었다.
+
+## 실험의 논리 구조
+
+평균과 중앙값을 **같게** 만들면 "평균 차이 없음"과 "중앙값 차이 없음"이라는
+두 귀무가설이 모두 참이다. 이 상태에서 일어나는 기각은 그 두 가설에 대해서는
+제1종 오류다. 그런데 표준편차를 조금 다르게 두면 WMW의 **진짜** 귀무가설
+$P(X<Y) = 0.5$ 는 거짓이 된다. 그래서 WMW의 높은 기각률은 오류가 아니라
+검정력이다.
+
+```{r fig.cap="그림 5. 표본크기에 따른 기각률. 평균과 중앙값이 모두 정확히 같고 표준편차만 10% 다른 쌍. Welch는 어느 표본크기에서도 5%에 머물고 WMW는 단조 증가한다. ×는 Fagerland가 발표한 값이다."}
+include_graphics(file.path(FIG, "fig5_rejection_vs_n.png"))
+```
+
+---
+
+# 통계 — 비교하는 검정들
+
+| 검정 | 귀무가설 | 이 과제에서의 역할 |
+|---|---|---|
+| Student t (합동분산) | $\mu_1 = \mu_2$ (등분산 가정) | 등분산 위반의 피해자. 비교 기준 |
+| **Welch t** | $\mu_1 = \mu_2$ (등분산 가정 없음) | **논문이 "t 검정"이라 부른 것.** 기본 검정 |
+| 대응 t | $\mu_d = 0$ | 짝 구조의 정보 이득을 보이는 용도 |
+| **WMW 순위합** | $P(X<Y) = 0.5$ | **역설의 주인공** |
+| Wilcoxon 부호순위 | 짝 차이 분포의 대칭 중심 = 0 | 대응 자료용. 순위합과 **다른** 검정 |
+| 순열검정 | 두 군의 분포가 동일(교환가능) | "비모수면 안전하다"는 통념의 반례 |
+
+**`t.test()`의 `var.equal` 기본값은 `FALSE`** 이며 이 과제는 의도적으로 그것을
+사용한다. Student t는 비교 목적으로만 `var.equal = TRUE` 를 명시해 호출한다.
+
+## 빠른 구현과 그 검증
+
+448칸 × 10,000회 = 448만 번의 검정을 수행해야 하므로 `t.test()` /
+`wilcox.test()`의 formula 처리·클래스 생성 비용을 피하고 통계량을 직접
+계산했다(`R/00_utils.R`). 그 대신 **`r d00$n_designs`개의 무작위 설계**
+(불균등 n, 불균등 SD, 그중 `r d00$n_tied_designs`개는 동점이 많도록 반올림)
+에서 base R 함수와 일치하는지 검증했다.
+
+```{r}
+kable(data.frame(
+  `검증 항목` = c("welch_p vs t.test()", "welch_df vs t.test()$parameter",
+                  "student_p vs t.test(var.equal=TRUE)",
+                  "wmw_p vs wilcox.test(exact=F, correct=F)",
+                  "U 통계량 vs wilcox.test()$statistic",
+                  "Cliff's delta: 순위식 vs 쌍 전수계산",
+                  "CLES vs 정의식", "CLES = (1 - delta)/2"),
+  `최대 절대 오차` = sig(d00$max_abs_diff[c("welch_p","welch_df","student_p",
+                                            "wmw_p","wmw_U","cliff_def",
+                                            "cles_def","cles_link")]),
+  check.names = FALSE),
+  caption = sprintf("표 1. 빠른 구현의 정확성 (설계 %d개). 기준 1e-10을 모두 통과. 최대값은 welch_df의 %s.",
+                    d00$n_designs, sig(max(d00$max_abs_diff))))
+```
+
+동점 보정 분산을 쓴 `wmw_p()`가 `wilcox.test(exact = FALSE, correct = FALSE)`와
+`r sig(d00$max_abs_diff[["wmw_p"]])` 이내로 일치하므로, 격자 실험에서 쓰는 빠른
+함수는 base R과 같은 검정이다.
+
+---
+
+# 검증 과제 ① — Satterthwaite 자유도
+
+## 왜 자유도가 소수인가
+
+Welch 통계량의 분모 안에 있는 $s_1^2/n_1 + s_2^2/n_2$ 는 **자유도가 다른 두
+$\chi^2$ 변수의 가중합**이다. 가중합은 일반적으로 $\chi^2$ 분포를 따르지
+않으므로 정확한 자유도가 존재하지 않는다. Satterthwaite의 아이디어는 이
+가중합을 $c \cdot \chi^2_\nu/\nu$ 라는 **하나의** 척도화된 $\chi^2$ 로
+근사하되, 근사 분포의 **평균과 분산이 원래 것과 같아지도록** $c$ 와 $\nu$ 를
+정하는 것이다(적률 적합, moment matching). 평균을 맞추는 조건과 분산을 맞추는
+조건 두 개를 연립해 풀면 $\nu$ 가 표본분산들의 연속함수로 나오고, 연속함수
+값이 정수일 이유는 없으므로 **$\nu$ 는 일반적으로 소수**가 된다. 정수 자유도는
+$s_1^2/n_1$ 과 $s_2^2/n_2$ 의 비가 특정한 값일 때 우연히 나오는 특수해일 뿐이다.
+
+$$\nu = \frac{\left(\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}\right)^2}
+{\dfrac{(s_1^2/n_1)^2}{n_1-1} + \dfrac{(s_2^2/n_2)^2}{n_2-1}}$$
+
+## 자유도와 p값 모두 일치하는가
+
+```{r}
+kable(data.frame(
+  항목 = c(sprintf("무작위 설계 %d개에서 max |nu_mine - nu_R|", d01$n_designs),
+           "최대 상대 오차 (자유도)",
+           sprintf("무작위 설계 %d개에서 max |p_mine - p_R|", d01$n_designs)),
+  값 = c(sig(d01$max_abs_df_error), sig(d01$max_rel_df_error),
+         sig(d01$max_abs_p_error)),
+  check.names = FALSE),
+  caption = "표 2. Satterthwaite 구현은 자유도뿐 아니라 p값까지 t.test()와 일치한다.")
+```
+
+## 반드시 함께 검증할 성질 (모두 코드로 확인)
+
+```{r}
+dom2 <- d01$dominance_group2; dom1 <- d01$dominance_group1
+kable(data.frame(
+  성질 = c("범위 min(n1,n2)-1 <= nu <= n1+n2-2",
+           "  (극단 설계 20,000건 스트레스 테스트)",
+           "한쪽 분산이 압도 -> nu -> 그 군의 n-1 (군2, n2=40)",
+           "한쪽 분산이 압도 -> nu -> 그 군의 n-1 (군1, n1=12)",
+           "n1=n2 이고 s1=s2 -> nu = n1+n2-2",
+           "  같은 경우 Welch p == Student p"),
+  결과 = c(ifelse(d01$range_ok, "TRUE", "FALSE"),
+           ifelse(d01$stress_ok, "TRUE", "FALSE"),
+           sprintf("분산비 1e8 에서 nu = %.4f (극한 %d)",
+                   dom2$nu[nrow(dom2)], dom2$limit[1]),
+           sprintf("분산비 1e8 에서 nu = %.4f (극한 %d)",
+                   dom1$nu[nrow(dom1)], dom1$limit[1]),
+           sprintf("max |nu - (n1+n2-2)| = %s", sig(d01$equal_case_df_error)),
+           sprintf("max |p_W - p_S| = %s", sig(d01$equal_case_p_error))),
+  check.names = FALSE),
+  caption = "표 3. nu의 네 가지 구조적 성질. 모두 산문이 아니라 코드로 확인했다.")
+```
+
+상한이 **정확히 도달 가능**하다는 점은 대수적으로도 확인된다. $a = s_1^2/n_1$,
+$b = s_2^2/n_2$ 라 두고 $t = a/(a+b)$ 로 쓰면
+$\nu = 1/\{t^2/(n_1-1) + (1-t)^2/(n_2-1)\}$ 이고, 이를 최대화하는
+$t = (n_1-1)/(n_1+n_2-2)$ 에서 $\nu = n_1+n_2-2$ 가 된다. 아래 표본분포에서
+최댓값이 정확히 38.000인 것이 이 때문이다.
+
+## $\nu$ 는 확률변수다
+
+```{r fig.cap=sprintf("그림 8. 같은 설계(n1=%d, SD %g; n2=%d, SD %g)를 %s번 반복해 얻은 Satterthwaite 자유도의 표본분포. 설계가 고정되어 있어도 표본분산에 의존하므로 자유도는 표본마다 달라진다.", d01$design$n1, d01$design$sd1, d01$design$n2, d01$design$sd2, format(length(d01$nu_draws), big.mark=","))}
+include_graphics(file.path(FIG, "fig8_satterthwaite_df.png"))
+```
+
+```{r}
+ns_ <- d01$nu_summary
+kable(data.frame(
+  통계량 = c("최솟값", "5% 분위수", "중앙값", "평균", "95% 분위수", "최댓값",
+             "표준편차", "이론적 하한 min(n1,n2)-1", "이론적 상한 n1+n2-2",
+             "모분산에서 계산한 nu", "비정수 비율"),
+  값 = c(sprintf("%.3f", ns_[c("min","q05","median","mean","q95","max","sd")]),
+         sprintf("%.0f", ns_[c("lower_bound","upper_bound")]),
+         sprintf("%.3f", ns_[["nu_at_truth"]]),
+         pc(d01$frac_noninteger, 1)),
+  check.names = FALSE),
+  caption = "표 4. nu의 표본분포 요약. 관측 범위가 이론적 하한/상한 안에 있고 상한 38은 실제로 도달한다.")
+```
+
+---
+
+# 자료 구성 — 제약 4개 대 모수 3개
+
+## 문제의 핵심
+
+논문은 두 분포가 "평균·중앙값·왜도가 같고 표준편차만 다르다"고 서술한다.
+맞춰야 할 값을 세면 **네 개**(평균, 중앙값, 표준편차, 왜도)다. 그런데
+
+- 로그정규 = 모수 2개 ($\mu, \sigma$)
+- 편이 로그정규 $\gamma + e^{\mu+\sigma Z}$ = 모수 **3개**
+- 감마 = 모수 2개, 편이 감마 $\gamma + \mathrm{Gamma}(k,\theta)$ = 모수 **3개**
+
+이므로 **세 모수 족 안에서 네 조건을 동시에 만족시킬 수 없다.** 이는 논문
+본문만으로 정확한 구성이 복원되지 않는 지점이며, 재현 보고서에서 반드시 짚어야
+하는 부분이다.
+
+**주 구성(main)에서 내린 결정:** 평균·중앙값·표준편차비 세 개를 정확히 맞추고
+**왜도는 결과로 받아들인다.** 이유는 논문의 논증 구조가 요구하는 것이
+"평균 동일 **그리고** 중앙값 동일"이기 때문이다. 이 둘이 정확히 성립해야
+"기각은 전부 제1종 오류"라는 문장이 성립한다.
+
+### 해가 1차원 근찾기로 환원된다
+
+편이 로그정규에서 $A = e^\mu$, $k = e^{\sigma^2/2}$ 로 두면
+
+$$\text{중앙값: } \gamma + A = m_e, \quad
+\text{평균: } \gamma + Ak = m, \quad
+\text{표준편차: } Ak\sqrt{k^2-1} = s$$
+
+앞의 두 식에서 $A = (m - m_e)/(k-1)$ 이 나오므로 남는 것은 $k$ 에 대한 **한 개**의
+방정식
+
+$$(m - m_e)\, k \sqrt{\frac{k+1}{k-1}} = s$$
+
+이다. 즉 `optim`이 아니라 `uniroot` 로 풀린다. 좌변은
+$k = \varphi = (1+\sqrt5)/2$ (황금비)에서 최소가 되므로 근이 **둘** 있고,
+비율 → 1 일 때 기준분포 자신으로 수렴하는 가지인 $k \in (1, \varphi)$ 를 택한다.
+감마도 같은 구조이며 중앙값 조건에 `qgamma` 가 들어간다.
+
+## 도달 가능한 표준편차의 전환점 — 감마족은 왜도 3.75에서 뒤집힌다
+
+```{r}
+kable(data.frame(
+  분포족 = c("감마", "로그정규"),
+  `전환점 형상모수` = c(sprintf("k* = %.5f", d02$gamma_kmin),
+                        sprintf("k = phi = %.5f", (1+sqrt(5))/2)),
+  `전환점 왜도` = c(sprintf("%.4f", d02$gamma_boundary_skew),
+                    sprintf("%.4f", d02$lnorm_boundary_skew)),
+  `과제의 왜도 1~4` = c("왜도 4는 경계를 **넘음**", "네 수준 모두 경계 안"),
+  check.names = FALSE),
+  caption = "표 5. 평균·중앙값을 고정했을 때 도달 가능한 표준편차가 최소가 되는 지점.")
+```
+
+기준분포가 전환점보다 **덜** 치우쳐 있으면(감마 왜도 1·2·3, 로그정규 전부) Y를
+넓히려면 형상모수를 키워야 하고 따라서 Y가 **덜** 치우친다. 이것이 과제 안내서가
+말한 "평균과 중앙값을 고정하면 덜 치우친 쪽이 더 큰 표준편차를 갖는다"의
+정확한 내용이다. 평균과 중앙값의 간격은 고정인데 왜도가 낮으면 그 간격을 만들기
+위해 퍼짐이 더 커져야 하기 때문이다.
+
+그런데 **감마 왜도 4**($k = 0.25$)는 전환점 $k^{*} = `r round(d02$gamma_kmin,4)`$
+보다 작은 쪽에 있다. 도달 가능한 최소 표준편차보다 겨우 0.44% 위에 놓인
+칼날 위의 위치다. 그 결과 Y를 넓히면 오히려 **더** 치우치고
+($`r sprintf("%.2f", d02$table2$skew_Y[d02$table2$family=="gamma" & d02$table2$skew_X==4 & d02$table2$sd_ratio==1.05])`$ → $`r sprintf("%.2f", d02$table2$skew_Y[d02$table2$family=="gamma" & d02$table2$skew_X==4 & d02$table2$sd_ratio==1.50])`$),
+$P(X<Y)$ 가 0.5의 **반대편**으로 넘어간다. 이는 코딩 오류가 아니라 세 모수 족의
+수학적 한계이며, 주 구성으로는 논문의 감마 왜도 4 열을 재현할 수 없음을 뜻한다.
+
+## 64개 쌍의 수렴 잔차 — 하나도 숨기지 않는다
+
+```{r}
+ft <- d02$fit_table
+kable(data.frame(
+  항목 = c("근찾기 잔차 |h(k) - s|", "|평균(Y) - 평균(X)|",
+           "|중앙값(Y) - 중앙값(X)|", "|SD(Y) - 목표 SD|",
+           "|SD비 - 목표비|", "P(X<Y) 수치적분 절대오차"),
+  `64쌍 최대값` = sig(c(max(ft$resid), max(ft$err_mean), max(ft$err_median),
+                        max(ft$err_sd), max(ft$err_sd_rel), max(ft$quad_abserr))),
+  check.names = FALSE),
+  caption = "표 6. 64개 쌍 전부의 수렴 잔차. 기준 1e-9을 모두 통과했고, 하나라도 넘으면 스크립트가 stop()으로 중단되도록 작성했다.")
+```
+
+> 개발 중 이 검사가 실제로 실패했다. `fit_shifted_gamma()` 에서 이동량을
+> **평균** 조건으로 잡아(`med - theta*k`) 중앙값이 어긋났고, 잔차 표가
+> `err_mean = err_median = m - m_e` 라는 특징적인 값을 보여 원인을 바로
+> 짚을 수 있었다. 올바른 식은 중앙값 조건
+> `gamma = med - theta * qgamma(0.5, k)` 이다.
+
+## 대표본 검증 (각 분포 `r format(d02$n_valid, big.mark=",")`개 난수)
+
+```{r}
+kable(data.frame(
+  항목 = c("평균 (X)", "평균 (Y)", "중앙값 (X)", "중앙값 (Y)",
+           "표준편차 (X)", "표준편차 (Y)", "왜도 (X)", "왜도 (Y)", "P(X<Y)"),
+  `max |경험적 - 정확값|` = sprintf("%.5f", d02$emp_deviation),
+  check.names = FALSE),
+  caption = sprintf("표 7. 난수 %s개로 추정한 값과 모수에서 계산한 정확값의 차이(64쌍 최대). P(X<Y)의 몬테카를로 표준오차는 %.5f이다. 표본왜도는 오른쪽 꼬리가 긴 분포에서 가장 늦게 수렴하므로 편차가 가장 크다.",
+                    format(d02$n_valid, big.mark=","), sqrt(0.25/d02$n_valid)))
+```
+
+## 안내서의 로그정규 참조표 재현
+
+```{r}
+gc_ <- d02$guide_cmp
+kable(gc_[, c("row","gamma","guide_gamma","meanlog","guide_meanlog",
+              "sdlog","guide_sdlog","sd","guide_sd","skew","guide_skew")],
+      col.names = c("SD비","내 gamma","안내서","내 meanlog","안내서",
+                    "내 sdlog","안내서","내 SD","안내서","내 왜도","안내서"),
+      caption = "표 8. 과제 안내서의 로그정규 참조표(왜도 3)와의 대조.")
+```
+
+**결론: `gamma`, `sdlog`, `SD`, `왜도` 네 열은 안내서와 인쇄된 자릿수까지
+완전히 일치한다.** `meanlog` 열만 어긋나는데(최대 9e-4), 이것은 내 계산이
+틀려서가 아니라 **안내서의 표가 자기 자신과 모순되기 때문**이다. 구성상
+$\texttt{meanlog} = \log(A) = \log(m_e - \gamma) = \log(1-\gamma)$ 여야 하는데,
+안내서가 인쇄한 $\gamma$ 값으로 역산하면 내 값이 나온다.
+
+```{r}
+kable(d02$guide_meanlog_selfcheck,
+      col.names = c("SD비","안내서 gamma","안내서 meanlog(인쇄)",
+                    "안내서 gamma로 역산","내 값"),
+      caption = sprintf("표 9. 안내서의 meanlog 열 자체 검증. 안내서의 gamma 열로 log(1-gamma)를 계산하면 내 값과 일치한다(최대 차이 %s). SD비 1.05 행의 0.2098은 0.2089의 자릿수 뒤바뀜으로 보인다.", sig(max(abs(d02$guide_cmp$meanlog - log(1 - d02$guide_cmp$gamma))))))
+```
+
+또한 안내서의 반례 B 코드가 쓴 `meanlog = log(1.46200) = 0.37988` 역시 표에
+인쇄된 0.3796이 아니라 내 값 0.3798 쪽과 맞는다.
+
+## 논문 표 2 (참 $P(X<Y)$) 와의 대조
+
+**라벨 방향 주의.** 논문은 "X의 표준편차가 Y보다 10% 크다"고 하여 **X가 넓은
+쪽**이고 $P(X<Y) > 0.5$ 이다. 반면 과제 지시는 $\mathrm{SD}(Y) = r\cdot
+\mathrm{SD}(X)$ 로 **Y가 넓은 쪽**이다. 연속분포이므로
+$P_{\text{논문}} = 1 - P_{\text{과제}}$ 이며, 아래 표는 전부 **논문 라벨**로
+환산했다. 안내서가 반례 B에서 $P(X<Y) = 0.4824$ 라 한 것도 과제 라벨 기준이고,
+$1 - 0.4824 = 0.5176 \approx 0.52$ 가 논문 값이다.
+
+```{r}
+t2 <- d02$table2
+mk <- function(fam, col) {
+  m <- matrix(NA_real_, 8, 4, dimnames = list(sprintf("%.2f", RATIOS), paste0("왜도 ", SKEWS)))
+  d <- t2[t2$family == fam, ]
+  for (i in seq_len(nrow(d))) m[sprintf("%.2f", d$sd_ratio[i]), paste0("왜도 ", d$skew_X[i])] <- d[[col]][i]
+  m
+}
+cmb <- function(fam) {
+  a <- mk(fam, "ours_p_paperconv"); b <- mk(fam, "paper_p")
+  out <- matrix(sprintf("%.3f / %.2f", a, b), 8, 4,
+                dimnames = list(sprintf("SD비 %.2f", RATIOS), paste0("왜도 ", SKEWS)))
+  out
+}
+kable(cmb("gamma"), caption = "표 10a. 감마: 내 정확값 / 논문 표 2. 왜도 4 열이 크게 어긋나는 것이 §4.2의 전환점 문제다.")
+kable(cmb("lognormal"), caption = "표 10b. 로그정규: 내 정확값 / 논문 표 2.")
+```
+
+```{r}
+kable(d02$construction_cmp,
+      col.names = c("구성","분포족","논문과의 최대 절대차","논문과의 평균 절대차"),
+      digits = 4,
+      caption = "표 11. 두 가지 3-제약 구성 중 어느 쪽이 논문 표 2에 가까운가.")
+```
+
+**이것이 이 보고서의 가장 중요한 발견이다.** 중앙값을 맞춘 주 구성은 논문 표 2와
+감마에서 최대 `r sprintf("%.3f", d02$construction_cmp$max_abs_diff_vs_paper[1])`
+어긋나지만, **왜도를 맞추고 중앙값을 포기한 구성(민감도 B)** 은 감마 최대
+`r sprintf("%.3f", d02$construction_cmp$max_abs_diff_vs_paper[3])`,
+로그정규 최대 `r sprintf("%.3f", d02$construction_cmp$max_abs_diff_vs_paper[4])`
+로 **64칸 전부가 논문의 반올림 오차 안에** 들어온다. 논문이 2자리로 인쇄했으므로
+반올림만으로 ±0.005가 생기는 점을 감안하면 사실상 완전 일치다.
+
+민감도 B의 구성은 $Y = \mu_X + r(X - \mu_X)$, 즉 X를 자기 평균 둘레로 $r$ 배
+확대한 것이다. 평균과 왜도는 정확히 보존되고 중앙값이
+$(r-1)(\mu_X - m_{e,X})$ 만큼 이동한다. 감마 왜도 4·SD비 1.5에서는 그 이동이
+$-2.362$ 로, 중앙값 1 대비 결코 작지 않다. **따라서 논문의 "중앙값이 같다"는
+서술은 논문 자신의 표 2와 양립하지 않는다.**
+
+과제 지시에 따라 **주 구성은 그대로 중앙값을 맞추는 쪽으로 유지**한다. 숫자가
+더 예뻐 보인다는 이유로 주 구성을 바꾸지 않는다. 주 구성만이 "평균 동일
+**그리고** 중앙값 동일"을 정확히 성립시키고, 그것이 제1종 오류 논증에 필요한
+조건이기 때문이다.
+
+---
+
+# 모의실험 결과와 논문 비교
+
+## 이분산 정규분포 기준선
+
+정규성은 완벽하고 등분산만 깨진 자료에서 Student와 Welch의 차이만 순수하게
+드러난다(총 N = 50 고정).
+
+```{r fig.cap=sprintf("그림 6. 정규성은 완벽하고 등분산만 깨진 경우. B = %s, 몬테카를로 표준오차 %.2f%%p.", format(d03$B, big.mark=","), 100*sqrt(0.05*0.95/d03$B))}
+include_graphics(file.path(FIG, "fig6_hetero_normal.png"))
+```
+
+```{r}
+kable(d03$claims, col.names = c("주장", "관측값", "성립"),
+      caption = "표 12. 안내서가 예고한 네 가지 패턴. 모두 성립한다.")
+```
+
+한 가지 덧붙일 점: **WMW 역시 이분산 + 불균등 n 에서 무너진다**
+(`r pc(min(d03$results$wmw))` ~ `r pc(max(d03$results$wmw))`). "비모수면
+안전하다"는 통념은 여기서도 틀린다.
+
+## 448칸 주 격자
+
+```{r}
+r4 <- d04$results
+t3 <- function(res, fam, test) {
+  d <- res[res$family == fam & res$n == 1000, ]
+  m <- matrix(NA_real_, 8, 4, dimnames = list(sprintf("SD비 %.2f", RATIOS), paste0("왜도 ", SKEWS)))
+  for (i in seq_len(nrow(d))) m[sprintf("SD비 %.2f", d$sd_ratio[i]), paste0("왜도 ", d$skew[i])] <- 100 * d[[test]][i]
+  round(m, 1)
+}
+paper_t3_wmw <- matrix(c(5.8,14.4,78.6,100, 8.6,39.1,98.8,100, 13.6,65.7,100,100,
+                         19.6,83.7,100,100, 26.1,93.8,100,100, 33.9,97.7,100,100,
+                         48.9,99.8,100,100, 61.7,100,100,100), ncol=4, byrow=TRUE,
+                       dimnames = list(sprintf("SD비 %.2f", RATIOS), paste0("왜도 ", SKEWS)))
+paper_t3_t <- matrix(c(4.8,4.4,4.9,4.8, 4.8,5.0,5.1,4.9, 5.5,4.8,5.1,5.2,
+                       5.0,4.7,5.2,5.2, 5.7,4.7,5.0,5.1, 4.9,5.0,4.4,5.1,
+                       4.9,5.0,5.0,4.8, 4.7,5.0,4.9,5.3), ncol=4, byrow=TRUE,
+                     dimnames = list(sprintf("SD비 %.2f", RATIOS), paste0("왜도 ", SKEWS)))
+a <- t3(r4, "gamma", "wmw")
+kable(matrix(sprintf("%.1f / %.1f", a, paper_t3_wmw), 8, 4, dimnames = dimnames(a)),
+      caption = "표 13. 논문 표 3 형태 — 감마, 각 군 1000명, WMW 기각률(%). 내 값 / 논문 값.")
+b <- t3(r4, "gamma", "welch")
+kable(matrix(sprintf("%.1f / %.1f", b, paper_t3_t), 8, 4, dimnames = dimnames(b)),
+      caption = "표 14. 논문 표 3 형태 — 감마, 각 군 1000명, Welch t 기각률(%). 내 값 / 논문 값. 모두 5% 부근이다.")
+```
+
+논문의 가장 강한 수치와 직접 대조하면:
+
+```{r}
+key <- function(res, fam, sk, rr, n) {
+  z <- res[res$family==fam & res$skew==sk & res$sd_ratio==rr & res$n==n, ]
+  c(welch = 100*z$welch, wmw = 100*z$wmw)
+}
+kg <- key(r4,"gamma",3,1.10,1000); kl <- key(r4,"lognormal",3,1.10,1000)
+kable(data.frame(
+  조건 = c("감마, 왜도 3, SD비 1.10, n=1000", "로그정규, 왜도 3, SD비 1.10, n=1000"),
+  `WMW (내 값)` = sprintf("%.1f%%", c(kg["wmw"], kl["wmw"])),
+  `WMW (논문)` = c("99%", "28%"),
+  `t (내 값)` = sprintf("%.1f%%", c(kg["welch"], kl["welch"])),
+  `t (논문)` = c("5.1%", "4.9%"),
+  check.names = FALSE),
+  caption = "표 15. 논문 초록·본문이 강조한 핵심 수치와의 직접 대조.")
+```
+
+**논문의 헤드라인 수치는 주 구성으로도 잘 재현된다.** 중앙값을 맞추는 구성은
+논문과 다른 분포를 쓰지만, 왜도 3 · SD비 1.10 조건에서는 두 구성이 만드는
+$|P(X<Y)-0.5|$ 가 비슷하기 때문이다.
+
+```{r fig.cap="그림 4a. 감마 분포 쌍의 제1종 오류율 격자. 색 눈금의 중립점은 명목 5%에 고정했다."}
+include_graphics(file.path(FIG, "fig4_type1_heatmap_gamma.png"))
+```
+
+```{r fig.cap="그림 4b. 로그정규 분포 쌍의 제1종 오류율 격자."}
+include_graphics(file.path(FIG, "fig4_type1_heatmap_lognormal.png"))
+```
+
+## 표 4 · 표 5 — 민감도 B가 논문을 그대로 재현한다
+
+```{r}
+t4row <- function(res, fam, test) round(tapply(res[res$family==fam,][[test]],
+                                               res[res$family==fam,]$n, mean)[as.character(NS)]*100, 2)
+t5row <- function(res, fam) round(tapply(res[res$family==fam,]$p_wmw_lt_welch,
+                                         res[res$family==fam,]$n, mean)[as.character(NS)]*100, 1)
+rs <- d04s$results
+paper_t4 <- list(gamma = list(t = c(4.01,4.71,4.91,4.98,4.95,4.99,4.97),
+                              wmw = c(9.47,18.0,28.9,41.6,56.9,66.3,74.7)),
+                 lognormal = list(t = c(4.20,4.69,4.83,4.89,4.95,4.92,4.98),
+                                  wmw = c(5.21,6.99,9.63,14.4,26.5,39.7,54.3)))
+paper_t5 <- list(gamma = c(54.1,63.3,69.8,75.8,82.6,86.8,90.3),
+                 lognormal = c(45.6,52.1,56.9,62.3,70.1,76.3,82.5))
+mkt4 <- function(fam) {
+  data.frame(`각 군 n` = NS,
+             `논문 t` = paper_t4[[fam]]$t,
+             `주구성 Welch` = t4row(r4, fam, "welch"),
+             `민감도B Welch` = t4row(rs, fam, "welch"),
+             `논문 WMW` = paper_t4[[fam]]$wmw,
+             `주구성 WMW` = t4row(r4, fam, "wmw"),
+             `민감도B WMW` = t4row(rs, fam, "wmw"),
+             check.names = FALSE, row.names = NULL)
+}
+kable(mkt4("gamma"), caption = "표 16a. 논문 표 4 형태 — 감마. 32개 시나리오 평균 기각률(%).")
+kable(mkt4("lognormal"), caption = "표 16b. 논문 표 4 형태 — 로그정규.")
+kable(data.frame(`각 군 n` = NS,
+                 `논문 감마` = paper_t5$gamma, `민감도B 감마` = t5row(rs,"gamma"),
+                 `주구성 감마` = t5row(r4,"gamma"),
+                 `논문 로그정규` = paper_t5$lognormal,
+                 `민감도B 로그정규` = t5row(rs,"lognormal"),
+                 `주구성 로그정규` = t5row(r4,"lognormal"),
+                 check.names = FALSE, row.names = NULL),
+      caption = "표 17. 논문 표 5 형태 — P(WMW의 p < Welch의 p) (%). 공통난수를 써야 의미가 있는 대응 비교다.")
+```
+
+민감도 B의 값은 **n ≥ 25 의 모든 칸에서 논문과 0.3%p 이내**로 일치한다
+(몬테카를로 표준오차 `r sprintf("%.2f", se_pp)`%p). 감마 n=250에서 56.90 대
+56.9, n=1000에서 74.72 대 74.7, 로그정규 n=250에서 26.50 대 26.5, n=1000에서
+54.27 대 54.3처럼 소수 둘째 자리까지 맞는 칸이 여럿이다. 우연으로 보기 어렵다.
+
+## 남은 단 하나의 불일치 — n = 10, 그리고 그 원인
+
+민감도 B에서도 **n = 10 만** 체계적으로 높았다(감마 10.90 대 논문 9.47,
+로그정규 6.26 대 5.21). 원인은 과제가 강제한 `exact = FALSE, correct = FALSE`다.
+n = 10 이고 동점이 없으면 `wilcox.test()` 는 **정확검정**을 기본으로 고르는데,
+정확검정은 p값이 이산적이라 실제 유의수준이 명목 5%보다 낮다.
+
+```{r}
+s <- d04b$summary
+kable(data.frame(
+  분포족 = s$family,
+  `Welch (내 값)` = sprintf("%.2f", s$welch),
+  `t (논문)` = sprintf("%.2f", s$paper_t),
+  `WMW: exact=F, correct=F` = sprintf("%.2f", s$wmw_approx_ours),
+  `WMW: 연속성보정` = sprintf("%.2f", s$wmw_cc),
+  `WMW: R 기본값` = sprintf("%.2f", s$wmw_default),
+  `WMW: 정확검정` = sprintf("%.2f", s$wmw_exact),
+  `WMW (논문)` = sprintf("%.2f", s$paper_wmw),
+  check.names = FALSE, row.names = NULL),
+  caption = sprintf("표 18. n = 10 행만 네 가지 WMW 변형으로 재실행(민감도 B 구성, B = %s). 정확검정으로 바꾸면 논문 값과 0.02%%p 이내로 일치한다.", format(d04b$B, big.mark=",")))
+```
+
+**결론:** Fagerland는 (i) $Y = \mu_X + r(X-\mu_X)$ 구성을 썼고 (ii)
+`wilcox.test()` 의 정확/근사 자동 전환을 그대로 두었다. 이 두 가지를 맞추면
+논문의 표 2·표 4·표 5가 전부 몬테카를로 오차 안에서 재현된다.
+
+동시에 이것은 **과제 규칙 4가 옳다는 증거**이기도 하다. 자동 전환을 그대로 두면
+n = 10 과 그 이상 사이에 실제로 인위적 단차가 생긴다. 과제는 그 단차를 없애라고
+지시했고, 그 결과 논문과 n = 10 에서만 달라진 것이다. 이는 재현 실패가 아니라
+**설정 차이를 정확히 특정한 것**이다.
+
+---
+
+# 검증 과제 ② — 중앙값이 같은데 유의한 반례
+
+## 반례 A — 최소 구성 (원리 증명)
+
+$$X = \tfrac12 U(-1,0) + \tfrac12 U(0,10), \qquad
+  Y = \tfrac12 U(-10,0) + \tfrac12 U(0,1)$$
+
+두 분포 모두 절반이 0 아래, 절반이 0 위에 있으므로 **중앙값은 정확히 0으로
+같다.**
+
+**손으로 하는 유도.** 네 조합에 각각 1/4의 확률이 걸린다.
+
+| 경우 (확률 1/4씩) | $P(X<Y)$ | 계산 |
+|---|---|---|
+| $X\in(-1,0),\ Y\in(-10,0)$ | 0.05 | $E[-X/10] = 0.5/10$ |
+| $X\in(-1,0),\ Y\in(0,1)$ | 1 | $X<0<Y$ 항상 |
+| $X\in(0,10),\ Y\in(-10,0)$ | 0 | $X>0>Y$ 항상 |
+| $X\in(0,10),\ Y\in(0,1)$ | 0.05 | $\int_0^1 (y/10)\,dy = 1/20$ |
+
+$$P(X<Y) = \tfrac14(0.05 + 1 + 0 + 0.05) = \mathbf{0.275}$$
+
+따라서 Cliff's $\delta = (1-0.275) - 0.275 = \mathbf{0.45}$ 로 큰 효과다.
+
+```{r}
+A <- d05$A
+kable(data.frame(
+  항목 = c("중앙값 (X)","중앙값 (Y)","평균 (X)","평균 (Y)","P(X<Y)","Cliff's delta"),
+  `이론값` = c("0","0","2.25","-2.25","0.275","0.45"),
+  `모의실험` = sprintf("%.5f", A$empirical[c("median_X","median_Y","mean_X","mean_Y","p_less","cliff")]),
+  check.names = FALSE),
+  caption = sprintf("표 19. 반례 A, 난수 %s개. |P(X<Y) 모의 - 이론| = %s (몬테카를로 표준오차 %s).",
+                    format(A$n_draws, big.mark=","),
+                    sig(abs(A$empirical[["p_less"]]-0.275)), sig(sqrt(0.275*0.725/A$n_draws))))
+kable(data.frame(검정 = c("Welch t","Student t","WMW 순위합"),
+                 `기각률 (각 군 20명)` = sprintf("%.1f%%", 100*A$rejection_n20[c("welch","student","wmw")]),
+                 check.names = FALSE),
+      caption = sprintf("표 20. 반례 A의 각 군 20명 기각률 (B = %s). 안내서가 말한 WMW 약 71%%와 일치한다.", format(A$B, big.mark=",")))
+```
+
+### 반례 A의 한계 — 스스로 지적한다
+
+반례 A는 중앙값이 같지만 **평균이 2.25와 −2.25로 크게 다르다.** 그래서 Welch도
+`r sprintf("%.1f%%", 100*A$rejection_n20[["welch"]])` 기각한다. 즉 반례 A는
+**"WMW는 중앙값 검정이 아니다"** 를 증명하지만, **"t는 옳고 WMW만 이상하게
+보인다"** 는 역설은 보이지 못한다. 그 역설에는 평균까지 같아야 한다.
+
+## 반례 B — 논문형 구성 (역설 재현)
+
+```{r}
+Bc <- d05$B
+kable(data.frame(
+  항목 = c("평균","중앙값","표준편차","왜도"),
+  X = sprintf("%.5f", Bc$mom_X[c("mean","median","sd","skew")]),
+  Y = sprintf("%.5f", Bc$mom_Y[c("mean","median","sd","skew")]),
+  비고 = c("정확히 동일","정확히 동일",
+           sprintf("비 = %.5f", Bc$mom_Y[["sd"]]/Bc$mom_X[["sd"]]),
+           "**동일하지 않음** (제약 4 > 모수 3)"),
+  check.names = FALSE),
+  caption = sprintf("표 21. 반례 B의 두 분포. X ~ lnorm(0, %.5f), Y = %.5f + lnorm(%.5f, %.5f).",
+                    Bc$X$sdlog, Bc$Y$gamma, Bc$Y$meanlog, Bc$Y$sdlog))
+```
+
+정확한 $P(X<Y) = `r sprintf("%.6f", Bc$p_less_exact)`$ (안내서 0.4824), 즉
+귀무값 0.5에서 겨우 `r sprintf("%.6f", abs(Bc$p_less_exact-0.5))` 떨어져 있다.
+Cliff's $\delta = `r sprintf("%.5f", Bc$cliff)`$ 로 **무시해도 좋을 만큼 작은
+효과**다. 그런데:
+
+```{r}
+kable(Bc$results[, c("n","welch","guide_welch","wmw","guide_wmw","p_wmw_lt_welch")],
+      col.names = c("각 군 n","Welch (내 값 %)","Welch (안내서 %)",
+                    "WMW (내 값 %)","WMW (안내서 %)","P(p_WMW < p_Welch) %"),
+      digits = 2, row.names = FALSE,
+      caption = sprintf("표 22. 반례 B. 내 값은 B = %s (안내서는 B = 2,000). 안내서 값의 몬테카를로 표준오차는 5%% 부근에서 %.2f%%p, 30%% 부근에서 약 1.0%%p이므로 차이는 대부분 난수 오차 범위다.",
+                        format(Bc$B, big.mark=","), 100*sqrt(0.05*0.95/2000)))
+```
+
+각 군 1,000명에서 WMW는 `r sprintf("%.1f%%", Bc$results$wmw[Bc$results$n==1000])`
+기각한다. Welch는 `r sprintf("%.1f%%", Bc$results$welch[Bc$results$n==1000])` 로
+정직하다.
+
+## 안내서 스니펫의 공통난수 버그
+
+안내서의 반례 B 코드는
+
+```r
+sim <- function(n) c(
+  welch = t.test(rX(n), rY(n))$p.value,
+  wmw   = wilcox.test(rX(n), rY(n), exact = FALSE, correct = FALSE)$p.value)
+```
+
+처럼 `rX(n)`/`rY(n)` 을 **검정마다 따로** 호출한다. 즉 Welch와 WMW가 **서로 다른
+표본**을 본다. 안내서 자신도 바로 아래 주석에서 "실제 재현에서는 같은 표본을 두
+검정에 함께 넣어야 한다(공통난수)"라고 적고 있으므로 스니펫 쪽이 버그다.
+
+```{r}
+kable(d05$crn$comparison,
+      col.names = c("각 군 n","Welch (공통난수)","WMW (공통난수)","P(p_W<p_Wel) 공통난수",
+                    "Welch (독립표본)","WMW (독립표본)","P(p_W<p_Wel) 독립표본"),
+      digits = 2, row.names = FALSE,
+      caption = "표 23. 공통난수 대 독립표본. 주변 기각률은 둘 다 불편추정이라 일치하지만, 대응 비교량은 달라진다.")
+```
+
+버그의 실제 비용은 두 가지다.
+
+1. **의미의 문제.** 논문 표 5의 "WMW의 p값이 더 작을 확률"은 **같은 자료에**
+   두 검정을 적용했을 때의 확률이다. 독립표본으로 계산하면 그 확률은 다른
+   양이 되어버린다(표 23에서 n = 1000 기준
+   `r sprintf("%.1f%%", d05$crn$comparison$p_wmw_lt_welch[d05$crn$comparison$n==1000])`
+   대 `r sprintf("%.1f%%", d05$crn$comparison$p_wmw_lt_welch_sep[d05$crn$comparison$n==1000])`).
+2. **정밀도의 문제.** 같은 반복 횟수에서 추정 분산이
+   `r sprintf("%.2f", d05$crn$var_ratio)` 배 커진다(n = 250, B = 1,000, 40회
+   반복 기준 표준편차 `r sprintf("%.3f", 100*d05$crn$sd_paired)`%p 대
+   `r sprintf("%.3f", 100*d05$crn$sd_indep)`%p).
+
+## 결론을 쓰는 방식
+
+> **"WMW가 틀렸다"고 쓰면 안 된다.** WMW는 $P(X<Y) = 0.5$ 라는 자기 귀무가설을
+> 정확히 검정했고, 반례 B에서 그 가설은 실제로 거짓이었다
+> ($P = `r sprintf("%.4f", Bc$p_less_exact)`$). 그러므로 각 군 1,000명에서의
+> `r sprintf("%.1f%%", Bc$results$wmw[Bc$results$n==1000])` 는 **오류율이 아니라
+> 검정력**이다. 틀린 것은 검정이 아니라, 그 p값을 "중앙값이 다르다"로 번역한
+> **해석**이다. 대표본에서는 t 검정이 치우침에 충분히 견고하므로, 평균을
+> 비교하려면 t 검정과 그 신뢰구간을 쓰는 것이 옳다. 비모수 검정은 소표본과
+> 순서형 자료에서 가장 유용하다.
+
+---
+
+# 순열검정 · 대응검정 · 효과크기
+
+## "비모수면 안전하다"는 통념의 반례
+
+순열검정의 귀무가설은 "두 군의 분포가 동일(교환가능)"이지 "평균이 같다"가
+아니다. 그래서 **원자료의 평균차를 치환하는 순열검정은 이분산 + 불균등 n
+에서 타당하지 않다.** p값은 $(1 + \#\text{극단값})/(B+1)$ 로 계산해 0이 나오지
+않게 했다.
+
+```{r}
+kable(d06$permutation,
+      col.names = c("설계","순열(원자료 평균차) %","순열(스튜던트화) %",
+                    "Welch %","Student %","WMW %"),
+      digits = 2, row.names = FALSE,
+      caption = sprintf("표 24. 평균이 같은데 분산만 다른 정규자료에서의 기각률. B_sim = %s, B_perm = %s, 몬테카를로 표준오차 %.2f%%p.",
+                        format(d06$B_sim, big.mark=","), d06$B_perm,
+                        100*sqrt(0.05*0.95/d06$B_sim)))
+```
+
+작은 군이 큰 분산을 가질 때 원자료 순열검정은
+`r sprintf("%.1f%%", d06$permutation$perm_raw[1])` 기각하여 Student t
+(`r sprintf("%.1f%%", d06$permutation$student[1])`)를 그대로 따라가고, Welch
+(`r sprintf("%.1f%%", d06$permutation$welch[1])`)와는 전혀 다르다. **Welch
+통계량을 치환하는 스튜던트화 순열검정**으로 바꾸면
+`r sprintf("%.1f%%", d06$permutation$perm_stud[1])` 로 회복된다.
+
+## WMW는 사실 순열검정이다 — 전수열거로 증명
+
+근사가 아니라 **항등식**임을 보이기 위해 $n_1=6$, $n_2=7$ 에서
+$\binom{13}{6} = `r d06$enumeration[1,"n_perms"]`$ 개의 분할을 **전부 열거**해
+순위합의 정확 순열 p값을 계산하고 `wilcox.test(exact = TRUE)` 와 비교했다.
+
+> 25회 반복에서 최대 차이 = **`r sig(d06$enum_max_diff)`** (기계 정밀도)
+
+순위로 바꾼 뒤 라벨을 섞는 순열검정이 곧 WMW다. 그래서 WMW의 귀무가설이
+"분포 동일"에 가깝고 퍼짐의 차이에 반응하는 것이 자연스럽다. **이것이 논문
+전체의 작동 원리다.**
+
+## 대응 구조 — 순위합과 부호순위는 다른 검정이다
+
+```{r}
+kable(d06$paired,
+      col.names = c("rho","이론 Var(d)","경험적 Var(d)","대응 t (검정력 %)",
+                    "독립 Welch (검정력 %)","부호순위 (검정력 %)","순위합 (검정력 %)"),
+      digits = 3, row.names = FALSE,
+      caption = sprintf("표 25. 짝 내 상관 rho에 따른 검정력. n = %d 쌍, sd1 = %g, sd2 = %g, 참 평균차 = %g, B = %s.",
+                        d06$paired_params$n, d06$paired_params$sd1, d06$paired_params$sd2,
+                        -d06$paired_params$delta, format(d06$paired_B, big.mark=",")))
+```
+
+$\mathrm{Var}(d) = \sigma_1^2 + \sigma_2^2 - 2\rho\sigma_1\sigma_2$ 가
+이론값과 최대 `r sprintf("%.4f", max(abs(d06$paired$theory_var_d - d06$paired$empirical_var_d)))`
+차이로 확인된다. $\rho$ 가 커질수록 차이의 분산이 줄어 대응 t의 검정력이
+`r sprintf("%.1f%%", d06$paired$power_paired_t[1])` → `r sprintf("%.1f%%", d06$paired$power_paired_t[nrow(d06$paired)])`
+로 오르는 반면, 짝 구조를 무시한 독립 검정은
+`r sprintf("%.0f%%", mean(d06$paired$power_unpaired_t))` 부근에 머문다. 짝
+구조를 무시하는 것은 정보를 버리는 일이다.
+
+**이름 규율.** 독립 2표본용은 **순위합(rank sum)** 검정, 대응용은
+**부호순위(signed rank)** 검정이다. R에서 같은 `wilcox.test()` 함수를 쓰지만
+통계량도 귀무가설도 완전히 다르다. 이 보고서는 어디에서도 그냥 "Wilcoxon
+검정"이라 부르지 않았다.
+
+## 효과크기 — p값과 달리 표본크기에 흔들리지 않는다
+
+```{r}
+kable(d06$effect_sizes,
+      col.names = c("각 군 n","Cohen's d","Hedges' g","Glass's Delta",
+                    "Cliff's delta","CLES","Welch p 중앙값","WMW p 중앙값"),
+      digits = 4, row.names = FALSE,
+      caption = sprintf("표 26. 반례 B의 효과크기 (반복 %s회). 모집단 값: CLES = %.5f, Cliff's delta = %.5f, 참 평균차 = 0.",
+                        format(d06$eff_reps, big.mark=","), d06$p_less_pop, 1-2*d06$p_less_pop))
+```
+
+이 표가 논문의 메시지를 가장 압축적으로 보여준다. **효과크기는 n이 25에서
+1,000으로 40배 커져도 사실상 변하지 않는다**(Cliff's $\delta \approx
+`r sprintf("%.03f", 1-2*d06$p_less_pop)`$). 변하는 것은 WMW의 p값뿐이다
+(중앙값 `r sprintf("%.3f", d06$effect_sizes$median_p_wmw[1])` →
+`r sprintf("%.3f", d06$effect_sizes$median_p_wmw[nrow(d06$effect_sizes)])`).
+"연구가 커질수록 효과가 커진다"는 인상은 전적으로 p값이 만들어낸 착시다.
+
+---
+
+# NHANES — 실제 자료로의 이전
+
+## 자료와 변수 선택
+
+```{r}
+kable(d07$missing[, c("variable","label","n_total","n_missing_value","n_complete","pct_dropped")],
+      col.names = c("변수","설명","전체 행","결측","완전사례","제외 비율(%)"),
+      row.names = FALSE,
+      caption = sprintf("표 27. 결측 처리는 완전사례 분석이다. 출처: %s", basename(d07$source)))
+```
+
+**변수 선택의 근거.** 중성지방(LBXTR)은 생의학 자료에서 오른쪽 치우침의
+교과서적 사례이며, 실제로 표본왜도가 남성
+`r sprintf("%.1f", d07$descriptives$skewness[1])`, 여성
+`r sprintf("%.1f", d07$descriptives$skewness[2])` 로 모의실험의 왜도 1–4를 훨씬
+넘어선다. 대조군으로 HDL 콜레스테롤(LBDHDD)을 골랐다. 왜도가
+`r sprintf("%.1f", d07$descriptives$skewness[3])` / `r sprintf("%.1f", d07$descriptives$skewness[4])`
+정도로 완만하고 표본이 두 배 이상 크다. 군 분할은 성별로, 두 군 모두 충분히
+크고 해석이 명확하기 때문이다. LBXTR의 결측 54.3%는 자료 손실이 아니라
+**공복 부표본에서만 측정되는 설계** 때문이다.
+
+```{r}
+kable(d07$descriptives[, c("variable","group","n","mean","median","sd","iqr","skewness","max")],
+      col.names = c("변수","군","n","평균","중앙값","표준편차","IQR","왜도","최댓값"),
+      digits = 3, row.names = FALSE, caption = "표 28. 기술통계.")
+```
+
+```{r fig.cap="그림 1. 군별 정규 Q-Q plot. 두 군을 반드시 따로 그려야 분산 차이가 기울기 차이로 보인다. 정규성 검정은 쓰지 않았다 — 논문이 명시적으로 반대하는 관행이기 때문이다."}
+include_graphics(file.path(FIG, "fig1_qq_groupwise.png"))
+```
+
+## 전체표본 검정과 효과크기
+
+```{r}
+kable(d07$tests[, c("variable","welch_p","student_p","wmw_p","welch_df","mean_diff","sd_ratio")],
+      col.names = c("변수","Welch p","Student p","WMW p","Welch 자유도","평균차 (남-여)","SD비"),
+      digits = 4, row.names = FALSE, caption = "표 29. 전체표본 검정 (가중치 미적용).")
+kable(d07$effects[, c("variable","cohen_d","hedges_g","glass_delta","cliff_delta","cles")],
+      col.names = c("변수","Cohen's d","Hedges' g","Glass's Delta","Cliff's delta","CLES"),
+      digits = 4, row.names = FALSE, caption = "표 30. 효과크기.")
+```
+
+실제 자료에서도 빠른 구현이 base R과 일치함을 재확인했다
+(max |welch_p − t.test| = `r sig(max(abs(d07$tests$welch_p - d07$tests$welch_p_base)))`).
+
+## 구간추정의 언어 — 축이 다르다
+
+```{r fig.cap=sprintf("그림 3a. 같은 추정량(평균 차이)에 대한 다섯 가지 95%% 구간. NHANES 중성지방, 각 군 %d명. 비교 포인트는 구간의 중심이 아니라 폭이다.", d08$nsub)}
+include_graphics(file.path(FIG, "fig3a_ci_means.png"))
+```
+
+```{r fig.cap="그림 3b. Hodges-Lehmann 구간은 별도 패널에 둔다. 이것은 평균차가 아니라 두 군 간 모든 쌍 차이의 중앙값에 대한 구간이므로, 위 그림에 얹으면 서로 다른 추정량을 겹쳐 놓는 셈이 된다."}
+include_graphics(file.path(FIG, "fig3b_ci_hodges_lehmann.png"))
+```
+
+전체표본에서 중성지방의 Welch 평균차 추정은
+`r sprintf("%.2f", d07$full$LBXTR$tests$mean_diff)` mg/dL인데 Hodges–Lehmann
+추정량은 `r sprintf("%.2f", d07$full$LBXTR$hl_est)` mg/dL이다. **두 배 가까이
+다르다.** 오른쪽 꼬리가 평균은 끌어올리지만 쌍 차이의 중앙값은 그렇지 않기
+때문이다. 이 불일치 자체가 논문의 메시지다 — t 검정은 검정과 구간추정이 같은
+표준오차를 공유하지만, WMW는 "그래서 얼마나 다른데?"에 **질문한 것과 같은
+언어로** 답하지 못한다.
+
+## 재표본 분포 — p값의 정체와 중심극한정리
+
+```{r fig.cap=sprintf("그림 2a. 순열 귀무분포와 부트스트랩 분포. 관측 통계량은 빨간 수직선. 왼쪽에서 p값은 꼬리 면적이라는 기하학적 사실이, 오른쪽에서 추정의 불확실성이 드러난다. 순열 p = %.4f.", d08$p_perm)}
+include_graphics(file.path(FIG, "fig2a_resampling.png"))
+```
+
+```{r fig.cap="그림 2b. 원자료가 아무리 치우쳐도 평균차의 분포는 표본이 커질수록 종모양에 가까워진다. t 검정이 견고한 이유를 한 장으로 설명하는 그림이다."}
+include_graphics(file.path(FIG, "fig2b_clt.png"))
+```
+
+## 부분표본 실험
+
+```{r}
+sb <- d07$subsample
+kable(sb[, c("variable","n","rej_welch","rej_wmw","median_p_welch","median_p_wmw","p_wmw_lt_welch","mean_cliff")],
+      col.names = c("변수","각 군 n","Welch 기각률 %","WMW 기각률 %",
+                    "Welch p 중앙값","WMW p 중앙값","P(p_WMW<p_Welch) %","Cliff's delta 평균"),
+      digits = 4, row.names = FALSE,
+      caption = sprintf("표 31. 관측 자료에서 각 군 n명을 비복원 추출하기를 %s회 반복.", format(d07$nrep, big.mark=",")))
+```
+
+```{r fig.cap="그림 7. 부분표본 크기에 따른 Welch와 WMW의 p값 분리. 모의실험과 달리 여기서는 귀무가설이 거짓이므로 이 곡선들은 제1종 오류율이 아니라 검정력 곡선이다."}
+include_graphics(file.path(FIG, "fig7_nhanes_subsample.png"))
+```
+
+**예상과 달랐던 점을 그대로 보고한다.** 논문은 "WMW가 평균적으로 더 작은 p값을
+낸다"고 하지만, 중성지방에서는 각 군 2,500명이 되기 전까지 **Welch의 p값이 더
+작다**(P(p_WMW < p_Welch)가 n = 25–1000 구간에서 36.8–42.8%). HDL에서는 반대로
+WMW가 압도한다(n = 2,500에서 100%). 두 변수가 정반대로 갈린 것이다.
+
+이유는 어느 검정이 이기는지가 **왜도가 아니라 실제 대립가설의 모양**에
+달려 있기 때문이다. 중성지방은 남녀 평균차(21.3)가 크지만 순위 기반 효과
+(Cliff's $\delta$ = `r sprintf("%.3f", d07$effects$cliff_delta[1])`)는 상대적으로
+작고, HDL은 순위 기반 효과가 훨씬 크다
+($\delta$ = `r sprintf("%.3f", d07$effects$cliff_delta[2])`). 논문의 결과는
+**귀무가설이 참인** 설정에서 얻은 것이므로 여기에 그대로 옮겨지지 않는다.
+이 점을 흐리지 않고 적어 둔다.
+
+## 복합표본설계에 대한 단서 — 반드시 읽을 것
+
+NHANES는 단순임의표본이 아니라 **층화·군집 복합표본설계**이고 표본가중치가
+딸려 있다. 위의 모든 검정은 **가중치를 적용하지 않은** 것이다. 이 과제의 목적이
+**검정들 사이의 비교**라면 단순 비교로도 되지만, **모집단 추론에는 쓸 수 없다.**
+
+```{r}
+if (!is.null(d07$survey)) {
+  kable(d07$survey[, c("variable","svy_diff","svy_p","svy_df","svy_lo","svy_hi","unweighted_diff","unweighted_welch_p")],
+        col.names = c("변수","설계기반 평균차","설계기반 p","설계 자유도","95% 하한","95% 상한","비가중 평균차","비가중 Welch p"),
+        digits = 4, row.names = FALSE,
+        caption = "표 32. survey::svyttest 설계기반 참조 분석. 설계 자유도는 PSU 수에서 층 수를 뺀 71로, 표본크기 수만이 아니라 군집 수가 정밀도를 결정함을 보여준다.")
+}
+```
+
+- **설계 자유도가 71**이라는 점이 핵심이다. 비가중 Welch의 자유도는
+  `r sprintf("%.0f", d07$tests$welch_df[1])` / `r sprintf("%.0f", d07$tests$welch_df[2])`
+  였다. 군집 구조를 인정하면 실질 정보량이 훨씬 적다.
+- 가중 추정치는 비가중과 다르다(HDL: 비가중
+  `r sprintf("%.2f", -d07$tests$mean_diff[2])` 대 설계기반
+  `r sprintf("%.2f", d07$survey$svy_diff[2])`).
+- **가중치 주의.** `WTCOMB` 은 MEC 검진 가중치로 **LBDHDD에는 맞지만**,
+  LBXTR은 **공복 부표본**이라 설계상 올바른 가중치는 `WTSAF2YR` 이다. 이 변수가
+  2주차 분석 파일에 없으므로 표 32의 중성지방 행은 **참고용이며 표준오차가
+  설계상 정확하지 않다.** 엄밀한 모집단 추론에는 공복 부표본 가중치를 다시
+  받아와야 한다.
+- 결측 처리는 완전사례 분석이며 제외된 행 수는 표 27에 기록했다.
+
+---
+
+# 결론
+
+1. **논문의 현상은 재현된다.** 평균과 중앙값이 정확히 같고 표준편차만 10%
+   다른 치우친 쌍에서, WMW의 기각률은 표본이 커질수록 단조 증가하는 반면
+   Welch의 기각률은 명목 5%를 지킨다 —
+   각 군 100명 이상에서 448칸 중 해당하는 칸의 범위가
+   `r pc(min(r4$welch[r4$n>=100]))`–`r pc(max(r4$welch[r4$n>=100]))` 이다.
+   **다만 정직하게 덧붙이면, 각 군 10명에서는 Welch도 보수적이 된다**
+   (`r pc(min(r4$welch[r4$n==10]))`–`r pc(max(r4$welch[r4$n==10]))`, 가장 낮은
+   칸은 감마 왜도 4). 논문의 표 4에서 t 검정의 n = 10 평균이
+   4.01%로 다른 행보다 낮은 것과 같은 현상이며, 내 값도
+   `r sprintf("%.2f%%", 100*mean(r4$welch[r4$n==10]))` 로 일치한다. 즉 t 검정이
+   치우침에 견고해지는 데에도 최소한의 표본은 필요하다.
+2. **그 기각률은 오류가 아니라 검정력이다.** WMW의 귀무가설은
+   $P(X<Y)=0.5$ 이고 이 설정에서 그것은 거짓이다. 틀린 것은 검정이 아니라
+   그 p값을 "중앙값이 다르다"로 번역하는 해석이다.
+3. **논문의 분포 구성은 중앙값이 같지 않다.** {평균, 왜도, SD비}를 맞추고
+   중앙값을 포기한 구성이 논문의 표 2·4·5를 몬테카를로 오차 안에서 재현하고,
+   중앙값을 맞추는 구성은 재현하지 못한다. 논문 본문의 "means and medians are
+   equal" 서술은 논문 자신의 표 2와 양립하지 않는다. 역설적이게도 **과제의
+   주 구성이 논문의 주장을 논문 자신보다 더 엄밀하게 만족시킨다** — 주 구성에서는
+   두 귀무가설이 정말로 둘 다 참이다.
+4. **제약 4개 대 모수 3개는 피할 수 없다.** 그리고 편이 감마족은 왜도
+   `r sprintf("%.2f", d02$gamma_boundary_skew)` 에서 방향이 뒤집히므로, 왜도 4
+   감마 열은 이 구성으로 재현 자체가 불가능하다.
+5. **실무적 함의.** 대표본에서 평균을 비교하려면 t 검정(Welch)과 그
+   신뢰구간을 쓰는 것이 옳다. 중심극한정리 덕분에 심하게 치우친 자료에서도
+   견고하다(그림 2b). 비모수 검정은 **소표본과 순서형 자료**에서 가장
+   유용하다. 정규성 검정으로 검정을 고르는 관행은 대표본에서 정확히 거꾸로 된
+   권고를 낳으므로 쓰지 않는다.
+6. **다만 일반화에는 조심해야 한다.** NHANES 중성지방에서는 n = 2,500 전까지
+   Welch의 p값이 오히려 더 작았다. 어느 검정이 더 작은 p값을 주는가는
+   귀무가설이 거짓일 때는 대립가설의 모양에 달려 있다.
+
+---
+
+# 재현성
+
+```{r}
+kable(data.frame(
+  항목 = c("난수 종류", "기본 시드", "시드 배치 전략", "병렬화",
+           "공통난수", "반복 횟수 B", "몬테카를로 표준오차 (p=0.05)",
+           "주 격자 실행 시간", "민감도 B 격자 실행 시간",
+           "예비 실험 (B=500)"),
+  내용 = c("L'Ecuyer-CMRG",
+           sprintf("%d (스크립트별로 오프셋을 더해 사용)", 20260920),
+           "**격자 칸마다** 하나씩. 단일 시드에서 nextRNGStream()으로 448개 독립 스트림을 만들어 칸 i에 스트림 i를 배정",
+           sprintf("parallel::parLapplyLB, 워커 %d개", d04$workers),
+           "한 반복 안에서 **같은 표본**이 Welch·Student·WMW에 모두 들어감",
+           format(d04$B, big.mark = ","),
+           sprintf("%.3f%%p", se_pp),
+           sprintf("%.1f초 (%.2f분)", d04$elapsed, d04$elapsed/60),
+           sprintf("%.1f초 (%.2f분)", d04s$elapsed, d04s$elapsed/60),
+           "19.9초 → B=10,000 추정 6.6분 (실제 7.5분)"),
+  check.names = FALSE),
+  caption = "표 33. 난수·재현성 설정.")
+```
+
+**시드를 어디에 두었는가, 그리고 왜.** 전체 루프 앞에서 한 번만 고정하는 대신
+**격자 칸마다 독립 스트림을 배정**했다. 이유는 재현성의 강도다.
+`clusterSetRNGStream()` + 부하분산(`parLapplyLB`) 조합은 **작업이 워커에
+배정되는 순서**에 따라 결과가 달라지므로, 워커 수나 스케줄링이 바뀌면 같은 숫자가
+나오지 않는다. 칸마다 스트림을 고정하면 워커 수·실행 순서와 **무관하게** 각 칸이
+동일하게 재현되고, 칸 하나만 따로 다시 돌려 검증할 수도 있다. 스트림은
+`nextRNGStream()` 으로 생성했으므로 칸들 사이의 난수열 겹침도 없다.
+
+한편 **한 반복 안에서는 공통난수**를 쓴다. 같은 표본이 세 검정에 모두 들어가야
+표 17의 $P(p_{WMW} < p_{Welch})$ 가 논문이 의도한 대응 비교가 되며, 표 23에서
+보았듯 추정 분산도 줄어든다.
+
+## 실행 순서
+
+```
+Rscript R/00_validate_utils.R        # 빠른 구현 검증
+Rscript R/01_verify_satterthwaite.R  # 검증 과제 1
+Rscript R/02_distributions.R         # 64개 분포 쌍 구성·검증
+Rscript R/03_hetero_normal.R         # 이분산 정규 기준선
+Rscript R/04_main_grid.R 500 pilot   # 예비 실험
+Rscript R/04_main_grid.R             # 448칸 x B=10,000
+Rscript R/04_main_grid.R 10000 sensB # 민감도 B 격자
+Rscript R/04b_smalln_wmw_variant.R   # n=10 WMW 변형 비교
+Rscript R/05_counterexamples.R       # 검증 과제 2
+Rscript R/06_permutation_effectsize.R
+Rscript R/07_nhanes.R
+Rscript R/08_figures.R
+Rscript R/99_verify_cache.R           # 재현성 감사
+```
+
+각 스크립트는 깨끗한 R 세션에서 단독 실행되며 결과를 `results/` 에
+`saveRDS()` 로 캐시한다. 그림의 글꼴 크기만 고치려고 448만 번의 검정을 다시
+돌릴 일은 없다.
+
+## 캐시 재현성 감사
+
+작업 도중 `R/00_utils.R` 을 수정한 뒤에도 앞 단계의 캐시가 여전히 유효한지를
+확인해야 한다. 칸마다 독립 스트림을 배정한 설계 덕분에 **격자의 칸 하나만
+따로 다시 돌릴 수 있으므로**, 448칸 중 5칸(헤드라인 칸, 뒤집히는 감마 왜도 4 칸,
+최소·최대 표본크기 칸)을 현재 코드로 재실행해 캐시와 대조했다.
+
+> 5칸 전부에서 기각률·대응 비교량의 **차이가 정확히 0**이었다. 즉 캐시는
+> 현재 코드에서 비트 단위로 재현된다. 같은 방식으로 `04b` 를 재실행한 결과도
+> 수정 전과 최대 차이 0이었다.
+
+이것이 "칸마다 시드"를 택한 실질적 이득이다. 전체 루프 앞에서 한 번만 시드를
+고정했다면 칸 하나를 검증하기 위해 448칸 전체를 다시 돌려야 했을 것이다.
+
+## sessionInfo()
+
+```{r echo=TRUE}
+sessionInfo()
+```
+
+```{r}
+si <- utils::capture.output(sessionInfo())
+writeLines(si, file.path(RES, "sessionInfo.txt"))
+```
+
+---
+
+# 제출 전 점검
+
+```{r}
+chk <- data.frame(
+  항목 = c(
+    "t.test()의 var.equal 기본값이 FALSE임을 알고 의도적으로 선택했는가",
+    "wilcox.test()의 정확검정/근사 전환을 exact=FALSE, correct=FALSE로 고정했는가",
+    "순위합 검정과 부호순위 검정을 보고서에서 구분해 불렀는가",
+    "분포 구성 후 P(X<Y)를 대표본으로 추정해 의도한 값과 맞는지 검정 전에 확인했는가",
+    "왜도를 동일하게 맞추지 못한 이유(제약 4개 > 모수 3개)를 명시했는가",
+    "기각률을 몬테카를로 표준오차와 함께 제시했는가",
+    "시드를 루프 밖에 한 번 고정했는지, 칸마다 고정했는지 기록했는가",
+    "병렬 처리를 했다면 스트림 기반 난수를 썼는가",
+    "NHANES 분석에 복합표본설계와 결측 처리에 대한 단서를 달았는가",
+    "Satterthwaite 구현이 자유도뿐 아니라 p값까지 t.test()와 일치하는가"),
+  `충족 위치` = c(
+    "§2 표(굵게 표시), R/00_utils.R의 welch_p()/student_p() 분리. Student는 비교 목적에만 사용",
+    sprintf("R/00_utils.R wmw_p(); base R과 최대 차이 %s (표 1). 단차가 실제로 생긴다는 증거는 §5.4", sig(d00$max_abs_diff[["wmw_p"]])),
+    "§7.3. 보고서 전체에서 '순위합'과 '부호순위'를 구분했고 그냥 'Wilcoxon'이라 쓴 곳이 없다",
+    sprintf("§4.4 표 7. 각 분포 %s개 난수, P(X<Y) 최대 편차 %.5f. 더 강하게는 수치적분으로 정확값을 구해 표 10에 실었다",
+            format(d02$n_valid, big.mark=","), d02$emp_deviation[["p_less"]]),
+    "§4.1 (구조), §4.2 (감마족 전환점), 표 21 (반례 B에서 왜도 3.00 대 2.28)",
+    sprintf("표 13–18, 그림 4·5·6의 캡션. B=10,000에서 %.2f%%p", se_pp),
+    "§10 표 33 및 그 아래 문단. **칸마다** 고정했고 그 이유를 적었다",
+    sprintf("L'Ecuyer-CMRG + nextRNGStream()으로 448개 독립 스트림 (§10). 워커 %d개", d04$workers),
+    "§8.6 (설계 자유도 71, WTSAF2YR 가중치 문제), 표 27 (완전사례, 제외 행 수)",
+    sprintf("§3.2 표 2. 자유도 %s, p값 %s", sig(d01$max_abs_df_error), sig(d01$max_abs_p_error))),
+  check.names = FALSE)
+kable(chk, caption = "표 34. 안내서의 제출 전 점검표. 실제로 수행한 항목만 표시했다.")
+```
+
+## 과제 지시에서 벗어난 점 (전부 명시)
+
+```{r}
+kable(data.frame(
+  사항 = c("report.qmd 대신 report.Rmd",
+           "PDF 위치",
+           "민감도 분석 2종 추가",
+           "04b 스크립트 추가",
+           "그림의 축 라벨이 영어"),
+  내용 = c("이 환경에 quarto CLI가 설치되어 있지 않아 rmarkdown으로 렌더링했다. 과제가 '(or .Rmd)'로 허용한 범위다",
+           "두 PDF가 프로젝트 최상위에 있었고 과제 설명은 docs/ 라고 했으므로 docs/ 로 옮겼다",
+           "과제 3번이 허용한 범위. **주 구성을 대체하지 않았고** 민감도로만 표시했다 (§4.6)",
+           "'모든 불일치를 설명하라'는 요구를 충족하기 위한 n=10 진단. 과제 규칙 4를 위반하지 않으며, 오히려 그 규칙의 효과를 정량화한다",
+           "ggplot2 장치에서 한글을 쓰려면 플랫폼별 글꼴 지정이 필요해 다른 기기에서 재현이 깨진다. 본문 캡션은 한국어다"),
+  check.names = FALSE),
+  caption = "표 35. 과제 지시와 다르게 한 부분과 그 이유.")
+```
