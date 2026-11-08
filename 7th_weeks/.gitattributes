@@ -1,0 +1,2 @@
+*.pdf -diff -text
+analysis/src/history/candidate_reviewed.py -text

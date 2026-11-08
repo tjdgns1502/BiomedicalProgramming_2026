@@ -1,0 +1,1039 @@
+
+=== PDF PAGE 1 ===
+Correlation and predictive value of 
+novel anthropometric indicators 
+with adult sarcopenia and 
+sarcopenia obesity
+Xue Wu1,2, Ziang Chen1,2, Yuanhui Zhao1 & Hong Ren1
+The present study leverages the comprehensive data from the National Health and Nutrition 
+Examination Survey (NHANES) to examine the Influencing factors of sarcopenia (SA) and sarcopenic 
+obesity (SO). The investigation is designed to a non-invasive, cost-effective, and convenient method 
+that is applicable to the adult population, enabling the accurate and simultaneous detection of risks 
+associated with SA and SO. Furthermore, this research will evaluate the critical values of effective 
+anthropometric indicators, providing early warning for risk management in self-health care and 
+offering valuable insights for subsequent research and clinical practice. The data pertaining to NHANES 
+participants were meticulously selected from the databases of six cycles, spanning from 2001 to 2004 
+and 2011 to 2018. Utilizing the diagnostic criteria established by the American Foundation for the 
+National Institutes of Health (FNIH), anthropometric measurement data were extracted to construct 
+composite indices. These indices were then cross-referenced with diagnostic assessments from 
+dual-energy X-ray absorptiometry and bioelectrical impedance analysis to examine the correlations 
+between various metrics and the incidence of diseases. R software (version 4.3.3) was used for 
+analysis, and the primary analytical methods employed included logistic regression, restricted cubic 
+splines (RCS), and the Receiver Operating Characteristic (ROC) curve analysis (AUC). Sarcopenia 
+and sarcopenic obesity are commonly observed in individuals within the middle-aged and elderly 
+demographics. The prevalence of these conditions is higher among middle-aged men of a given age 
+when contrasted with women at the age of 40. All anthropometric indexes demonstrated a positive 
+correlation with the onset of SA and SO, with the association with waist-to-height ratio (WHtR) 
+showcasing a heightened strength subsequent to the adjustment for all covariates. The predictive 
+models of all ROC curves performed commendably, particularly with the body roundness index and 
+WHtR forecasting models exhibiting superior performance, the area under the AUC curve is 0.87 
+(95 CI% 0.85, 0.88) and 0.86 (95 CI% 0.85, 0.88), respectively. The RCS curve delineated a distinctive 
+J-shaped distribution for each physical index in concurrence with SA and SO, signifying an optimal 
+value at which the incidence of these conditions is minimal; conversely, deviations from this optimal 
+value entailed an escalated risk of disease. Diverse anthropometric index metrics bear a strong 
+correlation with adult onset of sarcopenia and sarcopenic obesity, each displaying commendable 
+predictive capability. Notably, the body roundness index and waist-to-height ratio may harbor 
+heightened potential as indicative anthropometric indexes. Furthermore, the dose-effect relationship 
+analysis inferred that the lowest disease risk is manifested among individuals with specific index 
+profiles, thereby advocating for autonomous health monitoring to promote physical activity and 
+bolster nutrient intake, thus mitigating the risk of sarcopenia and sarcopenic obesity.
+Keywords  Anthropometric indicator, Sarcopenia, Sarcopenic obesity
+Sarcopenia (SA), a multifaceted syndrome, increases the risk of falls, fractures, and impaired daily activities1,2. 
+It is further correlated with elevated overall mortality rates, an increased susceptibility to depression, and a 
+spectrum of metabolic disorders3, exerting a profound impact on the individual, community, and economy4. The 
+concurrent occurrence of excessive adiposity and diminished muscle mass is designated as sarcopenic obesity 
+1Beijing Sport University, Beijing, China. 2Wu Xue and Chen Ziang contributed equally to this work. email: 
+renhong@bsu.edu.cn
+OPEN
+Scientific Reports |        (2024) 14:31776 
+1
+| https://doi.org/10.1038/s41598-024-82751-7
+www.nature.com/scientificreports
+
+=== PDF PAGE 2 ===
+(SO)5, a complication emanating from the amalgamation of sarcopenia and obesity6. Sarcopenic obesity is closely 
+associated with frailty, compromised cardiovascular metabolic function, physical disability, and mortality7.
+Presently, conventional modalities for diagnosing skeletal muscle wasting encompass magnetic resonance 
+imaging (MRI) and computed tomography (CT), methodologies that provide precise direct observations, 
+necessitate the utilization of costly equipment and incur significant evaluation costs. Bioelectrical impedance 
+analysis (BIA) stands out as a prevalent evaluation technique8,9, capable of delivering relatively accurate results 
+with relative ease. However, it remains susceptible to a variety of influences, including electrode placement, 
+variations in testing positions, and changes in body fluid composition10. Additionally, discrepancies in 
+outcomes may arise due to variations among different device models11. Dual-energy X-ray absorptiometry 
+(DEXA) is extensively acknowledged as the prevalent method for the assessment of SA and SO, lauded for 
+its cost-effectiveness and considerable precision12. Nevertheless, the necessity for a certain level of equipment 
+proficiency poses a limitation on its application, thereby restricting the capacity for self-monitoring and the 
+evaluation of daily living activities within populations at elevated risk. Beyond the application of equipment, 
+the diagnostic process for sarcopenia frequently involves the use of various questionnaires, including but not 
+limited to SARC-F, SARC-CalF, MSRA-5, and MSRA-7. However, the existing literature displays a notable lack of 
+consensus regarding the validity of these questionnaires. Furthermore, the process of questionnaire completion 
+may be prone to biases introduced by subjective factors13,14.
+In light of the widening chasm in health disparities, the restricted access to medical care, and the unrelenting 
+escalation of healthcare costs15, the practice of self-health management has emerged as a promising intervention 
+strategy16. This entails individuals acquiring the competencies necessary for monitoring their own health status 
+and utilizing behavioral goals as motivational drivers17. A robust correlation exists between anthropometric 
+indices and behaviors pertinent to self-health management18, the outcomes of measurements contribute 
+significantly to the facilitation of self-management practices19. Anthropometric indices are synthesized into 
+specific metrics through formulaic calculations, providing a delineation of an individual’s relative physical 
+health status. The principal advantage of this method lies in its measurement simplicity20, in addition to the fact 
+that numerous studies affirming the value of anthropometric indices in forecasting conditions such as obesity, 
+cardiovascular disease, and nephrolithiasis21–24, as well as in discerning the association between these indices 
+and overall mortality rates25.
+The calf circumference (CC) metric is widely utilized as a convenient and relatively precise indicator in 
+the assessment of elderly patients’ sarcopenia26. However, due to the potential for obesity to distort limb 
+measurements, the accurate application of the CC index necessitates adjustment in relation to Body Mass Index 
+(BMI)27. This adjustment may diminish the predictive value in patients with sarcopenic obesity, potentially 
+leading to misdiagnoses that could exacerbate the progression of sarcopenic obesity and precipitate the onset 
+of comprehensive sarcopenia28. Commonly used anthropometric indicators, such as body weight and BMI, 
+are relatively straightforward to calculate but are limited in their ability to detect overweight populations29–31. 
+Utilizing these as the sole criteria for assessing obesity may lead to misclassification of individuals with occult 
+obesity or those with resilient physiologies32, thereby underestimating the health risks associated with visceral 
+adiposity33,34. A considerable proportion of the elderly exhibit a normal BMI, yet may be afflicted by varying 
+degrees of sarcopenic obesity prior to the manifestation of pronounced muscle atrophy35. Consequently, it is 
+essential to appraise a range of anthropometric indicators and to elucidate their correlations with disease risk36. 
+Research indicates that indices such as the Body Roundness Index (BRI), the z-score of the log-transformed 
+A Body Shape Index (LBSIZ), the A Body Shape Index (ABSI), and the Waist-to-Height Ratio (WHtR) are 
+instrumental in the detection of SA or SO37–40. Despite evidence linking anthropometric indicators to specific 
+metabolic ailments41, the relationship between these indicators and sarcopenia, as well as sarcopenic obesity, 
+necessitates further investigation. Moreover, a consensus on the diagnostic criteria for the condition remains 
+elusive42. A comprehensive comparison across a substantial dataset should be conducted to identify the optimal 
+solution.
+The present study leverages the comprehensive data from the National Health and Nutrition Examination 
+Survey (NHANES) to examine the Influencing factors of SA and SO. The investigation is designed to a non-
+invasive, cost-effective, and convenient method that is applicable to the adult population, enabling the accurate 
+and simultaneous detection of risks associated with SA and SO. Furthermore, this research will evaluate the 
+critical values of effective anthropometric indicators, providing early warning for risk management in self-health 
+care and offering valuable insights for subsequent research and clinical practice.
+Methods
+Study participants
+This study is a cross-sectional study, and the data is derived from the US NHANES database ​(​h​t​t​p​s​:​/​/​w​w​w​.​c​d​
+c​.​g​o​v​/​n​c​h​s​/​n​h​a​n​e​s​/​i​n​d​e​x​.​h​t​m​)​. The data in this database comes from a nationwide health survey conducted 
+annually, using a complex, multi-stage probability sampling method that can represent the health and nutritional 
+status of the population43. All participants signed written informed consent forms.
+Age-related aging is often considered a cause of sarcopenia (SA) and osteopenia (SO). Studies have shown 
+that factors such as exercise, chronic inflammation, and nutritional status also affect the onset of SA and SO44,45. 
+Due to the limitations of the measurement content of the database in different years, this study extracted DEXA 
+measurement data and relevant covariates from the NHANES database from 2011 to 2018 as the main research 
+objects, and used relevant data measured by BIA in the 2001–2004 database for index verification. After screening 
+the data from 2011 to 2018, excluding individuals under 20 years of age and those with missing data, this study 
+finally included 8159 participants (Fig. 1).
+Scientific Reports |        (2024) 14:31776 
+2
+| https://doi.org/10.1038/s41598-024-82751-7
+www.nature.com/scientificreports/
+
+=== PDF PAGE 3 ===
+Measurements
+Disease threshold measurement
+The data utilized in this study are derived from the National Health and Nutrition Examination Survey in the 
+United States. Consequently, the racial characteristics are assessed in accordance with the standards established 
+by the American Foundation for the National Institutes of Health (FNIH)46. The diagnosis of sarcopenia is 
+established when the total skeletal muscle mass/body mass index (BMI) measured by dual-energy X-ray falls 
+below 0.789 kg/BMI in men and below 0.512 kg/BMI in women. If the criteria for sarcopenia are met and BMI 
+is equal to or exceeds 30, it is diagnosed as sarcopenic obesity5.
+Furthermore, bioelectrical impedance analysis (BIA) can be utilized to estimate sarcopenia47. In line with the 
+equipment requisites of the 2001–2004 NHANES survey, regression equations are employed to calculate skeletal 
+muscle mass (SM) using resistance values48:
+	
+SM =
+[
+height (cm)2
+resistance (Ω) × 0.401 + (gender × 3.825) + (age × (−0.071 ))
+]
++ 5.102.
+Subsequently, the estimated SM is inputted into the equation to compute the skeletal muscle mass index (SMI), 
+with the high-risk threshold for sarcopenia identified as 8.50 kg/m2 for men and 5.75 kg/m2 for women49.
+Anthropometric index measurement
+The requisite data for computing diverse anthropometric parameters encompass measurements such as waist 
+circumference, height, and weight, delineated in a multitude of units. The computational algorithms and units 
+pertinent to assorted physical indices are delineated in Table 1.
+Other indicators’ measurement
+The nutrient intake data were collected via in-person interviews. All dietary interviewers underwent a rigorous 
+week-long training program and completed practical exercises prior to conducting independent interviews. 
+The specific procedures followed the “NHANES Dietary Recall Interview Measurement Guidelines”. Study 
+participants were interviewed on consecutive days, and the data used in the study represent their daily average 
+energy and protein intake.
+Information on physical inactivity and sedentary behavior was obtained through interviews and questionnaires 
+based on the World Health Organization’s Global Physical Activity Questionnaire (GPAQ). Interviewers utilized 
+computer-assisted personal interview systems to survey participants at their homes, inquiring about their typical 
+daily sedentary time. There is a linear correlation between sitting time and the risk of metabolic syndrome51, 
+according to the SIT-ACT risk matrix52, sedentary behavior data were extracted and standardized into time units 
+(hours), and then categorized into four levels: less than 4 h, 4–6 h, 6–8 h, and more than 8 h.
+Fig. 1.  Flow chart of the study population.
+ 
+Scientific Reports |        (2024) 14:31776 
+3
+| https://doi.org/10.1038/s41598-024-82751-7
+www.nature.com/scientificreports/
+
+=== PDF PAGE 4 ===
+Demographic variables, including age, sex, race, education level, and poverty level, were collected by 
+trained interviewers at participants’ residences using computer-assisted personal interview systems. Relevant 
+demographic data were extracted for the study, and a sophisticated weighted process was applied to the overall 
+data using sample weight.
+Statistical analysis
+In the investigation, R software (version 4.3.3) was employed for statistical analysis, wherein all analyses 
+were appropriately weighted using the survey package. Categorical variables were presented as frequencies in 
+percentages, while continuous variables were represented as means along with their 95% confidence intervals. To 
+examine the association between different body mass index categories and adult sarcopenia, as well as sarcopenic 
+obesity, several logistic regression models were established, including Model 1, Model 2, and Model 3, which 
+were adjusted for various covariates.
+Furthermore, the rms package within the R software facilitated the execution of restricted cubic spline (RCS) 
+analysis, thereby elucidating the dose-response relationship between body measurement indicators and the risk 
+of adult sarcopenia and sarcopenic obesity. The analysis involved comparison of subgroups by sex, with the 
+number of nodes being set to 4 based on percentiles (P5, P25, P75, P95)53. Post stepwise regression selection, 
+models predicting sarcopenia and sarcopenic obesity were formulated utilizing diverse body measurement 
+indicators. Subsequently, the pROC and ggplot2 packages were utilized to craft receiver operating characteristic 
+(ROC) curves.
+Moreover, the data underwent division into a training set and a validation set at an 8:2 ratio to verify the 
+stability of the model. Lastly, the data measured by bioelectrical impedance in the NHANES database from 2001 
+to 2004 was re-fitted to authenticate the predictive findings.
+Results
+Baseline data distribution
+Population Representation and Demographics This investigation encompassed a cohort of 8159 individuals 
+and, through utilizing a meticulously calculated complex weighted population estimate, is anticipated to mirror 
+the characteristics of 213,963,585 U.S. residents aged 20 years and above. The mean age of the aforementioned 
+8159 participants was recorded as (39.40 ± 11.53) years. The sex distribution of the participants is equitable, 
+with individuals of non-Hispanic white descent constituting the preponderance (63%) of the study population. 
+Furthermore, a majority of participants boast a high school education or above (67%), while the prevalence 
+of sedentary behavior exceeding 8 h is notably pervasive (41%). Examination focusing on groups afflicted by 
+sarcopenia and sarcopenic obesity unveiled a predilection for these maladies among older age cohorts, with 
+a slightly elevated prevalence of these conditions witnessed among male participants in comparison to their 
+female counterparts, as explicated in Table 2.
+Associations and Correlations Employing normative adults and individuals afflicted by sarcopenia as 
+comparative reference points, logistic regression analysis accounting for adjusted weights revealed a significant 
+correlation between advanced age, race, socioeconomic status, educational attainment, hyperglycemia, physical 
+inactivity, caloric intake, and protein consumption with the occurrence of sarcopenia and sarcopenic obesity, 
+all attaining statistical significance (P < 0.05). Conversely, no statistically significant correlations were discerned 
+in relation to sex, hypertension, hypercholesterolemia, and prolonged sedentary behavior (P > 0.05) (Table 2).
+Correlation analysis of various anthropometric indices
+Controlled for various covariates, three regression models were formulated, and collinearity diagnostics revealed 
+the absence of multicollinearity issues (VIF < 5). The outcomes of the univariate logistic regression model 
+(Model 1) exhibited a positive correlation between all metrics and the overall incidence rates of SA and SO, and 
+were of statistical significance (P < 0.05). Notably, the association between body mass index and waist-to-height 
+ratio displayed heightened strength. Upon adjusting for demographic variables (Model 2), all metrics sustained 
+their positive correlation with the incidence rates of SA and SO, retaining statistical significance (P < 0.05). The 
+association strength of the waist-to-height ratio was notably robust. Comparable findings were derived after 
+controlling for all covariates (Table 3).
+Anthropometric index
+Calculation formula
+Waist-height ratio (WHtR)
+W HtR =
+waist(m)
+height(m)
+Body mass index (BMI)
+BMI =
+weight(kg)
+height(cm)2
+A body shape index (ABSI)
+ABSI =
+waist(m)
+BMI(kg/m2) 2
+3 × height(m) 1
+2
+Body roundness index (BRI)
+BRI = 364.2 −365.5 ×
+√
+1 −(
+(waist (m)/2π )2
+(0.5× height (m))2
+)
+The z-score of the log-transformed ABSI50 (LBSIZ)
+LBSI = log (ABSI)
+LBSIZ = LBSI−LBSI(mean)
+LBSI(s.d.)
+Table 1.  Novel anthropometric index calculation formula.
+ 
+Scientific Reports |        (2024) 14:31776 
+4
+| https://doi.org/10.1038/s41598-024-82751-7
+www.nature.com/scientificreports/
+
+=== PDF PAGE 5 ===
+Variable
+Sarcopenia
+Sarcopenic obesity
+Overall
+N = 8159 
+(100%)1
+Yes
+N = 695 
+(7.3%)1
+No
+N = 7464 
+(93%)1
+P2
+Overall
+N = 8159 (100%)1
+Yes
+N = 484 (5.5%)1
+No
+N = 7675 (95%)1
+P2
+Sex
+0.074
+0.3
+ Male
+3932 (49%)
+339 (54%)
+3593 (49%)
+3932 (49%)
+220 (52%)
+3712 (49%)
+ Female
+4227 (51%)
+356 (46%)
+3871 (51%)
+4227 (51%)
+264 (48%)
+3963 (51%)
+Age (years)
+< 0.001
+< 0.001
+ 20–34
+3102 (37%)
+179 (28%)
+2923 (38%)
+3102 (37%)
+126 (28%)
+2976 (38%)
+ 35–44
+2009 (24%)
+142 (21%)
+1867 (24%)
+2009 (24%)
+104 (22%)
+1905 (24%)
+ 45–54
+2048 (25%)
+223 (27%)
+1825 (25%)
+2048 (25%)
+148 (25%)
+1900 (25%)
+ > 55
+1000 (14%)
+151 (24%)
+849 (13%)
+1000 (14%)
+106 (25%)
+894 (13%)
+Race
+< 0.001
+< 0.001
+ Mexican American
+1136 (9.5%)
+232 (24%)
+904 (8.4%)
+1136 (9.5%)
+169 (24%)
+967 (8.7%)
+ Other Hispanic
+796 (6.8%)
+107 (12%)
+689 (6.4%)
+796 (6.8%)
+75 (11%)
+721 (6.5%)
+ Non-Hispanic White
+3006 (63%)
+202 (51%)
+2804 (64%)
+3006 (63%)
+154 (54%)
+2852 (64%)
+ Non-Hispanic Black
+1747 (11%)
+47 (3.8%)
+1700 (12%)
+1,747 (11%)
+45 (4.8%)
+1702 (12%)
+ Other race
+1474 (9.1%)
+107 (9.3%)
+1367 (9.1%)
+1,474 (9.1%)
+41 (6.5%)
+1433 (9.3%)
+ Poverty level
+3.00 (1.44, 
+5.00)
+2.00 (1.08, 
+3.79)
+3.09 (1.48, 
+5.00)
+< 0.001
+3.00 (1.44, 5.00)
+2.06 (1.16, 3.82)
+3.07 (1.47, 5.00)
+< 0.001
+Education level
+< 0.001
+< 0.001
+ Less than high school education
+1301 (11%)
+195 (22%)
+1106 (11%)
+1301 (11%)
+137 (20%)
+1164 (11%)
+ High school graduate
+1749 (21%)
+185 (28%)
+1564 (21%)
+1749 (21%)
+130 (28%)
+1619 (21%)
+ High school education or above
+5109 (67%)
+315 (50%)
+4794 (69%)
+5109 (67%)
+217 (52%)
+4892 (68%)
+Hyperglycemia
+0.005
+0.007
+ No
+7868 (97%)
+653 (94%)
+7215 (97%)
+7868 (97%)
+451 (94%)
+7417 (97%)
+ Yes
+291 (3.3%)
+42 (5.8%)
+249 (3.1%)
+291 (3.3%)
+33 (6.2%)
+258 (3.2%)
+Hypertension
+0.6
+0.5
+ No
+8068 (99%)
+682 (99%)
+7386 (99%)
+8068 (99%)
+476 (99%)
+7592 (99%)
+ Yes
+91 (1.3%)
+13 (1.1%)
+78 (1.3%)
+91 (1.3%)
+8 (0.9%)
+83 (1.3%)
+High cholesterol
+0.10
+0.5
+ No
+7967 (98%)
+662 (97%)
+7305 (98%)
+7967 (98%)
+463 (97%)
+7504 (98%)
+ Yes
+192 (2.3%)
+33 (3.2%)
+159 (2.2%)
+192 (2.3%)
+21 (2.7%)
+171 (2.3%)
+Physical inactivity
+0.015
+0.004
+ No
+7809 (95%)
+643 (93%)
+7166 (96%)
+7809 (95%)
+441 (92%)
+7368 (96%)
+ Yes
+350 (4.6%)
+52 (7.0%)
+298 (4.4%)
+350 (4.6%)
+43 (8.1%)
+307 (4.3%)
+Sedentary time (hours)
+0.5
+0.6
+ < 4
+1928 (21%)
+186 (23%)
+1742 (20%)
+1928 (21%)
+129 (23%)
+1799 (20%)
+ 4–6
+1883 (23%)
+176 (23%)
+1707 (23%)
+1883 (23%)
+114 (21%)
+1769 (23%)
+ 6–8
+1214 (15%)
+103 (15%)
+1111 (15%)
+1214 (15%)
+73 (15%)
+1141 (15%)
+ > 8
+3134 (41%)
+230 (38%)
+2904 (41%)
+3134 (41%)
+168 (40%)
+2966 (41%)
+Calorie intake (kcal/day)
+2048 (1592, 
+2596)
+1873 (1474, 
+2467)
+2063 (1599, 
+2605)
+< 0.001
+2048 (1592, 2596)
+1876 (1490, 2488)
+2060 (1597, 2601)
+0.013
+Protein intake (g/day)
+79 (60, 103)
+73 (55, 97)
+80 (60, 103)
+0.002
+79 (60, 103)
+73 (55, 98)
+80 (60, 103)
+0.014
+Waist-height ratio (WHtR)
+0.57 (0.51, 
+0.64)
+0.69 (0.63, 
+0.75)
+0.56 (0.50, 
+0.62)
+< 0.001
+0.57 (0.51, 0.64)
+0.72 (0.68, 0.78)
+0.56 (0.50, 0.62)
+< 0.001
+Body roundness index (BRI)
+4.70 (3.53, 
+6.28)
+7.66 (6.12, 
+9.29)
+4.55 (3.43, 
+5.97)
+< 0.001
+4.70 (3.53, 6.28)
+8.34 (7.29, 10.02)
+4.58 (3.45, 5.97)
+< 0.001
+Body mass index (BMI)
+27.7 (24.0, 
+32.4)
+34.2 (30.1, 
+39.4)
+27.3 (23.7, 
+31.7)
+< 0.001
+27.7 (24.0, 32.4)
+36.5 (33.1, 41.5)
+27.3 (23.7, 31.6)
+< 0.001
+A body shape index (ABSI)
+0.081 (0.078, 
+0.083)
+0.082 (0.080, 
+0.085)
+0.080 (0.077, 
+0.083)
+< 0.001
+0.081 (0.078, 0.083)
+0.082 (0.079, 0.085)
+0.080 (0.077, 0.083)
+< 0.001
+Z-score of the log-transformed ABSI 
+(LBSIZ)
+− 595 (− 604, 
+− 587)
+− 590 (− 
+598, − 582)
+− 595 (− 604, 
+− 588)
+< 0.001
+− 595 (− 604, − 587)
+− 591 (− 599, − 582)
+− 595 (− 604, − 587)
+< 0.001
+Table 2.  Baseline characteristic of the included participants (2011–2018 NHANES database). 1Median 
+(IQR) for continuous; n (%) for categorical. 2Chi-squared test with Rao and Scott’s second-order correction; 
+Wilcoxon rank-sum test for complex survey samples.
+ 
+Scientific Reports |        (2024) 14:31776 
+5
+| https://doi.org/10.1038/s41598-024-82751-7
+www.nature.com/scientificreports/
+
+=== PDF PAGE 6 ===
+Receiver-operating characteristic (ROC) curve analysis and optimum thresholds for 
+anthropometric indices
+The prognostic models for diverse anthropometric indicators demonstrated commendable performance 
+(AUC > 0.7), with each model showcasing discernible predictive capability. Furthermore, the AUC value in 
+the validation cohort corresponded with the training cohort, affirming the sustained predictive efficacy of the 
+models in the validation group. In the SA training samples, the BRI indicator yielded the most robust predictive 
+effect for SA (AUC = 0.867), closely pursued by WHtR (AUC = 0.862). Conversely, in the SO training samples, 
+WHtR emerged as the most potent predictor for SO (AUC = 0.857), followed by BRI (AUC = 0.855). Noteworthy 
+is the comparatively suboptimal predictive efficacy of the ABSI and LBSIZ models for SA and SO (Fig. 2).
+The evaluation scores for each indicator were notably elevated, with the BRI metric exhibiting the highest 
+Youden index, implicating its relatively heightened discriminatory ability for SA and SO. The sensitivity and 
+specificity of the varied anthropometric indicators in predicting the onset of SA and SO are featured in Table 4.
+Curves 1 to 5 correspond to the following anthropometric indices: ABSI, LBSIZ, BRI, BMI, WHtR.
+Anthropometric indicators were used to predict SA and SO data derived from BIA measurements, and the 
+results showed that the effect of each indicator model was good (AUC > 0.8) (Fig. 3).
+Dose-response relationship of anthropometric indicators
+Restrictive cubic spline visualization reveals a notable phenomenon wherein each anthropometric index exhibits 
+a J-shaped correlation with the propensity for obstructive sleep apnea and snoring incidences, with a statistical 
+significance of P < 0.0001 (Fig. 4).
+For instance, taking the body roundness index (BRI) as a case in point, the risk of SA is minimized at a BRI 
+value of 3.6, while the risk of SO reaches its nadir at a BRI of 3.7. Notably, any deviation from these optimal BRI 
+values will result in an escalated risk of SA and SO occurrences.
+Fig. 2.  ROC curve of anthropometric indicators predicting SA and SO occurrence. (A) Presents the 
+ROC curve for the prediction of SA occurrence in the training group based on human anthropometric 
+measurements; (B) exhibits the ROC curve for the prediction of SO occurrence in the training group.
+ 
+Index
+Model 1
+Model 2
+Model 3
+Sarcopenia
+ABSI
+3.17 (2.43, 4.12)*
+2.34 (1.74, 3.17)*
+2.34 (1.71, 3.19)*
+BRI
+1.57 (1.51, 1.63)*
+1.66 (1.58, 1.74)*
+1.67 (1.59, 1.76)*
+BMI
+1.13 (1.12, 1.15)*
+1.15 (1.13, 1.17)*
+1.15 (1.14, 1.17)*
+WHtR
+3.30 (2.99, 3.64)*
+3.85 (3.40, 4.36)*
+3.93 (3.45, 4.48)*
+LBSIZ
+1.04 (1.03, 1.05)*
+1.03 (1.02, 1.04)*
+1.03 (1.02, 1.04)*
+Sarcopenic Obesity
+ABSI
+2.48 (1.85, 3.32)*
+1.79 (1.29, 2.49)*
+1.78 (1.27, 2.49)*
+BRI
+1.76 (1.68, 1.85)*
+1.89 (1.78, 2.00)*
+1.91 (1.79, 2.03)*
+BMI
+1.18 (1.17, 1.20)*
+1.21 (1.19, 1.23)*
+1.21 (1.19, 1.24)*
+WHtR
+4.67 (4.13, 5.29)*
+5.73 (4.91, 6.69)*
+5.89 (5.02, 6.92)*
+LBSIZ
+1.03 (1.02, 1.04)*
+1.02 (1.01, 1.03)*
+1.02 (1.01, 1.03)*
+Table 3.  Logistic regression of anthropometric indicators with SA and SO [OR (95% CI)] Model 1 is a 
+univariate model. Model 2 adjusts for demographic variables, including age, sex, race, poverty level and 
+education level. Model 3 includes all relevant covariates, including demographic variables, hyperglycemia, 
+hypertension, high cholesterol, physical inactivity, sedentary time, and dietary intakes of calories and proteins. 
+ABSI a body shape index, BRI body roundness index, BMI body mass index, WHtR waist-height ratio, LBSIZ 
+the z-score of the log-transformed ABSI. *P < 0.05.
+ 
+Scientific Reports |        (2024) 14:31776 
+6
+| https://doi.org/10.1038/s41598-024-82751-7
+www.nature.com/scientificreports/
+
+=== PDF PAGE 7 ===
+Within the cohort of individuals aged 40, a stratified analysis by sex among the middle-income group unveils 
+a sexual disparity in the incidence rates of SA and SO, with a higher prevalence observed among males compared 
+to females. However, with the advancement of age, the prevalence rates of SA and SO among females increased at 
+a faster pace than those of males. Notably, at a BRI value of 3.6, the risk of SA is mitigated for both sexes, whereas 
+for females, a BRI range between 2.3 and 4.4 signifies a risk of SA lower than unity. Similarly, at a BRI value of 
+3.7, the risk of SO is minimized for both sexes, while for females, a BRI range between 2.3 and 5.0 corresponds 
+to an SO risk below one (Fig. 5).
+Discussion
+This investigation reveals that hypertension and high cholesterol levels are not significantly associated with SA 
+and SO, statistically speaking. Contrary to research suggesting a linkage between hypertension, high cholesterol, 
+and the incidence of SA and SO54–57, the findings of the present study lends support to an opposing hypothesis58. 
+The discrepancy in outcomes may be attributed to variations in the study cohort and the metrics employed 
+for assessment, which could account for the observed inconsistency in results58.There is a positive associations 
+between all anthropometric measurements and the incidence of SA and SO. After controlling for all covariates, 
+the correlation between WHtR and SA, SO was found to be stronger, indicating a potential association between 
+elevated WHtR and increased risk of metabolic diseases59. The ROC curve was employed in the construction 
+of the prediction model, demonstrating excellent performance across all models. Notably, the Body Roundness 
+Index (BRI) and the WHtR, metrics utilized to quantify central adiposity60,61, have demonstrated a high degree 
+of validity in these analyses.
+Patients afflicted with SA and SO frequently present with abdominal obesity and visceral fat accumulation34,62, 
+Differential distribution of body fat exerts a significant impact on metabolic function63. An excessive accumulation 
+of adipose tissue disrupts homeostasis and triggers a cascade of inflammatory responses. Moreover, the interplay 
+between adipokines and myokines, along with a dysregulated immune-inflammatory response, interferes with 
+the regenerative processes of skeletal muscle, potentially leading to comprehensive sarcopenia and sarcopenic 
+obesity64,65. Diverging from the outcomes of prior research40, the predictive efficacy of the ABSI and LBSIZ 
+Fig. 3.  ROC curve of anthropometric indicators predicting BIA data. (A) Presents the ROC curve for the 
+prediction of SA occurrence in the BIA data based on human anthropometric measurements; (B) exhibits the 
+ROC curve for the prediction of SO occurrence in the BIA data. Curves 1 to 5 correspond to the following 
+anthropometric indices: ABSI, LBSIZ, BRI, BMI, WHtR.
+ 
+Variable
+Index
+AUC
+95%CI
+Jorden index
+Sensitivity
+Specificity
+Sarcopenia
+ABSI
+0.759
+(0.74, 0.78)**
+0.40
+0.68
+0.72
+LBSIZ
+0.758
+(0.74, 0.78)**
+0.39
+0.67
+0.72
+BRI
+0.867
+(0.85, 0.88)**
+0.58
+0.81
+0.77
+BMI
+0.835
+(0.82, 0.85)**
+0.52
+0.83
+0.69
+WHtR
+0.862
+(0.85, 0.88)**
+0.55
+0.79
+0.76
+Sarcopenic Obesity
+ABSI
+0.742
+(0.72, 0.76)**
+0.37
+0.56
+0.81
+LBSIZ
+0.741
+(0.72, 0.76)**
+0.37
+0.56
+0.81
+BRI
+0.855
+(0.84, 0.87)**
+0.55
+0.85
+0.70
+BMI
+0.825
+(0.81, 0.84)**
+0.50
+0.77
+0.73
+WHtR
+0.857
+(0.84, 0.87)**
+0.54
+0.83
+0.71
+Table 4.  Assessed value of various anthropometric indicators on SA and SO occurrence. ABSI a body shape 
+index, BRI body roundness index, BMI body mass index, WHtR waist-height ratio, LBSIZ the z-score of the 
+log-transformed ABSI. **P < 0.001.
+ 
+Scientific Reports |        (2024) 14:31776 
+7
+| https://doi.org/10.1038/s41598-024-82751-7
+www.nature.com/scientificreports/
+
+=== PDF PAGE 8 ===
+models appears to be relatively modest. The potential explanation for this discrepancy could be that SA and SO 
+are chronic conditions associated with aging, and the ABSI and LBSIZ may not be robust predictors for chronic 
+illnesses66, these indices may serve a supplementary role in the initial evaluation of human tissue distribution24.
+Fig. 4.  Dose-effect relationship between anthropometric indexes and SA and SO occurrence. (A,C,E,G,I) 
+are the dose-effect relationship between BRI, ABSI, WHtR, LBSIZ, BMI and SA occurrence, respectively. 
+(B,D,F,H,J) are the dose-effect relationship between BRI, ABSI, WHtR, LBSIZ, BMI and SO occurrence, 
+respectively.
+ 
+Scientific Reports |        (2024) 14:31776 
+8
+| https://doi.org/10.1038/s41598-024-82751-7
+www.nature.com/scientificreports/
+
+=== PDF PAGE 9 ===
+The RCS curve illustrates that each anthropometric index displays a J-shaped curve with respect to 
+sarcopenia (SA) and osteopenia (SO), suggesting the presence of an optimal threshold for the anthropometric 
+index where the prevalence of SA and SO is minimized. Any deviation from this threshold will augmented 
+the susceptibility to disease development. The present investigation indicate that among the 40-year-old 
+demographic, males exhibit a higher incidence of disease. Beginning at the age of 30, there is an annual decrease 
+of approximately 1% in testosterone levels among males67. The elevation of visceral adiposity resultant from this 
+decline in testosterone can elicit a catabolic influence on muscle tissue through the action of pro-inflammatory 
+cytokines68. In females, oestrogen is instrumental in promoting growth and maintaining muscle mass in females, 
+with estradiol specifically mitigating inflammatory stress-related damage to skeletal muscle69,70. Nonetheless, it 
+is pertinent to highlight that the decline in estrogen levels post-menopause is often associated with a propensity 
+for increased subcutaneous fat deposition. This shift may conducive to enhanced adiposity in postmenopausal 
+women, thereby potentially predisposing them to the onset of SA and SO71,72. Individuals in middle age and 
+older adulthood, irrespective of biological sex, should prioritize the regular assessment of their skeletal muscle 
+health, assessing health risks, ensuring adequate intake of protein and energy in their daily lives, and enhancing 
+physical activity as well as adhering to a regimen of regular exercise.
+This investigation proposes that when assessing primary medical care and physical fitness, the consideration 
+of BMI alone is insufficient. It is imperative to also take into account the results of body measurement indexes 
+such as BRI and WHtR, as their relevance to the risk of SA and SO is more pronounced. The practical utility of 
+these indices is underscored by their facilitation in measurement, capacity for direct computation, and high level 
+of precision.
+Despite the study’s strength in its substantial and representative sample size, several limitations must be 
+acknowledged. Primarily, the cross-sectional nature of this research precludes a thorough investigation into 
+causal relationships. Secondly, although the analysis has been adjusted for a selection of potential confounding 
+variables, the possibility of residual confounding remains. Furthermore, the study fails to address the mechanistic 
+Fig. 5.  Dose-effect relationship between SA and SO risk by sex 1 for male and 2 for female. (A) Is the dose-
+effect relationship of SA risk of different BRI index, (B) is the dose-effect relationship of SO risk of different 
+BRI index, (C) is the dose-effect relationship of SA risk of different age, and (D) is the dose-effect relationship 
+of SO risk of different age.
+ 
+Scientific Reports |        (2024) 14:31776 
+9
+| https://doi.org/10.1038/s41598-024-82751-7
+www.nature.com/scientificreports/
+
+=== PDF PAGE 10 ===
+association between muscle loss syndrome and osteoporosis73,74, a link compounded by hormone levels 
+impacting not only muscle tissue but also closely intertwining with mineral metabolism in bones75. However, 
+this study neglects to delve into the complications of SA and SO, such as osteoporosis, due to the presence of 
+confounding factors. In addition, owing to the lack of data pertaining to calf circumference (CC) and mid-upper 
+arm circumference (AC) within the database, this investigation was precluded from conducting a comparative 
+analysis of the predictive efficacy of the anthropometric indices under consideration with those methods. Lastly, 
+given that the study’s population primarily comprises Americans, further research is requisite to explore the 
+association between body measurement indexes and SA and SO in Asian populations.
+Conclusions
+A variety of anthropometric measurements demonstrate significant associations with adult sarcopenia and 
+sarcopenic obesity, representing valuable predictive factors. Notably, the body roundness index (BRI) and the 
+waist-to-height ratio (WHtR) emerge as particularly promising anthropometric indicators. Furthermore, a 
+dose-response analysis reveals the optimal thresholds for these measurements, corresponding to the lowest risk 
+of developing sarcopenia and sarcopenic obesity. Consequently, it is prudent for individuals reaching middle age 
+and beyond to endeavor towards vigilant surveillance of their muscular health and concomitant health risks. 
+Embracing a regimen that ensures adequate daily protein and energy intake, in conjunction with a commitment 
+to regular physical exercise, stands pivotal in the endeavor to safeguard overall well-being.
+Data availability
+All data are available at the National Health and Nutrition Examination Survey ​(​h​t​t​p​s​:​/​/​w​w​w​.​c​d​c​.​g​o​v​/​n​c​h​s​/​n​h​a​
+n​e​s​/​i​n​d​e​x​.​h​t​m​)​.​I​n addition, the data files used have been provided in the “related files”.
+Received: 22 June 2024; Accepted: 9 December 2024
+References
+	 1.	 Schaap, L. A., Van Schoor, N. M., Lips, P. & Visser, M. Associations of sarcopenia definitions, and their components, with the 
+incidence of recurrent falling and fractures: the longitudinal aging study Amsterdam. J. Gerontol. A. 73, 1199–1204 (2018).
+	 2.	 Malmstrom, T. K., Miller, D. K., Simonsick, E. M., Ferrucci, L. & Morley, J. E. SARC-F: a symptom score to predict persons with 
+sarcopenia at risk for poor functional outcomes. J. Cachexia Sarcopenia Muscle 7, 28–36 (2016).
+	 3.	 Xia, L. et al. Sarcopenia and adverse health-related outcomes: an umbrella review of meta-analyses of observational studies. Cancer 
+Med. 9, 7964–7978 (2020).
+	 4.	 Mijnarends, D. M. et al. Muscle, health and costs: a glance at their relationship. J. Nutr. Health Aging 22, 766–773 (2018).
+	 5.	 Donini, L. M. et al. Definition and diagnostic criteria for sarcopenic obesity: ESPEN and EASO consensus statement. Obes. Facts 
+15, 321–335 (2022).
+	 6.	 Choi, K. M. Sarcopenia and sarcopenic obesity. Korean J. Intern. Med. 31, 1054–1060 (2016).
+	 7.	 Colleluori, G. & Villareal, D. T. Aging, obesity, Sarcopenia and the effect of diet and exercise intervention. Exp. Gerontol. 155, 
+111561 (2021).
+	 8.	 Petermann-Rocha, F. et al. Global prevalence of Sarcopenia and severe Sarcopenia: a systematic review and meta-analysis. J. 
+Cachexia Sarcopenia Muscle 13, 86–99 (2022).
+	 9.	 Marini, E., Sulis, S., Vorobel’ová, L. & Stagi, S. Specific bioelectrical vectors pattern in individuals with sarcopenic obesity. Clin. 
+Nutr. 43, 620–628 (2024).
+	10.	 Aleixo, G. F. P. et al. Bioelectrical impedance analysis for the assessment of Sarcopenia in patients with cancer: a systematic review. 
+Oncologist 25, 170–182 (2020).
+	11.	 Gonzalez, M. C., Barbosa-Silva, T. G. & Heymsfield, S. B. Bioelectrical impedance analysis in the assessment of Sarcopenia. Curr. 
+Opin. Clin. Nutr. Metab. Care 21, 366–374 (2018).
+	12.	 Albano, D., Messina, C., Vitale, J. & Sconfienza, L. M. Imaging of Sarcopenia: old evidence and new insights. Eur. Radiol. 30, 
+2199–2208 (2020).
+	13.	 Li, R. et al. Screening for Sarcopenia with a self-reported cartoon questionnaire: combining SARC-F with finger-ring test. J. Nutr. 
+Health Aging 24, 1100–1106 (2020).
+	14.	 Lu, J. L. et al. Comparison of five sarcopenia screening tools in preoperative patients with gastric cancer using the diagnostic 
+criteria of the European Working Group on Sarcopenia in Older People 2. Nutrition 95, 111553 (2022).
+	15.	 Cannard, C., Brandmeyer, T., Wahbeh, H. & Delorme, A. Self-health monitoring and wearable neurotechnologies. Handb. Clin. 
+Neurol. 168, 207–232 (2020).
+	16.	 Hadjiconstantinou, M. et al. Using intervention mapping to develop a digital self-management program for people with type 2 
+diabetes: Tutorial on MyDESMOND. J. Med. Internet Res. 22, e17316 (2020).
+	17.	 Bandura, A. Health promotion by social cognitive means. Health Educ. Behav. 31, 143–164 (2004).
+	18.	 Sobhani, Z. et al. Self-management behaviors and anthropometric indices after Roux-en-Y gastric bypass. World J. Surg. 45, 1812–
+1817 (2021).
+	19.	 Hu, J., Basit, T., Nelson, A. & Bartlett, A. Changes in exercise capacity and anthropometric measures after work it out-a holistic 
+chronic disease self-management program for urban aboriginal and Torres Strait Islander people. Public Health 174, 49–55 (2019).
+	20.	 Yang, J. et al. Using different anthropometric indices to assess prediction ability of type 2 diabetes in elderly population: a 5 year 
+prospective study. BMC Geriatr. 18, 218 (2018).
+	21.	 Wei, L. & Xue, W. Comparisons of visceral adiposity index, body shape index, body mass index and waist circumference and their 
+associations with diabetes mellitus in adults. Nutrients 11, 1580 (2019).
+	22.	 Tang, L. & Zeng, L. Comparative efficacy of anthropometric indices in predicting 10-year ASCVD risk: insights from NHANES 
+data. Front. Cardiovasc. Med. 11, 1341476 (2024).
+	23.	 Hu, X. et al. Association of novel anthropometric indices with prevalence of kidney stone disease: a population-based cross-
+sectional study. Eur. J. Med. Res. 29, 204 (2024).
+	24.	 Qiao, Y. S. et al. Association of Sarcopenia and a body shape index with overall and cause-specific mortality. Front. Endocrinol. 13, 
+839074 (2022).
+	25.	 Lee, H. et al. Association between body shape index and risk of mortality in the United States. Sci. Rep. 12, 11254 (2022).
+	26.	 Lian, R. et al. Validated tools for screening Sarcopenia: a scoping review. J. Am. Med. Dir. Assoc. 24, 1645–1654 (2023).
+	27.	 Gonzalez, M. C., Mehrnezhad, A., Razaviarab, N., Barbosa-Silva, T. G. & Heymsfield, S. B. Calf circumference: cutoff values from 
+the NHANES 1999–2006. Am. J. Clin. Nutr. 113, 1679–1687 (2021).
+Scientific Reports |        (2024) 14:31776 
+10
+| https://doi.org/10.1038/s41598-024-82751-7
+www.nature.com/scientificreports/
+
+=== PDF PAGE 11 ===
+	28.	 Ghaben, A. L. & Scherer, P. E. Adipogenesis and metabolic health. Nat. Rev. Mol. Cell. Biol. 20, 242–258 (2019).
+	29.	 Souza, L. F. D. et al. Are sociodemographic and anthropometric variables effective in screening probable and confirmed Sarcopenia 
+in community-dwelling older adults? A cross-sectional study. Sao Paulo Med. J. 141, e2022141 (2023).
+	30.	 Pinheiro, P. A. et al. Anthropometric indicators as screening tools for Sarcopenia in older adult women. Enferm Clín. 30, 269–274 
+(2020).
+	31.	 Esteves, C. L. et al. Anthropometric indicators as a discriminator of Sarcopenia in community-dwelling older adults of the Amazon 
+region: a cross-sectional study. BMC Geriatr. 20, 518 (2020).
+	32.	 Lam, B. C. C., Koh, G. C. H., Chen, C., Wong, M. T. K. & Fallows, S. J. Comparison of body mass index (BMI), body adiposity index 
+(BAI), waist circumference (WC), waist-to-hip ratio (WHR) and waist-to-height ratio (WHtR) as predictors of cardiovascular 
+disease risk factors in an adult population in Singapore. PLoS ONE 10, e0122985 (2015).
+	33.	 Ardesch, F. H. et al. The obesity paradox in lung cancer: associations with body size versus body shape. Front. Oncol. 10, 591110 
+(2020).
+	34.	 Gažarová, M., Bihari, M., Lorková, M., Lenártová, P. & Habánová, M. The use of different anthropometric indices to assess the 
+body composition of young women in relation to the incidence of obesity, Sarcopenia and the premature mortality risk. Int. J. 
+Environ. Res. Public. Health 19, 12449 (2022).
+	35.	 Li, C. et al. Pathogenesis of Sarcopenia and the relationship with fat mass: descriptive review. J. Cachexia Sarcopenia Muscle 13, 
+781–794 (2022).
+	36.	 DeLacey, S. & Josefson, J. L. A mini-review of pediatric anthropometrics as predictors of future insulin resistance. Front. Endocrinol. 
+13, 826430 (2022).
+	37.	 Zhang, X. et al. Associations of body-roundness index and sarcopenia with cardiovascular disease among middle-aged and older 
+adults: findings from CHARLS. J. Nutr. Health Aging 27, 953–959 (2023).
+	38.	 Moon, S., Kim, Y. J., Yu, J. M., Kang, J. G. & Chung, H. S. Z-score of the log-transformed a body shape index predicts low muscle 
+mass in population with abdominal obesity: the US and Korea National Health and Nutrition Examination Survey. PLoS ONE 15, 
+e0242557 (2020).
+	39.	 Biolo, G. et al. Inverse relationship between ‘a body shape index’ (ABSI) and fat-free mass in women and men: insights into 
+mechanisms of sarcopenic obesity. Clin. Nutr. 34, 323–327 (2015).
+	40.	 Chung, W. et al. Utility of the Z-score of log-transformed a body shape index (LBSIZ) in the assessment for sarcopenic obesity and 
+cardiovascular disease risk in the United States. Sci. Rep. 9, 9292 (2019).
+	41.	 Jayedi, A. et al. Anthropometric and adiposity indicators and risk of type 2 diabetes: systematic review and dose-response meta-
+analysis of cohort studies. BMJ 376, e067516 (2022).
+	42.	 Barazzoni, R. et al. Sarcopenic obesity: time to meet the challenge. Clin. Nutr. 37, 1787–1793 (2018).
+	43.	 Ahluwalia, N., Dwyer, J., Terry, A., Moshfegh, A. & Johnson, C. Update on NHANES dietary data: focus on collection, release, 
+analytical considerations, and uses to inform public policy. Adv. Nutr. 7, 121–134 (2016).
+	44.	 Wang, M. et al. Diabetes and sarcopenic obesity: Pathogenesis, diagnosis, and treatments. Front. Endocrinol. 11, 568 (2020).
+	45.	 Robinson, S. M. et al. Does nutrition play a role in the prevention and management of Sarcopenia? Clin. Nutr. 37, 1121–1132 
+(2018).
+	46.	 Studenski, S. A. et al. The FNIH Sarcopenia project: Rationale, study description, conference recommendations, and final estimates. 
+J. Gerontol. A 69, 547–558 (2014).
+	47.	 Cheng, K. Y. et al. Diagnosis of Sarcopenia by evaluating skeletal muscle mass by adjusted bioimpedance analysis validated with 
+dual-energy X-ray absorptiometry. J. Cachexia Sarcopenia Muscle 12, 2163–2173 (2021).
+	48.	 Janssen, I., Heymsfield, S. B., Baumgartner, R. N. & Ross, R. Estimation of skeletal muscle mass by bioelectrical impedance analysis. 
+J. Appl. Physiol. 89, 465–471 (2000).
+	49.	 Janssen, I. Skeletal muscle cutpoints associated with elevated physical disability risk in older men and women. Am. J. Epidemiol. 
+159, 413–421 (2004).
+	50.	 Chung, W., Park, C. G. & Ryu, O. H. Association of a new measure of obesity with hypertension and health-related quality of life. 
+PLoS ONE 11, e0155399 (2016).
+	51.	 Gennuso, K. P., Gangnon, R. E., Thraen-Borowski, K. M. & Colbert, L. H. Dose-response relationships between sedentary 
+behaviour and the metabolic syndrome and its components. Diabetologia 58, 485–492 (2015).
+	52.	 Dunstan, D. W., Dogra, S., Carter, S. E. & Owen, N. Sit less and move more for cardiovascular health: emerging insights and 
+opportunities. Nat. Rev. Cardiol. 18, 637–648 (2021).
+	53.	 Desquilbet, L. & Mariotti, F. Dose-response analyses using restricted cubic spline functions in public health research. Stat. Med. 29, 
+1037–1057 (2010).
+	54.	 Jurdana, M. & Žiberna, L. Sarcopenic obesity and hypertension in elderly patients: a narrative review of pathophysiology and 
+management strategies. Ann. Ist Super Sanita 59, 231–239 (2023).
+	55.	 Xing, E. & Wan, C. Prevalence of and factors associated with sarcopenia among elderly individuals with hypertension. J. Int. Med. 
+Res. 50, 030006052211104 (2022).
+	56.	 Hua, N. et al. High-density lipoprotein cholesterol level and risk of muscle strength decline and sarcopenia in older adults. Clin. 
+Nutr. 43, 2289–2295 (2024).
+	57.	 Jiang, Y. et al. The association of lipid metabolism and sarcopenia among older patients: a cross-sectional study. Sci. Rep. 13, 17538 
+(2023).
+	58.	 Pasdar, Y. et al. Association of obesity, Sarcopenia, and sarcopenic obesity with hypertension in adults: a cross-sectional study from 
+Ravansar, Iran during 2014–2017. Front. Public Health 9, 705055 (2022).
+	59.	 Yang, B. et al. Trends in elevated waist-to-height ratio and waist circumference in US adults and their associations with 
+cardiometabolic diseases and cancer, 1999–2018. Front. Nutr. 10, 1124468 (2023).
+	60.	 Mao, T., He, Q., Yang, J., Jia, L. & Xu, G. Relationship between gout, hyperuricemia, and obesity-does central obesity play a 
+significant role?—A study based on the NHANES database. Diabetol. Metab. Syndr. 16, 24 (2024).
+	61.	 Gažarová, M., Bihari, M. & Šoltís, J. Fat and fat-free mass as important determinants of body composition assessment in relation 
+to sarcopenic obesity. Rocz. Panstw Zakl. Hig. 74, 59–69 (2023).
+	62.	 Kim, H. K. et al. Association of visceral fat obesity, Sarcopenia, and myosteatosis with non-alcoholic fatty liver disease without 
+obesity. Clin. Mol. Hepatol. 29, 987–1001 (2023).
+	63.	 Palmer, A. K. & Jensen, M. D. Metabolic changes in aging humans: current evidence and therapeutic strategies. J. Clin. Investig. 
+132, e158451 (2022).
+	64.	 Park, M. J. & Choi, K. M. Interplay of skeletal muscle and adipose tissue: sarcopenic obesity. Metabolism 144, 155577 (2023).
+	65.	 Polyzos, S. A., Vachliotis, I. D. & Mantzoros, C. S. Sarcopenia, sarcopenic obesity and nonalcoholic fatty liver disease. Metabolis 
+147, 155676 (2023).
+	66.	 Ji, M., Zhang, S. & An, R. Effectiveness of a body shape index (ABSI) in predicting chronic diseases and mortality: a systematic 
+review and meta-analysis. Obes. Rev. 19, 737–759 (2018).
+	67.	 Roh, E. & Choi, K. M. Health consequences of sarcopenic obesity: a narrative review. Front. Endocrinol. (Lausanne) 11, 332 (2020).
+	68.	 Tian, X., Lou, S. & Shi, R. From mitochondria to Sarcopenia: role of 17β-estradiol and testosterone. Front. Endocrinol. 14, 1156583 
+(2023).
+	69.	 Carson, J. A. & Manolagas, S. C. Effects of sex steroids on bones and muscles: similarities, parallels, and putative interactions in 
+health and disease. Bone 80, 67–78 (2015).
+Scientific Reports |        (2024) 14:31776 
+11
+| https://doi.org/10.1038/s41598-024-82751-7
+www.nature.com/scientificreports/
+
+=== PDF PAGE 12 ===
+	70.	 Geraci, A. et al. Sarcopenia and menopause: the role of estradiol. Front. Endocrinol. 12, 682012 (2021).
+	71.	 Lu, L. & Tian, L. Postmenopausal osteoporosis coexisting with Sarcopenia: the role and mechanisms of estrogen. J. Endocrinol. 259, 
+e230116 (2023).
+	72.	 Divaris, E., Anagnostis, P., Gkekas, N. K., Kouidi, E. & Goulis, D. G. Early menopause and premature ovarian insufficiency may 
+increase the risk of Sarcopenia: a systematic review and meta-analysis. Maturitas 175, 107782 (2023).
+	73.	 Reginster, J. Y., Beaudart, C., Buckinx, F. & Bruyère, O. Osteoporosis and sarcopenia: two diseases or one? Curr. Opin. Clin. Nutr. 
+Metab. Care 19, 31–36 (2016).
+	74.	 Spanoudaki, M. et al. Sarcopenia and sarcopenic obesity and osteoarthritis: a discussion among muscles, fat, bones, and aging. Life 
+(Basel) 13, 1242 (2023).
+	75.	 Almeida, M. et al. Estrogens and androgens in skeletal physiology and pathophysiology. Physiol. Rev. 97, 135–187 (2017).
+Acknowledgements
+We would like to express our gratitude to The National Health and Nutrition Examination Survey for the com­
+prehensive data provided, and express our sincere gratitude to the teachers and fellow students who participated 
+in this study.
+Author contributions
+W. X. is responsible for writing the topic of the paper, C. Z. and Z. Y. provide technical help on the paper, and 
+Professor Ren Hong provides guidance and assistance in all aspects.
+Declarations
+Competing interests
+The authors declare no competing interests.
+Ethical approval
+This study was approved by the Ethics Committee of Beijing Sport University, all methods are carried out in 
+accordance with the relevant guidelines and regulations.
+Informed consent
+This paper is based on an open database analysis of existing data, and all participants had signed informed 
+consent forms at the time of data collection.
+Additional information
+Correspondence and requests for materials should be addressed to H.R.
+Reprints and permissions information is available at www.nature.com/reprints.
+Publisher’s note  Springer Nature remains neutral with regard to jurisdictional claims in published maps and 
+institutional affiliations.
+Open Access  This article is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 
+4.0 International License, which permits any non-commercial use, sharing, distribution and reproduction in 
+any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide 
+a link to the Creative Commons licence, and indicate if you modified the licensed material. You do not have 
+permission under this licence to share adapted material derived from this article or parts of it. The images or 
+other third party material in this article are included in the article’s Creative Commons licence, unless indicated 
+otherwise in a credit line to the material. If material is not included in the article’s Creative Commons licence 
+and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to 
+obtain permission directly from the copyright holder. To view a copy of this licence, visit ​h​t​t​p​:​/​/​c​r​e​a​t​i​v​e​c​o​m​m​o​
+n​s​.​o​r​g​/​l​i​c​e​n​s​e​s​/​b​y​-​n​c​-​n​d​/​4​.​0​/​.​
+© The Author(s) 2024 
+Scientific Reports |        (2024) 14:31776 
+12
+| https://doi.org/10.1038/s41598-024-82751-7
+www.nature.com/scientificreports/

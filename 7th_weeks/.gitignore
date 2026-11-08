@@ -1,0 +1,5 @@
+/analysis/data/raw/
+/analysis/data/derived/covariates_candidate.csv
+/analysis/data/derived/covariates_sources_generated.json
+__pycache__/
+/analysis/runs/verification-local/
