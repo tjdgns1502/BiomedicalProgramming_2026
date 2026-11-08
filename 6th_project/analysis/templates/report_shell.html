@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>심박수 시계 정확도 분석</title>
+<style>
+:root{
+  --bg:#f7f7f5; --surface:#ffffff; --ink:#1d1d1f; --muted:#5b5b60; --line:#dedcd6;
+  --accent:#1f5f9e; --concept:#1f5f9e; --concept-bg:#eef4fb; --paper:#9a5b00; --paper-bg:#fdf5e8;
+  --ok:#22744a; --warn:#a15c00; --bad:#b3261e; --code:#f0efeb;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#16171a; --surface:#1f2024; --ink:#ececec; --muted:#a8a8b0; --line:#34353b;
+    --accent:#7fb2ea; --concept:#7fb2ea; --concept-bg:#1b2633; --paper:#e7b464; --paper-bg:#2b2318;
+    --ok:#6fcf97; --warn:#f2b45b; --bad:#ff8a80; --code:#2a2b30;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 "Pretendard","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",system-ui,sans-serif;-webkit-text-size-adjust:100%}
+a{color:var(--accent)}
+code,pre{font-family:Consolas,"D2Coding",ui-monospace,monospace;font-size:.88em}
+code{background:var(--code);padding:.1em .3em;border-radius:4px;overflow-wrap:anywhere}
+pre{background:var(--code);padding:12px;border-radius:8px;overflow-x:auto;white-space:pre-wrap;word-break:break-word}
+pre code{background:none;padding:0}
+img{max-width:100%;height:auto;background:#fff;border:1px solid var(--line);border-radius:6px}
+.layout{display:grid;grid-template-columns:250px minmax(0,1fr);max-width:1280px;margin:0 auto}
+nav.toc{position:sticky;top:0;align-self:start;height:100vh;overflow-y:auto;padding:20px 14px;border-right:1px solid var(--line);font-size:14px}
+nav.toc h2{font-size:13px;letter-spacing:.04em;color:var(--muted);margin:0 0 8px}
+nav.toc ol{list-style:none;margin:0;padding:0}
+nav.toc li{margin:2px 0}
+nav.toc a{display:block;padding:4px 8px;border-radius:6px;text-decoration:none;color:var(--ink)}
+nav.toc a:hover{background:var(--code)}
+nav.toc .sub a{padding-left:20px;color:var(--muted);font-size:13px}
+main{padding:24px 28px 80px;min-width:0}
+header.top{border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:8px}
+header.top h1{font-size:1.7rem;line-height:1.3;margin:0 0 6px}
+.meta{color:var(--muted);font-size:14px}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+button,.btn{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:6px 12px;border-radius:8px;cursor:pointer}
+button:hover{border-color:var(--accent)}
+button[aria-pressed="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+section{margin-top:36px}
+section > h2{font-size:1.4rem;border-bottom:2px solid var(--ink);padding-bottom:4px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:16px 0}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.card .k{font-size:13px;color:var(--muted)}
+.card .v{font-size:1.05rem;font-weight:700}
+.card .s{font-size:13px;color:var(--muted)}
+.tw{overflow-x:auto;margin:12px 0;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{padding:6px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;white-space:nowrap}
+td{white-space:normal;min-width:4em}
+th{background:var(--code);position:sticky;top:0}
+.stage{margin-top:40px}
+.stage > h3{font-size:1.25rem;margin-bottom:4px}
+.stage .q{color:var(--muted);margin-top:0}
+.panel{border:1px solid var(--line);border-left-width:6px;border-radius:10px;padding:4px 20px 16px;margin:16px 0;background:var(--surface)}
+.panel.concept{border-left-color:var(--concept)}
+.panel.paper{border-left-color:var(--paper)}
+.panel .tag{display:inline-block;margin-top:14px;font-size:12px;font-weight:700;letter-spacing:.05em;padding:3px 10px;border-radius:999px}
+.panel.concept .tag{background:var(--concept-bg);color:var(--concept)}
+.panel.paper .tag{background:var(--paper-bg);color:var(--paper)}
+.panel h1{font-size:1.15rem;margin:8px 0 12px}
+.panel h2{font-size:1.05rem;margin:22px 0 8px;border-bottom:1px solid var(--line);padding-bottom:3px}
+.panel h3{font-size:1rem;margin:18px 0 6px}
+.panel blockquote{margin:8px 0;padding:6px 14px;border-left:3px solid var(--line);color:var(--muted);background:var(--bg)}
+.mdtools{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;padding-top:10px;border-top:1px dashed var(--line);font-size:14px}
+.mdtools details{width:100%}
+.mdtools summary{cursor:pointer;color:var(--accent)}
+.flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin:16px 0}
+.flow .node{flex:1 1 150px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:14px}
+.flow .node b{display:block}
+.flow .arrow{align-self:center;color:var(--muted);font-size:20px}
+.filters{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:8px 0}
+.note{font-size:14px;color:var(--muted)}
+.lab{background:var(--surface);border:1px dashed var(--concept);border-radius:10px;padding:14px 18px}
+.lab table input{width:5.5em;font:inherit;padding:2px 4px;border:1px solid var(--line);border-radius:4px;background:var(--bg);color:var(--ink)}
+.lab .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start}
+.lab svg{width:100%;max-width:340px;height:auto;background:var(--bg);border-radius:8px}
+details.issue{background:var(--surface);border:1px solid var(--line);border-radius:8px;margin:6px 0;padding:6px 12px}
+details.issue summary{cursor:pointer}
+.badge{display:inline-block;font-size:12px;padding:1px 8px;border-radius:999px;border:1px solid currentColor;margin-left:6px}
+.st-ok{color:var(--ok)} .st-warn{color:var(--warn)} .st-bad{color:var(--bad)} .st-muted{color:var(--muted)}
+dl.kv{display:grid;grid-template-columns:max-content 1fr;gap:4px 14px;font-size:14px}
+dl.kv dt{color:var(--muted)} dl.kv dd{margin:0;word-break:break-all}
+footer{margin-top:48px;color:var(--muted);font-size:13px}
+.menu-btn{display:none}
+@media (max-width: 860px){
+  .layout{grid-template-columns:1fr}
+  nav.toc{position:static;height:auto;border-right:none;border-bottom:1px solid var(--line);display:none}
+  nav.toc.open{display:block}
+  .menu-btn{display:inline-block}
+  main{padding:16px 16px 60px}
+  header.top h1{font-size:1.35rem}
+  .panel{padding:2px 12px 12px}
+  .lab .grid{grid-template-columns:1fr}
+}
+@media print{
+  nav.toc,.actions,.mdtools,.filters button,.menu-btn,.no-print{display:none!important}
+  .layout{display:block}
+  body{background:#fff;color:#000;font-size:11pt}
+  .panel,.stage{break-inside:auto}
+  img{break-inside:avoid}
+  th{position:static}
+  .tw{overflow:visible}
+}
+</style>
+</head>
+<body>
+<div class="layout">
+<nav class="toc" id="toc" aria-label="목차">
+  <h2>목차</h2>
+  <ol>
+    <li><a href="#summary">1. 결과 요약</a></li>
+    <li><a href="#flow">2. 자료 흐름</a></li>
+    <li><a href="#stages">3. 학습 단계 HR01–HR07</a></li>
+    @@TOC_STAGES@@
+    <li><a href="#lab">4. 🧪 가상 예제 계산기</a></li>
+    <li><a href="#data">5. 전체 88쌍 자료</a></li>
+    <li><a href="#issues">6. 문제·수정·실패·한계</a></li>
+    <li><a href="#files">7. 버전·파일·출처</a></li>
+  </ol>
+</nav>
+<main>
+<header class="top">
+  <button class="menu-btn no-print" id="menuBtn" aria-controls="toc" aria-expanded="false">☰ 목차</button>
+  <h1>심박수 손목시계의 정확도: 상관, 단순 선형회귀, 측정오차</h1>
+  <div class="meta">Wallen MP, Gomersall SR, Keating SE, Wisløff U, Coombes JS. Accuracy of Heart Rate Watches: Implications for Weight Management. <i>PLoS ONE</i> 2016;11(5):e0154420. <a href="https://doi.org/10.1371/journal.pone.0154420">doi:10.1371/journal.pone.0154420</a> · 공개 자료 <a href="https://doi.org/10.1371/journal.pone.0154420.s001">S1 Dataset</a></div>
+  <div class="meta">의생명과학프로그래밍 6주차 · 주 실행 <code>@@RUN_ID@@</code> · 탐색 실행 <code>@@CAND_RUN_ID@@</code> · 자료 버전 <code>@@DATA_VERSION@@</code> · 보고서 생성 @@BUILT_AT@@</div>
+  <div class="actions">
+    <button id="printBtn">인쇄 / PDF</button>
+    <button id="csvBtn">전체 88쌍 CSV 받기</button>
+    <button id="mdAllBtn">학습 MD 15개 모두 받기</button>
+  </div>
+</header>
+
+<section id="summary">
+  <h2>1. 결과 요약</h2>
+  <p><b>@@HEADLINE@@</b></p>
+  <div class="cards">@@CARDS@@</div>
+  @@SUMMARY_TABLE@@
+  <p class="note">분모: 기기별 참가자 n = 22 (88쌍은 22명이 4기기를 찬 반복 구조이며 88명의 독립 표본이 아님). 오차 = 시계 − ECG, 음수 = 과소측정. r의 CI는 Fisher z, bias의 CI는 t 분포, LoA는 bias ± 1.96 SD(고정, 분석자 계산)로 서로 다른 구간이다.</p>
+  @@SUMMARY_FIG@@
+  <p>원문 Table 1의 HR 값과의 대조: 사전에 정한 허용오차로 <b>@@CMP_MATCH@@개 반올림 일치, @@CMP_MISS@@개 불일치, @@CMP_NA@@개 비교 불가</b>(부분 일치). 불일치 값은 모두 반올림된 r·bias·SD로 계산하면 재현된다(탐색적, 저자 구현 미확인). 자세한 내용은 <a href="#HR06">HR06</a>.</p>
+</section>
+
+<section id="flow">
+  <h2>2. 자료 흐름</h2>
+  <div class="flow">
+    <div class="node"><b>원자료 xlsx</b>Heart_Rate 시트 22행 × 13열<br><span class="note">SHA-256 @@RAW_SHA_SHORT@@…</span></div><div class="arrow">→</div>
+    <div class="node"><b>HR01 88쌍</b>열 위치 매핑, ECG 짝 확인 44/44<br><span class="note">입력 88 · 제외 0 · 사용 88</span></div><div class="arrow">→</div>
+    <div class="node"><b>HR02–HR04 기기별 n = 22</b>Pearson r · OLS · 측정오차·LoA<br><span class="note">F1–F4</span></div><div class="arrow">→</div>
+    <div class="node"><b>HR05 보조 진단</b>잔차 · Q–Q · Cook · 한 명씩 제외(21명 × 22회)<br><span class="note">F5–F7</span></div><div class="arrow">→</div>
+    <div class="node"><b>HR06 원문 대조</b>R1 사전 규칙 → R2 탐색 후보<br><span class="note">Table 1 HR</span></div><div class="arrow">→</div>
+    <div class="node"><b>HR07 문제·한계</b>문제 20건, 검토 범위</div>
+  </div>
+  <p class="note">위 순서는 읽기 순서다. 실행 의존성은 HR01 → {HR02, HR03, HR04} → HR05, HR06이며, R2는 R1 표만 입력으로 쓴다 (<code>analysis/stage_registry.json</code>).</p>
+</section>
+
+<section id="stages">
+  <h2>3. 학습 단계 HR01–HR07</h2>
+  <p>각 단계는 <b style="color:var(--concept)">CONCEPT / 일반 통계 개념</b>(가상 숫자만 사용)을 먼저, <b style="color:var(--paper)">PAPER / 논문·실제 데이터 적용</b>(run 표에서 채운 실제 수치)을 다음에 둔다. 두 패널 모두 원래 MD의 내용 전체이며, 각 패널 아래에서 MD 원문을 보거나 저장할 수 있다.</p>
+  @@READING_MAP@@
+  @@STAGES@@
+</section>
+
+<section id="lab">
+  <h2>4. 🧪 가상 예제 계산기</h2>
+  <div class="lab">
+    <p><b>가상 예제 — 실제 자료가 아니다.</b> 5명의 가상 ECG와 시계 값을 바꿔 보며 r, 회귀선, 오차가 각각 무엇에 반응하는지 확인한다. 미리 넣은 A·B·C는 CONCEPT 페이지(HR02–HR04)의 예와 같다.</p>
+    <div class="filters">
+      <button data-preset="A">시계 A: x − 10</button>
+      <button data-preset="B">시계 B: 작은 무작위 오차</button>
+      <button data-preset="C">시계 C: 0.5x + 50</button>
+    </div>
+    <div class="grid">
+      <div class="tw"><table id="labTable"><thead><tr><th>사람</th><th>ECG x</th><th>시계 y</th><th>오차 y−x</th></tr></thead><tbody></tbody></table></div>
+      <svg id="labPlot" viewBox="0 0 320 320" role="img" aria-label="가상 예제 산점도"></svg>
+    </div>
+    <div class="tw"><table><tbody id="labOut"></tbody></table></div>
+    <p class="note">r과 R²는 y에 상수를 더하거나 곱해도 변하지 않는다(A, C에서 r = 1). bias·SD·LoA는 y = x에서 얼마나 떨어졌는지를 직접 잰다. 점선 = y = x, 실선 = OLS.</p>
+  </div>
+</section>
+
+<section id="data">
+  <h2>5. 전체 88쌍 자료</h2>
+  <p>HR01에서 만든 분석 자료 전체(<code>@@PAIRS_PATH@@</code>). 각 행은 원래 셀 위치까지 추적할 수 있다.</p>
+  <div class="filters">
+    <span class="note">표시:</span>
+    <button data-dev="all" aria-pressed="true">전체</button>
+    <button data-dev="Apple Watch" aria-pressed="false">Apple Watch</button>
+    <button data-dev="Fitbit Charge HR" aria-pressed="false">Fitbit Charge HR</button>
+    <button data-dev="Samsung Gear S" aria-pressed="false">Samsung Gear S</button>
+    <button data-dev="Mio Alpha" aria-pressed="false">Mio Alpha</button>
+    <button id="csvBtn2">CSV 받기 (항상 88쌍 전체)</button>
+  </div>
+  <p class="note" id="pairsCount"></p>
+  <p class="note">필터는 <b>표시만</b> 바꾼다. 분석 분모(기기별 n = 22, 전체 88쌍)와 위의 모든 통계는 바뀌지 않으며, CSV 받기는 필터와 상관없이 88쌍 전체를 준다.</p>
+  <div class="tw" style="max-height:520px"><table id="pairsTable"><thead></thead><tbody></tbody></table></div>
+</section>
+
+<section id="issues">
+  <h2>6. 문제·수정·실패·한계</h2>
+  <div class="filters"><button id="openIssues">모두 펼치기</button><button id="closeIssues">모두 접기</button></div>
+  <div id="issueList">@@ISSUES@@</div>
+  <h3>실행 이력 (실패 포함)</h3>
+  @@RUN_HISTORY@@
+  <h3>검토 기록</h3>
+  @@REVIEWS@@
+</section>
+
+<section id="files">
+  <h2>7. 버전·파일·출처</h2>
+  @@FILES@@
+</section>
+
+<footer>
+  이 HTML은 <code>analysis/src/20_build_report.R</code>가 <code>docs/learning/*.md</code>, <code>analysis/runs/@@RUN_ID@@</code>, <code>analysis/runs/@@CAND_RUN_ID@@</code>, <code>analysis/memory/issues.json</code>에서 생성했다. 그림·스타일·스크립트를 모두 내장해 인터넷 없이 열린다. 통계를 다시 계산하지 않는다(가상 예제 계산기 제외).
+</footer>
+</main>
+</div>
+
+@@MD_SOURCES@@
+<script type="text/plain" id="pairs-csv">@@PAIRS_CSV@@</script>
+<script>
+(function(){
+  "use strict";
+  function $(s,r){return (r||document).querySelector(s);}
+  function $$(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s));}
+  function download(name,text,type){
+    var blob=new Blob([text],{type:type||"text/plain;charset=utf-8"});
+    var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=name;
+    document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},500);
+  }
+  function mdText(id){var el=document.getElementById("md-"+id);return el?el.textContent.replace(/^\n/,""):"";}
+
+  // 목차 (모바일)
+  var menu=$("#menuBtn"),toc=$("#toc");
+  menu.addEventListener("click",function(){var o=toc.classList.toggle("open");menu.setAttribute("aria-expanded",o);});
+  $$("#toc a").forEach(function(a){a.addEventListener("click",function(){if(window.innerWidth<=860){toc.classList.remove("open");menu.setAttribute("aria-expanded","false");}});});
+
+  // MD 원문 보기 / 저장
+  $$("[data-md-view]").forEach(function(d){
+    d.addEventListener("toggle",function(){var pre=$("pre",d);if(d.open&&!pre.textContent)pre.textContent=mdText(d.getAttribute("data-md-view"));});
+  });
+  $$("[data-md-save]").forEach(function(b){
+    b.addEventListener("click",function(){var id=b.getAttribute("data-md-save");download(id+".md",mdText(id),"text/markdown;charset=utf-8");});
+  });
+  $("#mdAllBtn").addEventListener("click",function(){
+    $$("script[type='text/markdown']").forEach(function(s,i){
+      var id=s.id.replace(/^md-/,"");setTimeout(function(){download(id+".md",mdText(id),"text/markdown;charset=utf-8");},i*250);
+    });
+  });
+
+  // 88쌍 표
+  var csv=$("#pairs-csv").textContent.replace(/^\n/,"");
+  function parseCSV(t){
+    var rows=[],row=[],f="",q=false;
+    for(var i=0;i<t.length;i++){var c=t[i];
+      if(q){if(c==='"'){if(t[i+1]==='"'){f+='"';i++;}else q=false;}else f+=c;}
+      else if(c==='"')q=true; else if(c===','){row.push(f);f="";}
+      else if(c==='\n'||c==='\r'){if(c==='\r'&&t[i+1]==='\n')i++;row.push(f);rows.push(row);row=[];f="";}
+      else f+=c;}
+    if(f!==""||row.length){row.push(f);rows.push(row);}
+    return rows;
+  }
+  var rows=parseCSV(csv),head=rows[0],data=rows.slice(1).filter(function(r){return r.length===head.length;});
+  var show=["pair_id","id","device","trial","device_hr","ecg_hr","error","cell_device","cell_ecg","header_ecg","xml_text_device"];
+  var idx=show.map(function(h){return head.indexOf(h);});
+  var labels={pair_id:"pair_id",id:"ID",device:"기기",trial:"trial",device_hr:"시계 HR",ecg_hr:"ECG HR",error:"오차(시계−ECG)",cell_device:"시계 셀",cell_ecg:"ECG 셀",header_ecg:"ECG 원래 헤더",xml_text_device:"시계 셀 저장 문자열"};
+  $("#pairsTable thead").innerHTML="<tr>"+show.map(function(h){return "<th>"+labels[h]+"</th>";}).join("")+"</tr>";
+  function fmt(h,v){return (h==="device_hr"||h==="ecg_hr"||h==="error")?Number(v).toFixed(2):v;}
+  function renderPairs(dev){
+    var di=head.indexOf("device"),sel=data.filter(function(r){return dev==="all"||r[di]===dev;});
+    $("#pairsTable tbody").innerHTML=sel.map(function(r){return "<tr>"+idx.map(function(j,k){return "<td>"+fmt(show[k],r[j])+"</td>";}).join("")+"</tr>";}).join("");
+    $("#pairsCount").textContent="표시 "+sel.length+"행 / 분석 자료 전체 "+data.length+"쌍"+(dev==="all"?"":" (필터: "+dev+")");
+  }
+  $$("[data-dev]").forEach(function(b){b.addEventListener("click",function(){
+    $$("[data-dev]").forEach(function(x){x.setAttribute("aria-pressed","false");});b.setAttribute("aria-pressed","true");renderPairs(b.getAttribute("data-dev"));});});
+  renderPairs("all");
+  function csvDl(){download("hr_pairs_88.csv",csv,"text/csv;charset=utf-8");}
+  $("#csvBtn").addEventListener("click",csvDl);$("#csvBtn2").addEventListener("click",csvDl);
+
+  // 문제 펼치기
+  $("#openIssues").addEventListener("click",function(){$$("details.issue").forEach(function(d){d.open=true;});});
+  $("#closeIssues").addEventListener("click",function(){$$("details.issue").forEach(function(d){d.open=false;});});
+
+  // 인쇄: 접힌 내용도 인쇄되도록 잠시 펼친다
+  var reopened=[];
+  window.addEventListener("beforeprint",function(){reopened=$$("details.issue:not([open])");reopened.forEach(function(d){d.open=true;});});
+  window.addEventListener("afterprint",function(){reopened.forEach(function(d){d.open=false;});reopened=[];});
+  $("#printBtn").addEventListener("click",function(){window.print();});
+
+  // 가상 예제 계산기
+  var X=[60,80,100,120,140],P={A:[50,70,90,110,130],B:[62,78,101,119,140],C:[80,90,100,110,120]};
+  var tb=$("#labTable tbody");
+  tb.innerHTML=X.map(function(x,i){return "<tr><td>"+(i+1)+"</td><td><input type='number' step='any' data-c='x' value='"+x+"' aria-label='ECG "+(i+1)+"'></td><td><input type='number' step='any' data-c='y' value='"+P.B[i]+"' aria-label='시계 "+(i+1)+"'></td><td class='e'></td></tr>";}).join("");
+  function f(v,d){return isFinite(v)?v.toFixed(d):"정의 안 됨";}
+  function calc(){
+    var xs=$$("input[data-c='x']",tb).map(function(i){return parseFloat(i.value);}),
+        ys=$$("input[data-c='y']",tb).map(function(i){return parseFloat(i.value);});
+    if(xs.concat(ys).some(function(v){return !isFinite(v);}))return;
+    var n=xs.length,mx=xs.reduce(function(a,b){return a+b;})/n,my=ys.reduce(function(a,b){return a+b;})/n,sxy=0,sxx=0,syy=0;
+    for(var i=0;i<n;i++){sxy+=(xs[i]-mx)*(ys[i]-my);sxx+=(xs[i]-mx)*(xs[i]-mx);syy+=(ys[i]-my)*(ys[i]-my);}
+    var r=sxy/Math.sqrt(sxx*syy),b1=sxy/sxx,b0=my-b1*mx,e=ys.map(function(y,i){return y-xs[i];});
+    var bias=e.reduce(function(a,b){return a+b;})/n,sd=Math.sqrt(e.reduce(function(a,v){return a+(v-bias)*(v-bias);},0)/(n-1));
+    var mae=e.reduce(function(a,v){return a+Math.abs(v);},0)/n,rmse=Math.sqrt(e.reduce(function(a,v){return a+v*v;},0)/n);
+    $$("td.e",tb).forEach(function(td,i){td.textContent=(e[i]>0?"+":"")+f(e[i],1);});
+    var out=[["Pearson r",f(r,3),"직선적 함께 움직임"],["OLS 시계 = b₀ + b₁·ECG",f(b0,2)+" + "+f(b1,3)+"·x","완벽하면 0 + 1·x"],["R² (= r²)",f(r*r,3),"회귀선 적합도"],
+      ["bias (평균 오차)",f(bias,2),"체계적 치우침"],["오차 SD",f(sd,2),"사람 간 흩어짐"],["MAE / RMSE",f(mae,2)+" / "+f(rmse,2),"오차 크기"],["고정 95% LoA",f(bias-1.96*sd,2)+" ~ "+f(bias+1.96*sd,2),"한 사람의 오차 범위"]];
+    $("#labOut").innerHTML=out.map(function(o){return "<tr><th>"+o[0]+"</th><td>"+o[1]+"</td><td class='note'>"+o[2]+"</td></tr>";}).join("");
+    var all=xs.concat(ys),lo=Math.min.apply(null,all)-10,hi=Math.max.apply(null,all)+10,S=320,pad=34;
+    function sx(v){return pad+(v-lo)/(hi-lo)*(S-2*pad);} function sy(v){return S-pad-(v-lo)/(hi-lo)*(S-2*pad);}
+    var g="<line x1='"+sx(lo)+"' y1='"+sy(lo)+"' x2='"+sx(hi)+"' y2='"+sy(hi)+"' stroke='currentColor' stroke-opacity='.45' stroke-dasharray='5 4'/>";
+    if(isFinite(b1))g+="<line x1='"+sx(lo)+"' y1='"+sy(b0+b1*lo)+"' x2='"+sx(hi)+"' y2='"+sy(b0+b1*hi)+"' stroke='var(--concept)' stroke-width='2'/>";
+    g+=xs.map(function(x,i){return "<circle cx='"+sx(x)+"' cy='"+sy(ys[i])+"' r='5' fill='var(--paper)'/>";}).join("");
+    g+="<text x='"+(S/2)+"' y='"+(S-6)+"' text-anchor='middle' font-size='12' fill='currentColor'>ECG x</text><text x='10' y='"+(S/2)+"' font-size='12' fill='currentColor' transform='rotate(-90 10 "+(S/2)+")' text-anchor='middle'>시계 y</text>";
+    $("#labPlot").innerHTML=g;
+  }
+  tb.addEventListener("input",calc);
+  $$("[data-preset]").forEach(function(b){b.addEventListener("click",function(){var p=P[b.getAttribute("data-preset")];$$("input[data-c='x']",tb).forEach(function(inp,i){inp.value=X[i];});$$("input[data-c='y']",tb).forEach(function(inp,i){inp.value=p[i];});calc();});});
+  calc();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+"check","pass"
+"rows == 88",TRUE
+"22 per device",TRUE
+"no missing values",TRUE
+"trial in {1,2}",TRUE
+"device_hr <= 2 decimals",TRUE
+"ecg_hr <= 2 decimals",TRUE
+"each id x trial has 2 devices",TRUE
+"devices in same trial share one ECG value",TRUE

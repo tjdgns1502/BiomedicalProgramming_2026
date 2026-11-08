@@ -1,0 +1,6 @@
+[16:53:04] run R1-20261025 start; raw sha256 ok
+[16:53:04] pairs built: 88 rows; all QA checks passed
+[16:53:04] data_version wallen-hr-331013dc4e56eb03e99b
+[16:53:04] tables written
+[16:53:07] figures written
+[16:53:08] done; warnings = 0

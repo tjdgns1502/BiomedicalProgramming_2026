@@ -1,0 +1,28 @@
+{
+  "review_id": "REV-BROWSER-01",
+  "reviewed_at": "2026-10-25",
+  "reviewer": "작성 에이전트 자신 (Claude 데스크톱 앱 내장 브라우저) — self_reviewed",
+  "html": "6th_project/최종분석보고서.html",
+  "html_sha256": "fdd328c7a27b3c99d01ec8b158c57f08f6a93ef804c5027237020295d07aa74d",
+  "html_note": "이 해시 이후 재생성은 '검토 기록' 칸에 이 파일 내용을 넣는 것뿐이며, 재생성 뒤 같은 DOM 점검을 다시 실행했다.",
+  "summary": "PC(약 800-1009px)와 모바일(375px)에서 구조·기능 점검 통과; 발견한 문제 3건 수정",
+  "checks": [
+    {"item": "CONCEPT/PAPER 패널", "result": "7 + 7개, 단계마다 CONCEPT 다음 PAPER, 기본 펼침"},
+    {"item": "그림", "result": "data URI 8개(F1-F7 + 요약 F4) 모두 디코딩, 375px에서 화면 폭 안"},
+    {"item": "외부 의존", "result": "script[src], link[href] 0개"},
+    {"item": "목차·내부 링크", "result": "#앵커 깨진 것 0개; 모바일에서 목차 버튼으로 열고 닫힘"},
+    {"item": "가로 넘침", "result": "375px에서 문서 scrollWidth = 375 (표는 .tw 안에서만 스크롤)"},
+    {"item": "88쌍 표·필터", "result": "전체 88행; Mio 필터 시 22행 표시, '분석 자료 전체 88쌍' 문구 유지"},
+    {"item": "전체 CSV", "result": "Mio 필터 상태에서도 89줄(헤더 + 88), 13,741 bytes Blob. 원본 CSV(13,831 bytes)와는 줄바꿈만 다름: R이 Windows에서 CRLF로 썼고 HTML 파싱이 LF로 정규화함. 값·행은 같음"},
+    {"item": "MD 원문/저장", "result": "MD 15개 내장; HR02-concept 원문 보기, HR04-paper.md 저장 Blob 확인"},
+    {"item": "문제 펼침", "result": "모두 펼치기/접기 동작"},
+    {"item": "인쇄", "result": "beforeprint에 접힌 문제를 펼치고 afterprint에 복원; 인쇄 CSS에서 목차·버튼 숨김. 실제 프린터 출력은 확인하지 않음"},
+    {"item": "가상 예제 계산기", "result": "시계 B: r 0.999, 1.50 + 0.985x, LoA -3.10 ~ 3.10 (HR02-04 concept 손계산과 일치); 시계 C: r 1.000, 50 + 0.5x"}
+  ],
+  "fixed": [
+    "CommonMark에서 '**\"...\"**를' 처럼 구두점 뒤 닫는 **가 한글 앞에서 굵게 처리되지 않아 HR01/03/06 concept 5곳 수정, 빌드 시 남은 ** 검사 추가",
+    "요약 카드 값 글자 크기 축소(좁은 폭에서 줄바꿈 과다)",
+    "모바일에서 긴 해시 code가 화면 밖으로 나감 → overflow-wrap:anywhere"
+  ],
+  "not_checked": ["실제 인쇄물/PDF 모양", "다크 모드 화면", "Safari/Firefox", "파일 저장 대화상자(Blob 생성까지만 확인)", "숨겨진 창이라 모바일 스크린샷은 얻지 못함 — DOM 측정으로 대신함"]
+}

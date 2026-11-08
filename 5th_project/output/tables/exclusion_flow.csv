@@ -1,0 +1,5 @@
+"step","description","n_removed","n_remaining","paper_n","paper_n_remaining","diff_removed_vs_paper","diff_remaining_vs_paper"
+0,"All DEMO participants, cycles F-J (2009-2018)",,49693,,,,
+1,"Age >= 30",25651,24042,,,,
+2,"Has valid mean SBP and DBP (without BP excluded)",1945,22097,19398,,-17453,
+3,"Non-missing smoking, OHQ845 (oral health) and OHQ835 (periodontal); final sample",680,21417,1090,21800,-410,-383

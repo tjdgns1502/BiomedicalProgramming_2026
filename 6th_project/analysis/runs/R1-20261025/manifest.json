@@ -1,0 +1,55 @@
+{
+  "run_id": "R1-20261025",
+  "started": "2026-10-25T16:53:04+0900",
+  "finished": "2026-10-25T16:53:07+0900",
+  "command": "Rscript src/run_analysis.R R1-20261025",
+  "working_dir": "6th_project/analysis",
+  "data_version": "wallen-hr-331013dc4e56eb03e99b",
+  "seed": "not_applicable",
+  "r_version": "R version 4.6.1 (2026-06-24 ucrt)",
+  "packages": ["1.5.0.1", "4.0.3", "1.3.2", "2.0.0", "0.6.39"],
+  "inputs": {
+    "data/raw/pone.0154420.s001.xlsx": "50cae0d20ded94e43b956fc9f86a286cdf227eafe549906442fe21445570fcff",
+    "config/plan_R1-20261025.json": "0de87ceb4793c1b5a34831ad6c29ab5fe3e29dea06cb4785be78871c1aadf927",
+    "config/paper_table1_hr.csv": "44380ae9215885fd5c6b5147726d96983c39f15375e600e441d87b8dfcf16409",
+    "src/01_build_pairs.R": "62d89e7ab2352c731ae53968b8ba4ae052cdc3768e6630e2cb640979acaa4c2e",
+    "src/02_stats.R": "08f4422c3a3e58dab3e5d4db6a8e0257e6660c8a81c31bb606f20b64607aa7dc",
+    "src/03_figures.R": "2c7e1c56a95f761cb71eb009a9a473abc82dba68d377e5ef9095ce4d671cd9d3",
+    "src/04_compare_paper.R": "001eab049f9570e1dfc972aa1ea7cf7ec8997318933c739a73796b20f576987e",
+    "src/run_analysis.R": "963df109ba3f084f50661571a290689127cac1ab9c60584fb04d3775823bbdce"
+  },
+  "derived": {
+    "data/derived/wallen-hr-331013dc4e56eb03e99b/hr_pairs_88.csv": "331013dc4e56eb03e99bbf76f554863b1836d8ec2ac0a98e4d62889bd37e0aab"
+  },
+  "outputs": {
+    "env/sessionInfo.txt": "c6aa5cc2b26aa9ea3a913f478a70d652f15225d1276b920d26e903eeea7bc39d",
+    "figures/F1_scatter_ols_identity.png": "190a7c0e82e7b0ff5f13d2b8717aa9741a3b988662706ffcab16ef1ee153e57f",
+    "figures/F2_error_histogram.png": "b2cb20e869c1ad6e32dafbf166c47dcc05316dde06184324c90fcbdb558e5e7c",
+    "figures/F3_bland_altman_fixed_loa.png": "137a0b4f00475586163eb7962f0bb9048c12603c713ab12a3aecea8287795670",
+    "figures/F4_correlation_vs_agreement.png": "30b96002816d5ad8907f1188f2ffac9eada4e528dbfb22318d4aa1238cbaa62e",
+    "figures/F5_residual_vs_fitted.png": "c06b80e295ebc0413c297d7a4d954eca07230be75f4ca68a34c7f1f80a57b79c",
+    "figures/F6_residual_qq.png": "3946b495c4efdd97affce7c981c790065e206a428897be200eb4b3d81fcec259",
+    "figures/F7_cooks_distance.png": "902d8dccc6de4b5b38a73f6285ed0dcd1bb3516267450fc0e7b4bc172a992210",
+    "logs/run_log.txt": "44ec604a7a4a6547cb8adcf37d6b384810a4b4469d3b92c46fc22e621ee73ab7",
+    "models/ols_models.rds": "a50cc31b522ce7507f988b99e605d6f257919f6b3675d0804305daae67e6dcb5",
+    "tables/hr01_pairs_88.csv": "331013dc4e56eb03e99bbf76f554863b1836d8ec2ac0a98e4d62889bd37e0aab",
+    "tables/hr01_qa_checks.csv": "05d81fdc4c6e09995a2461bca227818db40c1aa4c80bff535fda2c5330ef595a",
+    "tables/hr01_trial_qa.csv": "0852d987f0b38ed6c1c5306840284e8f239ab339a260362632be36f7a3b5d34a",
+    "tables/hr02_correlation.csv": "df720c15ddb765fad25de83173622ba7d63de12b23dc8f6a46177aab285a684d",
+    "tables/hr03_ols.csv": "4afbb1e34101b37b0767163c001fdbf179b0c6d5588c137e65e80207fd3bd6d9",
+    "tables/hr03_ols_bands.csv": "4b9bffd147fdd5bbccecb18c2f73aedcc06a2b04f6cc3d35934ddace2179d9f7",
+    "tables/hr04_error.csv": "c23188dd4fa3900974b08dff89f7ff214964e0e12716b5305afb7a7ddfa41fb0",
+    "tables/hr05_diagnostics.csv": "80388d5754ed119d52578c3f9d40fc6ccf050eb9e24741bf53e209b609f5c7fb",
+    "tables/hr05_loo_detail.csv": "976d6536525e8f4d9670c2f9797673e3dd002c3c641bab25f2160a3c7a5e09bc",
+    "tables/hr05_loo_summary.csv": "721911d359af5ac9b5a9853744faf33a40ca44b2b327fd848153002947d547b2",
+    "tables/hr06_paper_comparison.csv": "6bc7ed64393dbddd218ad72866ace1f48655620b5dc342f40e00ec9f4df988ca"
+  },
+  "n_pairs": 88,
+  "n_per_device": {
+    "Apple Watch": 22,
+    "Fitbit Charge HR": 22,
+    "Mio Alpha": 22,
+    "Samsung Gear S": 22
+  },
+  "warnings": []
+}

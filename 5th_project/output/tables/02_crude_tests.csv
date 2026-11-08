@@ -1,0 +1,164 @@
+"exposure","strat_by","stratum","contrast","method","estimate","lo","hi","statistic","df","p"
+"oral","none","all","omnibus","pearson",NA,NA,NA,100.086532026524,3,1.4889823553161e-21
+"oral","none","all","omnibus","fisher",NA,NA,NA,NA,NA,1.29304813342445e-21
+"oral","none","all","trend 1-4","cochran_armitage",NA,NA,NA,95.8439397116718,1,1.24305951021914e-22
+"oral","none","all","Good vs Excellent/Very good","pearson",NA,NA,NA,11.2029163828675,1,0.000816688768175755
+"oral","none","all","Good vs Excellent/Very good","yates",NA,NA,NA,11.0910481765183,1,0.000867454397624596
+"oral","none","all","Good vs Excellent/Very good","fisher",1.1187132795935,1.0470227037724,1.19536303684892,NA,NA,0.000855826012594038
+"oral","none","all","Good vs Excellent/Very good","or_woolf",1.11872377424111,1.04758238812562,1.19469637637912,NA,NA,NA
+"oral","none","all","Good vs Excellent/Very good","rr",1.05953518350015,1.02418685331397,1.09610351025523,NA,NA,NA
+"oral","none","all","Good vs Excellent/Very good","rd",0.0280129353594302,0.0116172108213222,0.0444086598975382,NA,NA,NA
+"oral","none","all","Fair vs Excellent/Very good","pearson",NA,NA,NA,33.6525123669999,1,6.58897225388154e-09
+"oral","none","all","Fair vs Excellent/Very good","yates",NA,NA,NA,33.4364151759797,1,7.36322971025282e-09
+"oral","none","all","Fair vs Excellent/Very good","fisher",1.24184612680563,1.1533920962295,1.33717489232173,NA,NA,7.26468808346653e-09
+"oral","none","all","Fair vs Excellent/Very good","or_woolf",1.24187859318441,1.15418859222292,1.33623088167883,NA,NA,NA
+"oral","none","all","Fair vs Excellent/Very good","rr",1.11498193436519,1.07496966190277,1.15648353439131,NA,NA,NA
+"oral","none","all","Fair vs Excellent/Very good","rd",0.05410215112323,0.0358478084251122,0.0723564938213478,NA,NA,NA
+"oral","none","all","Poor vs Excellent/Very good","pearson",NA,NA,NA,90.3940947806968,1,1.95147701487084e-21
+"oral","none","all","Poor vs Excellent/Very good","yates",NA,NA,NA,89.9496822809499,1,2.44294721268039e-21
+"oral","none","all","Poor vs Excellent/Very good","fisher",1.56516698917042,1.42524601709367,1.71923638643368,NA,NA,1.81252855984884e-21
+"oral","none","all","Poor vs Excellent/Very good","or_woolf",1.56527220389553,1.42671415185625,1.7172865840717,NA,NA,NA
+"oral","none","all","Poor vs Excellent/Very good","rr",1.2364153239803,1.18586129421404,1.28912450455389,NA,NA,NA
+"oral","none","all","Poor vs Excellent/Very good","rd",0.111239888739437,0.0885439220666348,0.133935855412239,NA,NA,NA
+"oral","smoking","nonsmoking","omnibus","pearson",NA,NA,NA,90.8144399000247,3,1.46425959104671e-19
+"oral","smoking","nonsmoking","omnibus","fisher",NA,NA,NA,NA,NA,1.40249566775053e-19
+"oral","smoking","nonsmoking","trend 1-4","cochran_armitage",NA,NA,NA,85.668374050026,1,2.12789070094411e-20
+"oral","smoking","nonsmoking","Good vs Excellent/Very good","pearson",NA,NA,NA,7.70942074245467,1,0.00549333763584156
+"oral","smoking","nonsmoking","Good vs Excellent/Very good","yates",NA,NA,NA,7.58857455298861,1,0.0058739376088859
+"oral","smoking","nonsmoking","Good vs Excellent/Very good","fisher",1.12903212188559,1.0353541497141,1.23123725827264,NA,NA,0.00553219646745427
+"oral","smoking","nonsmoking","Good vs Excellent/Very good","or_woolf",1.12905035486906,1.03632887060766,1.23006773234299,NA,NA,NA
+"oral","smoking","nonsmoking","Good vs Excellent/Very good","rr",1.06918532913813,1.01981282128799,1.12094812320603,NA,NA,NA
+"oral","smoking","nonsmoking","Good vs Excellent/Very good","rd",0.0300175325892021,0.00884071475588555,0.0511943504225186,NA,NA,NA
+"oral","smoking","nonsmoking","Fair vs Excellent/Very good","pearson",NA,NA,NA,37.8622144333885,1,7.59215496742663e-10
+"oral","smoking","nonsmoking","Fair vs Excellent/Very good","yates",NA,NA,NA,37.5515739344764,1,8.90275521918482e-10
+"oral","smoking","nonsmoking","Fair vs Excellent/Very good","fisher",1.36491742438582,1.2344852901775,1.5093079934776,NA,NA,7.83080746533319e-10
+"oral","smoking","nonsmoking","Fair vs Excellent/Very good","or_woolf",1.3650048786273,1.23605906672084,1.50740233120036,NA,NA,NA
+"oral","smoking","nonsmoking","Fair vs Excellent/Very good","rr",1.1783890984513,1.11915920170058,1.24075365259819,NA,NA,NA
+"oral","smoking","nonsmoking","Fair vs Excellent/Very good","rd",0.0773979200941448,0.0527634216043115,0.102032418583978,NA,NA,NA
+"oral","smoking","nonsmoking","Poor vs Excellent/Very good","pearson",NA,NA,NA,71.998527668257,1,2.15357991048926e-17
+"oral","smoking","nonsmoking","Poor vs Excellent/Very good","yates",NA,NA,NA,71.3688142589873,1,2.96318821981302e-17
+"oral","smoking","nonsmoking","Poor vs Excellent/Very good","fisher",1.88294007012709,1.62054530226175,2.18944307914065,NA,NA,2.33860650823889e-17
+"oral","smoking","nonsmoking","Poor vs Excellent/Very good","or_woolf",1.88314894310794,1.62475657150068,2.18263461993762,NA,NA,NA
+"oral","smoking","nonsmoking","Poor vs Excellent/Very good","rr",1.36147025902717,1.27578580113675,1.45290946533808,NA,NA,NA
+"oral","smoking","nonsmoking","Poor vs Excellent/Very good","rd",0.156831591546118,0.121049927849808,0.192613255242428,NA,NA,NA
+"oral","smoking","smoking","omnibus","pearson",NA,NA,NA,9.88368958202709,3,0.019581136002463
+"oral","smoking","smoking","omnibus","fisher",NA,NA,NA,NA,NA,0.0194092860992871
+"oral","smoking","smoking","trend 1-4","cochran_armitage",NA,NA,NA,6.62225662433457,1,0.0100712147683569
+"oral","smoking","smoking","Good vs Excellent/Very good","pearson",NA,NA,NA,1.56899014099848,1,0.210353730332412
+"oral","smoking","smoking","Good vs Excellent/Very good","yates",NA,NA,NA,1.50355387705921,1,0.220125348595588
+"oral","smoking","smoking","Good vs Excellent/Very good","fisher",1.06834307284851,0.961998154164558,1.18647179682294,NA,NA,0.214749888028117
+"oral","smoking","smoking","Good vs Excellent/Very good","or_woolf",1.06835763871054,0.963342777845889,1.18482026381451,NA,NA,NA
+"oral","smoking","smoking","Good vs Excellent/Very good","rr",1.03109677407759,0.982761155995602,1.08180970628225,NA,NA,NA
+"oral","smoking","smoking","Good vs Excellent/Very good","rd",0.0164392419111471,-0.0092866181415903,0.0421651019638845,NA,NA,NA
+"oral","smoking","smoking","Fair vs Excellent/Very good","pearson",NA,NA,NA,0.478862285695753,1,0.488938106862992
+"oral","smoking","smoking","Fair vs Excellent/Very good","yates",NA,NA,NA,0.440724737631426,1,0.506772862660096
+"oral","smoking","smoking","Fair vs Excellent/Very good","fisher",1.03971310757668,0.929681102733825,1.16275406082299,NA,NA,0.499665059532064
+"oral","smoking","smoking","Fair vs Excellent/Very good","or_woolf",1.03969924926603,0.931148201837857,1.16090492017357,NA,NA,NA
+"oral","smoking","smoking","Fair vs Excellent/Very good","rr",1.01832768586805,0.967281943688032,1.07206723186784,NA,NA,NA
+"oral","smoking","smoking","Fair vs Excellent/Very good","rd",0.00968889123047334,-0.0177508082118393,0.0371285906727859,NA,NA,NA
+"oral","smoking","smoking","Poor vs Excellent/Very good","pearson",NA,NA,NA,9.39957346890602,1,0.00217035927904559
+"oral","smoking","smoking","Poor vs Excellent/Very good","yates",NA,NA,NA,9.20584915409177,1,0.00241243067772857
+"oral","smoking","smoking","Poor vs Excellent/Very good","fisher",1.21566396130753,1.07085028120057,1.38038326987137,NA,NA,0.00229488572322861
+"oral","smoking","smoking","Poor vs Excellent/Very good","or_woolf",1.21572507489135,1.07294008878565,1.37751163663982,NA,NA,NA
+"oral","smoking","smoking","Poor vs Excellent/Very good","rr",1.091273425757,1.03265415945057,1.15322025178016,NA,NA,NA
+"oral","smoking","smoking","Poor vs Excellent/Very good","rd",0.0482514978027822,0.0175142255625474,0.0789887700430169,NA,NA,NA
+"oral","smoking","pooled","omnibus","cmh_generalized",NA,NA,NA,71.9175660142829,3,1.65796023514923e-15
+"oral","smoking","pooled","Good vs Excellent/Very good","cmh",1.10395768177581,1.03345724010791,1.17926752637058,8.62868256944674,1,0.00330910801676783
+"oral","smoking","pooled","Good vs Excellent/Very good","breslow_day",NA,NA,NA,0.649808960551956,1,0.420180989410147
+"oral","smoking","pooled","Fair vs Excellent/Very good","cmh",1.20826642983956,1.1224243674614,1.300673620245,25.3777127686357,1,4.71332225935538e-07
+"oral","smoking","pooled","Fair vs Excellent/Very good","breslow_day",NA,NA,NA,12.9422125569145,1,0.000321255089857142
+"oral","smoking","pooled","Poor vs Excellent/Very good","cmh",1.46001432081658,1.32755640087226,1.60568832750828,61.4796490305261,1,4.47343071048583e-15
+"oral","smoking","pooled","Poor vs Excellent/Very good","breslow_day",NA,NA,NA,19.7161490074593,1,8.98389682713052e-06
+"oral","age","age<45","omnibus","pearson",NA,NA,NA,59.3429490543682,3,8.12098569341505e-13
+"oral","age","age<45","omnibus","fisher",NA,NA,NA,NA,NA,1.46429592145656e-12
+"oral","age","age<45","trend 1-4","cochran_armitage",NA,NA,NA,57.7019481906919,1,3.05000582497786e-14
+"oral","age","age<45","Good vs Excellent/Very good","pearson",NA,NA,NA,9.08946320175185,1,0.00257086318149677
+"oral","age","age<45","Good vs Excellent/Very good","yates",NA,NA,NA,8.87057803730171,1,0.0028980336343976
+"oral","age","age<45","Good vs Excellent/Very good","fisher",1.24777723924962,1.07769191006645,1.44537876462641,NA,NA,0.00273729973582553
+"oral","age","age<45","Good vs Excellent/Very good","or_woolf",1.24784498820022,1.08039972752002,1.44124167649567,NA,NA,NA
+"oral","age","age<45","Good vs Excellent/Very good","rr",1.18831042184403,1.06179251615545,1.3299035707805,NA,NA,NA
+"oral","age","age<45","Good vs Excellent/Very good","rd",0.0380656722188379,0.0134309075949933,0.0627004368426825,NA,NA,NA
+"oral","age","age<45","Fair vs Excellent/Very good","pearson",NA,NA,NA,25.9797697913708,1,3.45013844389589e-07
+"oral","age","age<45","Fair vs Excellent/Very good","yates",NA,NA,NA,25.579482729623,1,4.24529508082956e-07
+"oral","age","age<45","Fair vs Excellent/Very good","fisher",1.49012545885176,1.2737729835347,1.74355911139023,NA,NA,4.3475956295924e-07
+"oral","age","age<45","Fair vs Excellent/Very good","or_woolf",1.49032820938928,1.277750311544,1.73827245560798,NA,NA,NA
+"oral","age","age<45","Fair vs Excellent/Very good","rr",1.35593286789209,1.20589387663233,1.5246399188663,NA,NA,NA
+"oral","age","age<45","Fair vs Excellent/Very good","rd",0.0719494107039547,0.0440195353447748,0.0998792860631347,NA,NA,NA
+"oral","age","age<45","Poor vs Excellent/Very good","pearson",NA,NA,NA,52.0378942745653,1,5.44398219191448e-13
+"oral","age","age<45","Poor vs Excellent/Very good","yates",NA,NA,NA,51.2705600970185,1,8.04734717982805e-13
+"oral","age","age<45","Poor vs Excellent/Very good","fisher",2.03838180104408,1.66689810352064,2.49005631863497,NA,NA,2.80331580118978e-12
+"oral","age","age<45","Poor vs Excellent/Very good","or_woolf",2.03896534003312,1.67643913158927,2.47988702931025,NA,NA,NA
+"oral","age","age<45","Poor vs Excellent/Very good","rr",1.68506777108434,1.46807066489073,1.93413945326568,NA,NA,NA
+"oral","age","age<45","Poor vs Excellent/Very good","rd",0.138481794934243,0.0978629542630437,0.179100635605441,NA,NA,NA
+"oral","age","age>=45","omnibus","pearson",NA,NA,NA,45.3922582595233,3,7.63654799879897e-10
+"oral","age","age>=45","omnibus","fisher",NA,NA,NA,NA,NA,7.02447708216064e-10
+"oral","age","age>=45","trend 1-4","cochran_armitage",NA,NA,NA,45.2148232140837,1,1.76563607214372e-11
+"oral","age","age>=45","Good vs Excellent/Very good","pearson",NA,NA,NA,6.21446121063895,1,0.0126710909504401
+"oral","age","age>=45","Good vs Excellent/Very good","yates",NA,NA,NA,6.11272299131512,1,0.0134212199406167
+"oral","age","age>=45","Good vs Excellent/Very good","fisher",1.10751276263676,1.02120154379771,1.20109005652942,NA,NA,0.013162315519903
+"oral","age","age>=45","Good vs Excellent/Very good","or_woolf",1.10752546875472,1.02206258928376,1.20013458745216,NA,NA,NA
+"oral","age","age>=45","Good vs Excellent/Very good","rr",1.04173334822038,1.0087142880655,1.07583324796126,NA,NA,NA
+"oral","age","age>=45","Good vs Excellent/Very good","rd",0.0245125900276605,0.00523593220443262,0.0437892478508883,NA,NA,NA
+"oral","age","age>=45","Fair vs Excellent/Very good","pearson",NA,NA,NA,25.2595534890199,1,5.01107439665615e-07
+"oral","age","age>=45","Fair vs Excellent/Very good","yates",NA,NA,NA,25.0281328999149,1,5.64998886653797e-07
+"oral","age","age>=45","Fair vs Excellent/Very good","fisher",1.26265385506858,1.15166504308458,1.38461172206128,NA,NA,4.87868151488546e-07
+"oral","age","age>=45","Fair vs Excellent/Very good","or_woolf",1.26269693527379,1.15283516932826,1.38302820105572,NA,NA,NA
+"oral","age","age>=45","Fair vs Excellent/Very good","rr",1.09390873952367,1.05663906911785,1.13249298211668,NA,NA,NA
+"oral","age","age>=45","Fair vs Excellent/Very good","rd",0.0551584411536399,0.0337752878119795,0.0765415944953003,NA,NA,NA
+"oral","age","age>=45","Poor vs Excellent/Very good","pearson",NA,NA,NA,33.5227053413444,1,7.04369124651349e-09
+"oral","age","age>=45","Poor vs Excellent/Very good","yates",NA,NA,NA,33.1986482043593,1,8.32083571503402e-09
+"oral","age","age>=45","Poor vs Excellent/Very good","fisher",1.39259371985319,1.24292343325198,1.56114991349213,NA,NA,6.2007708880831e-09
+"oral","age","age>=45","Poor vs Excellent/Very good","or_woolf",1.39266986022401,1.24467299102082,1.55826418149049,NA,NA,NA
+"oral","age","age>=45","Poor vs Excellent/Very good","rr",1.13166361782901,1.08710706525552,1.17804638093933,NA,NA,NA
+"oral","age","age>=45","Poor vs Excellent/Very good","rd",0.0773342284534249,0.0516928647454993,0.10297559216135,NA,NA,NA
+"oral","age","pooled","omnibus","cmh_generalized",NA,NA,NA,91.967086782053,3,8.27951106385296e-20
+"oral","age","pooled","Good vs Excellent/Very good","cmh",1.13943685141377,1.06228356910114,1.22219374950731,13.3151781604941,1,0.000263266310844816
+"oral","age","pooled","Good vs Excellent/Very good","breslow_day",NA,NA,NA,2.00951293097823,1,0.156315496366219
+"oral","age","pooled","Fair vs Excellent/Very good","cmh",1.31762786433894,1.21830655085011,1.42504625594516,47.7731916811714,1,4.78490376953164e-12
+"oral","age","pooled","Fair vs Excellent/Very good","breslow_day",NA,NA,NA,3.30257858555639,1,0.06917121963974
+"oral","age","pooled","Poor vs Excellent/Very good","cmh",1.5208720977437,1.37903652096929,1.67729563541186,71.9125755594036,1,2.24945798734015e-17
+"oral","age","pooled","Poor vs Excellent/Very good","breslow_day",NA,NA,NA,11.0053984104295,1,0.000908469030578285
+"perio","none","all","omnibus","pearson",NA,NA,NA,15.8294205378223,1,6.93162982414898e-05
+"perio","none","all","omnibus","fisher",NA,NA,NA,NA,NA,7.00740590323721e-05
+"perio","none","all","Yes vs No","pearson",NA,NA,NA,15.8294205378223,1,6.93162982414898e-05
+"perio","none","all","Yes vs No","yates",NA,NA,NA,15.6915782636074,1,7.45553953153631e-05
+"perio","none","all","Yes vs No","fisher",1.1483428785671,1.07201926171792,1.23014856326944,NA,NA,7.0074059032372e-05
+"perio","none","all","Yes vs No","or_woolf",1.14835165911988,1.07267390871792,1.22936851757636,NA,NA,NA
+"perio","none","all","Yes vs No","rr",1.0692162406621,1.03527399526171,1.10427130839562,NA,NA,NA
+"perio","none","all","Yes vs No","rd",0.0345319383198253,0.0175506370929177,0.0515132395467328,NA,NA,NA
+"perio","smoking","nonsmoking","omnibus","pearson",NA,NA,NA,13.7956135831684,1,0.000203811520643108
+"perio","smoking","nonsmoking","omnibus","fisher",NA,NA,NA,NA,NA,0.000224468117243788
+"perio","smoking","nonsmoking","Yes vs No","pearson",NA,NA,NA,13.7956135831684,1,0.000203811520643108
+"perio","smoking","nonsmoking","Yes vs No","yates",NA,NA,NA,13.6085922207582,1,0.000225152663448234
+"perio","smoking","nonsmoking","Yes vs No","fisher",1.20600993041074,1.09105455571869,1.333153633053,NA,NA,0.000224468117243788
+"perio","smoking","nonsmoking","Yes vs No","or_woolf",1.20603333918297,1.09241864525498,1.33146428939002,NA,NA,NA
+"perio","smoking","nonsmoking","Yes vs No","rr",1.10047441272389,1.04784256347123,1.15574989533553,NA,NA,NA
+"perio","smoking","nonsmoking","Yes vs No","rd",0.0467770673731489,0.0220725639261806,0.0714815708201172,NA,NA,NA
+"perio","smoking","smoking","omnibus","pearson",NA,NA,NA,0.546492883811277,1,0.459754251325093
+"perio","smoking","smoking","omnibus","fisher",NA,NA,NA,NA,NA,0.468068781123294
+"perio","smoking","smoking","Yes vs No","pearson",NA,NA,NA,0.546492883811277,1,0.459754251325093
+"perio","smoking","smoking","Yes vs No","yates",NA,NA,NA,0.511313939233281,1,0.474570614396525
+"perio","smoking","smoking","Yes vs No","fisher",1.03645217091731,0.941549639174874,1.14102370232018,NA,NA,0.468068781123294
+"perio","smoking","smoking","Yes vs No","or_woolf",1.03644566289109,0.942599540998917,1.13963519543765,NA,NA,NA
+"perio","smoking","smoking","Yes vs No","rr",1.01635866617374,0.973785828375248,1.06079274128479,NA,NA,NA
+"perio","smoking","smoking","Yes vs No","rd",0.00887094834073898,-0.0146260632666236,0.0323679599481016,NA,NA,NA
+"perio","smoking","pooled","Yes vs No","cmh",1.11441497435266,1.04062095348014,1.19344198375796,9.62605661415452,1,0.00191836052916325
+"perio","smoking","pooled","Yes vs No","breslow_day",NA,NA,NA,4.69416745798615,1,0.0302651578579071
+"perio","age","age<45","omnibus","pearson",NA,NA,NA,37.1143134791765,1,1.11402972502858e-09
+"perio","age","age<45","omnibus","fisher",NA,NA,NA,NA,NA,2.49089880939186e-09
+"perio","age","age<45","Yes vs No","pearson",NA,NA,NA,37.1143134791765,1,1.11402972502858e-09
+"perio","age","age<45","Yes vs No","yates",NA,NA,NA,36.6655128178191,1,1.40238578309314e-09
+"perio","age","age<45","Yes vs No","fisher",1.52771622041432,1.32823166764256,1.75541920433801,NA,NA,2.49089880939186e-09
+"perio","age","age<45","Yes vs No","or_woolf",1.52782150088806,1.33222285327596,1.75213818982006,NA,NA,NA
+"perio","age","age<45","Yes vs No","rr",1.36178493603917,1.23655638337524,1.49969563616774,NA,NA,NA
+"perio","age","age<45","Yes vs No","rd",0.0835715806535381,0.0550676290065421,0.112075532300534,NA,NA,NA
+"perio","age","age>=45","omnibus","pearson",NA,NA,NA,0.916015566259376,1,0.338523333902419
+"perio","age","age>=45","omnibus","fisher",NA,NA,NA,NA,NA,0.348496659684861
+"perio","age","age>=45","Yes vs No","pearson",NA,NA,NA,0.916015566259376,1,0.338523333902419
+"perio","age","age>=45","Yes vs No","yates",NA,NA,NA,0.875683932937034,1,0.349386546739821
+"perio","age","age>=45","Yes vs No","fisher",1.04176346213175,0.957306252993748,1.13398572047825,NA,NA,0.348496659684861
+"perio","age","age>=45","Yes vs No","or_woolf",1.04175926048162,0.958034488712748,1.13280092688251,NA,NA,NA
+"perio","age","age>=45","Yes vs No","rr",1.01564338210042,0.984111361676482,1.04818572346031,NA,NA,NA
+"perio","age","age>=45","Yes vs No","rd",0.00963254948401282,-0.0100323747540038,0.0292974737220295,NA,NA,NA
+"perio","age","pooled","Yes vs No","cmh",1.15115415166057,1.0712594149735,1.23700745343567,14.9958495450943,1,0.00010774789527574
+"perio","age","pooled","Yes vs No","breslow_day",NA,NA,NA,21.9281406033505,1,2.83052674876494e-06

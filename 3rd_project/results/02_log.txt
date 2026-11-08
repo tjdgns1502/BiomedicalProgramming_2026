@@ -1,0 +1,269 @@
+﻿
+== Attainable-SD turnover of the 3-parameter shifted families ==
+  With mean and median pinned to the base's, the attainable SD of the
+  shifted family is MINIMISED at a finite shape. Base skewness above
+  that turnover sits on the reversing branch.
+    gamma     : turnover at shape 0.28471  => skewness 3.7482
+    lognormal : turnover at k = phi = 1.61803 => skewness 5.8742
+  Base skewness levels used here: 1, 2, 3, 4
+    gamma skew 4 (4.0) is PAST the gamma turnover (3.748).
+    All four lognormal levels are below the lognormal turnover.
+
+== Building 64 distribution pairs ==
+built 64 pairs
+
+-- convergence residuals over all 64 pairs --
+       resid     err_mean   err_median       err_sd   err_sd_rel  quad_abserr 
+1.696421e-12 8.881784e-16 4.440892e-16 1.696421e-12 2.081668e-12 9.705570e-13 
+all 64 fits within tolerance 1e-09
+
+== Empirical validation (2e+06 draws per distribution) ==
+
+max |empirical - exact| across the 64 pairs:
+  mean_X   mean_Y median_X median_Y     sd_X     sd_Y   skew_X   skew_Y 
+0.011800 0.026700 0.005910 0.007250 0.039700 0.133000 0.201000 0.051500 
+  p_less 
+0.000953 
+
+(MC SE of P(X<Y) at n=2e6 is 0.000354; sample skewness is the slowest to settle, as expected for
+ right-skewed data, so its deviation is the largest.)
+
+== Guide's lognormal reference table (skew 3) ==
+    row   gamma guide_gamma meanlog guide_meanlog   sdlog guide_sdlog     sd
+ base X  0.0000      0.0000  0.0000        0.0000 0.71557     0.71557 1.0563
+   1.05 -0.2323     -0.2323  0.2089        0.2098 0.65192     0.65190 1.1091
+   1.10 -0.4620     -0.4620  0.3798        0.3796 0.60328     0.60330 1.1620
+   1.15 -0.6945     -0.6945  0.5274        0.5274 0.56368     0.56370 1.2148
+   1.20 -0.9326     -0.9326  0.6589        0.6590 0.53030     0.53030 1.2676
+ guide_sd skew guide_skew
+   1.0563 3.00       3.00
+   1.1091 2.57       2.57
+   1.1620 2.28       2.28
+   1.2148 2.06       2.06
+   1.2676 1.89       1.89
+
+max |mine - guide| at the guide's printed precision:
+  gamma meanlog   sdlog      sd    skew 
+  0e+00   9e-04   2e-05   0e+00   0e+00 
+
+-- is the guide's meanlog column consistent with its own gamma? --
+    row guide_gamma guide_meanlog_printed implied_by_guide_gamma   ours
+ base X      0.0000                0.0000                 0.0000 0.0000
+   1.05     -0.2323                0.2098                 0.2089 0.2089
+   1.10     -0.4620                0.3796                 0.3798 0.3798
+   1.15     -0.6945                0.5274                 0.5274 0.5274
+   1.20     -0.9326                0.6590                 0.6589 0.6589
+max |ours - log(1 - guide_gamma)| : 2.93e-05
+
+gamma / sdlog / sd / skew columns match the guide : TRUE
+meanlog column matches as printed                 : FALSE
+meanlog column matches the guide's own gamma      : TRUE
+
+== Table 2: our exact P(X<Y), PAPER labelling (X = wider) ==
+
+-- gamma, ours --
+     skew1 skew2 skew3 skew4
+1.05 0.503 0.512 0.544 0.410
+1.10 0.505 0.520 0.553 0.404
+1.15 0.507 0.525 0.558 0.404
+1.20 0.509 0.529 0.560 0.405
+1.25 0.511 0.532 0.562 0.407
+1.30 0.512 0.534 0.562 0.410
+1.40 0.514 0.537 0.562 0.416
+1.50 0.516 0.539 0.562 0.421
+
+-- gamma, paper --
+     skew1 skew2 skew3 skew4
+1.05  0.50  0.51  0.54  0.58
+1.10  0.51  0.52  0.56  0.61
+1.15  0.51  0.53  0.57  0.62
+1.20  0.52  0.54  0.58  0.64
+1.25  0.52  0.54  0.59  0.64
+1.30  0.52  0.55  0.60  0.66
+1.40  0.53  0.56  0.61  0.67
+1.50  0.53  0.57  0.62  0.68
+
+-- lognormal, ours --
+     skew1 skew2 skew3 skew4
+1.05 0.502 0.506 0.510 0.517
+1.10 0.505 0.510 0.517 0.525
+1.15 0.506 0.514 0.522 0.530
+1.20 0.508 0.517 0.526 0.534
+1.25 0.509 0.519 0.529 0.536
+1.30 0.511 0.521 0.531 0.538
+1.40 0.513 0.524 0.533 0.539
+1.50 0.514 0.526 0.535 0.540
+
+-- lognormal, paper --
+     skew1 skew2 skew3 skew4
+1.05  0.50  0.51  0.51  0.51
+1.10  0.51  0.51  0.52  0.52
+1.15  0.51  0.52  0.53  0.53
+1.20  0.52  0.53  0.53  0.54
+1.25  0.52  0.53  0.54  0.56
+1.30  0.52  0.53  0.55  0.55
+1.40  0.52  0.54  0.56  0.57
+1.50  0.53  0.55  0.56  0.58
+
+-- differences (ours - paper) --
+gamma:
+      skew1  skew2  skew3  skew4
+1.05  0.003  0.002  0.004 -0.170
+1.10 -0.005  0.000 -0.007 -0.206
+1.15 -0.003 -0.005 -0.012 -0.216
+1.20 -0.011 -0.011 -0.020 -0.235
+1.25 -0.009 -0.008 -0.028 -0.233
+1.30 -0.008 -0.016 -0.038 -0.250
+1.40 -0.016 -0.023 -0.048 -0.254
+1.50 -0.014 -0.031 -0.058 -0.259
+lognormal:
+      skew1  skew2  skew3  skew4
+1.05  0.002 -0.004  0.000  0.007
+1.10 -0.005  0.000 -0.003  0.005
+1.15 -0.004 -0.006 -0.008  0.000
+1.20 -0.012 -0.013 -0.004 -0.006
+1.25 -0.011 -0.011 -0.011 -0.024
+1.30 -0.009 -0.009 -0.019 -0.012
+1.40 -0.007 -0.016 -0.027 -0.031
+1.50 -0.016 -0.024 -0.025 -0.040
+
+max |diff| gamma     : 0.259
+max |diff| lognormal : 0.0399
+
+== Skewness of Y (cannot be held equal to X) ==
+-- gamma --
+     skew1 skew2 skew3 skew4
+1.05 0.951 1.883 2.704 4.681
+1.10 0.906 1.781 2.496 5.082
+1.15 0.866 1.691 2.332 5.415
+1.20 0.829 1.611 2.197 5.713
+1.25 0.795 1.538 2.080 5.992
+1.30 0.764 1.473 1.979 6.258
+1.40 0.708 1.359 1.808 6.769
+1.50 0.660 1.262 1.668 7.264
+-- lognormal --
+     skew1 skew2 skew3 skew4
+1.05 0.942 1.820 2.569 3.114
+1.10 0.890 1.676 2.279 2.660
+1.15 0.845 1.557 2.063 2.358
+1.20 0.804 1.457 1.895 2.136
+1.25 0.767 1.371 1.757 1.962
+1.30 0.734 1.296 1.642 1.820
+1.40 0.675 1.170 1.459 1.600
+1.50 0.626 1.069 1.318 1.436
+
+== SENSITIVITY A: gamma, second exact solution (other branch) ==
+Both branches satisfy mean/median/SD-ratio exactly; they differ in
+which side of the attainable-SD turnover the shape lands on.
+
+-- P(X<Y), paper labelling, alternate branch --
+     skew1 skew2 skew3 skew4
+1.05 0.476 0.439 0.412 0.582
+1.10 0.477 0.442 0.414 0.582
+1.15 0.478 0.444 0.416 0.581
+1.20 0.479 0.446 0.419 0.579
+1.25 0.480 0.448 0.421 0.578
+1.30 0.481 0.450 0.424 0.576
+1.40 0.483 0.454 0.429 0.574
+1.50 0.484 0.458 0.434 0.571
+
+-- skewness of Y, alternate branch --
+      skew1 skew2 skew3 skew4
+1.05 12.807 6.829 5.049 2.953
+1.10 13.417 7.162 5.400 2.683
+1.15 14.027 7.492 5.712 2.488
+1.20 14.637 7.820 6.003 2.332
+1.25 15.247 8.146 6.280 2.201
+1.30 15.857 8.473 6.548 2.089
+1.40 17.076 9.125 7.070 1.903
+1.50 18.296 9.777 7.582 1.752
+
+== SENSITIVITY B: {mean, skewness, SD ratio} exact; median differs ==
+Y = mean_X + ratio*(X - mean_X): skewness held EXACTLY equal, as the
+paper states, at the cost of the equal-median condition.
+max |mean error| : 4.44e-16 ; max |SD-ratio error| : 2.22e-16
+
+-- P(X<Y), paper labelling --
+gamma:
+     skew1 skew2 skew3 skew4
+1.05 0.504 0.512 0.535 0.579
+1.10 0.507 0.522 0.555 0.605
+1.15 0.511 0.531 0.570 0.623
+1.20 0.514 0.538 0.582 0.636
+1.25 0.517 0.545 0.592 0.646
+1.30 0.520 0.551 0.600 0.655
+1.40 0.525 0.562 0.613 0.668
+1.50 0.529 0.570 0.624 0.679
+lognormal:
+     skew1 skew2 skew3 skew4
+1.05 0.503 0.506 0.509 0.511
+1.10 0.507 0.512 0.517 0.522
+1.15 0.510 0.518 0.525 0.531
+1.20 0.512 0.523 0.533 0.540
+1.25 0.515 0.528 0.539 0.548
+1.30 0.518 0.533 0.545 0.555
+1.40 0.522 0.541 0.556 0.568
+1.50 0.526 0.548 0.565 0.579
+
+-- difference from the paper (ours - paper) --
+gamma:
+      skew1  skew2  skew3  skew4
+1.05  0.004  0.002 -0.005 -0.001
+1.10 -0.003  0.002 -0.005 -0.005
+1.15  0.001  0.001  0.000  0.003
+1.20 -0.006 -0.002  0.002 -0.004
+1.25 -0.003  0.005  0.002  0.006
+1.30  0.000  0.001  0.000 -0.005
+1.40 -0.005  0.002  0.003 -0.002
+1.50 -0.001  0.000  0.004 -0.001
+lognormal:
+      skew1  skew2  skew3  skew4
+1.05  0.003 -0.004 -0.001  0.001
+1.10 -0.003  0.002 -0.003  0.002
+1.15  0.000 -0.002 -0.005  0.001
+1.20 -0.008 -0.007  0.003  0.000
+1.25 -0.005 -0.002 -0.001 -0.012
+1.30 -0.002  0.003 -0.005  0.005
+1.40  0.002  0.001 -0.004 -0.002
+1.50 -0.004 -0.002  0.005 -0.001
+
+-- how far the median has to move --
+gamma:
+      skew1  skew2  skew3  skew4
+1.05 -0.004 -0.022 -0.073 -0.236
+1.10 -0.009 -0.044 -0.146 -0.472
+1.15 -0.013 -0.066 -0.219 -0.709
+1.20 -0.018 -0.089 -0.292 -0.945
+1.25 -0.022 -0.111 -0.365 -1.181
+1.30 -0.027 -0.133 -0.438 -1.417
+1.40 -0.036 -0.177 -0.584 -1.890
+1.50 -0.045 -0.221 -0.729 -2.362
+lognormal:
+      skew1  skew2  skew3  skew4
+1.05 -0.003 -0.008 -0.015 -0.021
+1.10 -0.005 -0.016 -0.029 -0.041
+1.15 -0.008 -0.025 -0.044 -0.062
+1.20 -0.010 -0.033 -0.058 -0.083
+1.25 -0.013 -0.041 -0.073 -0.104
+1.30 -0.015 -0.049 -0.088 -0.124
+1.40 -0.020 -0.066 -0.117 -0.166
+1.50 -0.025 -0.082 -0.146 -0.207
+
+== Which 3-constraint construction is closer to the paper's Table 2? ==
+                              construction    family max_abs_diff_vs_paper
+    main {mean, median, SD} (equal-median)     gamma               0.25864
+    main {mean, median, SD} (equal-median) lognormal               0.03994
+ sens. B {mean, skew, SD} (equal-skewness)     gamma               0.00637
+ sens. B {mean, skew, SD} (equal-skewness) lognormal               0.01184
+ mean_abs_diff_vs_paper
+                0.06877
+                0.01170
+                0.00262
+                0.00315
+
+(The main construction stays primary regardless of which is closer:
+ it is the one that makes BOTH of the paper's stated null hypotheses
+ -- equal means AND equal medians -- exactly true, which is what the
+ Type I error argument requires.)
+
+saved -> results/02_distributions.rds

@@ -1,0 +1,30 @@
+{
+  "F1_scatter_ols_identity.png": {
+    "source": "runs/R1-20261025/figures/F1_scatter_ols_identity.png",
+    "sha256": "190a7c0e82e7b0ff5f13d2b8717aa9741a3b988662706ffcab16ef1ee153e57f"
+  },
+  "F2_error_histogram.png": {
+    "source": "runs/R1-20261025/figures/F2_error_histogram.png",
+    "sha256": "b2cb20e869c1ad6e32dafbf166c47dcc05316dde06184324c90fcbdb558e5e7c"
+  },
+  "F3_bland_altman_fixed_loa.png": {
+    "source": "runs/R1-20261025/figures/F3_bland_altman_fixed_loa.png",
+    "sha256": "137a0b4f00475586163eb7962f0bb9048c12603c713ab12a3aecea8287795670"
+  },
+  "F4_correlation_vs_agreement.png": {
+    "source": "runs/R1-20261025/figures/F4_correlation_vs_agreement.png",
+    "sha256": "30b96002816d5ad8907f1188f2ffac9eada4e528dbfb22318d4aa1238cbaa62e"
+  },
+  "F5_residual_vs_fitted.png": {
+    "source": "runs/R1-20261025/figures/F5_residual_vs_fitted.png",
+    "sha256": "c06b80e295ebc0413c297d7a4d954eca07230be75f4ca68a34c7f1f80a57b79c"
+  },
+  "F6_residual_qq.png": {
+    "source": "runs/R1-20261025/figures/F6_residual_qq.png",
+    "sha256": "3946b495c4efdd97affce7c981c790065e206a428897be200eb4b3d81fcec259"
+  },
+  "F7_cooks_distance.png": {
+    "source": "runs/R1-20261025/figures/F7_cooks_distance.png",
+    "sha256": "902d8dccc6de4b5b38a73f6285ed0dcd1bb3516267450fc0e7b4bc172a992210"
+  }
+}

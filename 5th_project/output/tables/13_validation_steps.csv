@@ -1,0 +1,26 @@
+"step","type","rule","fn","columns","n","n_failed","f_failed","eval_error","warn","stop"
+1,"hard","SEQN unique","rows_distinct","SEQN",21476,0,0,FALSE,FALSE,FALSE
+2,"hard","age >= 30","col_vals_gte","age",21476,0,0,FALSE,FALSE,FALSE
+3,"hard","cycle 2009-2018","col_vals_in_set","cycle",21476,0,0,FALSE,FALSE,FALSE
+4,"hard","mean SBP > 0, not NA","col_vals_gt","sbp",21476,0,0,FALSE,FALSE,FALSE
+5,"hard","mean DBP > 0 where present (NA allowed)","col_vals_gt","dbp",21476,0,0,FALSE,FALSE,FALSE
+6,"hard","no oscillometric BPXO columns","specially","",1,0,0,FALSE,FALSE,FALSE
+7,"hard","htn_measured = SBP>=140 or DBP>=90","col_vals_expr","dbp,htn_measured,sbp",21476,0,0,FALSE,FALSE,FALSE
+8,"hard","htn = measured or diagnosed","col_vals_expr","htn,htn_diagnosed,htn_measured",21458,0,0,FALSE,FALSE,FALSE
+9,"hard","BPQ020=2 and normal BP -> htn 0 (skip NA not missing)","col_vals_equal","htn",10769,0,0,FALSE,FALSE,FALSE
+10,"hard","oral4, perio, smoke present","col_vals_not_null","oral4",21476,0,0,FALSE,FALSE,FALSE
+11,"hard","oral4, perio, smoke present","col_vals_not_null","perio",21476,0,0,FALSE,FALSE,FALSE
+12,"hard","oral4, perio, smoke present","col_vals_not_null","smoke",21476,0,0,FALSE,FALSE,FALSE
+13,"hard","OHQ845 in 1-5","col_vals_in_set","ohq845_raw",21476,0,0,FALSE,FALSE,FALSE
+14,"hard","OHQ835, SMQ020 in 1-2","col_vals_in_set","ohq835_raw",21476,0,0,FALSE,FALSE,FALSE
+15,"hard","OHQ835, SMQ020 in 1-2","col_vals_in_set","SMQ020",21476,0,0,FALSE,FALSE,FALSE
+16,"hard","oral4 matches OHQ845 (1-2 combined)","col_vals_expr","ohq845_raw,oral4",21476,0,0,FALSE,FALSE,FALSE
+17,"hard","perio matches OHQ835","col_vals_expr","ohq835_raw,perio",21476,0,0,FALSE,FALSE,FALSE
+18,"hard","smoke matches SMQ020","col_vals_expr","smoke,SMQ020",21476,0,0,FALSE,FALSE,FALSE
+19,"hard","wt_mec10 > 0","col_vals_gt","wt_mec10",21476,0,0,FALSE,FALSE,FALSE
+20,"hard","wt_mec10 = WTMEC2YR / 5","col_vals_expr","wt_mec10,WTMEC2YR",21476,0,0,FALSE,FALSE,FALSE
+21,"hard","PSU and stratum present","col_vals_not_null","SDMVPSU",21476,0,0,FALSE,FALSE,FALSE
+22,"hard","PSU and stratum present","col_vals_not_null","SDMVSTRA",21476,0,0,FALSE,FALSE,FALSE
+23,"soft","N = 21,800 (paper)","row_count_match","NA",1,1,1,FALSE,TRUE,FALSE
+24,"soft","HTN cases = 11,017 (paper)","specially","",1,1,1,FALSE,TRUE,FALSE
+25,"soft","htn not NA","col_vals_not_null","htn",21476,18,0.00084,FALSE,TRUE,FALSE

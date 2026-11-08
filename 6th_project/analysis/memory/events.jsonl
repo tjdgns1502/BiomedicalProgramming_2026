@@ -1,0 +1,8 @@
+{"time": "2026-10-25T16:48", "run": "-", "event": "plan_R1-20261025.json 작성 (허용오차 사전 고정)", "outcome": "ok"}
+{"time": "2026-10-25T16:51", "run": "DEV-0 #1", "event": "개발 실행 실패: 계획의 원자료 경로를 저장소 기준으로 적어 analysis/에서 찾지 못함", "outcome": "failed", "action": "경로를 analysis/ 기준으로 수정 (결과 계산 전)"}
+{"time": "2026-10-25T16:52", "run": "DEV-0 #2", "event": "개발 실행 완료, 경고 1건 (ggplot2 geom_errorbarh 폐기 예정); F5의 'ID 14' 라벨 잘림", "outcome": "ok_with_warning", "action": "geom_errorbar(orientation='y')로 교체, y축 여백 확대. 개발 실행은 삭제했고 어떤 문서에도 쓰지 않음"}
+{"time": "2026-10-25T16:53:04", "run": "R1-20261025", "event": "주 실행 완료, 경고 0건, 자료 QA 8/8 통과", "outcome": "ok"}
+{"time": "2026-10-25T16:53", "run": "R1-20261025", "event": "tests/test_stats.R 45/45 통과; 같은 run_id 재실행은 의도대로 거부됨", "outcome": "ok"}
+{"time": "2026-10-25T16:53:49", "run": "R2-20261025", "event": "반올림 후보 C1-C4 탐색 실행 (post-result), 22/22 호환", "outcome": "ok"}
+{"time": "2026-10-25 (R2 이후)", "run": "-", "event": "별도 문맥 코드 감사: 결과를 바꾸는 오류 없음, 표기 2건", "outcome": "accept", "action": "plan_R2 erratum, ISS-20 기록, plan_R2 written_at 정정"}
+{"time": "2026-10-25", "run": "-", "event": "학습 MD 렌더링(src/10_render_docs.R)과 최종 HTML 생성(src/20_build_report.R)", "outcome": "ok"}

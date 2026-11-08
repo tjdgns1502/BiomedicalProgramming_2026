@@ -1,0 +1,27 @@
+{
+  "review_id": "REV-CODE-01",
+  "reviewed_at": "2026-10-25",
+  "reviewer": "ai-error-auditor 서브에이전트 (작성 에이전트와 다른 문맥 인스턴스)",
+  "independence": "separate_context_review — 같은 모델 계열이며 외부·맹검·독립 심사가 아니다. 검토자는 원문 Table 1 값을 보았다(노출 이력).",
+  "scope": ["src/01_build_pairs.R", "src/02_stats.R", "src/03_figures.R", "src/04_compare_paper.R", "src/run_analysis.R", "src/05_rounding_candidates.R", "src/run_candidates.R", "tests/test_stats.R", "config/paper_table1_hr.csv", "runs/R1-20261025/tables/*", "runs/R1-20261025/figures/F1-F5,F7", "runs/R2-20261025/tables/hr06_rounding_candidates.csv"],
+  "versions": "R1/R2 manifest의 입력 SHA-256이 검토 시점 파일과 일치함을 검토자가 확인",
+  "verdict": "accept (결과를 바꾸는 오류 없음), 표기 보완 2건",
+  "recomputed": [
+    "Key 시트 72-83행과 4기기 열 매핑(B..M), F열 'Fitbit_metamax' = ECG HR",
+    "4기기 모두 Pearson r·Fisher CI, Spearman rho·Fisher CI, OLS 기울기·절편·R2, 평균·SD, bias, SD, LoA, MAE, RMSE (최대 차이 5e-14, CI 3e-9)",
+    "Cook's distance (최대 차이 5e-16), 4/n = 0.1818",
+    "F1 띠 = predict(interval='confidence') 평균반응 CI",
+    "paper_table1_hr.csv 52개 HR 셀을 PDF 5쪽 Table 1과 대조: 모두 일치",
+    "R1 판정 53행, R2 판정 22행을 |차이| 대 허용오차로 재판정: 모두 일치",
+    "tests/test_stats.R: ALL PASS"
+  ],
+  "findings": [
+    {"id": "REV-CODE-01-F1", "severity": "mislabel", "where": "config/plan_R2-20261025.json reason", "what": "R1 불일치 개수를 6개로 적었으나 실제 7개 (Apple corr_lo, Mio corr_hi, Samsung bias, Fitbit loa_upper, Apple/Fitbit/Samsung loa_lower)", "effect": "숫자 결과 영향 없음 (7개 모두 C1/C2/C4 후보 범위)", "action": "plan_R2에 erratum 필드 추가, 원문 문구는 보존"},
+    {"id": "REV-CODE-01-F2", "severity": "mislabel", "where": "src/02_stats.R pct_bias", "what": "계획은 |bias|/ECG 평균 x100이라 했으나 코드는 부호를 유지 (음수 = 과소측정)", "effect": "크기는 같고 부호만 다름; 원문 비교 대상 아님", "action": "R1 재실행하지 않음. 문서에서 '부호 있는 % (음수 = 과소측정)'로 명시하고 ISS-20에 기록"}
+  ],
+  "not_checked": ["F6 그림 이미지 직접 열람 (코드만 확인)", "src/10_render_docs.R, src/20_build_report.R (검토 시점 이후 작성)"],
+  "context_notes": [
+    "검토자 참고 계산: Bland-Altman 차이~평균 회귀 기울기 Fitbit -0.255 (p = 0.088), Mio +0.089 (p = 0.46). 범위 밖 탐색이며 주 결과에 쓰지 않음.",
+    "저장소 루트 docs/14주 발표계획.pdf(2026-09-28)는 6주차에 다른 논문과 검증 과제를 적고 있음. 6주차 프롬프트가 지정한 수정 슬라이드(2026-10-25 열람)가 Wallen 2016을 지정하므로 슬라이드를 따름 (ISS-19)."
+  ]
+}

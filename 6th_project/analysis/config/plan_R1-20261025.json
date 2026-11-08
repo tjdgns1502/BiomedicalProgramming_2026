@@ -1,0 +1,57 @@
+{
+  "plan_id": "PLAN-R1-20261025",
+  "plan_version": 1,
+  "written_at": "2026-10-25T16:48:15+09:00",
+  "written_before_results": true,
+  "note": "이 계획은 R1-20261025 실행 전에 작성했다. 아래 허용오차는 원문 Table 1의 보고 자릿수만을 근거로 정했고, 계산 결과를 보기 전에 고정했다.",
+  "run_id": "R1-20261025",
+  "raw_input": {
+    "path": "data/raw/pone.0154420.s001.xlsx",
+    "path_note": "analysis/ 기준 상대경로",
+    "sha256": "50cae0d20ded94e43b956fc9f86a286cdf227eafe549906442fe21445570fcff",
+    "sheet": "Heart_Rate",
+    "copied_from": "6th_project/dataset/pone.0154420.s001.xlsx"
+  },
+  "observation_unit": "참가자 1명 x 기기 1개의 protocol 평균 HR 쌍 (시계 평균 HR, 같은 trial의 ECG 평균 HR)",
+  "inference_unit": "기기별 참가자 22명 (88쌍은 22명이 4기기를 착용한 반복 구조이며 88명의 독립 표본이 아님)",
+  "devices": [
+    {"device": "Apple Watch",      "key": "Apple",   "cols": {"device": "B", "ecg": "C", "trial": "D"}},
+    {"device": "Fitbit Charge HR", "key": "Fitbit",  "cols": {"device": "E", "ecg": "F", "trial": "G"}},
+    {"device": "Samsung Gear S",   "key": "Samsung", "cols": {"device": "H", "ecg": "I", "trial": "J"}},
+    {"device": "Mio Alpha",        "key": "Alpha",   "cols": {"device": "K", "ecg": "L", "trial": "M"}}
+  ],
+  "column_mapping_rule": "헤더 이름이 아니라 열 위치(B..M)로 매핑한다. Trial_number 헤더가 4번 중복되고, F열 헤더가 'Fitbit_metamax'로 되어 있으나 Key 시트 76행은 ECG HR로 정의한다.",
+  "selection": "22명 x 4기기 = 88쌍 전체 사용. 축소, 이상치 삭제, 값 대체 없음. 결측이 발견되면 중단하고 기록한다.",
+  "value_precision": "xlsx 셀에 저장된 double 값을 그대로 사용한다(반올림하지 않음). 셀 XML 원문 문자열과 소수 둘째 자리 표시값을 함께 남긴다.",
+  "methods": {
+    "correlation": "기기별 Pearson r (cor.test), 95% CI는 Fisher z (cor.test 기본). 원문 비교용으로 Spearman rho와 Fisher z 근사 CI(SE=1/sqrt(n-3))를 함께 계산한다.",
+    "regression": "기기별 OLS lm(device_hr ~ ecg_hr). 절편, 기울기, 각 95% CI, R2, 잔차 SE. 그림에는 평균반응 95% CI 띠를 표시한다.",
+    "error": "e = device_hr - ecg_hr. 기기별 평균(bias), SD(n-1), 평균의 95% t-CI, 중앙값, MAE, RMSE, |bias|/ECG 평균 x100, 고정 LoA = bias +/- 1.96 SD.",
+    "diagnostics": "OLS 잔차 vs 적합값, 표준화 잔차 Q-Q, Cook's distance (4/n 참조선은 경험칙).",
+    "sensitivity": "한 명씩 제외(22회/기기)하여 r, 기울기, 절편, bias, LoA의 범위를 기록한다. CI나 교차검증이 아니다.",
+    "out_of_scope": ["energy expenditure", "step count", "ICC", "skin-type subgroups", "BA 회귀 기반 가변 LoA 재현", "기기 간 차이 검정", "15초/활동별 HR (미공개)"]
+  },
+  "paper_comparison": {
+    "target": "원문 Table 1 Heart rate 블록 (analysis/config/paper_table1_hr.csv, evidence=paper_reported)",
+    "tolerance_rule": "보고 자릿수의 반 단위: 소수 첫째 자리 값은 |차이| <= 0.05, 소수 둘째 자리 값은 |차이| <= 0.005, 정수 N은 정확히 일치. 부동소수 오차를 위해 1e-9를 더한다.",
+    "tolerance_fixed_at": "2026-10-25T16:48:15+09:00",
+    "verdicts": ["반올림 일치", "불일치", "비교 불가"],
+    "comparability_rules": [
+      "Samsung의 원문 0.67은 Spearman rho이므로 우리 Spearman과만 비교하고, Pearson r과는 비교 불가로 둔다.",
+      "Mio의 원문 LoA는 평균값에 따른 회귀식(가변 LoA)이므로 고정 LoA와 비교 불가로 둔다.",
+      "ICC는 범위 밖이므로 계산하지 않고 비교 불가로 둔다."
+    ],
+    "interpretation_limit": "반올림 일치는 같은 공개 자료로 같은 보고값이 나올 수 있다는 호환성 점검이며 저자 구현을 입증하지 않는다."
+  },
+  "figures": [
+    {"id": "F1", "stage": "HR02/HR03", "what": "ECG vs 시계 산점도, OLS 회귀선(95% 평균반응 CI), y=x 기준선, 기기별 패널"},
+    {"id": "F2", "stage": "HR04", "what": "측정오차(시계-ECG) 히스토그램, 기기별 패널, 0선과 평균선"},
+    {"id": "F3", "stage": "HR04", "what": "Bland-Altman 그림, 고정 LoA"},
+    {"id": "F4", "stage": "HR04", "what": "기기별 Pearson r(95% CI)와 평균오차(95% CI) 병치: 상관과 일치의 구분"},
+    {"id": "F5", "stage": "HR05", "what": "OLS 잔차 vs 적합값"},
+    {"id": "F6", "stage": "HR05", "what": "표준화 잔차 Q-Q"},
+    {"id": "F7", "stage": "HR05", "what": "Cook's distance"}
+  ],
+  "seed": "해당 없음 (무작위 절차 없음)",
+  "stop_rule": "결측/중복 ID/trial 불일치가 발견되면 분석을 중단하고 문제 ID로 기록한다. 원문 수치에 맞추기 위한 후보 추가 탐색은 하지 않는다."
+}

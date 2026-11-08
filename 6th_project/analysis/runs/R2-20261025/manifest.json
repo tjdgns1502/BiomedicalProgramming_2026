@@ -1,0 +1,21 @@
+{
+  "run_id": "R2-20261025",
+  "started": "2026-10-25T16:53:49+0900",
+  "finished": "2026-10-25T16:53:49+0900",
+  "command": "Rscript src/run_candidates.R R2-20261025",
+  "status": "exploratory / post-result",
+  "r_version": "R version 4.6.1 (2026-06-24 ucrt)",
+  "inputs": {
+    "runs/R1-20261025/tables/hr02_correlation.csv": "df720c15ddb765fad25de83173622ba7d63de12b23dc8f6a46177aab285a684d",
+    "runs/R1-20261025/tables/hr04_error.csv": "c23188dd4fa3900974b08dff89f7ff214964e0e12716b5305afb7a7ddfa41fb0",
+    "config/paper_table1_hr.csv": "44380ae9215885fd5c6b5147726d96983c39f15375e600e441d87b8dfcf16409",
+    "config/plan_R2-20261025.json": "29e11058a71e09cb026d5275631925e60cc20c298160a833742d1cf302923d72",
+    "src/05_rounding_candidates.R": "c7093eb910147926def7e5857f093c4565d859f7f4f6de6c72320f8e289e721a",
+    "src/run_candidates.R": "21d5c0dea2d7d51860f56290153480612da09809c130825752d8d11bac70c95a"
+  },
+  "outputs": {
+    "tables/hr06_rounding_candidates.csv": "a45ecdac25a41e74092e1ab75a036c16f223b3bce4fff51f8b3cccaf00514be7"
+  },
+  "n_rows": 22,
+  "n_match": 22
+}

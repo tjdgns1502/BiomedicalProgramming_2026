@@ -1,0 +1,33 @@
+{
+  "note": "원문 표/그림/모형과 과제 요구사항별 상태. 상태: implemented / compared / not_applicable / out_of_scope / deferred",
+  "assignment_requirements": [
+    {"item": "readxl로 XLSX 불러와 대상자·측정 조건별 정리", "stage": "HR01", "status": "implemented", "evidence": "src/01_build_pairs.R; runs/R1-20261025/tables/hr01_pairs_88.csv", "doc": "docs/learning/HR01-paper.md"},
+    {"item": "Pearson 상관계수 (기기별) + 불확실성", "stage": "HR02", "status": "implemented", "evidence": "hr02_correlation.csv", "doc": "HR02-paper.md"},
+    {"item": "단순 선형회귀 (lm)", "stage": "HR03", "status": "implemented", "evidence": "hr03_ols.csv, models/ols_models.rds", "doc": "HR03-paper.md"},
+    {"item": "측정오차 = 시계 − 기준, 평균과 분포", "stage": "HR04", "status": "implemented", "evidence": "hr04_error.csv, F2", "doc": "HR04-paper.md"},
+    {"item": "산점도 + 회귀선 + y=x", "stage": "HR02/HR03", "status": "implemented", "evidence": "figures/F1_scatter_ols_identity.png"},
+    {"item": "측정오차 히스토그램", "stage": "HR04", "status": "implemented", "evidence": "figures/F2_error_histogram.png"},
+    {"item": "기기별 상관과 평균오차 비교, 상관 높아도 불일치 설명", "stage": "HR04", "status": "implemented", "evidence": "F4, HR04-paper.md '상관이 높아도 일치하지 않는다'"},
+    {"item": "보조 민감도: 잔차·Q-Q·Cook·한 명씩 제외", "stage": "HR05", "status": "implemented", "evidence": "F5-F7, hr05_*.csv"},
+    {"item": "HR01-HR07 concept/paper MD", "stage": "all", "status": "implemented", "evidence": "docs/learning/ (15개 MD)"},
+    {"item": "최종 HTML 한 파일 (자기완결, CONCEPT/PAPER 패널, 88쌍 표·필터·CSV, MD 보기/저장, 문제 펼침, 가상 예제, 인쇄)", "stage": "all", "status": "implemented", "evidence": "최종분석보고서.html; reviews/browser_review.json"},
+    {"item": "Python(uv) 교차 구현", "stage": "HR07", "status": "deferred", "reason": "uv 미설치 (ISS-15)"}
+  ],
+  "paper_outputs": [
+    {"item": "Table 1 Heart rate: N, 평균±SD, r/rho(95% CI), 평균차±SD, 고정 LoA (Apple/Fitbit/Samsung)", "status": "compared", "verdict": "사전 규칙 부분 일치 (39 일치/7 불일치); 불일치 7개는 반올림 경로 후보와 호환 (탐색적)", "evidence": "hr06_paper_comparison.csv, R2 hr06_rounding_candidates.csv", "author_config_confidence": "낮음"},
+    {"item": "Table 1 Heart rate: Mio 가변 LoA 식", "status": "out_of_scope", "reason": "고정 LoA와 다른 추정 대상; 계산 세부 미보고 (ISS-10)"},
+    {"item": "Table 1 Heart rate: ICC", "status": "out_of_scope", "reason": "6주차 프롬프트에서 범위 밖"},
+    {"item": "Table 1 Energy expenditure", "status": "out_of_scope"},
+    {"item": "Fig 1 (protocol 도식)", "status": "not_applicable"},
+    {"item": "Fig 2A, Fig 3 (HR Bland-Altman)", "status": "implemented", "note": "F3는 고정 LoA로 그린 분석자 그림. 원문 Mio 가변 한계는 그리지 않음", "evidence": "F3"},
+    {"item": "Fig 2B, Fig 4 (EE Bland-Altman)", "status": "out_of_scope"},
+    {"item": "Fig 5 (걸음 수)", "status": "out_of_scope"},
+    {"item": "피부 유형별 상관 (Results 본문)", "status": "out_of_scope"},
+    {"item": "systematic bias 회귀 (Methods)", "status": "out_of_scope", "note": "원문 서술과 Table 1 사이 상충 기록 (ISS-11)"}
+  ],
+  "unfinished_classification": {
+    "input_unavailable": ["15초·활동별 HR (ISS-03)"],
+    "not_identifiable": ["Samsung bias 반올림 경로 C2 vs C3 (ISS-08)", "원문 정규성 판정 방법 (ISS-06)"],
+    "continuable": ["Python(uv) 교차 구현 — uv 설치 후 가능 (ISS-15)", "공식 URL 원자료 해시 대조 (ISS-18)"]
+  }
+}

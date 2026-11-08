@@ -1,0 +1,6 @@
+{"fact": "Heart_Rate 시트 F열(헤더 Fitbit_metamax)은 Fitbit 착용 trial의 ECG HR이다", "scope": "S1 Dataset Heart_Rate", "evidence": "codebook_verified + observed_data", "source": "Key 76행; hr01_trial_qa.csv 44/44", "reviewed_by": "REV-CODE-01"}
+{"fact": "공개 HR 자료는 22명 x 4기기 = 88쌍, 결측 없음", "scope": "S1 Dataset Heart_Rate", "evidence": "observed_data", "source": "runs/R1-20261025/tables/hr01_qa_checks.csv", "reviewed_by": "REV-CODE-01"}
+{"fact": "같은 참가자·같은 trial의 두 기기는 같은 ECG 값을 공유한다 (44/44)", "scope": "S1 Dataset Heart_Rate", "evidence": "observed_data", "source": "hr01_trial_qa.csv", "reviewed_by": "REV-CODE-01"}
+{"fact": "Samsung Gear S: Pearson r = 0.743, Spearman rho = 0.670 (원문 0.67*은 Spearman)", "scope": "기기별 n = 22, protocol 평균 HR", "evidence": "observed_data + paper_reported", "source": "hr02_correlation.csv; Table 1", "reviewed_by": "REV-CODE-01"}
+{"fact": "원문 Table 1 HR의 N, 평균, SD, r/rho 점추정, 평균차 SD는 공개 자료 계산값과 반올림 범위에서 일치", "scope": "Table 1 Heart rate", "evidence": "observed_data", "source": "hr06_paper_comparison.csv", "reviewed_by": "REV-CODE-01"}
+{"fact": "원문 r CI 경계와 LoA는 반올림된 r, bias, SD로 계산한 값과 호환된다 (저자 구현 미확인)", "scope": "Table 1 Heart rate, 탐색적", "evidence": "reproduction_candidate", "source": "runs/R2-20261025/tables/hr06_rounding_candidates.csv", "reviewed_by": "REV-CODE-01"}
